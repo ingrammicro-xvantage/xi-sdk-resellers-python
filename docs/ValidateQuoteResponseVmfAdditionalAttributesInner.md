@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.validate_quote_response_vmf_additional_attributes_inner import ValidateQuoteResponseVmfAdditionalAttributesInner
+from xi-sdk-resellers-python.models.validate_quote_response_vmf_additional_attributes_inner import ValidateQuoteResponseVmfAdditionalAttributesInner
 
 # TODO update the JSON string below
 json = "{}"

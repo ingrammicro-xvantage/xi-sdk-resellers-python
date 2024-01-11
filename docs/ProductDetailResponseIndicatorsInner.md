@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
+from xi-sdk-resellers-python.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.quote_details_request import QuoteDetailsRequest
+from xi-sdk-resellers-python.models.quote_details_request import QuoteDetailsRequest
 
 class TestQuoteDetailsRequest(unittest.TestCase):
     """QuoteDetailsRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestQuoteDetailsRequest(unittest.TestCase):
         model = QuoteDetailsRequest()
         if include_optional:
             return QuoteDetailsRequest(
-                quote_products_request = xi-sdk-python.models.quote_details_request_quote_products_request.quoteDetailsRequest_quoteProductsRequest(
-                    requestpreamble = xi-sdk-python.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
+                quote_products_request = xi-sdk-resellers-python.models.quote_details_request_quote_products_request.quoteDetailsRequest_quoteProductsRequest(
+                    requestpreamble = xi-sdk-resellers-python.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
                         customer_number = '', 
                         iso_country_code = '', ), 
-                    retrieve_quote_products_request = xi-sdk-python.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
+                    retrieve_quote_products_request = xi-sdk-resellers-python.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
                         quote_number = '', 
                         third_party_source = '', ), )
             )

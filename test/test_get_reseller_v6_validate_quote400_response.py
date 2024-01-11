@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.get_reseller_v6_validate_quote400_response import GetResellerV6ValidateQuote400Response
+from xi-sdk-resellers-python.models.get_reseller_v6_validate_quote400_response import GetResellerV6ValidateQuote400Response
 
 class TestGetResellerV6ValidateQuote400Response(unittest.TestCase):
     """GetResellerV6ValidateQuote400Response unit test stubs"""
@@ -40,7 +40,7 @@ class TestGetResellerV6ValidateQuote400Response(unittest.TestCase):
                 type = '',
                 message = '',
                 fields = [
-                    xi-sdk-python.models.get_reseller_v6_validate_quote_400_response_fields_inner.get_reseller_v6_validateQuote_400_response_fields_inner(
+                    xi-sdk-resellers-python.models.get_reseller_v6_validate_quote_400_response_fields_inner.get_reseller_v6_validateQuote_400_response_fields_inner(
                         field = '', 
                         message = '', 
                         value = '', )

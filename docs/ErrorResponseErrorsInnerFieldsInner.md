@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.error_response_errors_inner_fields_inner import ErrorResponseErrorsInnerFieldsInner
+from xi-sdk-resellers-python.models.error_response_errors_inner_fields_inner import ErrorResponseErrorsInnerFieldsInner
 
 # TODO update the JSON string below
 json = "{}"

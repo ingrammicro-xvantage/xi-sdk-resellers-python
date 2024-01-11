@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_modify_request import OrderModifyRequest
+from xi-sdk-resellers-python.models.order_modify_request import OrderModifyRequest
 
 class TestOrderModifyRequest(unittest.TestCase):
     """OrderModifyRequest unit test stubs"""
@@ -36,17 +36,17 @@ class TestOrderModifyRequest(unittest.TestCase):
         model = OrderModifyRequest()
         if include_optional:
             return OrderModifyRequest(
-                servicerequest = xi-sdk-python.models.order_modify_request_servicerequest.orderModifyRequest_servicerequest(
-                    requestpreamble = xi-sdk-python.models.order_modify_request_servicerequest_requestpreamble.orderModifyRequest_servicerequest_requestpreamble(
+                servicerequest = xi-sdk-resellers-python.models.order_modify_request_servicerequest.orderModifyRequest_servicerequest(
+                    requestpreamble = xi-sdk-resellers-python.models.order_modify_request_servicerequest_requestpreamble.orderModifyRequest_servicerequest_requestpreamble(
                         isocountrycode = '', 
                         customernumber = '', ), 
-                    ordermodifyrequest = xi-sdk-python.models.order_modify_request_servicerequest_ordermodifyrequest.orderModifyRequest_servicerequest_ordermodifyrequest(
+                    ordermodifyrequest = xi-sdk-resellers-python.models.order_modify_request_servicerequest_ordermodifyrequest.orderModifyRequest_servicerequest_ordermodifyrequest(
                         ingramorderbranch = '', 
                         ingramordernumber = '', 
                         ingramorderdist = '', 
                         ingramordership = '', 
                         customerponumber = '', 
-                        shipto = xi-sdk-python.models.order_modify_request_servicerequest_ordermodifyrequest_shipto.orderModifyRequest_servicerequest_ordermodifyrequest_shipto(
+                        shipto = xi-sdk-resellers-python.models.order_modify_request_servicerequest_ordermodifyrequest_shipto.orderModifyRequest_servicerequest_ordermodifyrequest_shipto(
                             id = '', 
                             name = '', 
                             addressline = '', 
@@ -54,11 +54,11 @@ class TestOrderModifyRequest(unittest.TestCase):
                             state = '', 
                             postalcode = '', 
                             countrycode = '', ), 
-                        headerdata = xi-sdk-python.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata.orderModifyRequest_servicerequest_ordermodifyrequest_headerdata(
+                        headerdata = xi-sdk-resellers-python.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata.orderModifyRequest_servicerequest_ordermodifyrequest_headerdata(
                             actioncode = '', 
                             shipviacode = '', ), 
                         linedata = [
-                            xi-sdk-python.models.order_modify_request_servicerequest_ordermodifyrequest_linedata_inner.orderModifyRequest_servicerequest_ordermodifyrequest_linedata_inner(
+                            xi-sdk-resellers-python.models.order_modify_request_servicerequest_ordermodifyrequest_linedata_inner.orderModifyRequest_servicerequest_ordermodifyrequest_linedata_inner(
                                 addlineorupdateline = '', 
                                 linenumber = '', 
                                 customerlinenumber = '', 

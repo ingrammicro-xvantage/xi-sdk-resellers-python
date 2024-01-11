@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.invoice_detailsv61_response_summary import InvoiceDetailsv61ResponseSummary
+from xi-sdk-resellers-python.models.invoice_detailsv61_response_summary import InvoiceDetailsv61ResponseSummary
 
 class TestInvoiceDetailsv61ResponseSummary(unittest.TestCase):
     """InvoiceDetailsv61ResponseSummary unit test stubs"""
@@ -36,25 +36,25 @@ class TestInvoiceDetailsv61ResponseSummary(unittest.TestCase):
         model = InvoiceDetailsv61ResponseSummary()
         if include_optional:
             return InvoiceDetailsv61ResponseSummary(
-                lines = xi-sdk-python.models.invoice_detailsv6_1_response_summary_lines.InvoiceDetailsv6_1Response_summary_lines(
+                lines = xi-sdk-resellers-python.models.invoice_detailsv6_1_response_summary_lines.InvoiceDetailsv6_1Response_summary_lines(
                     product_line_count = 56, 
                     product_line_total_quantity = 56, ),
                 misc_charges = [
-                    xi-sdk-python.models.invoice_detailsv6_1_response_summary_misc_charges_inner.InvoiceDetailsv6_1Response_summary_miscCharges_inner(
+                    xi-sdk-resellers-python.models.invoice_detailsv6_1_response_summary_misc_charges_inner.InvoiceDetailsv6_1Response_summary_miscCharges_inner(
                         charge_description = '', 
                         misc_charge_line_count = 56, 
                         misc_charge_line_total = 1.337, 
                         charge_line_reference = '', 
                         is_non_misc = '', )
                     ],
-                totals = xi-sdk-python.models.invoice_detailsv6_1_response_summary_totals.InvoiceDetailsv6_1Response_summary_totals(
+                totals = xi-sdk-resellers-python.models.invoice_detailsv6_1_response_summary_totals.InvoiceDetailsv6_1Response_summary_totals(
                     net_invoice_amount = 1.337, 
                     discount_amount = 1.337, 
                     discount_type = '', 
                     total_tax_amount = 1.337, 
                     invoiced_amount_due = 1.337, 
                     freight_amount = 1.337, ),
-                foreign_fx_totals = xi-sdk-python.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
+                foreign_fx_totals = xi-sdk-resellers-python.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
                     foreign_currency_code = '', 
                     foreign_currency_fx_rate = 1.337, 
                     foreign_total_taxable_amount = '', 

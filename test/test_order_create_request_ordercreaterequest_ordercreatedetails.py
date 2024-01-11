@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails import OrderCreateRequestOrdercreaterequestOrdercreatedetails
+from xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails import OrderCreateRequestOrdercreaterequestOrdercreatedetails
 
 class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCase):
     """OrderCreateRequestOrdercreaterequestOrdercreatedetails unit test stubs"""
@@ -41,7 +41,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                 enduserordernumber = '',
                 billtosuffix = '',
                 shiptosuffix = '',
-                shiptoaddress = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
+                shiptoaddress = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
                     attention = '“Mr. Customer”', 
                     addressline1 = '“Ingram Micro”', 
                     addressline2 = '3351 Michelson Dr', 
@@ -54,7 +54,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                 thirdpartyfreightaccountnumber = '',
                 specialbidnumber = '',
                 lines = [
-                    xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
+                    xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
                         linetype = 'P', 
                         linenumber = '', 
                         ingrampartnumber = '', 
@@ -64,7 +64,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                         upc_code = '', 
                         warehouseid = '', 
                         unitprice = '', 
-                        enduser = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
+                        enduser = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
                             id = '', 
                             addressline1 = '', 
                             addressline2 = '', 
@@ -78,13 +78,13 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                             faxnumber = '', 
                             email = '', ), 
                         productextendedspecs = [
-                            xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
+                            xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
                                 attributename = 'shipfrom', 
                                 attributevalue = '', )
                             ], )
                     ],
                 extendedspecs = [
-                    xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_extendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_extendedspecs_inner(
+                    xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_extendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_extendedspecs_inner(
                         attributename = 'Isdirectshiporder', 
                         attributevalue = '', )
                     ]
@@ -93,7 +93,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
             return OrderCreateRequestOrdercreaterequestOrdercreatedetails(
                 customerponumber = '0',
                 ordertype = 'Standard',
-                shiptoaddress = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
+                shiptoaddress = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
                     attention = '“Mr. Customer”', 
                     addressline1 = '“Ingram Micro”', 
                     addressline2 = '3351 Michelson Dr', 
@@ -103,7 +103,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                     postalcode = '92712', 
                     countrycode = 'US', ),
                 lines = [
-                    xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
+                    xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
                         linetype = 'P', 
                         linenumber = '', 
                         ingrampartnumber = '', 
@@ -113,7 +113,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                         upc_code = '', 
                         warehouseid = '', 
                         unitprice = '', 
-                        enduser = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
+                        enduser = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
                             id = '', 
                             addressline1 = '', 
                             addressline2 = '', 
@@ -127,7 +127,7 @@ class TestOrderCreateRequestOrdercreaterequestOrdercreatedetails(unittest.TestCa
                             faxnumber = '', 
                             email = '', ), 
                         productextendedspecs = [
-                            xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
+                            xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
                                 attributename = 'shipfrom', 
                                 attributevalue = '', )
                             ], )

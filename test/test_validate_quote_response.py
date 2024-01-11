@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.validate_quote_response import ValidateQuoteResponse
+from xi-sdk-resellers-python.models.validate_quote_response import ValidateQuoteResponse
 
 class TestValidateQuoteResponse(unittest.TestCase):
     """ValidateQuoteResponse unit test stubs"""
@@ -39,18 +39,18 @@ class TestValidateQuoteResponse(unittest.TestCase):
                 quote_number = 'QUO-14551943-D2Y9L9',
                 vendor_name = 'Cisco',
                 vmf_additional_attributes = [
-                    xi-sdk-python.models.validate_quote_response_vmf_additional_attributes_inner.ValidateQuoteResponse_vmfAdditionalAttributes_inner(
+                    xi-sdk-resellers-python.models.validate_quote_response_vmf_additional_attributes_inner.ValidateQuoteResponse_vmfAdditionalAttributes_inner(
                         attribute_name = 'VEND_AUTH_NBR_FLG', 
                         attribute_value = 'ABC1234', 
                         attribute_description = 'Authorization Number', )
                     ],
                 lines = [
-                    xi-sdk-python.models.validate_quote_response_lines_inner.ValidateQuoteResponse_lines_inner(
+                    xi-sdk-resellers-python.models.validate_quote_response_lines_inner.ValidateQuoteResponse_lines_inner(
                         customer_line_number = '11', 
                         ingram_part_number = 'YN6551', 
                         quantity = '1', 
                         vmf_additional_attributes_lines = [
-                            xi-sdk-python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
+                            xi-sdk-resellers-python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
                                 attribute_name = '', 
                                 attribute_value = '', 
                                 attribute_description = '', )

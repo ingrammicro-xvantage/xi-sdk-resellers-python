@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.multi_sku_price_and_stock_response import MultiSKUPriceAndStockResponse
+from xi-sdk-resellers-python.models.multi_sku_price_and_stock_response import MultiSKUPriceAndStockResponse
 
 # TODO update the JSON string below
 json = "{}"

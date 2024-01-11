@@ -1,4 +1,4 @@
-# xi-sdk-python.StockUpdateApi
+# xi-sdk-resellers-python.StockUpdateApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,14 +19,14 @@ Stock Update
 ```python
 import time
 import os
-import xi-sdk-python
-from xi-sdk-python.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
-from xi-sdk-python.rest import ApiException
+import xi-sdk-resellers-python
+from xi-sdk-resellers-python.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
+from xi-sdk-resellers-python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-python.Configuration(
+configuration = xi-sdk-resellers-python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -38,9 +38,9 @@ configuration = xi-sdk-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-python.ApiClient(configuration) as api_client:
+with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-python.StockUpdateApi(api_client)
+    api_instance = xi-sdk-resellers-python.StockUpdateApi(api_client)
     targeturl = 'https://59a2dc5368073ab42fd9a92e210a9fdb.m.pipedream.net/' # str | The webhook url where the request needs to sent.
     x_hub_signature = '3LeaTfLE5FLj1FcYflwdwFosH4ADHmMbds6thtirGC3e9lEkF9/1pt4T2fQQGlxf40EznDBER0b60M75K6ZW0A==' # str | Ingram Micro creates a signature token by use of a secret key + Event ID. The algorithm to generate the secret ley is given at link https://developer.ingrammicro.com/reseller/article/how-use-webhook-secret-key. Use the event Id in the below sample along with your secret key to generate the key. Alternatively, to send try this out, use a random text to see how it works.
     availability_async_notification_request = {"topic":"resellers/catalog","event":"im::updated","eventTimeStamp":"2021-11-01T13:02:06.369Z","eventId":"AH7ESSIWSIO22Y77DD","resource":[{"eventType":"IM::STOCK_UPDATE","ingramPartNumber":"5CX579","vendorPartNumber":"710412-001-BTI","vendorName":"BATTERY TECHNOLOGY INC.","upcCode":"0886734869201","skuStatus":null,"backOrderFlag":"Y","totalAvailability":"120","links":[{"topic":"orders","href":"/resellers/v5/catalog/5CX579","type":"GET"}]},{"eventType":"IM::STOCK_UPDATE","ingramPartNumber":"5CT275","vendorPartNumber":"AC-U90W-HP","vendorName":"BATTERY TECHNOLOGY INC.","upcCode":"0745473120182","skuStatus":null,"backOrderFlag":"Y","totalAvailability":"120","links":[{"topic":"orders","href":"/resellers/v5/catalog/5CT275","type":"GET"}]}]} # AvailabilityAsyncNotificationRequest | 

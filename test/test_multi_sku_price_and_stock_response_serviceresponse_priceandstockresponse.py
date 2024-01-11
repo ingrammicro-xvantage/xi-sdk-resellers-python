@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse import MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse
+from xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse import MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse
 
 class TestMultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse(unittest.TestCase):
     """MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestMultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse(unit
         if include_optional:
             return MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse(
                 details = [
-                    xi-sdk-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner(
+                    xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner(
                         itemstatus = '', 
                         statusmessage = '', 
                         ingrampartnumber = '', 
@@ -60,7 +60,7 @@ class TestMultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse(unit
                         skuauthorized = '', 
                         extendedvendorpartnumber = '', 
                         warehousedetails = [
-                            xi-sdk-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
+                            xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
                                 warehouseid = '10-Mira Loma CA', 
                                 warehousedescription = '', 
                                 availablequantity = 56, 

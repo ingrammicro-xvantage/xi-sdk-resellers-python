@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.quote_details import QuoteDetails
+from xi-sdk-resellers-python.models.quote_details import QuoteDetails
 
 # TODO update the JSON string below
 json = "{}"

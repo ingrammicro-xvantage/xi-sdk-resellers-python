@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.error_response_errors_inner import ErrorResponseErrorsInner
+from xi-sdk-resellers-python.models.error_response_errors_inner import ErrorResponseErrorsInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# xi-sdk-python.OrdersV6Api
+# xi-sdk-resellers-python.OrdersV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,14 +21,14 @@ Use your Ingram Micro sales order number to search for existing orders or retrie
 ```python
 import time
 import os
-import xi-sdk-python
-from xi-sdk-python.models.order_detail_response import OrderDetailResponse
-from xi-sdk-python.rest import ApiException
+import xi-sdk-resellers-python
+from xi-sdk-resellers-python.models.order_detail_response import OrderDetailResponse
+from xi-sdk-resellers-python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-python.Configuration(
+configuration = xi-sdk-resellers-python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -40,9 +40,9 @@ configuration = xi-sdk-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-python.ApiClient(configuration) as api_client:
+with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-python.OrdersV6Api(api_client)
+    api_instance = xi-sdk-resellers-python.OrdersV6Api(api_client)
     ordernumber = '20-RD3QV' # str | The Ingram Micro sales order number.
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.

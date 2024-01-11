@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.product_detail_response import ProductDetailResponse
+from xi-sdk-resellers-python.models.product_detail_response import ProductDetailResponse
 
 class TestProductDetailResponse(unittest.TestCase):
     """ProductDetailResponse unit test stubs"""
@@ -50,7 +50,7 @@ class TestProductDetailResponse(unittest.TestCase):
                 product_class = '',
                 customer_part_number = '',
                 indicators = [
-                    xi-sdk-python.models.product_detail_response_indicators_inner.ProductDetailResponse_indicators_inner(
+                    xi-sdk-resellers-python.models.product_detail_response_indicators_inner.ProductDetailResponse_indicators_inner(
                         has_warranty = True, 
                         is_new_product = True, 
                         has_return_limits = True, 
@@ -84,7 +84,7 @@ class TestProductDetailResponse(unittest.TestCase):
                         is_configurable = True, )
                     ],
                 cisco_fields = [
-                    xi-sdk-python.models.product_detail_response_cisco_fields_inner.ProductDetailResponse_ciscoFields_inner(
+                    xi-sdk-resellers-python.models.product_detail_response_cisco_fields_inner.ProductDetailResponse_ciscoFields_inner(
                         product_sub_group = '', 
                         service_program_name = '', 
                         item_catalog_category = '', 
@@ -94,7 +94,7 @@ class TestProductDetailResponse(unittest.TestCase):
                         global_list_price = '', )
                     ],
                 technical_specifications = [
-                    xi-sdk-python.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
+                    xi-sdk-resellers-python.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
                         headername = '', 
                         attributevalue = '', 
                         attributedisplay = '', 
@@ -103,9 +103,9 @@ class TestProductDetailResponse(unittest.TestCase):
                 warranty_information = [
                     None
                     ],
-                additional_information = xi-sdk-python.models.product_detail_response_additional_information.ProductDetailResponse_additionalInformation(
+                additional_information = xi-sdk-resellers-python.models.product_detail_response_additional_information.ProductDetailResponse_additionalInformation(
                     product_weight = [
-                        xi-sdk-python.models.product_detail_response_additional_information_product_weight_inner.ProductDetailResponse_additionalInformation_productWeight_inner(
+                        xi-sdk-resellers-python.models.product_detail_response_additional_information_product_weight_inner.ProductDetailResponse_additionalInformation_productWeight_inner(
                             plant_id = '', 
                             weight = 1.337, 
                             weight_unit = '', )

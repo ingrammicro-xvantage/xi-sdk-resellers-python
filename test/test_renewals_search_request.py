@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.renewals_search_request import RenewalsSearchRequest
+from xi-sdk-resellers-python.models.renewals_search_request import RenewalsSearchRequest
 
 class TestRenewalsSearchRequest(unittest.TestCase):
     """RenewalsSearchRequest unit test stubs"""
@@ -36,21 +36,21 @@ class TestRenewalsSearchRequest(unittest.TestCase):
         model = RenewalsSearchRequest()
         if include_optional:
             return RenewalsSearchRequest(
-                status = xi-sdk-python.models.renewals_search_request_status.renewalsSearchRequest_status(
-                    opporutiny_status = xi-sdk-python.models.renewals_search_request_status_opporutiny_status.renewalsSearchRequest_status_OpporutinyStatus(
+                status = xi-sdk-resellers-python.models.renewals_search_request_status.renewalsSearchRequest_status(
+                    opporutiny_status = xi-sdk-resellers-python.models.renewals_search_request_status_opporutiny_status.renewalsSearchRequest_status_OpporutinyStatus(
                         value = '', 
                         sub_status = '', ), ),
-                data_type = xi-sdk-python.models.renewals_search_request_data_type.renewalsSearchRequest_dataType(
-                    start_date = xi-sdk-python.models.renewals_search_request_data_type_start_date.renewalsSearchRequest_dataType_startDate(
+                data_type = xi-sdk-resellers-python.models.renewals_search_request_data_type.renewalsSearchRequest_dataType(
+                    start_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_start_date.renewalsSearchRequest_dataType_startDate(
                         custom_start_date = '', 
                         custom_end_date = '', ), 
-                    end_date = xi-sdk-python.models.renewals_search_request_data_type_end_date.renewalsSearchRequest_dataType_endDate(
+                    end_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_end_date.renewalsSearchRequest_dataType_endDate(
                         custom_start_date = '', 
                         custom_end_date = '', ), 
-                    invoice_date = xi-sdk-python.models.renewals_search_request_data_type_invoice_date.renewalsSearchRequest_dataType_invoiceDate(
+                    invoice_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_invoice_date.renewalsSearchRequest_dataType_invoiceDate(
                         custom_start_date = '', 
                         custom_end_date = '', ), 
-                    expiration_date = xi-sdk-python.models.renewals_search_request_data_type_expiration_date.renewalsSearchRequest_dataType_expirationDate(
+                    expiration_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_expiration_date.renewalsSearchRequest_dataType_expirationDate(
                         custom_start_date = '', 
                         custom_end_date = '', ), ),
                 vendor = '',

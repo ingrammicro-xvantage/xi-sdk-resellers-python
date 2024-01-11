@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_create_response_orders_inner import OrderCreateResponseOrdersInner
+from xi-sdk-resellers-python.models.order_create_response_orders_inner import OrderCreateResponseOrdersInner
 
 class TestOrderCreateResponseOrdersInner(unittest.TestCase):
     """OrderCreateResponseOrdersInner unit test stubs"""
@@ -48,7 +48,7 @@ class TestOrderCreateResponseOrdersInner(unittest.TestCase):
                 total_tax = 1.337,
                 currency_code = '',
                 lines = [
-                    xi-sdk-python.models.order_create_response_orders_inner_lines_inner.OrderCreateResponse_orders_inner_lines_inner(
+                    xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner.OrderCreateResponse_orders_inner_lines_inner(
                         sub_order_number = '', 
                         ingram_line_number = '', 
                         customer_line_number = '', 
@@ -63,7 +63,7 @@ class TestOrderCreateResponseOrdersInner(unittest.TestCase):
                         special_bid_number = '', 
                         notes = '', 
                         shipment_details = [
-                            xi-sdk-python.models.order_create_response_orders_inner_lines_inner_shipment_details_inner.OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner(
+                            xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner_shipment_details_inner.OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner(
                                 carrier_code = '', 
                                 carrier_name = '', 
                                 ship_from_warehouse_id = '', 
@@ -73,26 +73,26 @@ class TestOrderCreateResponseOrdersInner(unittest.TestCase):
                                 shipping_instructions = '', )
                             ], 
                         additional_attributes = [
-                            xi-sdk-python.models.order_create_response_orders_inner_lines_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner(
+                            xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner(
                                 attribute_name = '', 
                                 attribute_value = '', )
                             ], )
                     ],
                 miscellaneous_charges = [
-                    xi-sdk-python.models.order_create_response_orders_inner_miscellaneous_charges_inner.OrderCreateResponse_orders_inner_miscellaneousCharges_inner(
+                    xi-sdk-resellers-python.models.order_create_response_orders_inner_miscellaneous_charges_inner.OrderCreateResponse_orders_inner_miscellaneousCharges_inner(
                         sub_order_number = '', 
                         charge_line_reference = '', 
                         charge_description = '', 
                         charge_amount = 1.337, )
                     ],
                 links = [
-                    xi-sdk-python.models.order_create_response_orders_inner_links_inner.OrderCreateResponse_orders_inner_links_inner(
+                    xi-sdk-resellers-python.models.order_create_response_orders_inner_links_inner.OrderCreateResponse_orders_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )
                     ],
                 rejected_line_items = [
-                    xi-sdk-python.models.order_create_response_orders_inner_rejected_line_items_inner.OrderCreateResponse_orders_inner_rejectedLineItems_inner(
+                    xi-sdk-resellers-python.models.order_create_response_orders_inner_rejected_line_items_inner.OrderCreateResponse_orders_inner_rejectedLineItems_inner(
                         customer_linenumber = '', 
                         ingram_part_number = '', 
                         vendor_part_number = '', 
@@ -101,7 +101,7 @@ class TestOrderCreateResponseOrdersInner(unittest.TestCase):
                         reject_reason = '', )
                     ],
                 additional_attributes = [
-                    xi-sdk-python.models.order_create_response_orders_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_additionalAttributes_inner(
+                    xi-sdk-resellers-python.models.order_create_response_orders_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ]

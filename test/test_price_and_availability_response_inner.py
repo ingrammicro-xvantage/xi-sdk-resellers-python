@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.price_and_availability_response_inner import PriceAndAvailabilityResponseInner
+from xi-sdk-resellers-python.models.price_and_availability_response_inner import PriceAndAvailabilityResponseInner
 
 class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
     """PriceAndAvailabilityResponseInner unit test stubs"""
@@ -57,30 +57,30 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                 govt_special_price_available = True,
                 govt_program_type = '',
                 govt_end_user_type = '',
-                availability = xi-sdk-python.models.price_and_availability_response_inner_availability.PriceAndAvailabilityResponse_inner_availability(
+                availability = xi-sdk-resellers-python.models.price_and_availability_response_inner_availability.PriceAndAvailabilityResponse_inner_availability(
                     available = True, 
                     total_availability = 56, 
                     availability_by_warehouse = [
-                        xi-sdk-python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner(
+                        xi-sdk-resellers-python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner(
                             location = '', 
                             warehouse_id = '', 
                             quantity_available = 56, 
                             quantity_backordered = 56, 
                             quantity_backordered_eta = '', 
                             back_order_info = [
-                                xi-sdk-python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner_back_order_info_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner(
+                                xi-sdk-resellers-python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner_back_order_info_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner(
                                     quantity = 56, 
                                     eta_date = '', )
                                 ], )
                         ], ),
                 reserve_inventory_details = [
-                    xi-sdk-python.models.price_and_availability_response_inner_reserve_inventory_details_inner.PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner(
+                    xi-sdk-resellers-python.models.price_and_availability_response_inner_reserve_inventory_details_inner.PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner(
                         quantity_reserved = 56, 
                         quantity_available = 56, 
                         effectivedate = '', 
                         expirydate = '', )
                     ],
-                pricing = xi-sdk-python.models.price_and_availability_response_inner_pricing.PriceAndAvailabilityResponse_inner_pricing(
+                pricing = xi-sdk-resellers-python.models.price_and_availability_response_inner_pricing.PriceAndAvailabilityResponse_inner_pricing(
                     currency_code = '', 
                     retail_price = 1.337, 
                     map_price = 1.337, 
@@ -88,9 +88,9 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                     special_bid_pricing_available = True, 
                     web_discounts_available = True, ),
                 discounts = [
-                    xi-sdk-python.models.price_and_availability_response_inner_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner(
+                    xi-sdk-resellers-python.models.price_and_availability_response_inner_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner(
                         special_pricing = [
-                            xi-sdk-python.models.price_and_availability_response_inner_discounts_inner_special_pricing_inner.PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner(
+                            xi-sdk-resellers-python.models.price_and_availability_response_inner_discounts_inner_special_pricing_inner.PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner(
                                 discount_type = 'Special Bid, Promo Discount', 
                                 special_bid_numer = '', 
                                 special_pricing_discount = 1.337, 
@@ -102,7 +102,7 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                                 government_discounted_customer_price = 1.337, )
                             ], 
                         quantity_discounts = [
-                            xi-sdk-python.models.price_and_availability_response_inner_discounts_inner_quantity_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner(
+                            xi-sdk-resellers-python.models.price_and_availability_response_inner_discounts_inner_quantity_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner(
                                 condition_type = 'Total fee', 
                                 currency_code = '', 
                                 currency_type = '', 
@@ -112,7 +112,7 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                     ],
                 bundle_part_indicator = True,
                 service_fees = [
-                    xi-sdk-python.models.price_and_availability_response_inner_service_fees_inner.PriceAndAvailabilityResponse_inner_serviceFees_inner(
+                    xi-sdk-resellers-python.models.price_and_availability_response_inner_service_fees_inner.PriceAndAvailabilityResponse_inner_serviceFees_inner(
                         condition_type = '', 
                         description = '', 
                         amount = 1.337, 

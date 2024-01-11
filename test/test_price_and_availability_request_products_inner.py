@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.price_and_availability_request_products_inner import PriceAndAvailabilityRequestProductsInner
+from xi-sdk-resellers-python.models.price_and_availability_request_products_inner import PriceAndAvailabilityRequestProductsInner
 
 class TestPriceAndAvailabilityRequestProductsInner(unittest.TestCase):
     """PriceAndAvailabilityRequestProductsInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestPriceAndAvailabilityRequestProductsInner(unittest.TestCase):
                 upc = '',
                 quantity_requested = '',
                 additional_attributes = [
-                    xi-sdk-python.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
+                    xi-sdk-resellers-python.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ]

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
+from xi-sdk-resellers-python.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
 
 class TestProductDetailResponseAdditionalInformation(unittest.TestCase):
     """ProductDetailResponseAdditionalInformation unit test stubs"""
@@ -37,7 +37,7 @@ class TestProductDetailResponseAdditionalInformation(unittest.TestCase):
         if include_optional:
             return ProductDetailResponseAdditionalInformation(
                 product_weight = [
-                    xi-sdk-python.models.product_detail_response_additional_information_product_weight_inner.ProductDetailResponse_additionalInformation_productWeight_inner(
+                    xi-sdk-resellers-python.models.product_detail_response_additional_information_product_weight_inner.ProductDetailResponse_additionalInformation_productWeight_inner(
                         plant_id = '', 
                         weight = 1.337, 
                         weight_unit = '', )

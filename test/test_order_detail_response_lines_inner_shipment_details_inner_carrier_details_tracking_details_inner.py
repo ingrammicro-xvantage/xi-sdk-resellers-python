@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner import OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner
+from xi-sdk-resellers-python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner import OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner
 
 class TestOrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner(unittest.TestCase):
     """OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestOrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackin
                 carton_number = '',
                 quantity_in_box = '',
                 serial_numbers = [
-                    xi-sdk-python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner_serial_numbers_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner_SerialNumbers_inner(
+                    xi-sdk-resellers-python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner_serial_numbers_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner_SerialNumbers_inner(
                         serial_number = '', )
                     ]
             )

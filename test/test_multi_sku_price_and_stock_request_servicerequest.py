@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.multi_sku_price_and_stock_request_servicerequest import MultiSKUPriceAndStockRequestServicerequest
+from xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest import MultiSKUPriceAndStockRequestServicerequest
 
 class TestMultiSKUPriceAndStockRequestServicerequest(unittest.TestCase):
     """MultiSKUPriceAndStockRequestServicerequest unit test stubs"""
@@ -36,14 +36,14 @@ class TestMultiSKUPriceAndStockRequestServicerequest(unittest.TestCase):
         model = MultiSKUPriceAndStockRequestServicerequest()
         if include_optional:
             return MultiSKUPriceAndStockRequestServicerequest(
-                requestpreamble = xi-sdk-python.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble.multiSKUPriceAndStockRequest_servicerequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble.multiSKUPriceAndStockRequest_servicerequest_requestpreamble(
                     isocountrycode = 'US', 
                     customernumber = '20-222222', ),
-                priceandstockrequest = xi-sdk-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest(
+                priceandstockrequest = xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest(
                     showwarehouseavailability = '', 
                     extravailabilityflag = '', 
                     includeallsystems = True, 
-                    item = xi-sdk-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
+                    item = xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
                         index = 56, 
                         ingrampartnumber = '', 
                         vendorpartnumber = '', 

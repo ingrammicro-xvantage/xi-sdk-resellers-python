@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.quote_to_order_details_dto_ship_to_info_inner import QuoteToOrderDetailsDTOShipToInfoInner
+from xi-sdk-resellers-python.models.quote_to_order_details_dto_ship_to_info_inner import QuoteToOrderDetailsDTOShipToInfoInner
 
 class TestQuoteToOrderDetailsDTOShipToInfoInner(unittest.TestCase):
     """QuoteToOrderDetailsDTOShipToInfoInner unit test stubs"""

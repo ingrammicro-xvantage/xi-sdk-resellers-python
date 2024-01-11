@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.order_status_async_notification_request_resource_inner_links_inner import OrderStatusAsyncNotificationRequestResourceInnerLinksInner
+from xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_links_inner import OrderStatusAsyncNotificationRequestResourceInnerLinksInner
 
 # TODO update the JSON string below
 json = "{}"

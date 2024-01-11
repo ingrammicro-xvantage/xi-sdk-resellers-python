@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_modify_response_serviceresponse import OrderModifyResponseServiceresponse
+from xi-sdk-resellers-python.models.order_modify_response_serviceresponse import OrderModifyResponseServiceresponse
 
 class TestOrderModifyResponseServiceresponse(unittest.TestCase):
     """OrderModifyResponseServiceresponse unit test stubs"""
@@ -36,10 +36,10 @@ class TestOrderModifyResponseServiceresponse(unittest.TestCase):
         model = OrderModifyResponseServiceresponse()
         if include_optional:
             return OrderModifyResponseServiceresponse(
-                responsepreamble = xi-sdk-python.models.order_modify_response_serviceresponse_responsepreamble.orderModifyResponse_serviceresponse_responsepreamble(
+                responsepreamble = xi-sdk-resellers-python.models.order_modify_response_serviceresponse_responsepreamble.orderModifyResponse_serviceresponse_responsepreamble(
                     responsestatus = '', 
                     responsemessage = '', ),
-                ordermodifyresponse = xi-sdk-python.models.order_modify_response_serviceresponse_ordermodifyresponse.orderModifyResponse_serviceresponse_ordermodifyresponse(
+                ordermodifyresponse = xi-sdk-resellers-python.models.order_modify_response_serviceresponse_ordermodifyresponse.orderModifyResponse_serviceresponse_ordermodifyresponse(
                     responseflag = '', 
                     errortype = '', 
                     acktriggered = '', 

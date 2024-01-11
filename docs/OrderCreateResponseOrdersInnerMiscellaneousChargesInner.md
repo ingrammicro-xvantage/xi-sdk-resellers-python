@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.order_create_response_orders_inner_miscellaneous_charges_inner import OrderCreateResponseOrdersInnerMiscellaneousChargesInner
+from xi-sdk-resellers-python.models.order_create_response_orders_inner_miscellaneous_charges_inner import OrderCreateResponseOrdersInnerMiscellaneousChargesInner
 
 # TODO update the JSON string below
 json = "{}"

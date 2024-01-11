@@ -1,4 +1,4 @@
-# xi-sdk-python.ReturnsApi
+# xi-sdk-resellers-python.ReturnsApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -23,14 +23,14 @@ The Returns Details API will retrieve all the details related to the specific ca
 ```python
 import time
 import os
-import xi-sdk-python
-from xi-sdk-python.models.returns_details_response import ReturnsDetailsResponse
-from xi-sdk-python.rest import ApiException
+import xi-sdk-resellers-python
+from xi-sdk-resellers-python.models.returns_details_response import ReturnsDetailsResponse
+from xi-sdk-resellers-python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-python.Configuration(
+configuration = xi-sdk-resellers-python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -42,9 +42,9 @@ configuration = xi-sdk-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-python.ApiClient(configuration) as api_client:
+with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-python.ReturnsApi(api_client)
+    api_instance = xi-sdk-resellers-python.ReturnsApi(api_client)
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
@@ -110,14 +110,14 @@ The Returns Search API, by default, will retrieve all the returns that are assoc
 ```python
 import time
 import os
-import xi-sdk-python
-from xi-sdk-python.models.returns_search_response import ReturnsSearchResponse
-from xi-sdk-python.rest import ApiException
+import xi-sdk-resellers-python
+from xi-sdk-resellers-python.models.returns_search_response import ReturnsSearchResponse
+from xi-sdk-resellers-python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-python.Configuration(
+configuration = xi-sdk-resellers-python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -129,9 +129,9 @@ configuration = xi-sdk-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-python.ApiClient(configuration) as api_client:
+with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-python.ReturnsApi(api_client)
+    api_instance = xi-sdk-resellers-python.ReturnsApi(api_client)
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
@@ -225,15 +225,15 @@ Return create endpoint will allow customers to create a return request. In order
 ```python
 import time
 import os
-import xi-sdk-python
-from xi-sdk-python.models.returns_create_request import ReturnsCreateRequest
-from xi-sdk-python.models.returns_create_response import ReturnsCreateResponse
-from xi-sdk-python.rest import ApiException
+import xi-sdk-resellers-python
+from xi-sdk-resellers-python.models.returns_create_request import ReturnsCreateRequest
+from xi-sdk-resellers-python.models.returns_create_response import ReturnsCreateResponse
+from xi-sdk-resellers-python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-python.Configuration(
+configuration = xi-sdk-resellers-python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -245,9 +245,9 @@ configuration = xi-sdk-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-python.ApiClient(configuration) as api_client:
+with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-python.ReturnsApi(api_client)
+    api_instance = xi-sdk-resellers-python.ReturnsApi(api_client)
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
+from xi-sdk-resellers-python.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
 
 class TestAvailabilityAsyncNotificationRequest(unittest.TestCase):
     """AvailabilityAsyncNotificationRequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestAvailabilityAsyncNotificationRequest(unittest.TestCase):
                 event_time_stamp = '',
                 event_id = '',
                 resource = [
-                    xi-sdk-python.models.availability_async_notification_request_resource_inner.AvailabilityAsyncNotificationRequest_resource_inner(
+                    xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner.AvailabilityAsyncNotificationRequest_resource_inner(
                         event_type = '', 
                         ingram_part_number = '', 
                         vendor_part_number = '', 
@@ -51,7 +51,7 @@ class TestAvailabilityAsyncNotificationRequest(unittest.TestCase):
                         back_order_flag = '', 
                         total_availability = '', 
                         links = [
-                            xi-sdk-python.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
+                            xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )

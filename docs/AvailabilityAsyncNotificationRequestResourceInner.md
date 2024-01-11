@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
+from xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner
+from xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner
 
 class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner(unittest.TestCase):
     """OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner unit test stubs"""
@@ -51,7 +51,7 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmen
                 carriercode = '',
                 carriername = '',
                 pronumber = '',
-                packagedetails = xi-sdk-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
+                packagedetails = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
                     trackingnumber = '', 
                     packageweight = '', 
                     cartonnumber = '', 

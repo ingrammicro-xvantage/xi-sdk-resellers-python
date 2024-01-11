@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "xi-sdk-python"
+NAME = "xi-sdk-resellers-python"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
@@ -33,11 +33,11 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Reseller API Documentation - United States",
+    description="Reseller API Documentation",
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Reseller API Documentation - United States"],
+    keywords=["OpenAPI", "OpenAPI-Generator", "Reseller API Documentation"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
@@ -45,5 +45,5 @@ setup(
     long_description="""\
     For Resellers. &lt;br&gt; Who are looking to Innovate with Ingram Micro&#39;s API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
     """,  # noqa: E501
-    package_data={"xi-sdk-python": ["py.typed"]},
+    package_data={"xi-sdk-resellers-python": ["py.typed"]},
 )

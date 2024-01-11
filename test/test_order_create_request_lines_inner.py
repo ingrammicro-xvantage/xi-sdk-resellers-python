@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_create_request_lines_inner import OrderCreateRequestLinesInner
+from xi-sdk-resellers-python.models.order_create_request_lines_inner import OrderCreateRequestLinesInner
 
 class TestOrderCreateRequestLinesInner(unittest.TestCase):
     """OrderCreateRequestLinesInner unit test stubs"""
@@ -44,17 +44,17 @@ class TestOrderCreateRequestLinesInner(unittest.TestCase):
                 unit_price = 1.337,
                 end_user_price = 1.337,
                 additional_attributes = [
-                    xi-sdk-python.models.order_create_request_lines_inner_additional_attributes_inner.OrderCreateRequest_lines_inner_additionalAttributes_inner(
+                    xi-sdk-resellers-python.models.order_create_request_lines_inner_additional_attributes_inner.OrderCreateRequest_lines_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ],
                 warranty_info = [
-                    xi-sdk-python.models.order_create_request_lines_inner_warranty_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner(
+                    xi-sdk-resellers-python.models.order_create_request_lines_inner_warranty_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner(
                         direct_line_link = '', 
                         warranty_line_link = '', 
                         hardware_line_link = '', 
                         serial_info = [
-                            xi-sdk-python.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner_serialInfo_inner(
+                            xi-sdk-resellers-python.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner_serialInfo_inner(
                                 dateof_purchase = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                                 ship_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                                 primary_serial_number = '', 
@@ -62,7 +62,7 @@ class TestOrderCreateRequestLinesInner(unittest.TestCase):
                             ], )
                     ],
                 end_user_info = [
-                    xi-sdk-python.models.order_create_request_lines_inner_end_user_info_inner.OrderCreateRequest_lines_inner_endUserInfo_inner(
+                    xi-sdk-resellers-python.models.order_create_request_lines_inner_end_user_info_inner.OrderCreateRequest_lines_inner_endUserInfo_inner(
                         end_user_type = '', 
                         end_user_id = '', 
                         contact = '', 

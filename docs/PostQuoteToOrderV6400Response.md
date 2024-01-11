@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.post_quote_to_order_v6400_response import PostQuoteToOrderV6400Response
+from xi-sdk-resellers-python.models.post_quote_to_order_v6400_response import PostQuoteToOrderV6400Response
 
 # TODO update the JSON string below
 json = "{}"

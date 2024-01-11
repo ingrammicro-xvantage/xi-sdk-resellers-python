@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner import OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner
+from xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner import OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner
 
 class TestOrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner(unittest.TestCase):
     """OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestOrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubord
                 holdreasoncode = '',
                 holdreason = '',
                 links = [
-                    xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
+                    xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
                         topic = 'orders', 
                         href = '', 
                         type = 'GET', )

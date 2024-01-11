@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_detail_request_servicerequest import OrderDetailRequestServicerequest
+from xi-sdk-resellers-python.models.order_detail_request_servicerequest import OrderDetailRequestServicerequest
 
 class TestOrderDetailRequestServicerequest(unittest.TestCase):
     """OrderDetailRequestServicerequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestOrderDetailRequestServicerequest(unittest.TestCase):
         model = OrderDetailRequestServicerequest()
         if include_optional:
             return OrderDetailRequestServicerequest(
-                requestpreamble = xi-sdk-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '', ),
-                orderdetailrequest = xi-sdk-python.models.order_detail_request_servicerequest_orderdetailrequest.orderDetailRequest_servicerequest_orderdetailrequest(
+                orderdetailrequest = xi-sdk-resellers-python.models.order_detail_request_servicerequest_orderdetailrequest.orderDetailRequest_servicerequest_orderdetailrequest(
                     ordernumber = '', 
                     customerponumber = '', 
                     orderdate = '', 
@@ -47,7 +47,7 @@ class TestOrderDetailRequestServicerequest(unittest.TestCase):
             )
         else:
             return OrderDetailRequestServicerequest(
-                requestpreamble = xi-sdk-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '', ),
         )

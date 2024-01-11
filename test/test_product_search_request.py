@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.product_search_request import ProductSearchRequest
+from xi-sdk-resellers-python.models.product_search_request import ProductSearchRequest
 
 class TestProductSearchRequest(unittest.TestCase):
     """ProductSearchRequest unit test stubs"""
@@ -36,13 +36,13 @@ class TestProductSearchRequest(unittest.TestCase):
         model = ProductSearchRequest()
         if include_optional:
             return ProductSearchRequest(
-                servicerequest = xi-sdk-python.models.product_search_request_servicerequest.productSearchRequest_servicerequest(
-                    requestpreamble = xi-sdk-python.models.product_search_request_servicerequest_requestpreamble.productSearchRequest_servicerequest_requestpreamble(
+                servicerequest = xi-sdk-resellers-python.models.product_search_request_servicerequest.productSearchRequest_servicerequest(
+                    requestpreamble = xi-sdk-resellers-python.models.product_search_request_servicerequest_requestpreamble.productSearchRequest_servicerequest_requestpreamble(
                         isocountrycode = '', 
                         customernumber = '', 
                         vendornumber = '', ), 
-                    productsearchrequest = xi-sdk-python.models.product_search_request_servicerequest_productsearchrequest.productSearchRequest_servicerequest_productsearchrequest(
-                        searchcriteria = xi-sdk-python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
+                    productsearchrequest = xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest.productSearchRequest_servicerequest_productsearchrequest(
+                        searchcriteria = xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
                             vendor = '', 
                             vendorpartnumber = 'WKB-1500GB', 
                             partdescription = 'WRLS ERGO KEYBOARD & MOUSE', 

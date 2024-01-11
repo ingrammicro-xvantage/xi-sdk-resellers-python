@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.error_response_dto import ErrorResponseDTO
+from xi-sdk-resellers-python.models.error_response_dto import ErrorResponseDTO
 
 class TestErrorResponseDTO(unittest.TestCase):
     """ErrorResponseDTO unit test stubs"""
@@ -37,12 +37,12 @@ class TestErrorResponseDTO(unittest.TestCase):
         if include_optional:
             return ErrorResponseDTO(
                 errors = [
-                    xi-sdk-python.models.error.Error(
+                    xi-sdk-resellers-python.models.error.Error(
                         id = '', 
                         type = '', 
                         message = '', 
                         fields = [
-                            xi-sdk-python.models.fields.Fields(
+                            xi-sdk-resellers-python.models.fields.Fields(
                                 field = '', 
                                 message = '', 
                                 value = '', )

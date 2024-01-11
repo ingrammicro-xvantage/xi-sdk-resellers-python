@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.price_and_availability_response_inner_availability import PriceAndAvailabilityResponseInnerAvailability
+from xi-sdk-resellers-python.models.price_and_availability_response_inner_availability import PriceAndAvailabilityResponseInnerAvailability
 
 # TODO update the JSON string below
 json = "{}"

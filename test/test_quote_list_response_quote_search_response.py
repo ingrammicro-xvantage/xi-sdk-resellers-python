@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.quote_list_response_quote_search_response import QuoteListResponseQuoteSearchResponse
+from xi-sdk-resellers-python.models.quote_list_response_quote_search_response import QuoteListResponseQuoteSearchResponse
 
 class TestQuoteListResponseQuoteSearchResponse(unittest.TestCase):
     """QuoteListResponseQuoteSearchResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestQuoteListResponseQuoteSearchResponse(unittest.TestCase):
         model = QuoteListResponseQuoteSearchResponse()
         if include_optional:
             return QuoteListResponseQuoteSearchResponse(
-                response_preamble = xi-sdk-python.models.quote_list_response_quote_search_response_response_preamble.quoteListResponse_quoteSearchResponse_responsePreamble(
+                response_preamble = xi-sdk-resellers-python.models.quote_list_response_quote_search_response_response_preamble.quoteListResponse_quoteSearchResponse_responsePreamble(
                     response_status = '', 
                     response_status_code = '', 
                     response_message = '', ),
                 quote_list = [
-                    xi-sdk-python.models.quote_list_response_quote_search_response_quote_list_inner.quoteListResponse_quoteSearchResponse_quoteList_inner(
+                    xi-sdk-resellers-python.models.quote_list_response_quote_search_response_quote_list_inner.quoteListResponse_quoteSearchResponse_quoteList_inner(
                         quote_name = '', 
                         quote_number = '', 
                         revision_number = 56, 

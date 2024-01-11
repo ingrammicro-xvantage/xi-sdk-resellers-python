@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.error_response import ErrorResponse
+from xi-sdk-resellers-python.models.error_response import ErrorResponse
 
 # TODO update the JSON string below
 json = "{}"

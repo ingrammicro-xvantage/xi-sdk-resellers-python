@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_create_request_ordercreaterequest import OrderCreateRequestOrdercreaterequest
+from xi-sdk-resellers-python.models.order_create_request_ordercreaterequest import OrderCreateRequestOrdercreaterequest
 
 class TestOrderCreateRequestOrdercreaterequest(unittest.TestCase):
     """OrderCreateRequestOrdercreaterequest unit test stubs"""
@@ -36,16 +36,16 @@ class TestOrderCreateRequestOrdercreaterequest(unittest.TestCase):
         model = OrderCreateRequestOrdercreaterequest()
         if include_optional:
             return OrderCreateRequestOrdercreaterequest(
-                requestpreamble = xi-sdk-python.models.order_create_request_ordercreaterequest_requestpreamble.orderCreateRequest_ordercreaterequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_requestpreamble.orderCreateRequest_ordercreaterequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '10-123456 or 123456', ),
-                ordercreatedetails = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails.orderCreateRequest_ordercreaterequest_ordercreatedetails(
+                ordercreatedetails = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails.orderCreateRequest_ordercreaterequest_ordercreatedetails(
                     customerponumber = '0', 
                     ordertype = 'Standard', 
                     enduserordernumber = '', 
                     billtosuffix = '', 
                     shiptosuffix = '', 
-                    shiptoaddress = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
+                    shiptoaddress = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
                         attention = '“Mr. Customer”', 
                         addressline1 = '“Ingram Micro”', 
                         addressline2 = '3351 Michelson Dr', 
@@ -58,7 +58,7 @@ class TestOrderCreateRequestOrdercreaterequest(unittest.TestCase):
                     thirdpartyfreightaccountnumber = '', 
                     specialbidnumber = '', 
                     lines = [
-                        xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
+                        xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
                             linetype = 'P', 
                             linenumber = '', 
                             ingrampartnumber = '', 
@@ -68,7 +68,7 @@ class TestOrderCreateRequestOrdercreaterequest(unittest.TestCase):
                             upc_code = '', 
                             warehouseid = '', 
                             unitprice = '', 
-                            enduser = xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
+                            enduser = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
                                 id = '', 
                                 addressline1 = '', 
                                 addressline2 = '', 
@@ -82,20 +82,20 @@ class TestOrderCreateRequestOrdercreaterequest(unittest.TestCase):
                                 faxnumber = '', 
                                 email = '', ), 
                             productextendedspecs = [
-                                xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
+                                xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
                                     attributename = 'shipfrom', 
                                     attributevalue = '', )
                                 ], )
                         ], 
                     extendedspecs = [
-                        xi-sdk-python.models.order_create_request_ordercreaterequest_ordercreatedetails_extendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_extendedspecs_inner(
+                        xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_extendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_extendedspecs_inner(
                             attributename = 'Isdirectshiporder', 
                             attributevalue = '', )
                         ], )
             )
         else:
             return OrderCreateRequestOrdercreaterequest(
-                requestpreamble = xi-sdk-python.models.order_create_request_ordercreaterequest_requestpreamble.orderCreateRequest_ordercreaterequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_requestpreamble.orderCreateRequest_ordercreaterequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '10-123456 or 123456', ),
         )

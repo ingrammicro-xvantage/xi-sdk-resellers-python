@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.order_search_response import OrderSearchResponse
+from xi-sdk-resellers-python.models.order_search_response import OrderSearchResponse
 
 class TestOrderSearchResponse(unittest.TestCase):
     """OrderSearchResponse unit test stubs"""
@@ -36,34 +36,34 @@ class TestOrderSearchResponse(unittest.TestCase):
         model = OrderSearchResponse()
         if include_optional:
             return OrderSearchResponse(
-                service_response = xi-sdk-python.models.order_search_response_service_response.orderSearchResponse_serviceResponse(
-                    responsepreamble = xi-sdk-python.models.order_search_response_service_response_responsepreamble.orderSearchResponse_serviceResponse_responsepreamble(
+                service_response = xi-sdk-resellers-python.models.order_search_response_service_response.orderSearchResponse_serviceResponse(
+                    responsepreamble = xi-sdk-resellers-python.models.order_search_response_service_response_responsepreamble.orderSearchResponse_serviceResponse_responsepreamble(
                         requeststatus = '', 
                         returnmessage = '', ), 
-                    ordersearchresponse = xi-sdk-python.models.order_search_response_service_response_ordersearchresponse.orderSearchResponse_serviceResponse_ordersearchresponse(
+                    ordersearchresponse = xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse.orderSearchResponse_serviceResponse_ordersearchresponse(
                         ordersfound = '', 
                         pagesize = '', 
                         pagenumber = '', 
                         orders = [
-                            xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner(
+                            xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner(
                                 ordernumber = '', 
                                 entrytimestamp = '', 
                                 customerordernumber = '', 
                                 suborders = [
-                                    xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner(
+                                    xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner(
                                         subordernumber = '', 
                                         statuscode = '', 
                                         status = '', 
                                         holdreasoncode = '', 
                                         holdreason = '', 
                                         links = [
-                                            xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
+                                            xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
                                                 topic = 'orders', 
                                                 href = '', 
                                                 type = 'GET', )
                                             ], )
                                     ], 
-                                links = xi-sdk-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_links.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_links(
+                                links = xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_links.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_links(
                                     topic = 'orders', 
                                     href = '', 
                                     type = 'GET', ), )

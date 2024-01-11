@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.returns_search_response import ReturnsSearchResponse
+from xi-sdk-resellers-python.models.returns_search_response import ReturnsSearchResponse
 
 # TODO update the JSON string below
 json = "{}"

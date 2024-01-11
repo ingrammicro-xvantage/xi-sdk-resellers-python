@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.price_and_availability_response import PriceAndAvailabilityResponse
+from xi-sdk-resellers-python.models.price_and_availability_response import PriceAndAvailabilityResponse
 
 class TestPriceAndAvailabilityResponse(unittest.TestCase):
     """PriceAndAvailabilityResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestPriceAndAvailabilityResponse(unittest.TestCase):
         model = PriceAndAvailabilityResponse()
         if include_optional:
             return PriceAndAvailabilityResponse(
-                serviceresponse = xi-sdk-python.models.price_and_availability_response_serviceresponse.priceAndAvailabilityResponse_serviceresponse(
-                    responsepreamble = xi-sdk-python.models.price_and_availability_response_serviceresponse_responsepreamble.priceAndAvailabilityResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse.priceAndAvailabilityResponse_serviceresponse(
+                    responsepreamble = xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_responsepreamble.priceAndAvailabilityResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         responsemessage = '', 
                         statuscode = '', ), 
-                    priceandstockresponse = xi-sdk-python.models.price_and_availability_response_serviceresponse_priceandstockresponse.priceAndAvailabilityResponse_serviceresponse_priceandstockresponse(
+                    priceandstockresponse = xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_priceandstockresponse.priceAndAvailabilityResponse_serviceresponse_priceandstockresponse(
                         details = [
-                            xi-sdk-python.models.price_and_availability_response_serviceresponse_priceandstockresponse_details_inner.priceAndAvailabilityResponse_serviceresponse_priceandstockresponse_details_inner(
+                            xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_priceandstockresponse_details_inner.priceAndAvailabilityResponse_serviceresponse_priceandstockresponse_details_inner(
                                 itemstatus = 'SUCCESS', 
                                 statusmessage = '', 
                                 ingrampartnumber = '', 
@@ -66,7 +66,7 @@ class TestPriceAndAvailabilityResponse(unittest.TestCase):
                                 skuauthorized = '', 
                                 extendedvendorpartnumber = '', 
                                 warehousedetails = [
-                                    xi-sdk-python.models.price_and_availability/warehouse_list_type/response.priceAndAvailability.warehouseListType.Response(
+                                    xi-sdk-resellers-python.models.price_and_availability/warehouse_list_type/response.priceAndAvailability.warehouseListType.Response(
                                         warehouseid = '', 
                                         warehousedescription = '', 
                                         availablequantity = 56, 

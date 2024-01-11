@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.order_modify_response_ship_to_info import OrderModifyResponseShipToInfo
+from xi-sdk-resellers-python.models.order_modify_response_ship_to_info import OrderModifyResponseShipToInfo
 
 # TODO update the JSON string below
 json = "{}"

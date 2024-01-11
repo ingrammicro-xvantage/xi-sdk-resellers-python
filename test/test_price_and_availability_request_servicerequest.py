@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation - United States
+    Reseller API Documentation
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-python.models.price_and_availability_request_servicerequest import PriceAndAvailabilityRequestServicerequest
+from xi-sdk-resellers-python.models.price_and_availability_request_servicerequest import PriceAndAvailabilityRequestServicerequest
 
 class TestPriceAndAvailabilityRequestServicerequest(unittest.TestCase):
     """PriceAndAvailabilityRequestServicerequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestPriceAndAvailabilityRequestServicerequest(unittest.TestCase):
         model = PriceAndAvailabilityRequestServicerequest()
         if include_optional:
             return PriceAndAvailabilityRequestServicerequest(
-                requestpreamble = xi-sdk-python.models.price_and_availability_request_servicerequest_requestpreamble.priceAndAvailabilityRequest_servicerequest_requestpreamble(
+                requestpreamble = xi-sdk-resellers-python.models.price_and_availability_request_servicerequest_requestpreamble.priceAndAvailabilityRequest_servicerequest_requestpreamble(
                     isocountrycode = 'US', 
                     customernumber = '12-34567 or 12-345678 or 123456 ', ),
-                priceandstockrequest = xi-sdk-python.models.price_and_availability_request_servicerequest_priceandstockrequest.priceAndAvailabilityRequest_servicerequest_priceandstockrequest(
+                priceandstockrequest = xi-sdk-resellers-python.models.price_and_availability_request_servicerequest_priceandstockrequest.priceAndAvailabilityRequest_servicerequest_priceandstockrequest(
                     showwarehouseavailability = '', 
                     extravailabilityflag = '', 
                     includeallsystems = True, 
                     item = [
-                        xi-sdk-python.models.price_and_availability_request_servicerequest_priceandstockrequest_item_inner.priceAndAvailabilityRequest_servicerequest_priceandstockrequest_item_inner(
+                        xi-sdk-resellers-python.models.price_and_availability_request_servicerequest_priceandstockrequest_item_inner.priceAndAvailabilityRequest_servicerequest_priceandstockrequest_item_inner(
                             index = 56, 
                             ingrampartnumber = '', 
                             vendorpartnumber = '', 

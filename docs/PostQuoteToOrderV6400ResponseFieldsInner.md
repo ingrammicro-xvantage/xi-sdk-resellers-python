@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.post_quote_to_order_v6400_response_fields_inner import PostQuoteToOrderV6400ResponseFieldsInner
+from xi-sdk-resellers-python.models.post_quote_to_order_v6400_response_fields_inner import PostQuoteToOrderV6400ResponseFieldsInner
 
 # TODO update the JSON string below
 json = "{}"

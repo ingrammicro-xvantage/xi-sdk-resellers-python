@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-python.models.returns_create_request import ReturnsCreateRequest
+from xi-sdk-resellers-python.models.returns_create_request import ReturnsCreateRequest
 
 # TODO update the JSON string below
 json = "{}"
