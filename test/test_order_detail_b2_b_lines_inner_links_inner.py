@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_links_inner import OrderDetailB2BLinesInnerLinksInner
+from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_links_inner import OrderDetailB2BLinesInnerLinksInner
 
 class TestOrderDetailB2BLinesInnerLinksInner(unittest.TestCase):
     """OrderDetailB2BLinesInnerLinksInner unit test stubs"""

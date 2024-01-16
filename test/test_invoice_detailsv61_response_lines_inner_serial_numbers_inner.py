@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detailsv61_response_lines_inner_serial_numbers_inner import InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner
+from xi.sdk.resellers.python.models.invoice_detailsv61_response_lines_inner_serial_numbers_inner import InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner
 
 class TestInvoiceDetailsv61ResponseLinesInnerSerialNumbersInner(unittest.TestCase):
     """InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner unit test stubs"""

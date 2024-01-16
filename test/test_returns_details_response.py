@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_details_response import ReturnsDetailsResponse
+from xi.sdk.resellers.python.models.returns_details_response import ReturnsDetailsResponse
 
 class TestReturnsDetailsResponse(unittest.TestCase):
     """ReturnsDetailsResponse unit test stubs"""
@@ -45,7 +45,7 @@ class TestReturnsDetailsResponse(unittest.TestCase):
                 status = '',
                 return_warehouse_address = '',
                 products = [
-                    xi-sdk-resellers-python.models.returns_details_response_products_inner.returnsDetailsResponse_products_inner(
+                    xi.sdk.resellers.python.models.returns_details_response_products_inner.returnsDetailsResponse_products_inner(
                         ingram_line_number = '', 
                         description = '', 
                         ingram_part_number = '', 

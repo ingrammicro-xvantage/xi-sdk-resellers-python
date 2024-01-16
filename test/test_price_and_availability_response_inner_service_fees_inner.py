@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.price_and_availability_response_inner_service_fees_inner import PriceAndAvailabilityResponseInnerServiceFeesInner
+from xi.sdk.resellers.python.models.price_and_availability_response_inner_service_fees_inner import PriceAndAvailabilityResponseInnerServiceFeesInner
 
 class TestPriceAndAvailabilityResponseInnerServiceFeesInner(unittest.TestCase):
     """PriceAndAvailabilityResponseInnerServiceFeesInner unit test stubs"""

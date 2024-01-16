@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_request_servicerequest import ProductSearchRequestServicerequest
+from xi.sdk.resellers.python.models.product_search_request_servicerequest import ProductSearchRequestServicerequest
 
 class TestProductSearchRequestServicerequest(unittest.TestCase):
     """ProductSearchRequestServicerequest unit test stubs"""
@@ -36,12 +36,12 @@ class TestProductSearchRequestServicerequest(unittest.TestCase):
         model = ProductSearchRequestServicerequest()
         if include_optional:
             return ProductSearchRequestServicerequest(
-                requestpreamble = xi-sdk-resellers-python.models.product_search_request_servicerequest_requestpreamble.productSearchRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.python.models.product_search_request_servicerequest_requestpreamble.productSearchRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '', 
                     vendornumber = '', ),
-                productsearchrequest = xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest.productSearchRequest_servicerequest_productsearchrequest(
-                    searchcriteria = xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
+                productsearchrequest = xi.sdk.resellers.python.models.product_search_request_servicerequest_productsearchrequest.productSearchRequest_servicerequest_productsearchrequest(
+                    searchcriteria = xi.sdk.resellers.python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
                         vendor = '', 
                         vendorpartnumber = 'WKB-1500GB', 
                         partdescription = 'WRLS ERGO KEYBOARD & MOUSE', 

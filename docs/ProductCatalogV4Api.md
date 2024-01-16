@@ -1,4 +1,4 @@
-# xi-sdk-resellers-python.ProductCatalogV4Api
+# xi.sdk.resellers.python.ProductCatalogV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,15 +22,15 @@ Find price and availability of up to 50 SKUs in a single request. As you increas
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_request import MultiSKUPriceAndStockRequest
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_response import MultiSKUPriceAndStockResponse
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_request import MultiSKUPriceAndStockRequest
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_response import MultiSKUPriceAndStockResponse
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -42,9 +42,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.ProductCatalogV4Api(api_client)
+    api_instance = xi.sdk.resellers.python.ProductCatalogV4Api(api_client)
     multi_sku_price_and_stock_request = {  
    "servicerequest":{
         "requestpreamble":{  
@@ -115,15 +115,15 @@ A real time search that provides the Ingram Micro part number using the manufact
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.product_search_request import ProductSearchRequest
-from xi-sdk-resellers-python.models.product_search_response import ProductSearchResponse
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.product_search_request import ProductSearchRequest
+from xi.sdk.resellers.python.models.product_search_response import ProductSearchResponse
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -135,9 +135,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.ProductCatalogV4Api(api_client)
+    api_instance = xi.sdk.resellers.python.ProductCatalogV4Api(api_client)
     product_search_request = {"servicerequest":{"requestpreamble":{"customernumber":"20-222222","isocountrycode":"US"},"productsearchrequest":{"searchcriteria":{"ingrampartnumber":"TSXML3"}}}} # ProductSearchRequest |  (optional)
 
     try:

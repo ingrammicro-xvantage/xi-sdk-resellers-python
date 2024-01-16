@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_line_type import ProductLineType
+from xi.sdk.resellers.python.models.product_line_type import ProductLineType
 
 class TestProductLineType(unittest.TestCase):
     """ProductLineType unit test stubs"""
@@ -54,16 +54,16 @@ class TestProductLineType(unittest.TestCase):
                 unitprice = '',
                 unitofmeasure = '',
                 serialnumberdetails = [
-                    xi-sdk-resellers-python.models.product_line_type_serialnumberdetails_inner.productLineType_serialnumberdetails_inner(
+                    xi.sdk.resellers.python.models.product_line_type_serialnumberdetails_inner.productLineType_serialnumberdetails_inner(
                         serialnumber = '', 
                         deliverynumber = '', )
                     ],
                 trackingnumberdetails = [
-                    xi-sdk-resellers-python.models.product_line_type_trackingnumberdetails_inner.productLineType_trackingnumberdetails_inner(
+                    xi.sdk.resellers.python.models.product_line_type_trackingnumberdetails_inner.productLineType_trackingnumberdetails_inner(
                         trackingnumber = '', )
                     ],
                 productextendedspecs = [
-                    xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
+                    xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
                         attributename = '', 
                         attributevalue = '', )
                     ]

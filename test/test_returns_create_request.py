@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_create_request import ReturnsCreateRequest
+from xi.sdk.resellers.python.models.returns_create_request import ReturnsCreateRequest
 
 class TestReturnsCreateRequest(unittest.TestCase):
     """ReturnsCreateRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestReturnsCreateRequest(unittest.TestCase):
         if include_optional:
             return ReturnsCreateRequest(
                 list = [
-                    xi-sdk-resellers-python.models.returns_create_request_list_inner.returnsCreateRequest_list_inner(
+                    xi.sdk.resellers.python.models.returns_create_request_list_inner.returnsCreateRequest_list_inner(
                         invoice_number = '', 
                         invoice_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                         customer_order_number = '', 
@@ -51,7 +51,7 @@ class TestReturnsCreateRequest(unittest.TestCase):
                         reference_number = '', 
                         bill_to_address_id = '', 
                         ship_from_info = [
-                            xi-sdk-resellers-python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
+                            xi.sdk.resellers.python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
                                 company_name = '', 
                                 contact = '', 
                                 address_line1 = '', 

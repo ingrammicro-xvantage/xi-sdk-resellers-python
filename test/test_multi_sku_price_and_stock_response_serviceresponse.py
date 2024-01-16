@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse import MultiSKUPriceAndStockResponseServiceresponse
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse import MultiSKUPriceAndStockResponseServiceresponse
 
 class TestMultiSKUPriceAndStockResponseServiceresponse(unittest.TestCase):
     """MultiSKUPriceAndStockResponseServiceresponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestMultiSKUPriceAndStockResponseServiceresponse(unittest.TestCase):
         model = MultiSKUPriceAndStockResponseServiceresponse()
         if include_optional:
             return MultiSKUPriceAndStockResponseServiceresponse(
-                responsepreamble = xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_responsepreamble.priceAndAvailabilityResponse_serviceresponse_responsepreamble(
+                responsepreamble = xi.sdk.resellers.python.models.price_and_availability_response_serviceresponse_responsepreamble.priceAndAvailabilityResponse_serviceresponse_responsepreamble(
                     responsestatus = '', 
                     responsemessage = '', 
                     statuscode = '', ),
-                priceandstockresponse = xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse(
+                priceandstockresponse = xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse(
                     details = [
-                        xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner(
+                        xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner(
                             itemstatus = '', 
                             statusmessage = '', 
                             ingrampartnumber = '', 
@@ -65,7 +65,7 @@ class TestMultiSKUPriceAndStockResponseServiceresponse(unittest.TestCase):
                             skuauthorized = '', 
                             extendedvendorpartnumber = '', 
                             warehousedetails = [
-                                xi-sdk-resellers-python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
+                                xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
                                     warehouseid = '10-Mira Loma CA', 
                                     warehousedescription = '', 
                                     availablequantity = 56, 

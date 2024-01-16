@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detailsv61_response_fx_rate_info import InvoiceDetailsv61ResponseFxRateInfo
+from xi.sdk.resellers.python.models.invoice_detailsv61_response_fx_rate_info import InvoiceDetailsv61ResponseFxRateInfo
 
 class TestInvoiceDetailsv61ResponseFxRateInfo(unittest.TestCase):
     """InvoiceDetailsv61ResponseFxRateInfo unit test stubs"""

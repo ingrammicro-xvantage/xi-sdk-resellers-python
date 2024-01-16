@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_line_type_serialnumberdetails_inner import ProductLineTypeSerialnumberdetailsInner
+from xi.sdk.resellers.python.models.product_line_type_serialnumberdetails_inner import ProductLineTypeSerialnumberdetailsInner
 
 class TestProductLineTypeSerialnumberdetailsInner(unittest.TestCase):
     """ProductLineTypeSerialnumberdetailsInner unit test stubs"""

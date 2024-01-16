@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.renewals_search_request_data_type_invoice_date import RenewalsSearchRequestDataTypeInvoiceDate
+from xi.sdk.resellers.python.models.renewals_search_request_data_type_invoice_date import RenewalsSearchRequestDataTypeInvoiceDate
 
 class TestRenewalsSearchRequestDataTypeInvoiceDate(unittest.TestCase):
     """RenewalsSearchRequestDataTypeInvoiceDate unit test stubs"""

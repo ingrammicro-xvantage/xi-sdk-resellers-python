@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_delete_request_servicerequest_order_delete_request_details import OrderDeleteRequestServicerequestOrderDeleteRequestDetails
+from xi.sdk.resellers.python.models.order_delete_request_servicerequest_order_delete_request_details import OrderDeleteRequestServicerequestOrderDeleteRequestDetails
 
 class TestOrderDeleteRequestServicerequestOrderDeleteRequestDetails(unittest.TestCase):
     """OrderDeleteRequestServicerequestOrderDeleteRequestDetails unit test stubs"""

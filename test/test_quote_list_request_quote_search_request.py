@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_list_request_quote_search_request import QuoteListRequestQuoteSearchRequest
+from xi.sdk.resellers.python.models.quote_list_request_quote_search_request import QuoteListRequestQuoteSearchRequest
 
 class TestQuoteListRequestQuoteSearchRequest(unittest.TestCase):
     """QuoteListRequestQuoteSearchRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestQuoteListRequestQuoteSearchRequest(unittest.TestCase):
         model = QuoteListRequestQuoteSearchRequest()
         if include_optional:
             return QuoteListRequestQuoteSearchRequest(
-                request_preamble = xi-sdk-resellers-python.models.quote_list_request_quote_search_request_request_preamble.quoteListRequest_quoteSearchRequest_requestPreamble(
+                request_preamble = xi.sdk.resellers.python.models.quote_list_request_quote_search_request_request_preamble.quoteListRequest_quoteSearchRequest_requestPreamble(
                     customer_number = '', 
                     customer_contact = '', 
                     iso_country_code = '', ),
-                retrieve_quote_request = xi-sdk-resellers-python.models.quote_list_request_quote_search_request_retrieve_quote_request.quoteListRequest_quoteSearchRequest_retrieveQuoteRequest(
+                retrieve_quote_request = xi.sdk.resellers.python.models.quote_list_request_quote_search_request_retrieve_quote_request.quoteListRequest_quoteSearchRequest_retrieveQuoteRequest(
                     quote_number = '', 
                     bid_number = '', 
                     end_user_name = '', 

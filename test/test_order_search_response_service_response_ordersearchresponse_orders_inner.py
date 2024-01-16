@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner import OrderSearchResponseServiceResponseOrdersearchresponseOrdersInner
+from xi.sdk.resellers.python.models.order_search_response_service_response_ordersearchresponse_orders_inner import OrderSearchResponseServiceResponseOrdersearchresponseOrdersInner
 
 class TestOrderSearchResponseServiceResponseOrdersearchresponseOrdersInner(unittest.TestCase):
     """OrderSearchResponseServiceResponseOrdersearchresponseOrdersInner unit test stubs"""
@@ -40,20 +40,20 @@ class TestOrderSearchResponseServiceResponseOrdersearchresponseOrdersInner(unitt
                 entrytimestamp = '',
                 customerordernumber = '',
                 suborders = [
-                    xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner(
+                    xi.sdk.resellers.python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner(
                         subordernumber = '', 
                         statuscode = '', 
                         status = '', 
                         holdreasoncode = '', 
                         holdreason = '', 
                         links = [
-                            xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
+                            xi.sdk.resellers.python.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
                                 topic = 'orders', 
                                 href = '', 
                                 type = 'GET', )
                             ], )
                     ],
-                links = xi-sdk-resellers-python.models.order_search_response_service_response_ordersearchresponse_orders_inner_links.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_links(
+                links = xi.sdk.resellers.python.models.order_search_response_service_response_ordersearchresponse_orders_inner_links.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_links(
                     topic = 'orders', 
                     href = '', 
                     type = 'GET', )

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_request_vmf import OrderCreateRequestVmf
+from xi.sdk.resellers.python.models.order_create_request_vmf import OrderCreateRequestVmf
 
 class TestOrderCreateRequestVmf(unittest.TestCase):
     """OrderCreateRequestVmf unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_service_contract_info import OrderDetailB2BLinesInnerServiceContractInfo
+from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info import OrderDetailB2BLinesInnerServiceContractInfo
 
 class TestOrderDetailB2BLinesInnerServiceContractInfo(unittest.TestCase):
     """OrderDetailB2BLinesInnerServiceContractInfo unit test stubs"""
@@ -36,21 +36,21 @@ class TestOrderDetailB2BLinesInnerServiceContractInfo(unittest.TestCase):
         model = OrderDetailB2BLinesInnerServiceContractInfo()
         if include_optional:
             return OrderDetailB2BLinesInnerServiceContractInfo(
-                contract_info = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_service_contract_info_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo(
+                contract_info = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo(
                     contract_description = '', 
                     contract_number = '', 
                     contract_status = '', 
                     contract_start_date = '', 
                     contract_end_date = '', 
                     contract_duration = '', ),
-                subscriptions = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_service_contract_info_subscriptions.OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions(
+                subscriptions = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_subscriptions.OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions(
                     subscription_id = '', 
                     subscription_term = '', 
                     renewal_term = '', 
                     billing_model = '', 
                     subcription_start_date = '', 
                     subcription_end_date = '', ),
-                license_info = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_service_contract_info_license_info.OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo(
+                license_info = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_license_info.OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo(
                     license_number = [
                         ''
                         ], 

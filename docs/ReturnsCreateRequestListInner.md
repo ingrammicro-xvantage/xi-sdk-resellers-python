@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.returns_create_request_list_inner import ReturnsCreateRequestListInner
+from xi.sdk.resellers.python.models.returns_create_request_list_inner import ReturnsCreateRequestListInner
 
 # TODO update the JSON string below
 json = "{}"

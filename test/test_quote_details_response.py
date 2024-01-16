@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_details_response import QuoteDetailsResponse
+from xi.sdk.resellers.python.models.quote_details_response import QuoteDetailsResponse
 
 class TestQuoteDetailsResponse(unittest.TestCase):
     """QuoteDetailsResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestQuoteDetailsResponse(unittest.TestCase):
         model = QuoteDetailsResponse()
         if include_optional:
             return QuoteDetailsResponse(
-                quote_detail_response = xi-sdk-resellers-python.models.quote_details_response_quote_detail_response.quoteDetailsResponse_quoteDetailResponse(
-                    response_preamble = xi-sdk-resellers-python.models.quote_details_quote_detail_response_response_preamble.quoteDetails_quoteDetailResponse_responsePreamble(
+                quote_detail_response = xi.sdk.resellers.python.models.quote_details_response_quote_detail_response.quoteDetailsResponse_quoteDetailResponse(
+                    response_preamble = xi.sdk.resellers.python.models.quote_details_quote_detail_response_response_preamble.quoteDetails_quoteDetailResponse_responsePreamble(
                         response_status = '', 
                         status_code = '', 
                         response_message = '', ), 
-                    retrieve_quote_response = xi-sdk-resellers-python.models.quote_details_response_quote_detail_response_retrieve_quote_response.quoteDetailsResponse_quoteDetailResponse_retrieveQuoteResponse(
+                    retrieve_quote_response = xi.sdk.resellers.python.models.quote_details_response_quote_detail_response_retrieve_quote_response.quoteDetailsResponse_quoteDetailResponse_retrieveQuoteResponse(
                         quote_guid = '', 
                         quote_name = '', 
                         quote_number = '', 
@@ -61,19 +61,19 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                         modified = '', 
                         leasing_calculations = '', 
                         leasing_instructions = '', 
-                        account_info = xi-sdk-resellers-python.models.quote_details_quote_detail_response_retrieve_quote_response_account_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_accountInfo(
+                        account_info = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_account_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_accountInfo(
                             account_name = '', 
                             bcn = '', 
                             phone = '', ), 
-                        contact_info = xi-sdk-resellers-python.models.quote_details_quote_detail_response_retrieve_quote_response_contact_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_contactInfo(
+                        contact_info = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_contact_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_contactInfo(
                             contact_email = '', 
                             contact_name = '', ), 
-                        vendor_attributes = xi-sdk-resellers-python.models.quote_details_quote_detail_response_retrieve_quote_response_vendor_attributes.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_vendorAttributes(
+                        vendor_attributes = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_vendor_attributes.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_vendorAttributes(
                             estimate_id = '', 
                             deal_id = '', 
                             vendor_name = '', 
                             vendor_setting_message = '', ), 
-                        end_user = xi-sdk-resellers-python.models.quote_details_quote_detail_response_retrieve_quote_response_end_user.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_endUser(
+                        end_user = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_end_user.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_endUser(
                             end_user_name = '', 
                             end_user_address = '', 
                             end_user_address2 = '', 
@@ -86,7 +86,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                             end_user_contact_name = '', 
                             end_user_market_segment = '', ), 
                         quote_product_list = [
-                            xi-sdk-resellers-python.models.quote_details/quote_product_list/response.quoteDetails.quoteProductList.Response(
+                            xi.sdk.resellers.python.models.quote_details/quote_product_list/response.quoteDetails.quoteProductList.Response(
                                 quote_product_guid = '', 
                                 quantity = '', 
                                 comments = '', 
@@ -101,7 +101,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                                 vpn_category = '', 
                                 quote_products_supplier_part_auxiliary_id = '', 
                                 quote_products_vendor = '', 
-                                price = xi-sdk-resellers-python.models.quote_product_list_price.quoteProductList_price(
+                                price = xi.sdk.resellers.python.models.quote_product_list_price.quoteProductList_price(
                                     quote_price = 1.337, 
                                     msrp = 1.337, 
                                     extended_msrp = 1.337, 

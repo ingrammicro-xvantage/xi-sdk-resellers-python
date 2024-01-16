@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item import MultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item import MultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem
 
 class TestMultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem(unittest.TestCase):
     """MultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem unit test stubs"""

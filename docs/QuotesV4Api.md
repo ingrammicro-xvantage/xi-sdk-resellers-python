@@ -1,4 +1,4 @@
-# xi-sdk-resellers-python.QuotesV4Api
+# xi.sdk.resellers.python.QuotesV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,15 +22,15 @@ A real-time request to delete a previously accepted order must be submitted befo
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.quote_details_request import QuoteDetailsRequest
-from xi-sdk-resellers-python.models.quote_details_response import QuoteDetailsResponse
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.quote_details_request import QuoteDetailsRequest
+from xi.sdk.resellers.python.models.quote_details_response import QuoteDetailsResponse
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -42,9 +42,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.QuotesV4Api(api_client)
+    api_instance = xi.sdk.resellers.python.QuotesV4Api(api_client)
     quote_details_request = {"servicerequest":{"requestpreamble":{"isocountrycode":"US","customerumber":"20-222222"},"OrderDeleteRequestDetails":{"entryDate":"2019-01-22","orderBranch":"20","orderNumber":"RC62Z"}}} # QuoteDetailsRequest |  (optional)
 
     try:
@@ -100,15 +100,15 @@ A real-time request that allows the customer to query Ingram Micro for detailed 
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.quote_list_request import QuoteListRequest
-from xi-sdk-resellers-python.models.quote_list_response import QuoteListResponse
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.quote_list_request import QuoteListRequest
+from xi.sdk.resellers.python.models.quote_list_response import QuoteListResponse
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -120,9 +120,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.QuotesV4Api(api_client)
+    api_instance = xi.sdk.resellers.python.QuotesV4Api(api_client)
     quote_list_request = {"servicerequest":{"requestpreamble":{"isocountrycode":"US","customernumber":"20-222222"},"orderdetailrequest":{"ordernumber":"20-B2V9H"}}} # QuoteListRequest |  (optional)
 
     try:

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.deals_search_response_deals_inner import DealsSearchResponseDealsInner
+from xi.sdk.resellers.python.models.deals_search_response_deals_inner import DealsSearchResponseDealsInner
 
 class TestDealsSearchResponseDealsInner(unittest.TestCase):
     """DealsSearchResponseDealsInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestDealsSearchResponseDealsInner(unittest.TestCase):
                 vendor = '',
                 deal_expiry_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 links = [
-                    xi-sdk-resellers-python.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
+                    xi.sdk.resellers.python.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

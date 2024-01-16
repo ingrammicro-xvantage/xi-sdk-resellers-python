@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner import OrderStatusAsyncNotificationRequestResourceInnerLinesInner
+from xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner import OrderStatusAsyncNotificationRequestResourceInnerLinesInner
 
 class TestOrderStatusAsyncNotificationRequestResourceInnerLinesInner(unittest.TestCase):
     """OrderStatusAsyncNotificationRequestResourceInnerLinesInner unit test stubs"""
@@ -45,21 +45,21 @@ class TestOrderStatusAsyncNotificationRequestResourceInnerLinesInner(unittest.Te
                 shipped_quantity = '',
                 backordered_quantity = '',
                 shipment_details = [
-                    xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner(
+                    xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner(
                         shipment_date = '', 
                         ship_from_warehouse_id = '', 
                         warehouse_name = '', 
                         carrier_code = '', 
                         carrier_name = '', 
                         package_details = [
-                            xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner_package_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner(
+                            xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner_package_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner(
                                 carton_number = '', 
                                 quantity_inbox = '', 
                                 tracking_number = '', )
                             ], )
                     ],
                 serial_number_details = [
-                    xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner_serial_number_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_serialNumberDetails_inner(
+                    xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner_serial_number_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_serialNumberDetails_inner(
                         serial_number = '', )
                     ]
             )

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.fields import Fields
+from xi.sdk.resellers.python.models.fields import Fields
 
 class TestFields(unittest.TestCase):
     """Fields unit test stubs"""

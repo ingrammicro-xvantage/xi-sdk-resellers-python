@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "xi-sdk-resellers-python"
+NAME = "xi.sdk.resellers.python"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
@@ -45,5 +45,5 @@ setup(
     long_description="""\
     For Resellers. &lt;br&gt; Who are looking to Innovate with Ingram Micro&#39;s API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
     """,  # noqa: E501
-    package_data={"xi-sdk-resellers-python": ["py.typed"]},
+    package_data={"xi.sdk.resellers.python": ["py.typed"]},
 )

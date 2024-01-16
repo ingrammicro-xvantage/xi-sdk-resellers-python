@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_details_response_additional_attributes_inner import QuoteDetailsResponseAdditionalAttributesInner
+from xi.sdk.resellers.python.models.quote_details_response_additional_attributes_inner import QuoteDetailsResponseAdditionalAttributesInner
 
 class TestQuoteDetailsResponseAdditionalAttributesInner(unittest.TestCase):
     """QuoteDetailsResponseAdditionalAttributesInner unit test stubs"""

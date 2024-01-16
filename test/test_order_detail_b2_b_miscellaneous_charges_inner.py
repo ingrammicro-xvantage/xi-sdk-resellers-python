@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_miscellaneous_charges_inner import OrderDetailB2BMiscellaneousChargesInner
+from xi.sdk.resellers.python.models.order_detail_b2_b_miscellaneous_charges_inner import OrderDetailB2BMiscellaneousChargesInner
 
 class TestOrderDetailB2BMiscellaneousChargesInner(unittest.TestCase):
     """OrderDetailB2BMiscellaneousChargesInner unit test stubs"""

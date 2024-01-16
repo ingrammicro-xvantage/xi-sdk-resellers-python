@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
+from xi.sdk.resellers.python.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
 
 class TestFreightRequestShipToAddressInner(unittest.TestCase):
     """FreightRequestShipToAddressInner unit test stubs"""

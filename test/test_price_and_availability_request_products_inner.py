@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.price_and_availability_request_products_inner import PriceAndAvailabilityRequestProductsInner
+from xi.sdk.resellers.python.models.price_and_availability_request_products_inner import PriceAndAvailabilityRequestProductsInner
 
 class TestPriceAndAvailabilityRequestProductsInner(unittest.TestCase):
     """PriceAndAvailabilityRequestProductsInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestPriceAndAvailabilityRequestProductsInner(unittest.TestCase):
                 upc = '',
                 quantity_requested = '',
                 additional_attributes = [
-                    xi-sdk-resellers-python.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
+                    xi.sdk.resellers.python.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ]

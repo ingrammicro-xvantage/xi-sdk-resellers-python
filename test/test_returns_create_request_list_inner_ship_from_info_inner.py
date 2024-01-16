@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_create_request_list_inner_ship_from_info_inner import ReturnsCreateRequestListInnerShipFromInfoInner
+from xi.sdk.resellers.python.models.returns_create_request_list_inner_ship_from_info_inner import ReturnsCreateRequestListInnerShipFromInfoInner
 
 class TestReturnsCreateRequestListInnerShipFromInfoInner(unittest.TestCase):
     """ReturnsCreateRequestListInnerShipFromInfoInner unit test stubs"""

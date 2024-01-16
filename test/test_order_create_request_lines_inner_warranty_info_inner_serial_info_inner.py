@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner import OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner
+from xi.sdk.resellers.python.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner import OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner
 
 class TestOrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner(unittest.TestCase):
     """OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_create_request_list_inner import ReturnsCreateRequestListInner
+from xi.sdk.resellers.python.models.returns_create_request_list_inner import ReturnsCreateRequestListInner
 
 class TestReturnsCreateRequestListInner(unittest.TestCase):
     """ReturnsCreateRequestListInner unit test stubs"""
@@ -49,7 +49,7 @@ class TestReturnsCreateRequestListInner(unittest.TestCase):
                 reference_number = '',
                 bill_to_address_id = '',
                 ship_from_info = [
-                    xi-sdk-resellers-python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
+                    xi.sdk.resellers.python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
                         company_name = '', 
                         contact = '', 
                         address_line1 = '', 
@@ -72,7 +72,7 @@ class TestReturnsCreateRequestListInner(unittest.TestCase):
                 primary_reason = '',
                 secondary_reason = '',
                 ship_from_info = [
-                    xi-sdk-resellers-python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
+                    xi.sdk.resellers.python.models.returns_create_request_list_inner_ship_from_info_inner.returnsCreateRequest_list_inner_shipFromInfo_inner(
                         company_name = '', 
                         contact = '', 
                         address_line1 = '', 

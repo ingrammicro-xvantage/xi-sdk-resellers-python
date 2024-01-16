@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_list_response import QuoteListResponse
+from xi.sdk.resellers.python.models.quote_list_response import QuoteListResponse
 
 class TestQuoteListResponse(unittest.TestCase):
     """QuoteListResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestQuoteListResponse(unittest.TestCase):
         model = QuoteListResponse()
         if include_optional:
             return QuoteListResponse(
-                quote_search_response = xi-sdk-resellers-python.models.quote_list_response_quote_search_response.quoteListResponse_quoteSearchResponse(
-                    response_preamble = xi-sdk-resellers-python.models.quote_list_response_quote_search_response_response_preamble.quoteListResponse_quoteSearchResponse_responsePreamble(
+                quote_search_response = xi.sdk.resellers.python.models.quote_list_response_quote_search_response.quoteListResponse_quoteSearchResponse(
+                    response_preamble = xi.sdk.resellers.python.models.quote_list_response_quote_search_response_response_preamble.quoteListResponse_quoteSearchResponse_responsePreamble(
                         response_status = '', 
                         response_status_code = '', 
                         response_message = '', ), 
                     quote_list = [
-                        xi-sdk-resellers-python.models.quote_list_response_quote_search_response_quote_list_inner.quoteListResponse_quoteSearchResponse_quoteList_inner(
+                        xi.sdk.resellers.python.models.quote_list_response_quote_search_response_quote_list_inner.quoteListResponse_quoteSearchResponse_quoteList_inner(
                             quote_name = '', 
                             quote_number = '', 
                             revision_number = 56, 

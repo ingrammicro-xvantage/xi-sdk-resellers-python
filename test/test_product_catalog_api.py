@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.product_catalog_api import ProductCatalogApi
+from xi.sdk.resellers.python.api.product_catalog_api import ProductCatalogApi
 
 
 class TestProductCatalogApi(unittest.TestCase):

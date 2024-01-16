@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_request_servicerequest_requestpreamble import ProductSearchRequestServicerequestRequestpreamble
+from xi.sdk.resellers.python.models.product_search_request_servicerequest_requestpreamble import ProductSearchRequestServicerequestRequestpreamble
 
 class TestProductSearchRequestServicerequestRequestpreamble(unittest.TestCase):
     """ProductSearchRequestServicerequestRequestpreamble unit test stubs"""

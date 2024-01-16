@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.order_create_response_end_user_info import OrderCreateResponseEndUserInfo
+from xi.sdk.resellers.python.models.order_create_response_end_user_info import OrderCreateResponseEndUserInfo
 
 # TODO update the JSON string below
 json = "{}"

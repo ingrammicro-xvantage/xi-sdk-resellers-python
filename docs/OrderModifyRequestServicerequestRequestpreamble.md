@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.order_modify_request_servicerequest_requestpreamble import OrderModifyRequestServicerequestRequestpreamble
+from xi.sdk.resellers.python.models.order_modify_request_servicerequest_requestpreamble import OrderModifyRequestServicerequestRequestpreamble
 
 # TODO update the JSON string below
 json = "{}"

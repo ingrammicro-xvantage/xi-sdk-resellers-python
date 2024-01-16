@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_modify_request_additional_attributes_inner import OrderModifyRequestAdditionalAttributesInner
+from xi.sdk.resellers.python.models.order_modify_request_additional_attributes_inner import OrderModifyRequestAdditionalAttributesInner
 
 class TestOrderModifyRequestAdditionalAttributesInner(unittest.TestCase):
     """OrderModifyRequestAdditionalAttributesInner unit test stubs"""

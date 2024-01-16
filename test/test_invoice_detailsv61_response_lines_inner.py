@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detailsv61_response_lines_inner import InvoiceDetailsv61ResponseLinesInner
+from xi.sdk.resellers.python.models.invoice_detailsv61_response_lines_inner import InvoiceDetailsv61ResponseLinesInner
 
 class TestInvoiceDetailsv61ResponseLinesInner(unittest.TestCase):
     """InvoiceDetailsv61ResponseLinesInner unit test stubs"""
@@ -53,7 +53,7 @@ class TestInvoiceDetailsv61ResponseLinesInner(unittest.TestCase):
                 tax_rate = 1.337,
                 tax_amount = 1.337,
                 serial_numbers = [
-                    xi-sdk-resellers-python.models.invoice_detailsv6_1_response_lines_inner_serial_numbers_inner.InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner(
+                    xi.sdk.resellers.python.models.invoice_detailsv6_1_response_lines_inner_serial_numbers_inner.InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner(
                         serial_number = '', )
                     ],
                 quantity_ordered = 56,

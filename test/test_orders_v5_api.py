@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.orders_v5_api import OrdersV5Api
+from xi.sdk.resellers.python.api.orders_v5_api import OrdersV5Api
 
 
 class TestOrdersV5Api(unittest.TestCase):

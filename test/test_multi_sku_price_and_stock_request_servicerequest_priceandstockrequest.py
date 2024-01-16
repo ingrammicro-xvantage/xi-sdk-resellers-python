@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest import MultiSKUPriceAndStockRequestServicerequestPriceandstockrequest
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest import MultiSKUPriceAndStockRequestServicerequestPriceandstockrequest
 
 class TestMultiSKUPriceAndStockRequestServicerequestPriceandstockrequest(unittest.TestCase):
     """MultiSKUPriceAndStockRequestServicerequestPriceandstockrequest unit test stubs"""
@@ -39,7 +39,7 @@ class TestMultiSKUPriceAndStockRequestServicerequestPriceandstockrequest(unittes
                 showwarehouseavailability = '',
                 extravailabilityflag = '',
                 includeallsystems = True,
-                item = xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
+                item = xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
                     index = 56, 
                     ingrampartnumber = '', 
                     vendorpartnumber = '', 

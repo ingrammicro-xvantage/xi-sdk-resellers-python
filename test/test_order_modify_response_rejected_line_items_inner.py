@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_modify_response_rejected_line_items_inner import OrderModifyResponseRejectedLineItemsInner
+from xi.sdk.resellers.python.models.order_modify_response_rejected_line_items_inner import OrderModifyResponseRejectedLineItemsInner
 
 class TestOrderModifyResponseRejectedLineItemsInner(unittest.TestCase):
     """OrderModifyResponseRejectedLineItemsInner unit test stubs"""

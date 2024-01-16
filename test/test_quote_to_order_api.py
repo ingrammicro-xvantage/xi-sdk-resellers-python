@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.quote_to_order_api import QuoteToOrderApi
+from xi.sdk.resellers.python.api.quote_to_order_api import QuoteToOrderApi
 
 
 class TestQuoteToOrderApi(unittest.TestCase):

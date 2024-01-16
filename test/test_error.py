@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.error import Error
+from xi.sdk.resellers.python.models.error import Error
 
 class TestError(unittest.TestCase):
     """Error unit test stubs"""
@@ -40,7 +40,7 @@ class TestError(unittest.TestCase):
                 type = '',
                 message = '',
                 fields = [
-                    xi-sdk-resellers-python.models.fields.Fields(
+                    xi.sdk.resellers.python.models.fields.Fields(
                         field = '', 
                         message = '', 
                         value = '', )

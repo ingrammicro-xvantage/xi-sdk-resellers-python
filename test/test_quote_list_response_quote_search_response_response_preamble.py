@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_list_response_quote_search_response_response_preamble import QuoteListResponseQuoteSearchResponseResponsePreamble
+from xi.sdk.resellers.python.models.quote_list_response_quote_search_response_response_preamble import QuoteListResponseQuoteSearchResponseResponsePreamble
 
 class TestQuoteListResponseQuoteSearchResponseResponsePreamble(unittest.TestCase):
     """QuoteListResponseQuoteSearchResponseResponsePreamble unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_search_response import QuoteSearchResponse
+from xi.sdk.resellers.python.models.quote_search_response import QuoteSearchResponse
 
 class TestQuoteSearchResponse(unittest.TestCase):
     """QuoteSearchResponse unit test stubs"""
@@ -40,7 +40,7 @@ class TestQuoteSearchResponse(unittest.TestCase):
                 page_size = 56,
                 page_number = 56,
                 quotes = [
-                    xi-sdk-resellers-python.models.quote_search_response_quotes_inner.QuoteSearchResponse_quotes_inner(
+                    xi.sdk.resellers.python.models.quote_search_response_quotes_inner.QuoteSearchResponse_quotes_inner(
                         quote_name = '', 
                         quote_number = '', 
                         revision = '', 

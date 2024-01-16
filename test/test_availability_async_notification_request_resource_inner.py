@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
+from xi.sdk.resellers.python.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
 
 class TestAvailabilityAsyncNotificationRequestResourceInner(unittest.TestCase):
     """AvailabilityAsyncNotificationRequestResourceInner unit test stubs"""
@@ -45,7 +45,7 @@ class TestAvailabilityAsyncNotificationRequestResourceInner(unittest.TestCase):
                 back_order_flag = '',
                 total_availability = '',
                 links = [
-                    xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
+                    xi.sdk.resellers.python.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_cancel_response_serviceresponse import OrderCancelResponseServiceresponse
+from xi.sdk.resellers.python.models.order_cancel_response_serviceresponse import OrderCancelResponseServiceresponse
 
 class TestOrderCancelResponseServiceresponse(unittest.TestCase):
     """OrderCancelResponseServiceresponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestOrderCancelResponseServiceresponse(unittest.TestCase):
         model = OrderCancelResponseServiceresponse()
         if include_optional:
             return OrderCancelResponseServiceresponse(
-                responsepreamble = xi-sdk-resellers-python.models.order_cancel_response_serviceresponse_responsepreamble.orderCancelResponse_serviceresponse_responsepreamble(
+                responsepreamble = xi.sdk.resellers.python.models.order_cancel_response_serviceresponse_responsepreamble.orderCancelResponse_serviceresponse_responsepreamble(
                     request_status = '', 
                     return_code = '', 
                     return_message = '', )

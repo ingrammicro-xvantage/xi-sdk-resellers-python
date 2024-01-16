@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response import OrderCreateResponse
+from xi.sdk.resellers.python.models.order_create_response import OrderCreateResponse
 
 class TestOrderCreateResponse(unittest.TestCase):
     """OrderCreateResponse unit test stubs"""
@@ -36,16 +36,16 @@ class TestOrderCreateResponse(unittest.TestCase):
         model = OrderCreateResponse()
         if include_optional:
             return OrderCreateResponse(
-                serviceresponse = xi-sdk-resellers-python.models.order_create_response_serviceresponse.orderCreateResponse_serviceresponse(
-                    responsepreamble = xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.python.models.order_create_response_serviceresponse.orderCreateResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         statuscode = '', 
                         responsemessage = '', ), 
-                    ordersummary = xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordersummary.orderCreateResponse_serviceresponse_ordersummary(
+                    ordersummary = xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordersummary.orderCreateResponse_serviceresponse_ordersummary(
                         customerponumber = '', 
                         totalorderamount = '', 
                         totalordercreated = '', 
-                        shiptoaddress = xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordersummary_shiptoaddress.orderCreateResponse_serviceresponse_ordersummary_shiptoaddress(
+                        shiptoaddress = xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordersummary_shiptoaddress.orderCreateResponse_serviceresponse_ordersummary_shiptoaddress(
                             attention = '', 
                             name = '', 
                             addressline1 = '', 
@@ -56,7 +56,7 @@ class TestOrderCreateResponse(unittest.TestCase):
                             postalcode = '', 
                             countrycode = '', ), ), 
                     ordercreateresponse = [
-                        xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordercreateresponse_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner(
+                        xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordercreateresponse_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner(
                             numberoflineswithsuccess = '', 
                             numberoflineswitherror = '', 
                             numberoflineswithwarning = '', 
@@ -68,7 +68,7 @@ class TestOrderCreateResponse(unittest.TestCase):
                             freightamount = 1.337, 
                             orderamount = 1.337, 
                             lines = [
-                                xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordercreateresponse_inner_lines_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner_Lines_inner(
+                                xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordercreateresponse_inner_lines_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner_Lines_inner(
                                     linetype = '', 
                                     globallinenumber = '', 
                                     partnumber = '', 

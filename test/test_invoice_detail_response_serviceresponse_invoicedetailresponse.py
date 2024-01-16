@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_invoicedetailresponse import InvoiceDetailResponseServiceresponseInvoicedetailresponse
+from xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse import InvoiceDetailResponseServiceresponseInvoicedetailresponse
 
 class TestInvoiceDetailResponseServiceresponseInvoicedetailresponse(unittest.TestCase):
     """InvoiceDetailResponseServiceresponseInvoicedetailresponse unit test stubs"""

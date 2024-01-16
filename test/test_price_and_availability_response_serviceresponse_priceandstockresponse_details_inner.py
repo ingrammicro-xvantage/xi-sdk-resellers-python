@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_priceandstockresponse_details_inner import PriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner
+from xi.sdk.resellers.python.models.price_and_availability_response_serviceresponse_priceandstockresponse_details_inner import PriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner
 
 class TestPriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner(unittest.TestCase):
     """PriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner unit test stubs"""
@@ -58,7 +58,7 @@ class TestPriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetail
                 skuauthorized = '',
                 extendedvendorpartnumber = '',
                 warehousedetails = [
-                    xi-sdk-resellers-python.models.price_and_availability/warehouse_list_type/response.priceAndAvailability.warehouseListType.Response(
+                    xi.sdk.resellers.python.models.price_and_availability/warehouse_list_type/response.priceAndAvailability.warehouseListType.Response(
                         warehouseid = '', 
                         warehousedescription = '', 
                         availablequantity = 56, 

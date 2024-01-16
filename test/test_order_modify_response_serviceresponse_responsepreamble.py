@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_modify_response_serviceresponse_responsepreamble import OrderModifyResponseServiceresponseResponsepreamble
+from xi.sdk.resellers.python.models.order_modify_response_serviceresponse_responsepreamble import OrderModifyResponseServiceresponseResponsepreamble
 
 class TestOrderModifyResponseServiceresponseResponsepreamble(unittest.TestCase):
     """OrderModifyResponseServiceresponseResponsepreamble unit test stubs"""

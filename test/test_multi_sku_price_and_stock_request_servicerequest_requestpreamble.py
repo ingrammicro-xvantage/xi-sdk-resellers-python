@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble import MultiSKUPriceAndStockRequestServicerequestRequestpreamble
+from xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble import MultiSKUPriceAndStockRequestServicerequestRequestpreamble
 
 class TestMultiSKUPriceAndStockRequestServicerequestRequestpreamble(unittest.TestCase):
     """MultiSKUPriceAndStockRequestServicerequestRequestpreamble unit test stubs"""

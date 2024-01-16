@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.renewals_search_request_data_type_expiration_date import RenewalsSearchRequestDataTypeExpirationDate
+from xi.sdk.resellers.python.models.renewals_search_request_data_type_expiration_date import RenewalsSearchRequestDataTypeExpirationDate
 
 class TestRenewalsSearchRequestDataTypeExpirationDate(unittest.TestCase):
     """RenewalsSearchRequestDataTypeExpirationDate unit test stubs"""

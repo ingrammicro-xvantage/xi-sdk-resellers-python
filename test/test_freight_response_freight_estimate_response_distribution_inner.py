@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.freight_response_freight_estimate_response_distribution_inner import FreightResponseFreightEstimateResponseDistributionInner
+from xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner import FreightResponseFreightEstimateResponseDistributionInner
 
 class TestFreightResponseFreightEstimateResponseDistributionInner(unittest.TestCase):
     """FreightResponseFreightEstimateResponseDistributionInner unit test stubs"""
@@ -43,7 +43,7 @@ class TestFreightResponseFreightEstimateResponseDistributionInner(unittest.TestC
                 total_weight = 1.337,
                 transit_days = 56,
                 carrier_list = [
-                    xi-sdk-resellers-python.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
+                    xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
                         carrier_code = '', 
                         ship_via = '', 
                         carrier_mode = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.stock_update_api import StockUpdateApi
+from xi.sdk.resellers.python.api.stock_update_api import StockUpdateApi
 
 
 class TestStockUpdateApi(unittest.TestCase):

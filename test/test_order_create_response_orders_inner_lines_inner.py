@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner import OrderCreateResponseOrdersInnerLinesInner
+from xi.sdk.resellers.python.models.order_create_response_orders_inner_lines_inner import OrderCreateResponseOrdersInnerLinesInner
 
 class TestOrderCreateResponseOrdersInnerLinesInner(unittest.TestCase):
     """OrderCreateResponseOrdersInnerLinesInner unit test stubs"""
@@ -50,7 +50,7 @@ class TestOrderCreateResponseOrdersInnerLinesInner(unittest.TestCase):
                 special_bid_number = '',
                 notes = '',
                 shipment_details = [
-                    xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner_shipment_details_inner.OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner(
+                    xi.sdk.resellers.python.models.order_create_response_orders_inner_lines_inner_shipment_details_inner.OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner(
                         carrier_code = '', 
                         carrier_name = '', 
                         ship_from_warehouse_id = '', 
@@ -60,7 +60,7 @@ class TestOrderCreateResponseOrdersInnerLinesInner(unittest.TestCase):
                         shipping_instructions = '', )
                     ],
                 additional_attributes = [
-                    xi-sdk-resellers-python.models.order_create_response_orders_inner_lines_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner(
+                    xi.sdk.resellers.python.models.order_create_response_orders_inner_lines_inner_additional_attributes_inner.OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ]

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.price_and_availability_request_servicerequest_requestpreamble import PriceAndAvailabilityRequestServicerequestRequestpreamble
+from xi.sdk.resellers.python.models.price_and_availability_request_servicerequest_requestpreamble import PriceAndAvailabilityRequestServicerequestRequestpreamble
 
 class TestPriceAndAvailabilityRequestServicerequestRequestpreamble(unittest.TestCase):
     """PriceAndAvailabilityRequestServicerequestRequestpreamble unit test stubs"""

@@ -1,4 +1,4 @@
-# xi-sdk-resellers-python.InvoicesApi
+# xi.sdk.resellers.python.InvoicesApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,14 +22,14 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.invoice_detailsv61_response import InvoiceDetailsv61Response
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.invoice_detailsv61_response import InvoiceDetailsv61Response
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -41,9 +41,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.InvoicesApi(api_client)
+    api_instance = xi.sdk.resellers.python.InvoicesApi(api_client)
     invoice_number = '335238411' # str | The Ingram Micro invoice number.
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
@@ -113,14 +113,14 @@ Search your Ingram Micro invoices. This endpoint searches by multiple invoice pa
 ```python
 import time
 import os
-import xi-sdk-resellers-python
-from xi-sdk-resellers-python.models.invoice_search_response import InvoiceSearchResponse
-from xi-sdk-resellers-python.rest import ApiException
+import xi.sdk.resellers.python
+from xi.sdk.resellers.python.models.invoice_search_response import InvoiceSearchResponse
+from xi.sdk.resellers.python.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi-sdk-resellers-python.Configuration(
+configuration = xi.sdk.resellers.python.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -132,9 +132,9 @@ configuration = xi-sdk-resellers-python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi-sdk-resellers-python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi-sdk-resellers-python.InvoicesApi(api_client)
+    api_instance = xi.sdk.resellers.python.InvoicesApi(api_client)
     im_application_id_ = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.

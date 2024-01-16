@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.renewals_search_response_renewals_inner import RenewalsSearchResponseRenewalsInner
+from xi.sdk.resellers.python.models.renewals_search_response_renewals_inner import RenewalsSearchResponseRenewalsInner
 
 class TestRenewalsSearchResponseRenewalsInner(unittest.TestCase):
     """RenewalsSearchResponseRenewalsInner unit test stubs"""
@@ -45,7 +45,7 @@ class TestRenewalsSearchResponseRenewalsInner(unittest.TestCase):
                 renewal_value = '',
                 status = '',
                 links = [
-                    xi-sdk-resellers-python.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
+                    xi.sdk.resellers.python.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

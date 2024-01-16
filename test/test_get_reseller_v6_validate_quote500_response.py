@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
+from xi.sdk.resellers.python.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
 
 class TestGetResellerV6ValidateQuote500Response(unittest.TestCase):
     """GetResellerV6ValidateQuote500Response unit test stubs"""

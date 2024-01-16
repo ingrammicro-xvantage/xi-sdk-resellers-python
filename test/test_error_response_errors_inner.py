@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.error_response_errors_inner import ErrorResponseErrorsInner
+from xi.sdk.resellers.python.models.error_response_errors_inner import ErrorResponseErrorsInner
 
 class TestErrorResponseErrorsInner(unittest.TestCase):
     """ErrorResponseErrorsInner unit test stubs"""
@@ -40,7 +40,7 @@ class TestErrorResponseErrorsInner(unittest.TestCase):
                 type = '',
                 message = '',
                 fields = [
-                    xi-sdk-resellers-python.models.error_response_errors_inner_fields_inner.ErrorResponse_errors_inner_fields_inner(
+                    xi.sdk.resellers.python.models.error_response_errors_inner_fields_inner.ErrorResponse_errors_inner_fields_inner(
                         field = '', 
                         value = '', 
                         message = '', )

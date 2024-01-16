@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_response_serviceresponse import ProductSearchResponseServiceresponse
+from xi.sdk.resellers.python.models.product_search_response_serviceresponse import ProductSearchResponseServiceresponse
 
 class TestProductSearchResponseServiceresponse(unittest.TestCase):
     """ProductSearchResponseServiceresponse unit test stubs"""
@@ -36,15 +36,15 @@ class TestProductSearchResponseServiceresponse(unittest.TestCase):
         model = ProductSearchResponseServiceresponse()
         if include_optional:
             return ProductSearchResponseServiceresponse(
-                responsepreamble = xi-sdk-resellers-python.models.product_search_response_serviceresponse_responsepreamble.productSearchResponse_serviceresponse_responsepreamble(
+                responsepreamble = xi.sdk.resellers.python.models.product_search_response_serviceresponse_responsepreamble.productSearchResponse_serviceresponse_responsepreamble(
                     requeststatus = '', 
                     returncode = '', 
                     returnmessage = '', ),
                 productsearchresponse = [
-                    xi-sdk-resellers-python.models.product_search_response_serviceresponse_productsearchresponse_inner.productSearchResponse_serviceresponse_productsearchresponse_inner(
+                    xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner.productSearchResponse_serviceresponse_productsearchresponse_inner(
                         responseflag = '', 
                         partnumbers = [
-                            xi-sdk-resellers-python.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
+                            xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
                                 ingrampartnumber = '', 
                                 manufacturerpartnumber = '', 
                                 upccode = '', 

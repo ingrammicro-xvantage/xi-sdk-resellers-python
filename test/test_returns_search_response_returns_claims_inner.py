@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_search_response_returns_claims_inner import ReturnsSearchResponseReturnsClaimsInner
+from xi.sdk.resellers.python.models.returns_search_response_returns_claims_inner import ReturnsSearchResponseReturnsClaimsInner
 
 class TestReturnsSearchResponseReturnsClaimsInner(unittest.TestCase):
     """ReturnsSearchResponseReturnsClaimsInner unit test stubs"""
@@ -47,7 +47,7 @@ class TestReturnsSearchResponseReturnsClaimsInner(unittest.TestCase):
                 modified_on = '',
                 status = '',
                 links = [
-                    xi-sdk-resellers-python.models.returns_search_response_returns_claims_inner_links_inner.returnsSearchResponse_returnsClaims_inner_links_inner(
+                    xi.sdk.resellers.python.models.returns_search_response_returns_claims_inner_links_inner.returnsSearchResponse_returnsClaims_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

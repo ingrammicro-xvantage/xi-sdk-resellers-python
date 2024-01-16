@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.freight_estimate_api import FreightEstimateApi
+from xi.sdk.resellers.python.api.freight_estimate_api import FreightEstimateApi
 
 
 class TestFreightEstimateApi(unittest.TestCase):

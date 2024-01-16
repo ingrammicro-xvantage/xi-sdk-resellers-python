@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria import ProductSearchRequestServicerequestProductsearchrequestSearchcriteria
+from xi.sdk.resellers.python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria import ProductSearchRequestServicerequestProductsearchrequestSearchcriteria
 
 class TestProductSearchRequestServicerequestProductsearchrequestSearchcriteria(unittest.TestCase):
     """ProductSearchRequestServicerequestProductsearchrequestSearchcriteria unit test stubs"""

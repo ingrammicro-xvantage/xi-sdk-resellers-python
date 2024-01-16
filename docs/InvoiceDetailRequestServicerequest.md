@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.invoice_detail_request_servicerequest import InvoiceDetailRequestServicerequest
+from xi.sdk.resellers.python.models.invoice_detail_request_servicerequest import InvoiceDetailRequestServicerequest
 
 # TODO update the JSON string below
 json = "{}"

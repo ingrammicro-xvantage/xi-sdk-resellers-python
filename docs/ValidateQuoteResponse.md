@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.validate_quote_response import ValidateQuoteResponse
+from xi.sdk.resellers.python.models.validate_quote_response import ValidateQuoteResponse
 
 # TODO update the JSON string below
 json = "{}"

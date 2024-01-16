@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_search_response_quotes_inner import QuoteSearchResponseQuotesInner
+from xi.sdk.resellers.python.models.quote_search_response_quotes_inner import QuoteSearchResponseQuotesInner
 
 class TestQuoteSearchResponseQuotesInner(unittest.TestCase):
     """QuoteSearchResponseQuotesInner unit test stubs"""

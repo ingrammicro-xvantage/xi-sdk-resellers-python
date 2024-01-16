@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordersummary_shiptoaddress import OrderCreateResponseServiceresponseOrdersummaryShiptoaddress
+from xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordersummary_shiptoaddress import OrderCreateResponseServiceresponseOrdersummaryShiptoaddress
 
 class TestOrderCreateResponseServiceresponseOrdersummaryShiptoaddress(unittest.TestCase):
     """OrderCreateResponseServiceresponseOrdersummaryShiptoaddress unit test stubs"""

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.warehouse_list_type import WarehouseListType
+from xi.sdk.resellers.python.models.warehouse_list_type import WarehouseListType
 
 # TODO update the JSON string below
 json = "{}"

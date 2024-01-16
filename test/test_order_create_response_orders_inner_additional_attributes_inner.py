@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response_orders_inner_additional_attributes_inner import OrderCreateResponseOrdersInnerAdditionalAttributesInner
+from xi.sdk.resellers.python.models.order_create_response_orders_inner_additional_attributes_inner import OrderCreateResponseOrdersInnerAdditionalAttributesInner
 
 class TestOrderCreateResponseOrdersInnerAdditionalAttributesInner(unittest.TestCase):
     """OrderCreateResponseOrdersInnerAdditionalAttributesInner unit test stubs"""

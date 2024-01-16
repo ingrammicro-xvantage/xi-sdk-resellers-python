@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.renewals_search_request_status_opporutiny_status import RenewalsSearchRequestStatusOpporutinyStatus
+from xi.sdk.resellers.python.models.renewals_search_request_status_opporutiny_status import RenewalsSearchRequestStatusOpporutinyStatus
 
 class TestRenewalsSearchRequestStatusOpporutinyStatus(unittest.TestCase):
     """RenewalsSearchRequestStatusOpporutinyStatus unit test stubs"""

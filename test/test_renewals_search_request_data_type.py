@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.renewals_search_request_data_type import RenewalsSearchRequestDataType
+from xi.sdk.resellers.python.models.renewals_search_request_data_type import RenewalsSearchRequestDataType
 
 class TestRenewalsSearchRequestDataType(unittest.TestCase):
     """RenewalsSearchRequestDataType unit test stubs"""
@@ -36,16 +36,16 @@ class TestRenewalsSearchRequestDataType(unittest.TestCase):
         model = RenewalsSearchRequestDataType()
         if include_optional:
             return RenewalsSearchRequestDataType(
-                start_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_start_date.renewalsSearchRequest_dataType_startDate(
+                start_date = xi.sdk.resellers.python.models.renewals_search_request_data_type_start_date.renewalsSearchRequest_dataType_startDate(
                     custom_start_date = '', 
                     custom_end_date = '', ),
-                end_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_end_date.renewalsSearchRequest_dataType_endDate(
+                end_date = xi.sdk.resellers.python.models.renewals_search_request_data_type_end_date.renewalsSearchRequest_dataType_endDate(
                     custom_start_date = '', 
                     custom_end_date = '', ),
-                invoice_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_invoice_date.renewalsSearchRequest_dataType_invoiceDate(
+                invoice_date = xi.sdk.resellers.python.models.renewals_search_request_data_type_invoice_date.renewalsSearchRequest_dataType_invoiceDate(
                     custom_start_date = '', 
                     custom_end_date = '', ),
-                expiration_date = xi-sdk-resellers-python.models.renewals_search_request_data_type_expiration_date.renewalsSearchRequest_dataType_expirationDate(
+                expiration_date = xi.sdk.resellers.python.models.renewals_search_request_data_type_expiration_date.renewalsSearchRequest_dataType_expirationDate(
                     custom_start_date = '', 
                     custom_end_date = '', )
             )

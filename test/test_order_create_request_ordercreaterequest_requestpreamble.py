@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_requestpreamble import OrderCreateRequestOrdercreaterequestRequestpreamble
+from xi.sdk.resellers.python.models.order_create_request_ordercreaterequest_requestpreamble import OrderCreateRequestOrdercreaterequestRequestpreamble
 
 class TestOrderCreateRequestOrdercreaterequestRequestpreamble(unittest.TestCase):
     """OrderCreateRequestOrdercreaterequestRequestpreamble unit test stubs"""

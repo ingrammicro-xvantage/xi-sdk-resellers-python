@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_detail_response_additional_information_product_weight_inner import ProductDetailResponseAdditionalInformationProductWeightInner
+from xi.sdk.resellers.python.models.product_detail_response_additional_information_product_weight_inner import ProductDetailResponseAdditionalInformationProductWeightInner
 
 class TestProductDetailResponseAdditionalInformationProductWeightInner(unittest.TestCase):
     """ProductDetailResponseAdditionalInformationProductWeightInner unit test stubs"""

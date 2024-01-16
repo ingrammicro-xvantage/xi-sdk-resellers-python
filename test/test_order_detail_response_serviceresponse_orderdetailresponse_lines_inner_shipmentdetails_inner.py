@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner
+from xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner
 
 class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner(unittest.TestCase):
     """OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner unit test stubs"""
@@ -51,7 +51,7 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmen
                 carriercode = '',
                 carriername = '',
                 pronumber = '',
-                packagedetails = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
+                packagedetails = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
                     trackingnumber = '', 
                     packageweight = '', 
                     cartonnumber = '', 

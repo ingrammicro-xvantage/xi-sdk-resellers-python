@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.address_type import AddressType
+from xi.sdk.resellers.python.models.address_type import AddressType
 
 # TODO update the JSON string below
 json = "{}"

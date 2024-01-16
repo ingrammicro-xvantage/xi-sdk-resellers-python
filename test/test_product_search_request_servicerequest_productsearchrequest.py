@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest import ProductSearchRequestServicerequestProductsearchrequest
+from xi.sdk.resellers.python.models.product_search_request_servicerequest_productsearchrequest import ProductSearchRequestServicerequestProductsearchrequest
 
 class TestProductSearchRequestServicerequestProductsearchrequest(unittest.TestCase):
     """ProductSearchRequestServicerequestProductsearchrequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestProductSearchRequestServicerequestProductsearchrequest(unittest.TestCa
         model = ProductSearchRequestServicerequestProductsearchrequest()
         if include_optional:
             return ProductSearchRequestServicerequestProductsearchrequest(
-                searchcriteria = xi-sdk-resellers-python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
+                searchcriteria = xi.sdk.resellers.python.models.product_search_request_servicerequest_productsearchrequest_searchcriteria.productSearchRequest_servicerequest_productsearchrequest_searchcriteria(
                     vendor = '', 
                     vendorpartnumber = 'WKB-1500GB', 
                     partdescription = 'WRLS ERGO KEYBOARD & MOUSE', 

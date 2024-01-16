@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detail_request_servicerequest import InvoiceDetailRequestServicerequest
+from xi.sdk.resellers.python.models.invoice_detail_request_servicerequest import InvoiceDetailRequestServicerequest
 
 class TestInvoiceDetailRequestServicerequest(unittest.TestCase):
     """InvoiceDetailRequestServicerequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestInvoiceDetailRequestServicerequest(unittest.TestCase):
         model = InvoiceDetailRequestServicerequest()
         if include_optional:
             return InvoiceDetailRequestServicerequest(
-                requestpreamble = xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customernumber = '', ),
-                invoicedetailrequest = xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_invoicedetailrequest.invoiceDetailRequest_servicerequest_invoicedetailrequest(
+                invoicedetailrequest = xi.sdk.resellers.python.models.invoice_detail_request_servicerequest_invoicedetailrequest.invoiceDetailRequest_servicerequest_invoicedetailrequest(
                     invoicenumber = '', )
             )
         else:

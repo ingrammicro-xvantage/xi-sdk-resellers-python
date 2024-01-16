@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_search_request_servicerequest_order_lookup_request_order_number import OrderSearchRequestServicerequestOrderLookupRequestOrderNumber
+from xi.sdk.resellers.python.models.order_search_request_servicerequest_order_lookup_request_order_number import OrderSearchRequestServicerequestOrderLookupRequestOrderNumber
 
 class TestOrderSearchRequestServicerequestOrderLookupRequestOrderNumber(unittest.TestCase):
     """OrderSearchRequestServicerequestOrderLookupRequestOrderNumber unit test stubs"""

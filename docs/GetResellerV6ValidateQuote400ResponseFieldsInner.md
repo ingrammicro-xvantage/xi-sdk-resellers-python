@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.get_reseller_v6_validate_quote400_response_fields_inner import GetResellerV6ValidateQuote400ResponseFieldsInner
+from xi.sdk.resellers.python.models.get_reseller_v6_validate_quote400_response_fields_inner import GetResellerV6ValidateQuote400ResponseFieldsInner
 
 # TODO update the JSON string below
 json = "{}"

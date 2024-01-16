@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.product_line_type import ProductLineType
+from xi.sdk.resellers.python.models.product_line_type import ProductLineType
 
 # TODO update the JSON string below
 json = "{}"

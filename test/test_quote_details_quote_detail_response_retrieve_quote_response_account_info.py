@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_details_quote_detail_response_retrieve_quote_response_account_info import QuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo
+from xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_account_info import QuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo
 
 class TestQuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo(unittest.TestCase):
     """QuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo unit test stubs"""

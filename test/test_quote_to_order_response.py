@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_to_order_response import QuoteToOrderResponse
+from xi.sdk.resellers.python.models.quote_to_order_response import QuoteToOrderResponse
 
 class TestQuoteToOrderResponse(unittest.TestCase):
     """QuoteToOrderResponse unit test stubs"""

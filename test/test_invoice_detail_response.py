@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detail_response import InvoiceDetailResponse
+from xi.sdk.resellers.python.models.invoice_detail_response import InvoiceDetailResponse
 
 class TestInvoiceDetailResponse(unittest.TestCase):
     """InvoiceDetailResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestInvoiceDetailResponse(unittest.TestCase):
         model = InvoiceDetailResponse()
         if include_optional:
             return InvoiceDetailResponse(
-                serviceresponse = xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse.invoiceDetailResponse_serviceresponse(
-                    responsepreamble = xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse.invoiceDetailResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         statuscode = '', 
                         responsemessage = '', ), 
-                    invoicedetailresponse = xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_invoicedetailresponse.invoiceDetailResponse_serviceresponse_invoicedetailresponse(
+                    invoicedetailresponse = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse.invoiceDetailResponse_serviceresponse_invoicedetailresponse(
                         customernumber = '', 
                         invoicenumber = '', 
                         invoicedate = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 

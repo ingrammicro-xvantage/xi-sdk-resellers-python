@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.availability_async_notification_request_resource_inner_links_inner import AvailabilityAsyncNotificationRequestResourceInnerLinksInner
+from xi.sdk.resellers.python.models.availability_async_notification_request_resource_inner_links_inner import AvailabilityAsyncNotificationRequestResourceInnerLinksInner
 
 class TestAvailabilityAsyncNotificationRequestResourceInnerLinksInner(unittest.TestCase):
     """AvailabilityAsyncNotificationRequestResourceInnerLinksInner unit test stubs"""

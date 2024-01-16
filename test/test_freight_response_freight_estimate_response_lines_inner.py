@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.freight_response_freight_estimate_response_lines_inner import FreightResponseFreightEstimateResponseLinesInner
+from xi.sdk.resellers.python.models.freight_response_freight_estimate_response_lines_inner import FreightResponseFreightEstimateResponseLinesInner
 
 class TestFreightResponseFreightEstimateResponseLinesInner(unittest.TestCase):
     """FreightResponseFreightEstimateResponseLinesInner unit test stubs"""

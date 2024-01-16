@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_search_response_invoices_inner import InvoiceSearchResponseInvoicesInner
+from xi.sdk.resellers.python.models.invoice_search_response_invoices_inner import InvoiceSearchResponseInvoicesInner
 
 class TestInvoiceSearchResponseInvoicesInner(unittest.TestCase):
     """InvoiceSearchResponseInvoicesInner unit test stubs"""

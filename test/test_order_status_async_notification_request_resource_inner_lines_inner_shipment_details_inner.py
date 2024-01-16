@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner import OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner
+from xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner import OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner
 
 class TestOrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner(unittest.TestCase):
     """OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner unit test stubs"""
@@ -42,7 +42,7 @@ class TestOrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDeta
                 carrier_code = '',
                 carrier_name = '',
                 package_details = [
-                    xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner_package_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner(
+                    xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_lines_inner_shipment_details_inner_package_details_inner.OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner(
                         carton_number = '', 
                         quantity_inbox = '', 
                         tracking_number = '', )

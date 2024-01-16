@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.freight_request_lines_inner import FreightRequestLinesInner
+from xi.sdk.resellers.python.models.freight_request_lines_inner import FreightRequestLinesInner
 
 # TODO update the JSON string below
 json = "{}"

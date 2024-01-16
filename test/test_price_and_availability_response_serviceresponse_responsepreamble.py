@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.price_and_availability_response_serviceresponse_responsepreamble import PriceAndAvailabilityResponseServiceresponseResponsepreamble
+from xi.sdk.resellers.python.models.price_and_availability_response_serviceresponse_responsepreamble import PriceAndAvailabilityResponseServiceresponseResponsepreamble
 
 class TestPriceAndAvailabilityResponseServiceresponseResponsepreamble(unittest.TestCase):
     """PriceAndAvailabilityResponseServiceresponseResponsepreamble unit test stubs"""

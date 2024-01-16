@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.returns_api import ReturnsApi
+from xi.sdk.resellers.python.api.returns_api import ReturnsApi
 
 
 class TestReturnsApi(unittest.TestCase):

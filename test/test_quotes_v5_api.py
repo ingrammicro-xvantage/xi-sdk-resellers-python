@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.quotes_v5_api import QuotesV5Api
+from xi.sdk.resellers.python.api.quotes_v5_api import QuotesV5Api
 
 
 class TestQuotesV5Api(unittest.TestCase):

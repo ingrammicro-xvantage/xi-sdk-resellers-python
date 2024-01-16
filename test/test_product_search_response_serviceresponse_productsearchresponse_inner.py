@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_response_serviceresponse_productsearchresponse_inner import ProductSearchResponseServiceresponseProductsearchresponseInner
+from xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner import ProductSearchResponseServiceresponseProductsearchresponseInner
 
 class TestProductSearchResponseServiceresponseProductsearchresponseInner(unittest.TestCase):
     """ProductSearchResponseServiceresponseProductsearchresponseInner unit test stubs"""
@@ -38,7 +38,7 @@ class TestProductSearchResponseServiceresponseProductsearchresponseInner(unittes
             return ProductSearchResponseServiceresponseProductsearchresponseInner(
                 responseflag = '',
                 partnumbers = [
-                    xi-sdk-resellers-python.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
+                    xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
                         ingrampartnumber = '', 
                         manufacturerpartnumber = '', 
                         upccode = '', 

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner import ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner
+from xi.sdk.resellers.python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner import ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner
 
 class TestValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner(unittest.TestCase):
     """ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner unit test stubs"""

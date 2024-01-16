@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.renewals_api import RenewalsApi
+from xi.sdk.resellers.python.api.renewals_api import RenewalsApi
 
 
 class TestRenewalsApi(unittest.TestCase):

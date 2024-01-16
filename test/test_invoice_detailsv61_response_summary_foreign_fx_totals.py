@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detailsv61_response_summary_foreign_fx_totals import InvoiceDetailsv61ResponseSummaryForeignFxTotals
+from xi.sdk.resellers.python.models.invoice_detailsv61_response_summary_foreign_fx_totals import InvoiceDetailsv61ResponseSummaryForeignFxTotals
 
 class TestInvoiceDetailsv61ResponseSummaryForeignFxTotals(unittest.TestCase):
     """InvoiceDetailsv61ResponseSummaryForeignFxTotals unit test stubs"""

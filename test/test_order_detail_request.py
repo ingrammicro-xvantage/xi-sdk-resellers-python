@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_request import OrderDetailRequest
+from xi.sdk.resellers.python.models.order_detail_request import OrderDetailRequest
 
 class TestOrderDetailRequest(unittest.TestCase):
     """OrderDetailRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestOrderDetailRequest(unittest.TestCase):
         model = OrderDetailRequest()
         if include_optional:
             return OrderDetailRequest(
-                servicerequest = xi-sdk-resellers-python.models.order_detail_request_servicerequest.orderDetailRequest_servicerequest(
-                    requestpreamble = xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
+                servicerequest = xi.sdk.resellers.python.models.order_detail_request_servicerequest.orderDetailRequest_servicerequest(
+                    requestpreamble = xi.sdk.resellers.python.models.invoice_detail_request_servicerequest_requestpreamble.invoiceDetailRequest_servicerequest_requestpreamble(
                         isocountrycode = '', 
                         customernumber = '', ), 
-                    orderdetailrequest = xi-sdk-resellers-python.models.order_detail_request_servicerequest_orderdetailrequest.orderDetailRequest_servicerequest_orderdetailrequest(
+                    orderdetailrequest = xi.sdk.resellers.python.models.order_detail_request_servicerequest_orderdetailrequest.orderDetailRequest_servicerequest_orderdetailrequest(
                         ordernumber = '', 
                         customerponumber = '', 
                         orderdate = '', 

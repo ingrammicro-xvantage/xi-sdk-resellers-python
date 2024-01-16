@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.order_create_response_orders_inner_rejected_line_items_inner import OrderCreateResponseOrdersInnerRejectedLineItemsInner
+from xi.sdk.resellers.python.models.order_create_response_orders_inner_rejected_line_items_inner import OrderCreateResponseOrdersInnerRejectedLineItemsInner
 
 # TODO update the JSON string below
 json = "{}"

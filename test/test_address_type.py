@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.address_type import AddressType
+from xi.sdk.resellers.python.models.address_type import AddressType
 
 class TestAddressType(unittest.TestCase):
     """AddressType unit test stubs"""

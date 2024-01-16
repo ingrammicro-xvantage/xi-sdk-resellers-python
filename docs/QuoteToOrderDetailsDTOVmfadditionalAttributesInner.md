@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.quote_to_order_details_dto_vmfadditional_attributes_inner import QuoteToOrderDetailsDTOVmfadditionalAttributesInner
+from xi.sdk.resellers.python.models.quote_to_order_details_dto_vmfadditional_attributes_inner import QuoteToOrderDetailsDTOVmfadditionalAttributesInner
 
 # TODO update the JSON string below
 json = "{}"

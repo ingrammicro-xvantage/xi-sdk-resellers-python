@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response_orders_inner_links_inner import OrderCreateResponseOrdersInnerLinksInner
+from xi.sdk.resellers.python.models.order_create_response_orders_inner_links_inner import OrderCreateResponseOrdersInnerLinksInner
 
 class TestOrderCreateResponseOrdersInnerLinksInner(unittest.TestCase):
     """OrderCreateResponseOrdersInnerLinksInner unit test stubs"""

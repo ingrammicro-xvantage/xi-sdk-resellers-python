@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata import OrderModifyRequestServicerequestOrdermodifyrequestHeaderdata
+from xi.sdk.resellers.python.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata import OrderModifyRequestServicerequestOrdermodifyrequestHeaderdata
 
 class TestOrderModifyRequestServicerequestOrdermodifyrequestHeaderdata(unittest.TestCase):
     """OrderModifyRequestServicerequestOrdermodifyrequestHeaderdata unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_miscfeeline_inner import OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner
+from xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_miscfeeline_inner import OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner
 
 class TestOrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner(unittest.TestCase):
     """OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner unit test stubs"""

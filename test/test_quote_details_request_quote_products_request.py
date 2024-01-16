@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_details_request_quote_products_request import QuoteDetailsRequestQuoteProductsRequest
+from xi.sdk.resellers.python.models.quote_details_request_quote_products_request import QuoteDetailsRequestQuoteProductsRequest
 
 class TestQuoteDetailsRequestQuoteProductsRequest(unittest.TestCase):
     """QuoteDetailsRequestQuoteProductsRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestQuoteDetailsRequestQuoteProductsRequest(unittest.TestCase):
         model = QuoteDetailsRequestQuoteProductsRequest()
         if include_optional:
             return QuoteDetailsRequestQuoteProductsRequest(
-                requestpreamble = xi-sdk-resellers-python.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.python.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
                     customer_number = '', 
                     iso_country_code = '', ),
-                retrieve_quote_products_request = xi-sdk-resellers-python.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
+                retrieve_quote_products_request = xi.sdk.resellers.python.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
                     quote_number = '', 
                     third_party_source = '', )
             )

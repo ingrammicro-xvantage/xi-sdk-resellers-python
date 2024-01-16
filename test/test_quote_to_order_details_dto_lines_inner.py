@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_to_order_details_dto_lines_inner import QuoteToOrderDetailsDTOLinesInner
+from xi.sdk.resellers.python.models.quote_to_order_details_dto_lines_inner import QuoteToOrderDetailsDTOLinesInner
 
 class TestQuoteToOrderDetailsDTOLinesInner(unittest.TestCase):
     """QuoteToOrderDetailsDTOLinesInner unit test stubs"""
@@ -40,7 +40,7 @@ class TestQuoteToOrderDetailsDTOLinesInner(unittest.TestCase):
                 ingram_part_number = '',
                 quantity = '',
                 vmf_additional_attributes_lines = [
-                    xi-sdk-resellers-python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
+                    xi.sdk.resellers.python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
                         attribute_name = '', 
                         attribute_value = '', 
                         attribute_description = '', )

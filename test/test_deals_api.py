@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.deals_api import DealsApi
+from xi.sdk.resellers.python.api.deals_api import DealsApi
 
 
 class TestDealsApi(unittest.TestCase):

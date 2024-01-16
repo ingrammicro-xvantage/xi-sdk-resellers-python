@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_product_list import QuoteProductList
+from xi.sdk.resellers.python.models.quote_product_list import QuoteProductList
 
 class TestQuoteProductList(unittest.TestCase):
     """QuoteProductList unit test stubs"""
@@ -50,7 +50,7 @@ class TestQuoteProductList(unittest.TestCase):
                 vpn_category = '',
                 quote_products_supplier_part_auxiliary_id = '',
                 quote_products_vendor = '',
-                price = xi-sdk-resellers-python.models.quote_product_list_price.quoteProductList_price(
+                price = xi.sdk.resellers.python.models.quote_product_list_price.quoteProductList_price(
                     quote_price = 1.337, 
                     msrp = 1.337, 
                     extended_msrp = 1.337, 

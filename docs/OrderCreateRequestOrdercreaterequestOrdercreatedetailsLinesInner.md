@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner import OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInner
+from xi.sdk.resellers.python.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner import OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInner
 
 # TODO update the JSON string below
 json = "{}"

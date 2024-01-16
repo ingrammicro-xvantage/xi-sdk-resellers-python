@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_request_lines_inner_end_user_info_inner import OrderCreateRequestLinesInnerEndUserInfoInner
+from xi.sdk.resellers.python.models.order_create_request_lines_inner_end_user_info_inner import OrderCreateRequestLinesInnerEndUserInfoInner
 
 class TestOrderCreateRequestLinesInnerEndUserInfoInner(unittest.TestCase):
     """OrderCreateRequestLinesInnerEndUserInfoInner unit test stubs"""

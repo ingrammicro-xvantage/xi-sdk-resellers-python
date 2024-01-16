@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi-sdk-resellers-python.api.invoices_api import InvoicesApi
+from xi.sdk.resellers.python.api.invoices_api import InvoicesApi
 
 
 class TestInvoicesApi(unittest.TestCase):

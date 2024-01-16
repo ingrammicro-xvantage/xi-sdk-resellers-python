@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_status_async_notification_request_resource_inner_links_inner import OrderStatusAsyncNotificationRequestResourceInnerLinksInner
+from xi.sdk.resellers.python.models.order_status_async_notification_request_resource_inner_links_inner import OrderStatusAsyncNotificationRequestResourceInnerLinksInner
 
 class TestOrderStatusAsyncNotificationRequestResourceInnerLinksInner(unittest.TestCase):
     """OrderStatusAsyncNotificationRequestResourceInnerLinksInner unit test stubs"""

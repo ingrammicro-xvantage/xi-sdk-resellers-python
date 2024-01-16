@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.renewals_search_request_data_type import RenewalsSearchRequestDataType
+from xi.sdk.resellers.python.models.renewals_search_request_data_type import RenewalsSearchRequestDataType
 
 # TODO update the JSON string below
 json = "{}"

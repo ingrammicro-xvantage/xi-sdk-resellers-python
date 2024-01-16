@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.post_quote_to_order_v6400_response import PostQuoteToOrderV6400Response
+from xi.sdk.resellers.python.models.post_quote_to_order_v6400_response import PostQuoteToOrderV6400Response
 
 class TestPostQuoteToOrderV6400Response(unittest.TestCase):
     """PostQuoteToOrderV6400Response unit test stubs"""
@@ -40,7 +40,7 @@ class TestPostQuoteToOrderV6400Response(unittest.TestCase):
                 type = '',
                 message = '',
                 fields = [
-                    xi-sdk-resellers-python.models.post_quote_to_order_v6_400_response_fields_inner.post_QuoteToOrder_v6_400_response_fields_inner(
+                    xi.sdk.resellers.python.models.post_quote_to_order_v6_400_response_fields_inner.post_QuoteToOrder_v6_400_response_fields_inner(
                         field = '', 
                         message = '', 
                         value = '', )

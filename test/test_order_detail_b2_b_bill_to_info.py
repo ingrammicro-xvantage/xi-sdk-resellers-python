@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_bill_to_info import OrderDetailB2BBillToInfo
+from xi.sdk.resellers.python.models.order_detail_b2_b_bill_to_info import OrderDetailB2BBillToInfo
 
 class TestOrderDetailB2BBillToInfo(unittest.TestCase):
     """OrderDetailB2BBillToInfo unit test stubs"""

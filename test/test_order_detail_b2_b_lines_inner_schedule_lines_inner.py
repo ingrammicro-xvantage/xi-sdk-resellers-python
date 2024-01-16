@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_schedule_lines_inner import OrderDetailB2BLinesInnerScheduleLinesInner
+from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_schedule_lines_inner import OrderDetailB2BLinesInnerScheduleLinesInner
 
 class TestOrderDetailB2BLinesInnerScheduleLinesInner(unittest.TestCase):
     """OrderDetailB2BLinesInnerScheduleLinesInner unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_search_response_catalog_inner import ProductSearchResponseCatalogInner
+from xi.sdk.resellers.python.models.product_search_response_catalog_inner import ProductSearchResponseCatalogInner
 
 class TestProductSearchResponseCatalogInner(unittest.TestCase):
     """ProductSearchResponseCatalogInner unit test stubs"""
@@ -52,7 +52,7 @@ class TestProductSearchResponseCatalogInner(unittest.TestCase):
                 direct_ship = '',
                 has_warranty = '',
                 links = [
-                    xi-sdk-resellers-python.models.product_search_response_catalog_inner_links_inner.ProductSearch_Response_catalog_inner_links_inner(
+                    xi.sdk.resellers.python.models.product_search_response_catalog_inner_links_inner.ProductSearch_Response_catalog_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

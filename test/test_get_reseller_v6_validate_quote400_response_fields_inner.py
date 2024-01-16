@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.get_reseller_v6_validate_quote400_response_fields_inner import GetResellerV6ValidateQuote400ResponseFieldsInner
+from xi.sdk.resellers.python.models.get_reseller_v6_validate_quote400_response_fields_inner import GetResellerV6ValidateQuote400ResponseFieldsInner
 
 class TestGetResellerV6ValidateQuote400ResponseFieldsInner(unittest.TestCase):
     """GetResellerV6ValidateQuote400ResponseFieldsInner unit test stubs"""

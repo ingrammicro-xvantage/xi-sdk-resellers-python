@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
+from xi.sdk.resellers.python.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
 
 class TestProductDetailResponseCiscoFieldsInner(unittest.TestCase):
     """ProductDetailResponseCiscoFieldsInner unit test stubs"""

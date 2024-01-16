@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_estimated_dates_inner import OrderDetailB2BLinesInnerEstimatedDatesInner
+from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner import OrderDetailB2BLinesInnerEstimatedDatesInner
 
 class TestOrderDetailB2BLinesInnerEstimatedDatesInner(unittest.TestCase):
     """OrderDetailB2BLinesInnerEstimatedDatesInner unit test stubs"""
@@ -36,17 +36,17 @@ class TestOrderDetailB2BLinesInnerEstimatedDatesInner(unittest.TestCase):
         model = OrderDetailB2BLinesInnerEstimatedDatesInner()
         if include_optional:
             return OrderDetailB2BLinesInnerEstimatedDatesInner(
-                ship = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship.OrderDetailB2B_lines_inner_estimatedDates_inner_ship(
+                ship = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship.OrderDetailB2B_lines_inner_estimatedDates_inner_ship(
                     ship_date_type = '', 
-                    ship_date_range = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
+                    ship_date_range = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
                         start_date = '', 
                         end_date = '', ), 
                     ship_source = '', 
                     ship_description = '', 
                     ship_date = '', ),
-                delivery = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery(
+                delivery = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery(
                     delivery_date_type = '', 
-                    delivery_date_range = xi-sdk-resellers-python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange(
+                    delivery_date_range = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange(
                         start_date = '', 
                         end_date = '', ), 
                     delivery_source = '', 

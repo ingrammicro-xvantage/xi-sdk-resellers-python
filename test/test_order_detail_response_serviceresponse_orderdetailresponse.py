@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse import OrderDetailResponseServiceresponseOrderdetailresponse
+from xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse import OrderDetailResponseServiceresponseOrderdetailresponse
 
 class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCase):
     """OrderDetailResponseServiceresponseOrderdetailresponse unit test stubs"""
@@ -49,7 +49,7 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCas
                 currencycode = '',
                 totalweight = '',
                 totaltax = '',
-                billtoaddress = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_billtoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_billtoaddress(
+                billtoaddress = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_billtoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_billtoaddress(
                     suffix = '', 
                     name = '', 
                     attention = '', 
@@ -60,7 +60,7 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCas
                     state = '', 
                     postalcode = '', 
                     countrycode = '', ),
-                shiptoaddress = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_shiptoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_shiptoaddress(
+                shiptoaddress = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_shiptoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_shiptoaddress(
                     suffix = '', 
                     attention = '', 
                     name = '', 
@@ -71,10 +71,10 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCas
                     state = '', 
                     postalcode = '', 
                     countrycode = '', ),
-                enduserinfo = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_enduserinfo.orderDetailResponse_serviceresponse_orderdetailresponse_enduserinfo(
+                enduserinfo = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_enduserinfo.orderDetailResponse_serviceresponse_orderdetailresponse_enduserinfo(
                     enduserid = '', ),
                 lines = [
-                    xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner(
+                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner(
                         linenumber = '', 
                         globallinenumber = '', 
                         ordersuffix = '', 
@@ -94,14 +94,14 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCas
                         confirmedquantity = '', 
                         backorderquantity = '', 
                         serialnumberdetails = [
-                            xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner(
+                            xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner(
                                 serialnumber = '', )
                             ], 
                         trackingnumber = [
                             ''
                             ], 
                         shipmentdetails = [
-                            xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner(
+                            xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner(
                                 quantity = 1.337, 
                                 shipmentdate = '', 
                                 shipfromwarehouseid = '', 
@@ -117,30 +117,30 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponse(unittest.TestCas
                                 carriercode = '', 
                                 carriername = '', 
                                 pronumber = '', 
-                                packagedetails = xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
+                                packagedetails = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
                                     packageweight = '', 
                                     cartonnumber = '', 
                                     quantityinbox = '', ), )
                             ], 
                         productextendedspecs = [
-                            xi-sdk-resellers-python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
+                            xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
                                 attributename = '', 
                                 attributevalue = '', )
                             ], 
                         backorderetadate = '', )
                     ],
                 commentlines = [
-                    xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_commentlines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_commentlines_inner(
+                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_commentlines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_commentlines_inner(
                         commenttext1 = '', 
                         commenttext2 = '', )
                     ],
                 miscfeeline = [
-                    xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_miscfeeline_inner.orderDetailResponse_serviceresponse_orderdetailresponse_miscfeeline_inner(
+                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_miscfeeline_inner.orderDetailResponse_serviceresponse_orderdetailresponse_miscfeeline_inner(
                         description = '', 
                         chargeamount = '', )
                     ],
                 extendedspecs = [
-                    xi-sdk-resellers-python.models.order_detail_response_serviceresponse_orderdetailresponse_extendedspecs_inner.orderDetailResponse_serviceresponse_orderdetailresponse_extendedspecs_inner(
+                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_extendedspecs_inner.orderDetailResponse_serviceresponse_orderdetailresponse_extendedspecs_inner(
                         attributename = '', 
                         attributevalue = '', )
                     ]

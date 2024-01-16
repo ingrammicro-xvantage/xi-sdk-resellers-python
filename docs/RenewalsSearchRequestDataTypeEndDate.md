@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.renewals_search_request_data_type_end_date import RenewalsSearchRequestDataTypeEndDate
+from xi.sdk.resellers.python.models.renewals_search_request_data_type_end_date import RenewalsSearchRequestDataTypeEndDate
 
 # TODO update the JSON string below
 json = "{}"

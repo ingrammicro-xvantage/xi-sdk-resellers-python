@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_details_response_products_inner import ReturnsDetailsResponseProductsInner
+from xi.sdk.resellers.python.models.returns_details_response_products_inner import ReturnsDetailsResponseProductsInner
 
 class TestReturnsDetailsResponseProductsInner(unittest.TestCase):
     """ReturnsDetailsResponseProductsInner unit test stubs"""

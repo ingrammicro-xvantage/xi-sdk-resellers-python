@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: xi-sdk-resellers-python Python package
+name: xi.sdk.resellers.python Python package
 
 on: [push, pull_request]
 

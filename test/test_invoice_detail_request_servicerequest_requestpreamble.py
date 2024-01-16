@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.invoice_detail_request_servicerequest_requestpreamble import InvoiceDetailRequestServicerequestRequestpreamble
+from xi.sdk.resellers.python.models.invoice_detail_request_servicerequest_requestpreamble import InvoiceDetailRequestServicerequestRequestpreamble
 
 class TestInvoiceDetailRequestServicerequestRequestpreamble(unittest.TestCase):
     """InvoiceDetailRequestServicerequestRequestpreamble unit test stubs"""

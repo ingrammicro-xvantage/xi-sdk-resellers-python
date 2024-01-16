@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.returns_create_response import ReturnsCreateResponse
+from xi.sdk.resellers.python.models.returns_create_response import ReturnsCreateResponse
 
 class TestReturnsCreateResponse(unittest.TestCase):
     """ReturnsCreateResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestReturnsCreateResponse(unittest.TestCase):
         if include_optional:
             return ReturnsCreateResponse(
                 returns_claims = [
-                    xi-sdk-resellers-python.models.returns_create_response_returns_claims_inner.returnsCreateResponse_returnsClaims_inner(
+                    xi.sdk.resellers.python.models.returns_create_response_returns_claims_inner.returnsCreateResponse_returnsClaims_inner(
                         rma_claim_id = '', 
                         case_request_number = '', 
                         reference_number = '', 
@@ -52,7 +52,7 @@ class TestReturnsCreateResponse(unittest.TestCase):
                         credit = 1.337, 
                         status = '', 
                         links = [
-                            xi-sdk-resellers-python.models.returns_search_response_returns_claims_inner_links_inner.returnsSearchResponse_returnsClaims_inner_links_inner(
+                            xi.sdk.resellers.python.models.returns_search_response_returns_claims_inner_links_inner.returnsSearchResponse_returnsClaims_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )

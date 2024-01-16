@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_modify_response_lines_inner import OrderModifyResponseLinesInner
+from xi.sdk.resellers.python.models.order_modify_response_lines_inner import OrderModifyResponseLinesInner
 
 class TestOrderModifyResponseLinesInner(unittest.TestCase):
     """OrderModifyResponseLinesInner unit test stubs"""
@@ -44,12 +44,12 @@ class TestOrderModifyResponseLinesInner(unittest.TestCase):
                 quantity_ordered = 56,
                 quantity_confirmed = 56,
                 quantity_back_ordered = 56,
-                shipment_details = xi-sdk-resellers-python.models.order_modify_response_lines_inner_shipment_details.OrderModifyResponse_lines_inner_shipmentDetails(
+                shipment_details = xi.sdk.resellers.python.models.order_modify_response_lines_inner_shipment_details.OrderModifyResponse_lines_inner_shipmentDetails(
                     carrier_code = '', 
                     carrier_name = '', 
                     freight_account_number = '', ),
                 additional_attributes = [
-                    xi-sdk-resellers-python.models.order_modify_response_lines_inner_additional_attributes_inner.OrderModifyResponse_lines_inner_additionalAttributes_inner(
+                    xi.sdk.resellers.python.models.order_modify_response_lines_inner_additional_attributes_inner.OrderModifyResponse_lines_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ],

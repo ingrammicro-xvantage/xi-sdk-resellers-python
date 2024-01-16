@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.product_line_type_trackingnumberdetails_inner import ProductLineTypeTrackingnumberdetailsInner
+from xi.sdk.resellers.python.models.product_line_type_trackingnumberdetails_inner import ProductLineTypeTrackingnumberdetailsInner
 
 class TestProductLineTypeTrackingnumberdetailsInner(unittest.TestCase):
     """ProductLineTypeTrackingnumberdetailsInner unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordercreateresponse_inner import OrderCreateResponseServiceresponseOrdercreateresponseInner
+from xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordercreateresponse_inner import OrderCreateResponseServiceresponseOrdercreateresponseInner
 
 class TestOrderCreateResponseServiceresponseOrdercreateresponseInner(unittest.TestCase):
     """OrderCreateResponseServiceresponseOrdercreateresponseInner unit test stubs"""
@@ -47,7 +47,7 @@ class TestOrderCreateResponseServiceresponseOrdercreateresponseInner(unittest.Te
                 freightamount = 1.337,
                 orderamount = 1.337,
                 lines = [
-                    xi-sdk-resellers-python.models.order_create_response_serviceresponse_ordercreateresponse_inner_lines_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner_Lines_inner(
+                    xi.sdk.resellers.python.models.order_create_response_serviceresponse_ordercreateresponse_inner_lines_inner.orderCreateResponse_serviceresponse_ordercreateresponse_inner_Lines_inner(
                         linetype = '', 
                         globallinenumber = '', 
                         partnumber = '', 

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.freight_response import FreightResponse
+from xi.sdk.resellers.python.models.freight_response import FreightResponse
 
 class TestFreightResponse(unittest.TestCase):
     """FreightResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestFreightResponse(unittest.TestCase):
         model = FreightResponse()
         if include_optional:
             return FreightResponse(
-                freight_estimate_response = xi-sdk-resellers-python.models.freight_response_freight_estimate_response.freightResponse_freightEstimateResponse(
+                freight_estimate_response = xi.sdk.resellers.python.models.freight_response_freight_estimate_response.freightResponse_freightEstimateResponse(
                     currency_code = '', 
                     total_freight_amount = 1.337, 
                     total_tax_amount = 1.337, 
@@ -44,7 +44,7 @@ class TestFreightResponse(unittest.TestCase):
                     total_net_amount = 1.337, 
                     gross_amount = 1.337, 
                     distribution = [
-                        xi-sdk-resellers-python.models.freight_response_freight_estimate_response_distribution_inner.freightResponse_freightEstimateResponse_distribution_inner(
+                        xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner.freightResponse_freightEstimateResponse_distribution_inner(
                             ship_from_branch_number = '', 
                             carrier_code = '', 
                             ship_via = '', 
@@ -52,7 +52,7 @@ class TestFreightResponse(unittest.TestCase):
                             total_weight = 1.337, 
                             transit_days = 56, 
                             carrier_list = [
-                                xi-sdk-resellers-python.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
+                                xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
                                     carrier_code = '', 
                                     ship_via = '', 
                                     carrier_mode = '', 
@@ -61,7 +61,7 @@ class TestFreightResponse(unittest.TestCase):
                                 ], )
                         ], 
                     lines = [
-                        xi-sdk-resellers-python.models.freight_response_freight_estimate_response_lines_inner.freightResponse_freightEstimateResponse_lines_inner(
+                        xi.sdk.resellers.python.models.freight_response_freight_estimate_response_lines_inner.freightResponse_freightEstimateResponse_lines_inner(
                             ingram_part_number = '', 
                             vendor_part_number = '', 
                             warehouse_id = '', 

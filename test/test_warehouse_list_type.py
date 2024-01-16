@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.warehouse_list_type import WarehouseListType
+from xi.sdk.resellers.python.models.warehouse_list_type import WarehouseListType
 
 class TestWarehouseListType(unittest.TestCase):
     """WarehouseListType unit test stubs"""

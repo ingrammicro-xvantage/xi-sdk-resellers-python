@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_delete_request import OrderDeleteRequest
+from xi.sdk.resellers.python.models.order_delete_request import OrderDeleteRequest
 
 class TestOrderDeleteRequest(unittest.TestCase):
     """OrderDeleteRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestOrderDeleteRequest(unittest.TestCase):
         model = OrderDeleteRequest()
         if include_optional:
             return OrderDeleteRequest(
-                servicerequest = xi-sdk-resellers-python.models.order_delete_request_servicerequest.orderDeleteRequest_servicerequest(
-                    requestpreamble = xi-sdk-resellers-python.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
+                servicerequest = xi.sdk.resellers.python.models.order_delete_request_servicerequest.orderDeleteRequest_servicerequest(
+                    requestpreamble = xi.sdk.resellers.python.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
                         isocountrycode = '', 
                         customer_number = '', ), 
-                    order_delete_request_details = xi-sdk-resellers-python.models.order_delete_request_servicerequest_order_delete_request_details.orderDeleteRequest_servicerequest_OrderDeleteRequestDetails(
+                    order_delete_request_details = xi.sdk.resellers.python.models.order_delete_request_servicerequest_order_delete_request_details.orderDeleteRequest_servicerequest_OrderDeleteRequestDetails(
                         entry_date = '8/25/2018', 
                         order_branch = '', 
                         order_number = '', 

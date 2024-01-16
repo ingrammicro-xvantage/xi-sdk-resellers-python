@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.quote_to_order_details_dto_additional_attributes_inner import QuoteToOrderDetailsDTOAdditionalAttributesInner
+from xi.sdk.resellers.python.models.quote_to_order_details_dto_additional_attributes_inner import QuoteToOrderDetailsDTOAdditionalAttributesInner
 
 class TestQuoteToOrderDetailsDTOAdditionalAttributesInner(unittest.TestCase):
     """QuoteToOrderDetailsDTOAdditionalAttributesInner unit test stubs"""

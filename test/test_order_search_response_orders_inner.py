@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_search_response_orders_inner import OrderSearchResponseOrdersInner
+from xi.sdk.resellers.python.models.order_search_response_orders_inner import OrderSearchResponseOrdersInner
 
 class TestOrderSearchResponseOrdersInner(unittest.TestCase):
     """OrderSearchResponseOrdersInner unit test stubs"""
@@ -45,18 +45,18 @@ class TestOrderSearchResponseOrdersInner(unittest.TestCase):
                 order_total = 1.337,
                 order_status = '',
                 sub_orders = [
-                    xi-sdk-resellers-python.models.order_search_response_orders_inner_sub_orders_inner.OrderSearch_Response_orders_inner_subOrders_inner(
+                    xi.sdk.resellers.python.models.order_search_response_orders_inner_sub_orders_inner.OrderSearch_Response_orders_inner_subOrders_inner(
                         sub_order_number = '', 
                         sub_order_total = 1.337, 
                         sub_order_status = '', 
                         links = [
-                            xi-sdk-resellers-python.models.order_search_response_orders_inner_sub_orders_inner_links_inner.OrderSearch_Response_orders_inner_subOrders_inner_links_inner(
+                            xi.sdk.resellers.python.models.order_search_response_orders_inner_sub_orders_inner_links_inner.OrderSearch_Response_orders_inner_subOrders_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )
                             ], )
                     ],
-                links = xi-sdk-resellers-python.models.order_search_response_orders_inner_links.OrderSearch_Response_orders_inner_links(
+                links = xi.sdk.resellers.python.models.order_search_response_orders_inner_links.OrderSearch_Response_orders_inner_links(
                     topic = '', 
                     href = '', 
                     type = '', )

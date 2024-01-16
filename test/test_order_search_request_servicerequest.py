@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.order_search_request_servicerequest import OrderSearchRequestServicerequest
+from xi.sdk.resellers.python.models.order_search_request_servicerequest import OrderSearchRequestServicerequest
 
 class TestOrderSearchRequestServicerequest(unittest.TestCase):
     """OrderSearchRequestServicerequest unit test stubs"""
@@ -36,20 +36,20 @@ class TestOrderSearchRequestServicerequest(unittest.TestCase):
         model = OrderSearchRequestServicerequest()
         if include_optional:
             return OrderSearchRequestServicerequest(
-                requestpreamble = xi-sdk-resellers-python.models.order_search_request_servicerequest_requestpreamble.orderSearchRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.python.models.order_search_request_servicerequest_requestpreamble.orderSearchRequest_servicerequest_requestpreamble(
                     iso_country_code = '', 
                     customer_number = '', ),
-                order_lookup_request = xi-sdk-resellers-python.models.order_search_request_servicerequest_order_lookup_request.orderSearchRequest_servicerequest_orderLookupRequest(
-                    order_number = xi-sdk-resellers-python.models.order_search_request_servicerequest_order_lookup_request_order_number.orderSearchRequest_servicerequest_orderLookupRequest_orderNumber(
+                order_lookup_request = xi.sdk.resellers.python.models.order_search_request_servicerequest_order_lookup_request.orderSearchRequest_servicerequest_orderLookupRequest(
+                    order_number = xi.sdk.resellers.python.models.order_search_request_servicerequest_order_lookup_request_order_number.orderSearchRequest_servicerequest_orderLookupRequest_orderNumber(
                         entry_date = '', 
                         order_branch = '', 
                         distribution_number = '', 
                         shipment_number = '', ), 
-                    customer_order_number = xi-sdk-resellers-python.models.order_search_request_servicerequest_order_lookup_request_customer_order_number.orderSearchRequest_servicerequest_orderLookupRequest_customerOrderNumber(), )
+                    customer_order_number = xi.sdk.resellers.python.models.order_search_request_servicerequest_order_lookup_request_customer_order_number.orderSearchRequest_servicerequest_orderLookupRequest_customerOrderNumber(), )
             )
         else:
             return OrderSearchRequestServicerequest(
-                requestpreamble = xi-sdk-resellers-python.models.order_search_request_servicerequest_requestpreamble.orderSearchRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.python.models.order_search_request_servicerequest_requestpreamble.orderSearchRequest_servicerequest_requestpreamble(
                     iso_country_code = '', 
                     customer_number = '', ),
         )

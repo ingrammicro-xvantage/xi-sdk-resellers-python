@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi-sdk-resellers-python.models.invoice_search_response_invoices_inner import InvoiceSearchResponseInvoicesInner
+from xi.sdk.resellers.python.models.invoice_search_response_invoices_inner import InvoiceSearchResponseInvoicesInner
 
 # TODO update the JSON string below
 json = "{}"

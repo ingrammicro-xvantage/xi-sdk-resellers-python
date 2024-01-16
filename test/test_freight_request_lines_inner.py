@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi-sdk-resellers-python.models.freight_request_lines_inner import FreightRequestLinesInner
+from xi.sdk.resellers.python.models.freight_request_lines_inner import FreightRequestLinesInner
 
 class TestFreightRequestLinesInner(unittest.TestCase):
     """FreightRequestLinesInner unit test stubs"""
