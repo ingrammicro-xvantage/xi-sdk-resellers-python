@@ -18,9 +18,9 @@ Python 3.7+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git`)
 
 Then import the package:
 ```python
@@ -481,7 +481,10 @@ Authentication schemes defined for the API:
 
 
 ## Author
+-[Ingram Micro Xvantage](https://github.com/ingrammicro-xvantage)
 
+## Contact
 
+For any inquiries or support, please feel free to contact us at:
 
-
+- Email: [xi_support@ingrammicro.com](xi_support@ingrammicro.com)
