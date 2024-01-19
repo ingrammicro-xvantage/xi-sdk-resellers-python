@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response import QuoteDetailsQuoteDetailResponseRetrieveQuoteResponse
+from xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response import QuoteDetailsQuoteDetailResponseRetrieveQuoteResponse
 
 class TestQuoteDetailsQuoteDetailResponseRetrieveQuoteResponse(unittest.TestCase):
     """QuoteDetailsQuoteDetailResponseRetrieveQuoteResponse unit test stubs"""
@@ -55,19 +55,19 @@ class TestQuoteDetailsQuoteDetailResponseRetrieveQuoteResponse(unittest.TestCase
                 modified = 'Fri Oct 04 00:00:00 UTC 2019',
                 leasing_calculations = '',
                 leasing_instructions = '',
-                account_info = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_account_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_accountInfo(
+                account_info = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_account_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_accountInfo(
                     account_name = '', 
                     bcn = '', 
                     phone = '', ),
-                contact_info = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_contact_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_contactInfo(
+                contact_info = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_contact_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_contactInfo(
                     contact_email = '', 
                     contact_name = '', ),
-                vendor_attributes = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_vendor_attributes.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_vendorAttributes(
+                vendor_attributes = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_vendor_attributes.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_vendorAttributes(
                     estimate_id = '', 
                     deal_id = '', 
                     vendor_name = '', 
                     vendor_setting_message = '', ),
-                end_user = xi.sdk.resellers.python.models.quote_details_quote_detail_response_retrieve_quote_response_end_user.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_endUser(
+                end_user = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_end_user.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_endUser(
                     end_user_name = '', 
                     end_user_address = '', 
                     end_user_address2 = '', 

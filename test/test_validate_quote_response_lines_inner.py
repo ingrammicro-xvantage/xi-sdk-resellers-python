@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.validate_quote_response_lines_inner import ValidateQuoteResponseLinesInner
+from xi.sdk.resellers.models.validate_quote_response_lines_inner import ValidateQuoteResponseLinesInner
 
 class TestValidateQuoteResponseLinesInner(unittest.TestCase):
     """ValidateQuoteResponseLinesInner unit test stubs"""
@@ -40,7 +40,7 @@ class TestValidateQuoteResponseLinesInner(unittest.TestCase):
                 ingram_part_number = 'YN6551',
                 quantity = '1',
                 vmf_additional_attributes_lines = [
-                    xi.sdk.resellers.python.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
+                    xi.sdk.resellers.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
                         attribute_name = '', 
                         attribute_value = '', 
                         attribute_description = '', )

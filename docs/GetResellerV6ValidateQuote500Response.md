@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
+from xi.sdk.resellers.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.invoice_details import InvoiceDetails
+from xi.sdk.resellers.models.invoice_details import InvoiceDetails
 
 # TODO update the JSON string below
 json = "{}"

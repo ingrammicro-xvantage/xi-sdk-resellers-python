@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.renewals_search_response import RenewalsSearchResponse
+from xi.sdk.resellers.models.renewals_search_response import RenewalsSearchResponse
 
 class TestRenewalsSearchResponse(unittest.TestCase):
     """RenewalsSearchResponse unit test stubs"""
@@ -40,7 +40,7 @@ class TestRenewalsSearchResponse(unittest.TestCase):
                 page_size = 56,
                 page_number = 56,
                 renewals = [
-                    xi.sdk.resellers.python.models.renewals_search_response_renewals_inner.renewalsSearchResponse_renewals_inner(
+                    xi.sdk.resellers.models.renewals_search_response_renewals_inner.renewalsSearchResponse_renewals_inner(
                         renewal_id = '', 
                         customer_order_number = '', 
                         reference_number = '', 
@@ -50,7 +50,7 @@ class TestRenewalsSearchResponse(unittest.TestCase):
                         renewal_value = '', 
                         status = '', 
                         links = [
-                            xi.sdk.resellers.python.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
+                            xi.sdk.resellers.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )

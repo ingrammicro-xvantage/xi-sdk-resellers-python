@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_delete_request_servicerequest import OrderDeleteRequestServicerequest
+from xi.sdk.resellers.models.order_delete_request_servicerequest import OrderDeleteRequestServicerequest
 
 class TestOrderDeleteRequestServicerequest(unittest.TestCase):
     """OrderDeleteRequestServicerequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestOrderDeleteRequestServicerequest(unittest.TestCase):
         model = OrderDeleteRequestServicerequest()
         if include_optional:
             return OrderDeleteRequestServicerequest(
-                requestpreamble = xi.sdk.resellers.python.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customer_number = '', ),
-                order_delete_request_details = xi.sdk.resellers.python.models.order_delete_request_servicerequest_order_delete_request_details.orderDeleteRequest_servicerequest_OrderDeleteRequestDetails(
+                order_delete_request_details = xi.sdk.resellers.models.order_delete_request_servicerequest_order_delete_request_details.orderDeleteRequest_servicerequest_OrderDeleteRequestDetails(
                     entry_date = '8/25/2018', 
                     order_branch = '', 
                     order_number = '', 
@@ -50,7 +50,7 @@ class TestOrderDeleteRequestServicerequest(unittest.TestCase):
             )
         else:
             return OrderDeleteRequestServicerequest(
-                requestpreamble = xi.sdk.resellers.python.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.models.order_delete_request_servicerequest_requestpreamble.orderDeleteRequest_servicerequest_requestpreamble(
                     isocountrycode = '', 
                     customer_number = '', ),
         )

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.invoice_detailsv61_response import InvoiceDetailsv61Response
+from xi.sdk.resellers.models.invoice_detailsv61_response import InvoiceDetailsv61Response
 
 class TestInvoiceDetailsv61Response(unittest.TestCase):
     """InvoiceDetailsv61Response unit test stubs"""
@@ -49,11 +49,11 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                 customer_number = '',
                 ingram_order_number = '',
                 notes = '',
-                payment_terms_info = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_payment_terms_info.InvoiceDetailsv6_1Response_paymentTermsInfo(
+                payment_terms_info = xi.sdk.resellers.models.invoice_detailsv6_1_response_payment_terms_info.InvoiceDetailsv6_1Response_paymentTermsInfo(
                     payment_terms_code = '', 
                     payment_terms_description = '', 
                     payment_terms_due_date = '', ),
-                bill_to_info = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_bill_to_info.InvoiceDetailsv6_1Response_billToInfo(
+                bill_to_info = xi.sdk.resellers.models.invoice_detailsv6_1_response_bill_to_info.InvoiceDetailsv6_1Response_billToInfo(
                     contact = '', 
                     company_name = '', 
                     address_line1 = '', 
@@ -65,7 +65,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                     country_code = '', 
                     phone_number = '', 
                     email = '', ),
-                ship_to_info = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_ship_to_info.InvoiceDetailsv6_1Response_shipToInfo(
+                ship_to_info = xi.sdk.resellers.models.invoice_detailsv6_1_response_ship_to_info.InvoiceDetailsv6_1Response_shipToInfo(
                     contact = '', 
                     company_name = '', 
                     address_line1 = '', 
@@ -78,7 +78,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                     phone_number = '', 
                     email = '', ),
                 lines = [
-                    xi.sdk.resellers.python.models.invoice_detailsv6_1_response_lines_inner.InvoiceDetailsv6_1Response_lines_inner(
+                    xi.sdk.resellers.models.invoice_detailsv6_1_response_lines_inner.InvoiceDetailsv6_1Response_lines_inner(
                         ingram_line_number = '', 
                         customer_line_number = '0', 
                         ingram_part_number = '', 
@@ -96,37 +96,37 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                         tax_rate = 1.337, 
                         tax_amount = 1.337, 
                         serial_numbers = [
-                            xi.sdk.resellers.python.models.invoice_detailsv6_1_response_lines_inner_serial_numbers_inner.InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner(
+                            xi.sdk.resellers.models.invoice_detailsv6_1_response_lines_inner_serial_numbers_inner.InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner(
                                 serial_number = '', )
                             ], 
                         quantity_ordered = 56, 
                         quantity_shipped = 56, )
                     ],
-                fx_rate_info = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_fx_rate_info.InvoiceDetailsv6_1Response_fxRateInfo(
+                fx_rate_info = xi.sdk.resellers.models.invoice_detailsv6_1_response_fx_rate_info.InvoiceDetailsv6_1Response_fxRateInfo(
                     currency_code = '', 
                     company_currency = '', 
                     invoice_currency = '', 
                     currency_fx_rate = 1.337, ),
-                summary = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_summary.InvoiceDetailsv6_1Response_summary(
-                    lines = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_summary_lines.InvoiceDetailsv6_1Response_summary_lines(
+                summary = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary.InvoiceDetailsv6_1Response_summary(
+                    lines = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_lines.InvoiceDetailsv6_1Response_summary_lines(
                         product_line_count = 56, 
                         product_line_total_quantity = 56, ), 
                     misc_charges = [
-                        xi.sdk.resellers.python.models.invoice_detailsv6_1_response_summary_misc_charges_inner.InvoiceDetailsv6_1Response_summary_miscCharges_inner(
+                        xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_misc_charges_inner.InvoiceDetailsv6_1Response_summary_miscCharges_inner(
                             charge_description = '', 
                             misc_charge_line_count = 56, 
                             misc_charge_line_total = 1.337, 
                             charge_line_reference = '', 
                             is_non_misc = '', )
                         ], 
-                    totals = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_summary_totals.InvoiceDetailsv6_1Response_summary_totals(
+                    totals = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_totals.InvoiceDetailsv6_1Response_summary_totals(
                         net_invoice_amount = 1.337, 
                         discount_amount = 1.337, 
                         discount_type = '', 
                         total_tax_amount = 1.337, 
                         invoiced_amount_due = 1.337, 
                         freight_amount = 1.337, ), 
-                    foreign_fx_totals = xi.sdk.resellers.python.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
+                    foreign_fx_totals = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
                         foreign_currency_code = '', 
                         foreign_currency_fx_rate = 1.337, 
                         foreign_total_taxable_amount = '', 

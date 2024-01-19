@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.renewals_details_response import RenewalsDetailsResponse
+from xi.sdk.resellers.models.renewals_details_response import RenewalsDetailsResponse
 
 class TestRenewalsDetailsResponse(unittest.TestCase):
     """RenewalsDetailsResponse unit test stubs"""
@@ -48,7 +48,7 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                 vendor = '',
                 status = '',
                 end_user_info = [
-                    xi.sdk.resellers.python.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
+                    xi.sdk.resellers.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
                         contact = '', 
                         name1 = '', 
                         name2 = '', 
@@ -65,12 +65,12 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                         email = '', )
                     ],
                 reference_number = [
-                    xi.sdk.resellers.python.models.renewals_details_response_reference_number_inner.renewalsDetailsResponse_referenceNumber_inner(
+                    xi.sdk.resellers.models.renewals_details_response_reference_number_inner.renewalsDetailsResponse_referenceNumber_inner(
                         notification_id = '', 
                         quote_number = '', )
                     ],
                 products = [
-                    xi.sdk.resellers.python.models.renewals_details_response_products_inner.renewalsDetailsResponse_products_inner(
+                    xi.sdk.resellers.models.renewals_details_response_products_inner.renewalsDetailsResponse_products_inner(
                         ingram_line_number = '', 
                         product_description = '', 
                         vendor_part_number = '', 
@@ -81,7 +81,7 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                         is_consolidated = '', )
                     ],
                 additional_attributes = [
-                    xi.sdk.resellers.python.models.renewals_details_response_additional_attributes_inner.renewalsDetailsResponse_additionalAttributes_inner(
+                    xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner.renewalsDetailsResponse_additionalAttributes_inner(
                         attribute_description = '', 
                         attribute_value = '', 
                         start_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 

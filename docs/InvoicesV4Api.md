@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.InvoicesV4Api
+# xi.sdk.resellers.InvoicesV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,15 +21,15 @@ A real-time request that allows the customer to query Ingram Micro for Invoice i
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.invoice_detail_request import InvoiceDetailRequest
-from xi.sdk.resellers.python.models.invoice_detail_response import InvoiceDetailResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.invoice_detail_request import InvoiceDetailRequest
+from xi.sdk.resellers.models.invoice_detail_response import InvoiceDetailResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -41,9 +41,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.InvoicesV4Api(api_client)
+    api_instance = xi.sdk.resellers.InvoicesV4Api(api_client)
     invoice_detail_request = {"servicerequest":{"requestpreamble":{"isocountrycode":"US","customernumber":"20-222222"},"invoicedetailrequest":{"invoicenumber":"30-13649-13","customerponumber":"DH-200732"}}} # InvoiceDetailRequest |  (optional)
 
     try:

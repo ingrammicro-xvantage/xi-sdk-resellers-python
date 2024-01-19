@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
+from xi.sdk.resellers.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
 
 # TODO update the JSON string below
 json = "{}"

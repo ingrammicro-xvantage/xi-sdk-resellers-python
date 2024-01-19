@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.ProductCatalogV5Api
+# xi.sdk.resellers.ProductCatalogV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,14 +22,14 @@ Search the Ingram Micro product catalog using customerNumber, isoCountryCode and
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.product_search_response import ProductSearchResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.product_search_response import ProductSearchResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -41,9 +41,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.ProductCatalogV5Api(api_client)
+    api_instance = xi.sdk.resellers.ProductCatalogV5Api(api_client)
     customer_number = '20-222222' # str | Your unique Ingram Micro customer number (default to '20-222222')
     iso_country_code = 'US' # str | 2 chars country code (default to 'US')
     part_number = '1AQ821' # str | Part Number can be ingram part number or vendor part number or customer part number or UPC (default to '1AQ821')
@@ -103,15 +103,15 @@ Search the product catalog for the price and availability for up to 50 SKUs at o
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.price_and_availability_request import PriceAndAvailabilityRequest
-from xi.sdk.resellers.python.models.price_and_availability_response import PriceAndAvailabilityResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.price_and_availability_request import PriceAndAvailabilityRequest
+from xi.sdk.resellers.models.price_and_availability_response import PriceAndAvailabilityResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -123,9 +123,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.ProductCatalogV5Api(api_client)
+    api_instance = xi.sdk.resellers.ProductCatalogV5Api(api_client)
     price_and_availability_request = {"servicerequest":{"requestpreamble":{"customernumber":"20-222223","isocountrycode":"US"},"priceandstockrequest":{"showwarehouseavailability":"True","extravailabilityflag":"Y","item":[{"ingrampartnumber":"TB6489","quantity":1},{"ingrampartnumber":"1AQ821","quantity":1}],"includeallsystems":false}}} # PriceAndAvailabilityRequest |  (optional)
 
     try:

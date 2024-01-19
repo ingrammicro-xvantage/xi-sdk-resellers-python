@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.post_quote_to_order_v6400_response_fields_inner import PostQuoteToOrderV6400ResponseFieldsInner
+from xi.sdk.resellers.models.post_quote_to_order_v6400_response_fields_inner import PostQuoteToOrderV6400ResponseFieldsInner
 
 class TestPostQuoteToOrderV6400ResponseFieldsInner(unittest.TestCase):
     """PostQuoteToOrderV6400ResponseFieldsInner unit test stubs"""

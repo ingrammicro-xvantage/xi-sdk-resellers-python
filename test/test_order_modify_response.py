@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_modify_response import OrderModifyResponse
+from xi.sdk.resellers.models.order_modify_response import OrderModifyResponse
 
 class TestOrderModifyResponse(unittest.TestCase):
     """OrderModifyResponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestOrderModifyResponse(unittest.TestCase):
         model = OrderModifyResponse()
         if include_optional:
             return OrderModifyResponse(
-                serviceresponse = xi.sdk.resellers.python.models.order_modify_response_serviceresponse.orderModifyResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.python.models.order_modify_response_serviceresponse_responsepreamble.orderModifyResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.models.order_modify_response_serviceresponse.orderModifyResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.models.order_modify_response_serviceresponse_responsepreamble.orderModifyResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         responsemessage = '', ), 
-                    ordermodifyresponse = xi.sdk.resellers.python.models.order_modify_response_serviceresponse_ordermodifyresponse.orderModifyResponse_serviceresponse_ordermodifyresponse(
+                    ordermodifyresponse = xi.sdk.resellers.models.order_modify_response_serviceresponse_ordermodifyresponse.orderModifyResponse_serviceresponse_ordermodifyresponse(
                         responseflag = '', 
                         errortype = '', 
                         acktriggered = '', 

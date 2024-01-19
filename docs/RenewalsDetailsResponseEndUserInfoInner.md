@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.renewals_details_response_end_user_info_inner import RenewalsDetailsResponseEndUserInfoInner
+from xi.sdk.resellers.models.renewals_details_response_end_user_info_inner import RenewalsDetailsResponseEndUserInfoInner
 
 # TODO update the JSON string below
 json = "{}"

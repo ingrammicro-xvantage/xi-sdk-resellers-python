@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner import OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner
+from xi.sdk.resellers.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner import OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner
 
 # TODO update the JSON string below
 json = "{}"

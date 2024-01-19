@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse import InvoiceDetailResponseServiceresponse
+from xi.sdk.resellers.models.invoice_detail_response_serviceresponse import InvoiceDetailResponseServiceresponse
 
 class TestInvoiceDetailResponseServiceresponse(unittest.TestCase):
     """InvoiceDetailResponseServiceresponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestInvoiceDetailResponseServiceresponse(unittest.TestCase):
         model = InvoiceDetailResponseServiceresponse()
         if include_optional:
             return InvoiceDetailResponseServiceresponse(
-                responsepreamble = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
+                responsepreamble = xi.sdk.resellers.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
                     responsestatus = '', 
                     statuscode = '', 
                     responsemessage = '', ),
-                invoicedetailresponse = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse.invoiceDetailResponse_serviceresponse_invoicedetailresponse(
+                invoicedetailresponse = xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse.invoiceDetailResponse_serviceresponse_invoicedetailresponse(
                     customernumber = '', 
                     invoicenumber = '', 
                     invoicedate = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 

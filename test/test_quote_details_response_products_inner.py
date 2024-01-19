@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.quote_details_response_products_inner import QuoteDetailsResponseProductsInner
+from xi.sdk.resellers.models.quote_details_response_products_inner import QuoteDetailsResponseProductsInner
 
 class TestQuoteDetailsResponseProductsInner(unittest.TestCase):
     """QuoteDetailsResponseProductsInner unit test stubs"""
@@ -52,7 +52,7 @@ class TestQuoteDetailsResponseProductsInner(unittest.TestCase):
                 quote_products_supplier_part_auxiliary_id = '',
                 vendor_name = '',
                 terms = '',
-                price = xi.sdk.resellers.python.models.quote_details_response_products_inner_price.QuoteDetailsResponse_products_inner_price(
+                price = xi.sdk.resellers.models.quote_details_response_products_inner_price.QuoteDetailsResponse_products_inner_price(
                     quote_price = 56, 
                     msrp = 56, 
                     extended_msrp = 56, 

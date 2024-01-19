@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.price_and_availability_response_inner_availability import PriceAndAvailabilityResponseInnerAvailability
+from xi.sdk.resellers.models.price_and_availability_response_inner_availability import PriceAndAvailabilityResponseInnerAvailability
 
 class TestPriceAndAvailabilityResponseInnerAvailability(unittest.TestCase):
     """PriceAndAvailabilityResponseInnerAvailability unit test stubs"""
@@ -39,14 +39,14 @@ class TestPriceAndAvailabilityResponseInnerAvailability(unittest.TestCase):
                 available = True,
                 total_availability = 56,
                 availability_by_warehouse = [
-                    xi.sdk.resellers.python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner(
+                    xi.sdk.resellers.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner(
                         location = '', 
                         warehouse_id = '', 
                         quantity_available = 56, 
                         quantity_backordered = 56, 
                         quantity_backordered_eta = '', 
                         back_order_info = [
-                            xi.sdk.resellers.python.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner_back_order_info_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner(
+                            xi.sdk.resellers.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner_back_order_info_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner(
                                 quantity = 56, 
                                 eta_date = '', )
                             ], )

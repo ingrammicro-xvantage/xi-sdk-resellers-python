@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -14,7 +14,7 @@
 
 import unittest
 
-from xi.sdk.resellers.python.api.invoices_v5_api import InvoicesV5Api
+from xi.sdk.resellers.api.invoices_v5_api import InvoicesV5Api
 
 
 class TestInvoicesV5Api(unittest.TestCase):

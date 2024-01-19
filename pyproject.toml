@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "xi.sdk.resellers.python"
+name = "xi.sdk.resellers"
 version = "1.0.0"
-description = "Reseller API Documentation"
+description = "Reseller API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "Reseller API Documentation"]
-include = ["xi.sdk.resellers.python/py.typed"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "Reseller API"]
+include = ["xi.sdk.resellers/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

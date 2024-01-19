@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
+from xi.sdk.resellers.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner
 
 class TestAvailabilityAsyncNotificationRequestResourceInner(unittest.TestCase):
     """AvailabilityAsyncNotificationRequestResourceInner unit test stubs"""
@@ -45,7 +45,7 @@ class TestAvailabilityAsyncNotificationRequestResourceInner(unittest.TestCase):
                 back_order_flag = '',
                 total_availability = '',
                 links = [
-                    xi.sdk.resellers.python.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
+                    xi.sdk.resellers.models.availability_async_notification_request_resource_inner_links_inner.AvailabilityAsyncNotificationRequest_resource_inner_links_inner(
                         topic = '', 
                         href = '', 
                         type = '', )

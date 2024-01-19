@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.OrdersV4Api
+# xi.sdk.resellers.OrdersV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -25,15 +25,15 @@ The order create transaction is a real-time transaction that allows customers to
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_create_request import OrderCreateRequest
-from xi.sdk.resellers.python.models.order_create_response import OrderCreateResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_create_request import OrderCreateRequest
+from xi.sdk.resellers.models.order_create_response import OrderCreateResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -45,9 +45,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV4Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV4Api(api_client)
     order_create_request = {"ordercreaterequest":{"requestpreamble":{"isocountrycode":"US","customernumber":"20-222222"},"ordercreatedetails":{"systemid":"","customerponumber":"TESTAPI10156","billtosuffix":"000","shiptoaddress":{"attention":"HARRY WELLS","addressline1":"THE COMPUTER STORE","addressline2":"754 LAS PALMAS DR","city":"IRVINE","state":"CA","postalcode":"926022004","countrycode":"US"},"lines":[{"linetype":"P","linenumber":"001","globalskuid":"","quantity":"1","ingrampartnumber":"NE7872"}],"extendedspecs":[{"attributename":"entrymethod","attributevalue":"WEBS"}]}}} # OrderCreateRequest |  (optional)
 
     try:
@@ -103,15 +103,15 @@ A real-time request to delete a previously accepted order must be submitted befo
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_delete_request import OrderDeleteRequest
-from xi.sdk.resellers.python.models.order_delete_response import OrderDeleteResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_delete_request import OrderDeleteRequest
+from xi.sdk.resellers.models.order_delete_response import OrderDeleteResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -123,9 +123,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV4Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV4Api(api_client)
     order_delete_request = {"servicerequest":{"requestpreamble":{"isocountrycode":"US","customerumber":"20-222222"},"OrderDeleteRequestDetails":{"entryDate":"2019-01-22","orderBranch":"20","orderNumber":"RC62Z"}}} # OrderDeleteRequest |  (optional)
 
     try:
@@ -181,15 +181,15 @@ A real-time request that allows the customer to query Ingram Micro for detailed 
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_detail_request import OrderDetailRequest
-from xi.sdk.resellers.python.models.order_detail_response import OrderDetailResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_detail_request import OrderDetailRequest
+from xi.sdk.resellers.models.order_detail_response import OrderDetailResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -201,9 +201,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV4Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV4Api(api_client)
     order_detail_request = {"servicerequest":{"requestpreamble":{"isocountrycode":"US","customernumber":"20-222222"},"orderdetailrequest":{"ordernumber":"20-B2V9H"}}} # OrderDetailRequest |  (optional)
 
     try:
@@ -259,15 +259,15 @@ The order modify transaction allows for changes to be made after the order creat
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_modify_request import OrderModifyRequest
-from xi.sdk.resellers.python.models.order_modify_response import OrderModifyResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_modify_request import OrderModifyRequest
+from xi.sdk.resellers.models.order_modify_response import OrderModifyResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -279,10 +279,10 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV4Api(api_client)
-    order_modify_request = xi.sdk.resellers.python.OrderModifyRequest() # OrderModifyRequest |  (optional)
+    api_instance = xi.sdk.resellers.OrdersV4Api(api_client)
+    order_modify_request = xi.sdk.resellers.OrderModifyRequest() # OrderModifyRequest |  (optional)
 
     try:
         # Modify an Existing Order
@@ -337,15 +337,15 @@ Search your orders using various search parameters
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_search_request import OrderSearchRequest
-from xi.sdk.resellers.python.models.order_search_response import OrderSearchResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_search_request import OrderSearchRequest
+from xi.sdk.resellers.models.order_search_response import OrderSearchResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -357,10 +357,10 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV4Api(api_client)
-    order_search_request = xi.sdk.resellers.python.OrderSearchRequest() # OrderSearchRequest |  (optional)
+    api_instance = xi.sdk.resellers.OrdersV4Api(api_client)
+    order_search_request = xi.sdk.resellers.OrderSearchRequest() # OrderSearchRequest |  (optional)
 
     try:
         # Order Search

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.InvoicesV6Api
+# xi.sdk.resellers.InvoicesV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,14 +21,14 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.invoice_detail_response import InvoiceDetailResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.invoice_detail_response import InvoiceDetailResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -40,9 +40,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.InvoicesV6Api(api_client)
+    api_instance = xi.sdk.resellers.InvoicesV6Api(api_client)
     invoicenumber = '335238411' # str | The Ingram Micro invoice number.
     version = '20-222222' # str | Version of codebase.
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.

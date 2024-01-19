@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details import OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails
+from xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details import OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails
 
 class TestOrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails(unittest.TestCase):
     """OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails unit test stubs"""
@@ -39,14 +39,14 @@ class TestOrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails(unitte
                 carrier_code = '',
                 carrier_name = '',
                 tracking_details = [
-                    xi.sdk.resellers.python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner(
+                    xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner(
                         tracking_number = '', 
                         tracking_url = '', 
                         package_weight = '', 
                         carton_number = '', 
                         quantity_in_box = '', 
                         serial_numbers = [
-                            xi.sdk.resellers.python.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner_serial_numbers_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner_SerialNumbers_inner(
+                            xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner_serial_numbers_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner_SerialNumbers_inner(
                                 serial_number = '', )
                             ], )
                     ]

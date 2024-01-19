@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.invoice_details import InvoiceDetails
+from xi.sdk.resellers.models.invoice_details import InvoiceDetails
 
 class TestInvoiceDetails(unittest.TestCase):
     """InvoiceDetails unit test stubs"""
@@ -36,12 +36,12 @@ class TestInvoiceDetails(unittest.TestCase):
         model = InvoiceDetails()
         if include_optional:
             return InvoiceDetails(
-                serviceresponse = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse.InvoiceDetailResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.models.invoice_detail_response_serviceresponse.InvoiceDetailResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         statuscode = '', 
                         responsemessage = '', ), 
-                    invoicedetailresponse = xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse.InvoiceDetailResponse_serviceresponse_invoicedetailresponse(
+                    invoicedetailresponse = xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse.InvoiceDetailResponse_serviceresponse_invoicedetailresponse(
                         customernumber = '', 
                         invoicenumber = '', 
                         invoicedate = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
@@ -78,7 +78,7 @@ class TestInvoiceDetails(unittest.TestCase):
                         totalsales = '', 
                         weight = '', 
                         shippableswitch = '', 
-                        soldto = xi.sdk.resellers.python.models.invoice_details/address_type/response.invoiceDetails.addressType.Response(
+                        soldto = xi.sdk.resellers.models.invoice_details/address_type/response.invoiceDetails.addressType.Response(
                             attention = '', 
                             name1 = '', 
                             name2 = '', 
@@ -92,7 +92,7 @@ class TestInvoiceDetails(unittest.TestCase):
                             fax = '', 
                             phonenumber = '', 
                             email = '', ), 
-                        billto = xi.sdk.resellers.python.models.invoice_details/address_type/response.invoiceDetails.addressType.Response(
+                        billto = xi.sdk.resellers.models.invoice_details/address_type/response.invoiceDetails.addressType.Response(
                             attention = '', 
                             name1 = '', 
                             name2 = '', 
@@ -108,7 +108,7 @@ class TestInvoiceDetails(unittest.TestCase):
                             email = '', ), 
                         shoptoaddress = , 
                         lines = [
-                            xi.sdk.resellers.python.models.invoice_details/product_line_type/response.invoiceDetails.productLineType.Response(
+                            xi.sdk.resellers.models.invoice_details/product_line_type/response.invoiceDetails.productLineType.Response(
                                 linenumber = '', 
                                 linetype = '', 
                                 partnumber = '', 
@@ -127,27 +127,27 @@ class TestInvoiceDetails(unittest.TestCase):
                                 unitprice = '', 
                                 unitofmeasure = '', 
                                 serialnumberdetails = [
-                                    xi.sdk.resellers.python.models.product_line_type_serialnumberdetails_inner.productLineType_serialnumberdetails_inner(
+                                    xi.sdk.resellers.models.product_line_type_serialnumberdetails_inner.productLineType_serialnumberdetails_inner(
                                         serialnumber = '', 
                                         deliverynumber = '', )
                                     ], 
                                 trackingnumberdetails = [
-                                    xi.sdk.resellers.python.models.product_line_type_trackingnumberdetails_inner.productLineType_trackingnumberdetails_inner(
+                                    xi.sdk.resellers.models.product_line_type_trackingnumberdetails_inner.productLineType_trackingnumberdetails_inner(
                                         trackingnumber = '', )
                                     ], 
                                 productextendedspecs = [
-                                    xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
+                                    xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
                                         attributename = '', 
                                         attributevalue = '', )
                                     ], )
                             ], 
                         extendedspecs = [
-                            xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
+                            xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
                                 attributename = '', 
                                 attributevalue = '', )
                             ], 
                         miscfeeline = [
-                            xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_miscfeeline_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_miscfeeline_inner(
+                            xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_miscfeeline_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_miscfeeline_inner(
                                 code = '', 
                                 description = '', 
                                 chargeamount = '', )

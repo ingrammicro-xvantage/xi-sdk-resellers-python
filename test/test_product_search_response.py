@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.product_search_response import ProductSearchResponse
+from xi.sdk.resellers.models.product_search_response import ProductSearchResponse
 
 class TestProductSearchResponse(unittest.TestCase):
     """ProductSearchResponse unit test stubs"""
@@ -36,16 +36,16 @@ class TestProductSearchResponse(unittest.TestCase):
         model = ProductSearchResponse()
         if include_optional:
             return ProductSearchResponse(
-                serviceresponse = xi.sdk.resellers.python.models.product_search_response_serviceresponse.productSearchResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.python.models.product_search_response_serviceresponse_responsepreamble.productSearchResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.models.product_search_response_serviceresponse.productSearchResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.models.product_search_response_serviceresponse_responsepreamble.productSearchResponse_serviceresponse_responsepreamble(
                         requeststatus = '', 
                         returncode = '', 
                         returnmessage = '', ), 
                     productsearchresponse = [
-                        xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner.productSearchResponse_serviceresponse_productsearchresponse_inner(
+                        xi.sdk.resellers.models.product_search_response_serviceresponse_productsearchresponse_inner.productSearchResponse_serviceresponse_productsearchresponse_inner(
                             responseflag = '', 
                             partnumbers = [
-                                xi.sdk.resellers.python.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
+                                xi.sdk.resellers.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
                                     ingrampartnumber = '', 
                                     manufacturerpartnumber = '', 
                                     upccode = '', 

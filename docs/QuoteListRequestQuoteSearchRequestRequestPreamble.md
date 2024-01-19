@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.quote_list_request_quote_search_request_request_preamble import QuoteListRequestQuoteSearchRequestRequestPreamble
+from xi.sdk.resellers.models.quote_list_request_quote_search_request_request_preamble import QuoteListRequestQuoteSearchRequestRequestPreamble
 
 # TODO update the JSON string below
 json = "{}"

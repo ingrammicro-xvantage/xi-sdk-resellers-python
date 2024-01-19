@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range import OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange
+from xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range import OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange
 
 class TestOrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange(unittest.TestCase):
     """OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange unit test stubs"""

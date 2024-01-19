@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_modify_request_servicerequest_ordermodifyrequest import OrderModifyRequestServicerequestOrdermodifyrequest
+from xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest import OrderModifyRequestServicerequestOrdermodifyrequest
 
 class TestOrderModifyRequestServicerequestOrdermodifyrequest(unittest.TestCase):
     """OrderModifyRequestServicerequestOrdermodifyrequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestOrderModifyRequestServicerequestOrdermodifyrequest(unittest.TestCase):
                 ingramorderdist = '',
                 ingramordership = '',
                 customerponumber = '',
-                shipto = xi.sdk.resellers.python.models.order_modify_request_servicerequest_ordermodifyrequest_shipto.orderModifyRequest_servicerequest_ordermodifyrequest_shipto(
+                shipto = xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_shipto.orderModifyRequest_servicerequest_ordermodifyrequest_shipto(
                     id = '', 
                     name = '', 
                     addressline = '', 
@@ -49,11 +49,11 @@ class TestOrderModifyRequestServicerequestOrdermodifyrequest(unittest.TestCase):
                     state = '', 
                     postalcode = '', 
                     countrycode = '', ),
-                headerdata = xi.sdk.resellers.python.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata.orderModifyRequest_servicerequest_ordermodifyrequest_headerdata(
+                headerdata = xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata.orderModifyRequest_servicerequest_ordermodifyrequest_headerdata(
                     actioncode = '', 
                     shipviacode = '', ),
                 linedata = [
-                    xi.sdk.resellers.python.models.order_modify_request_servicerequest_ordermodifyrequest_linedata_inner.orderModifyRequest_servicerequest_ordermodifyrequest_linedata_inner(
+                    xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_linedata_inner.orderModifyRequest_servicerequest_ordermodifyrequest_linedata_inner(
                         addlineorupdateline = '', 
                         linenumber = '', 
                         customerlinenumber = '', 

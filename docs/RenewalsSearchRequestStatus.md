@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.renewals_search_request_status import RenewalsSearchRequestStatus
+from xi.sdk.resellers.models.renewals_search_request_status import RenewalsSearchRequestStatus
 
 # TODO update the JSON string below
 json = "{}"

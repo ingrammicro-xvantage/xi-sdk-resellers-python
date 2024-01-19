@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.freight_response_freight_estimate_response import FreightResponseFreightEstimateResponse
+from xi.sdk.resellers.models.freight_response_freight_estimate_response import FreightResponseFreightEstimateResponse
 
 class TestFreightResponseFreightEstimateResponse(unittest.TestCase):
     """FreightResponseFreightEstimateResponse unit test stubs"""
@@ -43,7 +43,7 @@ class TestFreightResponseFreightEstimateResponse(unittest.TestCase):
                 total_net_amount = 1.337,
                 gross_amount = 1.337,
                 distribution = [
-                    xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner.freightResponse_freightEstimateResponse_distribution_inner(
+                    xi.sdk.resellers.models.freight_response_freight_estimate_response_distribution_inner.freightResponse_freightEstimateResponse_distribution_inner(
                         ship_from_branch_number = '', 
                         carrier_code = '', 
                         ship_via = '', 
@@ -51,7 +51,7 @@ class TestFreightResponseFreightEstimateResponse(unittest.TestCase):
                         total_weight = 1.337, 
                         transit_days = 56, 
                         carrier_list = [
-                            xi.sdk.resellers.python.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
+                            xi.sdk.resellers.models.freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner(
                                 carrier_code = '', 
                                 ship_via = '', 
                                 carrier_mode = '', 
@@ -60,7 +60,7 @@ class TestFreightResponseFreightEstimateResponse(unittest.TestCase):
                             ], )
                     ],
                 lines = [
-                    xi.sdk.resellers.python.models.freight_response_freight_estimate_response_lines_inner.freightResponse_freightEstimateResponse_lines_inner(
+                    xi.sdk.resellers.models.freight_response_freight_estimate_response_lines_inner.freightResponse_freightEstimateResponse_lines_inner(
                         ingram_part_number = '', 
                         vendor_part_number = '', 
                         warehouse_id = '', 

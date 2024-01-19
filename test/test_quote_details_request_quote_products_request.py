@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.quote_details_request_quote_products_request import QuoteDetailsRequestQuoteProductsRequest
+from xi.sdk.resellers.models.quote_details_request_quote_products_request import QuoteDetailsRequestQuoteProductsRequest
 
 class TestQuoteDetailsRequestQuoteProductsRequest(unittest.TestCase):
     """QuoteDetailsRequestQuoteProductsRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestQuoteDetailsRequestQuoteProductsRequest(unittest.TestCase):
         model = QuoteDetailsRequestQuoteProductsRequest()
         if include_optional:
             return QuoteDetailsRequestQuoteProductsRequest(
-                requestpreamble = xi.sdk.resellers.python.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
+                requestpreamble = xi.sdk.resellers.models.quote_details_request_quote_products_request_requestpreamble.quoteDetailsRequest_quoteProductsRequest_requestpreamble(
                     customer_number = '', 
                     iso_country_code = '', ),
-                retrieve_quote_products_request = xi.sdk.resellers.python.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
+                retrieve_quote_products_request = xi.sdk.resellers.models.quote_details_request_quote_products_request_retrieve_quote_products_request.quoteDetailsRequest_quoteProductsRequest_retrieveQuoteProductsRequest(
                     quote_number = '', 
                     third_party_source = '', )
             )

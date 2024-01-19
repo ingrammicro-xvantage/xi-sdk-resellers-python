@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.quote_list_request_quote_search_request_request_preamble import QuoteListRequestQuoteSearchRequestRequestPreamble
+from xi.sdk.resellers.models.quote_list_request_quote_search_request_request_preamble import QuoteListRequestQuoteSearchRequestRequestPreamble
 
 class TestQuoteListRequestQuoteSearchRequestRequestPreamble(unittest.TestCase):
     """QuoteListRequestQuoteSearchRequestRequestPreamble unit test stubs"""

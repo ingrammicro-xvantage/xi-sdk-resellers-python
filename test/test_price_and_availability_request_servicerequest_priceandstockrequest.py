@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.price_and_availability_request_servicerequest_priceandstockrequest import PriceAndAvailabilityRequestServicerequestPriceandstockrequest
+from xi.sdk.resellers.models.price_and_availability_request_servicerequest_priceandstockrequest import PriceAndAvailabilityRequestServicerequestPriceandstockrequest
 
 class TestPriceAndAvailabilityRequestServicerequestPriceandstockrequest(unittest.TestCase):
     """PriceAndAvailabilityRequestServicerequestPriceandstockrequest unit test stubs"""
@@ -40,7 +40,7 @@ class TestPriceAndAvailabilityRequestServicerequestPriceandstockrequest(unittest
                 extravailabilityflag = '',
                 includeallsystems = True,
                 item = [
-                    xi.sdk.resellers.python.models.price_and_availability_request_servicerequest_priceandstockrequest_item_inner.priceAndAvailabilityRequest_servicerequest_priceandstockrequest_item_inner(
+                    xi.sdk.resellers.models.price_and_availability_request_servicerequest_priceandstockrequest_item_inner.priceAndAvailabilityRequest_servicerequest_priceandstockrequest_item_inner(
                         index = 56, 
                         ingrampartnumber = '', 
                         vendorpartnumber = '', 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.OrdersV5Api
+# xi.sdk.resellers.OrdersV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -24,14 +24,14 @@ This endpoint is a request to cancel a previously accepted order. Use your Ingra
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_cancel_response import OrderCancelResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_cancel_response import OrderCancelResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -43,9 +43,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV5Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV5Api(api_client)
     ordernumber = '20-RD128' # str | Ingram Micro sales order number
     customer_number = 'customer_number_example' # str | Your unique Ingram Micro customer number
     iso_country_code = 'iso_country_code_example' # str | 2 chars ISO country code
@@ -107,14 +107,14 @@ Search your Ingram Micro orders. This endpoint searches by multiple order parame
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_search_response import OrderSearchResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_search_response import OrderSearchResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -126,9 +126,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV5Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV5Api(api_client)
     customer_number = '20-222222' # str | Your unique Ingram Micro customer number
     isocountrycode = 'US' # str | 2 char iso country code
     ordernumber = 'ordernumber_example' # str | Ingram sales order number (optional)
@@ -200,14 +200,14 @@ Use your Ingram Micro sales order number to search for existing orders or retrie
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_detail_response import OrderDetailResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_detail_response import OrderDetailResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -219,9 +219,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV5Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV5Api(api_client)
     ordernumber = '20-RD128' # str | Ingram Micro sales order number
     customernumber = '20-222222' # str | Your unique Ingram Micro customer number (default to '20-222222')
     isocountrycode = 'US' # str | 2 chars ISO country code (default to 'US')
@@ -289,15 +289,15 @@ Instantly create and place orders. The POST API supports stocked SKUs as well as
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.order_create_request import OrderCreateRequest
-from xi.sdk.resellers.python.models.order_create_response import OrderCreateResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.order_create_request import OrderCreateRequest
+from xi.sdk.resellers.models.order_create_response import OrderCreateResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -309,9 +309,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.OrdersV5Api(api_client)
+    api_instance = xi.sdk.resellers.OrdersV5Api(api_client)
     order_create_request = {"ordercreaterequest":{"requestpreamble":{"isocountrycode":"US","customernumber":"20-222222"},"ordercreatedetails":{"customerponumber":"CustumerPO-1","shiptoaddress":{"attention":"John Smith","addressline1":"Ingram Micro","addressline2":"3351 Michelson Dr","city":"Long Beach","state":"CA","postalcode":"92612","countrycode":"US"},"carriercode":"OT","lines":[{"linetype":"P","linenumber":"002","quantity":"1","ingrampartnumber":"TSXML3"}],"extendedspecs":[{"attributename":"isdirectshiporder","attributevalue":"false"},{"attributename":"euponumber","attributevalue":"1234"},{"attributename":"commenttext","attributevalue":"Happy Birthday Mom"},{"attributename":"duplicatecustomerordernumbervalidate","attributevalue":"ALLOW"},{"attributename":"commenttext","attributevalue":"///This order must ship on FedEx"},{"attributename":"commenttext","attributevalue":"/// 3rd account# 12345678"}]}}} # OrderCreateRequest |  (optional)
 
     try:

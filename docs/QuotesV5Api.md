@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.QuotesV5Api
+# xi.sdk.resellers.QuotesV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,14 +22,14 @@ The quote details API provides all quote details associated with the quote numbe
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.quote_details import QuoteDetails
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.quote_details import QuoteDetails
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -41,9 +41,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.QuotesV5Api(api_client)
+    api_instance = xi.sdk.resellers.QuotesV5Api(api_client)
     quote_number = 'QUO-25576-C8S2W7' # str | Ingram Micro Quote Number (default to 'QUO-25576-C8S2W7')
     customer_number = '20-222222' # str | Your Ingram Micro unique customer number (default to '20-222222')
     iso_country_code = 'US' # str |  (default to 'US')
@@ -105,15 +105,15 @@ This endpoint enables the retrieval and filtering of relevant quote list key cri
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.quote_list_request import QuoteListRequest
-from xi.sdk.resellers.python.models.quote_list_response import QuoteListResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.quote_list_request import QuoteListRequest
+from xi.sdk.resellers.models.quote_list_response import QuoteListResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -125,9 +125,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.QuotesV5Api(api_client)
+    api_instance = xi.sdk.resellers.QuotesV5Api(api_client)
     quote_list_request = {"quoteSearchRequest":{"requestPreamble":{"customerNumber":"20-222222","customerContact":"customer@im.com","isoCountryCode":"US"},"retrieveQuoteRequest":{"fromDate":"2019-08-01","toDate":"2019-11-01","pageIndex":1,"recordsPerPage":5,"sorting":"desc","sortingColumnName":"createdon","thirdPartySource":"3RDPIDCONWISE"}}} # QuoteListRequest |  (optional)
 
     try:

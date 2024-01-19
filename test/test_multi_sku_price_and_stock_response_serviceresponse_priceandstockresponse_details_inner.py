@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner import MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner
+from xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner import MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner
 
 class TestMultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner(unittest.TestCase):
     """MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner unit test stubs"""
@@ -58,7 +58,7 @@ class TestMultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetai
                 skuauthorized = '',
                 extendedvendorpartnumber = '',
                 warehousedetails = [
-                    xi.sdk.resellers.python.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
+                    xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner.multiSKUPriceAndStockResponse_serviceresponse_priceandstockresponse_details_inner_warehousedetails_inner(
                         warehouseid = '10-Mira Loma CA', 
                         warehousedescription = '', 
                         availablequantity = 56, 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.python.models.quote_details_response_products_inner_price import QuoteDetailsResponseProductsInnerPrice
+from xi.sdk.resellers.models.quote_details_response_products_inner_price import QuoteDetailsResponseProductsInnerPrice
 
 # TODO update the JSON string below
 json = "{}"

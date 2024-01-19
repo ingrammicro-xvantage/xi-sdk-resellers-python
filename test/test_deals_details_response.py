@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.deals_details_response import DealsDetailsResponse
+from xi.sdk.resellers.models.deals_details_response import DealsDetailsResponse
 
 class TestDealsDetailsResponse(unittest.TestCase):
     """DealsDetailsResponse unit test stubs"""
@@ -46,7 +46,7 @@ class TestDealsDetailsResponse(unittest.TestCase):
                 price_protection_end_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 currency_code = '',
                 end_user_info = [
-                    xi.sdk.resellers.python.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
+                    xi.sdk.resellers.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
                         contact = '', 
                         name1 = '', 
                         name2 = '', 
@@ -63,7 +63,7 @@ class TestDealsDetailsResponse(unittest.TestCase):
                         email = '', )
                     ],
                 products = [
-                    xi.sdk.resellers.python.models.deals_details_response_products_inner.dealsDetailsResponse_products_inner(
+                    xi.sdk.resellers.models.deals_details_response_products_inner.dealsDetailsResponse_products_inner(
                         ingram_part_number = '', 
                         vendor_part_number = '', 
                         upc = '', 

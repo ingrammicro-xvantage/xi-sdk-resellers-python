@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.freight_request import FreightRequest
+from xi.sdk.resellers.models.freight_request import FreightRequest
 
 class TestFreightRequest(unittest.TestCase):
     """FreightRequest unit test stubs"""
@@ -39,7 +39,7 @@ class TestFreightRequest(unittest.TestCase):
                 bill_to_address_id = '',
                 ship_to_address_id = '',
                 ship_to_address = [
-                    xi.sdk.resellers.python.models.freight_request_ship_to_address_inner.freightRequest_shipToAddress_inner(
+                    xi.sdk.resellers.models.freight_request_ship_to_address_inner.freightRequest_shipToAddress_inner(
                         company_name = '', 
                         address_line1 = '', 
                         address_line2 = '', 
@@ -50,7 +50,7 @@ class TestFreightRequest(unittest.TestCase):
                         country_code = '', )
                     ],
                 lines = [
-                    xi.sdk.resellers.python.models.freight_request_lines_inner.freightRequest_lines_inner(
+                    xi.sdk.resellers.models.freight_request_lines_inner.freightRequest_lines_inner(
                         customer_line_number = '', 
                         ingram_part_number = '', 
                         quantity = '', 

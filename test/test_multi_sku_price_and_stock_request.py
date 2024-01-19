@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.multi_sku_price_and_stock_request import MultiSKUPriceAndStockRequest
+from xi.sdk.resellers.models.multi_sku_price_and_stock_request import MultiSKUPriceAndStockRequest
 
 class TestMultiSKUPriceAndStockRequest(unittest.TestCase):
     """MultiSKUPriceAndStockRequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestMultiSKUPriceAndStockRequest(unittest.TestCase):
         model = MultiSKUPriceAndStockRequest()
         if include_optional:
             return MultiSKUPriceAndStockRequest(
-                servicerequest = xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest.multiSKUPriceAndStockRequest_servicerequest(
-                    requestpreamble = xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble.multiSKUPriceAndStockRequest_servicerequest_requestpreamble(
+                servicerequest = xi.sdk.resellers.models.multi_sku_price_and_stock_request_servicerequest.multiSKUPriceAndStockRequest_servicerequest(
+                    requestpreamble = xi.sdk.resellers.models.multi_sku_price_and_stock_request_servicerequest_requestpreamble.multiSKUPriceAndStockRequest_servicerequest_requestpreamble(
                         isocountrycode = 'US', 
                         customernumber = '20-222222', ), 
-                    priceandstockrequest = xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest(
+                    priceandstockrequest = xi.sdk.resellers.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest(
                         showwarehouseavailability = '', 
                         extravailabilityflag = '', 
                         includeallsystems = True, 
-                        item = xi.sdk.resellers.python.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
+                        item = xi.sdk.resellers.models.multi_sku_price_and_stock_request_servicerequest_priceandstockrequest_item.multiSKUPriceAndStockRequest_servicerequest_priceandstockrequest_item(
                             index = 56, 
                             ingrampartnumber = '', 
                             vendorpartnumber = '', 

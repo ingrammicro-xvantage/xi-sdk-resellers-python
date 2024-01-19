@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_search_request_servicerequest_order_lookup_request_order_number import OrderSearchRequestServicerequestOrderLookupRequestOrderNumber
+from xi.sdk.resellers.models.order_search_request_servicerequest_order_lookup_request_order_number import OrderSearchRequestServicerequestOrderLookupRequestOrderNumber
 
 class TestOrderSearchRequestServicerequestOrderLookupRequestOrderNumber(unittest.TestCase):
     """OrderSearchRequestServicerequestOrderLookupRequestOrderNumber unit test stubs"""

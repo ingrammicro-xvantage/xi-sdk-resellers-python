@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.FreightEstimateApi
+# xi.sdk.resellers.FreightEstimateApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,15 +21,15 @@ The freight estimator endpoint will allow customers to understand the freight co
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.freight_request import FreightRequest
-from xi.sdk.resellers.python.models.freight_response import FreightResponse
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.freight_request import FreightRequest
+from xi.sdk.resellers.models.freight_response import FreightResponse
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -41,9 +41,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.FreightEstimateApi(api_client)
+    api_instance = xi.sdk.resellers.FreightEstimateApi(api_client)
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.

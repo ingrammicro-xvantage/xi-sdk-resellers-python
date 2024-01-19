@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner import OrderDetailB2BLinesInnerShipmentDetailsInner
+from xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner import OrderDetailB2BLinesInnerShipmentDetailsInner
 
 class TestOrderDetailB2BLinesInnerShipmentDetailsInner(unittest.TestCase):
     """OrderDetailB2BLinesInnerShipmentDetailsInner unit test stubs"""
@@ -44,7 +44,7 @@ class TestOrderDetailB2BLinesInnerShipmentDetailsInner(unittest.TestCase):
                 invoice_number = '',
                 invoice_date = '',
                 carrier_details = [
-                    xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner(
+                    xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner(
                         carrier_code = '', 
                         carrier_name = '', 
                         quantity = 56, 
@@ -53,14 +53,14 @@ class TestOrderDetailB2BLinesInnerShipmentDetailsInner(unittest.TestCase):
                         delivered_date = '', 
                         carrier_pickup_date = '', 
                         tracking_details = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner(
                                 tracking_number = '', 
                                 tracking_url = '', 
                                 package_weight = '', 
                                 carton_number = '', 
                                 quantity_in_box = '', 
                                 serial_numbers = [
-                                    xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner_serial_numbers_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner(
+                                    xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner_serial_numbers_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner(
                                         serial_number = '', )
                                     ], )
                             ], )

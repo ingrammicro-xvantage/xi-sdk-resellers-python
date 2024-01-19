@@ -1,4 +1,4 @@
-# xi.sdk.resellers.python.InvoicesV5Api
+# xi.sdk.resellers.InvoicesV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,14 +21,14 @@ View invoice details. This is a request to query invoice details for a specific 
 ```python
 import time
 import os
-import xi.sdk.resellers.python
-from xi.sdk.resellers.python.models.invoice_details import InvoiceDetails
-from xi.sdk.resellers.python.rest import ApiException
+import xi.sdk.resellers
+from xi.sdk.resellers.models.invoice_details import InvoiceDetails
+from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
 # See configuration.py for a list of all supported configuration parameters.
-configuration = xi.sdk.resellers.python.Configuration(
+configuration = xi.sdk.resellers.Configuration(
     host = "https://api.ingrammicro.com:443/sandbox"
 )
 
@@ -40,9 +40,9 @@ configuration = xi.sdk.resellers.python.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with xi.sdk.resellers.python.ApiClient(configuration) as api_client:
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xi.sdk.resellers.python.InvoicesV5Api(api_client)
+    api_instance = xi.sdk.resellers.InvoicesV5Api(api_client)
     invoice_number = '20-RCW67-11' # str | Ingram Micro Invoice Number (default to '20-RCW67-11')
     customer_number = '20-222222' # str | Your unique Ingram Micro customer number (default to '20-222222')
     iso_country_code = 'US' # str | ISO 2 char country code (default to 'US')

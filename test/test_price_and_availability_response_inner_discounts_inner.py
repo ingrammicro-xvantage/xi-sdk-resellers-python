@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.price_and_availability_response_inner_discounts_inner import PriceAndAvailabilityResponseInnerDiscountsInner
+from xi.sdk.resellers.models.price_and_availability_response_inner_discounts_inner import PriceAndAvailabilityResponseInnerDiscountsInner
 
 class TestPriceAndAvailabilityResponseInnerDiscountsInner(unittest.TestCase):
     """PriceAndAvailabilityResponseInnerDiscountsInner unit test stubs"""
@@ -37,7 +37,7 @@ class TestPriceAndAvailabilityResponseInnerDiscountsInner(unittest.TestCase):
         if include_optional:
             return PriceAndAvailabilityResponseInnerDiscountsInner(
                 special_pricing = [
-                    xi.sdk.resellers.python.models.price_and_availability_response_inner_discounts_inner_special_pricing_inner.PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner(
+                    xi.sdk.resellers.models.price_and_availability_response_inner_discounts_inner_special_pricing_inner.PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner(
                         discount_type = 'Special Bid, Promo Discount', 
                         special_bid_numer = '', 
                         special_pricing_discount = 1.337, 
@@ -49,7 +49,7 @@ class TestPriceAndAvailabilityResponseInnerDiscountsInner(unittest.TestCase):
                         government_discounted_customer_price = 1.337, )
                     ],
                 quantity_discounts = [
-                    xi.sdk.resellers.python.models.price_and_availability_response_inner_discounts_inner_quantity_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner(
+                    xi.sdk.resellers.models.price_and_availability_response_inner_discounts_inner_quantity_discounts_inner.PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner(
                         condition_type = 'Total fee', 
                         currency_code = '', 
                         currency_type = '', 

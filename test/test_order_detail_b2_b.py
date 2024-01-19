@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_detail_b2_b import OrderDetailB2B
+from xi.sdk.resellers.models.order_detail_b2_b import OrderDetailB2B
 
 class TestOrderDetailB2B(unittest.TestCase):
     """OrderDetailB2B unit test stubs"""
@@ -53,7 +53,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                 total_tax = 1.337,
                 payment_terms = '',
                 notes = '',
-                bill_to_info = xi.sdk.resellers.python.models.order_detail_b2_b_bill_to_info.OrderDetailB2B_billToInfo(
+                bill_to_info = xi.sdk.resellers.models.order_detail_b2_b_bill_to_info.OrderDetailB2B_billToInfo(
                     contact = '', 
                     company_name = '', 
                     address_line1 = '', 
@@ -65,7 +65,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                     country_code = '', 
                     phone_number = '', 
                     email = '', ),
-                ship_to_info = xi.sdk.resellers.python.models.order_detail_b2_b_ship_to_info.OrderDetailB2B_shipToInfo(
+                ship_to_info = xi.sdk.resellers.models.order_detail_b2_b_ship_to_info.OrderDetailB2B_shipToInfo(
                     contact = '', 
                     company_name = '', 
                     address_line1 = '', 
@@ -77,7 +77,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                     country_code = '', 
                     phone_number = '', 
                     email = '', ),
-                end_user_info = xi.sdk.resellers.python.models.order_detail_b2_b_end_user_info.OrderDetailB2B_endUserInfo(
+                end_user_info = xi.sdk.resellers.models.order_detail_b2_b_end_user_info.OrderDetailB2B_endUserInfo(
                     contact = '', 
                     company_name = '', 
                     address_line1 = '', 
@@ -90,7 +90,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                     phone_number = '', 
                     email = '', ),
                 lines = [
-                    xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner.OrderDetailB2B_lines_inner(
+                    xi.sdk.resellers.models.order_detail_b2_b_lines_inner.OrderDetailB2B_lines_inner(
                         sub_order_number = '', 
                         ingram_order_line_number = '', 
                         vendor_sales_order_line_number = '', 
@@ -115,7 +115,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                         promised_delivery_date = '', 
                         line_notes = '', 
                         shipment_details = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner(
                                 quantity = 56, 
                                 delivery_number = '', 
                                 estimated_ship_date = '', 
@@ -124,7 +124,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                                 invoice_number = '', 
                                 invoice_date = '', 
                                 carrier_details = [
-                                    xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner(
+                                    xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner(
                                         carrier_code = '', 
                                         carrier_name = '', 
                                         quantity = 56, 
@@ -133,35 +133,35 @@ class TestOrderDetailB2B(unittest.TestCase):
                                         delivered_date = '', 
                                         carrier_pickup_date = '', 
                                         tracking_details = [
-                                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner(
+                                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner(
                                                 tracking_number = '', 
                                                 tracking_url = '', 
                                                 package_weight = '', 
                                                 carton_number = '', 
                                                 quantity_in_box = '', 
                                                 serial_numbers = [
-                                                    xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner_serial_numbers_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner(
+                                                    xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner_carrier_details_inner_tracking_details_inner_serial_numbers_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner(
                                                         serial_number = '', )
                                                     ], )
                                             ], )
                                     ], )
                             ], 
-                        service_contract_info = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo(
-                            contract_info = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo(
+                        service_contract_info = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_service_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo(
+                            contract_info = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_service_contract_info_contract_info.OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo(
                                 contract_description = '', 
                                 contract_number = '', 
                                 contract_status = '', 
                                 contract_start_date = '', 
                                 contract_end_date = '', 
                                 contract_duration = '', ), 
-                            subscriptions = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_subscriptions.OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions(
+                            subscriptions = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_service_contract_info_subscriptions.OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions(
                                 subscription_id = '', 
                                 subscription_term = '', 
                                 renewal_term = '', 
                                 billing_model = '', 
                                 subcription_start_date = '', 
                                 subcription_end_date = '', ), 
-                            license_info = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_service_contract_info_license_info.OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo(
+                            license_info = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_service_contract_info_license_info.OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo(
                                 license_number = [
                                     ''
                                     ], 
@@ -170,29 +170,29 @@ class TestOrderDetailB2B(unittest.TestCase):
                                 description = '', 
                                 quantity = '', ), ), 
                         additional_attributes = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_additional_attributes_inner.OrderDetailB2B_lines_inner_additionalAttributes_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_additional_attributes_inner.OrderDetailB2B_lines_inner_additionalAttributes_inner(
                                 attribute_name = '', 
                                 attribute_value = '', )
                             ], 
                         links = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_links_inner.OrderDetailB2B_lines_inner_links_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_links_inner.OrderDetailB2B_lines_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )
                             ], 
                         estimated_dates = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner.OrderDetailB2B_lines_inner_estimatedDates_inner(
-                                ship = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship.OrderDetailB2B_lines_inner_estimatedDates_inner_ship(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner.OrderDetailB2B_lines_inner_estimatedDates_inner(
+                                ship = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship.OrderDetailB2B_lines_inner_estimatedDates_inner_ship(
                                     ship_date_type = '', 
-                                    ship_date_range = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
+                                    ship_date_range = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
                                         start_date = '', 
                                         end_date = '', ), 
                                     ship_source = '', 
                                     ship_description = '', 
                                     ship_date = '', ), 
-                                delivery = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery(
+                                delivery = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery(
                                     delivery_date_type = '', 
-                                    delivery_date_range = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange(
+                                    delivery_date_range = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange(
                                         start_date = '', 
                                         end_date = '', ), 
                                     delivery_source = '', 
@@ -200,7 +200,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                                     delivered_date = '', ), )
                             ], 
                         schedule_lines = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_schedule_lines_inner.OrderDetailB2B_lines_inner_scheduleLines_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_schedule_lines_inner.OrderDetailB2B_lines_inner_scheduleLines_inner(
                                 line_number = '', 
                                 schedule_line_date = '', 
                                 requested_quantity = '', 
@@ -208,12 +208,12 @@ class TestOrderDetailB2B(unittest.TestCase):
                                 goods_issue_date = '', )
                             ], 
                         multiple_shipments = [
-                            xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_multiple_shipments_inner.OrderDetailB2B_lines_inner_multipleShipments_inner(
+                            xi.sdk.resellers.models.order_detail_b2_b_lines_inner_multiple_shipments_inner.OrderDetailB2B_lines_inner_multipleShipments_inner(
                                 line_number = '', 
                                 requested_quantity = '', 
                                 confirmed_quantity = '', 
                                 data_type = '', 
-                                date_range = xi.sdk.resellers.python.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
+                                date_range = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
                                     start_date = '', 
                                     end_date = '', ), 
                                 source = '', 
@@ -223,14 +223,14 @@ class TestOrderDetailB2B(unittest.TestCase):
                             ], )
                     ],
                 miscellaneous_charges = [
-                    xi.sdk.resellers.python.models.order_detail_b2_b_miscellaneous_charges_inner.OrderDetailB2B_miscellaneousCharges_inner(
+                    xi.sdk.resellers.models.order_detail_b2_b_miscellaneous_charges_inner.OrderDetailB2B_miscellaneousCharges_inner(
                         sub_order_number = '', 
                         charge_line_reference = '', 
                         charge_description = '', 
                         charge_amount = '', )
                     ],
                 additional_attributes = [
-                    xi.sdk.resellers.python.models.order_detail_b2_b_additional_attributes_inner.OrderDetailB2B_additionalAttributes_inner(
+                    xi.sdk.resellers.models.order_detail_b2_b_additional_attributes_inner.OrderDetailB2B_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', )
                     ]

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Reseller API Documentation
+    Reseller API
 
     For Resellers. <br> Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInner
+from xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner import OrderDetailResponseServiceresponseOrderdetailresponseLinesInner
 
 class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInner(unittest.TestCase):
     """OrderDetailResponseServiceresponseOrderdetailresponseLinesInner unit test stubs"""
@@ -55,14 +55,14 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInner(unitte
                 confirmedquantity = '',
                 backorderquantity = '',
                 serialnumberdetails = [
-                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner(
+                    xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner(
                         serialnumber = '', )
                     ],
                 trackingnumber = [
                     ''
                     ],
                 shipmentdetails = [
-                    xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner(
+                    xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner(
                         quantity = 1.337, 
                         shipmentdate = '', 
                         shipfromwarehouseid = '', 
@@ -78,14 +78,14 @@ class TestOrderDetailResponseServiceresponseOrderdetailresponseLinesInner(unitte
                         carriercode = '', 
                         carriername = '', 
                         pronumber = '', 
-                        packagedetails = xi.sdk.resellers.python.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
+                        packagedetails = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
                             trackingnumber = '', 
                             packageweight = '', 
                             cartonnumber = '', 
                             quantityinbox = '', ), )
                     ],
                 productextendedspecs = [
-                    xi.sdk.resellers.python.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
+                    xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
                         attributename = '', 
                         attributevalue = '', )
                     ],
