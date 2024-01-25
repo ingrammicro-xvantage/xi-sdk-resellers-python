@@ -50,6 +50,7 @@ jobs:
           git add .
           git commit -m "Bump version to ${{ github.event.inputs.version }}"
           git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-python main
+        fi
 
     - name: Build package
       run: python -m build
