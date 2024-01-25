@@ -13,9 +13,7 @@ jobs:
     permissions:                # Job-level permissions configuration starts here
       contents: write           # 'write' access to repository contents
       pull-requests: write
-    strategy:
-      matrix:
-        python-version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+
 
     steps:
     - name: Checkout code
@@ -24,7 +22,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.7'
         
     - name: Install dependencies
       run: |
