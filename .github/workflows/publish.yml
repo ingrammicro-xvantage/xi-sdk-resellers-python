@@ -10,6 +10,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write
     strategy:
       matrix:
         python-version: ['3.6', '3.7', '3.8', '3.9', '3.10']
