@@ -13,7 +13,7 @@ with open('README.md', 'r') as f:
 
 
 
-NAME = "xi.sdk.resellers.python"
+NAME = "xi.sdk.resellers"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
