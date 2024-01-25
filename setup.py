@@ -23,18 +23,19 @@ REQUIRES = [
     "typing-extensions >= 4.7.1",
 ]
 
-CLASSIFIERS= [
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Development Status :: Stable',
-        'Intended Audience :: For Resellers Who are looking to Innovate with Ingram Micro API Solutions'
+CLASSIFIERS = [
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',  # Adjusted for developers interested in trying out the beta version
 ]
+
 
 setup(
     name=NAME,
