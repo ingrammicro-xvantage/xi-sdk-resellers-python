@@ -1,6 +1,6 @@
 # xi.sdk.resellers.InvoicesV6Api
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,17 +19,15 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.invoice_detail_response import InvoiceDetailResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters

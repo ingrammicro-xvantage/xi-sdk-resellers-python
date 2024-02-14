@@ -1,6 +1,6 @@
 # xi.sdk.resellers.DealsApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_resellers_v6_dealsdetails**
-> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, deal_id, im_sender_id=im_sender_id)
+> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, im_environment, deal_id)
 
 Deals Details
 
@@ -20,17 +20,15 @@ The Deals Details API will retrieve all the details related to the specific deal
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.deals_details_response import DealsDetailsResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -47,12 +45,13 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
+    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
+    im_environment = 'prodChicago' # str | Environment name.
     deal_id = '12345678' # str | Unique deal ID.
-    im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
 
     try:
         # Deals Details
-        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, deal_id, im_sender_id=im_sender_id)
+        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, im_environment, deal_id)
         print("The response of DealsApi->get_resellers_v6_dealsdetails:\n")
         pprint(api_response)
     except Exception as e:
@@ -69,8 +68,9 @@ Name | Type | Description  | Notes
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
+ **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
+ **im_environment** | **str**| Environment name. | 
  **deal_id** | **str**| Unique deal ID. | 
- **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
 
 ### Return type
 
@@ -107,17 +107,15 @@ The Deals Search API, by default, will retrieve all the deals that are associate
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.deals_search_response import DealsSearchResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters

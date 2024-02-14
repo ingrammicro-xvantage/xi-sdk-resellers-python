@@ -1,6 +1,6 @@
 # xi.sdk.resellers.ProductCatalogApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,17 +21,15 @@ Search all the product-related details using a unique Ingram Part Number. Curren
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.product_detail_response import ProductDetailResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -109,17 +107,15 @@ Search the Ingram Micro product catalog by providing any of the information in t
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.product_search_response import ProductSearchResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -217,18 +213,16 @@ The PriceAndAvailability API, will retrieve Pricing, Availability, discounts, In
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.price_and_availability_request import PriceAndAvailabilityRequest
 from xi.sdk.resellers.models.price_and_availability_response_inner import PriceAndAvailabilityResponseInner
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -242,7 +236,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = xi.sdk.resellers.ProductCatalogApi(api_client)
-    include_availability = [True] # List[bool] | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details
+    include_availability = True # bool | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details
     include_pricing = True # bool | Pass boolean value as input, if true the response will contain Pricing details of the Product, if false the response will not hold Pricing details.
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
@@ -267,7 +261,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_availability** | [**List[bool]**](bool.md)| Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details | 
+ **include_availability** | **bool**| Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details | 
  **include_pricing** | **bool**| Pass boolean value as input, if true the response will contain Pricing details of the Product, if false the response will not hold Pricing details. | 
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 

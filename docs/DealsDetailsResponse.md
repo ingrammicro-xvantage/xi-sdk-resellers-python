@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **deal_expiry_date** | **date** | Expiration date of the deal/Special bid. | [optional] 
 **price_protection_end_date** | **date** | The date on which the price protection will end. | [optional] 
 **currency_code** | **str** | Country specific currency code. | [optional] 
-**end_user_info** | [**List[RenewalsDetailsResponseEndUserInfoInner]**](RenewalsDetailsResponseEndUserInfoInner.md) |  | [optional] 
+**end_user_info** | [**RenewalsDetailsResponseEndUserInfoInner**](RenewalsDetailsResponseEndUserInfoInner.md) |  | [optional] 
 **products** | [**List[DealsDetailsResponseProductsInner]**](DealsDetailsResponseProductsInner.md) |  | [optional] 
 
 ## Example

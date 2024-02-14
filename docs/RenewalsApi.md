@@ -1,6 +1,6 @@
 # xi.sdk.resellers.RenewalsApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,17 +20,15 @@ The Renewal Details API endpoint will retrieve all the details related to the re
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.renewals_details_response import RenewalsDetailsResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -107,18 +105,16 @@ The Renewal Search API, by default, will retrieve all the renewals that are asso
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.renewals_search_request import RenewalsSearchRequest
 from xi.sdk.resellers.models.renewals_search_response import RenewalsSearchResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters

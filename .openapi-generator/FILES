@@ -247,8 +247,8 @@ docs/ProductCatalogV5Api.md
 docs/ProductDetailResponse.md
 docs/ProductDetailResponseAdditionalInformation.md
 docs/ProductDetailResponseAdditionalInformationProductWeightInner.md
-docs/ProductDetailResponseCiscoFieldsInner.md
-docs/ProductDetailResponseIndicatorsInner.md
+docs/ProductDetailResponseCiscoFields.md
+docs/ProductDetailResponseIndicators.md
 docs/ProductDetailResponseTechnicalSpecificationsInner.md
 docs/ProductLineType.md
 docs/ProductLineTypeSerialnumberdetailsInner.md
@@ -592,8 +592,8 @@ test/test_product_catalog_v5_api.py
 test/test_product_detail_response.py
 test/test_product_detail_response_additional_information.py
 test/test_product_detail_response_additional_information_product_weight_inner.py
-test/test_product_detail_response_cisco_fields_inner.py
-test/test_product_detail_response_indicators_inner.py
+test/test_product_detail_response_cisco_fields.py
+test/test_product_detail_response_indicators.py
 test/test_product_detail_response_technical_specifications_inner.py
 test/test_product_line_type.py
 test/test_product_line_type_serialnumberdetails_inner.py
@@ -947,8 +947,8 @@ xi/sdk/resellers/models/price_and_availability_response_serviceresponse_response
 xi/sdk/resellers/models/product_detail_response.py
 xi/sdk/resellers/models/product_detail_response_additional_information.py
 xi/sdk/resellers/models/product_detail_response_additional_information_product_weight_inner.py
-xi/sdk/resellers/models/product_detail_response_cisco_fields_inner.py
-xi/sdk/resellers/models/product_detail_response_indicators_inner.py
+xi/sdk/resellers/models/product_detail_response_cisco_fields.py
+xi/sdk/resellers/models/product_detail_response_indicators.py
 xi/sdk/resellers/models/product_detail_response_technical_specifications_inner.py
 xi/sdk/resellers/models/product_line_type.py
 xi/sdk/resellers/models/product_line_type_serialnumberdetails_inner.py
