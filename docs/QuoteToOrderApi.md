@@ -1,6 +1,6 @@
 # xi.sdk.resellers.QuoteToOrderApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,18 +19,16 @@ The “Quote to Order” (QTO) endpoint allows a customer to create an order usi
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.quote_to_order_details_dto import QuoteToOrderDetailsDTO
 from xi.sdk.resellers.models.quote_to_order_response import QuoteToOrderResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters

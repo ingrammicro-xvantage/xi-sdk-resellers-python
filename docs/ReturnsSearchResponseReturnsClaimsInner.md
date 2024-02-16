@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **return_claim_id** | **str** | A unique return claim Id. | [optional] 
 **case_request_number** | **str** | A unique return request number. | [optional] 
-**created_on** | **date** | The date on which the return request was created.  | [optional] 
+**created_on** | **str** | The date on which the return request was created.  | [optional] 
 **type** | **str** | Type of request. | [optional] 
 **return_reason** | **str** | The reason for the return. | [optional] 
 **reference_number** | **str** | The reference number for the return. | [optional] 
-**estimated_total_value** | **date** | The estimated total value of the return. | [optional] 
+**estimated_total_value** | **float** | The estimated total value of the return. | [optional] 
 **credit** | **float** | The amount of credit. | [optional] 
 **modified_on** | **str** | The date on which the return request was last updated. | [optional] 
 **status** | **str** | The status of the request. | [optional] 

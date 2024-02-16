@@ -1,5 +1,6 @@
-# ProductDetailResponseIndicatorsInner
+# ProductDetailResponseIndicators
 
+Indicators of the Product
 
 ## Properties
 
@@ -40,19 +41,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
+from xi.sdk.resellers.models.product_detail_response_indicators import ProductDetailResponseIndicators
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of ProductDetailResponseIndicatorsInner from a JSON string
-product_detail_response_indicators_inner_instance = ProductDetailResponseIndicatorsInner.from_json(json)
+# create an instance of ProductDetailResponseIndicators from a JSON string
+product_detail_response_indicators_instance = ProductDetailResponseIndicators.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseIndicatorsInner.to_json()
+print ProductDetailResponseIndicators.to_json()
 
 # convert the object into a dict
-product_detail_response_indicators_inner_dict = product_detail_response_indicators_inner_instance.to_dict()
-# create an instance of ProductDetailResponseIndicatorsInner from a dict
-product_detail_response_indicators_inner_form_dict = product_detail_response_indicators_inner.from_dict(product_detail_response_indicators_inner_dict)
+product_detail_response_indicators_dict = product_detail_response_indicators_instance.to_dict()
+# create an instance of ProductDetailResponseIndicators from a dict
+product_detail_response_indicators_form_dict = product_detail_response_indicators.from_dict(product_detail_response_indicators_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

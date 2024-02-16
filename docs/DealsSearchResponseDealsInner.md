@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **version** | **str** | Most recent version number of the deal. | [optional] 
 **end_user** | **str** | The end user/customer&#39;s name. | [optional] 
 **vendor** | **str** | The vendor&#39;s name. | [optional] 
-**deal_expiry_date** | **date** | Expiration date of the deal/Special bid. | [optional] 
-**links** | [**List[RenewalsSearchResponseRenewalsInnerLinksInner]**](RenewalsSearchResponseRenewalsInnerLinksInner.md) |  | [optional] 
+**deal_expiry_date** | **str** | Expiration date of the deal/Special bid. | [optional] 
+**links** | [**RenewalsSearchResponseRenewalsInnerLinksInner**](RenewalsSearchResponseRenewalsInnerLinksInner.md) |  | [optional] 
 
 ## Example
 

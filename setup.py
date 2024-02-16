@@ -14,7 +14,6 @@ with open('README.md', 'r') as f:
 
 
 NAME = "xi.sdk.resellers"
-VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -39,7 +38,7 @@ CLASSIFIERS = [
 
 setup(
     name=NAME,
-    version=VERSION,
+    version="0.0.1",
     description="Ingram Micro - Xvantage Integration (XI) Python Server-side SDK.",
     author="Ingram Micro Xvantage Integration(XI)",
     author_email="xi_support@ingrammicro.com",

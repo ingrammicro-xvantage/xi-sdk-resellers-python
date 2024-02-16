@@ -1,11 +1,11 @@
 # xi.sdk.resellers.InvoicesApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_invoicedetails_v6_1**](InvoicesApi.md#get_invoicedetails_v6_1) | **GET** /resellers/v6.1/invoices/{invoiceNumber} | Get Invoice Details v6.1
-[**get_resellers_v6_invoicesearch**](InvoicesApi.md#get_resellers_v6_invoicesearch) | **GET** /resellers/v6/invoices/ | Search your invoice
+[**get_resellers_v6_invoicesearch**](InvoicesApi.md#get_resellers_v6_invoicesearch) | **GET** /resellers/v6/invoices | Search your invoice
 
 
 # **get_invoicedetails_v6_1**
@@ -20,17 +20,15 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.invoice_detailsv61_response import InvoiceDetailsv61Response
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -100,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_resellers_v6_invoicesearch**
-> InvoiceSearchResponse get_resellers_v6_invoicesearch(im_application_id_, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
+> InvoiceSearchResponse get_resellers_v6_invoicesearch(im_application_id, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
 
 Search your invoice
 
@@ -111,17 +109,15 @@ Search your Ingram Micro invoices. This endpoint searches by multiple invoice pa
 * OAuth Authentication (application):
 
 ```python
-import time
-import os
 import xi.sdk.resellers
 from xi.sdk.resellers.models.invoice_search_response import InvoiceSearchResponse
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ingrammicro.com:443/sandbox
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
 # See configuration.py for a list of all supported configuration parameters.
 configuration = xi.sdk.resellers.Configuration(
-    host = "https://api.ingrammicro.com:443/sandbox"
+    host = "https://api.ingrammicro.com:443"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -135,7 +131,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = xi.sdk.resellers.InvoicesApi(api_client)
-    im_application_id_ = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
+    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
@@ -165,7 +161,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
     try:
         # Search your invoice
-        api_response = api_instance.get_resellers_v6_invoicesearch(im_application_id_, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
+        api_response = api_instance.get_resellers_v6_invoicesearch(im_application_id, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
         print("The response of InvoicesApi->get_resellers_v6_invoicesearch:\n")
         pprint(api_response)
     except Exception as e:
@@ -179,7 +175,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **im_application_id_** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
+ **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
