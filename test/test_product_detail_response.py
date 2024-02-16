@@ -38,7 +38,7 @@ class TestProductDetailResponse(unittest.TestCase):
                 ingram_part_number = '',
                 vendor_part_number = '',
                 customer_part_number = '',
-                product_authorized = True,
+                product_authorized = '',
                 description = '',
                 product_detail_description = '',
                 upc = '',

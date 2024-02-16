@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
 from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields
@@ -33,7 +33,7 @@ class ProductDetailResponse(BaseModel):
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro unique part number for the product.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product.", alias="vendorPartNumber")
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller / end-user’s part number for the product.", alias="customerPartNumber")
-    product_authorized: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
+    product_authorized: Optional[StrictStr] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
     description: Optional[StrictStr] = Field(default=None, description="The description given for the product.")
     product_detail_description: Optional[StrictStr] = Field(default=None, description="The detailed description given for the product.", alias="productDetailDescription")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
