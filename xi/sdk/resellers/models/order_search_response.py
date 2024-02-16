@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,18 +17,23 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.order_search_response_service_response import OrderSearchResponseServiceResponse
+from xi.sdk.resellers.models.order_search_response_orders_inner import OrderSearchResponseOrdersInner
 from typing import Optional, Set
 from typing_extensions import Self
 
 class OrderSearchResponse(BaseModel):
     """
-    Response schema for order search endpoint
+    OrderSearchResponse
     """ # noqa: E501
-    service_response: Optional[OrderSearchResponseServiceResponse] = Field(default=None, alias="serviceResponse")
-    __properties: ClassVar[List[str]] = ["serviceResponse"]
+    records_found: Optional[StrictInt] = Field(default=None, description="No of recourds found for the search.", alias="recordsFound")
+    page_size: Optional[StrictInt] = Field(default=None, description="No of results per page.(default is 25)", alias="pageSize")
+    page_number: Optional[StrictInt] = Field(default=None, description="Current page number.(default is 1)", alias="pageNumber")
+    orders: Optional[List[OrderSearchResponseOrdersInner]] = Field(default=None, description="The details for the order.")
+    next_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing next page.", alias="nextPage")
+    previous_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing previous page.", alias="previousPage")
+    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "orders", "nextPage", "previousPage"]
 
     model_config = {
         "populate_by_name": True,
@@ -69,9 +74,13 @@ class OrderSearchResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of service_response
-        if self.service_response:
-            _dict['serviceResponse'] = self.service_response.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in orders (list)
+        _items = []
+        if self.orders:
+            for _item in self.orders:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['orders'] = _items
         return _dict
 
     @classmethod
@@ -84,7 +93,12 @@ class OrderSearchResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "serviceResponse": OrderSearchResponseServiceResponse.from_dict(obj["serviceResponse"]) if obj.get("serviceResponse") is not None else None
+            "recordsFound": obj.get("recordsFound"),
+            "pageSize": obj.get("pageSize"),
+            "pageNumber": obj.get("pageNumber"),
+            "orders": [OrderSearchResponseOrdersInner.from_dict(_item) for _item in obj["orders"]] if obj.get("orders") is not None else None,
+            "nextPage": obj.get("nextPage"),
+            "previousPage": obj.get("previousPage")
         })
         return _obj
 

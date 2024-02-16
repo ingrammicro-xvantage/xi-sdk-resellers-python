@@ -1,12 +1,16 @@
 # PriceAndAvailabilityRequest
 
-Request object model for the multi sku price and stock API endpoint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**servicerequest** | [**PriceAndAvailabilityRequestServicerequest**](PriceAndAvailabilityRequestServicerequest.md) |  | [optional] 
+**show_available_discounts** | **bool** | Boolean value that will display Discount details in the response when true. | [optional] 
+**show_reserve_inventory_details** | **bool** | Boolean value that will display reserve inventory details in the response when true. | [optional] 
+**special_bid_number** | **str** | Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers. | [optional] 
+**availability_by_warehouse** | [**List[PriceAndAvailabilityRequestAvailabilityByWarehouseInner]**](PriceAndAvailabilityRequestAvailabilityByWarehouseInner.md) |  | [optional] 
+**products** | [**List[PriceAndAvailabilityRequestProductsInner]**](PriceAndAvailabilityRequestProductsInner.md) |  | [optional] 
+**additional_attributes** | [**List[PriceAndAvailabilityRequestAdditionalAttributesInner]**](PriceAndAvailabilityRequestAdditionalAttributesInner.md) |  | [optional] 
 
 ## Example
 

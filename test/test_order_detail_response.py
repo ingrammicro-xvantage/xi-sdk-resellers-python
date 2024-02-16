@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,120 +35,139 @@ class TestOrderDetailResponse(unittest.TestCase):
         model = OrderDetailResponse()
         if include_optional:
             return OrderDetailResponse(
-                serviceresponse = xi.sdk.resellers.models.order_detail_response_serviceresponse.orderDetailResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.models.invoice_detail_response_serviceresponse_responsepreamble.InvoiceDetailResponse_serviceresponse_responsepreamble(
-                        responsestatus = '', 
-                        statuscode = '', 
-                        responsemessage = '', ), 
-                    orderdetailresponse = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse.orderDetailResponse_serviceresponse_orderdetailresponse(
-                        ordernumber = '', 
-                        ordertype = '', 
-                        customerordernumber = '', 
-                        enduserponumber = '', 
-                        orderstatus = '', 
-                        entrytimestamp = '', 
-                        entrymethoddescription = '', 
-                        ordertotalvalue = 1.337, 
-                        ordersubtotal = 1.337, 
-                        freightamount = '', 
-                        currencycode = '', 
-                        totalweight = '', 
-                        totaltax = '', 
-                        billtoaddress = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_billtoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_billtoaddress(
-                            suffix = '', 
-                            name = '', 
-                            attention = '', 
-                            addressline1 = '', 
-                            addressline2 = '', 
-                            addressline3 = '', 
-                            city = '', 
-                            state = '', 
-                            postalcode = '', 
-                            countrycode = '', ), 
-                        shiptoaddress = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_shiptoaddress.orderDetailResponse_serviceresponse_orderdetailresponse_shiptoaddress(
-                            suffix = '', 
-                            attention = '', 
-                            name = '', 
-                            addressline1 = '', 
-                            addressline2 = '', 
-                            addressline3 = '', 
-                            city = '', 
-                            state = '', 
-                            postalcode = '', 
-                            countrycode = '', ), 
-                        enduserinfo = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_enduserinfo.orderDetailResponse_serviceresponse_orderdetailresponse_enduserinfo(
-                            enduserid = '', ), 
-                        lines = [
-                            xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner(
-                                linenumber = '', 
-                                globallinenumber = '', 
-                                ordersuffix = '', 
-                                erpordernumber = '', 
-                                linestatus = '', 
-                                partnumber = '', 
-                                manufacturerpartnumber = '', 
-                                vendorname = '', 
-                                vendorcode = '', 
-                                partdescription1 = '', 
-                                partdescription2 = '', 
-                                unitweight = '', 
-                                unitprice = 1.337, 
-                                extendedprice = 1.337, 
-                                taxamount = 1.337, 
-                                requestedquantity = '', 
-                                confirmedquantity = '', 
-                                backorderquantity = '', 
-                                serialnumberdetails = [
-                                    xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_serialnumberdetails_inner(
-                                        serialnumber = '', )
-                                    ], 
-                                trackingnumber = [
-                                    ''
-                                    ], 
-                                shipmentdetails = [
-                                    xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner(
-                                        quantity = 1.337, 
-                                        shipmentdate = '', 
-                                        shipfromwarehouseid = '', 
-                                        warehousename = '', 
-                                        invoicenumber = '', 
-                                        invoicedate = '', 
-                                        status = '', 
-                                        statusdescription = '', 
-                                        shippeddate = '', 
-                                        holdreasoncodedescription = '', 
-                                        ponumber = '', 
-                                        carriertype = '', 
-                                        carriercode = '', 
-                                        carriername = '', 
-                                        pronumber = '', 
-                                        packagedetails = xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails.orderDetailResponse_serviceresponse_orderdetailresponse_lines_inner_shipmentdetails_inner_packagedetails(
-                                            packageweight = '', 
-                                            cartonnumber = '', 
-                                            quantityinbox = '', ), )
-                                    ], 
-                                productextendedspecs = [
-                                    xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner.InvoiceDetailResponse_serviceresponse_invoicedetailresponse_extendedspecs_inner(
-                                        attributename = '', 
-                                        attributevalue = '', )
-                                    ], 
-                                backorderetadate = '', )
+                ingram_order_number = '',
+                ingram_order_date = '',
+                order_type = '',
+                customer_order_number = '',
+                end_customer_order_number = '',
+                vendor_sales_order_number = '',
+                order_status = '',
+                order_total = 1.337,
+                order_sub_total = 1.337,
+                freight_charges = 1.337,
+                currency_code = '',
+                total_weight = 1.337,
+                total_tax = 1.337,
+                payment_terms = '',
+                notes = '',
+                bill_to_info = xi.sdk.resellers.models.order_detail_response_bill_to_info.OrderDetailResponse_billToInfo(
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                ship_to_info = xi.sdk.resellers.models.order_detail_response_ship_to_info.OrderDetailResponse_shipToInfo(
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                end_user_info = xi.sdk.resellers.models.order_detail_response_end_user_info.OrderDetailResponse_endUserInfo(
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                lines = [
+                    xi.sdk.resellers.models.order_detail_response_lines_inner.OrderDetailResponse_lines_inner(
+                        sub_order_number = '', 
+                        ingram_order_line_number = '', 
+                        vendor_sales_order_line_number = '', 
+                        customer_linenumber = '', 
+                        line_status = '', 
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        vendor_name = '', 
+                        part_description = '', 
+                        unit_weight = 1.337, 
+                        weight_uom = '', 
+                        unit_price = 56, 
+                        upc_code = '', 
+                        extended_price = 1.337, 
+                        tax_amount = 1.337, 
+                        currency_code = '', 
+                        quantity_ordered = 56, 
+                        quantity_confirmed = 56, 
+                        quantity_back_ordered = 56, 
+                        special_bid_number = '', 
+                        requested_delivery_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                        promised_delivery_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                        line_notes = '', 
+                        shipment_details = [
+                            xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner(
+                                quantity = 56, 
+                                estimated_ship_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                shipped_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                estimated_delivery_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                delivered_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                ship_from_warehouse_id = '', 
+                                ship_from_location = '', 
+                                invoice_number = '', 
+                                invoice_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                carrier_details = xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails(
+                                    carrier_code = '', 
+                                    carrier_name = '', 
+                                    tracking_details = [
+                                        xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner(
+                                            tracking_number = '', 
+                                            tracking_url = '', 
+                                            package_weight = '', 
+                                            carton_number = '', 
+                                            quantity_in_box = '', 
+                                            serial_numbers = [
+                                                xi.sdk.resellers.models.order_detail_response_lines_inner_shipment_details_inner_carrier_details_tracking_details_inner_serial_numbers_inner.OrderDetailResponse_lines_inner_shipmentDetails_inner_carrierDetails_trackingDetails_inner_SerialNumbers_inner(
+                                                    serial_number = '', )
+                                                ], )
+                                        ], ), )
                             ], 
-                        commentlines = [
-                            xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_commentlines_inner.orderDetailResponse_serviceresponse_orderdetailresponse_commentlines_inner(
-                                commenttext1 = '', 
-                                commenttext2 = '', )
+                        additional_attributes = [
+                            xi.sdk.resellers.models.order_detail_response_lines_inner_additional_attributes_inner.OrderDetailResponse_lines_inner_additionalAttributes_inner(
+                                attribute_name = '', 
+                                attribute_value = '', )
                             ], 
-                        miscfeeline = [
-                            xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_miscfeeline_inner.orderDetailResponse_serviceresponse_orderdetailresponse_miscfeeline_inner(
-                                description = '', 
-                                chargeamount = '', )
-                            ], 
-                        extendedspecs = [
-                            xi.sdk.resellers.models.order_detail_response_serviceresponse_orderdetailresponse_extendedspecs_inner.orderDetailResponse_serviceresponse_orderdetailresponse_extendedspecs_inner(
-                                attributename = '', 
-                                attributevalue = '', )
-                            ], ), )
+                        links = [
+                            xi.sdk.resellers.models.order_detail_response_lines_inner_links_inner.OrderDetailResponse_lines_inner_links_inner(
+                                topic = '', 
+                                href = '', 
+                                type = '', )
+                            ], )
+                    ],
+                miscellaneous_charges = [
+                    xi.sdk.resellers.models.order_detail_response_miscellaneous_charges_inner.OrderDetailResponse_miscellaneousCharges_inner(
+                        sub_order_number = '', 
+                        charge_line_reference = '', 
+                        charge_description = '', 
+                        charge_amount = 1.337, )
+                    ],
+                additional_attributes = [
+                    xi.sdk.resellers.models.order_detail_response_lines_inner_additional_attributes_inner.OrderDetailResponse_lines_inner_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return OrderDetailResponse(

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,8 +35,8 @@ class TestOrderDeleteResponse(unittest.TestCase):
         model = OrderDeleteResponse()
         if include_optional:
             return OrderDeleteResponse(
-                serviceresponse = xi.sdk.resellers.models.order_cancel_response_serviceresponse.orderCancelResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.models.order_cancel_response_serviceresponse_responsepreamble.orderCancelResponse_serviceresponse_responsepreamble(
+                serviceresponse = xi.sdk.resellers.models.order_delete_response_serviceresponse.orderDeleteResponse_serviceresponse(
+                    responsepreamble = xi.sdk.resellers.models.order_delete_response_serviceresponse_responsepreamble.orderDeleteResponse_serviceresponse_responsepreamble(
                         request_status = '', 
                         return_code = '', 
                         return_message = '', ), )

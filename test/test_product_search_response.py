@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,24 +35,38 @@ class TestProductSearchResponse(unittest.TestCase):
         model = ProductSearchResponse()
         if include_optional:
             return ProductSearchResponse(
-                serviceresponse = xi.sdk.resellers.models.product_search_response_serviceresponse.productSearchResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.models.product_search_response_serviceresponse_responsepreamble.productSearchResponse_serviceresponse_responsepreamble(
-                        requeststatus = '', 
-                        returncode = '', 
-                        returnmessage = '', ), 
-                    productsearchresponse = [
-                        xi.sdk.resellers.models.product_search_response_serviceresponse_productsearchresponse_inner.productSearchResponse_serviceresponse_productsearchresponse_inner(
-                            responseflag = '', 
-                            partnumbers = [
-                                xi.sdk.resellers.models.product_search_response_serviceresponse_productsearchresponse_inner_partnumbers_inner.productSearchResponse_serviceresponse_productsearchresponse_inner_partnumbers_inner(
-                                    ingrampartnumber = '', 
-                                    manufacturerpartnumber = '', 
-                                    upccode = '', 
-                                    productdescription = '', 
-                                    currency = '', 
-                                    haswarranty = '', )
-                                ], )
-                        ], )
+                records_found = 56,
+                page_size = 56,
+                page_number = 56,
+                catalog = [
+                    xi.sdk.resellers.models.product_search_response_catalog_inner.ProductSearch_Response_catalog_inner(
+                        description = '', 
+                        category = '', 
+                        sub_category = '', 
+                        product_type = '', 
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        upc_code = '', 
+                        vendor_name = '', 
+                        end_user_required = '', 
+                        has_discounts = '', 
+                        type = '', 
+                        discontinued = '', 
+                        new_product = '', 
+                        direct_ship = '', 
+                        has_warranty = '', 
+                        links = [
+                            xi.sdk.resellers.models.product_search_response_catalog_inner_links_inner.ProductSearch_Response_catalog_inner_links_inner(
+                                topic = '', 
+                                href = '', 
+                                type = '', )
+                            ], 
+                        extra_description = '', 
+                        replacement_sku = '', 
+                        authorized_to_purchase = '', )
+                    ],
+                next_page = '',
+                previous_page = ''
             )
         else:
             return ProductSearchResponse(

@@ -1,12 +1,23 @@
 # OrderCreateRequest
 
-Request schema for order create endpoint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ordercreaterequest** | [**OrderCreateRequestOrdercreaterequest**](OrderCreateRequestOrdercreaterequest.md) |  | [optional] 
+**customer_order_number** | **str** | The reseller&#39;s unique PO/Order number. | 
+**end_customer_order_number** | **str** | The end user/customer&#39;s Purchase Order number. | [optional] 
+**bill_to_address_id** | **str** | Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit. | [optional] 
+**special_bid_number** | **str** | The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers. | [optional] 
+**notes** | **str** | Order level notes. | [optional] 
+**accept_back_order** | **bool** | ENUM [\&quot;true\&quot;,\&quot;false\&quot;] - accept order if this item is backordered. This field along with shipComplete field decides the value of backorderflag. The value of this field is ignored when shipComplete field is present. | [optional] 
+**reseller_info** | [**OrderCreateRequestResellerInfo**](OrderCreateRequestResellerInfo.md) |  | [optional] 
+**vmf** | [**OrderCreateRequestVmf**](OrderCreateRequestVmf.md) |  | [optional] 
+**ship_to_info** | [**OrderCreateRequestShipToInfo**](OrderCreateRequestShipToInfo.md) |  | [optional] 
+**end_user_info** | [**OrderCreateRequestEndUserInfo**](OrderCreateRequestEndUserInfo.md) |  | [optional] 
+**lines** | [**List[OrderCreateRequestLinesInner]**](OrderCreateRequestLinesInner.md) | The line-level details of the order. | [optional] 
+**shipment_details** | [**OrderCreateRequestShipmentDetails**](OrderCreateRequestShipmentDetails.md) |  | [optional] 
+**additional_attributes** | [**List[OrderCreateRequestAdditionalAttributesInner]**](OrderCreateRequestAdditionalAttributesInner.md) | Shipment-level additional attributes. | [optional] 
 
 ## Example
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse_priceandstockresponse import MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse
-from xi.sdk.resellers.models.price_and_availability_response_serviceresponse_responsepreamble import PriceAndAvailabilityResponseServiceresponseResponsepreamble
+from xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse_responsepreamble import MultiSKUPriceAndStockResponseServiceresponseResponsepreamble
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class MultiSKUPriceAndStockResponseServiceresponse(BaseModel):
     """
     MultiSKUPriceAndStockResponseServiceresponse
     """ # noqa: E501
-    responsepreamble: Optional[PriceAndAvailabilityResponseServiceresponseResponsepreamble] = None
+    responsepreamble: Optional[MultiSKUPriceAndStockResponseServiceresponseResponsepreamble] = None
     priceandstockresponse: Optional[MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse] = None
     __properties: ClassVar[List[str]] = ["responsepreamble", "priceandstockresponse"]
 
@@ -89,7 +89,7 @@ class MultiSKUPriceAndStockResponseServiceresponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "responsepreamble": PriceAndAvailabilityResponseServiceresponseResponsepreamble.from_dict(obj["responsepreamble"]) if obj.get("responsepreamble") is not None else None,
+            "responsepreamble": MultiSKUPriceAndStockResponseServiceresponseResponsepreamble.from_dict(obj["responsepreamble"]) if obj.get("responsepreamble") is not None else None,
             "priceandstockresponse": MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse.from_dict(obj["priceandstockresponse"]) if obj.get("priceandstockresponse") is not None else None
         })
         return _obj

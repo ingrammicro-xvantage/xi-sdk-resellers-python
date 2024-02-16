@@ -1,12 +1,16 @@
 # ProductSearchResponse
 
-Response object model for the product search endpoint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**serviceresponse** | [**ProductSearchResponseServiceresponse**](ProductSearchResponseServiceresponse.md) |  | [optional] 
+**records_found** | **int** | The number of recourds found for the search. | [optional] 
+**page_size** | **int** | The number of results per page. Default is 25. | [optional] 
+**page_number** | **int** | current page number default is 1 | [optional] 
+**catalog** | [**List[ProductSearchResponseCatalogInner]**](ProductSearchResponseCatalogInner.md) |  | [optional] 
+**next_page** | **str** | link/URL for accessing next page. | [optional] 
+**previous_page** | **str** | link/URL for accessing previous page. | [optional] 
 
 ## Example
 

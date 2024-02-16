@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.order_cancel_response_serviceresponse import OrderCancelResponseServiceresponse
+from xi.sdk.resellers.models.order_delete_response_serviceresponse import OrderDeleteResponseServiceresponse
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class OrderDeleteResponse(BaseModel):
     """
     Response schema for order delete endpoint
     """ # noqa: E501
-    serviceresponse: Optional[OrderCancelResponseServiceresponse] = None
+    serviceresponse: Optional[OrderDeleteResponseServiceresponse] = None
     __properties: ClassVar[List[str]] = ["serviceresponse"]
 
     model_config = {
@@ -84,7 +84,7 @@ class OrderDeleteResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "serviceresponse": OrderCancelResponseServiceresponse.from_dict(obj["serviceresponse"]) if obj.get("serviceresponse") is not None else None
+            "serviceresponse": OrderDeleteResponseServiceresponse.from_dict(obj["serviceresponse"]) if obj.get("serviceresponse") is not None else None
         })
         return _obj
 
