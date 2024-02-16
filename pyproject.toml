@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "xi.sdk.resellers"
 version = "1.0.0"
-description = "XI SDK Resellers"
+description = "XI Sdk Resellers"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "XI SDK Resellers"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "XI Sdk Resellers"]
 include = ["xi.sdk.resellers/py.typed"]
 
 [tool.poetry.dependencies]

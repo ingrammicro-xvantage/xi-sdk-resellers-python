@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,81 +35,76 @@ class TestQuoteDetailsResponse(unittest.TestCase):
         model = QuoteDetailsResponse()
         if include_optional:
             return QuoteDetailsResponse(
-                quote_detail_response = xi.sdk.resellers.models.quote_details_response_quote_detail_response.quoteDetailsResponse_quoteDetailResponse(
-                    response_preamble = xi.sdk.resellers.models.quote_details_quote_detail_response_response_preamble.quoteDetails_quoteDetailResponse_responsePreamble(
-                        response_status = '', 
-                        status_code = '', 
-                        response_message = '', ), 
-                    retrieve_quote_response = xi.sdk.resellers.models.quote_details_response_quote_detail_response_retrieve_quote_response.quoteDetailsResponse_quoteDetailResponse_retrieveQuoteResponse(
-                        quote_guid = '', 
-                        quote_name = '', 
-                        quote_number = '', 
-                        quote_expiry_date = '', 
-                        revision_number = '', 
-                        intro_preamble = '', 
-                        purchase_instructions = '', 
-                        legal_terms = '', 
-                        currency_code = '', 
-                        price_deviation_id = '', 
-                        price_deviation_start_date = '', 
-                        price_deviation_expiry_date = '', 
-                        customer_need = '', 
-                        solution_proposed = '', 
-                        status = '', 
-                        created = '', 
-                        modified = '', 
-                        leasing_calculations = '', 
-                        leasing_instructions = '', 
-                        account_info = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_account_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_accountInfo(
-                            account_name = '', 
-                            bcn = '', 
-                            phone = '', ), 
-                        contact_info = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_contact_info.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_contactInfo(
-                            contact_email = '', 
-                            contact_name = '', ), 
-                        vendor_attributes = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_vendor_attributes.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_vendorAttributes(
-                            estimate_id = '', 
-                            deal_id = '', 
-                            vendor_name = '', 
-                            vendor_setting_message = '', ), 
-                        end_user = xi.sdk.resellers.models.quote_details_quote_detail_response_retrieve_quote_response_end_user.quoteDetails_quoteDetailResponse_retrieveQuoteResponse_endUser(
-                            end_user_name = '', 
-                            end_user_address = '', 
-                            end_user_address2 = '', 
-                            end_user_address3 = '', 
-                            end_user_city = '', 
-                            end_user_state = '', 
-                            end_user_email = '', 
-                            end_user_phone = '', 
-                            end_user_zip_code = '', 
-                            end_user_contact_name = '', 
-                            end_user_market_segment = '', ), 
-                        quote_product_list = [
-                            xi.sdk.resellers.models.quote_details/quote_product_list/response.quoteDetails.quoteProductList.Response(
-                                quote_product_guid = '', 
-                                quantity = '', 
-                                comments = '', 
-                                bid_start_date = '', 
-                                bid_expiry_date = '', 
-                                sku = '', 
-                                line_number = '', 
-                                description = '', 
-                                vendor_part_number = '', 
-                                weight = '', 
-                                is_suggestion_product = '', 
-                                vpn_category = '', 
-                                quote_products_supplier_part_auxiliary_id = '', 
-                                quote_products_vendor = '', 
-                                price = xi.sdk.resellers.models.quote_product_list_price.quoteProductList_price(
-                                    quote_price = 1.337, 
-                                    msrp = 1.337, 
-                                    extended_msrp = 1.337, 
-                                    extended_quote_price = 1.337, ), )
-                            ], 
-                        total_quote_product_count = '', 
-                        total_extended_msrp = '', 
-                        total_quantity = '', 
-                        total_extended_quote_price = '', ), )
+                quote_name = '',
+                quote_number = '',
+                revision = '',
+                ingram_quote_date = '',
+                last_modified_date = '',
+                ingram_quote_expiry_date = '',
+                currency_code = '',
+                special_bid_id = '',
+                special_bid_effective_date = '',
+                special_bid_expiration_date = '',
+                status = '',
+                customer_need = '',
+                proposed_solution = '',
+                intro_preamble = '',
+                purchase_instructions = '',
+                legal_terms = '',
+                lease_info = '',
+                leasing_instructions = '',
+                reseller_info = xi.sdk.resellers.models.quote_details_response_reseller_info.QuoteDetailsResponse_resellerInfo(
+                    contact = '', 
+                    company_name = '', 
+                    email = '', 
+                    phone_number = '', 
+                    customer_number = '', ),
+                end_user_info = xi.sdk.resellers.models.quote_details_response_end_user_info.QuoteDetailsResponse_endUserInfo(
+                    contact = '', 
+                    company_name = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    email = '', 
+                    phone_number = '', 
+                    postal_code = '', 
+                    market_segment = '', ),
+                products = [
+                    xi.sdk.resellers.models.quote_details_response_products_inner.QuoteDetailsResponse_products_inner(
+                        quote_product_guid = '', 
+                        line_number = '', 
+                        quantity = 56, 
+                        notes = '', 
+                        ean = '', 
+                        co_o = '', 
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        description = '', 
+                        weight = 56, 
+                        weight_uom = '', 
+                        is_suggestion_product = True, 
+                        vpn_category = '', 
+                        quote_products_supplier_part_auxiliary_id = '', 
+                        vendor_name = '', 
+                        terms = '', 
+                        price = xi.sdk.resellers.models.quote_details_response_products_inner_price.QuoteDetailsResponse_products_inner_price(
+                            quote_price = 56, 
+                            msrp = 56, 
+                            extended_msrp = 56, 
+                            extended_quote_price = 56, 
+                            discount_off_list = 1.337, ), )
+                    ],
+                products_count = 56,
+                extended_msrp_total = 56,
+                quantity_total = 56,
+                extended_quote_price_total = 56,
+                additional_attributes = [
+                    xi.sdk.resellers.models.quote_details_response_additional_attributes_inner.QuoteDetailsResponse_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return QuoteDetailsResponse(

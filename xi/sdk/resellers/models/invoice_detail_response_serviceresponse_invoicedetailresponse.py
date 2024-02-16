@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -18,8 +18,12 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
+from xi.sdk.resellers.models.address_type import AddressType
+from xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_extendedspecs_inner import InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner
+from xi.sdk.resellers.models.invoice_detail_response_serviceresponse_invoicedetailresponse_miscfeeline_inner import InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner
+from xi.sdk.resellers.models.product_line_type import ProductLineType
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,15 +36,15 @@ class InvoiceDetailResponseServiceresponseInvoicedetailresponse(BaseModel):
     invoicedate: Optional[date] = None
     invoicetype: Optional[StrictStr] = None
     customerordernumber: Optional[StrictStr] = None
-    customerfreightamount: Optional[Union[StrictFloat, StrictInt]] = None
-    customerforeignfrightamt: Optional[Union[StrictFloat, StrictInt]] = None
-    totaltaxamount: Optional[Union[StrictFloat, StrictInt]] = None
-    totalamount: Optional[Union[StrictFloat, StrictInt]] = None
+    customerfreightamount: Optional[StrictStr] = None
+    customerforeignfrightamt: Optional[StrictStr] = None
+    totaltaxamount: Optional[StrictStr] = None
+    totalamount: Optional[StrictStr] = None
     shiptosuffix: Optional[StrictStr] = None
     billtosuffix: Optional[StrictStr] = None
-    freightamount: Optional[Union[StrictFloat, StrictInt]] = None
+    freightamount: Optional[StrictStr] = Field(default=None, description="May not be available in all countries")
     paymentterms: Optional[StrictStr] = None
-    orderdate: Optional[StrictStr] = None
+    orderdate: Optional[date] = None
     carrier: Optional[StrictStr] = None
     carrierdescription: Optional[StrictStr] = None
     discountamount: Optional[Union[StrictFloat, StrictInt]] = None
@@ -48,7 +52,28 @@ class InvoiceDetailResponseServiceresponseInvoicedetailresponse(BaseModel):
     enduserponumber: Optional[StrictStr] = None
     freightforwardercode: Optional[StrictStr] = None
     creditmemoreasoncode: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["customernumber", "invoicenumber", "invoicedate", "invoicetype", "customerordernumber", "customerfreightamount", "customerforeignfrightamt", "totaltaxamount", "totalamount", "shiptosuffix", "billtosuffix", "freightamount", "paymentterms", "orderdate", "carrier", "carrierdescription", "discountamount", "taxtype", "enduserponumber", "freightforwardercode", "creditmemoreasoncode"]
+    fulfillmentflag: Optional[StrictStr] = None
+    holdreason: Optional[StrictStr] = None
+    shipcomplete: Optional[StrictStr] = None
+    shipdate: Optional[date] = None
+    companycurrency: Optional[StrictStr] = None
+    currencycode: Optional[StrictStr] = None
+    currencyrate: Optional[StrictStr] = None
+    globalorderid: Optional[StrictStr] = None
+    originalshipcode: Optional[StrictStr] = None
+    ordertype: Optional[StrictStr] = None
+    orderstatus: Optional[StrictStr] = None
+    totalotherfees: Optional[Union[StrictFloat, StrictInt]] = None
+    totalsales: Optional[StrictStr] = None
+    weight: Optional[StrictStr] = None
+    shippableswitch: Optional[StrictStr] = None
+    soldto: Optional[AddressType] = None
+    billto: Optional[AddressType] = None
+    shoptoaddress: Optional[AddressType] = None
+    lines: Optional[List[ProductLineType]] = None
+    extendedspecs: Optional[List[InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner]] = None
+    miscfeeline: Optional[List[InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner]] = None
+    __properties: ClassVar[List[str]] = ["customernumber", "invoicenumber", "invoicedate", "invoicetype", "customerordernumber", "customerfreightamount", "customerforeignfrightamt", "totaltaxamount", "totalamount", "shiptosuffix", "billtosuffix", "freightamount", "paymentterms", "orderdate", "carrier", "carrierdescription", "discountamount", "taxtype", "enduserponumber", "freightforwardercode", "creditmemoreasoncode", "fulfillmentflag", "holdreason", "shipcomplete", "shipdate", "companycurrency", "currencycode", "currencyrate", "globalorderid", "originalshipcode", "ordertype", "orderstatus", "totalotherfees", "totalsales", "weight", "shippableswitch", "soldto", "billto", "shoptoaddress", "lines", "extendedspecs", "miscfeeline"]
 
     model_config = {
         "populate_by_name": True,
@@ -89,6 +114,36 @@ class InvoiceDetailResponseServiceresponseInvoicedetailresponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of soldto
+        if self.soldto:
+            _dict['soldto'] = self.soldto.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of billto
+        if self.billto:
+            _dict['billto'] = self.billto.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of shoptoaddress
+        if self.shoptoaddress:
+            _dict['shoptoaddress'] = self.shoptoaddress.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
+        _items = []
+        if self.lines:
+            for _item in self.lines:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['lines'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in extendedspecs (list)
+        _items = []
+        if self.extendedspecs:
+            for _item in self.extendedspecs:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['extendedspecs'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in miscfeeline (list)
+        _items = []
+        if self.miscfeeline:
+            for _item in self.miscfeeline:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['miscfeeline'] = _items
         return _dict
 
     @classmethod
@@ -121,7 +176,28 @@ class InvoiceDetailResponseServiceresponseInvoicedetailresponse(BaseModel):
             "taxtype": obj.get("taxtype"),
             "enduserponumber": obj.get("enduserponumber"),
             "freightforwardercode": obj.get("freightforwardercode"),
-            "creditmemoreasoncode": obj.get("creditmemoreasoncode")
+            "creditmemoreasoncode": obj.get("creditmemoreasoncode"),
+            "fulfillmentflag": obj.get("fulfillmentflag"),
+            "holdreason": obj.get("holdreason"),
+            "shipcomplete": obj.get("shipcomplete"),
+            "shipdate": obj.get("shipdate"),
+            "companycurrency": obj.get("companycurrency"),
+            "currencycode": obj.get("currencycode"),
+            "currencyrate": obj.get("currencyrate"),
+            "globalorderid": obj.get("globalorderid"),
+            "originalshipcode": obj.get("originalshipcode"),
+            "ordertype": obj.get("ordertype"),
+            "orderstatus": obj.get("orderstatus"),
+            "totalotherfees": obj.get("totalotherfees"),
+            "totalsales": obj.get("totalsales"),
+            "weight": obj.get("weight"),
+            "shippableswitch": obj.get("shippableswitch"),
+            "soldto": AddressType.from_dict(obj["soldto"]) if obj.get("soldto") is not None else None,
+            "billto": AddressType.from_dict(obj["billto"]) if obj.get("billto") is not None else None,
+            "shoptoaddress": AddressType.from_dict(obj["shoptoaddress"]) if obj.get("shoptoaddress") is not None else None,
+            "lines": [ProductLineType.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None,
+            "extendedspecs": [InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner.from_dict(_item) for _item in obj["extendedspecs"]] if obj.get("extendedspecs") is not None else None,
+            "miscfeeline": [InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner.from_dict(_item) for _item in obj["miscfeeline"]] if obj.get("miscfeeline") is not None else None
         })
         return _obj
 

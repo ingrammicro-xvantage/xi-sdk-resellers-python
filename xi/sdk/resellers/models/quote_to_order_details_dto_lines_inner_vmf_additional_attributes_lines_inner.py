@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -22,14 +22,14 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class QuoteListResponseQuoteSearchResponseResponsePreamble(BaseModel):
+class QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner(BaseModel):
     """
-    QuoteListResponseQuoteSearchResponseResponsePreamble
+    QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner
     """ # noqa: E501
-    response_status: Optional[StrictStr] = Field(default=None, description="Status of the Request - \"Passed\", \"Failed\"", alias="responseStatus")
-    response_status_code: Optional[StrictStr] = Field(default=None, description="responseStatusCode is the code returned in response to a request. The following Codes are returned: 200 400 500", alias="responseStatusCode")
-    response_message: Optional[StrictStr] = Field(default=None, description="200 = Action was successfully received, understood and accepted. 400 = The request contains bad syntax or can not be fullfilled. This means there is a problem with the request. 500 = The server failed to fulfill an apparently valid request. This is a temporary problem, the request should be resubmitted.", alias="responseMessage")
-    __properties: ClassVar[List[str]] = ["responseStatus", "responseStatusCode", "responseMessage"]
+    attribute_name: Optional[StrictStr] = Field(default=None, description="The name of the line level field.", alias="attributeName")
+    attribute_value: Optional[StrictStr] = Field(default=None, description="The value of the line level field.", alias="attributeValue")
+    attribute_description: Optional[StrictStr] = Field(default=None, description="The description of the line level field.", alias="attributeDescription")
+    __properties: ClassVar[List[str]] = ["attributeName", "attributeValue", "attributeDescription"]
 
     model_config = {
         "populate_by_name": True,
@@ -49,7 +49,7 @@ class QuoteListResponseQuoteSearchResponseResponsePreamble(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of QuoteListResponseQuoteSearchResponseResponsePreamble from a JSON string"""
+        """Create an instance of QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +74,7 @@ class QuoteListResponseQuoteSearchResponseResponsePreamble(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of QuoteListResponseQuoteSearchResponseResponsePreamble from a dict"""
+        """Create an instance of QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner from a dict"""
         if obj is None:
             return None
 
@@ -82,9 +82,9 @@ class QuoteListResponseQuoteSearchResponseResponsePreamble(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "responseStatus": obj.get("responseStatus"),
-            "responseStatusCode": obj.get("responseStatusCode"),
-            "responseMessage": obj.get("responseMessage")
+            "attributeName": obj.get("attributeName"),
+            "attributeValue": obj.get("attributeValue"),
+            "attributeDescription": obj.get("attributeDescription")
         })
         return _obj
 

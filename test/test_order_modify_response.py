@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,16 +35,67 @@ class TestOrderModifyResponse(unittest.TestCase):
         model = OrderModifyResponse()
         if include_optional:
             return OrderModifyResponse(
-                serviceresponse = xi.sdk.resellers.models.order_modify_response_serviceresponse.orderModifyResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.models.order_modify_response_serviceresponse_responsepreamble.orderModifyResponse_serviceresponse_responsepreamble(
-                        responsestatus = '', 
-                        responsemessage = '', ), 
-                    ordermodifyresponse = xi.sdk.resellers.models.order_modify_response_serviceresponse_ordermodifyresponse.orderModifyResponse_serviceresponse_ordermodifyresponse(
-                        responseflag = '', 
-                        errortype = '', 
-                        acktriggered = '', 
-                        warncode = '', 
-                        headerresponse = '', ), )
+                ingram_order_number = '',
+                change_description = '',
+                order_modified_date = '',
+                customer_order_number = '',
+                end_customer_order_number = '',
+                order_total = 1.337,
+                notes = '',
+                order_sub_total = 1.337,
+                freight_charges = 1.337,
+                total_tax = 1.337,
+                order_status = '',
+                bill_to_address_id = '',
+                ship_to_info = xi.sdk.resellers.models.order_modify_response_ship_to_info.OrderModifyResponse_shipToInfo(
+                    address_id = '', 
+                    contact = '', 
+                    company_name = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                lines = [
+                    xi.sdk.resellers.models.order_modify_response_lines_inner.OrderModifyResponse_lines_inner(
+                        sub_order_number = '', 
+                        ingram_line_number = '', 
+                        customer_line_number = '', 
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        quantity_ordered = 56, 
+                        quantity_confirmed = 56, 
+                        quantity_back_ordered = 56, 
+                        shipment_details = xi.sdk.resellers.models.order_modify_response_lines_inner_shipment_details.OrderModifyResponse_lines_inner_shipmentDetails(
+                            carrier_code = '', 
+                            carrier_name = '', 
+                            freight_account_number = '', ), 
+                        additional_attributes = [
+                            xi.sdk.resellers.models.order_modify_response_lines_inner_additional_attributes_inner.OrderModifyResponse_lines_inner_additionalAttributes_inner(
+                                attribute_name = '', 
+                                attribute_value = '', )
+                            ], 
+                        notes = '', )
+                    ],
+                rejected_line_items = [
+                    xi.sdk.resellers.models.order_modify_response_rejected_line_items_inner.OrderModifyResponse_rejectedLineItems_inner(
+                        ingram_line_number = '', 
+                        customer_line_number = '', 
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        quantity_ordered = 56, 
+                        reject_code = '', 
+                        reject_reason = '', )
+                    ],
+                additional_attributes = [
+                    xi.sdk.resellers.models.order_modify_response_lines_inner_additional_attributes_inner.OrderModifyResponse_lines_inner_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return OrderModifyResponse(

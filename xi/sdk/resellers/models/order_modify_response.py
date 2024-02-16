@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,18 +17,36 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
-from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.order_modify_response_serviceresponse import OrderModifyResponseServiceresponse
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from xi.sdk.resellers.models.order_modify_response_lines_inner import OrderModifyResponseLinesInner
+from xi.sdk.resellers.models.order_modify_response_lines_inner_additional_attributes_inner import OrderModifyResponseLinesInnerAdditionalAttributesInner
+from xi.sdk.resellers.models.order_modify_response_rejected_line_items_inner import OrderModifyResponseRejectedLineItemsInner
+from xi.sdk.resellers.models.order_modify_response_ship_to_info import OrderModifyResponseShipToInfo
 from typing import Optional, Set
 from typing_extensions import Self
 
 class OrderModifyResponse(BaseModel):
     """
-    Response schema for order modify endpoint
+    OrderModifyResponse
     """ # noqa: E501
-    serviceresponse: Optional[OrderModifyResponseServiceresponse] = None
-    __properties: ClassVar[List[str]] = ["serviceresponse"]
+    ingram_order_number: Optional[StrictStr] = Field(default=None, description="The IngramMicro order number.", alias="ingramOrderNumber")
+    change_description: Optional[StrictStr] = Field(default=None, description="The description of the change.", alias="changeDescription")
+    order_modified_date: Optional[StrictStr] = Field(default=None, description="The date the order was modified.", alias="orderModifiedDate")
+    customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
+    end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end user/customer's order number for reference in their system.", alias="endCustomerOrderNumber")
+    order_total: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total for the order.", alias="orderTotal")
+    notes: Optional[StrictStr] = Field(default=None, description="Order-level notes.")
+    order_sub_total: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The sub total for the order.", alias="orderSubTotal")
+    freight_charges: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The freight charges for the order.", alias="freightCharges")
+    total_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total tax for the order.", alias="totalTax")
+    order_status: Optional[StrictStr] = Field(default=None, description="The status of the order. One of the following. Backordered, In Progress, Shipped, Delivered, Canceled, On Hold", alias="orderStatus")
+    bill_to_address_id: Optional[StrictStr] = Field(default=None, description="Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.", alias="billToAddressId")
+    ship_to_info: Optional[OrderModifyResponseShipToInfo] = Field(default=None, alias="shipToInfo")
+    lines: Optional[List[OrderModifyResponseLinesInner]] = Field(default=None, description="The line-level details for the order.")
+    rejected_line_items: Optional[List[OrderModifyResponseRejectedLineItemsInner]] = Field(default=None, description="Details for failed lines in the order.", alias="rejectedLineItems")
+    additional_attributes: Optional[List[OrderModifyResponseLinesInnerAdditionalAttributesInner]] = Field(default=None, description="Header-level additional attributes.", alias="additionalAttributes")
+    __properties: ClassVar[List[str]] = ["ingramOrderNumber", "changeDescription", "orderModifiedDate", "customerOrderNumber", "endCustomerOrderNumber", "orderTotal", "notes", "orderSubTotal", "freightCharges", "totalTax", "orderStatus", "billToAddressId", "shipToInfo", "lines", "rejectedLineItems", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -69,9 +87,30 @@ class OrderModifyResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of serviceresponse
-        if self.serviceresponse:
-            _dict['serviceresponse'] = self.serviceresponse.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of ship_to_info
+        if self.ship_to_info:
+            _dict['shipToInfo'] = self.ship_to_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
+        _items = []
+        if self.lines:
+            for _item in self.lines:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['lines'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in rejected_line_items (list)
+        _items = []
+        if self.rejected_line_items:
+            for _item in self.rejected_line_items:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['rejectedLineItems'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
+        _items = []
+        if self.additional_attributes:
+            for _item in self.additional_attributes:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['additionalAttributes'] = _items
         return _dict
 
     @classmethod
@@ -84,7 +123,22 @@ class OrderModifyResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "serviceresponse": OrderModifyResponseServiceresponse.from_dict(obj["serviceresponse"]) if obj.get("serviceresponse") is not None else None
+            "ingramOrderNumber": obj.get("ingramOrderNumber"),
+            "changeDescription": obj.get("changeDescription"),
+            "orderModifiedDate": obj.get("orderModifiedDate"),
+            "customerOrderNumber": obj.get("customerOrderNumber"),
+            "endCustomerOrderNumber": obj.get("endCustomerOrderNumber"),
+            "orderTotal": obj.get("orderTotal"),
+            "notes": obj.get("notes"),
+            "orderSubTotal": obj.get("orderSubTotal"),
+            "freightCharges": obj.get("freightCharges"),
+            "totalTax": obj.get("totalTax"),
+            "orderStatus": obj.get("orderStatus"),
+            "billToAddressId": obj.get("billToAddressId"),
+            "shipToInfo": OrderModifyResponseShipToInfo.from_dict(obj["shipToInfo"]) if obj.get("shipToInfo") is not None else None,
+            "lines": [OrderModifyResponseLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None,
+            "rejectedLineItems": [OrderModifyResponseRejectedLineItemsInner.from_dict(_item) for _item in obj["rejectedLineItems"]] if obj.get("rejectedLineItems") is not None else None,
+            "additionalAttributes": [OrderModifyResponseLinesInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
 
