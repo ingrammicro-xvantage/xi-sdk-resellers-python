@@ -41,8 +41,8 @@ class TestDealsDetailsResponse(unittest.TestCase):
                 extended_msrp = 1.337,
                 vendor = '',
                 deal_received_on = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
-                deal_expiry_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
-                price_protection_end_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                deal_expiry_date = '',
+                price_protection_end_date = '',
                 currency_code = '',
                 end_user_info = xi.sdk.resellers.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
                     contact = '', 

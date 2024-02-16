@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ingram_line_number** | **str** | Unique Ingram Micro line number. | [optional] 
+**ingram_line_number** | **int** | Unique Ingram Micro line number. | [optional] 
 **description** | **str** | The description of the line item product. | [optional] 
 **ingram_part_number** | **str** | Unique IngramMicro part number. | [optional] 
 **vendor_part_number** | **str** | The vendor&#39;s part number for the line item. | [optional] 
@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **unit_price** | **float** | The unit price of the line item. | [optional] 
 **extended_price** | **float** | Unit price X quantity for the line item. | [optional] 
 **status** | **str** | The status of the line item. | [optional] 
-**return_branch** | **int** | The code of the return branch. | [optional] 
-**ship_from_branch** | **int** | The code of the ship from branch. | [optional] 
+**return_branch** | **str** | The code of the return branch. | [optional] 
+**ship_from_branch** | **str** | The code of the ship from branch. | [optional] 
 
 ## Example
 

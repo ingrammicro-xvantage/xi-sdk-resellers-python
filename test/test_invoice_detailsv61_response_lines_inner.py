@@ -42,7 +42,7 @@ class TestInvoiceDetailsv61ResponseLinesInner(unittest.TestCase):
                 customer_part_number = '',
                 vendor_name = '',
                 product_description = '',
-                unit_weight = '',
+                unit_weight = 1.337,
                 quantity = 56,
                 unit_price = 1.337,
                 unit_of_measure = '',

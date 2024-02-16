@@ -35,7 +35,7 @@ class TestReturnsDetailsResponseProductsInner(unittest.TestCase):
         model = ReturnsDetailsResponseProductsInner()
         if include_optional:
             return ReturnsDetailsResponseProductsInner(
-                ingram_line_number = '',
+                ingram_line_number = 56,
                 description = '',
                 ingram_part_number = '',
                 vendor_part_number = '',
@@ -48,8 +48,8 @@ class TestReturnsDetailsResponseProductsInner(unittest.TestCase):
                 unit_price = 1.337,
                 extended_price = 1.337,
                 status = '',
-                return_branch = 56,
-                ship_from_branch = 56
+                return_branch = '',
+                ship_from_branch = ''
             )
         else:
             return ReturnsDetailsResponseProductsInner(

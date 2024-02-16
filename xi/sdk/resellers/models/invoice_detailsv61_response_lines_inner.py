@@ -34,7 +34,7 @@ class InvoiceDetailsv61ResponseLinesInner(BaseModel):
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Part number from customer's system.", alias="customerPartNumber")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Name of the vendor.", alias="vendorName")
     product_description: Optional[StrictStr] = Field(default=None, description="Description of the product.", alias="productDescription")
-    unit_weight: Optional[StrictStr] = Field(default=None, description="Weight of the product.", alias="unitWeight")
+    unit_weight: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Weight of the product.", alias="unitWeight")
     quantity: Optional[StrictInt] = Field(default=None, description="Quantity of the product.")
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Unit price of the product.", alias="unitPrice")
     unit_of_measure: Optional[StrictStr] = Field(default=None, description="Unit of measure of the product.", alias="unitOfMeasure")

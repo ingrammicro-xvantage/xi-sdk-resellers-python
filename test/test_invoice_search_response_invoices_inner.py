@@ -41,11 +41,11 @@ class TestInvoiceSearchResponseInvoicesInner(unittest.TestCase):
                 invoice_status = '',
                 invoice_date = '',
                 invoice_due_date = '',
-                invoiced_amount_due = '',
+                invoiced_amount_due = 1.337,
                 customer_order_number = '',
                 order_create_date = '',
                 end_customer_order_number = '',
-                invoice_amount_incl_tax = ''
+                invoice_amount_incl_tax = 1.337
             )
         else:
             return InvoiceSearchResponseInvoicesInner(
