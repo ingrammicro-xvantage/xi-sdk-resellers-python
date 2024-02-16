@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -36,7 +36,7 @@ class TestMultiSKUPriceAndStockResponse(unittest.TestCase):
         if include_optional:
             return MultiSKUPriceAndStockResponse(
                 serviceresponse = xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse.multiSKUPriceAndStockResponse_serviceresponse(
-                    responsepreamble = xi.sdk.resellers.models.price_and_availability_response_serviceresponse_responsepreamble.priceAndAvailabilityResponse_serviceresponse_responsepreamble(
+                    responsepreamble = xi.sdk.resellers.models.multi_sku_price_and_stock_response_serviceresponse_responsepreamble.multiSKUPriceAndStockResponse_serviceresponse_responsepreamble(
                         responsestatus = '', 
                         responsemessage = '', 
                         statuscode = '', ), 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,18 +17,25 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.price_and_availability_request_servicerequest import PriceAndAvailabilityRequestServicerequest
+from xi.sdk.resellers.models.price_and_availability_request_additional_attributes_inner import PriceAndAvailabilityRequestAdditionalAttributesInner
+from xi.sdk.resellers.models.price_and_availability_request_availability_by_warehouse_inner import PriceAndAvailabilityRequestAvailabilityByWarehouseInner
+from xi.sdk.resellers.models.price_and_availability_request_products_inner import PriceAndAvailabilityRequestProductsInner
 from typing import Optional, Set
 from typing_extensions import Self
 
 class PriceAndAvailabilityRequest(BaseModel):
     """
-    Request object model for the multi sku price and stock API endpoint
+    PriceAndAvailabilityRequest
     """ # noqa: E501
-    servicerequest: Optional[PriceAndAvailabilityRequestServicerequest] = None
-    __properties: ClassVar[List[str]] = ["servicerequest"]
+    show_available_discounts: Optional[StrictBool] = Field(default=None, description="Boolean value that will display Discount details in the response when true.", alias="showAvailableDiscounts")
+    show_reserve_inventory_details: Optional[StrictBool] = Field(default=None, description="Boolean value that will display reserve inventory details in the response when true.", alias="showReserveInventoryDetails")
+    special_bid_number: Optional[StrictStr] = Field(default=None, description="Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.", alias="specialBidNumber")
+    availability_by_warehouse: Optional[List[PriceAndAvailabilityRequestAvailabilityByWarehouseInner]] = Field(default=None, alias="availabilityByWarehouse")
+    products: Optional[List[PriceAndAvailabilityRequestProductsInner]] = None
+    additional_attributes: Optional[List[PriceAndAvailabilityRequestAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
+    __properties: ClassVar[List[str]] = ["showAvailableDiscounts", "showReserveInventoryDetails", "specialBidNumber", "availabilityByWarehouse", "products", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -69,9 +76,27 @@ class PriceAndAvailabilityRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of servicerequest
-        if self.servicerequest:
-            _dict['servicerequest'] = self.servicerequest.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in availability_by_warehouse (list)
+        _items = []
+        if self.availability_by_warehouse:
+            for _item in self.availability_by_warehouse:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['availabilityByWarehouse'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in products (list)
+        _items = []
+        if self.products:
+            for _item in self.products:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['products'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
+        _items = []
+        if self.additional_attributes:
+            for _item in self.additional_attributes:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['additionalAttributes'] = _items
         return _dict
 
     @classmethod
@@ -84,7 +109,12 @@ class PriceAndAvailabilityRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "servicerequest": PriceAndAvailabilityRequestServicerequest.from_dict(obj["servicerequest"]) if obj.get("servicerequest") is not None else None
+            "showAvailableDiscounts": obj.get("showAvailableDiscounts"),
+            "showReserveInventoryDetails": obj.get("showReserveInventoryDetails"),
+            "specialBidNumber": obj.get("specialBidNumber"),
+            "availabilityByWarehouse": [PriceAndAvailabilityRequestAvailabilityByWarehouseInner.from_dict(_item) for _item in obj["availabilityByWarehouse"]] if obj.get("availabilityByWarehouse") is not None else None,
+            "products": [PriceAndAvailabilityRequestProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None,
+            "additionalAttributes": [PriceAndAvailabilityRequestAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
 

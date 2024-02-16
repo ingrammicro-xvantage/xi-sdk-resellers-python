@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,18 +17,43 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
-from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.order_detail_response_serviceresponse import OrderDetailResponseServiceresponse
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from xi.sdk.resellers.models.order_detail_response_bill_to_info import OrderDetailResponseBillToInfo
+from xi.sdk.resellers.models.order_detail_response_end_user_info import OrderDetailResponseEndUserInfo
+from xi.sdk.resellers.models.order_detail_response_lines_inner import OrderDetailResponseLinesInner
+from xi.sdk.resellers.models.order_detail_response_lines_inner_additional_attributes_inner import OrderDetailResponseLinesInnerAdditionalAttributesInner
+from xi.sdk.resellers.models.order_detail_response_miscellaneous_charges_inner import OrderDetailResponseMiscellaneousChargesInner
+from xi.sdk.resellers.models.order_detail_response_ship_to_info import OrderDetailResponseShipToInfo
 from typing import Optional, Set
 from typing_extensions import Self
 
 class OrderDetailResponse(BaseModel):
     """
-    Response schema for order details endpoint
+    OrderDetailResponse
     """ # noqa: E501
-    serviceresponse: Optional[OrderDetailResponseServiceresponse] = None
-    __properties: ClassVar[List[str]] = ["serviceresponse"]
+    ingram_order_number: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order number.", alias="ingramOrderNumber")
+    ingram_order_date: Optional[StrictStr] = Field(default=None, description="The date and time in UTC format that the order was created.", alias="ingramOrderDate")
+    order_type: Optional[StrictStr] = Field(default=None, description="The order type. One of B = Branch Transfer, C = COD, D = Direct Ship, F = Future Order, P = Special Order, M = Memo, Q = Quote, S = Sales Order.", alias="orderType")
+    customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
+    end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end user/customer's order number for reference in their system.", alias="endCustomerOrderNumber")
+    vendor_sales_order_number: Optional[StrictStr] = Field(default=None, description="The vendor's order number for reference in their system.", alias="vendorSalesOrderNumber")
+    order_status: Optional[StrictStr] = Field(default=None, description="The header-level status of the order. One of- Shipped, Canceled, Backordered, Processing, On Hold, Delivered.", alias="orderStatus")
+    order_total: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total cost for the order, includes subtotal, freight charges, and tax.", alias="orderTotal")
+    order_sub_total: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The sub total cost for the order, not including tax and freight.", alias="orderSubTotal")
+    freight_charges: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The freight charges for the order.", alias="freightCharges")
+    currency_code: Optional[StrictStr] = Field(default=None, description="The country-specific three digit ISO 4217 currency code for the order.", alias="currencyCode")
+    total_weight: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total weight of the order. Pounds in North America, KG in all other countries.", alias="totalWeight")
+    total_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total tax for the order.", alias="totalTax")
+    payment_terms: Optional[StrictStr] = Field(default=None, description="The payment terms of the order. (Ex- Net 30 days).", alias="paymentTerms")
+    notes: Optional[StrictStr] = Field(default=None, description="The header-level notes for the order.")
+    bill_to_info: Optional[OrderDetailResponseBillToInfo] = Field(default=None, alias="billToInfo")
+    ship_to_info: Optional[OrderDetailResponseShipToInfo] = Field(default=None, alias="shipToInfo")
+    end_user_info: Optional[OrderDetailResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
+    lines: Optional[List[OrderDetailResponseLinesInner]] = None
+    miscellaneous_charges: Optional[List[OrderDetailResponseMiscellaneousChargesInner]] = Field(default=None, alias="miscellaneousCharges")
+    additional_attributes: Optional[List[OrderDetailResponseLinesInnerAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
+    __properties: ClassVar[List[str]] = ["ingramOrderNumber", "ingramOrderDate", "orderType", "customerOrderNumber", "endCustomerOrderNumber", "vendorSalesOrderNumber", "orderStatus", "orderTotal", "orderSubTotal", "freightCharges", "currencyCode", "totalWeight", "totalTax", "paymentTerms", "notes", "billToInfo", "shipToInfo", "endUserInfo", "lines", "miscellaneousCharges", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -69,9 +94,36 @@ class OrderDetailResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of serviceresponse
-        if self.serviceresponse:
-            _dict['serviceresponse'] = self.serviceresponse.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of bill_to_info
+        if self.bill_to_info:
+            _dict['billToInfo'] = self.bill_to_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of ship_to_info
+        if self.ship_to_info:
+            _dict['shipToInfo'] = self.ship_to_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of end_user_info
+        if self.end_user_info:
+            _dict['endUserInfo'] = self.end_user_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
+        _items = []
+        if self.lines:
+            for _item in self.lines:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['lines'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in miscellaneous_charges (list)
+        _items = []
+        if self.miscellaneous_charges:
+            for _item in self.miscellaneous_charges:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['miscellaneousCharges'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
+        _items = []
+        if self.additional_attributes:
+            for _item in self.additional_attributes:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['additionalAttributes'] = _items
         return _dict
 
     @classmethod
@@ -84,7 +136,27 @@ class OrderDetailResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "serviceresponse": OrderDetailResponseServiceresponse.from_dict(obj["serviceresponse"]) if obj.get("serviceresponse") is not None else None
+            "ingramOrderNumber": obj.get("ingramOrderNumber"),
+            "ingramOrderDate": obj.get("ingramOrderDate"),
+            "orderType": obj.get("orderType"),
+            "customerOrderNumber": obj.get("customerOrderNumber"),
+            "endCustomerOrderNumber": obj.get("endCustomerOrderNumber"),
+            "vendorSalesOrderNumber": obj.get("vendorSalesOrderNumber"),
+            "orderStatus": obj.get("orderStatus"),
+            "orderTotal": obj.get("orderTotal"),
+            "orderSubTotal": obj.get("orderSubTotal"),
+            "freightCharges": obj.get("freightCharges"),
+            "currencyCode": obj.get("currencyCode"),
+            "totalWeight": obj.get("totalWeight"),
+            "totalTax": obj.get("totalTax"),
+            "paymentTerms": obj.get("paymentTerms"),
+            "notes": obj.get("notes"),
+            "billToInfo": OrderDetailResponseBillToInfo.from_dict(obj["billToInfo"]) if obj.get("billToInfo") is not None else None,
+            "shipToInfo": OrderDetailResponseShipToInfo.from_dict(obj["shipToInfo"]) if obj.get("shipToInfo") is not None else None,
+            "endUserInfo": OrderDetailResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
+            "lines": [OrderDetailResponseLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None,
+            "miscellaneousCharges": [OrderDetailResponseMiscellaneousChargesInner.from_dict(_item) for _item in obj["miscellaneousCharges"]] if obj.get("miscellaneousCharges") is not None else None,
+            "additionalAttributes": [OrderDetailResponseLinesInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
 

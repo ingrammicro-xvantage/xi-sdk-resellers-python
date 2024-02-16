@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,66 +35,122 @@ class TestOrderCreateRequest(unittest.TestCase):
         model = OrderCreateRequest()
         if include_optional:
             return OrderCreateRequest(
-                ordercreaterequest = xi.sdk.resellers.models.order_create_request_ordercreaterequest.orderCreateRequest_ordercreaterequest(
-                    requestpreamble = xi.sdk.resellers.models.order_create_request_ordercreaterequest_requestpreamble.orderCreateRequest_ordercreaterequest_requestpreamble(
-                        isocountrycode = '', 
-                        customernumber = '10-123456 or 123456', ), 
-                    ordercreatedetails = xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails.orderCreateRequest_ordercreaterequest_ordercreatedetails(
-                        customerponumber = '0', 
-                        ordertype = 'Standard', 
-                        enduserordernumber = '', 
-                        billtosuffix = '', 
-                        shiptosuffix = '', 
-                        shiptoaddress = xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails_shiptoaddress.orderCreateRequest_ordercreaterequest_ordercreatedetails_shiptoaddress(
-                            attention = '“Mr. Customer”', 
-                            addressline1 = '“Ingram Micro”', 
-                            addressline2 = '3351 Michelson Dr', 
-                            addressline3 = 'Ste 100 or ship to phone number', 
-                            city = 'Irvine', 
-                            state = 'CA', 
-                            postalcode = '92712', 
-                            countrycode = 'US', ), 
-                        carriercode = '', 
-                        thirdpartyfreightaccountnumber = '', 
-                        specialbidnumber = '', 
-                        lines = [
-                            xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner(
-                                linetype = 'P', 
-                                linenumber = '', 
-                                ingrampartnumber = '', 
-                                quantity = '', 
-                                vendorpartnumber = '', 
-                                customerpartnumber = '', 
-                                upc_code = '', 
-                                warehouseid = '', 
-                                unitprice = '', 
-                                enduser = xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_enduser.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_enduser(
-                                    id = '', 
-                                    addressline1 = '', 
-                                    addressline2 = '', 
-                                    addressline3 = '', 
-                                    city = '', 
-                                    state = '', 
-                                    postalcode = '', 
-                                    countrycode = '', 
-                                    phonenumber = '', 
-                                    extensionnumber = '', 
-                                    faxnumber = '', 
-                                    email = '', ), 
-                                productextendedspecs = [
-                                    xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_lines_inner_productextendedspecs_inner(
-                                        attributename = 'shipfrom', 
-                                        attributevalue = '', )
+                customer_order_number = '',
+                end_customer_order_number = '',
+                bill_to_address_id = '',
+                special_bid_number = '',
+                notes = '',
+                accept_back_order = True,
+                reseller_info = xi.sdk.resellers.models.order_create_request_reseller_info.OrderCreateRequest_resellerInfo(
+                    reseller_id = '', 
+                    company_name = '', 
+                    contact = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = 56, 
+                    email = '', ),
+                vmf = xi.sdk.resellers.models.order_create_request_vmf.OrderCreateRequest_vmf(
+                    vend_auth_number = '', ),
+                ship_to_info = xi.sdk.resellers.models.order_create_request_ship_to_info.OrderCreateRequest_shipToInfo(
+                    address_id = '', 
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    address_line4 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                end_user_info = xi.sdk.resellers.models.order_create_request_end_user_info.OrderCreateRequest_endUserInfo(
+                    end_user_id = '', 
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    address_line4 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = 56, 
+                    email = '', ),
+                lines = [
+                    xi.sdk.resellers.models.order_create_request_lines_inner.OrderCreateRequest_lines_inner(
+                        customer_line_number = '', 
+                        ingram_part_number = '', 
+                        quantity = 56, 
+                        special_bid_number = '', 
+                        notes = '', 
+                        unit_price = 1.337, 
+                        end_user_price = 1.337, 
+                        additional_attributes = [
+                            xi.sdk.resellers.models.order_create_request_lines_inner_additional_attributes_inner.OrderCreateRequest_lines_inner_additionalAttributes_inner(
+                                attribute_name = '', 
+                                attribute_value = '', )
+                            ], 
+                        warranty_info = [
+                            xi.sdk.resellers.models.order_create_request_lines_inner_warranty_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner(
+                                direct_line_link = '', 
+                                warranty_line_link = '', 
+                                hardware_line_link = '', 
+                                serial_info = [
+                                    xi.sdk.resellers.models.order_create_request_lines_inner_warranty_info_inner_serial_info_inner.OrderCreateRequest_lines_inner_warrantyInfo_inner_serialInfo_inner(
+                                        dateof_purchase = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                        ship_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                                        primary_serial_number = '', 
+                                        secondary_serial_number = '', )
                                     ], )
                             ], 
-                        extendedspecs = [
-                            xi.sdk.resellers.models.order_create_request_ordercreaterequest_ordercreatedetails_extendedspecs_inner.orderCreateRequest_ordercreaterequest_ordercreatedetails_extendedspecs_inner(
-                                attributename = 'Isdirectshiporder', 
-                                attributevalue = '', )
-                            ], ), )
+                        end_user_info = [
+                            xi.sdk.resellers.models.order_create_request_lines_inner_end_user_info_inner.OrderCreateRequest_lines_inner_endUserInfo_inner(
+                                end_user_type = '', 
+                                end_user_id = '', 
+                                contact = '', 
+                                company_name = '', 
+                                name1 = '', 
+                                name2 = '', 
+                                address_line1 = '', 
+                                address_line2 = '', 
+                                address_line3 = '', 
+                                address_line4 = '', 
+                                city = '', 
+                                state = '', 
+                                postal_code = '', 
+                                country_code = '', 
+                                phone_number = 1.337, 
+                                email = '', )
+                            ], )
+                    ],
+                shipment_details = xi.sdk.resellers.models.order_create_request_shipment_details.OrderCreateRequest_shipmentDetails(
+                    carrier_code = '', 
+                    freight_account_number = '', 
+                    ship_complete = '', 
+                    requested_delivery_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                    signature_required = True, 
+                    shipping_instructions = '', ),
+                additional_attributes = [
+                    xi.sdk.resellers.models.order_create_request_additional_attributes_inner.OrderCreateRequest_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return OrderCreateRequest(
+                customer_order_number = '',
         )
         """
 

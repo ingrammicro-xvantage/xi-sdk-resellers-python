@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,18 +17,23 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.product_search_response_serviceresponse import ProductSearchResponseServiceresponse
+from xi.sdk.resellers.models.product_search_response_catalog_inner import ProductSearchResponseCatalogInner
 from typing import Optional, Set
 from typing_extensions import Self
 
 class ProductSearchResponse(BaseModel):
     """
-    Response object model for the product search endpoint
+    ProductSearchResponse
     """ # noqa: E501
-    serviceresponse: Optional[ProductSearchResponseServiceresponse] = None
-    __properties: ClassVar[List[str]] = ["serviceresponse"]
+    records_found: Optional[StrictInt] = Field(default=None, description="The number of recourds found for the search.", alias="recordsFound")
+    page_size: Optional[StrictInt] = Field(default=None, description="The number of results per page. Default is 25.", alias="pageSize")
+    page_number: Optional[StrictInt] = Field(default=None, description="current page number default is 1", alias="pageNumber")
+    catalog: Optional[List[ProductSearchResponseCatalogInner]] = None
+    next_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing next page.", alias="nextPage")
+    previous_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing previous page.", alias="previousPage")
+    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "catalog", "nextPage", "previousPage"]
 
     model_config = {
         "populate_by_name": True,
@@ -69,9 +74,13 @@ class ProductSearchResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of serviceresponse
-        if self.serviceresponse:
-            _dict['serviceresponse'] = self.serviceresponse.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in catalog (list)
+        _items = []
+        if self.catalog:
+            for _item in self.catalog:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['catalog'] = _items
         return _dict
 
     @classmethod
@@ -84,7 +93,12 @@ class ProductSearchResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "serviceresponse": ProductSearchResponseServiceresponse.from_dict(obj["serviceresponse"]) if obj.get("serviceresponse") is not None else None
+            "recordsFound": obj.get("recordsFound"),
+            "pageSize": obj.get("pageSize"),
+            "pageNumber": obj.get("pageNumber"),
+            "catalog": [ProductSearchResponseCatalogInner.from_dict(_item) for _item in obj["catalog"]] if obj.get("catalog") is not None else None,
+            "nextPage": obj.get("nextPage"),
+            "previousPage": obj.get("previousPage")
         })
         return _obj
 

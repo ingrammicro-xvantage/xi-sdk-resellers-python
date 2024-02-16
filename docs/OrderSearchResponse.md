@@ -1,12 +1,16 @@
 # OrderSearchResponse
 
-Response schema for order search endpoint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**service_response** | [**OrderSearchResponseServiceResponse**](OrderSearchResponseServiceResponse.md) |  | [optional] 
+**records_found** | **int** | No of recourds found for the search. | [optional] 
+**page_size** | **int** | No of results per page.(default is 25) | [optional] 
+**page_number** | **int** | Current page number.(default is 1) | [optional] 
+**orders** | [**List[OrderSearchResponseOrdersInner]**](OrderSearchResponseOrdersInner.md) | The details for the order. | [optional] 
+**next_page** | **str** | link/URL for accessing next page. | [optional] 
+**previous_page** | **str** | link/URL for accessing previous page. | [optional] 
 
 ## Example
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,38 +35,38 @@ class TestOrderSearchResponse(unittest.TestCase):
         model = OrderSearchResponse()
         if include_optional:
             return OrderSearchResponse(
-                service_response = xi.sdk.resellers.models.order_search_response_service_response.orderSearchResponse_serviceResponse(
-                    responsepreamble = xi.sdk.resellers.models.order_search_response_service_response_responsepreamble.orderSearchResponse_serviceResponse_responsepreamble(
-                        requeststatus = '', 
-                        returnmessage = '', ), 
-                    ordersearchresponse = xi.sdk.resellers.models.order_search_response_service_response_ordersearchresponse.orderSearchResponse_serviceResponse_ordersearchresponse(
-                        ordersfound = '', 
-                        pagesize = '', 
-                        pagenumber = '', 
-                        orders = [
-                            xi.sdk.resellers.models.order_search_response_service_response_ordersearchresponse_orders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner(
-                                ordernumber = '', 
-                                entrytimestamp = '', 
-                                customerordernumber = '', 
-                                suborders = [
-                                    xi.sdk.resellers.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner(
-                                        subordernumber = '', 
-                                        statuscode = '', 
-                                        status = '', 
-                                        holdreasoncode = '', 
-                                        holdreason = '', 
-                                        links = [
-                                            xi.sdk.resellers.models.order_search_response_service_response_ordersearchresponse_orders_inner_suborders_inner_links_inner.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_suborders_inner_links_inner(
-                                                topic = 'orders', 
-                                                href = '', 
-                                                type = 'GET', )
-                                            ], )
-                                    ], 
-                                links = xi.sdk.resellers.models.order_search_response_service_response_ordersearchresponse_orders_inner_links.orderSearchResponse_serviceResponse_ordersearchresponse_orders_inner_links(
-                                    topic = 'orders', 
-                                    href = '', 
-                                    type = 'GET', ), )
-                            ], ), )
+                records_found = 56,
+                page_size = 56,
+                page_number = 56,
+                orders = [
+                    xi.sdk.resellers.models.order_search_response_orders_inner.OrderSearch_Response_orders_inner(
+                        ingram_order_number = '', 
+                        ingram_order_date = '', 
+                        customer_order_number = '', 
+                        vendor_sales_order_number = '', 
+                        vendor_name = '', 
+                        end_user_company_name = '', 
+                        order_total = 1.337, 
+                        order_status = '', 
+                        sub_orders = [
+                            xi.sdk.resellers.models.order_search_response_orders_inner_sub_orders_inner.OrderSearch_Response_orders_inner_subOrders_inner(
+                                sub_order_number = '', 
+                                sub_order_total = 1.337, 
+                                sub_order_status = '', 
+                                links = [
+                                    xi.sdk.resellers.models.order_search_response_orders_inner_sub_orders_inner_links_inner.OrderSearch_Response_orders_inner_subOrders_inner_links_inner(
+                                        topic = '', 
+                                        href = '', 
+                                        type = '', )
+                                    ], )
+                            ], 
+                        links = xi.sdk.resellers.models.order_search_response_orders_inner_links.OrderSearch_Response_orders_inner_links(
+                            topic = '', 
+                            href = '', 
+                            type = '', ), )
+                    ],
+                next_page = '',
+                previous_page = ''
             )
         else:
             return OrderSearchResponse(

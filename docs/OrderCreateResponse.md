@@ -1,12 +1,20 @@
 # OrderCreateResponse
 
-Response schema for order create endpoint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**serviceresponse** | [**OrderCreateResponseServiceresponse**](OrderCreateResponseServiceresponse.md) |  | [optional] 
+**customer_order_number** | **str** | The reseller&#39;s unique PO/Order number. | [optional] 
+**end_customer_order_number** | **str** | The end user/customer&#39;s Purchase Order number. | [optional] 
+**bill_to_address_id** | **str** | Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit | [optional] 
+**special_bid_number** | **str** | The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers. | [optional] 
+**order_split** | **bool** | true for multiple orders | [optional] 
+**processed_partially** | **bool** | true for partial order succesfully placed | [optional] 
+**purchase_order_total** | **float** | Total of all the orders including taxes and fees. | [optional] 
+**ship_to_info** | [**OrderCreateResponseShipToInfo**](OrderCreateResponseShipToInfo.md) |  | [optional] 
+**end_user_info** | [**OrderCreateResponseEndUserInfo**](OrderCreateResponseEndUserInfo.md) |  | [optional] 
+**orders** | [**List[OrderCreateResponseOrdersInner]**](OrderCreateResponseOrdersInner.md) | Order-level details. | [optional] 
 
 ## Example
 

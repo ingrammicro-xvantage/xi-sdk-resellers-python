@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI Sdk Resellers
+    XI SDK Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,31 +35,32 @@ class TestPriceAndAvailabilityRequest(unittest.TestCase):
         model = PriceAndAvailabilityRequest()
         if include_optional:
             return PriceAndAvailabilityRequest(
-                servicerequest = xi.sdk.resellers.models.price_and_availability_request_servicerequest.priceAndAvailabilityRequest_servicerequest(
-                    requestpreamble = xi.sdk.resellers.models.price_and_availability_request_servicerequest_requestpreamble.priceAndAvailabilityRequest_servicerequest_requestpreamble(
-                        isocountrycode = 'US', 
-                        customernumber = '12-34567 or 12-345678 or 123456 ', ), 
-                    priceandstockrequest = xi.sdk.resellers.models.price_and_availability_request_servicerequest_priceandstockrequest.priceAndAvailabilityRequest_servicerequest_priceandstockrequest(
-                        showwarehouseavailability = '', 
-                        extravailabilityflag = '', 
-                        includeallsystems = True, 
-                        item = [
-                            xi.sdk.resellers.models.price_and_availability_request_servicerequest_priceandstockrequest_item_inner.priceAndAvailabilityRequest_servicerequest_priceandstockrequest_item_inner(
-                                index = 56, 
-                                ingrampartnumber = '', 
-                                vendorpartnumber = '', 
-                                upc = '', 
-                                customerpartnumber = '', 
-                                warehouseidlist = [
-                                    ''
-                                    ], 
-                                extendedvendorpartnumber = '', 
-                                quantity = 1.337, 
-                                enduserid = '', 
-                                govtprogramtype = '', 
-                                govtendusertype = '', 
-                                specialbidnumber = '', )
-                            ], ), )
+                show_available_discounts = True,
+                show_reserve_inventory_details = True,
+                special_bid_number = '',
+                availability_by_warehouse = [
+                    xi.sdk.resellers.models.price_and_availability_request_availability_by_warehouse_inner.PriceAndAvailabilityRequest_availabilityByWarehouse_inner(
+                        availability_by_warehouse_id = '', 
+                        availability_for_all_location = True, )
+                    ],
+                products = [
+                    xi.sdk.resellers.models.price_and_availability_request_products_inner.PriceAndAvailabilityRequest_products_inner(
+                        ingram_part_number = '', 
+                        vendor_part_number = '', 
+                        customer_part_number = '', 
+                        upc = '', 
+                        quantity_requested = '', 
+                        additional_attributes = [
+                            xi.sdk.resellers.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
+                                attribute_name = '', 
+                                attribute_value = '', )
+                            ], )
+                    ],
+                additional_attributes = [
+                    xi.sdk.resellers.models.price_and_availability_request_additional_attributes_inner.PriceAndAvailabilityRequest_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return PriceAndAvailabilityRequest(
