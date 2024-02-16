@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -39,7 +39,7 @@ class TestQuoteToOrderDetailsDTOLinesInner(unittest.TestCase):
                 ingram_part_number = '',
                 quantity = '',
                 vmf_additional_attributes_lines = [
-                    xi.sdk.resellers.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner.ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner(
+                    xi.sdk.resellers.models.quote_to_order_details_dto_lines_inner_vmf_additional_attributes_lines_inner.QuoteToOrderDetailsDTO_lines_inner_vmfAdditionalAttributesLines_inner(
                         attribute_name = '', 
                         attribute_value = '', 
                         attribute_description = '', )

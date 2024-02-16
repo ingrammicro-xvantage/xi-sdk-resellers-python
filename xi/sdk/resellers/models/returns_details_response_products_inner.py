@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -27,7 +27,7 @@ class ReturnsDetailsResponseProductsInner(BaseModel):
     """
     ReturnsDetailsResponseProductsInner
     """ # noqa: E501
-    ingram_line_number: Optional[StrictStr] = Field(default=None, description="Unique Ingram Micro line number.", alias="ingramLineNumber")
+    ingram_line_number: Optional[StrictInt] = Field(default=None, description="Unique Ingram Micro line number.", alias="ingramLineNumber")
     description: Optional[StrictStr] = Field(default=None, description="The description of the line item product.")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Unique IngramMicro part number.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="The vendor's part number for the line item.", alias="vendorPartNumber")
@@ -40,8 +40,8 @@ class ReturnsDetailsResponseProductsInner(BaseModel):
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The unit price of the line item.", alias="unitPrice")
     extended_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Unit price X quantity for the line item.", alias="extendedPrice")
     status: Optional[StrictStr] = Field(default=None, description="The status of the line item.")
-    return_branch: Optional[StrictInt] = Field(default=None, description="The code of the return branch.", alias="returnBranch")
-    ship_from_branch: Optional[StrictInt] = Field(default=None, description="The code of the ship from branch.", alias="shipFromBranch")
+    return_branch: Optional[StrictStr] = Field(default=None, description="The code of the return branch.", alias="returnBranch")
+    ship_from_branch: Optional[StrictStr] = Field(default=None, description="The code of the ship from branch.", alias="shipFromBranch")
     __properties: ClassVar[List[str]] = ["ingramLineNumber", "description", "ingramPartNumber", "vendorPartNumber", "upc", "invoiceDate", "invoiceNumber", "customerOrderNumber", "requestDetails", "quantity", "unitPrice", "extendedPrice", "status", "returnBranch", "shipFromBranch"]
 
     model_config = {

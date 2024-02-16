@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -42,7 +42,7 @@ class TestInvoiceDetailsv61ResponseLinesInner(unittest.TestCase):
                 customer_part_number = '',
                 vendor_name = '',
                 product_description = '',
-                unit_weight = '',
+                unit_weight = 1.337,
                 quantity = 56,
                 unit_price = 1.337,
                 unit_of_measure = '',

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **customer_line_number** | **str** | The reseller&#39;s line item number for reference in their system. | [optional] 
 **ingram_part_number** | **str** | Unique Ingram Micro part number. | [optional] 
 **quantity** | **str** | The quantity of the line item. | [optional] 
-**vmf_additional_attributes_lines** | [**List[ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner]**](ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.md) | The object containing the list of fields required at a line level by the vendor. | [optional] 
+**vmf_additional_attributes_lines** | [**List[QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner]**](QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner.md) | The object containing the list of fields required at a line level by the vendor. | [optional] 
 
 ## Example
 

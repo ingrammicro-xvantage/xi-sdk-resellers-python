@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,11 +32,11 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
     invoice_status: Optional[StrictStr] = Field(default=None, description="Invoice Status.", alias="invoiceStatus")
     invoice_date: Optional[StrictStr] = Field(default=None, description="Invoice Date.", alias="invoiceDate")
     invoice_due_date: Optional[StrictStr] = Field(default=None, description="Invoice Due Date.", alias="invoiceDueDate")
-    invoiced_amount_due: Optional[StrictStr] = Field(default=None, description="Invoice Amount.", alias="invoicedAmountDue")
+    invoiced_amount_due: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Invoice Amount.", alias="invoicedAmountDue")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="Customer Order No.", alias="customerOrderNumber")
     order_create_date: Optional[StrictStr] = Field(default=None, description="Order Create Date.", alias="orderCreateDate")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="End Customer Order number.", alias="endCustomerOrderNumber")
-    invoice_amount_incl_tax: Optional[StrictStr] = Field(default=None, description="Invoice Amount Inclusive of Taxes", alias="invoiceAmountInclTax")
+    invoice_amount_incl_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Invoice Amount Inclusive of Taxes", alias="invoiceAmountInclTax")
     __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "orderCreateDate", "endCustomerOrderNumber", "invoiceAmountInclTax"]
 
     model_config = {

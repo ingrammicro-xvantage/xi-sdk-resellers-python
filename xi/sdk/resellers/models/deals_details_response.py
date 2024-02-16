@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,8 +35,8 @@ class DealsDetailsResponse(BaseModel):
     extended_msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended MSRP - Manufacturer Suggested Retail Price X Quantity.", alias="extendedMsrp")
     vendor: Optional[StrictStr] = Field(default=None, description="The vendor's name.")
     deal_received_on: Optional[date] = Field(default=None, description="The date on which the deal starts.", alias="dealReceivedOn")
-    deal_expiry_date: Optional[date] = Field(default=None, description="Expiration date of the deal/Special bid.", alias="dealExpiryDate")
-    price_protection_end_date: Optional[date] = Field(default=None, description="The date on which the price protection will end.", alias="priceProtectionEndDate")
+    deal_expiry_date: Optional[StrictStr] = Field(default=None, description="Expiration date of the deal/Special bid.", alias="dealExpiryDate")
+    price_protection_end_date: Optional[StrictStr] = Field(default=None, description="The date on which the price protection will end.", alias="priceProtectionEndDate")
     currency_code: Optional[StrictStr] = Field(default=None, description="Country specific currency code.", alias="currencyCode")
     end_user_info: Optional[RenewalsDetailsResponseEndUserInfoInner] = Field(default=None, alias="endUserInfo")
     products: Optional[List[DealsDetailsResponseProductsInner]] = None

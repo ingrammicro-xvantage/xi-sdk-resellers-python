@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **invoice_status** | **str** | Invoice Status. | [optional] 
 **invoice_date** | **str** | Invoice Date. | [optional] 
 **invoice_due_date** | **str** | Invoice Due Date. | [optional] 
-**invoiced_amount_due** | **str** | Invoice Amount. | [optional] 
+**invoiced_amount_due** | **float** | Invoice Amount. | [optional] 
 **customer_order_number** | **str** | Customer Order No. | [optional] 
 **order_create_date** | **str** | Order Create Date. | [optional] 
 **end_customer_order_number** | **str** | End Customer Order number. | [optional] 
-**invoice_amount_incl_tax** | **str** | Invoice Amount Inclusive of Taxes | [optional] 
+**invoice_amount_incl_tax** | **float** | Invoice Amount Inclusive of Taxes | [optional] 
 
 ## Example
 

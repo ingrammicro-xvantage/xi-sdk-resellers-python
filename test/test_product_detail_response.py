@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -38,7 +38,7 @@ class TestProductDetailResponse(unittest.TestCase):
                 ingram_part_number = '',
                 vendor_part_number = '',
                 customer_part_number = '',
-                product_authorized = True,
+                product_authorized = '',
                 description = '',
                 product_detail_description = '',
                 upc = '',

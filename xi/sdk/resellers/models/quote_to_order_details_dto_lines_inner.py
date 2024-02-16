@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.validate_quote_response_lines_inner_vmf_additional_attributes_lines_inner import ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_lines_inner_vmf_additional_attributes_lines_inner import QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +30,7 @@ class QuoteToOrderDetailsDTOLinesInner(BaseModel):
     customer_line_number: Optional[StrictStr] = Field(default=None, description="The reseller's line item number for reference in their system.", alias="customerLineNumber")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Unique IngramMicro part number.", alias="ingramPartNumber")
     quantity: Optional[StrictStr] = Field(default=None, description="The quantity of the line item.")
-    vmf_additional_attributes_lines: Optional[List[ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner]] = Field(default=None, description="The object containing the list of fields required at a line level by the vendor.", alias="vmfAdditionalAttributesLines")
+    vmf_additional_attributes_lines: Optional[List[QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner]] = Field(default=None, description="The object containing the list of fields required at a line level by the vendor.", alias="vmfAdditionalAttributesLines")
     __properties: ClassVar[List[str]] = ["customerLineNumber", "ingramPartNumber", "quantity", "vmfAdditionalAttributesLines"]
 
     model_config = {
@@ -94,7 +94,7 @@ class QuoteToOrderDetailsDTOLinesInner(BaseModel):
             "customerLineNumber": obj.get("customerLineNumber"),
             "ingramPartNumber": obj.get("ingramPartNumber"),
             "quantity": obj.get("quantity"),
-            "vmfAdditionalAttributesLines": [ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.from_dict(_item) for _item in obj["vmfAdditionalAttributesLines"]] if obj.get("vmfAdditionalAttributesLines") is not None else None
+            "vmfAdditionalAttributesLines": [QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner.from_dict(_item) for _item in obj["vmfAdditionalAttributesLines"]] if obj.get("vmfAdditionalAttributesLines") is not None else None
         })
         return _obj
 

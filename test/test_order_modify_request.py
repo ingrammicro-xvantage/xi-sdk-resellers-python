@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    XI SDK Resellers
+    XI Sdk Resellers
 
     For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -35,37 +35,36 @@ class TestOrderModifyRequest(unittest.TestCase):
         model = OrderModifyRequest()
         if include_optional:
             return OrderModifyRequest(
-                servicerequest = xi.sdk.resellers.models.order_modify_request_servicerequest.orderModifyRequest_servicerequest(
-                    requestpreamble = xi.sdk.resellers.models.order_modify_request_servicerequest_requestpreamble.orderModifyRequest_servicerequest_requestpreamble(
-                        isocountrycode = '', 
-                        customernumber = '', ), 
-                    ordermodifyrequest = xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest.orderModifyRequest_servicerequest_ordermodifyrequest(
-                        ingramorderbranch = '', 
-                        ingramordernumber = '', 
-                        ingramorderdist = '', 
-                        ingramordership = '', 
-                        customerponumber = '', 
-                        shipto = xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_shipto.orderModifyRequest_servicerequest_ordermodifyrequest_shipto(
-                            id = '', 
-                            name = '', 
-                            addressline = '', 
-                            city = '', 
-                            state = '', 
-                            postalcode = '', 
-                            countrycode = '', ), 
-                        headerdata = xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_headerdata.orderModifyRequest_servicerequest_ordermodifyrequest_headerdata(
-                            actioncode = '', 
-                            shipviacode = '', ), 
-                        linedata = [
-                            xi.sdk.resellers.models.order_modify_request_servicerequest_ordermodifyrequest_linedata_inner.orderModifyRequest_servicerequest_ordermodifyrequest_linedata_inner(
-                                addlineorupdateline = '', 
-                                linenumber = '', 
-                                customerlinenumber = '', 
-                                ingrampartnumber = '', 
-                                quantityordered = 56, 
-                                customerpartnumber = '', 
-                                linetype = '', )
-                            ], ), )
+                notes = '',
+                ship_to_info = xi.sdk.resellers.models.order_modify_request_ship_to_info.OrderModifyRequest_shipToInfo(
+                    address_id = '', 
+                    contact = '', 
+                    company_name = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                lines = [
+                    xi.sdk.resellers.models.order_modify_request_lines_inner.OrderModifyRequest_lines_inner(
+                        ingram_part_number = '', 
+                        ingram_line_number = '', 
+                        customer_line_number = '', 
+                        add_update_delete_line = 'UPDATE', 
+                        quantity = 56, 
+                        notes = '', )
+                    ],
+                additional_attributes = [
+                    xi.sdk.resellers.models.order_modify_request_additional_attributes_inner.OrderModifyRequest_additionalAttributes_inner(
+                        attribute_name = '', 
+                        attribute_value = '', )
+                    ]
             )
         else:
             return OrderModifyRequest(

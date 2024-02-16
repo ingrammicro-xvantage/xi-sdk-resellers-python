@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **customer_part_number** | **str** | Part number from customer&#39;s system. | [optional] 
 **vendor_name** | **str** | Name of the vendor. | [optional] 
 **product_description** | **str** | Description of the product. | [optional] 
-**unit_weight** | **str** | Weight of the product. | [optional] 
+**unit_weight** | **float** | Weight of the product. | [optional] 
 **quantity** | **int** | Quantity of the product. | [optional] 
 **unit_price** | **float** | Unit price of the product. | [optional] 
 **unit_of_measure** | **str** | Unit of measure of the product. | [optional] 
