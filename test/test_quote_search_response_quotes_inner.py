@@ -35,6 +35,7 @@ class TestQuoteSearchResponseQuotesInner(unittest.TestCase):
         model = QuoteSearchResponseQuotesInner()
         if include_optional:
             return QuoteSearchResponseQuotesInner(
+                quote_guid = '',
                 quote_name = '',
                 quote_number = '',
                 revision = '',
@@ -45,8 +46,16 @@ class TestQuoteSearchResponseQuotesInner(unittest.TestCase):
                 ingram_quote_date = '',
                 last_modified_date = '',
                 ingram_quote_expiry_date = '',
+                end_user_name = '',
                 vendor = '',
-                created_by = ''
+                created_by = '',
+                quote_type = '',
+                links = [
+                    xi.sdk.resellers.models.quote_search_response_quotes_inner_links_inner.QuoteSearchResponse_quotes_inner_links_inner(
+                        topic = '', 
+                        href = '', 
+                        type = '', )
+                    ]
             )
         else:
             return QuoteSearchResponseQuotesInner(

@@ -66,6 +66,7 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                             quantity_available = 56, 
                             quantity_backordered = 56, 
                             quantity_backordered_eta = '', 
+                            quantity_on_order = 56, 
                             back_order_info = [
                                 xi.sdk.resellers.models.price_and_availability_response_inner_availability_availability_by_warehouse_inner_back_order_info_inner.PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner(
                                     quantity = 56, 

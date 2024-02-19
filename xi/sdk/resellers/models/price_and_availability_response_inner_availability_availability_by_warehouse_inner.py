@@ -32,8 +32,9 @@ class PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(
     quantity_available: Optional[StrictInt] = Field(default=None, description="The quantity of the product available in a given warehouse.", alias="quantityAvailable")
     quantity_backordered: Optional[StrictInt] = Field(default=None, description="The quantity of a product backordered in a given warehouse.", alias="quantityBackordered")
     quantity_backordered_eta: Optional[StrictStr] = Field(default=None, description="The estimated time of arrival of a product that has been backordered in a given warehouse.", alias="quantityBackorderedEta")
+    quantity_on_order: Optional[StrictInt] = Field(default=None, description="The quantity of the product on order.", alias="quantityOnOrder")
     back_order_info: Optional[List[PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner]] = Field(default=None, description="*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).", alias="backOrderInfo")
-    __properties: ClassVar[List[str]] = ["location", "warehouseId", "quantityAvailable", "quantityBackordered", "quantityBackorderedEta", "backOrderInfo"]
+    __properties: ClassVar[List[str]] = ["location", "warehouseId", "quantityAvailable", "quantityBackordered", "quantityBackorderedEta", "quantityOnOrder", "backOrderInfo"]
 
     model_config = {
         "populate_by_name": True,
@@ -98,6 +99,7 @@ class PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(
             "quantityAvailable": obj.get("quantityAvailable"),
             "quantityBackordered": obj.get("quantityBackordered"),
             "quantityBackorderedEta": obj.get("quantityBackorderedEta"),
+            "quantityOnOrder": obj.get("quantityOnOrder"),
             "backOrderInfo": [PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner.from_dict(_item) for _item in obj["backOrderInfo"]] if obj.get("backOrderInfo") is not None else None
         })
         return _obj

@@ -40,7 +40,7 @@ class TestDealsDetailsResponse(unittest.TestCase):
                 end_user = '',
                 extended_msrp = 1.337,
                 vendor = '',
-                deal_received_on = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                deal_received_on = '',
                 deal_expiry_date = '',
                 price_protection_end_date = '',
                 currency_code = '',

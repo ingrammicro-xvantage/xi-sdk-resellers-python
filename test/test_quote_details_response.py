@@ -42,6 +42,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                 last_modified_date = '',
                 ingram_quote_expiry_date = '',
                 currency_code = '',
+                closing_reason = '',
                 special_bid_id = '',
                 special_bid_effective_date = '',
                 special_bid_expiration_date = '',

@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.returns_details_response_products_inner import ReturnsDetailsResponseProductsInner
@@ -31,7 +30,7 @@ class ReturnsDetailsResponse(BaseModel):
     type_of_details: Optional[StrictStr] = Field(default=None, description="The type of the details. Return or Claim.", alias="typeOfDetails")
     rma_claim_id: Optional[StrictStr] = Field(default=None, description="The rmaClaimId claim id.", alias="rmaClaimId")
     case_request_number: Optional[StrictStr] = Field(default=None, description="A unique return request number.", alias="caseRequestNumber")
-    created_on: Optional[date] = Field(default=None, description="The date on which the return request was created.", alias="createdOn")
+    created_on: Optional[StrictStr] = Field(default=None, description="The date on which the return request was created.", alias="createdOn")
     return_reason: Optional[StrictStr] = Field(default=None, description="The reason for the return.", alias="returnReason")
     reference_number: Optional[StrictStr] = Field(default=None, description="The reference number for the return.", alias="referenceNumber")
     status: Optional[StrictStr] = Field(default=None, description="The status of the request.")

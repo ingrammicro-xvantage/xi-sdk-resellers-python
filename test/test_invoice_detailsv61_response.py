@@ -40,6 +40,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                 invoice_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 customer_order_number = '',
                 end_customer_order_number = '',
+                order_number = '',
                 order_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 bill_to_id = '',
                 invoice_type = '',

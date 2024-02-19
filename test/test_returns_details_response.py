@@ -38,7 +38,7 @@ class TestReturnsDetailsResponse(unittest.TestCase):
                 type_of_details = '',
                 rma_claim_id = '',
                 case_request_number = '',
-                created_on = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                created_on = '',
                 return_reason = '',
                 reference_number = '',
                 status = '',

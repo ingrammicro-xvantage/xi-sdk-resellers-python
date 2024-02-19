@@ -152,6 +152,7 @@ docs/QuoteDetailsResponseProductsInnerPrice.md
 docs/QuoteDetailsResponseResellerInfo.md
 docs/QuoteSearchResponse.md
 docs/QuoteSearchResponseQuotesInner.md
+docs/QuoteSearchResponseQuotesInnerLinksInner.md
 docs/QuoteToOrderApi.md
 docs/QuoteToOrderDetailsDTO.md
 docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md
@@ -349,6 +350,7 @@ test/test_quote_details_response_products_inner_price.py
 test/test_quote_details_response_reseller_info.py
 test/test_quote_search_response.py
 test/test_quote_search_response_quotes_inner.py
+test/test_quote_search_response_quotes_inner_links_inner.py
 test/test_quote_to_order_api.py
 test/test_quote_to_order_details_dto.py
 test/test_quote_to_order_details_dto_additional_attributes_inner.py
@@ -554,6 +556,7 @@ xi/sdk/resellers/models/quote_details_response_products_inner_price.py
 xi/sdk/resellers/models/quote_details_response_reseller_info.py
 xi/sdk/resellers/models/quote_search_response.py
 xi/sdk/resellers/models/quote_search_response_quotes_inner.py
+xi/sdk/resellers/models/quote_search_response_quotes_inner_links_inner.py
 xi/sdk/resellers/models/quote_to_order_details_dto.py
 xi/sdk/resellers/models/quote_to_order_details_dto_additional_attributes_inner.py
 xi/sdk/resellers/models/quote_to_order_details_dto_end_user_info_inner.py

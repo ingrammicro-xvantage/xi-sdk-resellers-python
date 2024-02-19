@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.deals_details_response_products_inner import DealsDetailsResponseProductsInner
@@ -34,7 +33,7 @@ class DealsDetailsResponse(BaseModel):
     end_user: Optional[StrictStr] = Field(default=None, description="The end user/customer's name.", alias="endUser")
     extended_msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended MSRP - Manufacturer Suggested Retail Price X Quantity.", alias="extendedMsrp")
     vendor: Optional[StrictStr] = Field(default=None, description="The vendor's name.")
-    deal_received_on: Optional[date] = Field(default=None, description="The date on which the deal starts.", alias="dealReceivedOn")
+    deal_received_on: Optional[StrictStr] = Field(default=None, description="The date on which the deal starts.", alias="dealReceivedOn")
     deal_expiry_date: Optional[StrictStr] = Field(default=None, description="Expiration date of the deal/Special bid.", alias="dealExpiryDate")
     price_protection_end_date: Optional[StrictStr] = Field(default=None, description="The date on which the price protection will end.", alias="priceProtectionEndDate")
     currency_code: Optional[StrictStr] = Field(default=None, description="Country specific currency code.", alias="currencyCode")

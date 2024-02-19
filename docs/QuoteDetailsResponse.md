@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **last_modified_date** | **str** | Date the Quote was last updated or modified. | [optional] 
 **ingram_quote_expiry_date** | **str** | Quote expiration date. | [optional] 
 **currency_code** | **str** | Three letter currency code. | [optional] 
+**closing_reason** | **str** | Closing Reason for quote. | [optional] 
 **special_bid_id** | **str** | Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart | [optional] 
 **special_bid_effective_date** | **str** | If price discount has been applied to the quote - the starting date the discount begins. | [optional] 
 **special_bid_expiration_date** | **str** | If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable. | [optional] 

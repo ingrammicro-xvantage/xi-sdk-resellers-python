@@ -37,6 +37,7 @@ class QuoteDetailsResponse(BaseModel):
     last_modified_date: Optional[StrictStr] = Field(default=None, description="Date the Quote was last updated or modified.", alias="lastModifiedDate")
     ingram_quote_expiry_date: Optional[StrictStr] = Field(default=None, description="Quote expiration date.", alias="ingramQuoteExpiryDate")
     currency_code: Optional[StrictStr] = Field(default=None, description="Three letter currency code.", alias="currencyCode")
+    closing_reason: Optional[StrictStr] = Field(default=None, description="Closing Reason for quote.", alias="closingReason")
     special_bid_id: Optional[StrictStr] = Field(default=None, description="Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart", alias="specialBidId")
     special_bid_effective_date: Optional[StrictStr] = Field(default=None, description="If price discount has been applied to the quote - the starting date the discount begins.", alias="specialBidEffectiveDate")
     special_bid_expiration_date: Optional[StrictStr] = Field(default=None, description="If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable.", alias="specialBidExpirationDate")
@@ -56,7 +57,7 @@ class QuoteDetailsResponse(BaseModel):
     quantity_total: Optional[StrictInt] = Field(default=None, description="Total quantity of all items in the quote.", alias="quantityTotal")
     extended_quote_price_total: Optional[StrictInt] = Field(default=None, description="Total amount of quoted price for all products in the quote including both solution products and suggested products.", alias="extendedQuotePriceTotal")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "leaseInfo", "leasingInstructions", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "leaseInfo", "leasingInstructions", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -136,6 +137,7 @@ class QuoteDetailsResponse(BaseModel):
             "lastModifiedDate": obj.get("lastModifiedDate"),
             "ingramQuoteExpiryDate": obj.get("ingramQuoteExpiryDate"),
             "currencyCode": obj.get("currencyCode"),
+            "closingReason": obj.get("closingReason"),
             "specialBidId": obj.get("specialBidId"),
             "specialBidEffectiveDate": obj.get("specialBidEffectiveDate"),
             "specialBidExpirationDate": obj.get("specialBidExpirationDate"),

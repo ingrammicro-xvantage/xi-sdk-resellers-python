@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **end_user** | **str** | The end user/customer&#39;s name. | [optional] 
 **extended_msrp** | **float** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity. | [optional] 
 **vendor** | **str** | The vendor&#39;s name. | [optional] 
-**deal_received_on** | **date** | The date on which the deal starts. | [optional] 
+**deal_received_on** | **str** | The date on which the deal starts. | [optional] 
 **deal_expiry_date** | **str** | Expiration date of the deal/Special bid. | [optional] 
 **price_protection_end_date** | **str** | The date on which the price protection will end. | [optional] 
 **currency_code** | **str** | Country specific currency code. | [optional] 

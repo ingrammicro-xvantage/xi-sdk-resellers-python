@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **invoice_date** | **date** | Date of an Invoice. | [optional] 
 **customer_order_number** | **str** | The reseller&#39;s order number for reference in their system. | [optional] 
 **end_customer_order_number** | **str** | The end customer&#39;s order number for reference in their system. | [optional] 
+**order_number** | **str** | The end customer&#39;s order number for reference in their system. | [optional] 
 **order_date** | **date** | The date and time in UTC format that the order was created. | [optional] 
 **bill_to_id** | **str** | Bill to party | [optional] 
 **invoice_type** | **str** | Type of the Invoice | [optional] 
