@@ -50,6 +50,7 @@ class TestOrderDetailB2B(unittest.TestCase):
                 currency_code = '',
                 total_weight = 1.337,
                 total_tax = 1.337,
+                total_fees = 1.337,
                 payment_terms = '',
                 notes = '',
                 bill_to_info = xi.sdk.resellers.models.order_detail_b2_b_bill_to_info.OrderDetailB2B_billToInfo(

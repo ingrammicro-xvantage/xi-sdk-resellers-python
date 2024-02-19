@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **quantity_available** | **int** | The quantity of the product available in a given warehouse. | [optional] 
 **quantity_backordered** | **int** | The quantity of a product backordered in a given warehouse. | [optional] 
 **quantity_backordered_eta** | **str** | The estimated time of arrival of a product that has been backordered in a given warehouse. | [optional] 
+**quantity_on_order** | **int** | The quantity of the product on order. | [optional] 
 **back_order_info** | [**List[PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner]**](PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner.md) | *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara). | [optional] 
 
 ## Example

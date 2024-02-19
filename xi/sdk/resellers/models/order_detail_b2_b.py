@@ -48,6 +48,7 @@ class OrderDetailB2B(BaseModel):
     currency_code: Optional[StrictStr] = Field(default=None, description="The country-specific three digit ISO 4217 currency code for the order.", alias="currencyCode")
     total_weight: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total order weight. unit -- North america - Pounds , other countries will be KG.", alias="totalWeight")
     total_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total tax on the orders placed.", alias="totalTax")
+    total_fees: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total fees on the orders placed.", alias="totalFees")
     payment_terms: Optional[StrictStr] = Field(default=None, description="The payment terms of the order. (Ex- Net 30 days).", alias="paymentTerms")
     notes: Optional[StrictStr] = Field(default=None, description="The header-level notes for the order.")
     bill_to_info: Optional[OrderDetailB2BBillToInfo] = Field(default=None, alias="billToInfo")
@@ -56,7 +57,7 @@ class OrderDetailB2B(BaseModel):
     lines: Optional[List[OrderDetailB2BLinesInner]] = None
     miscellaneous_charges: Optional[List[OrderDetailB2BMiscellaneousChargesInner]] = Field(default=None, alias="miscellaneousCharges")
     additional_attributes: Optional[List[OrderDetailB2BAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["ingramOrderNumber", "ingramOrderDate", "orderType", "customerOrderNumber", "endCustomerOrderNumber", "webOrderId", "vendorSalesOrderNumber", "ingramPurchaseOrderNumber", "orderStatus", "orderTotal", "orderSubTotal", "freightCharges", "currencyCode", "totalWeight", "totalTax", "paymentTerms", "notes", "billToInfo", "shipToInfo", "endUserInfo", "lines", "miscellaneousCharges", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["ingramOrderNumber", "ingramOrderDate", "orderType", "customerOrderNumber", "endCustomerOrderNumber", "webOrderId", "vendorSalesOrderNumber", "ingramPurchaseOrderNumber", "orderStatus", "orderTotal", "orderSubTotal", "freightCharges", "currencyCode", "totalWeight", "totalTax", "totalFees", "paymentTerms", "notes", "billToInfo", "shipToInfo", "endUserInfo", "lines", "miscellaneousCharges", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -169,6 +170,7 @@ class OrderDetailB2B(BaseModel):
             "currencyCode": obj.get("currencyCode"),
             "totalWeight": obj.get("totalWeight"),
             "totalTax": obj.get("totalTax"),
+            "totalFees": obj.get("totalFees"),
             "paymentTerms": obj.get("paymentTerms"),
             "notes": obj.get("notes"),
             "billToInfo": OrderDetailB2BBillToInfo.from_dict(obj["billToInfo"]) if obj.get("billToInfo") is not None else None,

@@ -38,7 +38,8 @@ class InvoiceDetailsv61Response(BaseModel):
     invoice_date: Optional[date] = Field(default=None, description="Date of an Invoice.", alias="invoiceDate")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="endCustomerOrderNumber")
-    order_date: Optional[date] = Field(default=None, description="The date and time in UTC format that the order was created.", alias="OrderDate")
+    order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="orderNumber")
+    order_date: Optional[date] = Field(default=None, description="The date and time in UTC format that the order was created.", alias="orderDate")
     bill_to_id: Optional[StrictStr] = Field(default=None, description="Bill to party", alias="billToID")
     invoice_type: Optional[StrictStr] = Field(default=None, description="Type of the Invoice", alias="invoiceType")
     invoice_due_date: Optional[StrictStr] = Field(default=None, description="Date when the invoice is due.", alias="invoiceDueDate")
@@ -52,7 +53,7 @@ class InvoiceDetailsv61Response(BaseModel):
     lines: Optional[List[InvoiceDetailsv61ResponseLinesInner]] = None
     fx_rate_info: Optional[InvoiceDetailsv61ResponseFxRateInfo] = Field(default=None, alias="fxRateInfo")
     summary: Optional[InvoiceDetailsv61ResponseSummary] = None
-    __properties: ClassVar[List[str]] = ["invoiceNumber", "invoiceStatus", "invoiceDate", "customerOrderNumber", "endCustomerOrderNumber", "OrderDate", "billToID", "invoiceType", "invoiceDueDate", "customerCountryCode", "customerNumber", "ingramOrderNumber", "notes", "paymentTermsInfo", "billToInfo", "shipToInfo", "lines", "fxRateInfo", "summary"]
+    __properties: ClassVar[List[str]] = ["invoiceNumber", "invoiceStatus", "invoiceDate", "customerOrderNumber", "endCustomerOrderNumber", "orderNumber", "orderDate", "billToID", "invoiceType", "invoiceDueDate", "customerCountryCode", "customerNumber", "ingramOrderNumber", "notes", "paymentTermsInfo", "billToInfo", "shipToInfo", "lines", "fxRateInfo", "summary"]
 
     model_config = {
         "populate_by_name": True,
@@ -132,7 +133,8 @@ class InvoiceDetailsv61Response(BaseModel):
             "invoiceDate": obj.get("invoiceDate"),
             "customerOrderNumber": obj.get("customerOrderNumber"),
             "endCustomerOrderNumber": obj.get("endCustomerOrderNumber"),
-            "OrderDate": obj.get("OrderDate"),
+            "orderNumber": obj.get("orderNumber"),
+            "orderDate": obj.get("orderDate"),
             "billToID": obj.get("billToID"),
             "invoiceType": obj.get("invoiceType"),
             "invoiceDueDate": obj.get("invoiceDueDate"),

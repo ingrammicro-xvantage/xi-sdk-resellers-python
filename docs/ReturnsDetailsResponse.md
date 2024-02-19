@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **type_of_details** | **str** | The type of the details. Return or Claim. | [optional] 
 **rma_claim_id** | **str** | The rmaClaimId claim id. | [optional] 
 **case_request_number** | **str** | A unique return request number. | [optional] 
-**created_on** | **date** | The date on which the return request was created. | [optional] 
+**created_on** | **str** | The date on which the return request was created. | [optional] 
 **return_reason** | **str** | The reason for the return. | [optional] 
 **reference_number** | **str** | The reference number for the return. | [optional] 
 **status** | **str** | The status of the request. | [optional] 
