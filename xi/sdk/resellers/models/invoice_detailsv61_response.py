@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.invoice_detailsv61_response_bill_to_info import InvoiceDetailsv61ResponseBillToInfo
@@ -35,11 +34,11 @@ class InvoiceDetailsv61Response(BaseModel):
     """ # noqa: E501
     invoice_number: Optional[StrictStr] = Field(default=None, description="The Invoice number for the order.", alias="invoiceNumber")
     invoice_status: Optional[StrictStr] = Field(default=None, description="Status of the invoice.", alias="invoiceStatus")
-    invoice_date: Optional[date] = Field(default=None, description="Date of an Invoice.", alias="invoiceDate")
+    invoice_date: Optional[StrictStr] = Field(default=None, description="Date of an Invoice.", alias="invoiceDate")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="endCustomerOrderNumber")
     order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="orderNumber")
-    order_date: Optional[date] = Field(default=None, description="The date and time in UTC format that the order was created.", alias="orderDate")
+    order_date: Optional[StrictStr] = Field(default=None, description="The date and time in UTC format that the order was created.", alias="orderDate")
     bill_to_id: Optional[StrictStr] = Field(default=None, description="Bill to party", alias="billToID")
     invoice_type: Optional[StrictStr] = Field(default=None, description="Type of the Invoice", alias="invoiceType")
     invoice_due_date: Optional[StrictStr] = Field(default=None, description="Date when the invoice is due.", alias="invoiceDueDate")

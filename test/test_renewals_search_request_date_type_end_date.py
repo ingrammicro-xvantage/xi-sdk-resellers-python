@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.renewals_search_request_data_type_invoice_date import RenewalsSearchRequestDataTypeInvoiceDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_end_date import RenewalsSearchRequestDateTypeEndDate
 
-class TestRenewalsSearchRequestDataTypeInvoiceDate(unittest.TestCase):
-    """RenewalsSearchRequestDataTypeInvoiceDate unit test stubs"""
+class TestRenewalsSearchRequestDateTypeEndDate(unittest.TestCase):
+    """RenewalsSearchRequestDateTypeEndDate unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,26 +25,26 @@ class TestRenewalsSearchRequestDataTypeInvoiceDate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> RenewalsSearchRequestDataTypeInvoiceDate:
-        """Test RenewalsSearchRequestDataTypeInvoiceDate
+    def make_instance(self, include_optional) -> RenewalsSearchRequestDateTypeEndDate:
+        """Test RenewalsSearchRequestDateTypeEndDate
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `RenewalsSearchRequestDataTypeInvoiceDate`
+        # uncomment below to create an instance of `RenewalsSearchRequestDateTypeEndDate`
         """
-        model = RenewalsSearchRequestDataTypeInvoiceDate()
+        model = RenewalsSearchRequestDateTypeEndDate()
         if include_optional:
-            return RenewalsSearchRequestDataTypeInvoiceDate(
+            return RenewalsSearchRequestDateTypeEndDate(
                 custom_start_date = '',
                 custom_end_date = ''
             )
         else:
-            return RenewalsSearchRequestDataTypeInvoiceDate(
+            return RenewalsSearchRequestDateTypeEndDate(
         )
         """
 
-    def testRenewalsSearchRequestDataTypeInvoiceDate(self):
-        """Test RenewalsSearchRequestDataTypeInvoiceDate"""
+    def testRenewalsSearchRequestDateTypeEndDate(self):
+        """Test RenewalsSearchRequestDateTypeEndDate"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

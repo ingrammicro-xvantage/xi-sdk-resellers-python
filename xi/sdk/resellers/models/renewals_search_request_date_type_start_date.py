@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RenewalsSearchRequestDataTypeStartDate(BaseModel):
+class RenewalsSearchRequestDateTypeStartDate(BaseModel):
     """
-    RenewalsSearchRequestDataTypeStartDate
+    RenewalsSearchRequestDateTypeStartDate
     """ # noqa: E501
     custom_start_date: Optional[StrictStr] = Field(default=None, description="Custom from date for Renewal Start date.", alias="customStartDate")
     custom_end_date: Optional[StrictStr] = Field(default=None, description="Custom to date for Renewal Start date.", alias="customEndDate")
@@ -48,7 +48,7 @@ class RenewalsSearchRequestDataTypeStartDate(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RenewalsSearchRequestDataTypeStartDate from a JSON string"""
+        """Create an instance of RenewalsSearchRequestDateTypeStartDate from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +73,7 @@ class RenewalsSearchRequestDataTypeStartDate(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RenewalsSearchRequestDataTypeStartDate from a dict"""
+        """Create an instance of RenewalsSearchRequestDateTypeStartDate from a dict"""
         if obj is None:
             return None
 

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.renewals_search_request_data_type import RenewalsSearchRequestDataType
+from xi.sdk.resellers.models.renewals_search_request_date_type import RenewalsSearchRequestDateType
 from xi.sdk.resellers.models.renewals_search_request_status import RenewalsSearchRequestStatus
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,10 +29,10 @@ class RenewalsSearchRequest(BaseModel):
     RenewalsSearchRequest
     """ # noqa: E501
     status: Optional[RenewalsSearchRequestStatus] = None
-    data_type: Optional[RenewalsSearchRequestDataType] = Field(default=None, alias="dataType")
+    date_type: Optional[RenewalsSearchRequestDateType] = Field(default=None, alias="dateType")
     vendor: Optional[StrictStr] = Field(default=None, description="The name of the Vendor.")
     end_user: Optional[StrictStr] = Field(default=None, description="The name of the enduser. ", alias="endUser")
-    __properties: ClassVar[List[str]] = ["status", "dataType", "vendor", "endUser"]
+    __properties: ClassVar[List[str]] = ["status", "dateType", "vendor", "endUser"]
 
     model_config = {
         "populate_by_name": True,
@@ -76,9 +76,9 @@ class RenewalsSearchRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:
             _dict['status'] = self.status.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of data_type
-        if self.data_type:
-            _dict['dataType'] = self.data_type.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of date_type
+        if self.date_type:
+            _dict['dateType'] = self.date_type.to_dict()
         return _dict
 
     @classmethod
@@ -92,7 +92,7 @@ class RenewalsSearchRequest(BaseModel):
 
         _obj = cls.model_validate({
             "status": RenewalsSearchRequestStatus.from_dict(obj["status"]) if obj.get("status") is not None else None,
-            "dataType": RenewalsSearchRequestDataType.from_dict(obj["dataType"]) if obj.get("dataType") is not None else None,
+            "dateType": RenewalsSearchRequestDateType.from_dict(obj["dateType"]) if obj.get("dateType") is not None else None,
             "vendor": obj.get("vendor"),
             "endUser": obj.get("endUser")
         })

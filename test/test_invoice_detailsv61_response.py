@@ -37,11 +37,11 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
             return InvoiceDetailsv61Response(
                 invoice_number = '',
                 invoice_status = '',
-                invoice_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                invoice_date = '',
                 customer_order_number = '',
                 end_customer_order_number = '',
                 order_number = '',
-                order_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                order_date = '',
                 bill_to_id = '',
                 invoice_type = '',
                 invoice_due_date = '',

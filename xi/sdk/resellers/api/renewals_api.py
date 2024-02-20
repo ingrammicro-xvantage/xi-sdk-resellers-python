@@ -768,7 +768,7 @@ class RenewalsApi:
         if im_sender_id is not None:
             _header_params['IM-SenderID'] = im_sender_id
         if content_type is not None:
-            _header_params['Content type'] = content_type
+            _header_params['Content Type'] = content_type
         # process the form parameters
         # process the body parameter
         if renewals_search_request is not None:

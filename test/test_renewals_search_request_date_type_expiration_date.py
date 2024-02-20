@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.renewals_search_request_data_type_expiration_date import RenewalsSearchRequestDataTypeExpirationDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_expiration_date import RenewalsSearchRequestDateTypeExpirationDate
 
-class TestRenewalsSearchRequestDataTypeExpirationDate(unittest.TestCase):
-    """RenewalsSearchRequestDataTypeExpirationDate unit test stubs"""
+class TestRenewalsSearchRequestDateTypeExpirationDate(unittest.TestCase):
+    """RenewalsSearchRequestDateTypeExpirationDate unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,26 +25,26 @@ class TestRenewalsSearchRequestDataTypeExpirationDate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> RenewalsSearchRequestDataTypeExpirationDate:
-        """Test RenewalsSearchRequestDataTypeExpirationDate
+    def make_instance(self, include_optional) -> RenewalsSearchRequestDateTypeExpirationDate:
+        """Test RenewalsSearchRequestDateTypeExpirationDate
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `RenewalsSearchRequestDataTypeExpirationDate`
+        # uncomment below to create an instance of `RenewalsSearchRequestDateTypeExpirationDate`
         """
-        model = RenewalsSearchRequestDataTypeExpirationDate()
+        model = RenewalsSearchRequestDateTypeExpirationDate()
         if include_optional:
-            return RenewalsSearchRequestDataTypeExpirationDate(
+            return RenewalsSearchRequestDateTypeExpirationDate(
                 custom_start_date = '',
                 custom_end_date = ''
             )
         else:
-            return RenewalsSearchRequestDataTypeExpirationDate(
+            return RenewalsSearchRequestDateTypeExpirationDate(
         )
         """
 
-    def testRenewalsSearchRequestDataTypeExpirationDate(self):
-        """Test RenewalsSearchRequestDataTypeExpirationDate"""
+    def testRenewalsSearchRequestDateTypeExpirationDate(self):
+        """Test RenewalsSearchRequestDateTypeExpirationDate"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
