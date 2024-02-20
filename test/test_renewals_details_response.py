@@ -35,7 +35,7 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
         model = RenewalsDetailsResponse()
         if include_optional:
             return RenewalsDetailsResponse(
-                renewal_id = '',
+                renewal_id = 56,
                 ingram_order_number = '',
                 ingram_order_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 expiration_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
