@@ -35,13 +35,13 @@ class TestRenewalsSearchResponseRenewalsInner(unittest.TestCase):
         model = RenewalsSearchResponseRenewalsInner()
         if include_optional:
             return RenewalsSearchResponseRenewalsInner(
-                renewal_id = '',
+                renewal_id = 56,
                 customer_order_number = '',
                 reference_number = '',
                 end_user = '',
                 vendor = '',
                 expiration_date = '',
-                renewal_value = '',
+                renewal_value = 1.337,
                 status = '',
                 links = [
                     xi.sdk.resellers.models.renewals_search_response_renewals_inner_links_inner.renewalsSearchResponse_renewals_inner_links_inner(

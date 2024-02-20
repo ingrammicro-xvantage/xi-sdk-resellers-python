@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.renewals_search_response_renewals_inner_links_inner import RenewalsSearchResponseRenewalsInnerLinksInner
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,13 +27,13 @@ class RenewalsSearchResponseRenewalsInner(BaseModel):
     """
     RenewalsSearchResponseRenewalsInner
     """ # noqa: E501
-    renewal_id: Optional[StrictStr] = Field(default=None, description="Unique renewal ID.", alias="renewalId")
+    renewal_id: Optional[StrictInt] = Field(default=None, description="Unique renewal ID.", alias="renewalId")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     reference_number: Optional[StrictStr] = Field(default=None, description="Renewal reference number. It could be notification id or quote number.", alias="referenceNumber")
     end_user: Optional[StrictStr] = Field(default=None, description="The company name for the end user/customer.", alias="endUser")
     vendor: Optional[StrictStr] = Field(default=None, description="The name of the vendor.")
     expiration_date: Optional[StrictStr] = Field(default=None, description="Renewal expiration date.", alias="expirationDate")
-    renewal_value: Optional[StrictStr] = Field(default=None, description="The value of the renewal.", alias="renewalValue")
+    renewal_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The value of the renewal.", alias="renewalValue")
     status: Optional[StrictStr] = Field(default=None, description="The status of the renewal.")
     links: Optional[List[RenewalsSearchResponseRenewalsInnerLinksInner]] = None
     __properties: ClassVar[List[str]] = ["renewalId", "customerOrderNumber", "referenceNumber", "endUser", "vendor", "expirationDate", "renewalValue", "status", "links"]
