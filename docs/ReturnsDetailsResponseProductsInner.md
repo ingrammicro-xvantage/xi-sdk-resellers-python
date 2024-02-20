@@ -10,16 +10,17 @@ Name | Type | Description | Notes
 **ingram_part_number** | **str** | Unique IngramMicro part number. | [optional] 
 **vendor_part_number** | **str** | The vendor&#39;s part number for the line item. | [optional] 
 **upc** | **str** | The UPC code of a product. | [optional] 
-**invoice_date** | **date** | The date of the invoice. | [optional] 
+**invoice_date** | **str** | The date of the invoice. | [optional] 
 **invoice_number** | **str** | Ingram micro Invoice number. | [optional] 
 **customer_order_number** | **str** | The reseller&#39;s order number for reference in their system. | [optional] 
-**request_details** | **str** | Request details. | [optional] 
 **quantity** | **float** | The quantity of the line item. | [optional] 
 **unit_price** | **float** | The unit price of the line item. | [optional] 
 **extended_price** | **float** | Unit price X quantity for the line item. | [optional] 
 **status** | **str** | The status of the line item. | [optional] 
 **return_branch** | **str** | The code of the return branch. | [optional] 
 **ship_from_branch** | **str** | The code of the ship from branch. | [optional] 
+**request_details** | **str** | Request details. | [optional] 
+**additional_details** | **str** |  | [optional] 
 
 ## Example
 

@@ -54,7 +54,11 @@ class TestValidateQuoteResponse(unittest.TestCase):
                                 attribute_value = '', 
                                 attribute_description = '', )
                             ], )
-                    ]
+                    ],
+                quote_type = 56,
+                vendor_group_name = '',
+                vendor_quote_number = '',
+                vendor_master_number = ''
             )
         else:
             return ValidateQuoteResponse(

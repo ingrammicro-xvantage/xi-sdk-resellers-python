@@ -43,7 +43,7 @@ class TestProductDetailResponse(unittest.TestCase):
                 product_detail_description = '',
                 upc = '',
                 product_category = '',
-                product_subcategory = '',
+                product_sub_category = '',
                 vendor_name = '',
                 vendor_number = '',
                 product_status_code = '',

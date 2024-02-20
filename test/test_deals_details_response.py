@@ -72,8 +72,8 @@ class TestDealsDetailsResponse(unittest.TestCase):
                         remaining_quantity = 56, 
                         comments = '', 
                         special_conditions = '', 
-                        start_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
-                        expiration_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                        start_date = '', 
+                        expiration_date = '', 
                         days_remaining = 56, )
                     ]
             )

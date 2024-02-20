@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_renewalssearch**
-> RenewalsSearchResponse post_renewalssearch(im_customer_number, im_country_code, im_correlation_id, content_type, im_sender_id=im_sender_id, customer_order_number=customer_order_number, ingram_purchase_order_number=ingram_purchase_order_number, serial_number=serial_number, page=page, size=size, sort=sort, renewals_search_request=renewals_search_request)
+> RenewalsSearchResponse post_renewalssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, customer_order_number=customer_order_number, ingram_purchase_order_number=ingram_purchase_order_number, serial_number=serial_number, page=page, size=size, sort=sort, renewals_search_request=renewals_search_request)
 
 Renewals Search
 
@@ -131,7 +131,6 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
-    content_type = 'application/json' # str | The media type for JSON Request.
     im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
     customer_order_number = 'customer_order_number_example' # str | The reseller's unique PO/Order number. (optional)
     ingram_purchase_order_number = 'ingram_purchase_order_number_example' # str | Sales order number. (optional)
@@ -143,7 +142,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
     try:
         # Renewals Search
-        api_response = api_instance.post_renewalssearch(im_customer_number, im_country_code, im_correlation_id, content_type, im_sender_id=im_sender_id, customer_order_number=customer_order_number, ingram_purchase_order_number=ingram_purchase_order_number, serial_number=serial_number, page=page, size=size, sort=sort, renewals_search_request=renewals_search_request)
+        api_response = api_instance.post_renewalssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, customer_order_number=customer_order_number, ingram_purchase_order_number=ingram_purchase_order_number, serial_number=serial_number, page=page, size=size, sort=sort, renewals_search_request=renewals_search_request)
         print("The response of RenewalsApi->post_renewalssearch:\n")
         pprint(api_response)
     except Exception as e:
@@ -160,7 +159,6 @@ Name | Type | Description  | Notes
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
- **content_type** | **str**| The media type for JSON Request. | 
  **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
  **customer_order_number** | **str**| The reseller&#39;s unique PO/Order number. | [optional] 
  **ingram_purchase_order_number** | **str**| Sales order number. | [optional] 

@@ -47,6 +47,7 @@ class QuoteDetailsResponse(BaseModel):
     intro_preamble: Optional[StrictStr] = Field(default=None, description="Introductory paragraph included in each quote.  Legally required - must be included when presenting the quote details.", alias="introPreamble")
     purchase_instructions: Optional[StrictStr] = Field(default=None, description="Purchase instructions.  Legally required - must be included when presenting the quote details.", alias="purchaseInstructions")
     legal_terms: Optional[StrictStr] = Field(default=None, description="Legal terms -  Legally required - must be included when presenting the quote details.", alias="legalTerms")
+    quote_type: Optional[StrictStr] = Field(default=None, alias="quoteType")
     lease_info: Optional[StrictStr] = Field(default=None, description="Lease information.", alias="leaseInfo")
     leasing_instructions: Optional[StrictStr] = Field(default=None, description="Leasing information", alias="leasingInstructions")
     reseller_info: Optional[QuoteDetailsResponseResellerInfo] = Field(default=None, alias="resellerInfo")
@@ -57,7 +58,7 @@ class QuoteDetailsResponse(BaseModel):
     quantity_total: Optional[StrictInt] = Field(default=None, description="Total quantity of all items in the quote.", alias="quantityTotal")
     extended_quote_price_total: Optional[StrictInt] = Field(default=None, description="Total amount of quoted price for all products in the quote including both solution products and suggested products.", alias="extendedQuotePriceTotal")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "leaseInfo", "leasingInstructions", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -147,6 +148,7 @@ class QuoteDetailsResponse(BaseModel):
             "introPreamble": obj.get("introPreamble"),
             "purchaseInstructions": obj.get("purchaseInstructions"),
             "legalTerms": obj.get("legalTerms"),
+            "quoteType": obj.get("quoteType"),
             "leaseInfo": obj.get("leaseInfo"),
             "leasingInstructions": obj.get("leasingInstructions"),
             "resellerInfo": QuoteDetailsResponseResellerInfo.from_dict(obj["resellerInfo"]) if obj.get("resellerInfo") is not None else None,

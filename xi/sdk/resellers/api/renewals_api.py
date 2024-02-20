@@ -371,7 +371,6 @@ class RenewalsApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        content_type: Annotated[StrictStr, Field(description="The media type for JSON Request.")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         customer_order_number: Annotated[Optional[StrictStr], Field(description="The reseller's unique PO/Order number.")] = None,
         ingram_purchase_order_number: Annotated[Optional[StrictStr], Field(description="Sales order number.")] = None,
@@ -403,8 +402,6 @@ class RenewalsApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param content_type: The media type for JSON Request. (required)
-        :type content_type: str
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param customer_order_number: The reseller's unique PO/Order number.
@@ -447,7 +444,6 @@ class RenewalsApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            content_type=content_type,
             im_sender_id=im_sender_id,
             customer_order_number=customer_order_number,
             ingram_purchase_order_number=ingram_purchase_order_number,
@@ -484,7 +480,6 @@ class RenewalsApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        content_type: Annotated[StrictStr, Field(description="The media type for JSON Request.")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         customer_order_number: Annotated[Optional[StrictStr], Field(description="The reseller's unique PO/Order number.")] = None,
         ingram_purchase_order_number: Annotated[Optional[StrictStr], Field(description="Sales order number.")] = None,
@@ -516,8 +511,6 @@ class RenewalsApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param content_type: The media type for JSON Request. (required)
-        :type content_type: str
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param customer_order_number: The reseller's unique PO/Order number.
@@ -560,7 +553,6 @@ class RenewalsApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            content_type=content_type,
             im_sender_id=im_sender_id,
             customer_order_number=customer_order_number,
             ingram_purchase_order_number=ingram_purchase_order_number,
@@ -597,7 +589,6 @@ class RenewalsApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        content_type: Annotated[StrictStr, Field(description="The media type for JSON Request.")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         customer_order_number: Annotated[Optional[StrictStr], Field(description="The reseller's unique PO/Order number.")] = None,
         ingram_purchase_order_number: Annotated[Optional[StrictStr], Field(description="Sales order number.")] = None,
@@ -629,8 +620,6 @@ class RenewalsApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param content_type: The media type for JSON Request. (required)
-        :type content_type: str
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param customer_order_number: The reseller's unique PO/Order number.
@@ -673,7 +662,6 @@ class RenewalsApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            content_type=content_type,
             im_sender_id=im_sender_id,
             customer_order_number=customer_order_number,
             ingram_purchase_order_number=ingram_purchase_order_number,
@@ -705,7 +693,6 @@ class RenewalsApi:
         im_customer_number,
         im_country_code,
         im_correlation_id,
-        content_type,
         im_sender_id,
         customer_order_number,
         ingram_purchase_order_number,
@@ -767,8 +754,6 @@ class RenewalsApi:
             _header_params['IM-CorrelationID'] = im_correlation_id
         if im_sender_id is not None:
             _header_params['IM-SenderID'] = im_sender_id
-        if content_type is not None:
-            _header_params['Content Type'] = content_type
         # process the form parameters
         # process the body parameter
         if renewals_search_request is not None:

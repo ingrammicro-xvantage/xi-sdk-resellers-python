@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
@@ -38,8 +37,8 @@ class DealsDetailsResponseProductsInner(BaseModel):
     remaining_quantity: Optional[StrictInt] = Field(default=None, description="The quantity remaining as part of the deal for the customer to order.", alias="remainingQuantity")
     comments: Optional[StrictStr] = Field(default=None, description="Comments of the deal.")
     special_conditions: Optional[StrictStr] = Field(default=None, description="Special conditions of the deal.", alias="specialConditions")
-    start_date: Optional[date] = Field(default=None, description="Start Date.", alias="startDate")
-    expiration_date: Optional[date] = Field(default=None, description="Expiration date.", alias="expirationDate")
+    start_date: Optional[StrictStr] = Field(default=None, description="Start Date.", alias="startDate")
+    expiration_date: Optional[StrictStr] = Field(default=None, description="Expiration date.", alias="expirationDate")
     days_remaining: Optional[StrictInt] = Field(default=None, description="Number of days remaining before the deal expires.", alias="daysRemaining")
     __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "upc", "productDescription", "msrp", "extendedMSRP", "standardPrice", "approvedQuantity", "remainingQuantity", "comments", "specialConditions", "startDate", "expirationDate", "daysRemaining"]
 
