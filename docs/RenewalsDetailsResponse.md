@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**renewal_id** | **str** | Unique Ingram renewal ID. | [optional] 
+**renewal_id** | **int** | Unique Ingram renewal ID. | [optional] 
 **ingram_order_number** | **str** | The IngramMicro sales order number. | [optional] 
 **ingram_order_date** | **date** | The IngramMicro sales order date. | [optional] 
 **expiration_date** | **date** | Renewal expiration date. | [optional] 

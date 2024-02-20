@@ -31,7 +31,7 @@ class RenewalsDetailsResponse(BaseModel):
     """
     RenewalsDetailsResponse
     """ # noqa: E501
-    renewal_id: Optional[StrictStr] = Field(default=None, description="Unique Ingram renewal ID.", alias="renewalId")
+    renewal_id: Optional[StrictInt] = Field(default=None, description="Unique Ingram renewal ID.", alias="renewalId")
     ingram_order_number: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order number.", alias="ingramOrderNumber")
     ingram_order_date: Optional[date] = Field(default=None, description="The IngramMicro sales order date.", alias="ingramOrderDate")
     expiration_date: Optional[date] = Field(default=None, description="Renewal expiration date.", alias="expirationDate")

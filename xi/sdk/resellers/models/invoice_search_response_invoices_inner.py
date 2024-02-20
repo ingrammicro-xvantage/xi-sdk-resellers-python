@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -34,10 +34,13 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
     invoice_due_date: Optional[StrictStr] = Field(default=None, description="Invoice Due Date.", alias="invoiceDueDate")
     invoiced_amount_due: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Invoice Amount.", alias="invoicedAmountDue")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="Customer Order No.", alias="customerOrderNumber")
-    order_create_date: Optional[StrictStr] = Field(default=None, description="Order Create Date.", alias="orderCreateDate")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="End Customer Order number.", alias="endCustomerOrderNumber")
+    order_create_date: Optional[StrictStr] = Field(default=None, description="Order Create Date.", alias="orderCreateDate")
     invoice_amount_incl_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Invoice Amount Inclusive of Taxes", alias="invoiceAmountInclTax")
-    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "orderCreateDate", "endCustomerOrderNumber", "invoiceAmountInclTax"]
+    forgntotalamount: Optional[Union[StrictFloat, StrictInt]] = None
+    gst_invoice_number: Optional[StrictStr] = Field(default=None, alias="gstInvoiceNumber")
+    isfeccenabled: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "endCustomerOrderNumber", "orderCreateDate", "invoiceAmountInclTax", "forgntotalamount", "gstInvoiceNumber", "isfeccenabled"]
 
     model_config = {
         "populate_by_name": True,
@@ -98,9 +101,12 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
             "invoiceDueDate": obj.get("invoiceDueDate"),
             "invoicedAmountDue": obj.get("invoicedAmountDue"),
             "customerOrderNumber": obj.get("customerOrderNumber"),
-            "orderCreateDate": obj.get("orderCreateDate"),
             "endCustomerOrderNumber": obj.get("endCustomerOrderNumber"),
-            "invoiceAmountInclTax": obj.get("invoiceAmountInclTax")
+            "orderCreateDate": obj.get("orderCreateDate"),
+            "invoiceAmountInclTax": obj.get("invoiceAmountInclTax"),
+            "forgntotalamount": obj.get("forgntotalamount"),
+            "gstInvoiceNumber": obj.get("gstInvoiceNumber"),
+            "isfeccenabled": obj.get("isfeccenabled")
         })
         return _obj
 
