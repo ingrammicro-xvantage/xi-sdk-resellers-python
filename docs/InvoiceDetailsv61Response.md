@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invoice_number** | **str** | The Invoice number for the order. | [optional] 
 **invoice_status** | **str** | Status of the invoice. | [optional] 
-**invoice_date** | **date** | Date of an Invoice. | [optional] 
+**invoice_date** | **str** | Date of an Invoice. | [optional] 
 **customer_order_number** | **str** | The reseller&#39;s order number for reference in their system. | [optional] 
 **end_customer_order_number** | **str** | The end customer&#39;s order number for reference in their system. | [optional] 
 **order_number** | **str** | The end customer&#39;s order number for reference in their system. | [optional] 
-**order_date** | **date** | The date and time in UTC format that the order was created. | [optional] 
+**order_date** | **str** | The date and time in UTC format that the order was created. | [optional] 
 **bill_to_id** | **str** | Bill to party | [optional] 
 **invoice_type** | **str** | Type of the Invoice | [optional] 
 **invoice_due_date** | **str** | Date when the invoice is due. | [optional] 

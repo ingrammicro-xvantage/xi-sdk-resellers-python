@@ -19,21 +19,21 @@ import json
 
 from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.renewals_search_request_data_type_end_date import RenewalsSearchRequestDataTypeEndDate
-from xi.sdk.resellers.models.renewals_search_request_data_type_expiration_date import RenewalsSearchRequestDataTypeExpirationDate
-from xi.sdk.resellers.models.renewals_search_request_data_type_invoice_date import RenewalsSearchRequestDataTypeInvoiceDate
-from xi.sdk.resellers.models.renewals_search_request_data_type_start_date import RenewalsSearchRequestDataTypeStartDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_end_date import RenewalsSearchRequestDateTypeEndDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_expiration_date import RenewalsSearchRequestDateTypeExpirationDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_invoice_date import RenewalsSearchRequestDateTypeInvoiceDate
+from xi.sdk.resellers.models.renewals_search_request_date_type_start_date import RenewalsSearchRequestDateTypeStartDate
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RenewalsSearchRequestDataType(BaseModel):
+class RenewalsSearchRequestDateType(BaseModel):
     """
-    RenewalsSearchRequestDataType
+    RenewalsSearchRequestDateType
     """ # noqa: E501
-    start_date: Optional[RenewalsSearchRequestDataTypeStartDate] = Field(default=None, alias="startDate")
-    end_date: Optional[RenewalsSearchRequestDataTypeEndDate] = Field(default=None, alias="endDate")
-    invoice_date: Optional[RenewalsSearchRequestDataTypeInvoiceDate] = Field(default=None, alias="invoiceDate")
-    expiration_date: Optional[RenewalsSearchRequestDataTypeExpirationDate] = Field(default=None, alias="expirationDate")
+    start_date: Optional[RenewalsSearchRequestDateTypeStartDate] = Field(default=None, alias="startDate")
+    end_date: Optional[RenewalsSearchRequestDateTypeEndDate] = Field(default=None, alias="endDate")
+    invoice_date: Optional[RenewalsSearchRequestDateTypeInvoiceDate] = Field(default=None, alias="invoiceDate")
+    expiration_date: Optional[RenewalsSearchRequestDateTypeExpirationDate] = Field(default=None, alias="expirationDate")
     __properties: ClassVar[List[str]] = ["startDate", "endDate", "invoiceDate", "expirationDate"]
 
     model_config = {
@@ -54,7 +54,7 @@ class RenewalsSearchRequestDataType(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RenewalsSearchRequestDataType from a JSON string"""
+        """Create an instance of RenewalsSearchRequestDateType from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -91,7 +91,7 @@ class RenewalsSearchRequestDataType(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RenewalsSearchRequestDataType from a dict"""
+        """Create an instance of RenewalsSearchRequestDateType from a dict"""
         if obj is None:
             return None
 
@@ -99,10 +99,10 @@ class RenewalsSearchRequestDataType(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "startDate": RenewalsSearchRequestDataTypeStartDate.from_dict(obj["startDate"]) if obj.get("startDate") is not None else None,
-            "endDate": RenewalsSearchRequestDataTypeEndDate.from_dict(obj["endDate"]) if obj.get("endDate") is not None else None,
-            "invoiceDate": RenewalsSearchRequestDataTypeInvoiceDate.from_dict(obj["invoiceDate"]) if obj.get("invoiceDate") is not None else None,
-            "expirationDate": RenewalsSearchRequestDataTypeExpirationDate.from_dict(obj["expirationDate"]) if obj.get("expirationDate") is not None else None
+            "startDate": RenewalsSearchRequestDateTypeStartDate.from_dict(obj["startDate"]) if obj.get("startDate") is not None else None,
+            "endDate": RenewalsSearchRequestDateTypeEndDate.from_dict(obj["endDate"]) if obj.get("endDate") is not None else None,
+            "invoiceDate": RenewalsSearchRequestDateTypeInvoiceDate.from_dict(obj["invoiceDate"]) if obj.get("invoiceDate") is not None else None,
+            "expirationDate": RenewalsSearchRequestDateTypeExpirationDate.from_dict(obj["expirationDate"]) if obj.get("expirationDate") is not None else None
         })
         return _obj
 
