@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**renewal_id** | **str** | Unique renewal ID. | [optional] 
+**renewal_id** | **int** | Unique renewal ID. | [optional] 
 **customer_order_number** | **str** | The reseller&#39;s order number for reference in their system. | [optional] 
 **reference_number** | **str** | Renewal reference number. It could be notification id or quote number. | [optional] 
 **end_user** | **str** | The company name for the end user/customer. | [optional] 
 **vendor** | **str** | The name of the vendor. | [optional] 
 **expiration_date** | **str** | Renewal expiration date. | [optional] 
-**renewal_value** | **str** | The value of the renewal. | [optional] 
+**renewal_value** | **float** | The value of the renewal. | [optional] 
 **status** | **str** | The status of the renewal. | [optional] 
 **links** | [**List[RenewalsSearchResponseRenewalsInnerLinksInner]**](RenewalsSearchResponseRenewalsInnerLinksInner.md) |  | [optional] 
 
