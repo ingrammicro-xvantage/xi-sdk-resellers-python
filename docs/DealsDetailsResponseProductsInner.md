@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **remaining_quantity** | **int** | The quantity remaining as part of the deal for the customer to order. | [optional] 
 **comments** | **str** | Comments of the deal. | [optional] 
 **special_conditions** | **str** | Special conditions of the deal. | [optional] 
-**start_date** | **date** | Start Date. | [optional] 
-**expiration_date** | **date** | Expiration date. | [optional] 
+**start_date** | **str** | Start Date. | [optional] 
+**expiration_date** | **str** | Expiration date. | [optional] 
 **days_remaining** | **int** | Number of days remaining before the deal expires. | [optional] 
 
 ## Example

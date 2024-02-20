@@ -38,7 +38,7 @@ class ProductDetailResponse(BaseModel):
     product_detail_description: Optional[StrictStr] = Field(default=None, description="The detailed description given for the product.", alias="productDetailDescription")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
     product_category: Optional[StrictStr] = Field(default=None, description="The category of the product.", alias="productCategory")
-    product_subcategory: Optional[StrictStr] = Field(default=None, description="The sub-category of the product.", alias="productSubcategory")
+    product_sub_category: Optional[StrictStr] = Field(default=None, description="The sub-category of the product.", alias="productSubCategory")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Vendor name for the order.", alias="vendorName")
     vendor_number: Optional[StrictStr] = Field(default=None, description="Vendor number that identifies the product.", alias="vendorNumber")
     product_status_code: Optional[StrictStr] = Field(default=None, description="Status code of the product.", alias="productStatusCode")
@@ -48,7 +48,7 @@ class ProductDetailResponse(BaseModel):
     technical_specifications: Optional[List[ProductDetailResponseTechnicalSpecificationsInner]] = Field(default=None, description="Technical specifications of the product.", alias="technicalSpecifications")
     warranty_information: Optional[List[Dict[str, Any]]] = Field(default=None, description="Warranty information related to the product.", alias="warrantyInformation")
     additional_information: Optional[ProductDetailResponseAdditionalInformation] = Field(default=None, alias="additionalInformation")
-    __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "customerPartNumber", "productAuthorized", "description", "productDetailDescription", "upc", "productCategory", "productSubcategory", "vendorName", "vendorNumber", "productStatusCode", "productClass", "indicators", "ciscoFields", "technicalSpecifications", "warrantyInformation", "additionalInformation"]
+    __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "customerPartNumber", "productAuthorized", "description", "productDetailDescription", "upc", "productCategory", "productSubCategory", "vendorName", "vendorNumber", "productStatusCode", "productClass", "indicators", "ciscoFields", "technicalSpecifications", "warrantyInformation", "additionalInformation"]
 
     model_config = {
         "populate_by_name": True,
@@ -125,7 +125,7 @@ class ProductDetailResponse(BaseModel):
             "productDetailDescription": obj.get("productDetailDescription"),
             "upc": obj.get("upc"),
             "productCategory": obj.get("productCategory"),
-            "productSubcategory": obj.get("productSubcategory"),
+            "productSubCategory": obj.get("productSubCategory"),
             "vendorName": obj.get("vendorName"),
             "vendorNumber": obj.get("vendorNumber"),
             "productStatusCode": obj.get("productStatusCode"),

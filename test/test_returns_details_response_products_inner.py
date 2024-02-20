@@ -40,16 +40,17 @@ class TestReturnsDetailsResponseProductsInner(unittest.TestCase):
                 ingram_part_number = '',
                 vendor_part_number = '',
                 upc = '',
-                invoice_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                invoice_date = '',
                 invoice_number = '',
                 customer_order_number = '',
-                request_details = '',
                 quantity = 1.337,
                 unit_price = 1.337,
                 extended_price = 1.337,
                 status = '',
                 return_branch = '',
-                ship_from_branch = ''
+                ship_from_branch = '',
+                request_details = '',
+                additional_details = ''
             )
         else:
             return ReturnsDetailsResponseProductsInner(

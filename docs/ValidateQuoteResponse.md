@@ -9,6 +9,10 @@ Name | Type | Description | Notes
 **vendor_name** | **str** | The name of the vendor. | [optional] 
 **vmf_additional_attributes** | [**List[ValidateQuoteResponseVmfAdditionalAttributesInner]**](ValidateQuoteResponseVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor. | [optional] 
 **lines** | [**List[ValidateQuoteResponseLinesInner]**](ValidateQuoteResponseLinesInner.md) | The object containing the lines from the quote. | [optional] 
+**quote_type** | **int** |  | [optional] 
+**vendor_group_name** | **str** |  | [optional] 
+**vendor_quote_number** | **str** |  | [optional] 
+**vendor_master_number** | **str** |  | [optional] 
 
 ## Example
 

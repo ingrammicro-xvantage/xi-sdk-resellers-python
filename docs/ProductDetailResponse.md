@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **product_detail_description** | **str** | The detailed description given for the product. | [optional] 
 **upc** | **str** | The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item. | [optional] 
 **product_category** | **str** | The category of the product. | [optional] 
-**product_subcategory** | **str** | The sub-category of the product. | [optional] 
+**product_sub_category** | **str** | The sub-category of the product. | [optional] 
 **vendor_name** | **str** | Vendor name for the order. | [optional] 
 **vendor_number** | **str** | Vendor number that identifies the product. | [optional] 
 **product_status_code** | **str** | Status code of the product. | [optional] 

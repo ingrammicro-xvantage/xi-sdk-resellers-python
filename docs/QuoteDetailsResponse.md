@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **intro_preamble** | **str** | Introductory paragraph included in each quote.  Legally required - must be included when presenting the quote details. | [optional] 
 **purchase_instructions** | **str** | Purchase instructions.  Legally required - must be included when presenting the quote details. | [optional] 
 **legal_terms** | **str** | Legal terms -  Legally required - must be included when presenting the quote details. | [optional] 
+**quote_type** | **str** |  | [optional] 
 **lease_info** | **str** | Lease information. | [optional] 
 **leasing_instructions** | **str** | Leasing information | [optional] 
 **reseller_info** | [**QuoteDetailsResponseResellerInfo**](QuoteDetailsResponseResellerInfo.md) |  | [optional] 

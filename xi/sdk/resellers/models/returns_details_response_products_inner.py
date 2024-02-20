@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
@@ -32,17 +31,18 @@ class ReturnsDetailsResponseProductsInner(BaseModel):
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Unique IngramMicro part number.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="The vendor's part number for the line item.", alias="vendorPartNumber")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code of a product.")
-    invoice_date: Optional[date] = Field(default=None, description="The date of the invoice.", alias="invoiceDate")
+    invoice_date: Optional[StrictStr] = Field(default=None, description="The date of the invoice.", alias="invoiceDate")
     invoice_number: Optional[StrictStr] = Field(default=None, description="Ingram micro Invoice number.", alias="invoiceNumber")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
-    request_details: Optional[StrictStr] = Field(default=None, description="Request details.", alias="requestDetails")
     quantity: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The quantity of the line item.")
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The unit price of the line item.", alias="unitPrice")
     extended_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Unit price X quantity for the line item.", alias="extendedPrice")
     status: Optional[StrictStr] = Field(default=None, description="The status of the line item.")
     return_branch: Optional[StrictStr] = Field(default=None, description="The code of the return branch.", alias="returnBranch")
     ship_from_branch: Optional[StrictStr] = Field(default=None, description="The code of the ship from branch.", alias="shipFromBranch")
-    __properties: ClassVar[List[str]] = ["ingramLineNumber", "description", "ingramPartNumber", "vendorPartNumber", "upc", "invoiceDate", "invoiceNumber", "customerOrderNumber", "requestDetails", "quantity", "unitPrice", "extendedPrice", "status", "returnBranch", "shipFromBranch"]
+    request_details: Optional[StrictStr] = Field(default=None, description="Request details.", alias="requestDetails")
+    additional_details: Optional[StrictStr] = Field(default=None, alias="additionalDetails")
+    __properties: ClassVar[List[str]] = ["ingramLineNumber", "description", "ingramPartNumber", "vendorPartNumber", "upc", "invoiceDate", "invoiceNumber", "customerOrderNumber", "quantity", "unitPrice", "extendedPrice", "status", "returnBranch", "shipFromBranch", "requestDetails", "additionalDetails"]
 
     model_config = {
         "populate_by_name": True,
@@ -103,13 +103,14 @@ class ReturnsDetailsResponseProductsInner(BaseModel):
             "invoiceDate": obj.get("invoiceDate"),
             "invoiceNumber": obj.get("invoiceNumber"),
             "customerOrderNumber": obj.get("customerOrderNumber"),
-            "requestDetails": obj.get("requestDetails"),
             "quantity": obj.get("quantity"),
             "unitPrice": obj.get("unitPrice"),
             "extendedPrice": obj.get("extendedPrice"),
             "status": obj.get("status"),
             "returnBranch": obj.get("returnBranch"),
-            "shipFromBranch": obj.get("shipFromBranch")
+            "shipFromBranch": obj.get("shipFromBranch"),
+            "requestDetails": obj.get("requestDetails"),
+            "additionalDetails": obj.get("additionalDetails")
         })
         return _obj
 

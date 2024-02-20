@@ -55,6 +55,7 @@ class OrderDetailB2BLinesInner(BaseModel):
     special_bid_number: Optional[StrictStr] = Field(default=None, description="The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid numbers take precedence over header-level bid numbers.", alias="specialBidNumber")
     requested_deliverydate: Optional[StrictStr] = Field(default=None, description="Reseller-requested delivery date. Delivery date is not guaranteed.", alias="requestedDeliverydate")
     promised_delivery_date: Optional[StrictStr] = Field(default=None, description="The delivery date promised by IngramMicro.", alias="promisedDeliveryDate")
+    back_order_eta_data: Optional[StrictStr] = Field(default=None, description="Backorder ETA date", alias="backOrderETAData")
     line_notes: Optional[StrictStr] = Field(default=None, description="Line-level notes for the order.", alias="lineNotes")
     shipment_details: Optional[List[OrderDetailB2BLinesInnerShipmentDetailsInner]] = Field(default=None, description="Shipping details for the line item.", alias="shipmentDetails")
     service_contract_info: Optional[OrderDetailB2BLinesInnerServiceContractInfo] = Field(default=None, alias="serviceContractInfo")
@@ -63,7 +64,7 @@ class OrderDetailB2BLinesInner(BaseModel):
     estimated_dates: Optional[List[OrderDetailB2BLinesInnerEstimatedDatesInner]] = Field(default=None, alias="estimatedDates")
     schedule_lines: Optional[List[OrderDetailB2BLinesInnerScheduleLinesInner]] = Field(default=None, alias="scheduleLines")
     multiple_shipments: Optional[List[OrderDetailB2BLinesInnerMultipleShipmentsInner]] = Field(default=None, alias="multipleShipments")
-    __properties: ClassVar[List[str]] = ["subOrderNumber", "ingramOrderLineNumber", "vendorSalesOrderLineNumber", "customerLineNumber", "lineStatus", "ingramPartNumber", "vendorPartNumber", "vendorName", "partDescription", "unitWeight", "weightUom", "unitPrice", "upcCode", "extendedPrice", "taxAmount", "currencyCode", "quantityOrdered", "quantityConfirmed", "quantityBackOrdered", "specialBidNumber", "requestedDeliverydate", "promisedDeliveryDate", "lineNotes", "shipmentDetails", "serviceContractInfo", "additionalAttributes", "links", "estimatedDates", "scheduleLines", "multipleShipments"]
+    __properties: ClassVar[List[str]] = ["subOrderNumber", "ingramOrderLineNumber", "vendorSalesOrderLineNumber", "customerLineNumber", "lineStatus", "ingramPartNumber", "vendorPartNumber", "vendorName", "partDescription", "unitWeight", "weightUom", "unitPrice", "upcCode", "extendedPrice", "taxAmount", "currencyCode", "quantityOrdered", "quantityConfirmed", "quantityBackOrdered", "specialBidNumber", "requestedDeliverydate", "promisedDeliveryDate", "backOrderETAData", "lineNotes", "shipmentDetails", "serviceContractInfo", "additionalAttributes", "links", "estimatedDates", "scheduleLines", "multipleShipments"]
 
     model_config = {
         "populate_by_name": True,
@@ -198,6 +199,7 @@ class OrderDetailB2BLinesInner(BaseModel):
             "specialBidNumber": obj.get("specialBidNumber"),
             "requestedDeliverydate": obj.get("requestedDeliverydate"),
             "promisedDeliveryDate": obj.get("promisedDeliveryDate"),
+            "backOrderETAData": obj.get("backOrderETAData"),
             "lineNotes": obj.get("lineNotes"),
             "shipmentDetails": [OrderDetailB2BLinesInnerShipmentDetailsInner.from_dict(_item) for _item in obj["shipmentDetails"]] if obj.get("shipmentDetails") is not None else None,
             "serviceContractInfo": OrderDetailB2BLinesInnerServiceContractInfo.from_dict(obj["serviceContractInfo"]) if obj.get("serviceContractInfo") is not None else None,

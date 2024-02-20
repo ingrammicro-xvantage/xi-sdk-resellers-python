@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.validate_quote_response_lines_inner import ValidateQuoteResponseLinesInner
 from xi.sdk.resellers.models.validate_quote_response_vmf_additional_attributes_inner import ValidateQuoteResponseVmfAdditionalAttributesInner
@@ -32,7 +32,11 @@ class ValidateQuoteResponse(BaseModel):
     vendor_name: Optional[StrictStr] = Field(default=None, description="The name of the vendor.", alias="vendorName")
     vmf_additional_attributes: Optional[List[ValidateQuoteResponseVmfAdditionalAttributesInner]] = Field(default=None, description="The object containing the list of fields required at a header level by the vendor.", alias="vmfAdditionalAttributes")
     lines: Optional[List[ValidateQuoteResponseLinesInner]] = Field(default=None, description="The object containing the lines from the quote.")
-    __properties: ClassVar[List[str]] = ["quoteNumber", "vendorName", "vmfAdditionalAttributes", "lines"]
+    quote_type: Optional[StrictInt] = Field(default=None, alias="quoteType")
+    vendor_group_name: Optional[StrictStr] = Field(default=None, alias="vendorGroupName")
+    vendor_quote_number: Optional[StrictStr] = Field(default=None, alias="vendorQuoteNumber")
+    vendor_master_number: Optional[StrictStr] = Field(default=None, alias="vendorMasterNumber")
+    __properties: ClassVar[List[str]] = ["quoteNumber", "vendorName", "vmfAdditionalAttributes", "lines", "quoteType", "vendorGroupName", "vendorQuoteNumber", "vendorMasterNumber"]
 
     model_config = {
         "populate_by_name": True,
@@ -102,7 +106,11 @@ class ValidateQuoteResponse(BaseModel):
             "quoteNumber": obj.get("quoteNumber"),
             "vendorName": obj.get("vendorName"),
             "vmfAdditionalAttributes": [ValidateQuoteResponseVmfAdditionalAttributesInner.from_dict(_item) for _item in obj["vmfAdditionalAttributes"]] if obj.get("vmfAdditionalAttributes") is not None else None,
-            "lines": [ValidateQuoteResponseLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None
+            "lines": [ValidateQuoteResponseLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None,
+            "quoteType": obj.get("quoteType"),
+            "vendorGroupName": obj.get("vendorGroupName"),
+            "vendorQuoteNumber": obj.get("vendorQuoteNumber"),
+            "vendorMasterNumber": obj.get("vendorMasterNumber")
         })
         return _obj
 

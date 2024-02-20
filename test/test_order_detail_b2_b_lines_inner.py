@@ -57,6 +57,7 @@ class TestOrderDetailB2BLinesInner(unittest.TestCase):
                 special_bid_number = '',
                 requested_deliverydate = '',
                 promised_delivery_date = '',
+                back_order_eta_data = '',
                 line_notes = '',
                 shipment_details = [
                     xi.sdk.resellers.models.order_detail_b2_b_lines_inner_shipment_details_inner.OrderDetailB2B_lines_inner_shipmentDetails_inner(
