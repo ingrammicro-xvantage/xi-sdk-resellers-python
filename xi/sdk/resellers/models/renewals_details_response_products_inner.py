@@ -22,19 +22,19 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RenewalsDetailsResponseProducts(BaseModel):
+class RenewalsDetailsResponseProductsInner(BaseModel):
     """
-    RenewalsDetailsResponseProducts
+    RenewalsDetailsResponseProductsInner
     """ # noqa: E501
     ingram_line_number: Optional[StrictStr] = Field(default=None, description="Unique Ingram Micro line number.", alias="ingramLineNumber")
     product_description: Optional[StrictStr] = Field(default=None, description="The description of the product.", alias="productDescription")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="The vendor's part number for the line item.", alias="vendorPartNumber")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Unique IngramMicro part number.", alias="ingramPartNumber")
     manufacturer_part_number: Optional[StrictStr] = Field(default=None, description="The manufacturer's part number for the line item.", alias="manufacturerPartNumber")
+    quantity: Optional[StrictStr] = Field(default=None, description="The quantity of the line item.")
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The unit price of the line item.", alias="unitPrice")
-    quantity: Optional[StrictInt] = Field(default=None, description="The quantity of the line item.")
     is_consolidated: Optional[StrictStr] = Field(default=None, description="Is the line item consolidated? Yes or No.", alias="isConsolidated")
-    __properties: ClassVar[List[str]] = ["ingramLineNumber", "productDescription", "vendorPartNumber", "ingramPartNumber", "manufacturerPartNumber", "unitPrice", "quantity", "isConsolidated"]
+    __properties: ClassVar[List[str]] = ["ingramLineNumber", "productDescription", "vendorPartNumber", "ingramPartNumber", "manufacturerPartNumber", "quantity", "unitPrice", "isConsolidated"]
 
     model_config = {
         "populate_by_name": True,
@@ -54,7 +54,7 @@ class RenewalsDetailsResponseProducts(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RenewalsDetailsResponseProducts from a JSON string"""
+        """Create an instance of RenewalsDetailsResponseProductsInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -79,7 +79,7 @@ class RenewalsDetailsResponseProducts(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RenewalsDetailsResponseProducts from a dict"""
+        """Create an instance of RenewalsDetailsResponseProductsInner from a dict"""
         if obj is None:
             return None
 
@@ -92,8 +92,8 @@ class RenewalsDetailsResponseProducts(BaseModel):
             "vendorPartNumber": obj.get("vendorPartNumber"),
             "ingramPartNumber": obj.get("ingramPartNumber"),
             "manufacturerPartNumber": obj.get("manufacturerPartNumber"),
-            "unitPrice": obj.get("unitPrice"),
             "quantity": obj.get("quantity"),
+            "unitPrice": obj.get("unitPrice"),
             "isConsolidated": obj.get("isConsolidated")
         })
         return _obj

@@ -64,15 +64,17 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                 reference_number = xi.sdk.resellers.models.renewals_details_response_reference_number.renewalsDetailsResponse_referenceNumber(
                     notification_id = '', 
                     quote_number = '', ),
-                products = xi.sdk.resellers.models.renewals_details_response_products.renewalsDetailsResponse_products(
-                    ingram_line_number = '', 
-                    product_description = '', 
-                    vendor_part_number = '', 
-                    ingram_part_number = '', 
-                    manufacturer_part_number = '', 
-                    unit_price = 1.337, 
-                    quantity = 56, 
-                    is_consolidated = '', ),
+                products = [
+                    xi.sdk.resellers.models.renewals_details_response_products_inner.renewalsDetailsResponse_products_inner(
+                        ingram_line_number = '', 
+                        product_description = '', 
+                        vendor_part_number = '', 
+                        ingram_part_number = '', 
+                        manufacturer_part_number = '', 
+                        quantity = '', 
+                        unit_price = 1.337, 
+                        is_consolidated = '', )
+                    ],
                 additional_attributes = [
                     xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner.renewalsDetailsResponse_additionalAttributes_inner(
                         attribute_description = '', 
