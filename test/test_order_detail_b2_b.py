@@ -36,7 +36,7 @@ class TestOrderDetailB2B(unittest.TestCase):
         if include_optional:
             return OrderDetailB2B(
                 ingram_order_number = '',
-                ingram_order_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                ingram_order_date = '',
                 order_type = '',
                 customer_order_number = '',
                 end_customer_order_number = '',
