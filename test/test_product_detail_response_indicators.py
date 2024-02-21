@@ -41,6 +41,7 @@ class TestProductDetailResponseIndicators(unittest.TestCase):
                 is_back_order_allowed = True,
                 is_shipped_from_partner = True,
                 is_replacement_product = True,
+                replacement_type = '',
                 is_directship = True,
                 is_downloadable = True,
                 is_digital_type = True,

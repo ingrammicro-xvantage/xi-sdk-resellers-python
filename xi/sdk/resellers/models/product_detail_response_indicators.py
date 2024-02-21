@@ -32,6 +32,7 @@ class ProductDetailResponseIndicators(BaseModel):
     is_back_order_allowed: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether back order is allowed for the product.", alias="isBackOrderAllowed")
     is_shipped_from_partner: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is shipped from the partner.", alias="isShippedFromPartner")
     is_replacement_product: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is a replacement product.", alias="isReplacementProduct")
+    replacement_type: Optional[StrictStr] = Field(default=None, alias="replacementType")
     is_directship: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether it’s a direct ship product.", alias="isDirectship")
     is_downloadable: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is downloadable.", alias="isDownloadable")
     is_digital_type: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether it’s a digital product. ", alias="isDigitalType")
@@ -57,7 +58,7 @@ class ProductDetailResponseIndicators(BaseModel):
     is_directship_orderable: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is directship orderable.", alias="isDirectshipOrderable")
     is_service_sku: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is service SKU.", alias="isServiceSku")
     is_configurable: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is configurable.", alias="isConfigurable")
-    __properties: ClassVar[List[str]] = ["hasWarranty", "isNewProduct", "hasReturnLimits", "isBackOrderAllowed", "isShippedFromPartner", "isReplacementProduct", "isDirectship", "isDownloadable", "isDigitalType", "skuType", "hasStdSpecialPrice", "hasAcopSpecialPrice", "hasAcopQuantityBreak", "hasStdWebDiscount", "hasSpecialBid", "isExportableToCountry", "isDiscontinuedProduct", "isRefurbishedProduct", "isReturnableProduct", "isIngramShip", "isEnduserRequired", "isHeavyWeight", "hasLtl", "isClearanceProduct", "hasBundle", "isOversizeProduct", "isPreorderProduct", "isLicenseProduct", "isDirectshipOrderable", "isServiceSku", "isConfigurable"]
+    __properties: ClassVar[List[str]] = ["hasWarranty", "isNewProduct", "hasReturnLimits", "isBackOrderAllowed", "isShippedFromPartner", "isReplacementProduct", "replacementType", "isDirectship", "isDownloadable", "isDigitalType", "skuType", "hasStdSpecialPrice", "hasAcopSpecialPrice", "hasAcopQuantityBreak", "hasStdWebDiscount", "hasSpecialBid", "isExportableToCountry", "isDiscontinuedProduct", "isRefurbishedProduct", "isReturnableProduct", "isIngramShip", "isEnduserRequired", "isHeavyWeight", "hasLtl", "isClearanceProduct", "hasBundle", "isOversizeProduct", "isPreorderProduct", "isLicenseProduct", "isDirectshipOrderable", "isServiceSku", "isConfigurable"]
 
     model_config = {
         "populate_by_name": True,
@@ -116,6 +117,7 @@ class ProductDetailResponseIndicators(BaseModel):
             "isBackOrderAllowed": obj.get("isBackOrderAllowed"),
             "isShippedFromPartner": obj.get("isShippedFromPartner"),
             "isReplacementProduct": obj.get("isReplacementProduct"),
+            "replacementType": obj.get("replacementType"),
             "isDirectship": obj.get("isDirectship"),
             "isDownloadable": obj.get("isDownloadable"),
             "isDigitalType": obj.get("isDigitalType"),
