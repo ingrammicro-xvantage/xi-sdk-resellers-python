@@ -79,7 +79,7 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                     xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner.renewalsDetailsResponse_additionalAttributes_inner(
                         attribute_description = '', 
                         attribute_value = '', 
-                        start_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
+                        start_date = '', 
                         expiration_date = '', 
                         is_consolidated = '', )
                     ]
