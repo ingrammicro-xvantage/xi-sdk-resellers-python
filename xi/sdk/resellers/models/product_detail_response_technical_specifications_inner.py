@@ -27,10 +27,10 @@ class ProductDetailResponseTechnicalSpecificationsInner(BaseModel):
     ProductDetailResponseTechnicalSpecificationsInner
     """ # noqa: E501
     header_name: Optional[StrictStr] = Field(default=None, description="Example : 'Basic'", alias="headerName")
-    attributevalue: Optional[StrictStr] = Field(default=None, description="Example : 'LCD Monitor'")
-    attributedisplay: Optional[StrictStr] = Field(default=None, description="Example : 'Basic|Product Type|LCD Monitor'")
-    attributename: Optional[StrictStr] = Field(default=None, description="Example : 'Product Type'")
-    __properties: ClassVar[List[str]] = ["headerName", "attributevalue", "attributedisplay", "attributename"]
+    attribute_name: Optional[StrictStr] = Field(default=None, description="Example : 'Product Type'", alias="attributeName")
+    attribute_display: Optional[StrictStr] = Field(default=None, description="Example : 'Basic|Product Type|LCD Monitor'", alias="attributeDisplay")
+    attribute_value: Optional[StrictStr] = Field(default=None, description="Example : 'LCD Monitor'", alias="attributeValue")
+    __properties: ClassVar[List[str]] = ["headerName", "attributeName", "attributeDisplay", "attributeValue"]
 
     model_config = {
         "populate_by_name": True,
@@ -84,9 +84,9 @@ class ProductDetailResponseTechnicalSpecificationsInner(BaseModel):
 
         _obj = cls.model_validate({
             "headerName": obj.get("headerName"),
-            "attributevalue": obj.get("attributevalue"),
-            "attributedisplay": obj.get("attributedisplay"),
-            "attributename": obj.get("attributename")
+            "attributeName": obj.get("attributeName"),
+            "attributeDisplay": obj.get("attributeDisplay"),
+            "attributeValue": obj.get("attributeValue")
         })
         return _obj
 

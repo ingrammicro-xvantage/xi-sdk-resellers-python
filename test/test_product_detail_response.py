@@ -93,9 +93,9 @@ class TestProductDetailResponse(unittest.TestCase):
                 technical_specifications = [
                     xi.sdk.resellers.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
                         header_name = '', 
-                        attributevalue = '', 
-                        attributedisplay = '', 
-                        attributename = '', )
+                        attribute_name = '', 
+                        attribute_display = '', 
+                        attribute_value = '', )
                     ],
                 warranty_information = [
                     None

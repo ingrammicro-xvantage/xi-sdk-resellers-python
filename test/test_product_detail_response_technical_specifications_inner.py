@@ -36,9 +36,9 @@ class TestProductDetailResponseTechnicalSpecificationsInner(unittest.TestCase):
         if include_optional:
             return ProductDetailResponseTechnicalSpecificationsInner(
                 header_name = '',
-                attributevalue = '',
-                attributedisplay = '',
-                attributename = ''
+                attribute_name = '',
+                attribute_display = '',
+                attribute_value = ''
             )
         else:
             return ProductDetailResponseTechnicalSpecificationsInner(
