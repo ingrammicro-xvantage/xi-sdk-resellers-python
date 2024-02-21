@@ -92,7 +92,7 @@ class TestProductDetailResponse(unittest.TestCase):
                     global_list_price = '', ),
                 technical_specifications = [
                     xi.sdk.resellers.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
-                        headername = '', 
+                        header_name = '', 
                         attributevalue = '', 
                         attributedisplay = '', 
                         attributename = '', )
