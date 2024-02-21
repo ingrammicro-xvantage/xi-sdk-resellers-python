@@ -41,10 +41,11 @@ class ProductDetailResponseIndicators(BaseModel):
     has_acop_special_price: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product has any ACOP special price.", alias="hasAcopSpecialPrice")
     has_acop_quantity_break: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product has any ACOP quantity break.", alias="hasAcopQuantityBreak")
     has_std_web_discount: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product has any standard web discount.", alias="hasStdWebDiscount")
+    has_acop_web_discount: Optional[StrictBool] = Field(default=None, alias="hasAcopWebDiscount")
     has_special_bid: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product has any special bid.", alias="hasSpecialBid")
     is_exportable_to_country: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is exportable.", alias="isExportableToCountry")
     is_discontinued_product: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether it’s a discontinued product.", alias="isDiscontinuedProduct")
-    is_refurbished_product: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is refurbished.", alias="isRefurbishedProduct")
+    is_refurbished: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is refurbished.", alias="isRefurbished")
     is_returnable_product: Optional[StrictBool] = Field(default=None, description="Boolean that indicates if the product can be returned.", alias="isReturnableProduct")
     is_ingram_ship: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether it’s a Ingram shipped product.", alias="isIngramShip")
     is_enduser_required: Optional[StrictBool] = Field(default=None, description="Do vendor requires Enduser name required to create an order.", alias="isEnduserRequired")
@@ -58,7 +59,7 @@ class ProductDetailResponseIndicators(BaseModel):
     is_directship_orderable: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is directship orderable.", alias="isDirectshipOrderable")
     is_service_sku: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is service SKU.", alias="isServiceSku")
     is_configurable: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product is configurable.", alias="isConfigurable")
-    __properties: ClassVar[List[str]] = ["hasWarranty", "isNewProduct", "hasReturnLimits", "isBackOrderAllowed", "isShippedFromPartner", "isReplacementProduct", "replacementType", "isDirectship", "isDownloadable", "isDigitalType", "skuType", "hasStdSpecialPrice", "hasAcopSpecialPrice", "hasAcopQuantityBreak", "hasStdWebDiscount", "hasSpecialBid", "isExportableToCountry", "isDiscontinuedProduct", "isRefurbishedProduct", "isReturnableProduct", "isIngramShip", "isEnduserRequired", "isHeavyWeight", "hasLtl", "isClearanceProduct", "hasBundle", "isOversizeProduct", "isPreorderProduct", "isLicenseProduct", "isDirectshipOrderable", "isServiceSku", "isConfigurable"]
+    __properties: ClassVar[List[str]] = ["hasWarranty", "isNewProduct", "hasReturnLimits", "isBackOrderAllowed", "isShippedFromPartner", "isReplacementProduct", "replacementType", "isDirectship", "isDownloadable", "isDigitalType", "skuType", "hasStdSpecialPrice", "hasAcopSpecialPrice", "hasAcopQuantityBreak", "hasStdWebDiscount", "hasAcopWebDiscount", "hasSpecialBid", "isExportableToCountry", "isDiscontinuedProduct", "isRefurbished", "isReturnableProduct", "isIngramShip", "isEnduserRequired", "isHeavyWeight", "hasLtl", "isClearanceProduct", "hasBundle", "isOversizeProduct", "isPreorderProduct", "isLicenseProduct", "isDirectshipOrderable", "isServiceSku", "isConfigurable"]
 
     model_config = {
         "populate_by_name": True,
@@ -126,10 +127,11 @@ class ProductDetailResponseIndicators(BaseModel):
             "hasAcopSpecialPrice": obj.get("hasAcopSpecialPrice"),
             "hasAcopQuantityBreak": obj.get("hasAcopQuantityBreak"),
             "hasStdWebDiscount": obj.get("hasStdWebDiscount"),
+            "hasAcopWebDiscount": obj.get("hasAcopWebDiscount"),
             "hasSpecialBid": obj.get("hasSpecialBid"),
             "isExportableToCountry": obj.get("isExportableToCountry"),
             "isDiscontinuedProduct": obj.get("isDiscontinuedProduct"),
-            "isRefurbishedProduct": obj.get("isRefurbishedProduct"),
+            "isRefurbished": obj.get("isRefurbished"),
             "isReturnableProduct": obj.get("isReturnableProduct"),
             "isIngramShip": obj.get("isIngramShip"),
             "isEnduserRequired": obj.get("isEnduserRequired"),
