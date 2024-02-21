@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.order_detail_b2_b_additional_attributes_inner import OrderDetailB2BAdditionalAttributesInner
@@ -34,7 +33,7 @@ class OrderDetailB2B(BaseModel):
     OrderDetailB2B
     """ # noqa: E501
     ingram_order_number: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order number.", alias="ingramOrderNumber")
-    ingram_order_date: Optional[datetime] = Field(default=None, description="The IngramMicro sales order date.", alias="ingramOrderDate")
+    ingram_order_date: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order date.", alias="ingramOrderDate")
     order_type: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order type.", alias="orderType")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="endCustomerOrderNumber")

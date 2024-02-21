@@ -21,7 +21,7 @@ from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner import RenewalsDetailsResponseAdditionalAttributesInner
 from xi.sdk.resellers.models.renewals_details_response_end_user_info import RenewalsDetailsResponseEndUserInfo
-from xi.sdk.resellers.models.renewals_details_response_products import RenewalsDetailsResponseProducts
+from xi.sdk.resellers.models.renewals_details_response_products_inner import RenewalsDetailsResponseProductsInner
 from xi.sdk.resellers.models.renewals_details_response_reference_number import RenewalsDetailsResponseReferenceNumber
 from typing import Optional, Set
 from typing_extensions import Self
@@ -43,7 +43,7 @@ class RenewalsDetailsResponse(BaseModel):
     status: Optional[StrictStr] = Field(default=None, description="The status of the renewal.")
     end_user_info: Optional[RenewalsDetailsResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
     reference_number: Optional[RenewalsDetailsResponseReferenceNumber] = Field(default=None, alias="referenceNumber")
-    products: Optional[RenewalsDetailsResponseProducts] = None
+    products: Optional[List[RenewalsDetailsResponseProductsInner]] = None
     additional_attributes: Optional[List[RenewalsDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
     __properties: ClassVar[List[str]] = ["renewalId", "ingramOrderNumber", "ingramOrderDate", "expirationDate", "ingramPurchaseOrderNumber", "customerOrderNumber", "endCustomerOrderNumber", "renewalValue", "endUser", "vendor", "status", "endUserInfo", "referenceNumber", "products", "additionalAttributes"]
 
@@ -92,9 +92,13 @@ class RenewalsDetailsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of reference_number
         if self.reference_number:
             _dict['referenceNumber'] = self.reference_number.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of products
+        # override the default output from pydantic by calling `to_dict()` of each item in products (list)
+        _items = []
         if self.products:
-            _dict['products'] = self.products.to_dict()
+            for _item in self.products:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['products'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
@@ -127,7 +131,7 @@ class RenewalsDetailsResponse(BaseModel):
             "status": obj.get("status"),
             "endUserInfo": RenewalsDetailsResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
             "referenceNumber": RenewalsDetailsResponseReferenceNumber.from_dict(obj["referenceNumber"]) if obj.get("referenceNumber") is not None else None,
-            "products": RenewalsDetailsResponseProducts.from_dict(obj["products"]) if obj.get("products") is not None else None,
+            "products": [RenewalsDetailsResponseProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None,
             "additionalAttributes": [RenewalsDetailsResponseAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj

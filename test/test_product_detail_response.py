@@ -55,6 +55,7 @@ class TestProductDetailResponse(unittest.TestCase):
                     is_back_order_allowed = True, 
                     is_shipped_from_partner = True, 
                     is_replacement_product = True, 
+                    replacement_type = '', 
                     is_directship = True, 
                     is_downloadable = True, 
                     is_digital_type = True, 
@@ -63,10 +64,11 @@ class TestProductDetailResponse(unittest.TestCase):
                     has_acop_special_price = True, 
                     has_acop_quantity_break = True, 
                     has_std_web_discount = True, 
+                    has_acop_web_discount = True, 
                     has_special_bid = True, 
                     is_exportable_to_country = True, 
                     is_discontinued_product = True, 
-                    is_refurbished_product = True, 
+                    is_refurbished = True, 
                     is_returnable_product = True, 
                     is_ingram_ship = True, 
                     is_enduser_required = True, 
@@ -90,10 +92,10 @@ class TestProductDetailResponse(unittest.TestCase):
                     global_list_price = '', ),
                 technical_specifications = [
                     xi.sdk.resellers.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
-                        headername = '', 
-                        attributevalue = '', 
-                        attributedisplay = '', 
-                        attributename = '', )
+                        header_name = '', 
+                        attribute_name = '', 
+                        attribute_display = '', 
+                        attribute_value = '', )
                     ],
                 warranty_information = [
                     None

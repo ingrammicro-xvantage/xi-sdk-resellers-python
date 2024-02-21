@@ -35,10 +35,10 @@ class TestProductDetailResponseTechnicalSpecificationsInner(unittest.TestCase):
         model = ProductDetailResponseTechnicalSpecificationsInner()
         if include_optional:
             return ProductDetailResponseTechnicalSpecificationsInner(
-                headername = '',
-                attributevalue = '',
-                attributedisplay = '',
-                attributename = ''
+                header_name = '',
+                attribute_name = '',
+                attribute_display = '',
+                attribute_value = ''
             )
         else:
             return ProductDetailResponseTechnicalSpecificationsInner(

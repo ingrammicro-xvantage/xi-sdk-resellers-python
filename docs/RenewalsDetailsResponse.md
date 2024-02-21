@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **status** | **str** | The status of the renewal. | [optional] 
 **end_user_info** | [**RenewalsDetailsResponseEndUserInfo**](RenewalsDetailsResponseEndUserInfo.md) |  | [optional] 
 **reference_number** | [**RenewalsDetailsResponseReferenceNumber**](RenewalsDetailsResponseReferenceNumber.md) |  | [optional] 
-**products** | [**RenewalsDetailsResponseProducts**](RenewalsDetailsResponseProducts.md) |  | [optional] 
+**products** | [**List[RenewalsDetailsResponseProductsInner]**](RenewalsDetailsResponseProductsInner.md) |  | [optional] 
 **additional_attributes** | [**List[RenewalsDetailsResponseAdditionalAttributesInner]**](RenewalsDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
 ## Example
