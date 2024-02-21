@@ -37,11 +37,12 @@ class QuoteDetailsResponse(BaseModel):
     last_modified_date: Optional[StrictStr] = Field(default=None, description="Date the Quote was last updated or modified.", alias="lastModifiedDate")
     ingram_quote_expiry_date: Optional[StrictStr] = Field(default=None, description="Quote expiration date.", alias="ingramQuoteExpiryDate")
     currency_code: Optional[StrictStr] = Field(default=None, description="Three letter currency code.", alias="currencyCode")
-    closing_reason: Optional[StrictStr] = Field(default=None, description="Closing Reason for quote.", alias="closingReason")
     special_bid_id: Optional[StrictStr] = Field(default=None, description="Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart", alias="specialBidId")
     special_bid_effective_date: Optional[StrictStr] = Field(default=None, description="If price discount has been applied to the quote - the starting date the discount begins.", alias="specialBidEffectiveDate")
     special_bid_expiration_date: Optional[StrictStr] = Field(default=None, description="If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable.", alias="specialBidExpirationDate")
     status: Optional[StrictStr] = Field(default=None, description="This refers to the primary status of the quote.  API responses will return")
+    closing_reason: Optional[StrictStr] = Field(default=None, description="Closing Reason for quote.", alias="closingReason")
+    date_closed: Optional[StrictStr] = Field(default=None, alias="dateClosed")
     customer_need: Optional[StrictStr] = Field(default=None, description="Details related to the customer's request for the quote entered by the sales representative or system generated.", alias="customerNeed")
     proposed_solution: Optional[StrictStr] = Field(default=None, description="Ingram Micro proposed solution and summary of quote.", alias="proposedSolution")
     intro_preamble: Optional[StrictStr] = Field(default=None, description="Introductory paragraph included in each quote.  Legally required - must be included when presenting the quote details.", alias="introPreamble")
@@ -50,7 +51,7 @@ class QuoteDetailsResponse(BaseModel):
     quote_type: Optional[StrictStr] = Field(default=None, alias="quoteType")
     lease_info: Optional[StrictStr] = Field(default=None, description="Lease information.", alias="leaseInfo")
     leasing_instructions: Optional[StrictStr] = Field(default=None, description="Leasing information", alias="leasingInstructions")
-    quote_syb_type: Optional[StrictStr] = Field(default=None, alias="quoteSybType")
+    quote_sub_type: Optional[StrictStr] = Field(default=None, alias="quoteSubType")
     reseller_info: Optional[QuoteDetailsResponseResellerInfo] = Field(default=None, alias="resellerInfo")
     end_user_info: Optional[QuoteDetailsResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
     products: Optional[List[QuoteDetailsResponseProductsInner]] = None
@@ -59,7 +60,7 @@ class QuoteDetailsResponse(BaseModel):
     quantity_total: Optional[StrictInt] = Field(default=None, description="Total quantity of all items in the quote.", alias="quantityTotal")
     extended_quote_price_total: Optional[StrictInt] = Field(default=None, description="Total amount of quoted price for all products in the quote including both solution products and suggested products.", alias="extendedQuotePriceTotal")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "quoteSybType", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "closingReason", "dateClosed", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "quoteSubType", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -139,11 +140,12 @@ class QuoteDetailsResponse(BaseModel):
             "lastModifiedDate": obj.get("lastModifiedDate"),
             "ingramQuoteExpiryDate": obj.get("ingramQuoteExpiryDate"),
             "currencyCode": obj.get("currencyCode"),
-            "closingReason": obj.get("closingReason"),
             "specialBidId": obj.get("specialBidId"),
             "specialBidEffectiveDate": obj.get("specialBidEffectiveDate"),
             "specialBidExpirationDate": obj.get("specialBidExpirationDate"),
             "status": obj.get("status"),
+            "closingReason": obj.get("closingReason"),
+            "dateClosed": obj.get("dateClosed"),
             "customerNeed": obj.get("customerNeed"),
             "proposedSolution": obj.get("proposedSolution"),
             "introPreamble": obj.get("introPreamble"),
@@ -152,7 +154,7 @@ class QuoteDetailsResponse(BaseModel):
             "quoteType": obj.get("quoteType"),
             "leaseInfo": obj.get("leaseInfo"),
             "leasingInstructions": obj.get("leasingInstructions"),
-            "quoteSybType": obj.get("quoteSybType"),
+            "quoteSubType": obj.get("quoteSubType"),
             "resellerInfo": QuoteDetailsResponseResellerInfo.from_dict(obj["resellerInfo"]) if obj.get("resellerInfo") is not None else None,
             "endUserInfo": QuoteDetailsResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
             "products": [QuoteDetailsResponseProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None,

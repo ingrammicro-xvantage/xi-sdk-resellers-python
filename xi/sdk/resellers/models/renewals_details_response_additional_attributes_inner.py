@@ -30,7 +30,7 @@ class RenewalsDetailsResponseAdditionalAttributesInner(BaseModel):
     attribute_description: Optional[StrictStr] = Field(default=None, description="The description of the additional attribute.", alias="attributeDescription")
     attribute_value: Optional[StrictStr] = Field(default=None, description="The value of the additional attribute.", alias="attributeValue")
     start_date: Optional[date] = Field(default=None, description="The attribute start date.", alias="startDate")
-    expiration_date: Optional[date] = Field(default=None, description="The attribute expiration date.", alias="expirationDate")
+    expiration_date: Optional[StrictStr] = Field(default=None, description="The attribute expiration date.", alias="expirationDate")
     is_consolidated: Optional[StrictStr] = Field(default=None, description="Is the line item consolidated? Yes or No.", alias="isConsolidated")
     __properties: ClassVar[List[str]] = ["attributeDescription", "attributeValue", "startDate", "expirationDate", "isConsolidated"]
 

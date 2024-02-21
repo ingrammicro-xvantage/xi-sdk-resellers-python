@@ -38,7 +38,7 @@ class TestRenewalsDetailsResponseAdditionalAttributesInner(unittest.TestCase):
                 attribute_description = '',
                 attribute_value = '',
                 start_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
-                expiration_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                expiration_date = '',
                 is_consolidated = ''
             )
         else:
