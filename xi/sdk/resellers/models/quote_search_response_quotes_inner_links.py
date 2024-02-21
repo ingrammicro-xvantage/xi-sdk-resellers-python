@@ -17,18 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RenewalsDetailsResponseReferenceNumberInner(BaseModel):
+class QuoteSearchResponseQuotesInnerLinks(BaseModel):
     """
-    RenewalsDetailsResponseReferenceNumberInner
+    QuoteSearchResponseQuotesInnerLinks
     """ # noqa: E501
-    notification_id: Optional[StrictStr] = Field(default=None, description="Notification id of the communication sent from Ingram.", alias="notificationId")
-    quote_number: Optional[StrictStr] = Field(default=None, description="Quote number for the renewal.", alias="quoteNumber")
-    __properties: ClassVar[List[str]] = ["notificationId", "quoteNumber"]
+    topic: Optional[StrictStr] = None
+    href: Optional[StrictStr] = None
+    type: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["topic", "href", "type"]
 
     model_config = {
         "populate_by_name": True,
@@ -48,7 +49,7 @@ class RenewalsDetailsResponseReferenceNumberInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RenewalsDetailsResponseReferenceNumberInner from a JSON string"""
+        """Create an instance of QuoteSearchResponseQuotesInnerLinks from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +74,7 @@ class RenewalsDetailsResponseReferenceNumberInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RenewalsDetailsResponseReferenceNumberInner from a dict"""
+        """Create an instance of QuoteSearchResponseQuotesInnerLinks from a dict"""
         if obj is None:
             return None
 
@@ -81,8 +82,9 @@ class RenewalsDetailsResponseReferenceNumberInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "notificationId": obj.get("notificationId"),
-            "quoteNumber": obj.get("quoteNumber")
+            "topic": obj.get("topic"),
+            "href": obj.get("href"),
+            "type": obj.get("type")
         })
         return _obj
 

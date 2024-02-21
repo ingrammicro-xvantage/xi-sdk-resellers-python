@@ -64,6 +64,8 @@ class TestOrderDetailB2BLinesInner(unittest.TestCase):
                         quantity = 56, 
                         delivery_number = '', 
                         estimated_ship_date = '', 
+                        shipped_date = '', 
+                        estimated_delivery_date = '', 
                         ship_from_warehouse_id = '', 
                         ship_from_location = '', 
                         invoice_number = '', 

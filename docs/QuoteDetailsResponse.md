@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **quote_type** | **str** |  | [optional] 
 **lease_info** | **str** | Lease information. | [optional] 
 **leasing_instructions** | **str** | Leasing information | [optional] 
+**quote_syb_type** | **str** |  | [optional] 
 **reseller_info** | [**QuoteDetailsResponseResellerInfo**](QuoteDetailsResponseResellerInfo.md) |  | [optional] 
 **end_user_info** | [**QuoteDetailsResponseEndUserInfo**](QuoteDetailsResponseEndUserInfo.md) |  | [optional] 
 **products** | [**List[QuoteDetailsResponseProductsInner]**](QuoteDetailsResponseProductsInner.md) |  | [optional] 

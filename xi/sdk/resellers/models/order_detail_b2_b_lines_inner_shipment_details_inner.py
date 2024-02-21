@@ -30,12 +30,14 @@ class OrderDetailB2BLinesInnerShipmentDetailsInner(BaseModel):
     quantity: Optional[StrictInt] = Field(default=None, description="The quantity shipped of the line item.")
     delivery_number: Optional[StrictStr] = Field(default=None, description="The actual date of delivery of the line item.", alias="deliveryNumber")
     estimated_ship_date: Optional[StrictStr] = Field(default=None, description="The date the line item is expected to be shipped.", alias="estimatedShipDate")
+    shipped_date: Optional[StrictStr] = Field(default=None, alias="shippedDate")
+    estimated_delivery_date: Optional[StrictStr] = Field(default=None, alias="estimatedDeliveryDate")
     ship_from_warehouse_id: Optional[StrictStr] = Field(default=None, description="The ID of the warehouse the product will ship from.", alias="shipFromWarehouseId")
     ship_from_location: Optional[StrictStr] = Field(default=None, description="The city and state the line item ships from.", alias="shipFromLocation")
     invoice_number: Optional[StrictStr] = Field(default=None, description="The Ingram Micro invoice number for the line item.", alias="invoiceNumber")
     invoice_date: Optional[StrictStr] = Field(default=None, description="The date the IngramMicro invoice was created for the line item.", alias="invoiceDate")
     carrier_details: Optional[List[OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner]] = Field(default=None, description="The shipment carrier details for the line item.", alias="carrierDetails")
-    __properties: ClassVar[List[str]] = ["quantity", "deliveryNumber", "estimatedShipDate", "shipFromWarehouseId", "shipFromLocation", "invoiceNumber", "invoiceDate", "carrierDetails"]
+    __properties: ClassVar[List[str]] = ["quantity", "deliveryNumber", "estimatedShipDate", "shippedDate", "estimatedDeliveryDate", "shipFromWarehouseId", "shipFromLocation", "invoiceNumber", "invoiceDate", "carrierDetails"]
 
     model_config = {
         "populate_by_name": True,
@@ -103,6 +105,8 @@ class OrderDetailB2BLinesInnerShipmentDetailsInner(BaseModel):
             "quantity": obj.get("quantity"),
             "deliveryNumber": obj.get("deliveryNumber"),
             "estimatedShipDate": obj.get("estimatedShipDate"),
+            "shippedDate": obj.get("shippedDate"),
+            "estimatedDeliveryDate": obj.get("estimatedDeliveryDate"),
             "shipFromWarehouseId": obj.get("shipFromWarehouseId"),
             "shipFromLocation": obj.get("shipFromLocation"),
             "invoiceNumber": obj.get("invoiceNumber"),

@@ -50,6 +50,7 @@ class QuoteDetailsResponse(BaseModel):
     quote_type: Optional[StrictStr] = Field(default=None, alias="quoteType")
     lease_info: Optional[StrictStr] = Field(default=None, description="Lease information.", alias="leaseInfo")
     leasing_instructions: Optional[StrictStr] = Field(default=None, description="Leasing information", alias="leasingInstructions")
+    quote_syb_type: Optional[StrictStr] = Field(default=None, alias="quoteSybType")
     reseller_info: Optional[QuoteDetailsResponseResellerInfo] = Field(default=None, alias="resellerInfo")
     end_user_info: Optional[QuoteDetailsResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
     products: Optional[List[QuoteDetailsResponseProductsInner]] = None
@@ -58,7 +59,7 @@ class QuoteDetailsResponse(BaseModel):
     quantity_total: Optional[StrictInt] = Field(default=None, description="Total quantity of all items in the quote.", alias="quantityTotal")
     extended_quote_price_total: Optional[StrictInt] = Field(default=None, description="Total amount of quoted price for all products in the quote including both solution products and suggested products.", alias="extendedQuotePriceTotal")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "closingReason", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "quoteSybType", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -151,6 +152,7 @@ class QuoteDetailsResponse(BaseModel):
             "quoteType": obj.get("quoteType"),
             "leaseInfo": obj.get("leaseInfo"),
             "leasingInstructions": obj.get("leasingInstructions"),
+            "quoteSybType": obj.get("quoteSybType"),
             "resellerInfo": QuoteDetailsResponseResellerInfo.from_dict(obj["resellerInfo"]) if obj.get("resellerInfo") is not None else None,
             "endUserInfo": QuoteDetailsResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
             "products": [QuoteDetailsResponseProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None,

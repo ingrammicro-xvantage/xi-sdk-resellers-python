@@ -53,7 +53,7 @@ class TestInvoiceSearchResponse(unittest.TestCase):
                         invoice_amount_incl_tax = 1.337, 
                         forgntotalamount = 1.337, 
                         gst_invoice_number = '', 
-                        isfeccenabled = True, )
+                        isfseccenabled = True, )
                     ],
                 next_page = ''
             )

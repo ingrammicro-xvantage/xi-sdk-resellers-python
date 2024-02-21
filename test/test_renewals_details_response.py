@@ -35,50 +35,44 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
         model = RenewalsDetailsResponse()
         if include_optional:
             return RenewalsDetailsResponse(
-                renewal_id = 56,
+                renewal_id = '',
                 ingram_order_number = '',
-                ingram_order_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
-                expiration_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
+                ingram_order_date = '',
+                expiration_date = '',
                 ingram_purchase_order_number = '',
                 customer_order_number = '',
                 end_customer_order_number = '',
-                renewal_value = 1.337,
+                renewal_value = '',
                 end_user = '',
                 vendor = '',
                 status = '',
-                end_user_info = [
-                    xi.sdk.resellers.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
-                        contact = '', 
-                        name1 = '', 
-                        name2 = '', 
-                        company_name = '', 
-                        address_line1 = '', 
-                        address_line2 = '', 
-                        address_line3 = '', 
-                        address_line4 = '', 
-                        city = '', 
-                        state = '', 
-                        postal_code = '', 
-                        country_code = '', 
-                        phone_number = '', 
-                        email = '', )
-                    ],
-                reference_number = [
-                    xi.sdk.resellers.models.renewals_details_response_reference_number_inner.renewalsDetailsResponse_referenceNumber_inner(
-                        notification_id = '', 
-                        quote_number = '', )
-                    ],
-                products = [
-                    xi.sdk.resellers.models.renewals_details_response_products_inner.renewalsDetailsResponse_products_inner(
-                        ingram_line_number = '', 
-                        product_description = '', 
-                        vendor_part_number = '', 
-                        ingram_part_number = '', 
-                        manufacturer_part_number = '', 
-                        quantity = '', 
-                        unit_price = 1.337, 
-                        is_consolidated = '', )
-                    ],
+                end_user_info = xi.sdk.resellers.models.renewals_details_response_end_user_info.renewalsDetailsResponse_endUserInfo(
+                    contact = '', 
+                    name1 = '', 
+                    name2 = '', 
+                    company_name = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    address_line4 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    phone_number = '', 
+                    email = '', ),
+                reference_number = xi.sdk.resellers.models.renewals_details_response_reference_number.renewalsDetailsResponse_referenceNumber(
+                    notification_id = '', 
+                    quote_number = '', ),
+                products = xi.sdk.resellers.models.renewals_details_response_products.renewalsDetailsResponse_products(
+                    ingram_line_number = '', 
+                    product_description = '', 
+                    vendor_part_number = '', 
+                    ingram_part_number = '', 
+                    manufacturer_part_number = '', 
+                    unit_price = 1.337, 
+                    quantity = 56, 
+                    is_consolidated = '', ),
                 additional_attributes = [
                     xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner.renewalsDetailsResponse_additionalAttributes_inner(
                         attribute_description = '', 

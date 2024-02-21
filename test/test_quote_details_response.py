@@ -55,6 +55,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                 quote_type = '',
                 lease_info = '',
                 leasing_instructions = '',
+                quote_syb_type = '',
                 reseller_info = xi.sdk.resellers.models.quote_details_response_reseller_info.QuoteDetailsResponse_resellerInfo(
                     contact = '', 
                     company_name = '', 

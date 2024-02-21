@@ -5,20 +5,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**renewal_id** | **int** | Unique Ingram renewal ID. | [optional] 
+**renewal_id** | **str** | Unique Ingram renewal ID. | [optional] 
 **ingram_order_number** | **str** | The IngramMicro sales order number. | [optional] 
-**ingram_order_date** | **date** | The IngramMicro sales order date. | [optional] 
-**expiration_date** | **date** | Renewal expiration date. | [optional] 
+**ingram_order_date** | **str** | The IngramMicro sales order date. | [optional] 
+**expiration_date** | **str** | Renewal expiration date. | [optional] 
 **ingram_purchase_order_number** | **str** | Ingram purchase order number. | [optional] 
 **customer_order_number** | **str** | The reseller&#39;s order number for reference in their system. | [optional] 
 **end_customer_order_number** | **str** | The end customer&#39;s order number for reference in their system. | [optional] 
-**renewal_value** | **float** | The value of the renewal. | [optional] 
+**renewal_value** | **str** | The value of the renewal. | [optional] 
 **end_user** | **str** | The company name for the end user/customer. | [optional] 
 **vendor** | **str** | The name of the vendor. | [optional] 
 **status** | **str** | The status of the renewal. | [optional] 
-**end_user_info** | [**List[RenewalsDetailsResponseEndUserInfoInner]**](RenewalsDetailsResponseEndUserInfoInner.md) |  | [optional] 
-**reference_number** | [**List[RenewalsDetailsResponseReferenceNumberInner]**](RenewalsDetailsResponseReferenceNumberInner.md) |  | [optional] 
-**products** | [**List[RenewalsDetailsResponseProductsInner]**](RenewalsDetailsResponseProductsInner.md) |  | [optional] 
+**end_user_info** | [**RenewalsDetailsResponseEndUserInfo**](RenewalsDetailsResponseEndUserInfo.md) |  | [optional] 
+**reference_number** | [**RenewalsDetailsResponseReferenceNumber**](RenewalsDetailsResponseReferenceNumber.md) |  | [optional] 
+**products** | [**RenewalsDetailsResponseProducts**](RenewalsDetailsResponseProducts.md) |  | [optional] 
 **additional_attributes** | [**List[RenewalsDetailsResponseAdditionalAttributesInner]**](RenewalsDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
 ## Example

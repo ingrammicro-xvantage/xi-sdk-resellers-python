@@ -44,7 +44,7 @@ class TestDealsDetailsResponse(unittest.TestCase):
                 deal_expiry_date = '',
                 price_protection_end_date = '',
                 currency_code = '',
-                end_user_info = xi.sdk.resellers.models.renewals_details_response_end_user_info_inner.renewalsDetailsResponse_endUserInfo_inner(
+                end_user_info = xi.sdk.resellers.models.renewals_details_response_end_user_info.renewalsDetailsResponse_endUserInfo(
                     contact = '', 
                     name1 = '', 
                     name2 = '', 

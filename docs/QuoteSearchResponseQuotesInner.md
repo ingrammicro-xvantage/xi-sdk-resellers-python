@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **vendor** | **str** | Name of the vendor. | [optional] 
 **created_by** | **str** | Name of the end user/customer who created a quote. | [optional] 
 **quote_type** | **str** | Type of quote | [optional] 
-**links** | [**List[QuoteSearchResponseQuotesInnerLinksInner]**](QuoteSearchResponseQuotesInnerLinksInner.md) |  | [optional] 
+**links** | [**QuoteSearchResponseQuotesInnerLinks**](QuoteSearchResponseQuotesInnerLinks.md) |  | [optional] 
 
 ## Example
 

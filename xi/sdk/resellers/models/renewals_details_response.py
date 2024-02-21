@@ -17,13 +17,12 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, Field, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.renewals_details_response_additional_attributes_inner import RenewalsDetailsResponseAdditionalAttributesInner
-from xi.sdk.resellers.models.renewals_details_response_end_user_info_inner import RenewalsDetailsResponseEndUserInfoInner
-from xi.sdk.resellers.models.renewals_details_response_products_inner import RenewalsDetailsResponseProductsInner
-from xi.sdk.resellers.models.renewals_details_response_reference_number_inner import RenewalsDetailsResponseReferenceNumberInner
+from xi.sdk.resellers.models.renewals_details_response_end_user_info import RenewalsDetailsResponseEndUserInfo
+from xi.sdk.resellers.models.renewals_details_response_products import RenewalsDetailsResponseProducts
+from xi.sdk.resellers.models.renewals_details_response_reference_number import RenewalsDetailsResponseReferenceNumber
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,20 +30,20 @@ class RenewalsDetailsResponse(BaseModel):
     """
     RenewalsDetailsResponse
     """ # noqa: E501
-    renewal_id: Optional[StrictInt] = Field(default=None, description="Unique Ingram renewal ID.", alias="renewalId")
+    renewal_id: Optional[StrictStr] = Field(default=None, description="Unique Ingram renewal ID.", alias="renewalId")
     ingram_order_number: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order number.", alias="ingramOrderNumber")
-    ingram_order_date: Optional[date] = Field(default=None, description="The IngramMicro sales order date.", alias="ingramOrderDate")
-    expiration_date: Optional[date] = Field(default=None, description="Renewal expiration date.", alias="expirationDate")
+    ingram_order_date: Optional[StrictStr] = Field(default=None, description="The IngramMicro sales order date.", alias="ingramOrderDate")
+    expiration_date: Optional[StrictStr] = Field(default=None, description="Renewal expiration date.", alias="expirationDate")
     ingram_purchase_order_number: Optional[StrictStr] = Field(default=None, description="Ingram purchase order number.", alias="ingramPurchaseOrderNumber")
     customer_order_number: Optional[StrictStr] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     end_customer_order_number: Optional[StrictStr] = Field(default=None, description="The end customer's order number for reference in their system.", alias="endCustomerOrderNumber")
-    renewal_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The value of the renewal.", alias="renewalValue")
+    renewal_value: Optional[StrictStr] = Field(default=None, description="The value of the renewal.", alias="renewalValue")
     end_user: Optional[StrictStr] = Field(default=None, description="The company name for the end user/customer.", alias="endUser")
     vendor: Optional[StrictStr] = Field(default=None, description="The name of the vendor.")
     status: Optional[StrictStr] = Field(default=None, description="The status of the renewal.")
-    end_user_info: Optional[List[RenewalsDetailsResponseEndUserInfoInner]] = Field(default=None, alias="endUserInfo")
-    reference_number: Optional[List[RenewalsDetailsResponseReferenceNumberInner]] = Field(default=None, alias="referenceNumber")
-    products: Optional[List[RenewalsDetailsResponseProductsInner]] = None
+    end_user_info: Optional[RenewalsDetailsResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
+    reference_number: Optional[RenewalsDetailsResponseReferenceNumber] = Field(default=None, alias="referenceNumber")
+    products: Optional[RenewalsDetailsResponseProducts] = None
     additional_attributes: Optional[List[RenewalsDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
     __properties: ClassVar[List[str]] = ["renewalId", "ingramOrderNumber", "ingramOrderDate", "expirationDate", "ingramPurchaseOrderNumber", "customerOrderNumber", "endCustomerOrderNumber", "renewalValue", "endUser", "vendor", "status", "endUserInfo", "referenceNumber", "products", "additionalAttributes"]
 
@@ -87,27 +86,15 @@ class RenewalsDetailsResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in end_user_info (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of end_user_info
         if self.end_user_info:
-            for _item in self.end_user_info:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['endUserInfo'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in reference_number (list)
-        _items = []
+            _dict['endUserInfo'] = self.end_user_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of reference_number
         if self.reference_number:
-            for _item in self.reference_number:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['referenceNumber'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in products (list)
-        _items = []
+            _dict['referenceNumber'] = self.reference_number.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of products
         if self.products:
-            for _item in self.products:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['products'] = _items
+            _dict['products'] = self.products.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
@@ -138,9 +125,9 @@ class RenewalsDetailsResponse(BaseModel):
             "endUser": obj.get("endUser"),
             "vendor": obj.get("vendor"),
             "status": obj.get("status"),
-            "endUserInfo": [RenewalsDetailsResponseEndUserInfoInner.from_dict(_item) for _item in obj["endUserInfo"]] if obj.get("endUserInfo") is not None else None,
-            "referenceNumber": [RenewalsDetailsResponseReferenceNumberInner.from_dict(_item) for _item in obj["referenceNumber"]] if obj.get("referenceNumber") is not None else None,
-            "products": [RenewalsDetailsResponseProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None,
+            "endUserInfo": RenewalsDetailsResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
+            "referenceNumber": RenewalsDetailsResponseReferenceNumber.from_dict(obj["referenceNumber"]) if obj.get("referenceNumber") is not None else None,
+            "products": RenewalsDetailsResponseProducts.from_dict(obj["products"]) if obj.get("products") is not None else None,
             "additionalAttributes": [RenewalsDetailsResponseAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
