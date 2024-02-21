@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from xi.sdk.resellers.models.quote_search_response_quotes_inner_links_inner import QuoteSearchResponseQuotesInnerLinksInner
+from xi.sdk.resellers.models.quote_search_response_quotes_inner_links import QuoteSearchResponseQuotesInnerLinks
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -42,7 +42,7 @@ class QuoteSearchResponseQuotesInner(BaseModel):
     vendor: Optional[StrictStr] = Field(default=None, description="Name of the vendor.")
     created_by: Optional[StrictStr] = Field(default=None, description="Name of the end user/customer who created a quote.", alias="createdBy")
     quote_type: Optional[StrictStr] = Field(default=None, description="Type of quote", alias="quoteType")
-    links: Optional[List[QuoteSearchResponseQuotesInnerLinksInner]] = None
+    links: Optional[QuoteSearchResponseQuotesInnerLinks] = None
     __properties: ClassVar[List[str]] = ["quoteGuid", "quoteName", "quoteNumber", "revision", "endUserContact", "specialBidNumber", "quoteTotal", "quoteStatus", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "endUserName", "vendor", "createdBy", "quoteType", "links"]
 
     model_config = {
@@ -84,13 +84,9 @@ class QuoteSearchResponseQuotesInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in links (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of links
         if self.links:
-            for _item in self.links:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['links'] = _items
+            _dict['links'] = self.links.to_dict()
         return _dict
 
     @classmethod
@@ -118,7 +114,7 @@ class QuoteSearchResponseQuotesInner(BaseModel):
             "vendor": obj.get("vendor"),
             "createdBy": obj.get("createdBy"),
             "quoteType": obj.get("quoteType"),
-            "links": [QuoteSearchResponseQuotesInnerLinksInner.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None
+            "links": QuoteSearchResponseQuotesInnerLinks.from_dict(obj["links"]) if obj.get("links") is not None else None
         })
         return _obj
 

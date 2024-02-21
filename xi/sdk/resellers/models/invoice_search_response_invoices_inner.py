@@ -39,8 +39,8 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
     invoice_amount_incl_tax: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Invoice Amount Inclusive of Taxes", alias="invoiceAmountInclTax")
     forgntotalamount: Optional[Union[StrictFloat, StrictInt]] = None
     gst_invoice_number: Optional[StrictStr] = Field(default=None, alias="gstInvoiceNumber")
-    isfeccenabled: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "endCustomerOrderNumber", "orderCreateDate", "invoiceAmountInclTax", "forgntotalamount", "gstInvoiceNumber", "isfeccenabled"]
+    isfseccenabled: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "endCustomerOrderNumber", "orderCreateDate", "invoiceAmountInclTax", "forgntotalamount", "gstInvoiceNumber", "isfseccenabled"]
 
     model_config = {
         "populate_by_name": True,
@@ -106,7 +106,7 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
             "invoiceAmountInclTax": obj.get("invoiceAmountInclTax"),
             "forgntotalamount": obj.get("forgntotalamount"),
             "gstInvoiceNumber": obj.get("gstInvoiceNumber"),
-            "isfeccenabled": obj.get("isfeccenabled")
+            "isfseccenabled": obj.get("isfseccenabled")
         })
         return _obj
 

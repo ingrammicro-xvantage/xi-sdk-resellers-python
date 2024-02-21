@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.renewals_details_response_end_user_info_inner import RenewalsDetailsResponseEndUserInfoInner
+from xi.sdk.resellers.models.renewals_details_response_end_user_info import RenewalsDetailsResponseEndUserInfo
 
-class TestRenewalsDetailsResponseEndUserInfoInner(unittest.TestCase):
-    """RenewalsDetailsResponseEndUserInfoInner unit test stubs"""
+class TestRenewalsDetailsResponseEndUserInfo(unittest.TestCase):
+    """RenewalsDetailsResponseEndUserInfo unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestRenewalsDetailsResponseEndUserInfoInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> RenewalsDetailsResponseEndUserInfoInner:
-        """Test RenewalsDetailsResponseEndUserInfoInner
+    def make_instance(self, include_optional) -> RenewalsDetailsResponseEndUserInfo:
+        """Test RenewalsDetailsResponseEndUserInfo
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `RenewalsDetailsResponseEndUserInfoInner`
+        # uncomment below to create an instance of `RenewalsDetailsResponseEndUserInfo`
         """
-        model = RenewalsDetailsResponseEndUserInfoInner()
+        model = RenewalsDetailsResponseEndUserInfo()
         if include_optional:
-            return RenewalsDetailsResponseEndUserInfoInner(
+            return RenewalsDetailsResponseEndUserInfo(
                 contact = '',
                 name1 = '',
                 name2 = '',
@@ -51,12 +51,12 @@ class TestRenewalsDetailsResponseEndUserInfoInner(unittest.TestCase):
                 email = ''
             )
         else:
-            return RenewalsDetailsResponseEndUserInfoInner(
+            return RenewalsDetailsResponseEndUserInfo(
         )
         """
 
-    def testRenewalsDetailsResponseEndUserInfoInner(self):
-        """Test RenewalsDetailsResponseEndUserInfoInner"""
+    def testRenewalsDetailsResponseEndUserInfo(self):
+        """Test RenewalsDetailsResponseEndUserInfo"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

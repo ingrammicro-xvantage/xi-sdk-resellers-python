@@ -24,7 +24,6 @@ If the python package is hosted on a repository, you can install directly using:
 pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git
 ```
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git`)
-
 Then import the package:
 ```python
 import xi.sdk.resellers
@@ -269,7 +268,7 @@ Class | Method | HTTP request | Description
  - [QuoteDetailsResponseResellerInfo](docs/QuoteDetailsResponseResellerInfo.md)
  - [QuoteSearchResponse](docs/QuoteSearchResponse.md)
  - [QuoteSearchResponseQuotesInner](docs/QuoteSearchResponseQuotesInner.md)
- - [QuoteSearchResponseQuotesInnerLinksInner](docs/QuoteSearchResponseQuotesInnerLinksInner.md)
+ - [QuoteSearchResponseQuotesInnerLinks](docs/QuoteSearchResponseQuotesInnerLinks.md)
  - [QuoteToOrderDetailsDTO](docs/QuoteToOrderDetailsDTO.md)
  - [QuoteToOrderDetailsDTOAdditionalAttributesInner](docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md)
  - [QuoteToOrderDetailsDTOEndUserInfoInner](docs/QuoteToOrderDetailsDTOEndUserInfoInner.md)
@@ -280,9 +279,9 @@ Class | Method | HTTP request | Description
  - [QuoteToOrderResponse](docs/QuoteToOrderResponse.md)
  - [RenewalsDetailsResponse](docs/RenewalsDetailsResponse.md)
  - [RenewalsDetailsResponseAdditionalAttributesInner](docs/RenewalsDetailsResponseAdditionalAttributesInner.md)
- - [RenewalsDetailsResponseEndUserInfoInner](docs/RenewalsDetailsResponseEndUserInfoInner.md)
- - [RenewalsDetailsResponseProductsInner](docs/RenewalsDetailsResponseProductsInner.md)
- - [RenewalsDetailsResponseReferenceNumberInner](docs/RenewalsDetailsResponseReferenceNumberInner.md)
+ - [RenewalsDetailsResponseEndUserInfo](docs/RenewalsDetailsResponseEndUserInfo.md)
+ - [RenewalsDetailsResponseProducts](docs/RenewalsDetailsResponseProducts.md)
+ - [RenewalsDetailsResponseReferenceNumber](docs/RenewalsDetailsResponseReferenceNumber.md)
  - [RenewalsSearchRequest](docs/RenewalsSearchRequest.md)
  - [RenewalsSearchRequestDateType](docs/RenewalsSearchRequestDateType.md)
  - [RenewalsSearchRequestDateTypeEndDate](docs/RenewalsSearchRequestDateTypeEndDate.md)

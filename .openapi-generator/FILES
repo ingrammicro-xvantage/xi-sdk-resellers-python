@@ -152,7 +152,7 @@ docs/QuoteDetailsResponseProductsInnerPrice.md
 docs/QuoteDetailsResponseResellerInfo.md
 docs/QuoteSearchResponse.md
 docs/QuoteSearchResponseQuotesInner.md
-docs/QuoteSearchResponseQuotesInnerLinksInner.md
+docs/QuoteSearchResponseQuotesInnerLinks.md
 docs/QuoteToOrderApi.md
 docs/QuoteToOrderDetailsDTO.md
 docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md
@@ -166,9 +166,9 @@ docs/QuotesApi.md
 docs/RenewalsApi.md
 docs/RenewalsDetailsResponse.md
 docs/RenewalsDetailsResponseAdditionalAttributesInner.md
-docs/RenewalsDetailsResponseEndUserInfoInner.md
-docs/RenewalsDetailsResponseProductsInner.md
-docs/RenewalsDetailsResponseReferenceNumberInner.md
+docs/RenewalsDetailsResponseEndUserInfo.md
+docs/RenewalsDetailsResponseProducts.md
+docs/RenewalsDetailsResponseReferenceNumber.md
 docs/RenewalsSearchRequest.md
 docs/RenewalsSearchRequestDateType.md
 docs/RenewalsSearchRequestDateTypeEndDate.md
@@ -350,7 +350,7 @@ test/test_quote_details_response_products_inner_price.py
 test/test_quote_details_response_reseller_info.py
 test/test_quote_search_response.py
 test/test_quote_search_response_quotes_inner.py
-test/test_quote_search_response_quotes_inner_links_inner.py
+test/test_quote_search_response_quotes_inner_links.py
 test/test_quote_to_order_api.py
 test/test_quote_to_order_details_dto.py
 test/test_quote_to_order_details_dto_additional_attributes_inner.py
@@ -364,9 +364,9 @@ test/test_quotes_api.py
 test/test_renewals_api.py
 test/test_renewals_details_response.py
 test/test_renewals_details_response_additional_attributes_inner.py
-test/test_renewals_details_response_end_user_info_inner.py
-test/test_renewals_details_response_products_inner.py
-test/test_renewals_details_response_reference_number_inner.py
+test/test_renewals_details_response_end_user_info.py
+test/test_renewals_details_response_products.py
+test/test_renewals_details_response_reference_number.py
 test/test_renewals_search_request.py
 test/test_renewals_search_request_date_type.py
 test/test_renewals_search_request_date_type_end_date.py
@@ -556,7 +556,7 @@ xi/sdk/resellers/models/quote_details_response_products_inner_price.py
 xi/sdk/resellers/models/quote_details_response_reseller_info.py
 xi/sdk/resellers/models/quote_search_response.py
 xi/sdk/resellers/models/quote_search_response_quotes_inner.py
-xi/sdk/resellers/models/quote_search_response_quotes_inner_links_inner.py
+xi/sdk/resellers/models/quote_search_response_quotes_inner_links.py
 xi/sdk/resellers/models/quote_to_order_details_dto.py
 xi/sdk/resellers/models/quote_to_order_details_dto_additional_attributes_inner.py
 xi/sdk/resellers/models/quote_to_order_details_dto_end_user_info_inner.py
@@ -567,9 +567,9 @@ xi/sdk/resellers/models/quote_to_order_details_dto_vmfadditional_attributes_inne
 xi/sdk/resellers/models/quote_to_order_response.py
 xi/sdk/resellers/models/renewals_details_response.py
 xi/sdk/resellers/models/renewals_details_response_additional_attributes_inner.py
-xi/sdk/resellers/models/renewals_details_response_end_user_info_inner.py
-xi/sdk/resellers/models/renewals_details_response_products_inner.py
-xi/sdk/resellers/models/renewals_details_response_reference_number_inner.py
+xi/sdk/resellers/models/renewals_details_response_end_user_info.py
+xi/sdk/resellers/models/renewals_details_response_products.py
+xi/sdk/resellers/models/renewals_details_response_reference_number.py
 xi/sdk/resellers/models/renewals_search_request.py
 xi/sdk/resellers/models/renewals_search_request_date_type.py
 xi/sdk/resellers/models/renewals_search_request_date_type_end_date.py

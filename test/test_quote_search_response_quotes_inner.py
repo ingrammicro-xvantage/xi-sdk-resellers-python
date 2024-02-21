@@ -50,12 +50,10 @@ class TestQuoteSearchResponseQuotesInner(unittest.TestCase):
                 vendor = '',
                 created_by = '',
                 quote_type = '',
-                links = [
-                    xi.sdk.resellers.models.quote_search_response_quotes_inner_links_inner.QuoteSearchResponse_quotes_inner_links_inner(
-                        topic = '', 
-                        href = '', 
-                        type = '', )
-                    ]
+                links = xi.sdk.resellers.models.quote_search_response_quotes_inner_links.QuoteSearchResponse_quotes_inner_links(
+                    topic = '', 
+                    href = '', 
+                    type = '', )
             )
         else:
             return QuoteSearchResponseQuotesInner(

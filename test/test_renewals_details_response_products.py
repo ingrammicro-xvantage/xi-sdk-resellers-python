@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.renewals_details_response_products_inner import RenewalsDetailsResponseProductsInner
+from xi.sdk.resellers.models.renewals_details_response_products import RenewalsDetailsResponseProducts
 
-class TestRenewalsDetailsResponseProductsInner(unittest.TestCase):
-    """RenewalsDetailsResponseProductsInner unit test stubs"""
+class TestRenewalsDetailsResponseProducts(unittest.TestCase):
+    """RenewalsDetailsResponseProducts unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,32 +25,32 @@ class TestRenewalsDetailsResponseProductsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> RenewalsDetailsResponseProductsInner:
-        """Test RenewalsDetailsResponseProductsInner
+    def make_instance(self, include_optional) -> RenewalsDetailsResponseProducts:
+        """Test RenewalsDetailsResponseProducts
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `RenewalsDetailsResponseProductsInner`
+        # uncomment below to create an instance of `RenewalsDetailsResponseProducts`
         """
-        model = RenewalsDetailsResponseProductsInner()
+        model = RenewalsDetailsResponseProducts()
         if include_optional:
-            return RenewalsDetailsResponseProductsInner(
+            return RenewalsDetailsResponseProducts(
                 ingram_line_number = '',
                 product_description = '',
                 vendor_part_number = '',
                 ingram_part_number = '',
                 manufacturer_part_number = '',
-                quantity = '',
                 unit_price = 1.337,
+                quantity = 56,
                 is_consolidated = ''
             )
         else:
-            return RenewalsDetailsResponseProductsInner(
+            return RenewalsDetailsResponseProducts(
         )
         """
 
-    def testRenewalsDetailsResponseProductsInner(self):
-        """Test RenewalsDetailsResponseProductsInner"""
+    def testRenewalsDetailsResponseProducts(self):
+        """Test RenewalsDetailsResponseProducts"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

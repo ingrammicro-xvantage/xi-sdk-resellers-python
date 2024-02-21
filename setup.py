@@ -38,7 +38,7 @@ CLASSIFIERS = [
 
 setup(
     name=NAME,
-    version="0.0.7",
+    version="0.0.7.1",
     description="Ingram Micro - Xvantage Integration (XI) Python Server-side SDK.",
     author="Ingram Micro Xvantage Integration(XI)",
     author_email="xi_support@ingrammicro.com",

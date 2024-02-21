@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.quote_search_response_quotes_inner_links_inner import QuoteSearchResponseQuotesInnerLinksInner
+from xi.sdk.resellers.models.renewals_details_response_reference_number import RenewalsDetailsResponseReferenceNumber
 
-class TestQuoteSearchResponseQuotesInnerLinksInner(unittest.TestCase):
-    """QuoteSearchResponseQuotesInnerLinksInner unit test stubs"""
+class TestRenewalsDetailsResponseReferenceNumber(unittest.TestCase):
+    """RenewalsDetailsResponseReferenceNumber unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,27 +25,26 @@ class TestQuoteSearchResponseQuotesInnerLinksInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> QuoteSearchResponseQuotesInnerLinksInner:
-        """Test QuoteSearchResponseQuotesInnerLinksInner
+    def make_instance(self, include_optional) -> RenewalsDetailsResponseReferenceNumber:
+        """Test RenewalsDetailsResponseReferenceNumber
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `QuoteSearchResponseQuotesInnerLinksInner`
+        # uncomment below to create an instance of `RenewalsDetailsResponseReferenceNumber`
         """
-        model = QuoteSearchResponseQuotesInnerLinksInner()
+        model = RenewalsDetailsResponseReferenceNumber()
         if include_optional:
-            return QuoteSearchResponseQuotesInnerLinksInner(
-                topic = '',
-                href = '',
-                type = ''
+            return RenewalsDetailsResponseReferenceNumber(
+                notification_id = '',
+                quote_number = ''
             )
         else:
-            return QuoteSearchResponseQuotesInnerLinksInner(
+            return RenewalsDetailsResponseReferenceNumber(
         )
         """
 
-    def testQuoteSearchResponseQuotesInnerLinksInner(self):
-        """Test QuoteSearchResponseQuotesInnerLinksInner"""
+    def testRenewalsDetailsResponseReferenceNumber(self):
+        """Test RenewalsDetailsResponseReferenceNumber"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -17,19 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class QuoteSearchResponseQuotesInnerLinksInner(BaseModel):
+class RenewalsDetailsResponseReferenceNumber(BaseModel):
     """
-    QuoteSearchResponseQuotesInnerLinksInner
+    RenewalsDetailsResponseReferenceNumber
     """ # noqa: E501
-    topic: Optional[StrictStr] = None
-    href: Optional[StrictStr] = None
-    type: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["topic", "href", "type"]
+    notification_id: Optional[StrictStr] = Field(default=None, description="Notification id of the communication sent from Ingram.", alias="notificationId")
+    quote_number: Optional[StrictStr] = Field(default=None, description="Quote number for the renewal.", alias="quoteNumber")
+    __properties: ClassVar[List[str]] = ["notificationId", "quoteNumber"]
 
     model_config = {
         "populate_by_name": True,
@@ -49,7 +48,7 @@ class QuoteSearchResponseQuotesInnerLinksInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of QuoteSearchResponseQuotesInnerLinksInner from a JSON string"""
+        """Create an instance of RenewalsDetailsResponseReferenceNumber from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +73,7 @@ class QuoteSearchResponseQuotesInnerLinksInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of QuoteSearchResponseQuotesInnerLinksInner from a dict"""
+        """Create an instance of RenewalsDetailsResponseReferenceNumber from a dict"""
         if obj is None:
             return None
 
@@ -82,9 +81,8 @@ class QuoteSearchResponseQuotesInnerLinksInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "topic": obj.get("topic"),
-            "href": obj.get("href"),
-            "type": obj.get("type")
+            "notificationId": obj.get("notificationId"),
+            "quoteNumber": obj.get("quoteNumber")
         })
         return _obj
 

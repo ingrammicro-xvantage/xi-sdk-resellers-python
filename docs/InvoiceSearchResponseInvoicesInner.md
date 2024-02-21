@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **invoice_amount_incl_tax** | **float** | Invoice Amount Inclusive of Taxes | [optional] 
 **forgntotalamount** | **float** |  | [optional] 
 **gst_invoice_number** | **str** |  | [optional] 
-**isfeccenabled** | **bool** |  | [optional] 
+**isfseccenabled** | **bool** |  | [optional] 
 
 ## Example
 

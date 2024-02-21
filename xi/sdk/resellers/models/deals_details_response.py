@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.deals_details_response_products_inner import DealsDetailsResponseProductsInner
-from xi.sdk.resellers.models.renewals_details_response_end_user_info_inner import RenewalsDetailsResponseEndUserInfoInner
+from xi.sdk.resellers.models.renewals_details_response_end_user_info import RenewalsDetailsResponseEndUserInfo
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -37,7 +37,7 @@ class DealsDetailsResponse(BaseModel):
     deal_expiry_date: Optional[StrictStr] = Field(default=None, description="Expiration date of the deal/Special bid.", alias="dealExpiryDate")
     price_protection_end_date: Optional[StrictStr] = Field(default=None, description="The date on which the price protection will end.", alias="priceProtectionEndDate")
     currency_code: Optional[StrictStr] = Field(default=None, description="Country specific currency code.", alias="currencyCode")
-    end_user_info: Optional[RenewalsDetailsResponseEndUserInfoInner] = Field(default=None, alias="endUserInfo")
+    end_user_info: Optional[RenewalsDetailsResponseEndUserInfo] = Field(default=None, alias="endUserInfo")
     products: Optional[List[DealsDetailsResponseProductsInner]] = None
     __properties: ClassVar[List[str]] = ["dealId", "version", "endUser", "extendedMsrp", "vendor", "dealReceivedOn", "dealExpiryDate", "priceProtectionEndDate", "currencyCode", "endUserInfo", "products"]
 
@@ -111,7 +111,7 @@ class DealsDetailsResponse(BaseModel):
             "dealExpiryDate": obj.get("dealExpiryDate"),
             "priceProtectionEndDate": obj.get("priceProtectionEndDate"),
             "currencyCode": obj.get("currencyCode"),
-            "endUserInfo": RenewalsDetailsResponseEndUserInfoInner.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
+            "endUserInfo": RenewalsDetailsResponseEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
             "products": [DealsDetailsResponseProductsInner.from_dict(_item) for _item in obj["products"]] if obj.get("products") is not None else None
         })
         return _obj
