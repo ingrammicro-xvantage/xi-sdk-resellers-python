@@ -30,6 +30,7 @@ class InvoiceDetailsv61ResponseLinesInner(BaseModel):
     ingram_line_number: Optional[StrictStr] = Field(default=None, description="Unique line number from Ingram.", alias="ingramLineNumber")
     customer_line_number: Optional[StrictStr] = Field(default='0', description="Line number passes by customer while creating an order.", alias="customerLineNumber")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes.", alias="ingramPartNumber")
+    upc: Optional[StrictStr] = None
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor Part Number.", alias="vendorPartNumber")
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Part number from customer's system.", alias="customerPartNumber")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Name of the vendor.", alias="vendorName")
@@ -46,7 +47,7 @@ class InvoiceDetailsv61ResponseLinesInner(BaseModel):
     serial_numbers: Optional[List[InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner]] = Field(default=None, alias="serialNumbers")
     quantity_ordered: Optional[StrictInt] = Field(default=None, description="Quantity ordered by the customer.", alias="quantityOrdered")
     quantity_shipped: Optional[StrictInt] = Field(default=None, description="Quantity shipped to the customer.", alias="quantityShipped")
-    __properties: ClassVar[List[str]] = ["ingramLineNumber", "customerLineNumber", "ingramPartNumber", "vendorPartNumber", "customerPartNumber", "vendorName", "productDescription", "unitWeight", "quantity", "unitPrice", "unitOfMeasure", "currencyCode", "extendedPrice", "taxPercentage", "taxRate", "taxAmount", "serialNumbers", "quantityOrdered", "quantityShipped"]
+    __properties: ClassVar[List[str]] = ["ingramLineNumber", "customerLineNumber", "ingramPartNumber", "upc", "vendorPartNumber", "customerPartNumber", "vendorName", "productDescription", "unitWeight", "quantity", "unitPrice", "unitOfMeasure", "currencyCode", "extendedPrice", "taxPercentage", "taxRate", "taxAmount", "serialNumbers", "quantityOrdered", "quantityShipped"]
 
     model_config = {
         "populate_by_name": True,
@@ -114,6 +115,7 @@ class InvoiceDetailsv61ResponseLinesInner(BaseModel):
             "ingramLineNumber": obj.get("ingramLineNumber"),
             "customerLineNumber": obj.get("customerLineNumber") if obj.get("customerLineNumber") is not None else '0',
             "ingramPartNumber": obj.get("ingramPartNumber"),
+            "upc": obj.get("upc"),
             "vendorPartNumber": obj.get("vendorPartNumber"),
             "customerPartNumber": obj.get("customerPartNumber"),
             "vendorName": obj.get("vendorName"),

@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **extended_msrp_total** | **int** | Total extended MSRP for all products included in the quote | [optional] 
 **quantity_total** | **int** | Total quantity of all items in the quote. | [optional] 
 **extended_quote_price_total** | **int** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
+**total_quote_amount** | **str** |  | [optional] 
 **additional_attributes** | [**List[QuoteDetailsResponseAdditionalAttributesInner]**](QuoteDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
 ## Example

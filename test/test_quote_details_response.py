@@ -104,6 +104,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                 extended_msrp_total = 56,
                 quantity_total = 56,
                 extended_quote_price_total = 56,
+                total_quote_amount = '',
                 additional_attributes = [
                     xi.sdk.resellers.models.quote_details_response_additional_attributes_inner.QuoteDetailsResponse_additionalAttributes_inner(
                         attribute_name = '', 

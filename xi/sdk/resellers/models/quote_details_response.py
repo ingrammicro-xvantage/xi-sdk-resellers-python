@@ -59,8 +59,9 @@ class QuoteDetailsResponse(BaseModel):
     extended_msrp_total: Optional[StrictInt] = Field(default=None, description="Total extended MSRP for all products included in the quote", alias="extendedMsrpTotal")
     quantity_total: Optional[StrictInt] = Field(default=None, description="Total quantity of all items in the quote.", alias="quantityTotal")
     extended_quote_price_total: Optional[StrictInt] = Field(default=None, description="Total amount of quoted price for all products in the quote including both solution products and suggested products.", alias="extendedQuotePriceTotal")
+    total_quote_amount: Optional[StrictStr] = Field(default=None, alias="totalQuoteAmount")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "closingReason", "dateClosed", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "quoteSubType", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "status", "closingReason", "dateClosed", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "quoteSubType", "resellerInfo", "endUserInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extendedQuotePriceTotal", "totalQuoteAmount", "additionalAttributes"]
 
     model_config = {
         "populate_by_name": True,
@@ -162,6 +163,7 @@ class QuoteDetailsResponse(BaseModel):
             "extendedMsrpTotal": obj.get("extendedMsrpTotal"),
             "quantityTotal": obj.get("quantityTotal"),
             "extendedQuotePriceTotal": obj.get("extendedQuotePriceTotal"),
+            "totalQuoteAmount": obj.get("totalQuoteAmount"),
             "additionalAttributes": [QuoteDetailsResponseAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj

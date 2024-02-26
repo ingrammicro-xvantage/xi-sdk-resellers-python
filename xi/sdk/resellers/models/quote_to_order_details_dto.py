@@ -21,9 +21,9 @@ from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from xi.sdk.resellers.models.quote_to_order_details_dto_additional_attributes_inner import QuoteToOrderDetailsDTOAdditionalAttributesInner
-from xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info_inner import QuoteToOrderDetailsDTOEndUserInfoInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info import QuoteToOrderDetailsDTOEndUserInfo
 from xi.sdk.resellers.models.quote_to_order_details_dto_lines_inner import QuoteToOrderDetailsDTOLinesInner
-from xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info_inner import QuoteToOrderDetailsDTOShipToInfoInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info import QuoteToOrderDetailsDTOShipToInfo
 from xi.sdk.resellers.models.quote_to_order_details_dto_vmfadditional_attributes_inner import QuoteToOrderDetailsDTOVmfadditionalAttributesInner
 from typing import Optional, Set
 from typing_extensions import Self
@@ -36,8 +36,8 @@ class QuoteToOrderDetailsDTO(BaseModel):
     customer_order_number: Optional[Annotated[str, Field(strict=True, max_length=35)]] = Field(default=None, description="The reseller's order number for reference in their system.", alias="customerOrderNumber")
     enduser_order_number: Optional[Annotated[str, Field(strict=True, max_length=35)]] = Field(default=None, description="The end customer's order number for reference in their system.", alias="enduserOrderNumber")
     bill_to_address_id: Optional[StrictStr] = Field(default=None, description="Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.", alias="billToAddressId")
-    end_user_info: Optional[List[QuoteToOrderDetailsDTOEndUserInfoInner]] = Field(default=None, description="The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.", alias="endUserInfo")
-    ship_to_info: Optional[List[QuoteToOrderDetailsDTOShipToInfoInner]] = Field(default=None, description="The shipping information provided by the reseller for order delivery.", alias="shipToInfo")
+    end_user_info: Optional[QuoteToOrderDetailsDTOEndUserInfo] = Field(default=None, alias="endUserInfo")
+    ship_to_info: Optional[QuoteToOrderDetailsDTOShipToInfo] = Field(default=None, alias="shipToInfo")
     additional_attributes: Optional[List[QuoteToOrderDetailsDTOAdditionalAttributesInner]] = Field(default=None, description="Additional order create attributes.", alias="additionalAttributes")
     vmfadditional_attributes: Optional[List[QuoteToOrderDetailsDTOVmfadditionalAttributesInner]] = Field(default=None, description="The object containing the list of fields required at a header level by the vendor.", alias="vmfadditionalAttributes")
     lines: Optional[List[QuoteToOrderDetailsDTOLinesInner]] = Field(default=None, description="The object containing the lines that require vendor mandatory fields.")
@@ -82,20 +82,12 @@ class QuoteToOrderDetailsDTO(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in end_user_info (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of end_user_info
         if self.end_user_info:
-            for _item in self.end_user_info:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['endUserInfo'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in ship_to_info (list)
-        _items = []
+            _dict['endUserInfo'] = self.end_user_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of ship_to_info
         if self.ship_to_info:
-            for _item in self.ship_to_info:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['shipToInfo'] = _items
+            _dict['shipToInfo'] = self.ship_to_info.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
@@ -153,8 +145,8 @@ class QuoteToOrderDetailsDTO(BaseModel):
             "customerOrderNumber": obj.get("customerOrderNumber"),
             "enduserOrderNumber": obj.get("enduserOrderNumber"),
             "billToAddressId": obj.get("billToAddressId"),
-            "endUserInfo": [QuoteToOrderDetailsDTOEndUserInfoInner.from_dict(_item) for _item in obj["endUserInfo"]] if obj.get("endUserInfo") is not None else None,
-            "shipToInfo": [QuoteToOrderDetailsDTOShipToInfoInner.from_dict(_item) for _item in obj["shipToInfo"]] if obj.get("shipToInfo") is not None else None,
+            "endUserInfo": QuoteToOrderDetailsDTOEndUserInfo.from_dict(obj["endUserInfo"]) if obj.get("endUserInfo") is not None else None,
+            "shipToInfo": QuoteToOrderDetailsDTOShipToInfo.from_dict(obj["shipToInfo"]) if obj.get("shipToInfo") is not None else None,
             "additionalAttributes": [QuoteToOrderDetailsDTOAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None,
             "vmfadditionalAttributes": [QuoteToOrderDetailsDTOVmfadditionalAttributesInner.from_dict(_item) for _item in obj["vmfadditionalAttributes"]] if obj.get("vmfadditionalAttributes") is not None else None,
             "lines": [QuoteToOrderDetailsDTOLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None

@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class QuoteToOrderDetailsDTOShipToInfoInner(BaseModel):
+class QuoteToOrderDetailsDTOShipToInfo(BaseModel):
     """
-    QuoteToOrderDetailsDTOShipToInfoInner
+    The shipping information provided by the reseller for order delivery.
     """ # noqa: E501
     address_id: Optional[StrictStr] = Field(default=None, description="The company contact provided by the reseller.", alias="addressId")
     company_name: Optional[StrictStr] = Field(default=None, description="The name of the company the order will be shipped to.", alias="companyName")
@@ -57,7 +57,7 @@ class QuoteToOrderDetailsDTOShipToInfoInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of QuoteToOrderDetailsDTOShipToInfoInner from a JSON string"""
+        """Create an instance of QuoteToOrderDetailsDTOShipToInfo from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -92,7 +92,7 @@ class QuoteToOrderDetailsDTOShipToInfoInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of QuoteToOrderDetailsDTOShipToInfoInner from a dict"""
+        """Create an instance of QuoteToOrderDetailsDTOShipToInfo from a dict"""
         if obj is None:
             return None
 

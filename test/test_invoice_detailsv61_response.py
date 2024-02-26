@@ -82,6 +82,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                         ingram_line_number = '', 
                         customer_line_number = '0', 
                         ingram_part_number = '', 
+                        upc = '', 
                         vendor_part_number = '', 
                         customer_part_number = '', 
                         vendor_name = '', 
