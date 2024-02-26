@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info_inner import QuoteToOrderDetailsDTOEndUserInfoInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info import QuoteToOrderDetailsDTOShipToInfo
 
-class TestQuoteToOrderDetailsDTOEndUserInfoInner(unittest.TestCase):
-    """QuoteToOrderDetailsDTOEndUserInfoInner unit test stubs"""
+class TestQuoteToOrderDetailsDTOShipToInfo(unittest.TestCase):
+    """QuoteToOrderDetailsDTOShipToInfo unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,17 @@ class TestQuoteToOrderDetailsDTOEndUserInfoInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> QuoteToOrderDetailsDTOEndUserInfoInner:
-        """Test QuoteToOrderDetailsDTOEndUserInfoInner
+    def make_instance(self, include_optional) -> QuoteToOrderDetailsDTOShipToInfo:
+        """Test QuoteToOrderDetailsDTOShipToInfo
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `QuoteToOrderDetailsDTOEndUserInfoInner`
+        # uncomment below to create an instance of `QuoteToOrderDetailsDTOShipToInfo`
         """
-        model = QuoteToOrderDetailsDTOEndUserInfoInner()
+        model = QuoteToOrderDetailsDTOShipToInfo()
         if include_optional:
-            return QuoteToOrderDetailsDTOEndUserInfoInner(
+            return QuoteToOrderDetailsDTOShipToInfo(
+                address_id = '',
                 company_name = '',
                 contact = '',
                 address_line1 = '',
@@ -44,16 +45,15 @@ class TestQuoteToOrderDetailsDTOEndUserInfoInner(unittest.TestCase):
                 state = '',
                 postal_code = '',
                 country_code = '',
-                email = '',
-                phone_number = ''
+                email = ''
             )
         else:
-            return QuoteToOrderDetailsDTOEndUserInfoInner(
+            return QuoteToOrderDetailsDTOShipToInfo(
         )
         """
 
-    def testQuoteToOrderDetailsDTOEndUserInfoInner(self):
-        """Test QuoteToOrderDetailsDTOEndUserInfoInner"""
+    def testQuoteToOrderDetailsDTOShipToInfo(self):
+        """Test QuoteToOrderDetailsDTOShipToInfo"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

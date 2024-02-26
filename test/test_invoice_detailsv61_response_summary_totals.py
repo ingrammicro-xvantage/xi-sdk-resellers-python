@@ -39,7 +39,7 @@ class TestInvoiceDetailsv61ResponseSummaryTotals(unittest.TestCase):
                 discount_amount = 1.337,
                 discount_type = '',
                 total_tax_amount = 1.337,
-                invoiced_amount_due = 1.337,
+                invoices_amount_due = 1.337,
                 freight_amount = 1.337
             )
         else:

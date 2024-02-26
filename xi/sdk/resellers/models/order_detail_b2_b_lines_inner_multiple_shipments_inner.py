@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range import OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange
 from typing import Optional, Set
@@ -28,15 +28,15 @@ class OrderDetailB2BLinesInnerMultipleShipmentsInner(BaseModel):
     OrderDetailB2BLinesInnerMultipleShipmentsInner
     """ # noqa: E501
     line_number: Optional[StrictStr] = Field(default=None, description="Line number.", alias="lineNumber")
-    requested_quantity: Optional[StrictStr] = Field(default=None, description="Requested quantity.", alias="requestedQuantity")
-    confirmed_quantity: Optional[StrictStr] = Field(default=None, description="Confirmed quantity.", alias="confirmedQuantity")
-    data_type: Optional[StrictStr] = Field(default=None, description="Date type. Example Single or multiple dates.", alias="dataType")
+    requested_quantity: Optional[StrictInt] = Field(default=None, description="Requested quantity.", alias="requestedQuantity")
+    confirmed_quantity: Optional[StrictInt] = Field(default=None, description="Confirmed quantity.", alias="confirmedQuantity")
+    date_type: Optional[StrictStr] = Field(default=None, description="Date type. Example Single or multiple dates.", alias="dateType")
     date_range: Optional[OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange] = Field(default=None, alias="dateRange")
     source: Optional[StrictStr] = Field(default=None, description="Source.")
     description: Optional[StrictStr] = Field(default=None, description="Description.")
     var_date: Optional[StrictStr] = Field(default=None, description="Date.", alias="date")
     delivery_date: Optional[StrictStr] = Field(default=None, description="Delivery date.", alias="deliveryDate")
-    __properties: ClassVar[List[str]] = ["lineNumber", "requestedQuantity", "confirmedQuantity", "dataType", "dateRange", "source", "description", "date", "deliveryDate"]
+    __properties: ClassVar[List[str]] = ["lineNumber", "requestedQuantity", "confirmedQuantity", "dateType", "dateRange", "source", "description", "date", "deliveryDate"]
 
     model_config = {
         "populate_by_name": True,
@@ -95,7 +95,7 @@ class OrderDetailB2BLinesInnerMultipleShipmentsInner(BaseModel):
             "lineNumber": obj.get("lineNumber"),
             "requestedQuantity": obj.get("requestedQuantity"),
             "confirmedQuantity": obj.get("confirmedQuantity"),
-            "dataType": obj.get("dataType"),
+            "dateType": obj.get("dateType"),
             "dateRange": OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange.from_dict(obj["dateRange"]) if obj.get("dateRange") is not None else None,
             "source": obj.get("source"),
             "description": obj.get("description"),

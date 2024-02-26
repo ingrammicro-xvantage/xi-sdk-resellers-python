@@ -1,5 +1,6 @@
-# QuoteToOrderDetailsDTOEndUserInfoInner
+# QuoteToOrderDetailsDTOEndUserInfo
 
+The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.
 
 ## Properties
 
@@ -20,19 +21,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info_inner import QuoteToOrderDetailsDTOEndUserInfoInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info import QuoteToOrderDetailsDTOEndUserInfo
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of QuoteToOrderDetailsDTOEndUserInfoInner from a JSON string
-quote_to_order_details_dto_end_user_info_inner_instance = QuoteToOrderDetailsDTOEndUserInfoInner.from_json(json)
+# create an instance of QuoteToOrderDetailsDTOEndUserInfo from a JSON string
+quote_to_order_details_dto_end_user_info_instance = QuoteToOrderDetailsDTOEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print QuoteToOrderDetailsDTOEndUserInfoInner.to_json()
+print QuoteToOrderDetailsDTOEndUserInfo.to_json()
 
 # convert the object into a dict
-quote_to_order_details_dto_end_user_info_inner_dict = quote_to_order_details_dto_end_user_info_inner_instance.to_dict()
-# create an instance of QuoteToOrderDetailsDTOEndUserInfoInner from a dict
-quote_to_order_details_dto_end_user_info_inner_form_dict = quote_to_order_details_dto_end_user_info_inner.from_dict(quote_to_order_details_dto_end_user_info_inner_dict)
+quote_to_order_details_dto_end_user_info_dict = quote_to_order_details_dto_end_user_info_instance.to_dict()
+# create an instance of QuoteToOrderDetailsDTOEndUserInfo from a dict
+quote_to_order_details_dto_end_user_info_form_dict = quote_to_order_details_dto_end_user_info.from_dict(quote_to_order_details_dto_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

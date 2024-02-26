@@ -213,9 +213,9 @@ class TestOrderDetailB2B(unittest.TestCase):
                         multiple_shipments = [
                             xi.sdk.resellers.models.order_detail_b2_b_lines_inner_multiple_shipments_inner.OrderDetailB2B_lines_inner_multipleShipments_inner(
                                 line_number = '', 
-                                requested_quantity = '', 
-                                confirmed_quantity = '', 
-                                data_type = '', 
+                                requested_quantity = 56, 
+                                confirmed_quantity = 56, 
+                                date_type = '', 
                                 date_range = xi.sdk.resellers.models.order_detail_b2_b_lines_inner_estimated_dates_inner_ship_ship_date_range.OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange(
                                     start_date = '', 
                                     end_date = '', ), 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **quantity** | **int** | Quantity of product line item quoted. | [optional] 
 **notes** | **str** | Product line item comments. | [optional] 
 **ean** | **str** | EANUPC | [optional] 
-**co_o** | **str** | Country of Origin. | [optional] 
+**coo** | **str** | Country of Origin. | [optional] 
 **ingram_part_number** | **str** | Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes | [optional] 
 **vendor_part_number** | **str** | Vendor Part Number | [optional] 
 **description** | **str** | Product description.  Note - The quote view api returns only the product short description as maintained in Ingram Micro&#39;s crm system.  For long descriptions, please refer to alternative information sources. | [optional] 

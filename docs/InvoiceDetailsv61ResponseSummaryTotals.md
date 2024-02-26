@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **discount_amount** | **float** | Discount amount. | [optional] 
 **discount_type** | **str** | Type of discount. | [optional] 
 **total_tax_amount** | **float** | Total Tax amount. | [optional] 
-**invoiced_amount_due** | **float** | Total amount due for the invoice. | [optional] 
+**invoices_amount_due** | **float** | Total amount due for the invoice. | [optional] 
 **freight_amount** | **float** | Freight amount | [optional] 
 
 ## Example

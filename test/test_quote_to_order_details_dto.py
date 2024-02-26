@@ -39,34 +39,30 @@ class TestQuoteToOrderDetailsDTO(unittest.TestCase):
                 customer_order_number = '',
                 enduser_order_number = '',
                 bill_to_address_id = '',
-                end_user_info = [
-                    xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info_inner.QuoteToOrderDetailsDTO_endUserInfo_inner(
-                        company_name = '', 
-                        contact = '', 
-                        address_line1 = '', 
-                        address_line2 = '', 
-                        address_line3 = '', 
-                        city = '', 
-                        state = '', 
-                        postal_code = '', 
-                        country_code = '', 
-                        email = '', 
-                        phone_number = '', )
-                    ],
-                ship_to_info = [
-                    xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info_inner.QuoteToOrderDetailsDTO_shipToInfo_inner(
-                        address_id = '', 
-                        company_name = '', 
-                        contact = '', 
-                        address_line1 = '', 
-                        address_line2 = '', 
-                        address_line3 = '', 
-                        city = '', 
-                        state = '', 
-                        postal_code = '', 
-                        country_code = '', 
-                        email = '', )
-                    ],
+                end_user_info = xi.sdk.resellers.models.quote_to_order_details_dto_end_user_info.QuoteToOrderDetailsDTO_endUserInfo(
+                    company_name = '', 
+                    contact = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    email = '', 
+                    phone_number = '', ),
+                ship_to_info = xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info.QuoteToOrderDetailsDTO_shipToInfo(
+                    address_id = '', 
+                    company_name = '', 
+                    contact = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', 
+                    email = '', ),
                 additional_attributes = [
                     xi.sdk.resellers.models.quote_to_order_details_dto_additional_attributes_inner.QuoteToOrderDetailsDTO_additionalAttributes_inner(
                         attribute_name = '', 

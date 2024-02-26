@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class QuoteToOrderDetailsDTOEndUserInfoInner(BaseModel):
+class QuoteToOrderDetailsDTOEndUserInfo(BaseModel):
     """
-    QuoteToOrderDetailsDTOEndUserInfoInner
+    The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.
     """ # noqa: E501
     company_name: Optional[StrictStr] = Field(default=None, description="The company name for the end user/customer.", alias="companyName")
     contact: Optional[StrictStr] = Field(default=None, description="The contact name for the end user/customer.")
@@ -57,7 +57,7 @@ class QuoteToOrderDetailsDTOEndUserInfoInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of QuoteToOrderDetailsDTOEndUserInfoInner from a JSON string"""
+        """Create an instance of QuoteToOrderDetailsDTOEndUserInfo from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -82,7 +82,7 @@ class QuoteToOrderDetailsDTOEndUserInfoInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of QuoteToOrderDetailsDTOEndUserInfoInner from a dict"""
+        """Create an instance of QuoteToOrderDetailsDTOEndUserInfo from a dict"""
         if obj is None:
             return None
 

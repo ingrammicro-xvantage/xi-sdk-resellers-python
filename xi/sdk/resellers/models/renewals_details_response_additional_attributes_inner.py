@@ -17,7 +17,6 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import date
 from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
@@ -29,8 +28,8 @@ class RenewalsDetailsResponseAdditionalAttributesInner(BaseModel):
     """ # noqa: E501
     attribute_description: Optional[StrictStr] = Field(default=None, description="The description of the additional attribute.", alias="attributeDescription")
     attribute_value: Optional[StrictStr] = Field(default=None, description="The value of the additional attribute.", alias="attributeValue")
-    start_date: Optional[date] = Field(default=None, description="The attribute start date.", alias="startDate")
-    expiration_date: Optional[date] = Field(default=None, description="The attribute expiration date.", alias="expirationDate")
+    start_date: Optional[StrictStr] = Field(default=None, description="The attribute start date.", alias="startDate")
+    expiration_date: Optional[StrictStr] = Field(default=None, description="The attribute expiration date.", alias="expirationDate")
     is_consolidated: Optional[StrictStr] = Field(default=None, description="Is the line item consolidated? Yes or No.", alias="isConsolidated")
     __properties: ClassVar[List[str]] = ["attributeDescription", "attributeValue", "startDate", "expirationDate", "isConsolidated"]
 

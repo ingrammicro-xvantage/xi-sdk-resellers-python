@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attribute_description** | **str** | The description of the additional attribute. | [optional] 
 **attribute_value** | **str** | The value of the additional attribute. | [optional] 
-**start_date** | **date** | The attribute start date. | [optional] 
-**expiration_date** | **date** | The attribute expiration date. | [optional] 
+**start_date** | **str** | The attribute start date. | [optional] 
+**expiration_date** | **str** | The attribute expiration date. | [optional] 
 **is_consolidated** | **str** | Is the line item consolidated? Yes or No. | [optional] 
 
 ## Example

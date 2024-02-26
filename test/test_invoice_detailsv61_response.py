@@ -82,6 +82,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                         ingram_line_number = '', 
                         customer_line_number = '0', 
                         ingram_part_number = '', 
+                        upc = '', 
                         vendor_part_number = '', 
                         customer_part_number = '', 
                         vendor_name = '', 
@@ -124,7 +125,7 @@ class TestInvoiceDetailsv61Response(unittest.TestCase):
                         discount_amount = 1.337, 
                         discount_type = '', 
                         total_tax_amount = 1.337, 
-                        invoiced_amount_due = 1.337, 
+                        invoices_amount_due = 1.337, 
                         freight_amount = 1.337, ), 
                     foreign_fx_totals = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
                         foreign_currency_code = '', 

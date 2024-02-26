@@ -1,5 +1,6 @@
-# QuoteToOrderDetailsDTOShipToInfoInner
+# QuoteToOrderDetailsDTOShipToInfo
 
+The shipping information provided by the reseller for order delivery.
 
 ## Properties
 
@@ -20,19 +21,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info_inner import QuoteToOrderDetailsDTOShipToInfoInner
+from xi.sdk.resellers.models.quote_to_order_details_dto_ship_to_info import QuoteToOrderDetailsDTOShipToInfo
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of QuoteToOrderDetailsDTOShipToInfoInner from a JSON string
-quote_to_order_details_dto_ship_to_info_inner_instance = QuoteToOrderDetailsDTOShipToInfoInner.from_json(json)
+# create an instance of QuoteToOrderDetailsDTOShipToInfo from a JSON string
+quote_to_order_details_dto_ship_to_info_instance = QuoteToOrderDetailsDTOShipToInfo.from_json(json)
 # print the JSON string representation of the object
-print QuoteToOrderDetailsDTOShipToInfoInner.to_json()
+print QuoteToOrderDetailsDTOShipToInfo.to_json()
 
 # convert the object into a dict
-quote_to_order_details_dto_ship_to_info_inner_dict = quote_to_order_details_dto_ship_to_info_inner_instance.to_dict()
-# create an instance of QuoteToOrderDetailsDTOShipToInfoInner from a dict
-quote_to_order_details_dto_ship_to_info_inner_form_dict = quote_to_order_details_dto_ship_to_info_inner.from_dict(quote_to_order_details_dto_ship_to_info_inner_dict)
+quote_to_order_details_dto_ship_to_info_dict = quote_to_order_details_dto_ship_to_info_instance.to_dict()
+# create an instance of QuoteToOrderDetailsDTOShipToInfo from a dict
+quote_to_order_details_dto_ship_to_info_form_dict = quote_to_order_details_dto_ship_to_info.from_dict(quote_to_order_details_dto_ship_to_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ingram_line_number** | **str** | Unique line number from Ingram. | [optional] 
 **customer_line_number** | **str** | Line number passes by customer while creating an order. | [optional] [default to '0']
 **ingram_part_number** | **str** | Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes. | [optional] 
+**upc** | **str** |  | [optional] 
 **vendor_part_number** | **str** | Vendor Part Number. | [optional] 
 **customer_part_number** | **str** | Part number from customer&#39;s system. | [optional] 
 **vendor_name** | **str** | Name of the vendor. | [optional] 
