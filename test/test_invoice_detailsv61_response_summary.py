@@ -51,7 +51,7 @@ class TestInvoiceDetailsv61ResponseSummary(unittest.TestCase):
                     discount_amount = 1.337, 
                     discount_type = '', 
                     total_tax_amount = 1.337, 
-                    invoiced_amount_due = 1.337, 
+                    invoices_amount_due = 1.337, 
                     freight_amount = 1.337, ),
                 foreign_fx_totals = xi.sdk.resellers.models.invoice_detailsv6_1_response_summary_foreign_fx_totals.InvoiceDetailsv6_1Response_summary_foreignFxTotals(
                     foreign_currency_code = '', 

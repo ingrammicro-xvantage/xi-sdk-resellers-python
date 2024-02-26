@@ -31,8 +31,8 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     line_number: Optional[StrictStr] = Field(default=None, description="Line number which the product will appear in the quote.  Line number is manditory when unique configurations are included in a quote and mainting the item line order is required.", alias="lineNumber")
     quantity: Optional[StrictInt] = Field(default=None, description="Quantity of product line item quoted.")
     notes: Optional[StrictStr] = Field(default=None, description="Product line item comments.")
-    ean: Optional[StrictStr] = Field(default=None, description="EANUPC", alias="EAN")
-    co_o: Optional[StrictStr] = Field(default=None, description="Country of Origin.", alias="CoO")
+    ean: Optional[StrictStr] = Field(default=None, description="EANUPC")
+    coo: Optional[StrictStr] = Field(default=None, description="Country of Origin.")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor Part Number", alias="vendorPartNumber")
     description: Optional[StrictStr] = Field(default=None, description="Product description.  Note - The quote view api returns only the product short description as maintained in Ingram Micro's crm system.  For long descriptions, please refer to alternative information sources.")
@@ -44,7 +44,7 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     vendor_name: Optional[StrictStr] = Field(default=None, description="Vendor name of the product", alias="vendorName")
     terms: Optional[StrictStr] = Field(default=None, description="Terms of the quote")
     price: Optional[QuoteDetailsResponseProductsInnerPrice] = None
-    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "EAN", "CoO", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "price"]
+    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "price"]
 
     model_config = {
         "populate_by_name": True,
@@ -104,8 +104,8 @@ class QuoteDetailsResponseProductsInner(BaseModel):
             "lineNumber": obj.get("lineNumber"),
             "quantity": obj.get("quantity"),
             "notes": obj.get("notes"),
-            "EAN": obj.get("EAN"),
-            "CoO": obj.get("CoO"),
+            "ean": obj.get("ean"),
+            "coo": obj.get("coo"),
             "ingramPartNumber": obj.get("ingramPartNumber"),
             "vendorPartNumber": obj.get("vendorPartNumber"),
             "description": obj.get("description"),

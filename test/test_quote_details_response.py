@@ -82,7 +82,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                         quantity = 56, 
                         notes = '', 
                         ean = '', 
-                        co_o = '', 
+                        coo = '', 
                         ingram_part_number = '', 
                         vendor_part_number = '', 
                         description = '', 

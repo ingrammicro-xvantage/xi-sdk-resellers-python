@@ -30,9 +30,9 @@ class InvoiceDetailsv61ResponseSummaryTotals(BaseModel):
     discount_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Discount amount.", alias="discountAmount")
     discount_type: Optional[StrictStr] = Field(default=None, description="Type of discount.", alias="discountType")
     total_tax_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total Tax amount.", alias="totalTaxAmount")
-    invoiced_amount_due: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total amount due for the invoice.", alias="invoicedAmountDue")
+    invoices_amount_due: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total amount due for the invoice.", alias="invoicesAmountDue")
     freight_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Freight amount", alias="freightAmount")
-    __properties: ClassVar[List[str]] = ["netInvoiceAmount", "discountAmount", "discountType", "totalTaxAmount", "invoicedAmountDue", "freightAmount"]
+    __properties: ClassVar[List[str]] = ["netInvoiceAmount", "discountAmount", "discountType", "totalTaxAmount", "invoicesAmountDue", "freightAmount"]
 
     model_config = {
         "populate_by_name": True,
@@ -89,7 +89,7 @@ class InvoiceDetailsv61ResponseSummaryTotals(BaseModel):
             "discountAmount": obj.get("discountAmount"),
             "discountType": obj.get("discountType"),
             "totalTaxAmount": obj.get("totalTaxAmount"),
-            "invoicedAmountDue": obj.get("invoicedAmountDue"),
+            "invoicesAmountDue": obj.get("invoicesAmountDue"),
             "freightAmount": obj.get("freightAmount")
         })
         return _obj
