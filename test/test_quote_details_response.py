@@ -93,12 +93,19 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                         quote_products_supplier_part_auxiliary_id = '', 
                         vendor_name = '', 
                         terms = '', 
+                        is_subscription = True, 
+                        reseller_margin = '', 
                         price = xi.sdk.resellers.models.quote_details_response_products_inner_price.QuoteDetailsResponse_products_inner_price(
                             quote_price = 56, 
                             msrp = 56, 
                             extended_msrp = 56, 
                             extended_quote_price = 56, 
-                            discount_off_list = 1.337, ), )
+                            discount_off_list = '', 
+                            vendorprice = 1.337, 
+                            extendedvendorprice = 1.337, 
+                            total_visible_reserve_quantity = 56, 
+                            type = '', 
+                            recurring_price_model = '', ), )
                     ],
                 products_count = 56,
                 extended_msrp_total = 56,

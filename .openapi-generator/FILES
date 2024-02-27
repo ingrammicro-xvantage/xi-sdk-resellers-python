@@ -4,6 +4,8 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
+docs/AccesstokenApi.md
+docs/AccesstokenResponse.md
 docs/AvailabilityAsyncNotificationRequest.md
 docs/AvailabilityAsyncNotificationRequestResourceInner.md
 docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md
@@ -27,6 +29,10 @@ docs/FreightResponseFreightEstimateResponse.md
 docs/FreightResponseFreightEstimateResponseDistributionInner.md
 docs/FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.md
 docs/FreightResponseFreightEstimateResponseLinesInner.md
+docs/GetAccesstoken400Response.md
+docs/GetAccesstoken500Response.md
+docs/GetAccesstoken500ResponseFault.md
+docs/GetAccesstoken500ResponseFaultDetail.md
 docs/GetResellerV6ValidateQuote400Response.md
 docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md
 docs/GetResellerV6ValidateQuote500Response.md
@@ -202,6 +208,8 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_accesstoken_api.py
+test/test_accesstoken_response.py
 test/test_availability_async_notification_request.py
 test/test_availability_async_notification_request_resource_inner.py
 test/test_availability_async_notification_request_resource_inner_links_inner.py
@@ -225,6 +233,10 @@ test/test_freight_response_freight_estimate_response.py
 test/test_freight_response_freight_estimate_response_distribution_inner.py
 test/test_freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.py
 test/test_freight_response_freight_estimate_response_lines_inner.py
+test/test_get_accesstoken400_response.py
+test/test_get_accesstoken500_response.py
+test/test_get_accesstoken500_response_fault.py
+test/test_get_accesstoken500_response_fault_detail.py
 test/test_get_reseller_v6_validate_quote400_response.py
 test/test_get_reseller_v6_validate_quote400_response_fields_inner.py
 test/test_get_reseller_v6_validate_quote500_response.py
@@ -398,6 +410,7 @@ xi/__init__.py
 xi/sdk/__init__.py
 xi/sdk/resellers/__init__.py
 xi/sdk/resellers/api/__init__.py
+xi/sdk/resellers/api/accesstoken_api.py
 xi/sdk/resellers/api/deals_api.py
 xi/sdk/resellers/api/freight_estimate_api.py
 xi/sdk/resellers/api/invoices_api.py
@@ -414,6 +427,7 @@ xi/sdk/resellers/api_response.py
 xi/sdk/resellers/configuration.py
 xi/sdk/resellers/exceptions.py
 xi/sdk/resellers/models/__init__.py
+xi/sdk/resellers/models/accesstoken_response.py
 xi/sdk/resellers/models/availability_async_notification_request.py
 xi/sdk/resellers/models/availability_async_notification_request_resource_inner.py
 xi/sdk/resellers/models/availability_async_notification_request_resource_inner_links_inner.py
@@ -435,6 +449,10 @@ xi/sdk/resellers/models/freight_response_freight_estimate_response.py
 xi/sdk/resellers/models/freight_response_freight_estimate_response_distribution_inner.py
 xi/sdk/resellers/models/freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.py
 xi/sdk/resellers/models/freight_response_freight_estimate_response_lines_inner.py
+xi/sdk/resellers/models/get_accesstoken400_response.py
+xi/sdk/resellers/models/get_accesstoken500_response.py
+xi/sdk/resellers/models/get_accesstoken500_response_fault.py
+xi/sdk/resellers/models/get_accesstoken500_response_fault_detail.py
 xi/sdk/resellers/models/get_reseller_v6_validate_quote400_response.py
 xi/sdk/resellers/models/get_reseller_v6_validate_quote400_response_fields_inner.py
 xi/sdk/resellers/models/get_reseller_v6_validate_quote500_response.py

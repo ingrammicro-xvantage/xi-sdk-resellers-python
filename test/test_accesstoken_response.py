@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.quote_to_order_response import QuoteToOrderResponse
+from xi.sdk.resellers.models.accesstoken_response import AccesstokenResponse
 
-class TestQuoteToOrderResponse(unittest.TestCase):
-    """QuoteToOrderResponse unit test stubs"""
+class TestAccesstokenResponse(unittest.TestCase):
+    """AccesstokenResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,27 +25,27 @@ class TestQuoteToOrderResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> QuoteToOrderResponse:
-        """Test QuoteToOrderResponse
+    def make_instance(self, include_optional) -> AccesstokenResponse:
+        """Test AccesstokenResponse
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `QuoteToOrderResponse`
+        # uncomment below to create an instance of `AccesstokenResponse`
         """
-        model = QuoteToOrderResponse()
+        model = AccesstokenResponse()
         if include_optional:
-            return QuoteToOrderResponse(
-                quote_number = 'QUO-14551943-D2Y9L9',
-                confirmation_number = '987654322',
-                message = ''
+            return AccesstokenResponse(
+                access_token = '',
+                token_type = '',
+                expires_in = ''
             )
         else:
-            return QuoteToOrderResponse(
+            return AccesstokenResponse(
         )
         """
 
-    def testQuoteToOrderResponse(self):
-        """Test QuoteToOrderResponse"""
+    def testAccesstokenResponse(self):
+        """Test AccesstokenResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
