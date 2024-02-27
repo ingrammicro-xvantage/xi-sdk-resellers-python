@@ -39,7 +39,12 @@ class TestQuoteDetailsResponseProductsInnerPrice(unittest.TestCase):
                 msrp = 56,
                 extended_msrp = 56,
                 extended_quote_price = 56,
-                discount_off_list = 1.337
+                discount_off_list = '',
+                vendorprice = 1.337,
+                extendedvendorprice = 1.337,
+                total_visible_reserve_quantity = 56,
+                type = '',
+                recurring_price_model = ''
             )
         else:
             return QuoteDetailsResponseProductsInnerPrice(

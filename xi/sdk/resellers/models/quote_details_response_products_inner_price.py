@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,8 +30,13 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
     msrp: Optional[StrictInt] = Field(default=None, description="Manufacturer Suggested Retail Price")
     extended_msrp: Optional[StrictInt] = Field(default=None, description="Extended MSRP - Manufacturer Suggested Retail Price X Quantity", alias="extendedMsrp")
     extended_quote_price: Optional[StrictInt] = Field(default=None, description="Extended reseller quoted price (cost to reseller) X Quantity", alias="extendedQuotePrice")
-    discount_off_list: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Discount off list percentage", alias="discountOffList")
-    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "discountOffList"]
+    discount_off_list: Optional[StrictStr] = Field(default=None, description="Discount off list percentage extended", alias="discountOffList")
+    vendorprice: Optional[Union[StrictFloat, StrictInt]] = None
+    extendedvendorprice: Optional[Union[StrictFloat, StrictInt]] = None
+    total_visible_reserve_quantity: Optional[StrictInt] = Field(default=None, alias="totalVisibleReserveQuantity")
+    type: Optional[StrictStr] = None
+    recurring_price_model: Optional[StrictStr] = Field(default=None, alias="recurringPriceModel")
+    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "discountOffList", "vendorprice", "extendedvendorprice", "totalVisibleReserveQuantity", "type", "recurringPriceModel"]
 
     model_config = {
         "populate_by_name": True,
@@ -88,7 +93,12 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
             "msrp": obj.get("msrp"),
             "extendedMsrp": obj.get("extendedMsrp"),
             "extendedQuotePrice": obj.get("extendedQuotePrice"),
-            "discountOffList": obj.get("discountOffList")
+            "discountOffList": obj.get("discountOffList"),
+            "vendorprice": obj.get("vendorprice"),
+            "extendedvendorprice": obj.get("extendedvendorprice"),
+            "totalVisibleReserveQuantity": obj.get("totalVisibleReserveQuantity"),
+            "type": obj.get("type"),
+            "recurringPriceModel": obj.get("recurringPriceModel")
         })
         return _obj
 

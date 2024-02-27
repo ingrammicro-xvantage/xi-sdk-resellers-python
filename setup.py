@@ -31,14 +31,14 @@ CLASSIFIERS = [
     'Programming Language :: Python :: 3.12',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',  # Adjusted for developers interested in trying out the beta version
 ]
 
 
 setup(
     name=NAME,
-    version="0.0.7.2",
+    version="1.0.0",
     description="Ingram Micro - Xvantage Integration (XI) Python Server-side SDK.",
     author="Ingram Micro Xvantage Integration(XI)",
     author_email="xi_support@ingrammicro.com",
@@ -50,7 +50,7 @@ setup(
     include_package_data=True,
     long_description_content_type='text/markdown',
     long_description=DESCRIPTION,
-    package_data={"xi.sdk.resellers.python": ["py.typed"]},
+    package_data={"xi.sdk.resellers": ["py.typed", "docs/*"]},
     license='MIT',
     project_urls={
         'GitHub Repo': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python',

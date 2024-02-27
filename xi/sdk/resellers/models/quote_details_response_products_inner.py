@@ -43,8 +43,10 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     quote_products_supplier_part_auxiliary_id: Optional[StrictStr] = Field(default=None, description="Vendor product configuration ID specific to Cisco.", alias="quoteProductsSupplierPartAuxiliaryId")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Vendor name of the product", alias="vendorName")
     terms: Optional[StrictStr] = Field(default=None, description="Terms of the quote")
+    is_subscription: Optional[StrictBool] = Field(default=None, alias="isSubscription")
+    reseller_margin: Optional[StrictStr] = Field(default=None, alias="resellerMargin")
     price: Optional[QuoteDetailsResponseProductsInnerPrice] = None
-    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "price"]
+    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "isSubscription", "resellerMargin", "price"]
 
     model_config = {
         "populate_by_name": True,
@@ -116,6 +118,8 @@ class QuoteDetailsResponseProductsInner(BaseModel):
             "quoteProductsSupplierPartAuxiliaryId": obj.get("quoteProductsSupplierPartAuxiliaryId"),
             "vendorName": obj.get("vendorName"),
             "terms": obj.get("terms"),
+            "isSubscription": obj.get("isSubscription"),
+            "resellerMargin": obj.get("resellerMargin"),
             "price": QuoteDetailsResponseProductsInnerPrice.from_dict(obj["price"]) if obj.get("price") is not None else None
         })
         return _obj

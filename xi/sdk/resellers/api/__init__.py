@@ -1,6 +1,7 @@
 # flake8: noqa
 
 # import apis into api package
+from xi.sdk.resellers.api.accesstoken_api import AccesstokenApi
 from xi.sdk.resellers.api.deals_api import DealsApi
 from xi.sdk.resellers.api.freight_estimate_api import FreightEstimateApi
 from xi.sdk.resellers.api.invoices_api import InvoicesApi
