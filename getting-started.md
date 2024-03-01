@@ -20,6 +20,8 @@
 * Open a new terminal window (`Ctrl+Shift+` ```)
 * Type: `py -m pip install xi.sdk.resellers` (If you receive “command not found” error, please make sure to install all the prerequisites from the above [guide](https://code.visualstudio.com/docs/python/python-tutorial))
 
+![quickstart-install-package](./assets/images/quickstart-install-package.png)
+
 ### Step 3: Write a simple code to access the access token and product details endpoints.
 
 [Access Token API](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/blob/main/docs/AccesstokenApi.md#getaccesstoken)

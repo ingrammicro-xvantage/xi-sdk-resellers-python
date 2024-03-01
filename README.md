@@ -47,6 +47,8 @@ Execute `pytest` to run the tests.
 
 ## Getting Started
 
+Quickstart on creating an application can be found [here](getting-started.md)
+
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
