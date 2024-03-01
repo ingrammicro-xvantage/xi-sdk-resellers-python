@@ -1,4 +1,4 @@
-# XI SDK Quickstart for C#
+# XI SDK Quickstart for Python
 
 ![Pyton icon](./assets/images/python-icon.png)
 
