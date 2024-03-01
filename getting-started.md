@@ -17,7 +17,7 @@
 
 ### Step 2: Install XI SDK package and all dependencies to your project from Pip
 
-* Open a new terminal window (`Ctrl+Shift+` ```)
+* Open a new terminal window (Ctrl+Shift+`)
 * Type: `py -m pip install xi.sdk.resellers` (If you receive “command not found” error, please make sure to install all the prerequisites from the above [guide](https://code.visualstudio.com/docs/python/python-tutorial))
 
 ![quickstart-install-package](./assets/images/quickstart-install-package.png)
