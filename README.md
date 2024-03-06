@@ -309,9 +309,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## Documentation for Authorization
-
-
 Authentication schemes defined for the API:
 ### application
 
