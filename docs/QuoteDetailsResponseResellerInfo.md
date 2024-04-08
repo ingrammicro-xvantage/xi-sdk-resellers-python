@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponseResellerInfo from a JSON string
 quote_details_response_reseller_info_instance = QuoteDetailsResponseResellerInfo.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponseResellerInfo.to_json()
+print(QuoteDetailsResponseResellerInfo.to_json())
 
 # convert the object into a dict
 quote_details_response_reseller_info_dict = quote_details_response_reseller_info_instance.to_dict()

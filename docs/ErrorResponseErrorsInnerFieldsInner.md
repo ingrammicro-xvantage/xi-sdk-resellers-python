@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of ErrorResponseErrorsInnerFieldsInner from a JSON string
 error_response_errors_inner_fields_inner_instance = ErrorResponseErrorsInnerFieldsInner.from_json(json)
 # print the JSON string representation of the object
-print ErrorResponseErrorsInnerFieldsInner.to_json()
+print(ErrorResponseErrorsInnerFieldsInner.to_json())
 
 # convert the object into a dict
 error_response_errors_inner_fields_inner_dict = error_response_errors_inner_fields_inner_instance.to_dict()

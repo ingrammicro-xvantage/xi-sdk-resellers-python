@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of RenewalsSearchResponseRenewalsInner from a JSON string
 renewals_search_response_renewals_inner_instance = RenewalsSearchResponseRenewalsInner.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchResponseRenewalsInner.to_json()
+print(RenewalsSearchResponseRenewalsInner.to_json())
 
 # convert the object into a dict
 renewals_search_response_renewals_inner_dict = renewals_search_response_renewals_inner_instance.to_dict()

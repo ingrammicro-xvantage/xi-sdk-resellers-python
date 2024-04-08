@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of DealsSearchResponseDealsInner from a JSON string
 deals_search_response_deals_inner_instance = DealsSearchResponseDealsInner.from_json(json)
 # print the JSON string representation of the object
-print DealsSearchResponseDealsInner.to_json()
+print(DealsSearchResponseDealsInner.to_json())
 
 # convert the object into a dict
 deals_search_response_deals_inner_dict = deals_search_response_deals_inner_instance.to_dict()

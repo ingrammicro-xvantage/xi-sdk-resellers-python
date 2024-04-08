@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of DealsDetailsResponse from a JSON string
 deals_details_response_instance = DealsDetailsResponse.from_json(json)
 # print the JSON string representation of the object
-print DealsDetailsResponse.to_json()
+print(DealsDetailsResponse.to_json())
 
 # convert the object into a dict
 deals_details_response_dict = deals_details_response_instance.to_dict()

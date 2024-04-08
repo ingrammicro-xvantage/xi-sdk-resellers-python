@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of RenewalsDetailsResponseEndUserInfo from a JSON string
 renewals_details_response_end_user_info_instance = RenewalsDetailsResponseEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print RenewalsDetailsResponseEndUserInfo.to_json()
+print(RenewalsDetailsResponseEndUserInfo.to_json())
 
 # convert the object into a dict
 renewals_details_response_end_user_info_dict = renewals_details_response_end_user_info_instance.to_dict()

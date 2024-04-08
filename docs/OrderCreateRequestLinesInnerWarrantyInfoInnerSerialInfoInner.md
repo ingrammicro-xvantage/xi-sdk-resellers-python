@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner from a JSON string
 order_create_request_lines_inner_warranty_info_inner_serial_info_inner_instance = OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.to_json()
+print(OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.to_json())
 
 # convert the object into a dict
 order_create_request_lines_inner_warranty_info_inner_serial_info_inner_dict = order_create_request_lines_inner_warranty_info_inner_serial_info_inner_instance.to_dict()

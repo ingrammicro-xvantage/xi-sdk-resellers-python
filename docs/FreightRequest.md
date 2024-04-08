@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of FreightRequest from a JSON string
 freight_request_instance = FreightRequest.from_json(json)
 # print the JSON string representation of the object
-print FreightRequest.to_json()
+print(FreightRequest.to_json())
 
 # convert the object into a dict
 freight_request_dict = freight_request_instance.to_dict()

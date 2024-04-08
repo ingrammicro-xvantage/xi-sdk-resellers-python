@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of OrderSearchResponseOrdersInnerSubOrdersInner from a JSON string
 order_search_response_orders_inner_sub_orders_inner_instance = OrderSearchResponseOrdersInnerSubOrdersInner.from_json(json)
 # print the JSON string representation of the object
-print OrderSearchResponseOrdersInnerSubOrdersInner.to_json()
+print(OrderSearchResponseOrdersInnerSubOrdersInner.to_json())
 
 # convert the object into a dict
 order_search_response_orders_inner_sub_orders_inner_dict = order_search_response_orders_inner_sub_orders_inner_instance.to_dict()

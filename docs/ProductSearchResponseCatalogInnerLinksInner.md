@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ProductSearchResponseCatalogInnerLinksInner from a JSON string
 product_search_response_catalog_inner_links_inner_instance = ProductSearchResponseCatalogInnerLinksInner.from_json(json)
 # print the JSON string representation of the object
-print ProductSearchResponseCatalogInnerLinksInner.to_json()
+print(ProductSearchResponseCatalogInnerLinksInner.to_json())
 
 # convert the object into a dict
 product_search_response_catalog_inner_links_inner_dict = product_search_response_catalog_inner_links_inner_instance.to_dict()

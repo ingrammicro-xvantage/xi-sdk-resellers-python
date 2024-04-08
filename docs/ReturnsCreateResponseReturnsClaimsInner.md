@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of ReturnsCreateResponseReturnsClaimsInner from a JSON string
 returns_create_response_returns_claims_inner_instance = ReturnsCreateResponseReturnsClaimsInner.from_json(json)
 # print the JSON string representation of the object
-print ReturnsCreateResponseReturnsClaimsInner.to_json()
+print(ReturnsCreateResponseReturnsClaimsInner.to_json())
 
 # convert the object into a dict
 returns_create_response_returns_claims_inner_dict = returns_create_response_returns_claims_inner_instance.to_dict()

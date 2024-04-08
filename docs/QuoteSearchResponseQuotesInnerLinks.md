@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of QuoteSearchResponseQuotesInnerLinks from a JSON string
 quote_search_response_quotes_inner_links_instance = QuoteSearchResponseQuotesInnerLinks.from_json(json)
 # print the JSON string representation of the object
-print QuoteSearchResponseQuotesInnerLinks.to_json()
+print(QuoteSearchResponseQuotesInnerLinks.to_json())
 
 # convert the object into a dict
 quote_search_response_quotes_inner_links_dict = quote_search_response_quotes_inner_links_instance.to_dict()

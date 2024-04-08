@@ -50,7 +50,7 @@ json = "{}"
 # create an instance of ProductDetailResponseIndicators from a JSON string
 product_detail_response_indicators_instance = ProductDetailResponseIndicators.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseIndicators.to_json()
+print(ProductDetailResponseIndicators.to_json())
 
 # convert the object into a dict
 product_detail_response_indicators_dict = product_detail_response_indicators_instance.to_dict()

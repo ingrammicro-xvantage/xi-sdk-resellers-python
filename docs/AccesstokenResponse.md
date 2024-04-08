@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of AccesstokenResponse from a JSON string
 accesstoken_response_instance = AccesstokenResponse.from_json(json)
 # print the JSON string representation of the object
-print AccesstokenResponse.to_json()
+print(AccesstokenResponse.to_json())
 
 # convert the object into a dict
 accesstoken_response_dict = accesstoken_response_instance.to_dict()

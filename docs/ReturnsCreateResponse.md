@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of ReturnsCreateResponse from a JSON string
 returns_create_response_instance = ReturnsCreateResponse.from_json(json)
 # print the JSON string representation of the object
-print ReturnsCreateResponse.to_json()
+print(ReturnsCreateResponse.to_json())
 
 # convert the object into a dict
 returns_create_response_dict = returns_create_response_instance.to_dict()

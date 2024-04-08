@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of OrderModifyRequestAdditionalAttributesInner from a JSON string
 order_modify_request_additional_attributes_inner_instance = OrderModifyRequestAdditionalAttributesInner.from_json(json)
 # print the JSON string representation of the object
-print OrderModifyRequestAdditionalAttributesInner.to_json()
+print(OrderModifyRequestAdditionalAttributesInner.to_json())
 
 # convert the object into a dict
 order_modify_request_additional_attributes_inner_dict = order_modify_request_additional_attributes_inner_instance.to_dict()

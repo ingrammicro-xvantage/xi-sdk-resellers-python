@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of ProductDetailResponseCiscoFields from a JSON string
 product_detail_response_cisco_fields_instance = ProductDetailResponseCiscoFields.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseCiscoFields.to_json()
+print(ProductDetailResponseCiscoFields.to_json())
 
 # convert the object into a dict
 product_detail_response_cisco_fields_dict = product_detail_response_cisco_fields_instance.to_dict()

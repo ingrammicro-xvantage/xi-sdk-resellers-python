@@ -31,9 +31,9 @@ Name | Type | Description | Notes
 **end_user_info** | [**QuoteDetailsResponseEndUserInfo**](QuoteDetailsResponseEndUserInfo.md) |  | [optional] 
 **products** | [**List[QuoteDetailsResponseProductsInner]**](QuoteDetailsResponseProductsInner.md) |  | [optional] 
 **products_count** | **int** | Total number of products included in the quote | [optional] 
-**extended_msrp_total** | **int** | Total extended MSRP for all products included in the quote | [optional] 
+**extended_msrp_total** | **float** | Total extended MSRP for all products included in the quote | [optional] 
 **quantity_total** | **int** | Total quantity of all items in the quote. | [optional] 
-**extended_quote_price_total** | **int** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
+**extended_quote_price_total** | **float** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
 **total_quote_amount** | **str** |  | [optional] 
 **additional_attributes** | [**List[QuoteDetailsResponseAdditionalAttributesInner]**](QuoteDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
@@ -47,7 +47,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponse from a JSON string
 quote_details_response_instance = QuoteDetailsResponse.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponse.to_json()
+print(QuoteDetailsResponse.to_json())
 
 # convert the object into a dict
 quote_details_response_dict = quote_details_response_instance.to_dict()

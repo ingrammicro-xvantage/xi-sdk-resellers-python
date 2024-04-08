@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of OrderCreateResponseOrdersInnerRejectedLineItemsInner from a JSON string
 order_create_response_orders_inner_rejected_line_items_inner_instance = OrderCreateResponseOrdersInnerRejectedLineItemsInner.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateResponseOrdersInnerRejectedLineItemsInner.to_json()
+print(OrderCreateResponseOrdersInnerRejectedLineItemsInner.to_json())
 
 # convert the object into a dict
 order_create_response_orders_inner_rejected_line_items_inner_dict = order_create_response_orders_inner_rejected_line_items_inner_instance.to_dict()

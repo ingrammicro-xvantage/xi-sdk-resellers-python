@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of PriceAndAvailabilityRequest from a JSON string
 price_and_availability_request_instance = PriceAndAvailabilityRequest.from_json(json)
 # print the JSON string representation of the object
-print PriceAndAvailabilityRequest.to_json()
+print(PriceAndAvailabilityRequest.to_json())
 
 # convert the object into a dict
 price_and_availability_request_dict = price_and_availability_request_instance.to_dict()

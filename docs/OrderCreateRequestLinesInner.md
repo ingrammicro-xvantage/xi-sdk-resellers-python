@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of OrderCreateRequestLinesInner from a JSON string
 order_create_request_lines_inner_instance = OrderCreateRequestLinesInner.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestLinesInner.to_json()
+print(OrderCreateRequestLinesInner.to_json())
 
 # convert the object into a dict
 order_create_request_lines_inner_dict = order_create_request_lines_inner_instance.to_dict()

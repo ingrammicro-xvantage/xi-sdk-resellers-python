@@ -35,7 +35,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponseProductsInner from a JSON string
 quote_details_response_products_inner_instance = QuoteDetailsResponseProductsInner.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponseProductsInner.to_json()
+print(QuoteDetailsResponseProductsInner.to_json())
 
 # convert the object into a dict
 quote_details_response_products_inner_dict = quote_details_response_products_inner_instance.to_dict()

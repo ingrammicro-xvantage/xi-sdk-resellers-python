@@ -36,7 +36,7 @@ json = "{}"
 # create an instance of InvoiceDetailsv61Response from a JSON string
 invoice_detailsv61_response_instance = InvoiceDetailsv61Response.from_json(json)
 # print the JSON string representation of the object
-print InvoiceDetailsv61Response.to_json()
+print(InvoiceDetailsv61Response.to_json())
 
 # convert the object into a dict
 invoice_detailsv61_response_dict = invoice_detailsv61_response_instance.to_dict()

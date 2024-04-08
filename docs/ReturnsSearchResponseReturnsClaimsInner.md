@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of ReturnsSearchResponseReturnsClaimsInner from a JSON string
 returns_search_response_returns_claims_inner_instance = ReturnsSearchResponseReturnsClaimsInner.from_json(json)
 # print the JSON string representation of the object
-print ReturnsSearchResponseReturnsClaimsInner.to_json()
+print(ReturnsSearchResponseReturnsClaimsInner.to_json())
 
 # convert the object into a dict
 returns_search_response_returns_claims_inner_dict = returns_search_response_returns_claims_inner_instance.to_dict()

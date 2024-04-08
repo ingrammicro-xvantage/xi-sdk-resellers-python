@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponseAdditionalAttributesInner from a JSON string
 quote_details_response_additional_attributes_inner_instance = QuoteDetailsResponseAdditionalAttributesInner.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponseAdditionalAttributesInner.to_json()
+print(QuoteDetailsResponseAdditionalAttributesInner.to_json())
 
 # convert the object into a dict
 quote_details_response_additional_attributes_inner_dict = quote_details_response_additional_attributes_inner_instance.to_dict()

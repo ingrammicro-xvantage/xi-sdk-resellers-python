@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetResellerV6ValidateQuote400ResponseFieldsInner from a JSON string
 get_reseller_v6_validate_quote400_response_fields_inner_instance = GetResellerV6ValidateQuote400ResponseFieldsInner.from_json(json)
 # print the JSON string representation of the object
-print GetResellerV6ValidateQuote400ResponseFieldsInner.to_json()
+print(GetResellerV6ValidateQuote400ResponseFieldsInner.to_json())
 
 # convert the object into a dict
 get_reseller_v6_validate_quote400_response_fields_inner_dict = get_reseller_v6_validate_quote400_response_fields_inner_instance.to_dict()

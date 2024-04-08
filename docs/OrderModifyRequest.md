@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of OrderModifyRequest from a JSON string
 order_modify_request_instance = OrderModifyRequest.from_json(json)
 # print the JSON string representation of the object
-print OrderModifyRequest.to_json()
+print(OrderModifyRequest.to_json())
 
 # convert the object into a dict
 order_modify_request_dict = order_modify_request_instance.to_dict()

@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of OrderCreateRequestResellerInfo from a JSON string
 order_create_request_reseller_info_instance = OrderCreateRequestResellerInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestResellerInfo.to_json()
+print(OrderCreateRequestResellerInfo.to_json())
 
 # convert the object into a dict
 order_create_request_reseller_info_dict = order_create_request_reseller_info_instance.to_dict()

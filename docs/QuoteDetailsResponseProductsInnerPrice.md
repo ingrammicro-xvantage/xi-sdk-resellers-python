@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**quote_price** | **int** | Ingram Micro quoted price specific to the reseller and quote. | [optional] 
-**msrp** | **int** | Manufacturer Suggested Retail Price | [optional] 
-**extended_msrp** | **int** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
-**extended_quote_price** | **int** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
+**quote_price** | **float** | Ingram Micro quoted price specific to the reseller and quote. | [optional] 
+**msrp** | **float** | Manufacturer Suggested Retail Price | [optional] 
+**extended_msrp** | **float** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
+**extended_quote_price** | **float** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
 **discount_off_list** | **str** | Discount off list percentage extended | [optional] 
 **vendorprice** | **float** |  | [optional] 
 **extendedvendorprice** | **float** |  | [optional] 
@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponseProductsInnerPrice from a JSON string
 quote_details_response_products_inner_price_instance = QuoteDetailsResponseProductsInnerPrice.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponseProductsInnerPrice.to_json()
+print(QuoteDetailsResponseProductsInnerPrice.to_json())
 
 # convert the object into a dict
 quote_details_response_products_inner_price_dict = quote_details_response_products_inner_price_instance.to_dict()

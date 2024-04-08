@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of ReturnsCreateRequestListInner from a JSON string
 returns_create_request_list_inner_instance = ReturnsCreateRequestListInner.from_json(json)
 # print the JSON string representation of the object
-print ReturnsCreateRequestListInner.to_json()
+print(ReturnsCreateRequestListInner.to_json())
 
 # convert the object into a dict
 returns_create_request_list_inner_dict = returns_create_request_list_inner_instance.to_dict()

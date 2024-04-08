@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of GetResellerV6ValidateQuote500Response from a JSON string
 get_reseller_v6_validate_quote500_response_instance = GetResellerV6ValidateQuote500Response.from_json(json)
 # print the JSON string representation of the object
-print GetResellerV6ValidateQuote500Response.to_json()
+print(GetResellerV6ValidateQuote500Response.to_json())
 
 # convert the object into a dict
 get_reseller_v6_validate_quote500_response_dict = get_reseller_v6_validate_quote500_response_instance.to_dict()

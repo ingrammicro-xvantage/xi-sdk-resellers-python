@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of OrderCreateRequestVmf from a JSON string
 order_create_request_vmf_instance = OrderCreateRequestVmf.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestVmf.to_json()
+print(OrderCreateRequestVmf.to_json())
 
 # convert the object into a dict
 order_create_request_vmf_dict = order_create_request_vmf_instance.to_dict()

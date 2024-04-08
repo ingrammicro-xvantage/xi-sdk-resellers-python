@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of InvoiceSearchResponseInvoicesInner from a JSON string
 invoice_search_response_invoices_inner_instance = InvoiceSearchResponseInvoicesInner.from_json(json)
 # print the JSON string representation of the object
-print InvoiceSearchResponseInvoicesInner.to_json()
+print(InvoiceSearchResponseInvoicesInner.to_json())
 
 # convert the object into a dict
 invoice_search_response_invoices_inner_dict = invoice_search_response_invoices_inner_instance.to_dict()

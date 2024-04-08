@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of PostRenewalssearch400Response from a JSON string
 post_renewalssearch400_response_instance = PostRenewalssearch400Response.from_json(json)
 # print the JSON string representation of the object
-print PostRenewalssearch400Response.to_json()
+print(PostRenewalssearch400Response.to_json())
 
 # convert the object into a dict
 post_renewalssearch400_response_dict = post_renewalssearch400_response_instance.to_dict()

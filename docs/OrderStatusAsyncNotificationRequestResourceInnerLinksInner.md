@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of OrderStatusAsyncNotificationRequestResourceInnerLinksInner from a JSON string
 order_status_async_notification_request_resource_inner_links_inner_instance = OrderStatusAsyncNotificationRequestResourceInnerLinksInner.from_json(json)
 # print the JSON string representation of the object
-print OrderStatusAsyncNotificationRequestResourceInnerLinksInner.to_json()
+print(OrderStatusAsyncNotificationRequestResourceInnerLinksInner.to_json())
 
 # convert the object into a dict
 order_status_async_notification_request_resource_inner_links_inner_dict = order_status_async_notification_request_resource_inner_links_inner_instance.to_dict()

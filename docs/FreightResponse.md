@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of FreightResponse from a JSON string
 freight_response_instance = FreightResponse.from_json(json)
 # print the JSON string representation of the object
-print FreightResponse.to_json()
+print(FreightResponse.to_json())
 
 # convert the object into a dict
 freight_response_dict = freight_response_instance.to_dict()

@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of FreightRequestShipToAddressInner from a JSON string
 freight_request_ship_to_address_inner_instance = FreightRequestShipToAddressInner.from_json(json)
 # print the JSON string representation of the object
-print FreightRequestShipToAddressInner.to_json()
+print(FreightRequestShipToAddressInner.to_json())
 
 # convert the object into a dict
 freight_request_ship_to_address_inner_dict = freight_request_ship_to_address_inner_instance.to_dict()

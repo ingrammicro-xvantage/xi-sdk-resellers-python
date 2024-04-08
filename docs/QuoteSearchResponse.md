@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of QuoteSearchResponse from a JSON string
 quote_search_response_instance = QuoteSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print QuoteSearchResponse.to_json()
+print(QuoteSearchResponse.to_json())
 
 # convert the object into a dict
 quote_search_response_dict = quote_search_response_instance.to_dict()

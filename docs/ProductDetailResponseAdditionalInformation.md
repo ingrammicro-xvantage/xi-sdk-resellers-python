@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of ProductDetailResponseAdditionalInformation from a JSON string
 product_detail_response_additional_information_instance = ProductDetailResponseAdditionalInformation.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseAdditionalInformation.to_json()
+print(ProductDetailResponseAdditionalInformation.to_json())
 
 # convert the object into a dict
 product_detail_response_additional_information_dict = product_detail_response_additional_information_instance.to_dict()

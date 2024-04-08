@@ -32,7 +32,7 @@ json = "{}"
 # create an instance of OrderModifyResponse from a JSON string
 order_modify_response_instance = OrderModifyResponse.from_json(json)
 # print the JSON string representation of the object
-print OrderModifyResponse.to_json()
+print(OrderModifyResponse.to_json())
 
 # convert the object into a dict
 order_modify_response_dict = order_modify_response_instance.to_dict()

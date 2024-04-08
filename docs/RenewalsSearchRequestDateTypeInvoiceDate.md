@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of RenewalsSearchRequestDateTypeInvoiceDate from a JSON string
 renewals_search_request_date_type_invoice_date_instance = RenewalsSearchRequestDateTypeInvoiceDate.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchRequestDateTypeInvoiceDate.to_json()
+print(RenewalsSearchRequestDateTypeInvoiceDate.to_json())
 
 # convert the object into a dict
 renewals_search_request_date_type_invoice_date_dict = renewals_search_request_date_type_invoice_date_instance.to_dict()

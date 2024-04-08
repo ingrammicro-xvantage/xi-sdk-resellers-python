@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetAccesstoken500ResponseFault from a JSON string
 get_accesstoken500_response_fault_instance = GetAccesstoken500ResponseFault.from_json(json)
 # print the JSON string representation of the object
-print GetAccesstoken500ResponseFault.to_json()
+print(GetAccesstoken500ResponseFault.to_json())
 
 # convert the object into a dict
 get_accesstoken500_response_fault_dict = get_accesstoken500_response_fault_instance.to_dict()

@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of ReturnsDetailsResponse from a JSON string
 returns_details_response_instance = ReturnsDetailsResponse.from_json(json)
 # print the JSON string representation of the object
-print ReturnsDetailsResponse.to_json()
+print(ReturnsDetailsResponse.to_json())
 
 # convert the object into a dict
 returns_details_response_dict = returns_details_response_instance.to_dict()

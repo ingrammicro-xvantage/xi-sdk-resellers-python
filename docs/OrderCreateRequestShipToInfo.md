@@ -32,7 +32,7 @@ json = "{}"
 # create an instance of OrderCreateRequestShipToInfo from a JSON string
 order_create_request_ship_to_info_instance = OrderCreateRequestShipToInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestShipToInfo.to_json()
+print(OrderCreateRequestShipToInfo.to_json())
 
 # convert the object into a dict
 order_create_request_ship_to_info_dict = order_create_request_ship_to_info_instance.to_dict()

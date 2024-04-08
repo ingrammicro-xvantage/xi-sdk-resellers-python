@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **estimated_dates** | [**List[OrderDetailB2BLinesInnerEstimatedDatesInner]**](OrderDetailB2BLinesInnerEstimatedDatesInner.md) |  | [optional] 
 **schedule_lines** | [**List[OrderDetailB2BLinesInnerScheduleLinesInner]**](OrderDetailB2BLinesInnerScheduleLinesInner.md) |  | [optional] 
 **multiple_shipments** | [**List[OrderDetailB2BLinesInnerMultipleShipmentsInner]**](OrderDetailB2BLinesInnerMultipleShipmentsInner.md) |  | [optional] 
+**default_carrier_name** | **str** |  | [optional] 
 
 ## Example
 
@@ -47,7 +48,7 @@ json = "{}"
 # create an instance of OrderDetailB2BLinesInner from a JSON string
 order_detail_b2_b_lines_inner_instance = OrderDetailB2BLinesInner.from_json(json)
 # print the JSON string representation of the object
-print OrderDetailB2BLinesInner.to_json()
+print(OrderDetailB2BLinesInner.to_json())
 
 # convert the object into a dict
 order_detail_b2_b_lines_inner_dict = order_detail_b2_b_lines_inner_instance.to_dict()

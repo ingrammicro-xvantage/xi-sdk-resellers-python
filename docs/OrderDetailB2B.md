@@ -40,7 +40,7 @@ json = "{}"
 # create an instance of OrderDetailB2B from a JSON string
 order_detail_b2_b_instance = OrderDetailB2B.from_json(json)
 # print the JSON string representation of the object
-print OrderDetailB2B.to_json()
+print(OrderDetailB2B.to_json())
 
 # convert the object into a dict
 order_detail_b2_b_dict = order_detail_b2_b_instance.to_dict()

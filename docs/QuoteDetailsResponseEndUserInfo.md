@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of QuoteDetailsResponseEndUserInfo from a JSON string
 quote_details_response_end_user_info_instance = QuoteDetailsResponseEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print QuoteDetailsResponseEndUserInfo.to_json()
+print(QuoteDetailsResponseEndUserInfo.to_json())
 
 # convert the object into a dict
 quote_details_response_end_user_info_dict = quote_details_response_end_user_info_instance.to_dict()

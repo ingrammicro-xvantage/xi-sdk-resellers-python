@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of Fields from a JSON string
 fields_instance = Fields.from_json(json)
 # print the JSON string representation of the object
-print Fields.to_json()
+print(Fields.to_json())
 
 # convert the object into a dict
 fields_dict = fields_instance.to_dict()

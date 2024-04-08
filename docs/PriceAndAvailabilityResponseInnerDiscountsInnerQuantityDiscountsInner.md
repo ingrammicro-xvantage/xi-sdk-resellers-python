@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner from a JSON string
 price_and_availability_response_inner_discounts_inner_quantity_discounts_inner_instance = PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner.from_json(json)
 # print the JSON string representation of the object
-print PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner.to_json()
+print(PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner.to_json())
 
 # convert the object into a dict
 price_and_availability_response_inner_discounts_inner_quantity_discounts_inner_dict = price_and_availability_response_inner_discounts_inner_quantity_discounts_inner_instance.to_dict()

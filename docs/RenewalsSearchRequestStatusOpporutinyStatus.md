@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of RenewalsSearchRequestStatusOpporutinyStatus from a JSON string
 renewals_search_request_status_opporutiny_status_instance = RenewalsSearchRequestStatusOpporutinyStatus.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchRequestStatusOpporutinyStatus.to_json()
+print(RenewalsSearchRequestStatusOpporutinyStatus.to_json())
 
 # convert the object into a dict
 renewals_search_request_status_opporutiny_status_dict = renewals_search_request_status_opporutiny_status_instance.to_dict()

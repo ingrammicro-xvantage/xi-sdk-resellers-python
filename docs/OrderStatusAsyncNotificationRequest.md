@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of OrderStatusAsyncNotificationRequest from a JSON string
 order_status_async_notification_request_instance = OrderStatusAsyncNotificationRequest.from_json(json)
 # print the JSON string representation of the object
-print OrderStatusAsyncNotificationRequest.to_json()
+print(OrderStatusAsyncNotificationRequest.to_json())
 
 # convert the object into a dict
 order_status_async_notification_request_dict = order_status_async_notification_request_instance.to_dict()

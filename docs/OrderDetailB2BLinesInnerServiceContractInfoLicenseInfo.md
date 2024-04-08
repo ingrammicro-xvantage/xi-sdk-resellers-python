@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo from a JSON string
 order_detail_b2_b_lines_inner_service_contract_info_license_info_instance = OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo.to_json()
+print(OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo.to_json())
 
 # convert the object into a dict
 order_detail_b2_b_lines_inner_service_contract_info_license_info_dict = order_detail_b2_b_lines_inner_service_contract_info_license_info_instance.to_dict()

@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of RenewalsSearchResponse from a JSON string
 renewals_search_response_instance = RenewalsSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchResponse.to_json()
+print(RenewalsSearchResponse.to_json())
 
 # convert the object into a dict
 renewals_search_response_dict = renewals_search_response_instance.to_dict()

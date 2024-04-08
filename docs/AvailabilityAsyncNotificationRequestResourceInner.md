@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of AvailabilityAsyncNotificationRequestResourceInner from a JSON string
 availability_async_notification_request_resource_inner_instance = AvailabilityAsyncNotificationRequestResourceInner.from_json(json)
 # print the JSON string representation of the object
-print AvailabilityAsyncNotificationRequestResourceInner.to_json()
+print(AvailabilityAsyncNotificationRequestResourceInner.to_json())
 
 # convert the object into a dict
 availability_async_notification_request_resource_inner_dict = availability_async_notification_request_resource_inner_instance.to_dict()

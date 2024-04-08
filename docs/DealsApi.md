@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_resellers_v6_dealssearch**
-> DealsSearchResponse get_resellers_v6_dealssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, end_user=end_user, vendor=vendor, deal_id=deal_id)
+> DealsSearchResponse get_resellers_v6_dealssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, end_user=end_user, vendor=vendor, deal_id=deal_id, size=size, page=page)
 
 Deals Search
 
@@ -136,10 +136,12 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     end_user = 'EnduserCompany' # str | The end user/customer's name. (optional)
     vendor = 'Cisco' # str | The vendor's name. (optional)
     deal_id = '12345678' # str | Deal/Special bid number. (optional)
+    size = 56 # int | The number of records required in the call - max records 100 per page. (optional)
+    page = 56 # int | The page number reference. (optional)
 
     try:
         # Deals Search
-        api_response = api_instance.get_resellers_v6_dealssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, end_user=end_user, vendor=vendor, deal_id=deal_id)
+        api_response = api_instance.get_resellers_v6_dealssearch(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, end_user=end_user, vendor=vendor, deal_id=deal_id, size=size, page=page)
         print("The response of DealsApi->get_resellers_v6_dealssearch:\n")
         pprint(api_response)
     except Exception as e:
@@ -160,6 +162,8 @@ Name | Type | Description  | Notes
  **end_user** | **str**| The end user/customer&#39;s name. | [optional] 
  **vendor** | **str**| The vendor&#39;s name. | [optional] 
  **deal_id** | **str**| Deal/Special bid number. | [optional] 
+ **size** | **int**| The number of records required in the call - max records 100 per page. | [optional] 
+ **page** | **int**| The page number reference. | [optional] 
 
 ### Return type
 

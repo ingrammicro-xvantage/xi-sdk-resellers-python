@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of OrderCreateRequest from a JSON string
 order_create_request_instance = OrderCreateRequest.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequest.to_json()
+print(OrderCreateRequest.to_json())
 
 # convert the object into a dict
 order_create_request_dict = order_create_request_instance.to_dict()

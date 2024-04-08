@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of InvoiceDetailsv61ResponseFxRateInfo from a JSON string
 invoice_detailsv61_response_fx_rate_info_instance = InvoiceDetailsv61ResponseFxRateInfo.from_json(json)
 # print the JSON string representation of the object
-print InvoiceDetailsv61ResponseFxRateInfo.to_json()
+print(InvoiceDetailsv61ResponseFxRateInfo.to_json())
 
 # convert the object into a dict
 invoice_detailsv61_response_fx_rate_info_dict = invoice_detailsv61_response_fx_rate_info_instance.to_dict()

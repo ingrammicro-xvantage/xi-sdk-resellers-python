@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of FreightResponseFreightEstimateResponseDistributionInner from a JSON string
 freight_response_freight_estimate_response_distribution_inner_instance = FreightResponseFreightEstimateResponseDistributionInner.from_json(json)
 # print the JSON string representation of the object
-print FreightResponseFreightEstimateResponseDistributionInner.to_json()
+print(FreightResponseFreightEstimateResponseDistributionInner.to_json())
 
 # convert the object into a dict
 freight_response_freight_estimate_response_distribution_inner_dict = freight_response_freight_estimate_response_distribution_inner_instance.to_dict()

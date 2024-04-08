@@ -32,7 +32,7 @@ json = "{}"
 # create an instance of QuoteSearchResponseQuotesInner from a JSON string
 quote_search_response_quotes_inner_instance = QuoteSearchResponseQuotesInner.from_json(json)
 # print the JSON string representation of the object
-print QuoteSearchResponseQuotesInner.to_json()
+print(QuoteSearchResponseQuotesInner.to_json())
 
 # convert the object into a dict
 quote_search_response_quotes_inner_dict = quote_search_response_quotes_inner_instance.to_dict()

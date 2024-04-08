@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of ReturnsSearchResponseReturnsClaimsInnerLinksInner from a JSON string
 returns_search_response_returns_claims_inner_links_inner_instance = ReturnsSearchResponseReturnsClaimsInnerLinksInner.from_json(json)
 # print the JSON string representation of the object
-print ReturnsSearchResponseReturnsClaimsInnerLinksInner.to_json()
+print(ReturnsSearchResponseReturnsClaimsInnerLinksInner.to_json())
 
 # convert the object into a dict
 returns_search_response_returns_claims_inner_links_inner_dict = returns_search_response_returns_claims_inner_links_inner_instance.to_dict()
