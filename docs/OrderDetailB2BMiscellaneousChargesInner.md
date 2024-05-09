@@ -25,7 +25,7 @@ print(OrderDetailB2BMiscellaneousChargesInner.to_json())
 # convert the object into a dict
 order_detail_b2_b_miscellaneous_charges_inner_dict = order_detail_b2_b_miscellaneous_charges_inner_instance.to_dict()
 # create an instance of OrderDetailB2BMiscellaneousChargesInner from a dict
-order_detail_b2_b_miscellaneous_charges_inner_form_dict = order_detail_b2_b_miscellaneous_charges_inner.from_dict(order_detail_b2_b_miscellaneous_charges_inner_dict)
+order_detail_b2_b_miscellaneous_charges_inner_from_dict = OrderDetailB2BMiscellaneousChargesInner.from_dict(order_detail_b2_b_miscellaneous_charges_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

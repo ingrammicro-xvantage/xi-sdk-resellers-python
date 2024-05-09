@@ -27,7 +27,7 @@ print(ReturnsSearchResponse.to_json())
 # convert the object into a dict
 returns_search_response_dict = returns_search_response_instance.to_dict()
 # create an instance of ReturnsSearchResponse from a dict
-returns_search_response_form_dict = returns_search_response.from_dict(returns_search_response_dict)
+returns_search_response_from_dict = ReturnsSearchResponse.from_dict(returns_search_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

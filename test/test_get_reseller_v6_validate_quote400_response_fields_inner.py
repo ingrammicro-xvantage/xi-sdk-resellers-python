@@ -35,7 +35,7 @@ class TestGetResellerV6ValidateQuote400ResponseFieldsInner(unittest.TestCase):
         model = GetResellerV6ValidateQuote400ResponseFieldsInner()
         if include_optional:
             return GetResellerV6ValidateQuote400ResponseFieldsInner(
-                field = '',
+                var_field = '',
                 message = '',
                 value = ''
             )

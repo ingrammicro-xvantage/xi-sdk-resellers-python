@@ -22,7 +22,7 @@ print(FreightResponse.to_json())
 # convert the object into a dict
 freight_response_dict = freight_response_instance.to_dict()
 # create an instance of FreightResponse from a dict
-freight_response_form_dict = freight_response.from_dict(freight_response_dict)
+freight_response_from_dict = FreightResponse.from_dict(freight_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -45,7 +45,7 @@ print(OrderDetailB2B.to_json())
 # convert the object into a dict
 order_detail_b2_b_dict = order_detail_b2_b_instance.to_dict()
 # create an instance of OrderDetailB2B from a dict
-order_detail_b2_b_form_dict = order_detail_b2_b.from_dict(order_detail_b2_b_dict)
+order_detail_b2_b_from_dict = OrderDetailB2B.from_dict(order_detail_b2_b_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

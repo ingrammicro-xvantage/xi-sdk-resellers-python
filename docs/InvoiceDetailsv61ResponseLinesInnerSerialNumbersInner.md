@@ -22,7 +22,7 @@ print(InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner.to_json())
 # convert the object into a dict
 invoice_detailsv61_response_lines_inner_serial_numbers_inner_dict = invoice_detailsv61_response_lines_inner_serial_numbers_inner_instance.to_dict()
 # create an instance of InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner from a dict
-invoice_detailsv61_response_lines_inner_serial_numbers_inner_form_dict = invoice_detailsv61_response_lines_inner_serial_numbers_inner.from_dict(invoice_detailsv61_response_lines_inner_serial_numbers_inner_dict)
+invoice_detailsv61_response_lines_inner_serial_numbers_inner_from_dict = InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner.from_dict(invoice_detailsv61_response_lines_inner_serial_numbers_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

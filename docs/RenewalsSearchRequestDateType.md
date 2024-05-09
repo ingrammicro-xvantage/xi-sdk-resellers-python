@@ -25,7 +25,7 @@ print(RenewalsSearchRequestDateType.to_json())
 # convert the object into a dict
 renewals_search_request_date_type_dict = renewals_search_request_date_type_instance.to_dict()
 # create an instance of RenewalsSearchRequestDateType from a dict
-renewals_search_request_date_type_form_dict = renewals_search_request_date_type.from_dict(renewals_search_request_date_type_dict)
+renewals_search_request_date_type_from_dict = RenewalsSearchRequestDateType.from_dict(renewals_search_request_date_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

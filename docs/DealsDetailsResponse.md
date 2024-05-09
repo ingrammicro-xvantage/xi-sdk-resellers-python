@@ -32,7 +32,7 @@ print(DealsDetailsResponse.to_json())
 # convert the object into a dict
 deals_details_response_dict = deals_details_response_instance.to_dict()
 # create an instance of DealsDetailsResponse from a dict
-deals_details_response_form_dict = deals_details_response.from_dict(deals_details_response_dict)
+deals_details_response_from_dict = DealsDetailsResponse.from_dict(deals_details_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

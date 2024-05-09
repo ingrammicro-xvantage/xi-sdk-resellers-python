@@ -25,7 +25,7 @@ print(PostAsyncOrderCreateV7400Response.to_json())
 # convert the object into a dict
 post_async_order_create_v7400_response_dict = post_async_order_create_v7400_response_instance.to_dict()
 # create an instance of PostAsyncOrderCreateV7400Response from a dict
-post_async_order_create_v7400_response_form_dict = post_async_order_create_v7400_response.from_dict(post_async_order_create_v7400_response_dict)
+post_async_order_create_v7400_response_from_dict = PostAsyncOrderCreateV7400Response.from_dict(post_async_order_create_v7400_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

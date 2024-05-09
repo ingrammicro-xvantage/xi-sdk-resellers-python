@@ -35,7 +35,7 @@ class TestFields(unittest.TestCase):
         model = Fields()
         if include_optional:
             return Fields(
-                field = '',
+                var_field = '',
                 message = '',
                 value = ''
             )

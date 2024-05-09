@@ -39,7 +39,7 @@ print(AsyncOrderCreateDTOEndUserInfo.to_json())
 # convert the object into a dict
 async_order_create_dto_end_user_info_dict = async_order_create_dto_end_user_info_instance.to_dict()
 # create an instance of AsyncOrderCreateDTOEndUserInfo from a dict
-async_order_create_dto_end_user_info_form_dict = async_order_create_dto_end_user_info.from_dict(async_order_create_dto_end_user_info_dict)
+async_order_create_dto_end_user_info_from_dict = AsyncOrderCreateDTOEndUserInfo.from_dict(async_order_create_dto_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

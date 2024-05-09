@@ -24,7 +24,7 @@ print(QuoteSearchResponseQuotesInnerLinks.to_json())
 # convert the object into a dict
 quote_search_response_quotes_inner_links_dict = quote_search_response_quotes_inner_links_instance.to_dict()
 # create an instance of QuoteSearchResponseQuotesInnerLinks from a dict
-quote_search_response_quotes_inner_links_form_dict = quote_search_response_quotes_inner_links.from_dict(quote_search_response_quotes_inner_links_dict)
+quote_search_response_quotes_inner_links_from_dict = QuoteSearchResponseQuotesInnerLinks.from_dict(quote_search_response_quotes_inner_links_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

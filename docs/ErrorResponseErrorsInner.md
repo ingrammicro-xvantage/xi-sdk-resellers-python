@@ -25,7 +25,7 @@ print(ErrorResponseErrorsInner.to_json())
 # convert the object into a dict
 error_response_errors_inner_dict = error_response_errors_inner_instance.to_dict()
 # create an instance of ErrorResponseErrorsInner from a dict
-error_response_errors_inner_form_dict = error_response_errors_inner.from_dict(error_response_errors_inner_dict)
+error_response_errors_inner_from_dict = ErrorResponseErrorsInner.from_dict(error_response_errors_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

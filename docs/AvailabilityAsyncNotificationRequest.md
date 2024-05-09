@@ -26,7 +26,7 @@ print(AvailabilityAsyncNotificationRequest.to_json())
 # convert the object into a dict
 availability_async_notification_request_dict = availability_async_notification_request_instance.to_dict()
 # create an instance of AvailabilityAsyncNotificationRequest from a dict
-availability_async_notification_request_form_dict = availability_async_notification_request.from_dict(availability_async_notification_request_dict)
+availability_async_notification_request_from_dict = AvailabilityAsyncNotificationRequest.from_dict(availability_async_notification_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

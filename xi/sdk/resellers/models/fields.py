@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,7 +26,7 @@ class Fields(BaseModel):
     """
     Fields
     """ # noqa: E501
-    field: Optional[StrictStr] = None
+    var_field: Optional[StrictStr] = Field(default=None, alias="field")
     message: Optional[StrictStr] = None
     value: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["field", "message", "value"]
@@ -70,9 +70,9 @@ class Fields(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # set to None if field (nullable) is None
+        # set to None if var_field (nullable) is None
         # and model_fields_set contains the field
-        if self.field is None and "field" in self.model_fields_set:
+        if self.var_field is None and "var_field" in self.model_fields_set:
             _dict['field'] = None
 
         # set to None if message (nullable) is None

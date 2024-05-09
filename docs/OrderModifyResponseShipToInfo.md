@@ -34,7 +34,7 @@ print(OrderModifyResponseShipToInfo.to_json())
 # convert the object into a dict
 order_modify_response_ship_to_info_dict = order_modify_response_ship_to_info_instance.to_dict()
 # create an instance of OrderModifyResponseShipToInfo from a dict
-order_modify_response_ship_to_info_form_dict = order_modify_response_ship_to_info.from_dict(order_modify_response_ship_to_info_dict)
+order_modify_response_ship_to_info_from_dict = OrderModifyResponseShipToInfo.from_dict(order_modify_response_ship_to_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

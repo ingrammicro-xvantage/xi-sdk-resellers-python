@@ -28,7 +28,7 @@ print(AsyncOrderCreateDTOShipmentDetails.to_json())
 # convert the object into a dict
 async_order_create_dto_shipment_details_dict = async_order_create_dto_shipment_details_instance.to_dict()
 # create an instance of AsyncOrderCreateDTOShipmentDetails from a dict
-async_order_create_dto_shipment_details_form_dict = async_order_create_dto_shipment_details.from_dict(async_order_create_dto_shipment_details_dict)
+async_order_create_dto_shipment_details_from_dict = AsyncOrderCreateDTOShipmentDetails.from_dict(async_order_create_dto_shipment_details_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

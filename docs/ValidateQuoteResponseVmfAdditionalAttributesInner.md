@@ -24,7 +24,7 @@ print(ValidateQuoteResponseVmfAdditionalAttributesInner.to_json())
 # convert the object into a dict
 validate_quote_response_vmf_additional_attributes_inner_dict = validate_quote_response_vmf_additional_attributes_inner_instance.to_dict()
 # create an instance of ValidateQuoteResponseVmfAdditionalAttributesInner from a dict
-validate_quote_response_vmf_additional_attributes_inner_form_dict = validate_quote_response_vmf_additional_attributes_inner.from_dict(validate_quote_response_vmf_additional_attributes_inner_dict)
+validate_quote_response_vmf_additional_attributes_inner_from_dict = ValidateQuoteResponseVmfAdditionalAttributesInner.from_dict(validate_quote_response_vmf_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
+from xi.sdk.resellers.models.post_async_order_create_v7500_response import PostAsyncOrderCreateV7500Response
 
-class TestGetResellerV6ValidateQuote500Response(unittest.TestCase):
-    """GetResellerV6ValidateQuote500Response unit test stubs"""
+class TestPostAsyncOrderCreateV7500Response(unittest.TestCase):
+    """PostAsyncOrderCreateV7500Response unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestGetResellerV6ValidateQuote500Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetResellerV6ValidateQuote500Response:
-        """Test GetResellerV6ValidateQuote500Response
+    def make_instance(self, include_optional) -> PostAsyncOrderCreateV7500Response:
+        """Test PostAsyncOrderCreateV7500Response
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetResellerV6ValidateQuote500Response`
+        # uncomment below to create an instance of `PostAsyncOrderCreateV7500Response`
         """
-        model = GetResellerV6ValidateQuote500Response()
+        model = PostAsyncOrderCreateV7500Response()
         if include_optional:
-            return GetResellerV6ValidateQuote500Response(
+            return PostAsyncOrderCreateV7500Response(
                 traceid = '',
                 type = '',
                 message = '',
@@ -43,12 +43,12 @@ class TestGetResellerV6ValidateQuote500Response(unittest.TestCase):
                     ]
             )
         else:
-            return GetResellerV6ValidateQuote500Response(
+            return PostAsyncOrderCreateV7500Response(
         )
         """
 
-    def testGetResellerV6ValidateQuote500Response(self):
-        """Test GetResellerV6ValidateQuote500Response"""
+    def testPostAsyncOrderCreateV7500Response(self):
+        """Test PostAsyncOrderCreateV7500Response"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -23,7 +23,7 @@ print(PriceAndAvailabilityRequestAdditionalAttributesInner.to_json())
 # convert the object into a dict
 price_and_availability_request_additional_attributes_inner_dict = price_and_availability_request_additional_attributes_inner_instance.to_dict()
 # create an instance of PriceAndAvailabilityRequestAdditionalAttributesInner from a dict
-price_and_availability_request_additional_attributes_inner_form_dict = price_and_availability_request_additional_attributes_inner.from_dict(price_and_availability_request_additional_attributes_inner_dict)
+price_and_availability_request_additional_attributes_inner_from_dict = PriceAndAvailabilityRequestAdditionalAttributesInner.from_dict(price_and_availability_request_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

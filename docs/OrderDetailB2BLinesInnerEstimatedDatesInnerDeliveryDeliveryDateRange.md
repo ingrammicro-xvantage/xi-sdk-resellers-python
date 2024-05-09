@@ -24,7 +24,7 @@ print(OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange.to_js
 # convert the object into a dict
 order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_dict = order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_instance.to_dict()
 # create an instance of OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange from a dict
-order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_form_dict = order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range.from_dict(order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_dict)
+order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_from_dict = OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange.from_dict(order_detail_b2_b_lines_inner_estimated_dates_inner_delivery_delivery_date_range_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

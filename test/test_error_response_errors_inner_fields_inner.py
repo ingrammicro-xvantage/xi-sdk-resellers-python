@@ -35,7 +35,7 @@ class TestErrorResponseErrorsInnerFieldsInner(unittest.TestCase):
         model = ErrorResponseErrorsInnerFieldsInner()
         if include_optional:
             return ErrorResponseErrorsInnerFieldsInner(
-                field = '',
+                var_field = '',
                 value = '',
                 message = ''
             )

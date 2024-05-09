@@ -27,7 +27,7 @@ print(PriceAndAvailabilityRequestProductsInner.to_json())
 # convert the object into a dict
 price_and_availability_request_products_inner_dict = price_and_availability_request_products_inner_instance.to_dict()
 # create an instance of PriceAndAvailabilityRequestProductsInner from a dict
-price_and_availability_request_products_inner_form_dict = price_and_availability_request_products_inner.from_dict(price_and_availability_request_products_inner_dict)
+price_and_availability_request_products_inner_from_dict = PriceAndAvailabilityRequestProductsInner.from_dict(price_and_availability_request_products_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(RenewalsDetailsResponseReferenceNumber.to_json())
 # convert the object into a dict
 renewals_details_response_reference_number_dict = renewals_details_response_reference_number_instance.to_dict()
 # create an instance of RenewalsDetailsResponseReferenceNumber from a dict
-renewals_details_response_reference_number_form_dict = renewals_details_response_reference_number.from_dict(renewals_details_response_reference_number_dict)
+renewals_details_response_reference_number_from_dict = RenewalsDetailsResponseReferenceNumber.from_dict(renewals_details_response_reference_number_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

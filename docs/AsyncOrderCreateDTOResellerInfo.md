@@ -35,7 +35,7 @@ print(AsyncOrderCreateDTOResellerInfo.to_json())
 # convert the object into a dict
 async_order_create_dto_reseller_info_dict = async_order_create_dto_reseller_info_instance.to_dict()
 # create an instance of AsyncOrderCreateDTOResellerInfo from a dict
-async_order_create_dto_reseller_info_form_dict = async_order_create_dto_reseller_info.from_dict(async_order_create_dto_reseller_info_dict)
+async_order_create_dto_reseller_info_from_dict = AsyncOrderCreateDTOResellerInfo.from_dict(async_order_create_dto_reseller_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

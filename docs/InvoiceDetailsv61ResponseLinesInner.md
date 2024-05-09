@@ -41,7 +41,7 @@ print(InvoiceDetailsv61ResponseLinesInner.to_json())
 # convert the object into a dict
 invoice_detailsv61_response_lines_inner_dict = invoice_detailsv61_response_lines_inner_instance.to_dict()
 # create an instance of InvoiceDetailsv61ResponseLinesInner from a dict
-invoice_detailsv61_response_lines_inner_form_dict = invoice_detailsv61_response_lines_inner.from_dict(invoice_detailsv61_response_lines_inner_dict)
+invoice_detailsv61_response_lines_inner_from_dict = InvoiceDetailsv61ResponseLinesInner.from_dict(invoice_detailsv61_response_lines_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

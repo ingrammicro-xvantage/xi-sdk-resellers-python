@@ -6,7 +6,6 @@
 README.md
 docs/AccesstokenApi.md
 docs/AccesstokenResponse.md
-docs/AsyncOrderCreateApi.md
 docs/AsyncOrderCreateDTO.md
 docs/AsyncOrderCreateDTOAdditionalAttributesInner.md
 docs/AsyncOrderCreateDTOEndUserInfo.md
@@ -49,7 +48,6 @@ docs/GetAccesstoken500ResponseFault.md
 docs/GetAccesstoken500ResponseFaultDetail.md
 docs/GetResellerV6ValidateQuote400Response.md
 docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md
-docs/GetResellerV6ValidateQuote500Response.md
 docs/InvoiceDetailsv61Response.md
 docs/InvoiceDetailsv61ResponseBillToInfo.md
 docs/InvoiceDetailsv61ResponseFxRateInfo.md
@@ -138,6 +136,7 @@ docs/OrderStatusAsyncNotificationRequestResourceInnerLinksInner.md
 docs/OrdersApi.md
 docs/PostAsyncOrderCreateV7400Response.md
 docs/PostAsyncOrderCreateV7400ResponseFieldsInner.md
+docs/PostAsyncOrderCreateV7500Response.md
 docs/PostRenewalssearch400Response.md
 docs/PriceAndAvailabilityRequest.md
 docs/PriceAndAvailabilityRequestAdditionalAttributesInner.md
@@ -216,7 +215,6 @@ test-requirements.txt
 test/__init__.py
 test/test_accesstoken_api.py
 test/test_accesstoken_response.py
-test/test_async_order_create_api.py
 test/test_async_order_create_dto.py
 test/test_async_order_create_dto_additional_attributes_inner.py
 test/test_async_order_create_dto_end_user_info.py
@@ -259,7 +257,6 @@ test/test_get_accesstoken500_response_fault.py
 test/test_get_accesstoken500_response_fault_detail.py
 test/test_get_reseller_v6_validate_quote400_response.py
 test/test_get_reseller_v6_validate_quote400_response_fields_inner.py
-test/test_get_reseller_v6_validate_quote500_response.py
 test/test_invoice_detailsv61_response.py
 test/test_invoice_detailsv61_response_bill_to_info.py
 test/test_invoice_detailsv61_response_fx_rate_info.py
@@ -348,6 +345,7 @@ test/test_order_status_async_notification_request_resource_inner_links_inner.py
 test/test_orders_api.py
 test/test_post_async_order_create_v7400_response.py
 test/test_post_async_order_create_v7400_response_fields_inner.py
+test/test_post_async_order_create_v7500_response.py
 test/test_post_renewalssearch400_response.py
 test/test_price_and_availability_request.py
 test/test_price_and_availability_request_additional_attributes_inner.py
@@ -423,7 +421,6 @@ xi/sdk/__init__.py
 xi/sdk/resellers/__init__.py
 xi/sdk/resellers/api/__init__.py
 xi/sdk/resellers/api/accesstoken_api.py
-xi/sdk/resellers/api/async_order_create_api.py
 xi/sdk/resellers/api/deals_api.py
 xi/sdk/resellers/api/freight_estimate_api.py
 xi/sdk/resellers/api/invoices_api.py
@@ -480,7 +477,6 @@ xi/sdk/resellers/models/get_accesstoken500_response_fault.py
 xi/sdk/resellers/models/get_accesstoken500_response_fault_detail.py
 xi/sdk/resellers/models/get_reseller_v6_validate_quote400_response.py
 xi/sdk/resellers/models/get_reseller_v6_validate_quote400_response_fields_inner.py
-xi/sdk/resellers/models/get_reseller_v6_validate_quote500_response.py
 xi/sdk/resellers/models/invoice_detailsv61_response.py
 xi/sdk/resellers/models/invoice_detailsv61_response_bill_to_info.py
 xi/sdk/resellers/models/invoice_detailsv61_response_fx_rate_info.py
@@ -566,6 +562,7 @@ xi/sdk/resellers/models/order_status_async_notification_request_resource_inner_l
 xi/sdk/resellers/models/order_status_async_notification_request_resource_inner_links_inner.py
 xi/sdk/resellers/models/post_async_order_create_v7400_response.py
 xi/sdk/resellers/models/post_async_order_create_v7400_response_fields_inner.py
+xi/sdk/resellers/models/post_async_order_create_v7500_response.py
 xi/sdk/resellers/models/post_renewalssearch400_response.py
 xi/sdk/resellers/models/price_and_availability_request.py
 xi/sdk/resellers/models/price_and_availability_request_additional_attributes_inner.py

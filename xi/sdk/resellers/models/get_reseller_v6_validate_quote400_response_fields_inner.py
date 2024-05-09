@@ -26,7 +26,7 @@ class GetResellerV6ValidateQuote400ResponseFieldsInner(BaseModel):
     """
     GetResellerV6ValidateQuote400ResponseFieldsInner
     """ # noqa: E501
-    field: Optional[StrictStr] = Field(default=None, description="Contains the name of the field.")
+    var_field: Optional[StrictStr] = Field(default=None, description="Contains the name of the field.", alias="field")
     message: Optional[StrictStr] = Field(default=None, description="Gives the description of the field message.")
     value: Optional[StrictStr] = Field(default=None, description="Value sent in the input for the specific field.")
     __properties: ClassVar[List[str]] = ["field", "message", "value"]

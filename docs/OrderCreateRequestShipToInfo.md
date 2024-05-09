@@ -37,7 +37,7 @@ print(OrderCreateRequestShipToInfo.to_json())
 # convert the object into a dict
 order_create_request_ship_to_info_dict = order_create_request_ship_to_info_instance.to_dict()
 # create an instance of OrderCreateRequestShipToInfo from a dict
-order_create_request_ship_to_info_form_dict = order_create_request_ship_to_info.from_dict(order_create_request_ship_to_info_dict)
+order_create_request_ship_to_info_from_dict = OrderCreateRequestShipToInfo.from_dict(order_create_request_ship_to_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

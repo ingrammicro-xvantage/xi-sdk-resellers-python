@@ -41,6 +41,9 @@ class TestInvoiceSearchResponse(unittest.TestCase):
                 invoices = [
                     xi.sdk.resellers.models.invoice_search_response_invoices_inner.InvoiceSearchResponse_invoices_inner(
                         payment_terms_due_date = '', 
+                        special_bid_numbers = [
+                            ''
+                            ], 
                         erp_order_number = '', 
                         invoice_number = '', 
                         invoice_status = '', 

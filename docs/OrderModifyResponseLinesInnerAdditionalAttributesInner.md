@@ -23,7 +23,7 @@ print(OrderModifyResponseLinesInnerAdditionalAttributesInner.to_json())
 # convert the object into a dict
 order_modify_response_lines_inner_additional_attributes_inner_dict = order_modify_response_lines_inner_additional_attributes_inner_instance.to_dict()
 # create an instance of OrderModifyResponseLinesInnerAdditionalAttributesInner from a dict
-order_modify_response_lines_inner_additional_attributes_inner_form_dict = order_modify_response_lines_inner_additional_attributes_inner.from_dict(order_modify_response_lines_inner_additional_attributes_inner_dict)
+order_modify_response_lines_inner_additional_attributes_inner_from_dict = OrderModifyResponseLinesInnerAdditionalAttributesInner.from_dict(order_modify_response_lines_inner_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

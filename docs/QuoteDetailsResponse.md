@@ -52,7 +52,7 @@ print(QuoteDetailsResponse.to_json())
 # convert the object into a dict
 quote_details_response_dict = quote_details_response_instance.to_dict()
 # create an instance of QuoteDetailsResponse from a dict
-quote_details_response_form_dict = quote_details_response.from_dict(quote_details_response_dict)
+quote_details_response_from_dict = QuoteDetailsResponse.from_dict(quote_details_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(AsyncOrderCreateDTOAdditionalAttributesInner.to_json())
 # convert the object into a dict
 async_order_create_dto_additional_attributes_inner_dict = async_order_create_dto_additional_attributes_inner_instance.to_dict()
 # create an instance of AsyncOrderCreateDTOAdditionalAttributesInner from a dict
-async_order_create_dto_additional_attributes_inner_form_dict = async_order_create_dto_additional_attributes_inner.from_dict(async_order_create_dto_additional_attributes_inner_dict)
+async_order_create_dto_additional_attributes_inner_from_dict = AsyncOrderCreateDTOAdditionalAttributesInner.from_dict(async_order_create_dto_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

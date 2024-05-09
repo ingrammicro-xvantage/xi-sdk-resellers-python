@@ -27,7 +27,7 @@ print(ProductSearchResponse.to_json())
 # convert the object into a dict
 product_search_response_dict = product_search_response_instance.to_dict()
 # create an instance of ProductSearchResponse from a dict
-product_search_response_form_dict = product_search_response.from_dict(product_search_response_dict)
+product_search_response_from_dict = ProductSearchResponse.from_dict(product_search_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

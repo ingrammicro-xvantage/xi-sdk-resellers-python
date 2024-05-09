@@ -26,7 +26,7 @@ print(InvoiceDetailsv61ResponseSummaryForeignFxTotals.to_json())
 # convert the object into a dict
 invoice_detailsv61_response_summary_foreign_fx_totals_dict = invoice_detailsv61_response_summary_foreign_fx_totals_instance.to_dict()
 # create an instance of InvoiceDetailsv61ResponseSummaryForeignFxTotals from a dict
-invoice_detailsv61_response_summary_foreign_fx_totals_form_dict = invoice_detailsv61_response_summary_foreign_fx_totals.from_dict(invoice_detailsv61_response_summary_foreign_fx_totals_dict)
+invoice_detailsv61_response_summary_foreign_fx_totals_from_dict = InvoiceDetailsv61ResponseSummaryForeignFxTotals.from_dict(invoice_detailsv61_response_summary_foreign_fx_totals_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

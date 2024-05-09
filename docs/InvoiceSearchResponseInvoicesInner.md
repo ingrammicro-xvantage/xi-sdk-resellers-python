@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payment_terms_due_date** | **str** | Payment Terms Due date. | [optional] 
+**special_bid_numbers** | **List[str]** |  | [optional] 
 **erp_order_number** | **str** | Order number | [optional] 
 **invoice_number** | **str** | Invoice no. | [optional] 
 **invoice_status** | **str** | Invoice Status. | [optional] 
@@ -35,7 +36,7 @@ print(InvoiceSearchResponseInvoicesInner.to_json())
 # convert the object into a dict
 invoice_search_response_invoices_inner_dict = invoice_search_response_invoices_inner_instance.to_dict()
 # create an instance of InvoiceSearchResponseInvoicesInner from a dict
-invoice_search_response_invoices_inner_form_dict = invoice_search_response_invoices_inner.from_dict(invoice_search_response_invoices_inner_dict)
+invoice_search_response_invoices_inner_from_dict = InvoiceSearchResponseInvoicesInner.from_dict(invoice_search_response_invoices_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

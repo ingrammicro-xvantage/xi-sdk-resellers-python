@@ -35,7 +35,7 @@ class TestPostAsyncOrderCreateV7400ResponseFieldsInner(unittest.TestCase):
         model = PostAsyncOrderCreateV7400ResponseFieldsInner()
         if include_optional:
             return PostAsyncOrderCreateV7400ResponseFieldsInner(
-                field = '',
+                var_field = '',
                 message = '',
                 value = ''
             )

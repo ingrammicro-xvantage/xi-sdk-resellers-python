@@ -23,7 +23,7 @@ print(RenewalsSearchRequestDateTypeExpirationDate.to_json())
 # convert the object into a dict
 renewals_search_request_date_type_expiration_date_dict = renewals_search_request_date_type_expiration_date_instance.to_dict()
 # create an instance of RenewalsSearchRequestDateTypeExpirationDate from a dict
-renewals_search_request_date_type_expiration_date_form_dict = renewals_search_request_date_type_expiration_date.from_dict(renewals_search_request_date_type_expiration_date_dict)
+renewals_search_request_date_type_expiration_date_from_dict = RenewalsSearchRequestDateTypeExpirationDate.from_dict(renewals_search_request_date_type_expiration_date_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

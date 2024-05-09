@@ -32,7 +32,7 @@ print(QuoteDetailsResponseEndUserInfo.to_json())
 # convert the object into a dict
 quote_details_response_end_user_info_dict = quote_details_response_end_user_info_instance.to_dict()
 # create an instance of QuoteDetailsResponseEndUserInfo from a dict
-quote_details_response_end_user_info_form_dict = quote_details_response_end_user_info.from_dict(quote_details_response_end_user_info_dict)
+quote_details_response_end_user_info_from_dict = QuoteDetailsResponseEndUserInfo.from_dict(quote_details_response_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(AsyncOrderCreateDTOWarrantyInfoInnerVmfAdditionalAttributesLinesInner.to_j
 # convert the object into a dict
 async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_dict = async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_instance.to_dict()
 # create an instance of AsyncOrderCreateDTOWarrantyInfoInnerVmfAdditionalAttributesLinesInner from a dict
-async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_form_dict = async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner.from_dict(async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_dict)
+async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_from_dict = AsyncOrderCreateDTOWarrantyInfoInnerVmfAdditionalAttributesLinesInner.from_dict(async_order_create_dto_warranty_info_inner_vmf_additional_attributes_lines_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

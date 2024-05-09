@@ -18,7 +18,6 @@ __version__ = "1.0.0"
 
 # import apis into sdk package
 from xi.sdk.resellers.api.accesstoken_api import AccesstokenApi
-from xi.sdk.resellers.api.async_order_create_api import AsyncOrderCreateApi
 from xi.sdk.resellers.api.deals_api import DealsApi
 from xi.sdk.resellers.api.freight_estimate_api import FreightEstimateApi
 from xi.sdk.resellers.api.invoices_api import InvoicesApi
@@ -83,7 +82,6 @@ from xi.sdk.resellers.models.get_accesstoken500_response_fault import GetAccesst
 from xi.sdk.resellers.models.get_accesstoken500_response_fault_detail import GetAccesstoken500ResponseFaultDetail
 from xi.sdk.resellers.models.get_reseller_v6_validate_quote400_response import GetResellerV6ValidateQuote400Response
 from xi.sdk.resellers.models.get_reseller_v6_validate_quote400_response_fields_inner import GetResellerV6ValidateQuote400ResponseFieldsInner
-from xi.sdk.resellers.models.get_reseller_v6_validate_quote500_response import GetResellerV6ValidateQuote500Response
 from xi.sdk.resellers.models.invoice_detailsv61_response import InvoiceDetailsv61Response
 from xi.sdk.resellers.models.invoice_detailsv61_response_bill_to_info import InvoiceDetailsv61ResponseBillToInfo
 from xi.sdk.resellers.models.invoice_detailsv61_response_fx_rate_info import InvoiceDetailsv61ResponseFxRateInfo
@@ -169,6 +167,7 @@ from xi.sdk.resellers.models.order_status_async_notification_request_resource_in
 from xi.sdk.resellers.models.order_status_async_notification_request_resource_inner_links_inner import OrderStatusAsyncNotificationRequestResourceInnerLinksInner
 from xi.sdk.resellers.models.post_async_order_create_v7400_response import PostAsyncOrderCreateV7400Response
 from xi.sdk.resellers.models.post_async_order_create_v7400_response_fields_inner import PostAsyncOrderCreateV7400ResponseFieldsInner
+from xi.sdk.resellers.models.post_async_order_create_v7500_response import PostAsyncOrderCreateV7500Response
 from xi.sdk.resellers.models.post_renewalssearch400_response import PostRenewalssearch400Response
 from xi.sdk.resellers.models.price_and_availability_request import PriceAndAvailabilityRequest
 from xi.sdk.resellers.models.price_and_availability_request_additional_attributes_inner import PriceAndAvailabilityRequestAdditionalAttributesInner

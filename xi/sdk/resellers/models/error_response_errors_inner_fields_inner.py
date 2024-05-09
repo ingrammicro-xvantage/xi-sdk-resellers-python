@@ -26,7 +26,7 @@ class ErrorResponseErrorsInnerFieldsInner(BaseModel):
     """
     ErrorResponseErrorsInnerFieldsInner
     """ # noqa: E501
-    field: Optional[StrictStr] = Field(default=None, description="Contains the name of the field.")
+    var_field: Optional[StrictStr] = Field(default=None, description="Contains the name of the field.", alias="field")
     value: Optional[StrictStr] = Field(default=None, description="Value sent in the input for the specific field.")
     message: Optional[StrictStr] = Field(default=None, description="Gives the description of the field message.")
     __properties: ClassVar[List[str]] = ["field", "value", "message"]

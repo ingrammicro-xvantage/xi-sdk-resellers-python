@@ -26,7 +26,7 @@ class PostAsyncOrderCreateV7400ResponseFieldsInner(BaseModel):
     """
     PostAsyncOrderCreateV7400ResponseFieldsInner
     """ # noqa: E501
-    field: Optional[StrictStr] = Field(default=None, description="Name of the field.")
+    var_field: Optional[StrictStr] = Field(default=None, description="Name of the field.", alias="field")
     message: Optional[StrictStr] = Field(default=None, description="A filed level error message.")
     value: Optional[StrictStr] = Field(default=None, description="Value of the message.")
     __properties: ClassVar[List[str]] = ["field", "message", "value"]

@@ -27,6 +27,7 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
     InvoiceSearchResponseInvoicesInner
     """ # noqa: E501
     payment_terms_due_date: Optional[StrictStr] = Field(default=None, description="Payment Terms Due date.", alias="paymentTermsDueDate")
+    special_bid_numbers: Optional[List[StrictStr]] = Field(default=None, alias="specialBidNumbers")
     erp_order_number: Optional[StrictStr] = Field(default=None, description="Order number", alias="erpOrderNumber")
     invoice_number: Optional[StrictStr] = Field(default=None, description="Invoice no.", alias="invoiceNumber")
     invoice_status: Optional[StrictStr] = Field(default=None, description="Invoice Status.", alias="invoiceStatus")
@@ -40,7 +41,7 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
     forgntotalamount: Optional[Union[StrictFloat, StrictInt]] = None
     gst_invoice_number: Optional[StrictStr] = Field(default=None, alias="gstInvoiceNumber")
     isfseccenabled: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "endCustomerOrderNumber", "orderCreateDate", "invoiceAmountInclTax", "forgntotalamount", "gstInvoiceNumber", "isfseccenabled"]
+    __properties: ClassVar[List[str]] = ["paymentTermsDueDate", "specialBidNumbers", "erpOrderNumber", "invoiceNumber", "invoiceStatus", "invoiceDate", "invoiceDueDate", "invoicedAmountDue", "customerOrderNumber", "endCustomerOrderNumber", "orderCreateDate", "invoiceAmountInclTax", "forgntotalamount", "gstInvoiceNumber", "isfseccenabled"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -94,6 +95,7 @@ class InvoiceSearchResponseInvoicesInner(BaseModel):
 
         _obj = cls.model_validate({
             "paymentTermsDueDate": obj.get("paymentTermsDueDate"),
+            "specialBidNumbers": obj.get("specialBidNumbers"),
             "erpOrderNumber": obj.get("erpOrderNumber"),
             "invoiceNumber": obj.get("invoiceNumber"),
             "invoiceStatus": obj.get("invoiceStatus"),

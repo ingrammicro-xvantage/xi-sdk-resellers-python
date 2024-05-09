@@ -24,7 +24,7 @@ print(OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner.to_json())
 # convert the object into a dict
 order_search_response_orders_inner_sub_orders_inner_links_inner_dict = order_search_response_orders_inner_sub_orders_inner_links_inner_instance.to_dict()
 # create an instance of OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner from a dict
-order_search_response_orders_inner_sub_orders_inner_links_inner_form_dict = order_search_response_orders_inner_sub_orders_inner_links_inner.from_dict(order_search_response_orders_inner_sub_orders_inner_links_inner_dict)
+order_search_response_orders_inner_sub_orders_inner_links_inner_from_dict = OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner.from_dict(order_search_response_orders_inner_sub_orders_inner_links_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

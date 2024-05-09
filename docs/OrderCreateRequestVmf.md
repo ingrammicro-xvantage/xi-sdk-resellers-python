@@ -23,7 +23,7 @@ print(OrderCreateRequestVmf.to_json())
 # convert the object into a dict
 order_create_request_vmf_dict = order_create_request_vmf_instance.to_dict()
 # create an instance of OrderCreateRequestVmf from a dict
-order_create_request_vmf_form_dict = order_create_request_vmf.from_dict(order_create_request_vmf_dict)
+order_create_request_vmf_from_dict = OrderCreateRequestVmf.from_dict(order_create_request_vmf_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,7 +26,7 @@ print(FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.to
 # convert the object into a dict
 freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_dict = freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_instance.to_dict()
 # create an instance of FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner from a dict
-freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_form_dict = freight_response_freight_estimate_response_distribution_inner_carrier_list_inner.from_dict(freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_dict)
+freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_from_dict = FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.from_dict(freight_response_freight_estimate_response_distribution_inner_carrier_list_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

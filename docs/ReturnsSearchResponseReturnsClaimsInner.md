@@ -32,7 +32,7 @@ print(ReturnsSearchResponseReturnsClaimsInner.to_json())
 # convert the object into a dict
 returns_search_response_returns_claims_inner_dict = returns_search_response_returns_claims_inner_instance.to_dict()
 # create an instance of ReturnsSearchResponseReturnsClaimsInner from a dict
-returns_search_response_returns_claims_inner_form_dict = returns_search_response_returns_claims_inner.from_dict(returns_search_response_returns_claims_inner_dict)
+returns_search_response_returns_claims_inner_from_dict = ReturnsSearchResponseReturnsClaimsInner.from_dict(returns_search_response_returns_claims_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

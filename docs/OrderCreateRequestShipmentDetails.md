@@ -28,7 +28,7 @@ print(OrderCreateRequestShipmentDetails.to_json())
 # convert the object into a dict
 order_create_request_shipment_details_dict = order_create_request_shipment_details_instance.to_dict()
 # create an instance of OrderCreateRequestShipmentDetails from a dict
-order_create_request_shipment_details_form_dict = order_create_request_shipment_details.from_dict(order_create_request_shipment_details_dict)
+order_create_request_shipment_details_from_dict = OrderCreateRequestShipmentDetails.from_dict(order_create_request_shipment_details_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

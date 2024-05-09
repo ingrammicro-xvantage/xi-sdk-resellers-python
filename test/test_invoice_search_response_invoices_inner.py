@@ -36,6 +36,9 @@ class TestInvoiceSearchResponseInvoicesInner(unittest.TestCase):
         if include_optional:
             return InvoiceSearchResponseInvoicesInner(
                 payment_terms_due_date = '',
+                special_bid_numbers = [
+                    ''
+                    ],
                 erp_order_number = '',
                 invoice_number = '',
                 invoice_status = '',

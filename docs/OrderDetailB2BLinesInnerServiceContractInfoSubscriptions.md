@@ -27,7 +27,7 @@ print(OrderDetailB2BLinesInnerServiceContractInfoSubscriptions.to_json())
 # convert the object into a dict
 order_detail_b2_b_lines_inner_service_contract_info_subscriptions_dict = order_detail_b2_b_lines_inner_service_contract_info_subscriptions_instance.to_dict()
 # create an instance of OrderDetailB2BLinesInnerServiceContractInfoSubscriptions from a dict
-order_detail_b2_b_lines_inner_service_contract_info_subscriptions_form_dict = order_detail_b2_b_lines_inner_service_contract_info_subscriptions.from_dict(order_detail_b2_b_lines_inner_service_contract_info_subscriptions_dict)
+order_detail_b2_b_lines_inner_service_contract_info_subscriptions_from_dict = OrderDetailB2BLinesInnerServiceContractInfoSubscriptions.from_dict(order_detail_b2_b_lines_inner_service_contract_info_subscriptions_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

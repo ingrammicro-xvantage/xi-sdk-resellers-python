@@ -23,7 +23,7 @@ print(RenewalsSearchRequestDateTypeInvoiceDate.to_json())
 # convert the object into a dict
 renewals_search_request_date_type_invoice_date_dict = renewals_search_request_date_type_invoice_date_instance.to_dict()
 # create an instance of RenewalsSearchRequestDateTypeInvoiceDate from a dict
-renewals_search_request_date_type_invoice_date_form_dict = renewals_search_request_date_type_invoice_date.from_dict(renewals_search_request_date_type_invoice_date_dict)
+renewals_search_request_date_type_invoice_date_from_dict = RenewalsSearchRequestDateTypeInvoiceDate.from_dict(renewals_search_request_date_type_invoice_date_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

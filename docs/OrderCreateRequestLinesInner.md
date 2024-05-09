@@ -31,7 +31,7 @@ print(OrderCreateRequestLinesInner.to_json())
 # convert the object into a dict
 order_create_request_lines_inner_dict = order_create_request_lines_inner_instance.to_dict()
 # create an instance of OrderCreateRequestLinesInner from a dict
-order_create_request_lines_inner_form_dict = order_create_request_lines_inner.from_dict(order_create_request_lines_inner_dict)
+order_create_request_lines_inner_from_dict = OrderCreateRequestLinesInner.from_dict(order_create_request_lines_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
