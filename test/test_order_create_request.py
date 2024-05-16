@@ -86,7 +86,7 @@ class TestOrderCreateRequest(unittest.TestCase):
                     state = '', 
                     postal_code = '', 
                     country_code = '', 
-                    phone_number = 56, 
+                    phone_number = '', 
                     email = '', ),
                 lines = [
                     xi.sdk.resellers.models.order_create_request_lines_inner.OrderCreateRequest_lines_inner(

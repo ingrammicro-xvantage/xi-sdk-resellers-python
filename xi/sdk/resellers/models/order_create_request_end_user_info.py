@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -40,7 +40,7 @@ class OrderCreateRequestEndUserInfo(BaseModel):
     state: Optional[Annotated[str, Field(strict=True, max_length=3)]] = Field(default=None, description="The end user/customer's state. Required for Impulse countries but optional for EMEA countries.")
     postal_code: Optional[Annotated[str, Field(strict=True, max_length=10)]] = Field(default=None, description="The end user/customer's zip or postal code. Required for Impulse countries.", alias="postalCode")
     country_code: Optional[Annotated[str, Field(strict=True, max_length=10)]] = Field(default=None, description="The end user/customer's two-character ISO country code.", alias="countryCode")
-    phone_number: Optional[StrictInt] = Field(default=None, description="The end user/customer's phone number.", alias="phoneNumber")
+    phone_number: Optional[StrictStr] = Field(default=None, description="The end user/customer's phone number.", alias="phoneNumber")
     email: Optional[StrictStr] = Field(default=None, description="The end user/customer's email.")
     __properties: ClassVar[List[str]] = ["endUserId", "contact", "companyName", "name1", "name2", "addressLine1", "addressLine2", "addressLine3", "addressLine4", "city", "state", "postalCode", "countryCode", "phoneNumber", "email"]
 
