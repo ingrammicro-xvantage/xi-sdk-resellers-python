@@ -31,11 +31,11 @@ class AsyncOrderCreateDTOEndUserInfo(BaseModel):
     company_name: Optional[StrictStr] = Field(default=None, description="The company name for the end user/customer.", alias="companyName")
     name1: Optional[StrictStr] = None
     name2: Optional[StrictStr] = None
-    contact_id: Optional[StrictStr] = Field(default=None, description="The contact Id for the end user/customer.", alias="contactId")
     address_line1: Optional[StrictStr] = Field(default=None, description="The address line 1 for the end user/customer.", alias="addressLine1")
     address_line2: Optional[StrictStr] = Field(default=None, description="The address line 2 for the end user/customer.", alias="addressLine2")
     address_line3: Optional[StrictStr] = Field(default=None, description="The address line 3 for the end user/customer.", alias="addressLine3")
     contact: Optional[StrictStr] = Field(default=None, description="The contact name for the end user/customer.")
+    name3: Optional[StrictStr] = None
     city: Optional[StrictStr] = Field(default=None, description="The end user/customer's city.")
     state: Optional[StrictStr] = Field(default=None, description="The end user/customer's state.")
     postal_code: Optional[StrictStr] = Field(default=None, description="The end user/customer's zip or postal code.", alias="postalCode")
@@ -43,7 +43,7 @@ class AsyncOrderCreateDTOEndUserInfo(BaseModel):
     country_code: Optional[StrictStr] = Field(default=None, description="The end user/customer's two character ISO country code.", alias="countryCode")
     phone_number: Optional[StrictStr] = Field(default=None, description="The end user/customer's phone number.", alias="phoneNumber")
     email: Optional[StrictStr] = Field(default=None, description="The end user/customer's phone number.")
-    __properties: ClassVar[List[str]] = ["endUserId", "endUserType", "companyName", "name1", "name2", "contactId", "addressLine1", "addressLine2", "addressLine3", "contact", "city", "state", "postalCode", "addressLine4", "countryCode", "phoneNumber", "email"]
+    __properties: ClassVar[List[str]] = ["endUserId", "endUserType", "companyName", "name1", "name2", "addressLine1", "addressLine2", "addressLine3", "contact", "name3", "city", "state", "postalCode", "addressLine4", "countryCode", "phoneNumber", "email"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -101,11 +101,11 @@ class AsyncOrderCreateDTOEndUserInfo(BaseModel):
             "companyName": obj.get("companyName"),
             "name1": obj.get("name1"),
             "name2": obj.get("name2"),
-            "contactId": obj.get("contactId"),
             "addressLine1": obj.get("addressLine1"),
             "addressLine2": obj.get("addressLine2"),
             "addressLine3": obj.get("addressLine3"),
             "contact": obj.get("contact"),
+            "name3": obj.get("name3"),
             "city": obj.get("city"),
             "state": obj.get("state"),
             "postalCode": obj.get("postalCode"),

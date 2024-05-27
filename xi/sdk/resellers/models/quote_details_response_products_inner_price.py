@@ -19,6 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
+from xi.sdk.resellers.models.quote_details_response_products_inner_price_discounts_inner import QuoteDetailsResponseProductsInnerPriceDiscountsInner
+from xi.sdk.resellers.models.quote_details_response_products_inner_price_extra_fees_details_inner import QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,12 +33,14 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
     extended_msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended MSRP - Manufacturer Suggested Retail Price X Quantity", alias="extendedMsrp")
     extended_quote_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended reseller quoted price (cost to reseller) X Quantity", alias="extendedQuotePrice")
     discount_off_list: Optional[StrictStr] = Field(default=None, description="Discount off list percentage extended", alias="discountOffList")
-    vendorprice: Optional[Union[StrictFloat, StrictInt]] = None
-    extendedvendorprice: Optional[Union[StrictFloat, StrictInt]] = None
-    total_visible_reserve_quantity: Optional[StrictInt] = Field(default=None, alias="totalVisibleReserveQuantity")
     type: Optional[StrictStr] = None
     recurring_price_model: Optional[StrictStr] = Field(default=None, alias="recurringPriceModel")
-    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "discountOffList", "vendorprice", "extendedvendorprice", "totalVisibleReserveQuantity", "type", "recurringPriceModel"]
+    unit_of_measure: Optional[StrictStr] = Field(default=None, alias="unitOfMeasure")
+    tax: Optional[StrictStr] = None
+    extrafees: Optional[Union[StrictFloat, StrictInt]] = None
+    extra_fees_details: Optional[List[QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner]] = Field(default=None, alias="extraFeesDetails")
+    discounts: Optional[List[QuoteDetailsResponseProductsInnerPriceDiscountsInner]] = None
+    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "discountOffList", "type", "recurringPriceModel", "unitOfMeasure", "tax", "extrafees", "extraFeesDetails", "discounts"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -77,6 +81,20 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in extra_fees_details (list)
+        _items = []
+        if self.extra_fees_details:
+            for _item in self.extra_fees_details:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['extraFeesDetails'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in discounts (list)
+        _items = []
+        if self.discounts:
+            for _item in self.discounts:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['discounts'] = _items
         return _dict
 
     @classmethod
@@ -94,11 +112,13 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
             "extendedMsrp": obj.get("extendedMsrp"),
             "extendedQuotePrice": obj.get("extendedQuotePrice"),
             "discountOffList": obj.get("discountOffList"),
-            "vendorprice": obj.get("vendorprice"),
-            "extendedvendorprice": obj.get("extendedvendorprice"),
-            "totalVisibleReserveQuantity": obj.get("totalVisibleReserveQuantity"),
             "type": obj.get("type"),
-            "recurringPriceModel": obj.get("recurringPriceModel")
+            "recurringPriceModel": obj.get("recurringPriceModel"),
+            "unitOfMeasure": obj.get("unitOfMeasure"),
+            "tax": obj.get("tax"),
+            "extrafees": obj.get("extrafees"),
+            "extraFeesDetails": [QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.from_dict(_item) for _item in obj["extraFeesDetails"]] if obj.get("extraFeesDetails") is not None else None,
+            "discounts": [QuoteDetailsResponseProductsInnerPriceDiscountsInner.from_dict(_item) for _item in obj["discounts"]] if obj.get("discounts") is not None else None
         })
         return _obj
 

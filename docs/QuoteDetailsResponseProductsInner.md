@@ -21,9 +21,15 @@ Name | Type | Description | Notes
 **quote_products_supplier_part_auxiliary_id** | **str** | Vendor product configuration ID specific to Cisco. | [optional] 
 **vendor_name** | **str** | Vendor name of the product | [optional] 
 **terms** | **str** | Terms of the quote | [optional] 
+**plan_description** | **str** |  | [optional] 
 **is_subscription** | **bool** |  | [optional] 
 **reseller_margin** | **str** |  | [optional] 
+**requested_start_date** | **str** |  | [optional] 
+**start_date** | **str** |  | [optional] 
+**end_date** | **str** |  | [optional] 
+**serial_number** | **str** |  | [optional] 
 **price** | [**QuoteDetailsResponseProductsInnerPrice**](QuoteDetailsResponseProductsInnerPrice.md) |  | [optional] 
+**bill_details** | [**List[QuoteDetailsResponseProductsInnerBillDetailsInner]**](QuoteDetailsResponseProductsInnerBillDetailsInner.md) |  | [optional] 
 
 ## Example
 

@@ -10,11 +10,13 @@ Name | Type | Description | Notes
 **extended_msrp** | **float** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
 **extended_quote_price** | **float** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
 **discount_off_list** | **str** | Discount off list percentage extended | [optional] 
-**vendorprice** | **float** |  | [optional] 
-**extendedvendorprice** | **float** |  | [optional] 
-**total_visible_reserve_quantity** | **int** |  | [optional] 
 **type** | **str** |  | [optional] 
 **recurring_price_model** | **str** |  | [optional] 
+**unit_of_measure** | **str** |  | [optional] 
+**tax** | **str** |  | [optional] 
+**extrafees** | **float** |  | [optional] 
+**extra_fees_details** | [**List[QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner]**](QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.md) |  | [optional] 
+**discounts** | [**List[QuoteDetailsResponseProductsInnerPriceDiscountsInner]**](QuoteDetailsResponseProductsInnerPriceDiscountsInner.md) |  | [optional] 
 
 ## Example
 

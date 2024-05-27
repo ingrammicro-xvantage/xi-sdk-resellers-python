@@ -19,18 +19,17 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.post_async_order_create_v7400_response_fields_inner import PostAsyncOrderCreateV7400ResponseFieldsInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PostAsyncOrderCreateV7400Response(BaseModel):
+class PostCreateorderV7500Response(BaseModel):
     """
-    PostAsyncOrderCreateV7400Response
+    PostCreateorderV7500Response
     """ # noqa: E501
-    traceid: Optional[StrictStr] = Field(default=None, description="A unique trace id to identify the issue.")
-    type: Optional[StrictStr] = Field(default=None, description="Type of the error message.")
-    message: Optional[StrictStr] = Field(default=None, description="A detailed error message.")
-    fields: Optional[List[PostAsyncOrderCreateV7400ResponseFieldsInner]] = None
+    traceid: Optional[StrictStr] = Field(default=None, description="Unique Id to identify error.")
+    type: Optional[StrictStr] = Field(default=None, description="Describes the type of the error.")
+    message: Optional[StrictStr] = Field(default=None, description="Describes the error message.")
+    fields: Optional[List[Dict[str, Any]]] = None
     __properties: ClassVar[List[str]] = ["traceid", "type", "message", "fields"]
 
     model_config = ConfigDict(
@@ -51,7 +50,7 @@ class PostAsyncOrderCreateV7400Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PostAsyncOrderCreateV7400Response from a JSON string"""
+        """Create an instance of PostCreateorderV7500Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,18 +71,11 @@ class PostAsyncOrderCreateV7400Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in fields (list)
-        _items = []
-        if self.fields:
-            for _item in self.fields:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['fields'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PostAsyncOrderCreateV7400Response from a dict"""
+        """Create an instance of PostCreateorderV7500Response from a dict"""
         if obj is None:
             return None
 
@@ -94,7 +86,7 @@ class PostAsyncOrderCreateV7400Response(BaseModel):
             "traceid": obj.get("traceid"),
             "type": obj.get("type"),
             "message": obj.get("message"),
-            "fields": [PostAsyncOrderCreateV7400ResponseFieldsInner.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None
+            "fields": obj.get("fields")
         })
         return _obj
 

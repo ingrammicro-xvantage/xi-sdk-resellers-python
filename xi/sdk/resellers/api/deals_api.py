@@ -116,7 +116,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -205,7 +205,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -294,7 +294,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -467,7 +467,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -568,7 +568,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -669,7 +669,7 @@ class DealsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,

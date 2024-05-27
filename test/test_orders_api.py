@@ -47,17 +47,17 @@ class TestOrdersApi(unittest.TestCase):
         """
         pass
 
-    def test_post_async_order_create_v7(self) -> None:
-        """Test case for post_async_order_create_v7
-
-        Async Order Create
-        """
-        pass
-
     def test_post_createorder_v6(self) -> None:
         """Test case for post_createorder_v6
 
         Create your Order
+        """
+        pass
+
+    def test_post_createorder_v7(self) -> None:
+        """Test case for post_createorder_v7
+
+        Create your Order v7
         """
         pass
 

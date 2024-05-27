@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.async_order_create_dto_end_user_info import AsyncOrderCreateDTOEndUserInfo
+from xi.sdk.resellers.models.quote_details_response_shipping_info import QuoteDetailsResponseShippingInfo
 
-class TestAsyncOrderCreateDTOEndUserInfo(unittest.TestCase):
-    """AsyncOrderCreateDTOEndUserInfo unit test stubs"""
+class TestQuoteDetailsResponseShippingInfo(unittest.TestCase):
+    """QuoteDetailsResponseShippingInfo unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,41 +25,34 @@ class TestAsyncOrderCreateDTOEndUserInfo(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> AsyncOrderCreateDTOEndUserInfo:
-        """Test AsyncOrderCreateDTOEndUserInfo
+    def make_instance(self, include_optional) -> QuoteDetailsResponseShippingInfo:
+        """Test QuoteDetailsResponseShippingInfo
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `AsyncOrderCreateDTOEndUserInfo`
+        # uncomment below to create an instance of `QuoteDetailsResponseShippingInfo`
         """
-        model = AsyncOrderCreateDTOEndUserInfo()
+        model = QuoteDetailsResponseShippingInfo()
         if include_optional:
-            return AsyncOrderCreateDTOEndUserInfo(
-                end_user_id = '',
-                end_user_type = '',
+            return QuoteDetailsResponseShippingInfo(
                 company_name = '',
-                name1 = '',
-                name2 = '',
                 address_line1 = '',
                 address_line2 = '',
                 address_line3 = '',
-                contact = '',
-                name3 = '',
                 city = '',
                 state = '',
-                postal_code = '',
-                address_line4 = '',
-                country_code = '',
+                email = '',
                 phone_number = '',
-                email = ''
+                postal_code = '',
+                shp_to_gstin_number = ''
             )
         else:
-            return AsyncOrderCreateDTOEndUserInfo(
+            return QuoteDetailsResponseShippingInfo(
         )
         """
 
-    def testAsyncOrderCreateDTOEndUserInfo(self):
-        """Test AsyncOrderCreateDTOEndUserInfo"""
+    def testQuoteDetailsResponseShippingInfo(self):
+        """Test QuoteDetailsResponseShippingInfo"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

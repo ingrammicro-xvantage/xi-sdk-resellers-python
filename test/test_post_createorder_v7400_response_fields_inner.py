@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.post_async_order_create_v7400_response_fields_inner import PostAsyncOrderCreateV7400ResponseFieldsInner
+from xi.sdk.resellers.models.post_createorder_v7400_response_fields_inner import PostCreateorderV7400ResponseFieldsInner
 
-class TestPostAsyncOrderCreateV7400ResponseFieldsInner(unittest.TestCase):
-    """PostAsyncOrderCreateV7400ResponseFieldsInner unit test stubs"""
+class TestPostCreateorderV7400ResponseFieldsInner(unittest.TestCase):
+    """PostCreateorderV7400ResponseFieldsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,27 +25,27 @@ class TestPostAsyncOrderCreateV7400ResponseFieldsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> PostAsyncOrderCreateV7400ResponseFieldsInner:
-        """Test PostAsyncOrderCreateV7400ResponseFieldsInner
+    def make_instance(self, include_optional) -> PostCreateorderV7400ResponseFieldsInner:
+        """Test PostCreateorderV7400ResponseFieldsInner
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `PostAsyncOrderCreateV7400ResponseFieldsInner`
+        # uncomment below to create an instance of `PostCreateorderV7400ResponseFieldsInner`
         """
-        model = PostAsyncOrderCreateV7400ResponseFieldsInner()
+        model = PostCreateorderV7400ResponseFieldsInner()
         if include_optional:
-            return PostAsyncOrderCreateV7400ResponseFieldsInner(
+            return PostCreateorderV7400ResponseFieldsInner(
                 var_field = '',
                 message = '',
                 value = ''
             )
         else:
-            return PostAsyncOrderCreateV7400ResponseFieldsInner(
+            return PostCreateorderV7400ResponseFieldsInner(
         )
         """
 
-    def testPostAsyncOrderCreateV7400ResponseFieldsInner(self):
-        """Test PostAsyncOrderCreateV7400ResponseFieldsInner"""
+    def testPostCreateorderV7400ResponseFieldsInner(self):
+        """Test PostCreateorderV7400ResponseFieldsInner"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

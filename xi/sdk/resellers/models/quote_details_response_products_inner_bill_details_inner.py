@@ -17,19 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PostAsyncOrderCreateV7400ResponseFieldsInner(BaseModel):
+class QuoteDetailsResponseProductsInnerBillDetailsInner(BaseModel):
     """
-    PostAsyncOrderCreateV7400ResponseFieldsInner
+    QuoteDetailsResponseProductsInnerBillDetailsInner
     """ # noqa: E501
-    var_field: Optional[StrictStr] = Field(default=None, description="Name of the field.", alias="field")
-    message: Optional[StrictStr] = Field(default=None, description="A filed level error message.")
-    value: Optional[StrictStr] = Field(default=None, description="Value of the message.")
-    __properties: ClassVar[List[str]] = ["field", "message", "value"]
+    type: Optional[StrictStr] = None
+    unit: Optional[StrictStr] = None
+    frequency: Optional[StrictInt] = None
+    unit_value: Optional[StrictStr] = Field(default=None, alias="unitValue")
+    __properties: ClassVar[List[str]] = ["type", "unit", "frequency", "unitValue"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +50,7 @@ class PostAsyncOrderCreateV7400ResponseFieldsInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PostAsyncOrderCreateV7400ResponseFieldsInner from a JSON string"""
+        """Create an instance of QuoteDetailsResponseProductsInnerBillDetailsInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +75,7 @@ class PostAsyncOrderCreateV7400ResponseFieldsInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PostAsyncOrderCreateV7400ResponseFieldsInner from a dict"""
+        """Create an instance of QuoteDetailsResponseProductsInnerBillDetailsInner from a dict"""
         if obj is None:
             return None
 
@@ -82,9 +83,10 @@ class PostAsyncOrderCreateV7400ResponseFieldsInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "field": obj.get("field"),
-            "message": obj.get("message"),
-            "value": obj.get("value")
+            "type": obj.get("type"),
+            "unit": obj.get("unit"),
+            "frequency": obj.get("frequency"),
+            "unitValue": obj.get("unitValue")
         })
         return _obj
 

@@ -19,6 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from xi.sdk.resellers.models.quote_details_response_products_inner_bill_details_inner import QuoteDetailsResponseProductsInnerBillDetailsInner
 from xi.sdk.resellers.models.quote_details_response_products_inner_price import QuoteDetailsResponseProductsInnerPrice
 from typing import Optional, Set
 from typing_extensions import Self
@@ -43,10 +44,16 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     quote_products_supplier_part_auxiliary_id: Optional[StrictStr] = Field(default=None, description="Vendor product configuration ID specific to Cisco.", alias="quoteProductsSupplierPartAuxiliaryId")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Vendor name of the product", alias="vendorName")
     terms: Optional[StrictStr] = Field(default=None, description="Terms of the quote")
+    plan_description: Optional[StrictStr] = Field(default=None, alias="planDescription")
     is_subscription: Optional[StrictBool] = Field(default=None, alias="isSubscription")
     reseller_margin: Optional[StrictStr] = Field(default=None, alias="resellerMargin")
+    requested_start_date: Optional[StrictStr] = Field(default=None, alias="requestedStartDate")
+    start_date: Optional[StrictStr] = Field(default=None, alias="startDate")
+    end_date: Optional[StrictStr] = Field(default=None, alias="endDate")
+    serial_number: Optional[StrictStr] = Field(default=None, alias="serialNumber")
     price: Optional[QuoteDetailsResponseProductsInnerPrice] = None
-    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "isSubscription", "resellerMargin", "price"]
+    bill_details: Optional[List[QuoteDetailsResponseProductsInnerBillDetailsInner]] = Field(default=None, alias="billDetails")
+    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "planDescription", "isSubscription", "resellerMargin", "requestedStartDate", "startDate", "endDate", "serialNumber", "price", "billDetails"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,6 +97,13 @@ class QuoteDetailsResponseProductsInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of price
         if self.price:
             _dict['price'] = self.price.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in bill_details (list)
+        _items = []
+        if self.bill_details:
+            for _item in self.bill_details:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['billDetails'] = _items
         return _dict
 
     @classmethod
@@ -118,9 +132,15 @@ class QuoteDetailsResponseProductsInner(BaseModel):
             "quoteProductsSupplierPartAuxiliaryId": obj.get("quoteProductsSupplierPartAuxiliaryId"),
             "vendorName": obj.get("vendorName"),
             "terms": obj.get("terms"),
+            "planDescription": obj.get("planDescription"),
             "isSubscription": obj.get("isSubscription"),
             "resellerMargin": obj.get("resellerMargin"),
-            "price": QuoteDetailsResponseProductsInnerPrice.from_dict(obj["price"]) if obj.get("price") is not None else None
+            "requestedStartDate": obj.get("requestedStartDate"),
+            "startDate": obj.get("startDate"),
+            "endDate": obj.get("endDate"),
+            "serialNumber": obj.get("serialNumber"),
+            "price": QuoteDetailsResponseProductsInnerPrice.from_dict(obj["price"]) if obj.get("price") is not None else None,
+            "billDetails": [QuoteDetailsResponseProductsInnerBillDetailsInner.from_dict(_item) for _item in obj["billDetails"]] if obj.get("billDetails") is not None else None
         })
         return _obj
 

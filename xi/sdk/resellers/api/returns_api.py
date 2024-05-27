@@ -114,7 +114,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -199,7 +199,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -284,7 +284,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsDetailsResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -494,7 +494,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -635,7 +635,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -776,7 +776,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsSearchResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1002,7 +1002,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsCreateResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1087,7 +1087,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsCreateResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1172,7 +1172,7 @@ class ReturnsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ReturnsCreateResponse",
             '400': "PostRenewalssearch400Response",
-            '500': "PostAsyncOrderCreateV7500Response",
+            '500': "PostCreateorderV7500Response",
         }
         response_data = self.api_client.call_api(
             *_param,

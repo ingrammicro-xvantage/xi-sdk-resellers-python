@@ -40,11 +40,30 @@ class TestQuoteDetailsResponseProductsInnerPrice(unittest.TestCase):
                 extended_msrp = 1.337,
                 extended_quote_price = 1.337,
                 discount_off_list = '',
-                vendorprice = 1.337,
-                extendedvendorprice = 1.337,
-                total_visible_reserve_quantity = 56,
                 type = '',
-                recurring_price_model = ''
+                recurring_price_model = '',
+                unit_of_measure = '',
+                tax = '',
+                extrafees = 1.337,
+                extra_fees_details = [
+                    xi.sdk.resellers.models.quote_details_response_products_inner_price_extra_fees_details_inner.QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner(
+                        extra_fees_description = '', 
+                        extra_fees_amount = 1.337, )
+                    ],
+                discounts = [
+                    xi.sdk.resellers.models.quote_details_response_products_inner_price_discounts_inner.QuoteDetailsResponse_products_inner_price_discounts_inner(
+                        type = '', 
+                        amount = 1.337, 
+                        expiration_date = '', 
+                        description = '', 
+                        avaliable_qunatity = 56, 
+                        minimum_quantity = 56, 
+                        bid_number = '', 
+                        bid_version = '', 
+                        valid_from = '', 
+                        valid_to = '', 
+                        discount_off_list = 1.337, )
+                    ]
             )
         else:
             return QuoteDetailsResponseProductsInnerPrice(

@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.post_async_order_create_v7500_response import PostAsyncOrderCreateV7500Response
+from xi.sdk.resellers.models.post_createorder_v7400_response import PostCreateorderV7400Response
 
-class TestPostAsyncOrderCreateV7500Response(unittest.TestCase):
-    """PostAsyncOrderCreateV7500Response unit test stubs"""
+class TestPostCreateorderV7400Response(unittest.TestCase):
+    """PostCreateorderV7400Response unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,30 +25,33 @@ class TestPostAsyncOrderCreateV7500Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> PostAsyncOrderCreateV7500Response:
-        """Test PostAsyncOrderCreateV7500Response
+    def make_instance(self, include_optional) -> PostCreateorderV7400Response:
+        """Test PostCreateorderV7400Response
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `PostAsyncOrderCreateV7500Response`
+        # uncomment below to create an instance of `PostCreateorderV7400Response`
         """
-        model = PostAsyncOrderCreateV7500Response()
+        model = PostCreateorderV7400Response()
         if include_optional:
-            return PostAsyncOrderCreateV7500Response(
+            return PostCreateorderV7400Response(
                 traceid = '',
                 type = '',
                 message = '',
                 fields = [
-                    None
+                    xi.sdk.resellers.models.post_createorder_v7_400_response_fields_inner.post_createorder_v7_400_response_fields_inner(
+                        field = '', 
+                        message = '', 
+                        value = '', )
                     ]
             )
         else:
-            return PostAsyncOrderCreateV7500Response(
+            return PostCreateorderV7400Response(
         )
         """
 
-    def testPostAsyncOrderCreateV7500Response(self):
-        """Test PostAsyncOrderCreateV7500Response"""
+    def testPostCreateorderV7400Response(self):
+        """Test PostCreateorderV7400Response"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
