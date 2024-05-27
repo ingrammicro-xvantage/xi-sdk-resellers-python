@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.quote_details_response_products_inner_bill_details_inner import QuoteDetailsResponseProductsInnerBillDetailsInner
 from xi.sdk.resellers.models.quote_details_response_products_inner_price import QuoteDetailsResponseProductsInnerPrice
 from typing import Optional, Set
@@ -37,7 +37,7 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor Part Number", alias="vendorPartNumber")
     description: Optional[StrictStr] = Field(default=None, description="Product description.  Note - The quote view api returns only the product short description as maintained in Ingram Micro's crm system.  For long descriptions, please refer to alternative information sources.")
-    weight: Optional[StrictInt] = Field(default=None, description="Weight is provided based on country standard.  For countries following Imperial standards - weight is presented as pounds with decimal.  In countries following metric standards, weight is provided as kilograms with decimal.")
+    weight: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Weight is provided based on country standard.  For countries following Imperial standards - weight is presented as pounds with decimal.  In countries following metric standards, weight is provided as kilograms with decimal.")
     weight_uom: Optional[StrictStr] = Field(default=None, description="Unit of measure", alias="weightUom")
     is_suggestion_product: Optional[StrictBool] = Field(default=None, description="Flag to indicate if a product line item is a suggested product.  The suggested product is provided in addition to the requested quoted products and a suggested option.  Suggested products are grouped together for subtotal and total calculations.", alias="isSuggestionProduct")
     vpn_category: Optional[StrictStr] = Field(default=None, description="Vendor product category specific to Cisco. HWDW (hardware) or service.", alias="vpnCategory")

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **type** | **str** |  | [optional] 
 **recurring_price_model** | **str** |  | [optional] 
 **unit_of_measure** | **str** |  | [optional] 
-**tax** | **str** |  | [optional] 
+**tax** | **float** |  | [optional] 
 **extrafees** | **float** |  | [optional] 
 **extra_fees_details** | [**List[QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner]**](QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.md) |  | [optional] 
 **discounts** | [**List[QuoteDetailsResponseProductsInnerPriceDiscountsInner]**](QuoteDetailsResponseProductsInnerPriceDiscountsInner.md) |  | [optional] 

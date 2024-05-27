@@ -36,7 +36,7 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
     type: Optional[StrictStr] = None
     recurring_price_model: Optional[StrictStr] = Field(default=None, alias="recurringPriceModel")
     unit_of_measure: Optional[StrictStr] = Field(default=None, alias="unitOfMeasure")
-    tax: Optional[StrictStr] = None
+    tax: Optional[Union[StrictFloat, StrictInt]] = None
     extrafees: Optional[Union[StrictFloat, StrictInt]] = None
     extra_fees_details: Optional[List[QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner]] = Field(default=None, alias="extraFeesDetails")
     discounts: Optional[List[QuoteDetailsResponseProductsInnerPriceDiscountsInner]] = None

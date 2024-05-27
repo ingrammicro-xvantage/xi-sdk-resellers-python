@@ -102,7 +102,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                         ingram_part_number = '', 
                         vendor_part_number = '', 
                         description = '', 
-                        weight = 56, 
+                        weight = 1.337, 
                         weight_uom = '', 
                         is_suggestion_product = True, 
                         vpn_category = '', 
@@ -125,7 +125,7 @@ class TestQuoteDetailsResponse(unittest.TestCase):
                             type = '', 
                             recurring_price_model = '', 
                             unit_of_measure = '', 
-                            tax = '', 
+                            tax = 1.337, 
                             extrafees = 1.337, 
                             extra_fees_details = [
                                 xi.sdk.resellers.models.quote_details_response_products_inner_price_extra_fees_details_inner.QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner(

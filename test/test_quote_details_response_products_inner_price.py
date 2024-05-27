@@ -43,7 +43,7 @@ class TestQuoteDetailsResponseProductsInnerPrice(unittest.TestCase):
                 type = '',
                 recurring_price_model = '',
                 unit_of_measure = '',
-                tax = '',
+                tax = 1.337,
                 extrafees = 1.337,
                 extra_fees_details = [
                     xi.sdk.resellers.models.quote_details_response_products_inner_price_extra_fees_details_inner.QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner(
