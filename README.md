@@ -14,13 +14,18 @@ Python 3.7+
 
 ## Installation & Usage
 ### pip install
+If you want to install from PyPI:
+```sh
+pip install xi.sdk.resellers
+```
 
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python.git`)
+
 
 Then import the package:
 ```python
@@ -46,6 +51,8 @@ import xi.sdk.resellers
 Execute `pytest` to run the tests.
 
 ## Getting Started
+
+Quickstart on creating an application can be found [here](getting-started.md)
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
@@ -313,24 +320,29 @@ Class | Method | HTTP request | Description
  - [ValidateQuoteResponseVmfAdditionalAttributesInner](docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md)
 
 
-<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 
 Authentication schemes defined for the API:
-<a id="application"></a>
 ### application
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: 
+- **Authorization URL**: https://api.ingrammicro.com:443/oauth/oauth20/token?grant_type=client_credentials&client_id={ClientId}&client_secret={clientSecret}
+- **Method**: Get
 - **Scopes**: 
- - **write**: allows modifying resources
- - **read**: allows reading resources
- - **description**: 
-
+  - write: allows modifying resources
+  - read: allows reading resources
+ 
 
 ## Author
+-[Ingram Micro Xvantage](https://github.com/ingrammicro-xvantage)
+
+## Contact
+
+For any inquiries or support, please feel free to contact us at:
+
+- Email: xi_support@ingrammicro.com
 
 
 
