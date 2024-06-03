@@ -144,6 +144,16 @@ class QuoteDetailsResponse(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['additionalAttributes'] = _items
+        # set to None if tax_total (nullable) is None
+        # and model_fields_set contains the field
+        if self.tax_total is None and "tax_total" in self.model_fields_set:
+            _dict['taxTotal'] = None
+
+        # set to None if freight_amount (nullable) is None
+        # and model_fields_set contains the field
+        if self.freight_amount is None and "freight_amount" in self.model_fields_set:
+            _dict['freightAmount'] = None
+
         return _dict
 
     @classmethod
