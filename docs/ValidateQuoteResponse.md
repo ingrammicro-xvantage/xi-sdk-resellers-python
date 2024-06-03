@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of ValidateQuoteResponse from a JSON string
 validate_quote_response_instance = ValidateQuoteResponse.from_json(json)
 # print the JSON string representation of the object
-print ValidateQuoteResponse.to_json()
+print(ValidateQuoteResponse.to_json())
 
 # convert the object into a dict
 validate_quote_response_dict = validate_quote_response_instance.to_dict()
 # create an instance of ValidateQuoteResponse from a dict
-validate_quote_response_form_dict = validate_quote_response.from_dict(validate_quote_response_dict)
+validate_quote_response_from_dict = ValidateQuoteResponse.from_dict(validate_quote_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **discount_amount** | **float** | Discount amount. | [optional] 
 **discount_type** | **str** | Type of discount. | [optional] 
 **total_tax_amount** | **float** | Total Tax amount. | [optional] 
-**invoices_amount_due** | **float** | Total amount due for the invoice. | [optional] 
+**invoiced_amount_due** | **float** | Total amount due for the invoice. | [optional] 
 **freight_amount** | **float** | Freight amount | [optional] 
 
 ## Example
@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of InvoiceDetailsv61ResponseSummaryTotals from a JSON string
 invoice_detailsv61_response_summary_totals_instance = InvoiceDetailsv61ResponseSummaryTotals.from_json(json)
 # print the JSON string representation of the object
-print InvoiceDetailsv61ResponseSummaryTotals.to_json()
+print(InvoiceDetailsv61ResponseSummaryTotals.to_json())
 
 # convert the object into a dict
 invoice_detailsv61_response_summary_totals_dict = invoice_detailsv61_response_summary_totals_instance.to_dict()
 # create an instance of InvoiceDetailsv61ResponseSummaryTotals from a dict
-invoice_detailsv61_response_summary_totals_form_dict = invoice_detailsv61_response_summary_totals.from_dict(invoice_detailsv61_response_summary_totals_dict)
+invoice_detailsv61_response_summary_totals_from_dict = InvoiceDetailsv61ResponseSummaryTotals.from_dict(invoice_detailsv61_response_summary_totals_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

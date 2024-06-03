@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of InvoiceDetailsv61ResponseSummaryMiscChargesInner from a JSON string
 invoice_detailsv61_response_summary_misc_charges_inner_instance = InvoiceDetailsv61ResponseSummaryMiscChargesInner.from_json(json)
 # print the JSON string representation of the object
-print InvoiceDetailsv61ResponseSummaryMiscChargesInner.to_json()
+print(InvoiceDetailsv61ResponseSummaryMiscChargesInner.to_json())
 
 # convert the object into a dict
 invoice_detailsv61_response_summary_misc_charges_inner_dict = invoice_detailsv61_response_summary_misc_charges_inner_instance.to_dict()
 # create an instance of InvoiceDetailsv61ResponseSummaryMiscChargesInner from a dict
-invoice_detailsv61_response_summary_misc_charges_inner_form_dict = invoice_detailsv61_response_summary_misc_charges_inner.from_dict(invoice_detailsv61_response_summary_misc_charges_inner_dict)
+invoice_detailsv61_response_summary_misc_charges_inner_from_dict = InvoiceDetailsv61ResponseSummaryMiscChargesInner.from_dict(invoice_detailsv61_response_summary_misc_charges_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

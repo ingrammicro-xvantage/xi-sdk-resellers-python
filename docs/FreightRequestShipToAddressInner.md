@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of FreightRequestShipToAddressInner from a JSON string
 freight_request_ship_to_address_inner_instance = FreightRequestShipToAddressInner.from_json(json)
 # print the JSON string representation of the object
-print FreightRequestShipToAddressInner.to_json()
+print(FreightRequestShipToAddressInner.to_json())
 
 # convert the object into a dict
 freight_request_ship_to_address_inner_dict = freight_request_ship_to_address_inner_instance.to_dict()
 # create an instance of FreightRequestShipToAddressInner from a dict
-freight_request_ship_to_address_inner_form_dict = freight_request_ship_to_address_inner.from_dict(freight_request_ship_to_address_inner_dict)
+freight_request_ship_to_address_inner_from_dict = FreightRequestShipToAddressInner.from_dict(freight_request_ship_to_address_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

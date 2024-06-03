@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of RenewalsSearchRequest from a JSON string
 renewals_search_request_instance = RenewalsSearchRequest.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchRequest.to_json()
+print(RenewalsSearchRequest.to_json())
 
 # convert the object into a dict
 renewals_search_request_dict = renewals_search_request_instance.to_dict()
 # create an instance of RenewalsSearchRequest from a dict
-renewals_search_request_form_dict = renewals_search_request.from_dict(renewals_search_request_dict)
+renewals_search_request_from_dict = RenewalsSearchRequest.from_dict(renewals_search_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner from a JSON string
 price_and_availability_response_inner_reserve_inventory_details_inner_instance = PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.from_json(json)
 # print the JSON string representation of the object
-print PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.to_json()
+print(PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.to_json())
 
 # convert the object into a dict
 price_and_availability_response_inner_reserve_inventory_details_inner_dict = price_and_availability_response_inner_reserve_inventory_details_inner_instance.to_dict()
 # create an instance of PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner from a dict
-price_and_availability_response_inner_reserve_inventory_details_inner_form_dict = price_and_availability_response_inner_reserve_inventory_details_inner.from_dict(price_and_availability_response_inner_reserve_inventory_details_inner_dict)
+price_and_availability_response_inner_reserve_inventory_details_inner_from_dict = PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.from_dict(price_and_availability_response_inner_reserve_inventory_details_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

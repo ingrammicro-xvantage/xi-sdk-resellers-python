@@ -50,12 +50,12 @@ json = "{}"
 # create an instance of ProductDetailResponseIndicators from a JSON string
 product_detail_response_indicators_instance = ProductDetailResponseIndicators.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseIndicators.to_json()
+print(ProductDetailResponseIndicators.to_json())
 
 # convert the object into a dict
 product_detail_response_indicators_dict = product_detail_response_indicators_instance.to_dict()
 # create an instance of ProductDetailResponseIndicators from a dict
-product_detail_response_indicators_form_dict = product_detail_response_indicators.from_dict(product_detail_response_indicators_dict)
+product_detail_response_indicators_from_dict = ProductDetailResponseIndicators.from_dict(product_detail_response_indicators_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

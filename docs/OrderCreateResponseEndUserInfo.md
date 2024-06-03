@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of OrderCreateResponseEndUserInfo from a JSON string
 order_create_response_end_user_info_instance = OrderCreateResponseEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateResponseEndUserInfo.to_json()
+print(OrderCreateResponseEndUserInfo.to_json())
 
 # convert the object into a dict
 order_create_response_end_user_info_dict = order_create_response_end_user_info_instance.to_dict()
 # create an instance of OrderCreateResponseEndUserInfo from a dict
-order_create_response_end_user_info_form_dict = order_create_response_end_user_info.from_dict(order_create_response_end_user_info_dict)
+order_create_response_end_user_info_from_dict = OrderCreateResponseEndUserInfo.from_dict(order_create_response_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

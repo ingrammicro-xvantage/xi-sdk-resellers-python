@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of PriceAndAvailabilityRequestAvailabilityByWarehouseInner from a JSON string
 price_and_availability_request_availability_by_warehouse_inner_instance = PriceAndAvailabilityRequestAvailabilityByWarehouseInner.from_json(json)
 # print the JSON string representation of the object
-print PriceAndAvailabilityRequestAvailabilityByWarehouseInner.to_json()
+print(PriceAndAvailabilityRequestAvailabilityByWarehouseInner.to_json())
 
 # convert the object into a dict
 price_and_availability_request_availability_by_warehouse_inner_dict = price_and_availability_request_availability_by_warehouse_inner_instance.to_dict()
 # create an instance of PriceAndAvailabilityRequestAvailabilityByWarehouseInner from a dict
-price_and_availability_request_availability_by_warehouse_inner_form_dict = price_and_availability_request_availability_by_warehouse_inner.from_dict(price_and_availability_request_availability_by_warehouse_inner_dict)
+price_and_availability_request_availability_by_warehouse_inner_from_dict = PriceAndAvailabilityRequestAvailabilityByWarehouseInner.from_dict(price_and_availability_request_availability_by_warehouse_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

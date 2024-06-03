@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of FreightRequestLinesInner from a JSON string
 freight_request_lines_inner_instance = FreightRequestLinesInner.from_json(json)
 # print the JSON string representation of the object
-print FreightRequestLinesInner.to_json()
+print(FreightRequestLinesInner.to_json())
 
 # convert the object into a dict
 freight_request_lines_inner_dict = freight_request_lines_inner_instance.to_dict()
 # create an instance of FreightRequestLinesInner from a dict
-freight_request_lines_inner_form_dict = freight_request_lines_inner.from_dict(freight_request_lines_inner_dict)
+freight_request_lines_inner_from_dict = FreightRequestLinesInner.from_dict(freight_request_lines_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

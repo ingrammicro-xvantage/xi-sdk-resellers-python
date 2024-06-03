@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of OrderModifyResponseLinesInnerShipmentDetails from a JSON string
 order_modify_response_lines_inner_shipment_details_instance = OrderModifyResponseLinesInnerShipmentDetails.from_json(json)
 # print the JSON string representation of the object
-print OrderModifyResponseLinesInnerShipmentDetails.to_json()
+print(OrderModifyResponseLinesInnerShipmentDetails.to_json())
 
 # convert the object into a dict
 order_modify_response_lines_inner_shipment_details_dict = order_modify_response_lines_inner_shipment_details_instance.to_dict()
 # create an instance of OrderModifyResponseLinesInnerShipmentDetails from a dict
-order_modify_response_lines_inner_shipment_details_form_dict = order_modify_response_lines_inner_shipment_details.from_dict(order_modify_response_lines_inner_shipment_details_dict)
+order_modify_response_lines_inner_shipment_details_from_dict = OrderModifyResponseLinesInnerShipmentDetails.from_dict(order_modify_response_lines_inner_shipment_details_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

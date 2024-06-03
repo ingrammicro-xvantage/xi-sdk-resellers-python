@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of ReturnsSearchResponseReturnsClaimsInnerLinksInner from a JSON string
 returns_search_response_returns_claims_inner_links_inner_instance = ReturnsSearchResponseReturnsClaimsInnerLinksInner.from_json(json)
 # print the JSON string representation of the object
-print ReturnsSearchResponseReturnsClaimsInnerLinksInner.to_json()
+print(ReturnsSearchResponseReturnsClaimsInnerLinksInner.to_json())
 
 # convert the object into a dict
 returns_search_response_returns_claims_inner_links_inner_dict = returns_search_response_returns_claims_inner_links_inner_instance.to_dict()
 # create an instance of ReturnsSearchResponseReturnsClaimsInnerLinksInner from a dict
-returns_search_response_returns_claims_inner_links_inner_form_dict = returns_search_response_returns_claims_inner_links_inner.from_dict(returns_search_response_returns_claims_inner_links_inner_dict)
+returns_search_response_returns_claims_inner_links_inner_from_dict = ReturnsSearchResponseReturnsClaimsInnerLinksInner.from_dict(returns_search_response_returns_claims_inner_links_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

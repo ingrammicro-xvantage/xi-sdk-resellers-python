@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **state** | **str** | The end user/customer&#39;s state. Required for Impulse countries but optional for EMEA countries. | [optional] 
 **postal_code** | **str** | The end user/customer&#39;s zip or postal code. Required for Impulse countries. | [optional] 
 **country_code** | **str** | The end user/customer&#39;s two-character ISO country code. | [optional] 
-**phone_number** | **int** | The end user/customer&#39;s phone number. | [optional] 
+**phone_number** | **str** | The end user/customer&#39;s phone number. | [optional] 
 **email** | **str** | The end user/customer&#39;s email. | [optional] 
 
 ## Example
@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of OrderCreateRequestEndUserInfo from a JSON string
 order_create_request_end_user_info_instance = OrderCreateRequestEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestEndUserInfo.to_json()
+print(OrderCreateRequestEndUserInfo.to_json())
 
 # convert the object into a dict
 order_create_request_end_user_info_dict = order_create_request_end_user_info_instance.to_dict()
 # create an instance of OrderCreateRequestEndUserInfo from a dict
-order_create_request_end_user_info_form_dict = order_create_request_end_user_info.from_dict(order_create_request_end_user_info_dict)
+order_create_request_end_user_info_from_dict = OrderCreateRequestEndUserInfo.from_dict(order_create_request_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

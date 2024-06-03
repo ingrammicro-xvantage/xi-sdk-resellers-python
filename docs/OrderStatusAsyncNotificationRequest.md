@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of OrderStatusAsyncNotificationRequest from a JSON string
 order_status_async_notification_request_instance = OrderStatusAsyncNotificationRequest.from_json(json)
 # print the JSON string representation of the object
-print OrderStatusAsyncNotificationRequest.to_json()
+print(OrderStatusAsyncNotificationRequest.to_json())
 
 # convert the object into a dict
 order_status_async_notification_request_dict = order_status_async_notification_request_instance.to_dict()
 # create an instance of OrderStatusAsyncNotificationRequest from a dict
-order_status_async_notification_request_form_dict = order_status_async_notification_request.from_dict(order_status_async_notification_request_dict)
+order_status_async_notification_request_from_dict = OrderStatusAsyncNotificationRequest.from_dict(order_status_async_notification_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

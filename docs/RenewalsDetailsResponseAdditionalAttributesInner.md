@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of RenewalsDetailsResponseAdditionalAttributesInner from a JSON string
 renewals_details_response_additional_attributes_inner_instance = RenewalsDetailsResponseAdditionalAttributesInner.from_json(json)
 # print the JSON string representation of the object
-print RenewalsDetailsResponseAdditionalAttributesInner.to_json()
+print(RenewalsDetailsResponseAdditionalAttributesInner.to_json())
 
 # convert the object into a dict
 renewals_details_response_additional_attributes_inner_dict = renewals_details_response_additional_attributes_inner_instance.to_dict()
 # create an instance of RenewalsDetailsResponseAdditionalAttributesInner from a dict
-renewals_details_response_additional_attributes_inner_form_dict = renewals_details_response_additional_attributes_inner.from_dict(renewals_details_response_additional_attributes_inner_dict)
+renewals_details_response_additional_attributes_inner_from_dict = RenewalsDetailsResponseAdditionalAttributesInner.from_dict(renewals_details_response_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

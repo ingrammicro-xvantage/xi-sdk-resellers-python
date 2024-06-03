@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner from a JSON string
 order_create_request_lines_inner_warranty_info_inner_serial_info_inner_instance = OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.to_json()
+print(OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.to_json())
 
 # convert the object into a dict
 order_create_request_lines_inner_warranty_info_inner_serial_info_inner_dict = order_create_request_lines_inner_warranty_info_inner_serial_info_inner_instance.to_dict()
 # create an instance of OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner from a dict
-order_create_request_lines_inner_warranty_info_inner_serial_info_inner_form_dict = order_create_request_lines_inner_warranty_info_inner_serial_info_inner.from_dict(order_create_request_lines_inner_warranty_info_inner_serial_info_inner_dict)
+order_create_request_lines_inner_warranty_info_inner_serial_info_inner_from_dict = OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.from_dict(order_create_request_lines_inner_warranty_info_inner_serial_info_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

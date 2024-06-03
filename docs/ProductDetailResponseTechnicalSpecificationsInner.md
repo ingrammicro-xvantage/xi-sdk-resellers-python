@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of ProductDetailResponseTechnicalSpecificationsInner from a JSON string
 product_detail_response_technical_specifications_inner_instance = ProductDetailResponseTechnicalSpecificationsInner.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseTechnicalSpecificationsInner.to_json()
+print(ProductDetailResponseTechnicalSpecificationsInner.to_json())
 
 # convert the object into a dict
 product_detail_response_technical_specifications_inner_dict = product_detail_response_technical_specifications_inner_instance.to_dict()
 # create an instance of ProductDetailResponseTechnicalSpecificationsInner from a dict
-product_detail_response_technical_specifications_inner_form_dict = product_detail_response_technical_specifications_inner.from_dict(product_detail_response_technical_specifications_inner_dict)
+product_detail_response_technical_specifications_inner_from_dict = ProductDetailResponseTechnicalSpecificationsInner.from_dict(product_detail_response_technical_specifications_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

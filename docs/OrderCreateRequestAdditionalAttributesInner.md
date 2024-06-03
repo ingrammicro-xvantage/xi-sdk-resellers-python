@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of OrderCreateRequestAdditionalAttributesInner from a JSON string
 order_create_request_additional_attributes_inner_instance = OrderCreateRequestAdditionalAttributesInner.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateRequestAdditionalAttributesInner.to_json()
+print(OrderCreateRequestAdditionalAttributesInner.to_json())
 
 # convert the object into a dict
 order_create_request_additional_attributes_inner_dict = order_create_request_additional_attributes_inner_instance.to_dict()
 # create an instance of OrderCreateRequestAdditionalAttributesInner from a dict
-order_create_request_additional_attributes_inner_form_dict = order_create_request_additional_attributes_inner.from_dict(order_create_request_additional_attributes_inner_dict)
+order_create_request_additional_attributes_inner_from_dict = OrderCreateRequestAdditionalAttributesInner.from_dict(order_create_request_additional_attributes_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

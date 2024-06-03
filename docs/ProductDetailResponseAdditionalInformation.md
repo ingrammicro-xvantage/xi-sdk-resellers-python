@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of ProductDetailResponseAdditionalInformation from a JSON string
 product_detail_response_additional_information_instance = ProductDetailResponseAdditionalInformation.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseAdditionalInformation.to_json()
+print(ProductDetailResponseAdditionalInformation.to_json())
 
 # convert the object into a dict
 product_detail_response_additional_information_dict = product_detail_response_additional_information_instance.to_dict()
 # create an instance of ProductDetailResponseAdditionalInformation from a dict
-product_detail_response_additional_information_form_dict = product_detail_response_additional_information.from_dict(product_detail_response_additional_information_dict)
+product_detail_response_additional_information_from_dict = ProductDetailResponseAdditionalInformation.from_dict(product_detail_response_additional_information_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

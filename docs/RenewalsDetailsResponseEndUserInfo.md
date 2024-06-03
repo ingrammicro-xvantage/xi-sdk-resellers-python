@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of RenewalsDetailsResponseEndUserInfo from a JSON string
 renewals_details_response_end_user_info_instance = RenewalsDetailsResponseEndUserInfo.from_json(json)
 # print the JSON string representation of the object
-print RenewalsDetailsResponseEndUserInfo.to_json()
+print(RenewalsDetailsResponseEndUserInfo.to_json())
 
 # convert the object into a dict
 renewals_details_response_end_user_info_dict = renewals_details_response_end_user_info_instance.to_dict()
 # create an instance of RenewalsDetailsResponseEndUserInfo from a dict
-renewals_details_response_end_user_info_form_dict = renewals_details_response_end_user_info.from_dict(renewals_details_response_end_user_info_dict)
+renewals_details_response_end_user_info_from_dict = RenewalsDetailsResponseEndUserInfo.from_dict(renewals_details_response_end_user_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

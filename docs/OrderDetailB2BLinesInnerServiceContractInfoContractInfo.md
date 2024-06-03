@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of OrderDetailB2BLinesInnerServiceContractInfoContractInfo from a JSON string
 order_detail_b2_b_lines_inner_service_contract_info_contract_info_instance = OrderDetailB2BLinesInnerServiceContractInfoContractInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderDetailB2BLinesInnerServiceContractInfoContractInfo.to_json()
+print(OrderDetailB2BLinesInnerServiceContractInfoContractInfo.to_json())
 
 # convert the object into a dict
 order_detail_b2_b_lines_inner_service_contract_info_contract_info_dict = order_detail_b2_b_lines_inner_service_contract_info_contract_info_instance.to_dict()
 # create an instance of OrderDetailB2BLinesInnerServiceContractInfoContractInfo from a dict
-order_detail_b2_b_lines_inner_service_contract_info_contract_info_form_dict = order_detail_b2_b_lines_inner_service_contract_info_contract_info.from_dict(order_detail_b2_b_lines_inner_service_contract_info_contract_info_dict)
+order_detail_b2_b_lines_inner_service_contract_info_contract_info_from_dict = OrderDetailB2BLinesInnerServiceContractInfoContractInfo.from_dict(order_detail_b2_b_lines_inner_service_contract_info_contract_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

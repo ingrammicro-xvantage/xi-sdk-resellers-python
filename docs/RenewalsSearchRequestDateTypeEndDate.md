@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of RenewalsSearchRequestDateTypeEndDate from a JSON string
 renewals_search_request_date_type_end_date_instance = RenewalsSearchRequestDateTypeEndDate.from_json(json)
 # print the JSON string representation of the object
-print RenewalsSearchRequestDateTypeEndDate.to_json()
+print(RenewalsSearchRequestDateTypeEndDate.to_json())
 
 # convert the object into a dict
 renewals_search_request_date_type_end_date_dict = renewals_search_request_date_type_end_date_instance.to_dict()
 # create an instance of RenewalsSearchRequestDateTypeEndDate from a dict
-renewals_search_request_date_type_end_date_form_dict = renewals_search_request_date_type_end_date.from_dict(renewals_search_request_date_type_end_date_dict)
+renewals_search_request_date_type_end_date_from_dict = RenewalsSearchRequestDateTypeEndDate.from_dict(renewals_search_request_date_type_end_date_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

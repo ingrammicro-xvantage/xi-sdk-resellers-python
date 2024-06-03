@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of QuoteSearchResponse from a JSON string
 quote_search_response_instance = QuoteSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print QuoteSearchResponse.to_json()
+print(QuoteSearchResponse.to_json())
 
 # convert the object into a dict
 quote_search_response_dict = quote_search_response_instance.to_dict()
 # create an instance of QuoteSearchResponse from a dict
-quote_search_response_form_dict = quote_search_response.from_dict(quote_search_response_dict)
+quote_search_response_from_dict = QuoteSearchResponse.from_dict(quote_search_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of OrderCreateResponseShipToInfo from a JSON string
 order_create_response_ship_to_info_instance = OrderCreateResponseShipToInfo.from_json(json)
 # print the JSON string representation of the object
-print OrderCreateResponseShipToInfo.to_json()
+print(OrderCreateResponseShipToInfo.to_json())
 
 # convert the object into a dict
 order_create_response_ship_to_info_dict = order_create_response_ship_to_info_instance.to_dict()
 # create an instance of OrderCreateResponseShipToInfo from a dict
-order_create_response_ship_to_info_form_dict = order_create_response_ship_to_info.from_dict(order_create_response_ship_to_info_dict)
+order_create_response_ship_to_info_from_dict = OrderCreateResponseShipToInfo.from_dict(order_create_response_ship_to_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of OrderModifyRequestLinesInner from a JSON string
 order_modify_request_lines_inner_instance = OrderModifyRequestLinesInner.from_json(json)
 # print the JSON string representation of the object
-print OrderModifyRequestLinesInner.to_json()
+print(OrderModifyRequestLinesInner.to_json())
 
 # convert the object into a dict
 order_modify_request_lines_inner_dict = order_modify_request_lines_inner_instance.to_dict()
 # create an instance of OrderModifyRequestLinesInner from a dict
-order_modify_request_lines_inner_form_dict = order_modify_request_lines_inner.from_dict(order_modify_request_lines_inner_dict)
+order_modify_request_lines_inner_from_dict = OrderModifyRequestLinesInner.from_dict(order_modify_request_lines_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

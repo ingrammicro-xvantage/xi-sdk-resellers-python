@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of ProductDetailResponseCiscoFields from a JSON string
 product_detail_response_cisco_fields_instance = ProductDetailResponseCiscoFields.from_json(json)
 # print the JSON string representation of the object
-print ProductDetailResponseCiscoFields.to_json()
+print(ProductDetailResponseCiscoFields.to_json())
 
 # convert the object into a dict
 product_detail_response_cisco_fields_dict = product_detail_response_cisco_fields_instance.to_dict()
 # create an instance of ProductDetailResponseCiscoFields from a dict
-product_detail_response_cisco_fields_form_dict = product_detail_response_cisco_fields.from_dict(product_detail_response_cisco_fields_dict)
+product_detail_response_cisco_fields_from_dict = ProductDetailResponseCiscoFields.from_dict(product_detail_response_cisco_fields_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PostRenewalssearch400Response from a JSON string
 post_renewalssearch400_response_instance = PostRenewalssearch400Response.from_json(json)
 # print the JSON string representation of the object
-print PostRenewalssearch400Response.to_json()
+print(PostRenewalssearch400Response.to_json())
 
 # convert the object into a dict
 post_renewalssearch400_response_dict = post_renewalssearch400_response_instance.to_dict()
 # create an instance of PostRenewalssearch400Response from a dict
-post_renewalssearch400_response_form_dict = post_renewalssearch400_response.from_dict(post_renewalssearch400_response_dict)
+post_renewalssearch400_response_from_dict = PostRenewalssearch400Response.from_dict(post_renewalssearch400_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
