@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.quote_search_response_quotes_inner import QuoteSearchResponseQuotesInner
 from typing import Optional, Set
@@ -31,7 +31,9 @@ class QuoteSearchResponse(BaseModel):
     page_size: Optional[StrictInt] = Field(default=None, description="Number of records (quotes) displayed per page in the quote list.", alias="pageSize")
     page_number: Optional[StrictInt] = Field(default=None, description="Page index or page number for the list of quotes being returned.", alias="pageNumber")
     quotes: Optional[List[QuoteSearchResponseQuotesInner]] = Field(default=None, description="The quote details for the requested criteria.")
-    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "quotes"]
+    next_page: Optional[StrictStr] = Field(default=None, alias="nextPage")
+    prev_page: Optional[StrictStr] = Field(default=None, alias="prevPage")
+    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "quotes", "nextPage", "prevPage"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -94,7 +96,9 @@ class QuoteSearchResponse(BaseModel):
             "recordsFound": obj.get("recordsFound"),
             "pageSize": obj.get("pageSize"),
             "pageNumber": obj.get("pageNumber"),
-            "quotes": [QuoteSearchResponseQuotesInner.from_dict(_item) for _item in obj["quotes"]] if obj.get("quotes") is not None else None
+            "quotes": [QuoteSearchResponseQuotesInner.from_dict(_item) for _item in obj["quotes"]] if obj.get("quotes") is not None else None,
+            "nextPage": obj.get("nextPage"),
+            "prevPage": obj.get("prevPage")
         })
         return _obj
 

@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **page_size** | **int** | Number of records (quotes) displayed per page in the quote list. | [optional] 
 **page_number** | **int** | Page index or page number for the list of quotes being returned. | [optional] 
 **quotes** | [**List[QuoteSearchResponseQuotesInner]**](QuoteSearchResponseQuotesInner.md) | The quote details for the requested criteria. | [optional] 
+**next_page** | **str** |  | [optional] 
+**prev_page** | **str** |  | [optional] 
 
 ## Example
 
