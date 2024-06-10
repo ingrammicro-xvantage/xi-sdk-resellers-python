@@ -39,6 +39,7 @@ class TestQuoteSearchResponseQuotesInner(unittest.TestCase):
                 quote_name = '',
                 quote_number = '',
                 revision = '',
+                currency_code = '',
                 end_user_contact = '',
                 special_bid_number = '',
                 quote_total = 1.337,

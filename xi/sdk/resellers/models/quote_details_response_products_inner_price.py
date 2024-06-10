@@ -95,6 +95,16 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['discounts'] = _items
+        # set to None if tax (nullable) is None
+        # and model_fields_set contains the field
+        if self.tax is None and "tax" in self.model_fields_set:
+            _dict['tax'] = None
+
+        # set to None if extrafees (nullable) is None
+        # and model_fields_set contains the field
+        if self.extrafees is None and "extrafees" in self.model_fields_set:
+            _dict['extrafees'] = None
+
         return _dict
 
     @classmethod
