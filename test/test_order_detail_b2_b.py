@@ -27,7 +27,7 @@ class TestOrderDetailB2B(unittest.TestCase):
 
     def make_instance(self, include_optional) -> OrderDetailB2B:
         """Test OrderDetailB2B
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `OrderDetailB2B`

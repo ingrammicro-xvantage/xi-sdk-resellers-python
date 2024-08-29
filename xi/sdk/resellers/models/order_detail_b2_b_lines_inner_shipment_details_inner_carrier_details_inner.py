@@ -79,9 +79,9 @@ class OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner(BaseModel)
         # override the default output from pydantic by calling `to_dict()` of each item in tracking_details (list)
         _items = []
         if self.tracking_details:
-            for _item in self.tracking_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tracking_details in self.tracking_details:
+                if _item_tracking_details:
+                    _items.append(_item_tracking_details.to_dict())
             _dict['trackingDetails'] = _items
         # set to None if tracking_details (nullable) is None
         # and model_fields_set contains the field

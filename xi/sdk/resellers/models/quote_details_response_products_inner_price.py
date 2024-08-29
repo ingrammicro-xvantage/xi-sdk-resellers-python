@@ -84,16 +84,16 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extra_fees_details (list)
         _items = []
         if self.extra_fees_details:
-            for _item in self.extra_fees_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extra_fees_details in self.extra_fees_details:
+                if _item_extra_fees_details:
+                    _items.append(_item_extra_fees_details.to_dict())
             _dict['extraFeesDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in discounts (list)
         _items = []
         if self.discounts:
-            for _item in self.discounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_discounts in self.discounts:
+                if _item_discounts:
+                    _items.append(_item_discounts.to_dict())
             _dict['discounts'] = _items
         # set to None if tax (nullable) is None
         # and model_fields_set contains the field

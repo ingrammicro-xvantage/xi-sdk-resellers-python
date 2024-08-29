@@ -27,7 +27,7 @@ class TestInvoiceDetailsv61ResponseShipToInfo(unittest.TestCase):
 
     def make_instance(self, include_optional) -> InvoiceDetailsv61ResponseShipToInfo:
         """Test InvoiceDetailsv61ResponseShipToInfo
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `InvoiceDetailsv61ResponseShipToInfo`

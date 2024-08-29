@@ -84,9 +84,9 @@ class ReturnsDetailsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in products (list)
         _items = []
         if self.products:
-            for _item in self.products:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_products in self.products:
+                if _item_products:
+                    _items.append(_item_products.to_dict())
             _dict['products'] = _items
         return _dict
 

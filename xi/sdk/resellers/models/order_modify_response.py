@@ -93,23 +93,23 @@ class OrderModifyResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
         _items = []
         if self.lines:
-            for _item in self.lines:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lines in self.lines:
+                if _item_lines:
+                    _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rejected_line_items (list)
         _items = []
         if self.rejected_line_items:
-            for _item in self.rejected_line_items:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rejected_line_items in self.rejected_line_items:
+                if _item_rejected_line_items:
+                    _items.append(_item_rejected_line_items.to_dict())
             _dict['rejectedLineItems'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         return _dict
 

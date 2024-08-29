@@ -84,23 +84,23 @@ class OrderCreateRequestLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in warranty_info (list)
         _items = []
         if self.warranty_info:
-            for _item in self.warranty_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_warranty_info in self.warranty_info:
+                if _item_warranty_info:
+                    _items.append(_item_warranty_info.to_dict())
             _dict['warrantyInfo'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in end_user_info (list)
         _items = []
         if self.end_user_info:
-            for _item in self.end_user_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_end_user_info in self.end_user_info:
+                if _item_end_user_info:
+                    _items.append(_item_end_user_info.to_dict())
             _dict['endUserInfo'] = _items
         return _dict
 

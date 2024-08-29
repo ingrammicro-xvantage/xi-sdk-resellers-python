@@ -77,9 +77,9 @@ class QuoteSearchResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in quotes (list)
         _items = []
         if self.quotes:
-            for _item in self.quotes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_quotes in self.quotes:
+                if _item_quotes:
+                    _items.append(_item_quotes.to_dict())
             _dict['quotes'] = _items
         return _dict
 

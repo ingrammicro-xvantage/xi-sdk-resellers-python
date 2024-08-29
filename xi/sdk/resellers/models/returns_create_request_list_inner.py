@@ -86,9 +86,9 @@ class ReturnsCreateRequestListInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ship_from_info (list)
         _items = []
         if self.ship_from_info:
-            for _item in self.ship_from_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ship_from_info in self.ship_from_info:
+                if _item_ship_from_info:
+                    _items.append(_item_ship_from_info.to_dict())
             _dict['shipFromInfo'] = _items
         return _dict
 

@@ -27,7 +27,7 @@ class TestProductDetailResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> ProductDetailResponse:
         """Test ProductDetailResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `ProductDetailResponse`
@@ -40,7 +40,6 @@ class TestProductDetailResponse(unittest.TestCase):
                 customer_part_number = '',
                 product_authorized = '',
                 description = '',
-                product_detail_description = '',
                 upc = '',
                 product_category = '',
                 product_sub_category = '',
@@ -90,13 +89,6 @@ class TestProductDetailResponse(unittest.TestCase):
                     internal_business_entity = '', 
                     item_type = '', 
                     global_list_price = '', ),
-                technical_specifications = [
-                    xi.sdk.resellers.models.product_detail_response_technical_specifications_inner.ProductDetailResponse_technicalSpecifications_inner(
-                        header_name = '', 
-                        attribute_name = '', 
-                        attribute_display = '', 
-                        attribute_value = '', )
-                    ],
                 warranty_information = [
                     None
                     ],

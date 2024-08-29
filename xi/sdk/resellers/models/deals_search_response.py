@@ -77,9 +77,9 @@ class DealsSearchResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in deals (list)
         _items = []
         if self.deals:
-            for _item in self.deals:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_deals in self.deals:
+                if _item_deals:
+                    _items.append(_item_deals.to_dict())
             _dict['deals'] = _items
         return _dict
 

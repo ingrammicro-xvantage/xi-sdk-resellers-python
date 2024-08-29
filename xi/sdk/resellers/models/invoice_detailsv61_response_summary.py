@@ -81,9 +81,9 @@ class InvoiceDetailsv61ResponseSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in misc_charges (list)
         _items = []
         if self.misc_charges:
-            for _item in self.misc_charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_misc_charges in self.misc_charges:
+                if _item_misc_charges:
+                    _items.append(_item_misc_charges.to_dict())
             _dict['miscCharges'] = _items
         # override the default output from pydantic by calling `to_dict()` of totals
         if self.totals:

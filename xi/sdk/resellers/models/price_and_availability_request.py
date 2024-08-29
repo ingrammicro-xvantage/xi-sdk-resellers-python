@@ -79,23 +79,23 @@ class PriceAndAvailabilityRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in availability_by_warehouse (list)
         _items = []
         if self.availability_by_warehouse:
-            for _item in self.availability_by_warehouse:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_availability_by_warehouse in self.availability_by_warehouse:
+                if _item_availability_by_warehouse:
+                    _items.append(_item_availability_by_warehouse.to_dict())
             _dict['availabilityByWarehouse'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in products (list)
         _items = []
         if self.products:
-            for _item in self.products:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_products in self.products:
+                if _item_products:
+                    _items.append(_item_products.to_dict())
             _dict['products'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         return _dict
 

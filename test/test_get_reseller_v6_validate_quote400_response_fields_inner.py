@@ -27,7 +27,7 @@ class TestGetResellerV6ValidateQuote400ResponseFieldsInner(unittest.TestCase):
 
     def make_instance(self, include_optional) -> GetResellerV6ValidateQuote400ResponseFieldsInner:
         """Test GetResellerV6ValidateQuote400ResponseFieldsInner
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `GetResellerV6ValidateQuote400ResponseFieldsInner`

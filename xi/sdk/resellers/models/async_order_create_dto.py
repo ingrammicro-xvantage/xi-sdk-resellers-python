@@ -108,30 +108,30 @@ class AsyncOrderCreateDTO(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in vmfadditional_attributes (list)
         _items = []
         if self.vmfadditional_attributes:
-            for _item in self.vmfadditional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vmfadditional_attributes in self.vmfadditional_attributes:
+                if _item_vmfadditional_attributes:
+                    _items.append(_item_vmfadditional_attributes.to_dict())
             _dict['vmfadditionalAttributes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
         _items = []
         if self.lines:
-            for _item in self.lines:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lines in self.lines:
+                if _item_lines:
+                    _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in warranty_info (list)
         _items = []
         if self.warranty_info:
-            for _item in self.warranty_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_warranty_info in self.warranty_info:
+                if _item_warranty_info:
+                    _items.append(_item_warranty_info.to_dict())
             _dict['warrantyInfo'] = _items
         # set to None if quote_number (nullable) is None
         # and model_fields_set contains the field

@@ -74,9 +74,9 @@ class PriceAndAvailabilityResponseInnerAvailability(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in availability_by_warehouse (list)
         _items = []
         if self.availability_by_warehouse:
-            for _item in self.availability_by_warehouse:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_availability_by_warehouse in self.availability_by_warehouse:
+                if _item_availability_by_warehouse:
+                    _items.append(_item_availability_by_warehouse.to_dict())
             _dict['availabilityByWarehouse'] = _items
         return _dict
 

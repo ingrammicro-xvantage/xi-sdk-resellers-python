@@ -79,9 +79,9 @@ class AsyncOrderCreateDTOLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in end_user_info (list)
         _items = []
         if self.end_user_info:
-            for _item in self.end_user_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_end_user_info in self.end_user_info:
+                if _item_end_user_info:
+                    _items.append(_item_end_user_info.to_dict())
             _dict['endUserInfo'] = _items
         return _dict
 

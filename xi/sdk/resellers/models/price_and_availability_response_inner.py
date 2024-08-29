@@ -105,9 +105,9 @@ class PriceAndAvailabilityResponseInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in reserve_inventory_details (list)
         _items = []
         if self.reserve_inventory_details:
-            for _item in self.reserve_inventory_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_reserve_inventory_details in self.reserve_inventory_details:
+                if _item_reserve_inventory_details:
+                    _items.append(_item_reserve_inventory_details.to_dict())
             _dict['reserveInventoryDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of pricing
         if self.pricing:
@@ -115,16 +115,16 @@ class PriceAndAvailabilityResponseInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in discounts (list)
         _items = []
         if self.discounts:
-            for _item in self.discounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_discounts in self.discounts:
+                if _item_discounts:
+                    _items.append(_item_discounts.to_dict())
             _dict['discounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in service_fees (list)
         _items = []
         if self.service_fees:
-            for _item in self.service_fees:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_service_fees in self.service_fees:
+                if _item_service_fees:
+                    _items.append(_item_service_fees.to_dict())
             _dict['serviceFees'] = _items
         return _dict
 

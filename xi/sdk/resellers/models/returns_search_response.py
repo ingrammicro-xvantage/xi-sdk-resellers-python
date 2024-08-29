@@ -77,9 +77,9 @@ class ReturnsSearchResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in returns_claims (list)
         _items = []
         if self.returns_claims:
-            for _item in self.returns_claims:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_returns_claims in self.returns_claims:
+                if _item_returns_claims:
+                    _items.append(_item_returns_claims.to_dict())
             _dict['returnsClaims'] = _items
         return _dict
 

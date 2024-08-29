@@ -27,7 +27,7 @@ class TestPostCreateorderV7400ResponseFieldsInner(unittest.TestCase):
 
     def make_instance(self, include_optional) -> PostCreateorderV7400ResponseFieldsInner:
         """Test PostCreateorderV7400ResponseFieldsInner
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `PostCreateorderV7400ResponseFieldsInner`

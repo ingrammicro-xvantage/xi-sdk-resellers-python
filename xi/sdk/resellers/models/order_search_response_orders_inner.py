@@ -82,9 +82,9 @@ class OrderSearchResponseOrdersInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sub_orders (list)
         _items = []
         if self.sub_orders:
-            for _item in self.sub_orders:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sub_orders in self.sub_orders:
+                if _item_sub_orders:
+                    _items.append(_item_sub_orders.to_dict())
             _dict['subOrders'] = _items
         # override the default output from pydantic by calling `to_dict()` of links
         if self.links:

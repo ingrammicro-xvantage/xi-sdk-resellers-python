@@ -78,9 +78,9 @@ class FreightResponseFreightEstimateResponseDistributionInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in carrier_list (list)
         _items = []
         if self.carrier_list:
-            for _item in self.carrier_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_carrier_list in self.carrier_list:
+                if _item_carrier_list:
+                    _items.append(_item_carrier_list.to_dict())
             _dict['carrierList'] = _items
         return _dict
 

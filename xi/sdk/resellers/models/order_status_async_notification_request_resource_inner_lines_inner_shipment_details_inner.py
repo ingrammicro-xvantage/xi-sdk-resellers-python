@@ -77,9 +77,9 @@ class OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsI
         # override the default output from pydantic by calling `to_dict()` of each item in package_details (list)
         _items = []
         if self.package_details:
-            for _item in self.package_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_package_details in self.package_details:
+                if _item_package_details:
+                    _items.append(_item_package_details.to_dict())
             _dict['packageDetails'] = _items
         return _dict
 

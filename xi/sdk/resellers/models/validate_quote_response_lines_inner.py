@@ -75,9 +75,9 @@ class ValidateQuoteResponseLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in vmf_additional_attributes_lines (list)
         _items = []
         if self.vmf_additional_attributes_lines:
-            for _item in self.vmf_additional_attributes_lines:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vmf_additional_attributes_lines in self.vmf_additional_attributes_lines:
+                if _item_vmf_additional_attributes_lines:
+                    _items.append(_item_vmf_additional_attributes_lines.to_dict())
             _dict['vmfAdditionalAttributesLines'] = _items
         return _dict
 

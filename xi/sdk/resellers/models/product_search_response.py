@@ -77,9 +77,9 @@ class ProductSearchResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in catalog (list)
         _items = []
         if self.catalog:
-            for _item in self.catalog:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_catalog in self.catalog:
+                if _item_catalog:
+                    _items.append(_item_catalog.to_dict())
             _dict['catalog'] = _items
         return _dict
 

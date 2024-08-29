@@ -78,9 +78,9 @@ class ProductDetailResponseAdditionalInformation(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in product_weight (list)
         _items = []
         if self.product_weight:
-            for _item in self.product_weight:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_product_weight in self.product_weight:
+                if _item_product_weight:
+                    _items.append(_item_product_weight.to_dict())
             _dict['productWeight'] = _items
         return _dict
 

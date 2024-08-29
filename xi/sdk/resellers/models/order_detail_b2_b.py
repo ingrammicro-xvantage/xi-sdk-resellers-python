@@ -109,23 +109,23 @@ class OrderDetailB2B(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
         _items = []
         if self.lines:
-            for _item in self.lines:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lines in self.lines:
+                if _item_lines:
+                    _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in miscellaneous_charges (list)
         _items = []
         if self.miscellaneous_charges:
-            for _item in self.miscellaneous_charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_miscellaneous_charges in self.miscellaneous_charges:
+                if _item_miscellaneous_charges:
+                    _items.append(_item_miscellaneous_charges.to_dict())
             _dict['miscellaneousCharges'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         # set to None if lines (nullable) is None
         # and model_fields_set contains the field

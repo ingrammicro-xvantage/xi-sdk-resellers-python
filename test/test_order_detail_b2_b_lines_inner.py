@@ -27,7 +27,7 @@ class TestOrderDetailB2BLinesInner(unittest.TestCase):
 
     def make_instance(self, include_optional) -> OrderDetailB2BLinesInner:
         """Test OrderDetailB2BLinesInner
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `OrderDetailB2BLinesInner`

@@ -126,23 +126,23 @@ class QuoteDetailsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in products (list)
         _items = []
         if self.products:
-            for _item in self.products:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_products in self.products:
+                if _item_products:
+                    _items.append(_item_products.to_dict())
             _dict['products'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in extra_fees_total_details (list)
         _items = []
         if self.extra_fees_total_details:
-            for _item in self.extra_fees_total_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extra_fees_total_details in self.extra_fees_total_details:
+                if _item_extra_fees_total_details:
+                    _items.append(_item_extra_fees_total_details.to_dict())
             _dict['extraFeesTotalDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         # set to None if tax_total (nullable) is None
         # and model_fields_set contains the field

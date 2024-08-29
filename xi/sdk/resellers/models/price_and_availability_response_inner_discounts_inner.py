@@ -74,16 +74,16 @@ class PriceAndAvailabilityResponseInnerDiscountsInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in special_pricing (list)
         _items = []
         if self.special_pricing:
-            for _item in self.special_pricing:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_special_pricing in self.special_pricing:
+                if _item_special_pricing:
+                    _items.append(_item_special_pricing.to_dict())
             _dict['specialPricing'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in quantity_discounts (list)
         _items = []
         if self.quantity_discounts:
-            for _item in self.quantity_discounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_quantity_discounts in self.quantity_discounts:
+                if _item_quantity_discounts:
+                    _items.append(_item_quantity_discounts.to_dict())
             _dict['quantityDiscounts'] = _items
         return _dict
 

@@ -87,16 +87,16 @@ class OrderCreateResponseOrdersInnerLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in shipment_details (list)
         _items = []
         if self.shipment_details:
-            for _item in self.shipment_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_shipment_details in self.shipment_details:
+                if _item_shipment_details:
+                    _items.append(_item_shipment_details.to_dict())
             _dict['shipmentDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
-            for _item in self.additional_attributes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
         return _dict
 

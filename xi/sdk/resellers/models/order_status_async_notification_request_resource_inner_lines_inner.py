@@ -82,16 +82,16 @@ class OrderStatusAsyncNotificationRequestResourceInnerLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in shipment_details (list)
         _items = []
         if self.shipment_details:
-            for _item in self.shipment_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_shipment_details in self.shipment_details:
+                if _item_shipment_details:
+                    _items.append(_item_shipment_details.to_dict())
             _dict['shipmentDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in serial_number_details (list)
         _items = []
         if self.serial_number_details:
-            for _item in self.serial_number_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_serial_number_details in self.serial_number_details:
+                if _item_serial_number_details:
+                    _items.append(_item_serial_number_details.to_dict())
             _dict['serialNumberDetails'] = _items
         return _dict
 

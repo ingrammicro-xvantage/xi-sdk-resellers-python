@@ -76,16 +76,16 @@ class FreightRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ship_to_address (list)
         _items = []
         if self.ship_to_address:
-            for _item in self.ship_to_address:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ship_to_address in self.ship_to_address:
+                if _item_ship_to_address:
+                    _items.append(_item_ship_to_address.to_dict())
             _dict['shipToAddress'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
         _items = []
         if self.lines:
-            for _item in self.lines:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lines in self.lines:
+                if _item_lines:
+                    _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
         return _dict
 

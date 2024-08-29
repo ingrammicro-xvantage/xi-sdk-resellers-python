@@ -91,9 +91,9 @@ class InvoiceDetailsv61ResponseLinesInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in serial_numbers (list)
         _items = []
         if self.serial_numbers:
-            for _item in self.serial_numbers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_serial_numbers in self.serial_numbers:
+                if _item_serial_numbers:
+                    _items.append(_item_serial_numbers.to_dict())
             _dict['serialNumbers'] = _items
         # set to None if serial_numbers (nullable) is None
         # and model_fields_set contains the field

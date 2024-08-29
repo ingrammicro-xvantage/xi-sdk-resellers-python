@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **customer_part_number** | **str** | Reseller / end-user’s part number for the product. | [optional] 
 **product_authorized** | **str** | Boolean that indicates whether a product is authorized. | [optional] 
 **description** | **str** | The description given for the product. | [optional] 
-**product_detail_description** | **str** | The detailed description given for the product. | [optional] 
 **upc** | **str** | The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item. | [optional] 
 **product_category** | **str** | The category of the product. | [optional] 
 **product_sub_category** | **str** | The sub-category of the product. | [optional] 
@@ -20,7 +19,6 @@ Name | Type | Description | Notes
 **product_class** | **str** | Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue. | [optional] 
 **indicators** | [**ProductDetailResponseIndicators**](ProductDetailResponseIndicators.md) |  | [optional] 
 **cisco_fields** | [**ProductDetailResponseCiscoFields**](ProductDetailResponseCiscoFields.md) |  | [optional] 
-**technical_specifications** | [**List[ProductDetailResponseTechnicalSpecificationsInner]**](ProductDetailResponseTechnicalSpecificationsInner.md) | Technical specifications of the product. | [optional] 
 **warranty_information** | **List[object]** | Warranty information related to the product. | [optional] 
 **additional_information** | [**ProductDetailResponseAdditionalInformation**](ProductDetailResponseAdditionalInformation.md) |  | [optional] 
 
