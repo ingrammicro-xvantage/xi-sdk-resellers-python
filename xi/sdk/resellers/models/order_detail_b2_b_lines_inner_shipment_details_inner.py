@@ -85,6 +85,11 @@ class OrderDetailB2BLinesInnerShipmentDetailsInner(BaseModel):
                 if _item_carrier_details:
                     _items.append(_item_carrier_details.to_dict())
             _dict['carrierDetails'] = _items
+        # set to None if quantity (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity is None and "quantity" in self.model_fields_set:
+            _dict['quantity'] = None
+
         # set to None if carrier_details (nullable) is None
         # and model_fields_set contains the field
         if self.carrier_details is None and "carrier_details" in self.model_fields_set:

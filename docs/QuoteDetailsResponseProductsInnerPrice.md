@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **msrp** | **float** | Manufacturer Suggested Retail Price | [optional] 
 **extended_msrp** | **float** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
 **extended_quote_price** | **float** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
+**remaining_quantity_extended_msrp** | **float** |  | [optional] 
+**remaining_quantity_extended_quote_price** | **float** |  | [optional] 
 **discount_off_list** | **str** | Discount off list percentage extended | [optional] 
 **type** | **str** |  | [optional] 
 **recurring_price_model** | **str** |  | [optional] 

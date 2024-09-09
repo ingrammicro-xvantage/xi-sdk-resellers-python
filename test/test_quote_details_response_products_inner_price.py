@@ -39,6 +39,8 @@ class TestQuoteDetailsResponseProductsInnerPrice(unittest.TestCase):
                 msrp = 1.337,
                 extended_msrp = 1.337,
                 extended_quote_price = 1.337,
+                remaining_quantity_extended_msrp = 1.337,
+                remaining_quantity_extended_quote_price = 1.337,
                 discount_off_list = '',
                 type = '',
                 recurring_price_model = '',

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.quote_details_response_additional_attributes_inner import QuoteDetailsResponseAdditionalAttributesInner
 from xi.sdk.resellers.models.quote_details_response_end_user_info import QuoteDetailsResponseEndUserInfo
@@ -44,6 +44,7 @@ class QuoteDetailsResponse(BaseModel):
     special_bid_effective_date: Optional[StrictStr] = Field(default=None, description="If price discount has been applied to the quote - the starting date the discount begins.", alias="specialBidEffectiveDate")
     special_bid_expiration_date: Optional[StrictStr] = Field(default=None, description="If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable.", alias="specialBidExpirationDate")
     vendor_quote_number: Optional[StrictStr] = Field(default=None, alias="vendorQuoteNumber")
+    is_partial_order_allowed: Optional[StrictBool] = Field(default=None, alias="isPartialOrderAllowed")
     status: Optional[StrictStr] = Field(default=None, description="This refers to the primary status of the quote.  API responses will return")
     status_reason: Optional[StrictStr] = Field(default=None, alias="statusReason")
     closing_reason: Optional[StrictStr] = Field(default=None, description="Closing Reason for quote.", alias="closingReason")
@@ -73,7 +74,7 @@ class QuoteDetailsResponse(BaseModel):
     freight_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="freightAmount")
     total_quote_amount: Optional[StrictStr] = Field(default=None, alias="totalQuoteAmount")
     additional_attributes: Optional[List[QuoteDetailsResponseAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "quoteGuid", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "vendorQuoteNumber", "status", "statusReason", "closingReason", "dateClosed", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "imWarehouse", "imWarehouseGstNumber", "paymentTermsName", "resellerInfo", "endUserInfo", "shippingInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extraFeesTotal", "extraFeesTotalDetails", "taxTotal", "extendedQuotePriceTotal", "freightAmount", "totalQuoteAmount", "additionalAttributes"]
+    __properties: ClassVar[List[str]] = ["quoteName", "quoteNumber", "quoteGuid", "revision", "ingramQuoteDate", "lastModifiedDate", "ingramQuoteExpiryDate", "currencyCode", "specialBidId", "specialBidEffectiveDate", "specialBidExpirationDate", "vendorQuoteNumber", "isPartialOrderAllowed", "status", "statusReason", "closingReason", "dateClosed", "customerNeed", "proposedSolution", "introPreamble", "purchaseInstructions", "legalTerms", "quoteType", "leaseInfo", "leasingInstructions", "imWarehouse", "imWarehouseGstNumber", "paymentTermsName", "resellerInfo", "endUserInfo", "shippingInfo", "products", "productsCount", "extendedMsrpTotal", "quantityTotal", "extraFeesTotal", "extraFeesTotalDetails", "taxTotal", "extendedQuotePriceTotal", "freightAmount", "totalQuoteAmount", "additionalAttributes"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -144,6 +145,11 @@ class QuoteDetailsResponse(BaseModel):
                 if _item_additional_attributes:
                     _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
+        # set to None if is_partial_order_allowed (nullable) is None
+        # and model_fields_set contains the field
+        if self.is_partial_order_allowed is None and "is_partial_order_allowed" in self.model_fields_set:
+            _dict['isPartialOrderAllowed'] = None
+
         # set to None if tax_total (nullable) is None
         # and model_fields_set contains the field
         if self.tax_total is None and "tax_total" in self.model_fields_set:
@@ -178,6 +184,7 @@ class QuoteDetailsResponse(BaseModel):
             "specialBidEffectiveDate": obj.get("specialBidEffectiveDate"),
             "specialBidExpirationDate": obj.get("specialBidExpirationDate"),
             "vendorQuoteNumber": obj.get("vendorQuoteNumber"),
+            "isPartialOrderAllowed": obj.get("isPartialOrderAllowed"),
             "status": obj.get("status"),
             "statusReason": obj.get("statusReason"),
             "closingReason": obj.get("closingReason"),

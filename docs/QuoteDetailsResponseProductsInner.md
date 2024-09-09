@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **quote_product_guid** | **str** | Quote Product GUID  is the primary quote key in Ingram Micro&#39;s CRM - needed to retrieve quote details. | [optional] 
 **line_number** | **str** | Line number which the product will appear in the quote.  Line number is manditory when unique configurations are included in a quote and mainting the item line order is required. | [optional] 
 **quantity** | **int** | Quantity of product line item quoted. | [optional] 
+**remaining_quote_qty** | **int** |  | [optional] 
+**minimum_order_allowed_qty** | **int** |  | [optional] 
 **notes** | **str** | Product line item comments. | [optional] 
 **ean** | **str** | EANUPC | [optional] 
 **coo** | **str** | Country of Origin. | [optional] 

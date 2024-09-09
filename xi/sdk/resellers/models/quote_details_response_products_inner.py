@@ -31,6 +31,8 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     quote_product_guid: Optional[StrictStr] = Field(default=None, description="Quote Product GUID  is the primary quote key in Ingram Micro's CRM - needed to retrieve quote details.", alias="quoteProductGuid")
     line_number: Optional[StrictStr] = Field(default=None, description="Line number which the product will appear in the quote.  Line number is manditory when unique configurations are included in a quote and mainting the item line order is required.", alias="lineNumber")
     quantity: Optional[StrictInt] = Field(default=None, description="Quantity of product line item quoted.")
+    remaining_quote_qty: Optional[StrictInt] = Field(default=None, alias="remainingQuoteQty")
+    minimum_order_allowed_qty: Optional[StrictInt] = Field(default=None, alias="minimumOrderAllowedQty")
     notes: Optional[StrictStr] = Field(default=None, description="Product line item comments.")
     ean: Optional[StrictStr] = Field(default=None, description="EANUPC")
     coo: Optional[StrictStr] = Field(default=None, description="Country of Origin.")
@@ -53,7 +55,7 @@ class QuoteDetailsResponseProductsInner(BaseModel):
     serial_number: Optional[StrictStr] = Field(default=None, alias="serialNumber")
     price: Optional[QuoteDetailsResponseProductsInnerPrice] = None
     bill_details: Optional[List[QuoteDetailsResponseProductsInnerBillDetailsInner]] = Field(default=None, alias="billDetails")
-    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "planDescription", "isSubscription", "resellerMargin", "requestedStartDate", "startDate", "endDate", "serialNumber", "price", "billDetails"]
+    __properties: ClassVar[List[str]] = ["quoteProductGuid", "lineNumber", "quantity", "remainingQuoteQty", "minimumOrderAllowedQty", "notes", "ean", "coo", "ingramPartNumber", "vendorPartNumber", "description", "weight", "weightUom", "isSuggestionProduct", "vpnCategory", "quoteProductsSupplierPartAuxiliaryId", "vendorName", "terms", "planDescription", "isSubscription", "resellerMargin", "requestedStartDate", "startDate", "endDate", "serialNumber", "price", "billDetails"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -104,6 +106,16 @@ class QuoteDetailsResponseProductsInner(BaseModel):
                 if _item_bill_details:
                     _items.append(_item_bill_details.to_dict())
             _dict['billDetails'] = _items
+        # set to None if remaining_quote_qty (nullable) is None
+        # and model_fields_set contains the field
+        if self.remaining_quote_qty is None and "remaining_quote_qty" in self.model_fields_set:
+            _dict['remainingQuoteQty'] = None
+
+        # set to None if minimum_order_allowed_qty (nullable) is None
+        # and model_fields_set contains the field
+        if self.minimum_order_allowed_qty is None and "minimum_order_allowed_qty" in self.model_fields_set:
+            _dict['minimumOrderAllowedQty'] = None
+
         return _dict
 
     @classmethod
@@ -119,6 +131,8 @@ class QuoteDetailsResponseProductsInner(BaseModel):
             "quoteProductGuid": obj.get("quoteProductGuid"),
             "lineNumber": obj.get("lineNumber"),
             "quantity": obj.get("quantity"),
+            "remainingQuoteQty": obj.get("remainingQuoteQty"),
+            "minimumOrderAllowedQty": obj.get("minimumOrderAllowedQty"),
             "notes": obj.get("notes"),
             "ean": obj.get("ean"),
             "coo": obj.get("coo"),

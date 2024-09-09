@@ -32,6 +32,8 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
     msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Manufacturer Suggested Retail Price")
     extended_msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended MSRP - Manufacturer Suggested Retail Price X Quantity", alias="extendedMsrp")
     extended_quote_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Extended reseller quoted price (cost to reseller) X Quantity", alias="extendedQuotePrice")
+    remaining_quantity_extended_msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="remainingQuantityExtendedMsrp")
+    remaining_quantity_extended_quote_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="remainingQuantityExtendedQuotePrice")
     discount_off_list: Optional[StrictStr] = Field(default=None, description="Discount off list percentage extended", alias="discountOffList")
     type: Optional[StrictStr] = None
     recurring_price_model: Optional[StrictStr] = Field(default=None, alias="recurringPriceModel")
@@ -40,7 +42,7 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
     extrafees: Optional[Union[StrictFloat, StrictInt]] = None
     extra_fees_details: Optional[List[QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner]] = Field(default=None, alias="extraFeesDetails")
     discounts: Optional[List[QuoteDetailsResponseProductsInnerPriceDiscountsInner]] = None
-    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "discountOffList", "type", "recurringPriceModel", "unitOfMeasure", "tax", "extrafees", "extraFeesDetails", "discounts"]
+    __properties: ClassVar[List[str]] = ["quotePrice", "msrp", "extendedMsrp", "extendedQuotePrice", "remainingQuantityExtendedMsrp", "remainingQuantityExtendedQuotePrice", "discountOffList", "type", "recurringPriceModel", "unitOfMeasure", "tax", "extrafees", "extraFeesDetails", "discounts"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,6 +97,41 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
                 if _item_discounts:
                     _items.append(_item_discounts.to_dict())
             _dict['discounts'] = _items
+        # set to None if quote_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.quote_price is None and "quote_price" in self.model_fields_set:
+            _dict['quotePrice'] = None
+
+        # set to None if msrp (nullable) is None
+        # and model_fields_set contains the field
+        if self.msrp is None and "msrp" in self.model_fields_set:
+            _dict['msrp'] = None
+
+        # set to None if extended_msrp (nullable) is None
+        # and model_fields_set contains the field
+        if self.extended_msrp is None and "extended_msrp" in self.model_fields_set:
+            _dict['extendedMsrp'] = None
+
+        # set to None if extended_quote_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.extended_quote_price is None and "extended_quote_price" in self.model_fields_set:
+            _dict['extendedQuotePrice'] = None
+
+        # set to None if remaining_quantity_extended_msrp (nullable) is None
+        # and model_fields_set contains the field
+        if self.remaining_quantity_extended_msrp is None and "remaining_quantity_extended_msrp" in self.model_fields_set:
+            _dict['remainingQuantityExtendedMsrp'] = None
+
+        # set to None if remaining_quantity_extended_quote_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.remaining_quantity_extended_quote_price is None and "remaining_quantity_extended_quote_price" in self.model_fields_set:
+            _dict['remainingQuantityExtendedQuotePrice'] = None
+
+        # set to None if discount_off_list (nullable) is None
+        # and model_fields_set contains the field
+        if self.discount_off_list is None and "discount_off_list" in self.model_fields_set:
+            _dict['discountOffList'] = None
+
         # set to None if tax (nullable) is None
         # and model_fields_set contains the field
         if self.tax is None and "tax" in self.model_fields_set:
@@ -121,6 +158,8 @@ class QuoteDetailsResponseProductsInnerPrice(BaseModel):
             "msrp": obj.get("msrp"),
             "extendedMsrp": obj.get("extendedMsrp"),
             "extendedQuotePrice": obj.get("extendedQuotePrice"),
+            "remainingQuantityExtendedMsrp": obj.get("remainingQuantityExtendedMsrp"),
+            "remainingQuantityExtendedQuotePrice": obj.get("remainingQuantityExtendedQuotePrice"),
             "discountOffList": obj.get("discountOffList"),
             "type": obj.get("type"),
             "recurringPriceModel": obj.get("recurringPriceModel"),
