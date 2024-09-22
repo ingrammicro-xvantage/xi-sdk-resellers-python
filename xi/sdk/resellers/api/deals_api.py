@@ -47,7 +47,6 @@ class DealsApi:
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
-        im_environment: Annotated[str, Field(strict=True, max_length=32, description="Environment name.")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
         _request_timeout: Union[
             None,
@@ -74,8 +73,6 @@ class DealsApi:
         :type im_correlation_id: str
         :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
         :type im_application_id: str
-        :param im_environment: Environment name. (required)
-        :type im_environment: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
         :param _request_timeout: timeout setting for this request. If one
@@ -105,7 +102,6 @@ class DealsApi:
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
-            im_environment=im_environment,
             deal_id=deal_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -136,7 +132,6 @@ class DealsApi:
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
-        im_environment: Annotated[str, Field(strict=True, max_length=32, description="Environment name.")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
         _request_timeout: Union[
             None,
@@ -163,8 +158,6 @@ class DealsApi:
         :type im_correlation_id: str
         :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
         :type im_application_id: str
-        :param im_environment: Environment name. (required)
-        :type im_environment: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
         :param _request_timeout: timeout setting for this request. If one
@@ -194,7 +187,6 @@ class DealsApi:
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
-            im_environment=im_environment,
             deal_id=deal_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -225,7 +217,6 @@ class DealsApi:
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
-        im_environment: Annotated[str, Field(strict=True, max_length=32, description="Environment name.")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
         _request_timeout: Union[
             None,
@@ -252,8 +243,6 @@ class DealsApi:
         :type im_correlation_id: str
         :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
         :type im_application_id: str
-        :param im_environment: Environment name. (required)
-        :type im_environment: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
         :param _request_timeout: timeout setting for this request. If one
@@ -283,7 +272,6 @@ class DealsApi:
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
-            im_environment=im_environment,
             deal_id=deal_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -309,7 +297,6 @@ class DealsApi:
         im_country_code,
         im_correlation_id,
         im_application_id,
-        im_environment,
         deal_id,
         _request_auth,
         _content_type,
@@ -342,8 +329,6 @@ class DealsApi:
             _header_params['IM-CorrelationID'] = im_correlation_id
         if im_application_id is not None:
             _header_params['IM-ApplicationId'] = im_application_id
-        if im_environment is not None:
-            _header_params['IM-Environment'] = im_environment
         # process the form parameters
         # process the body parameter
 
