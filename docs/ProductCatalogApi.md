@@ -5,6 +5,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_reseller_v6_productdetail**](ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
+[**get_reseller_v6_productdetail_cmp**](ProductCatalogApi.md#get_reseller_v6_productdetail_cmp) | **GET** /resellers/v6/catalog/details | Product Details
 [**get_reseller_v6_productsearch**](ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
 [**post_priceandavailability**](ProductCatalogApi.md#post_priceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
 
@@ -95,8 +96,98 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_reseller_v6_productdetail_cmp**
+> ProductDetailResponse get_reseller_v6_productdetail_cmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, vendor_part_number=vendor_part_number, plan_name=plan_name, plan_id=plan_id)
+
+Product Details
+
+Search all the product-related details using a unique Ingram Part Number.
+
+### Example
+
+* OAuth Authentication (application):
+
+```python
+import xi.sdk.resellers
+from xi.sdk.resellers.models.product_detail_response import ProductDetailResponse
+from xi.sdk.resellers.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
+# See configuration.py for a list of all supported configuration parameters.
+configuration = xi.sdk.resellers.Configuration(
+    host = "https://api.ingrammicro.com:443"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xi.sdk.resellers.ProductCatalogApi(api_client)
+    im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number
+    im_country_code = 'US' # str | Two-character ISO country code.
+    im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems
+    im_sender_id = 'MyCompany' # str | Sender Identification text (optional)
+    vendor_part_number = 'vendor_part_number_example' # str | Vendor’s part number for the product. (optional)
+    plan_name = 'plan_name_example' # str | Name of the subscription plan (optional)
+    plan_id = 'plan_id_example' # str | Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span> (optional)
+
+    try:
+        # Product Details
+        api_response = api_instance.get_reseller_v6_productdetail_cmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, vendor_part_number=vendor_part_number, plan_name=plan_name, plan_id=plan_id)
+        print("The response of ProductCatalogApi->get_reseller_v6_productdetail_cmp:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProductCatalogApi->get_reseller_v6_productdetail_cmp: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **im_customer_number** | **str**| Your unique Ingram Micro customer number | 
+ **im_country_code** | **str**| Two-character ISO country code. | 
+ **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems | 
+ **im_sender_id** | **str**| Sender Identification text | [optional] 
+ **vendor_part_number** | **str**| Vendor’s part number for the product. | [optional] 
+ **plan_name** | **str**| Name of the subscription plan | [optional] 
+ **plan_id** | **str**| Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; | [optional] 
+
+### Return type
+
+[**ProductDetailResponse**](ProductDetailResponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | Bad Request |  -  |
+**404** | No Content |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_reseller_v6_productsearch**
-> ProductSearchResponse get_reseller_v6_productsearch(im_customer_number, im_correlation_id, im_country_code, page_number=page_number, page_size=page_size, im_sender_id=im_sender_id, type=type, has_discounts=has_discounts, vendor=vendor, vendor_part_number=vendor_part_number, accept_language=accept_language, vendor_number=vendor_number, keyword=keyword, category=category, skip_authorisation=skip_authorisation)
+> ProductSearchResponse get_reseller_v6_productsearch(im_customer_number, im_correlation_id, im_country_code, page_number=page_number, page_size=page_size, im_sender_id=im_sender_id, type=type, has_discounts=has_discounts, vendor=vendor, vendor_part_number=vendor_part_number, accept_language=accept_language, vendor_number=vendor_number, keyword=keyword, category=category, skip_authorisation=skip_authorisation, group_name=group_name, plan_id=plan_id, show_group_info=show_group_info)
 
 Search Products
 
@@ -144,10 +235,13 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     keyword = ['keyword_example'] # List[str] | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional)
     category = 'Accessories' # str | The category of the product. Example: Displays. (optional)
     skip_authorisation = 'true' # str | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)
+    group_name = 'Microsoft Defender for Endpoint P2 (NCE COM MTH)' # str | Name of the Product Group (optional)
+    plan_id = xi.sdk.resellers.GetResellerV6ProductsearchPlanIDParameter() # GetResellerV6ProductsearchPlanIDParameter | ID of the plan (optional)
+    show_group_info = true # bool | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)
 
     try:
         # Search Products
-        api_response = api_instance.get_reseller_v6_productsearch(im_customer_number, im_correlation_id, im_country_code, page_number=page_number, page_size=page_size, im_sender_id=im_sender_id, type=type, has_discounts=has_discounts, vendor=vendor, vendor_part_number=vendor_part_number, accept_language=accept_language, vendor_number=vendor_number, keyword=keyword, category=category, skip_authorisation=skip_authorisation)
+        api_response = api_instance.get_reseller_v6_productsearch(im_customer_number, im_correlation_id, im_country_code, page_number=page_number, page_size=page_size, im_sender_id=im_sender_id, type=type, has_discounts=has_discounts, vendor=vendor, vendor_part_number=vendor_part_number, accept_language=accept_language, vendor_number=vendor_number, keyword=keyword, category=category, skip_authorisation=skip_authorisation, group_name=group_name, plan_id=plan_id, show_group_info=show_group_info)
         print("The response of ProductCatalogApi->get_reseller_v6_productsearch:\n")
         pprint(api_response)
     except Exception as e:
@@ -176,6 +270,9 @@ Name | Type | Description  | Notes
  **keyword** | [**List[str]**](str.md)| Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional] 
  **category** | **str**| The category of the product. Example: Displays. | [optional] 
  **skip_authorisation** | **str**| This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional] 
+ **group_name** | **str**| Name of the Product Group | [optional] 
+ **plan_id** | [**GetResellerV6ProductsearchPlanIDParameter**](.md)| ID of the plan | [optional] 
+ **show_group_info** | **bool**| In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. | [optional] 
 
 ### Return type
 

@@ -65,6 +65,30 @@ class TestProductSearchResponse(unittest.TestCase):
                         replacement_sku = '', 
                         authorized_to_purchase = '', )
                     ],
+                subscription_catalog = [
+                    xi.sdk.resellers.models.product_search_response_subscription_catalog_inner.ProductSearch_Response_subscriptionCatalog_inner(
+                        group_name = '', 
+                        group_description = '', 
+                        number_of_plans = '', 
+                        link = '', 
+                        plans = [
+                            xi.sdk.resellers.models.product_search_response_subscription_catalog_inner_plans_inner.ProductSearch_Response_subscriptionCatalog_inner_plans_inner(
+                                plan_id = '', 
+                                plan_name = '', 
+                                plan_description = '', 
+                                subscription_period_summary = [
+                                    xi.sdk.resellers.models.product_search_response_subscription_catalog_inner_plans_inner_subscription_period_summary_inner.ProductSearch_Response_subscriptionCatalog_inner_plans_inner_subscriptionPeriodSummary_inner(
+                                        subscription_period_unit = '', 
+                                        subscription_period = '', )
+                                    ], 
+                                links = [
+                                    xi.sdk.resellers.models.product_search_response_subscription_catalog_inner_plans_inner_links_inner.ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner(
+                                        topic = '', 
+                                        href = '', 
+                                        type = '', )
+                                    ], )
+                            ], )
+                    ],
                 next_page = '',
                 previous_page = ''
             )

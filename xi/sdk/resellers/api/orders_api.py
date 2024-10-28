@@ -20,10 +20,10 @@ from datetime import date
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import List, Optional
 from typing_extensions import Annotated
-from xi.sdk.resellers.models.async_order_create_dto import AsyncOrderCreateDTO
-from xi.sdk.resellers.models.async_order_create_response import AsyncOrderCreateResponse
 from xi.sdk.resellers.models.order_create_request import OrderCreateRequest
 from xi.sdk.resellers.models.order_create_response import OrderCreateResponse
+from xi.sdk.resellers.models.order_create_v7_request import OrderCreateV7Request
+from xi.sdk.resellers.models.order_create_v7_response201 import OrderCreateV7Response201
 from xi.sdk.resellers.models.order_detail_b2_b import OrderDetailB2B
 from xi.sdk.resellers.models.order_modify_request import OrderModifyRequest
 from xi.sdk.resellers.models.order_modify_response import OrderModifyResponse
@@ -339,7 +339,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -730,7 +732,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1313,7 +1317,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1711,7 +1717,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1781,9 +1789,9 @@ class OrdersApi:
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
-        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction accross all the systems.")],
-        async_order_create_dto: AsyncOrderCreateDTO,
-        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction.")] = None,
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        order_create_v7_request: OrderCreateV7Request,
+        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1796,20 +1804,20 @@ class OrdersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AsyncOrderCreateResponse:
+    ) -> OrderCreateV7Response201:
         """Create your Order v7
 
-        This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        The Order Create v7 allows our customers to create orders asynchronously. The customer can create either standard orders using stocked SKUs and/or create a “Quote to Order” using the existing quote which is in “Ready to Order” status, or the customer can create an order using the “Configure to order” (CTO) quote. Upon successful submission of the order create request, a confirmation message will be returned as an API response. <br > <br > Once the order is processed, Ingram Micro will notify customers via webhook using a pre-defined callback URL as an HTTP post regarding the updates related to the order. Upon successful order creation, a notification will be sent via webhook regarding the order details, in the event of any error occurring during the order creation process, an error message will be delivered via webhook. Nightly system unavailability will delay response Async response. <br > <br > The key differentiator between standard ordering and “Quote To Order” is the optional input field in the request body which is “quoteNumber”. If a customer passes the quote number in the request body, the order will be processed as a “Quote To Order” using the details from the quote. Any SKUs, quantity, or price information that are passed in the lines object within the request will be ignored in the case of “Quote To Order”.<br > <br > **Prerequisite:** Pre-defined callback URL <br > <br > **Standard ordering::**<br><br>Ingram Micro recommends that you provide the ingramPartNumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net 30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. <br><br>[**Key differences between v6 and v7 Migration**](https://developer.ingrammicro.com/reseller/page/v6-and-v7-migration) <br><br> <br><br>**Quote to Order / Configure to Order:**<br><br>If customers are planning to use Quote to Order or Configure to Order Quotes, it’s recommended to validate the quote using the “Validate Quote” endpoint before creating an order using the quote. Validate Quote endpoint will not only validate the quote but also outline all the mandatory fields required by the vendor at a header level and at the line level which a customer needs to pass to the Quote to Order endpoint request. For a detailed understanding of the “Validate Quote” endpoint, review the “Validate Quote” endpoint documentation. <br><br> **How it works:**<br><br>- The customer validates the quote with a quote number from the Validate Quote endpoint.<br>- The customer copies all the mandatory fields required by the vendor and adds them to the QTO request body.<br>- The customer provides all the values for Vendor mandatory fields along with other required information for QTO to create an order.<br>- After the order creation request receipt acknowledgment from the QTO endpoint, all further order creation updates will be provided via webhook push notification.
 
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
-        :param im_correlation_id: Unique transaction number to identify each transaction accross all the systems. (required)
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param async_order_create_dto: (required)
-        :type async_order_create_dto: AsyncOrderCreateDTO
-        :param im_sender_id: Unique value used to identify the sender of the transaction.
+        :param order_create_v7_request: (required)
+        :type order_create_v7_request: OrderCreateV7Request
+        :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1837,7 +1845,7 @@ class OrdersApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            async_order_create_dto=async_order_create_dto,
+            order_create_v7_request=order_create_v7_request,
             im_sender_id=im_sender_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1846,7 +1854,8 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AsyncOrderCreateResponse",
+            '200': "OrderCreateV7Response201",
+            '201': "OrderCreateV7Response",
             '400': "PostCreateorderV7400Response",
             '500': "PostCreateorderV7500Response",
         }
@@ -1866,9 +1875,9 @@ class OrdersApi:
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
-        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction accross all the systems.")],
-        async_order_create_dto: AsyncOrderCreateDTO,
-        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction.")] = None,
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        order_create_v7_request: OrderCreateV7Request,
+        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1881,20 +1890,20 @@ class OrdersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AsyncOrderCreateResponse]:
+    ) -> ApiResponse[OrderCreateV7Response201]:
         """Create your Order v7
 
-        This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        The Order Create v7 allows our customers to create orders asynchronously. The customer can create either standard orders using stocked SKUs and/or create a “Quote to Order” using the existing quote which is in “Ready to Order” status, or the customer can create an order using the “Configure to order” (CTO) quote. Upon successful submission of the order create request, a confirmation message will be returned as an API response. <br > <br > Once the order is processed, Ingram Micro will notify customers via webhook using a pre-defined callback URL as an HTTP post regarding the updates related to the order. Upon successful order creation, a notification will be sent via webhook regarding the order details, in the event of any error occurring during the order creation process, an error message will be delivered via webhook. Nightly system unavailability will delay response Async response. <br > <br > The key differentiator between standard ordering and “Quote To Order” is the optional input field in the request body which is “quoteNumber”. If a customer passes the quote number in the request body, the order will be processed as a “Quote To Order” using the details from the quote. Any SKUs, quantity, or price information that are passed in the lines object within the request will be ignored in the case of “Quote To Order”.<br > <br > **Prerequisite:** Pre-defined callback URL <br > <br > **Standard ordering::**<br><br>Ingram Micro recommends that you provide the ingramPartNumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net 30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. <br><br>[**Key differences between v6 and v7 Migration**](https://developer.ingrammicro.com/reseller/page/v6-and-v7-migration) <br><br> <br><br>**Quote to Order / Configure to Order:**<br><br>If customers are planning to use Quote to Order or Configure to Order Quotes, it’s recommended to validate the quote using the “Validate Quote” endpoint before creating an order using the quote. Validate Quote endpoint will not only validate the quote but also outline all the mandatory fields required by the vendor at a header level and at the line level which a customer needs to pass to the Quote to Order endpoint request. For a detailed understanding of the “Validate Quote” endpoint, review the “Validate Quote” endpoint documentation. <br><br> **How it works:**<br><br>- The customer validates the quote with a quote number from the Validate Quote endpoint.<br>- The customer copies all the mandatory fields required by the vendor and adds them to the QTO request body.<br>- The customer provides all the values for Vendor mandatory fields along with other required information for QTO to create an order.<br>- After the order creation request receipt acknowledgment from the QTO endpoint, all further order creation updates will be provided via webhook push notification.
 
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
-        :param im_correlation_id: Unique transaction number to identify each transaction accross all the systems. (required)
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param async_order_create_dto: (required)
-        :type async_order_create_dto: AsyncOrderCreateDTO
-        :param im_sender_id: Unique value used to identify the sender of the transaction.
+        :param order_create_v7_request: (required)
+        :type order_create_v7_request: OrderCreateV7Request
+        :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1922,7 +1931,7 @@ class OrdersApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            async_order_create_dto=async_order_create_dto,
+            order_create_v7_request=order_create_v7_request,
             im_sender_id=im_sender_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1931,7 +1940,8 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AsyncOrderCreateResponse",
+            '200': "OrderCreateV7Response201",
+            '201': "OrderCreateV7Response",
             '400': "PostCreateorderV7400Response",
             '500': "PostCreateorderV7500Response",
         }
@@ -1951,9 +1961,9 @@ class OrdersApi:
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
-        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction accross all the systems.")],
-        async_order_create_dto: AsyncOrderCreateDTO,
-        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction.")] = None,
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        order_create_v7_request: OrderCreateV7Request,
+        im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1969,17 +1979,17 @@ class OrdersApi:
     ) -> RESTResponseType:
         """Create your Order v7
 
-        This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        The Order Create v7 allows our customers to create orders asynchronously. The customer can create either standard orders using stocked SKUs and/or create a “Quote to Order” using the existing quote which is in “Ready to Order” status, or the customer can create an order using the “Configure to order” (CTO) quote. Upon successful submission of the order create request, a confirmation message will be returned as an API response. <br > <br > Once the order is processed, Ingram Micro will notify customers via webhook using a pre-defined callback URL as an HTTP post regarding the updates related to the order. Upon successful order creation, a notification will be sent via webhook regarding the order details, in the event of any error occurring during the order creation process, an error message will be delivered via webhook. Nightly system unavailability will delay response Async response. <br > <br > The key differentiator between standard ordering and “Quote To Order” is the optional input field in the request body which is “quoteNumber”. If a customer passes the quote number in the request body, the order will be processed as a “Quote To Order” using the details from the quote. Any SKUs, quantity, or price information that are passed in the lines object within the request will be ignored in the case of “Quote To Order”.<br > <br > **Prerequisite:** Pre-defined callback URL <br > <br > **Standard ordering::**<br><br>Ingram Micro recommends that you provide the ingramPartNumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net 30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. <br><br>[**Key differences between v6 and v7 Migration**](https://developer.ingrammicro.com/reseller/page/v6-and-v7-migration) <br><br> <br><br>**Quote to Order / Configure to Order:**<br><br>If customers are planning to use Quote to Order or Configure to Order Quotes, it’s recommended to validate the quote using the “Validate Quote” endpoint before creating an order using the quote. Validate Quote endpoint will not only validate the quote but also outline all the mandatory fields required by the vendor at a header level and at the line level which a customer needs to pass to the Quote to Order endpoint request. For a detailed understanding of the “Validate Quote” endpoint, review the “Validate Quote” endpoint documentation. <br><br> **How it works:**<br><br>- The customer validates the quote with a quote number from the Validate Quote endpoint.<br>- The customer copies all the mandatory fields required by the vendor and adds them to the QTO request body.<br>- The customer provides all the values for Vendor mandatory fields along with other required information for QTO to create an order.<br>- After the order creation request receipt acknowledgment from the QTO endpoint, all further order creation updates will be provided via webhook push notification.
 
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
-        :param im_correlation_id: Unique transaction number to identify each transaction accross all the systems. (required)
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param async_order_create_dto: (required)
-        :type async_order_create_dto: AsyncOrderCreateDTO
-        :param im_sender_id: Unique value used to identify the sender of the transaction.
+        :param order_create_v7_request: (required)
+        :type order_create_v7_request: OrderCreateV7Request
+        :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2007,7 +2017,7 @@ class OrdersApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            async_order_create_dto=async_order_create_dto,
+            order_create_v7_request=order_create_v7_request,
             im_sender_id=im_sender_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2016,7 +2026,8 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AsyncOrderCreateResponse",
+            '200': "OrderCreateV7Response201",
+            '201': "OrderCreateV7Response",
             '400': "PostCreateorderV7400Response",
             '500': "PostCreateorderV7500Response",
         }
@@ -2032,7 +2043,7 @@ class OrdersApi:
         im_customer_number,
         im_country_code,
         im_correlation_id,
-        async_order_create_dto,
+        order_create_v7_request,
         im_sender_id,
         _request_auth,
         _content_type,
@@ -2049,7 +2060,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2065,8 +2078,8 @@ class OrdersApi:
             _header_params['IM-CorrelationID'] = im_correlation_id
         # process the form parameters
         # process the body parameter
-        if async_order_create_dto is not None:
-            _body_params = async_order_create_dto
+        if order_create_v7_request is not None:
+            _body_params = order_create_v7_request
 
 
         # set the HTTP header `Accept`
@@ -2438,7 +2451,9 @@ class OrdersApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters

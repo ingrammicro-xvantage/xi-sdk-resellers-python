@@ -24,6 +24,7 @@ from xi.sdk.resellers.models.price_and_availability_response_inner_discounts_inn
 from xi.sdk.resellers.models.price_and_availability_response_inner_pricing import PriceAndAvailabilityResponseInnerPricing
 from xi.sdk.resellers.models.price_and_availability_response_inner_reserve_inventory_details_inner import PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_service_fees_inner import PriceAndAvailabilityResponseInnerServiceFeesInner
+from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -58,7 +59,8 @@ class PriceAndAvailabilityResponseInner(BaseModel):
     discounts: Optional[List[PriceAndAvailabilityResponseInnerDiscountsInner]] = None
     bundle_part_indicator: Optional[StrictBool] = Field(default=None, description="True of false value to indicate whether it’s bundle part. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).", alias="bundlePartIndicator")
     service_fees: Optional[List[PriceAndAvailabilityResponseInnerServiceFeesInner]] = Field(default=None, description="*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).", alias="serviceFees")
-    __properties: ClassVar[List[str]] = ["productStatusCode", "productStatusMessage", "ingramPartNumber", "vendorPartNumber", "extendedVendorPartNumber", "customerPartNumber", "upc", "partNumberType", "vendorNumber", "vendorName", "description", "productClass", "uom", "productStatus", "acceptBackOrder", "productAuthorized", "returnableProduct", "endUserInfoRequired", "govtSpecialPriceAvailable", "govtProgramType", "govtEndUserType", "availability", "reserveInventoryDetails", "pricing", "discounts", "bundlePartIndicator", "serviceFees"]
+    subscription_price: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInner]] = Field(default=None, alias="subscriptionPrice")
+    __properties: ClassVar[List[str]] = ["productStatusCode", "productStatusMessage", "ingramPartNumber", "vendorPartNumber", "extendedVendorPartNumber", "customerPartNumber", "upc", "partNumberType", "vendorNumber", "vendorName", "description", "productClass", "uom", "productStatus", "acceptBackOrder", "productAuthorized", "returnableProduct", "endUserInfoRequired", "govtSpecialPriceAvailable", "govtProgramType", "govtEndUserType", "availability", "reserveInventoryDetails", "pricing", "discounts", "bundlePartIndicator", "serviceFees", "subscriptionPrice"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -126,6 +128,128 @@ class PriceAndAvailabilityResponseInner(BaseModel):
                 if _item_service_fees:
                     _items.append(_item_service_fees.to_dict())
             _dict['serviceFees'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in subscription_price (list)
+        _items = []
+        if self.subscription_price:
+            for _item_subscription_price in self.subscription_price:
+                if _item_subscription_price:
+                    _items.append(_item_subscription_price.to_dict())
+            _dict['subscriptionPrice'] = _items
+        # set to None if vendor_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_part_number is None and "vendor_part_number" in self.model_fields_set:
+            _dict['vendorPartNumber'] = None
+
+        # set to None if extended_vendor_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.extended_vendor_part_number is None and "extended_vendor_part_number" in self.model_fields_set:
+            _dict['extendedVendorPartNumber'] = None
+
+        # set to None if customer_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.customer_part_number is None and "customer_part_number" in self.model_fields_set:
+            _dict['customerPartNumber'] = None
+
+        # set to None if part_number_type (nullable) is None
+        # and model_fields_set contains the field
+        if self.part_number_type is None and "part_number_type" in self.model_fields_set:
+            _dict['partNumberType'] = None
+
+        # set to None if vendor_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_number is None and "vendor_number" in self.model_fields_set:
+            _dict['vendorNumber'] = None
+
+        # set to None if vendor_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_name is None and "vendor_name" in self.model_fields_set:
+            _dict['vendorName'] = None
+
+        # set to None if description (nullable) is None
+        # and model_fields_set contains the field
+        if self.description is None and "description" in self.model_fields_set:
+            _dict['description'] = None
+
+        # set to None if product_class (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_class is None and "product_class" in self.model_fields_set:
+            _dict['productClass'] = None
+
+        # set to None if uom (nullable) is None
+        # and model_fields_set contains the field
+        if self.uom is None and "uom" in self.model_fields_set:
+            _dict['uom'] = None
+
+        # set to None if product_status (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_status is None and "product_status" in self.model_fields_set:
+            _dict['productStatus'] = None
+
+        # set to None if accept_back_order (nullable) is None
+        # and model_fields_set contains the field
+        if self.accept_back_order is None and "accept_back_order" in self.model_fields_set:
+            _dict['acceptBackOrder'] = None
+
+        # set to None if product_authorized (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_authorized is None and "product_authorized" in self.model_fields_set:
+            _dict['productAuthorized'] = None
+
+        # set to None if returnable_product (nullable) is None
+        # and model_fields_set contains the field
+        if self.returnable_product is None and "returnable_product" in self.model_fields_set:
+            _dict['returnableProduct'] = None
+
+        # set to None if end_user_info_required (nullable) is None
+        # and model_fields_set contains the field
+        if self.end_user_info_required is None and "end_user_info_required" in self.model_fields_set:
+            _dict['endUserInfoRequired'] = None
+
+        # set to None if govt_special_price_available (nullable) is None
+        # and model_fields_set contains the field
+        if self.govt_special_price_available is None and "govt_special_price_available" in self.model_fields_set:
+            _dict['govtSpecialPriceAvailable'] = None
+
+        # set to None if govt_program_type (nullable) is None
+        # and model_fields_set contains the field
+        if self.govt_program_type is None and "govt_program_type" in self.model_fields_set:
+            _dict['govtProgramType'] = None
+
+        # set to None if govt_end_user_type (nullable) is None
+        # and model_fields_set contains the field
+        if self.govt_end_user_type is None and "govt_end_user_type" in self.model_fields_set:
+            _dict['govtEndUserType'] = None
+
+        # set to None if availability (nullable) is None
+        # and model_fields_set contains the field
+        if self.availability is None and "availability" in self.model_fields_set:
+            _dict['availability'] = None
+
+        # set to None if reserve_inventory_details (nullable) is None
+        # and model_fields_set contains the field
+        if self.reserve_inventory_details is None and "reserve_inventory_details" in self.model_fields_set:
+            _dict['reserveInventoryDetails'] = None
+
+        # set to None if pricing (nullable) is None
+        # and model_fields_set contains the field
+        if self.pricing is None and "pricing" in self.model_fields_set:
+            _dict['pricing'] = None
+
+        # set to None if discounts (nullable) is None
+        # and model_fields_set contains the field
+        if self.discounts is None and "discounts" in self.model_fields_set:
+            _dict['discounts'] = None
+
+        # set to None if bundle_part_indicator (nullable) is None
+        # and model_fields_set contains the field
+        if self.bundle_part_indicator is None and "bundle_part_indicator" in self.model_fields_set:
+            _dict['bundlePartIndicator'] = None
+
+        # set to None if service_fees (nullable) is None
+        # and model_fields_set contains the field
+        if self.service_fees is None and "service_fees" in self.model_fields_set:
+            _dict['serviceFees'] = None
+
         return _dict
 
     @classmethod
@@ -164,7 +288,8 @@ class PriceAndAvailabilityResponseInner(BaseModel):
             "pricing": PriceAndAvailabilityResponseInnerPricing.from_dict(obj["pricing"]) if obj.get("pricing") is not None else None,
             "discounts": [PriceAndAvailabilityResponseInnerDiscountsInner.from_dict(_item) for _item in obj["discounts"]] if obj.get("discounts") is not None else None,
             "bundlePartIndicator": obj.get("bundlePartIndicator"),
-            "serviceFees": [PriceAndAvailabilityResponseInnerServiceFeesInner.from_dict(_item) for _item in obj["serviceFees"]] if obj.get("serviceFees") is not None else None
+            "serviceFees": [PriceAndAvailabilityResponseInnerServiceFeesInner.from_dict(_item) for _item in obj["serviceFees"]] if obj.get("serviceFees") is not None else None,
+            "subscriptionPrice": [PriceAndAvailabilityResponseInnerSubscriptionPriceInner.from_dict(_item) for _item in obj["subscriptionPrice"]] if obj.get("subscriptionPrice") is not None else None
         })
         return _obj
 

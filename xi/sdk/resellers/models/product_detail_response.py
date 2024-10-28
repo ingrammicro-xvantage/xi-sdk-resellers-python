@@ -17,11 +17,12 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
-from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields
-from xi.sdk.resellers.models.product_detail_response_indicators import ProductDetailResponseIndicators
+from xi.sdk.resellers.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
+from xi.sdk.resellers.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
+from xi.sdk.resellers.models.product_detail_response_subscription_details_inner import ProductDetailResponseSubscriptionDetailsInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,21 +32,22 @@ class ProductDetailResponse(BaseModel):
     """ # noqa: E501
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro unique part number for the product.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product.", alias="vendorPartNumber")
-    customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller / end-user’s part number for the product.", alias="customerPartNumber")
-    product_authorized: Optional[StrictStr] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
+    product_authorized: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
     description: Optional[StrictStr] = Field(default=None, description="The description given for the product.")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
     product_category: Optional[StrictStr] = Field(default=None, description="The category of the product.", alias="productCategory")
-    product_sub_category: Optional[StrictStr] = Field(default=None, description="The sub-category of the product.", alias="productSubCategory")
+    product_subcategory: Optional[StrictStr] = Field(default=None, description="The sub-category of the product.", alias="productSubcategory")
     vendor_name: Optional[StrictStr] = Field(default=None, description="Vendor name for the order.", alias="vendorName")
     vendor_number: Optional[StrictStr] = Field(default=None, description="Vendor number that identifies the product.", alias="vendorNumber")
     product_status_code: Optional[StrictStr] = Field(default=None, description="Status code of the product.", alias="productStatusCode")
     product_class: Optional[StrictStr] = Field(default=None, description="Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A = Product that is stocked usually in all IM warehouses and replenished on a regular basis. B = Product that is stocked in limited IM warehouses and replenished on a regular basis C = Product that is stocked in fewer IM warehouses and replenished on a regular basis. D = Product that Ingram Micro has elected to discontinue. E = Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F = Product that we carry for a specific customer or supplier under a contractual agreement. N = New Sku. Classification before first receipt O = Discontinued product to be liquidated S= Order for Specialized Demand (Order to backorder) X= direct ship from Vendor V = product that vendor has elected to discontinue.", alias="productClass")
-    indicators: Optional[ProductDetailResponseIndicators] = None
-    cisco_fields: Optional[ProductDetailResponseCiscoFields] = Field(default=None, alias="ciscoFields")
+    customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller / end-user’s part number for the product.", alias="customerPartNumber")
+    indicators: Optional[List[ProductDetailResponseIndicatorsInner]] = Field(default=None, description="Indicators of the Product")
+    cisco_fields: Optional[List[ProductDetailResponseCiscoFieldsInner]] = Field(default=None, description="Cisco product related information.", alias="ciscoFields")
     warranty_information: Optional[List[Dict[str, Any]]] = Field(default=None, description="Warranty information related to the product.", alias="warrantyInformation")
     additional_information: Optional[ProductDetailResponseAdditionalInformation] = Field(default=None, alias="additionalInformation")
-    __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "customerPartNumber", "productAuthorized", "description", "upc", "productCategory", "productSubCategory", "vendorName", "vendorNumber", "productStatusCode", "productClass", "indicators", "ciscoFields", "warrantyInformation", "additionalInformation"]
+    subscription_details: Optional[List[ProductDetailResponseSubscriptionDetailsInner]] = Field(default=None, description="Subscription product Details", alias="subscriptionDetails")
+    __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "productAuthorized", "description", "upc", "productCategory", "productSubcategory", "vendorName", "vendorNumber", "productStatusCode", "productClass", "customerPartNumber", "indicators", "ciscoFields", "warrantyInformation", "additionalInformation", "subscriptionDetails"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,15 +88,30 @@ class ProductDetailResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of indicators
+        # override the default output from pydantic by calling `to_dict()` of each item in indicators (list)
+        _items = []
         if self.indicators:
-            _dict['indicators'] = self.indicators.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of cisco_fields
+            for _item_indicators in self.indicators:
+                if _item_indicators:
+                    _items.append(_item_indicators.to_dict())
+            _dict['indicators'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in cisco_fields (list)
+        _items = []
         if self.cisco_fields:
-            _dict['ciscoFields'] = self.cisco_fields.to_dict()
+            for _item_cisco_fields in self.cisco_fields:
+                if _item_cisco_fields:
+                    _items.append(_item_cisco_fields.to_dict())
+            _dict['ciscoFields'] = _items
         # override the default output from pydantic by calling `to_dict()` of additional_information
         if self.additional_information:
             _dict['additionalInformation'] = self.additional_information.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in subscription_details (list)
+        _items = []
+        if self.subscription_details:
+            for _item_subscription_details in self.subscription_details:
+                if _item_subscription_details:
+                    _items.append(_item_subscription_details.to_dict())
+            _dict['subscriptionDetails'] = _items
         return _dict
 
     @classmethod
@@ -109,20 +126,21 @@ class ProductDetailResponse(BaseModel):
         _obj = cls.model_validate({
             "ingramPartNumber": obj.get("ingramPartNumber"),
             "vendorPartNumber": obj.get("vendorPartNumber"),
-            "customerPartNumber": obj.get("customerPartNumber"),
             "productAuthorized": obj.get("productAuthorized"),
             "description": obj.get("description"),
             "upc": obj.get("upc"),
             "productCategory": obj.get("productCategory"),
-            "productSubCategory": obj.get("productSubCategory"),
+            "productSubcategory": obj.get("productSubcategory"),
             "vendorName": obj.get("vendorName"),
             "vendorNumber": obj.get("vendorNumber"),
             "productStatusCode": obj.get("productStatusCode"),
             "productClass": obj.get("productClass"),
-            "indicators": ProductDetailResponseIndicators.from_dict(obj["indicators"]) if obj.get("indicators") is not None else None,
-            "ciscoFields": ProductDetailResponseCiscoFields.from_dict(obj["ciscoFields"]) if obj.get("ciscoFields") is not None else None,
+            "customerPartNumber": obj.get("customerPartNumber"),
+            "indicators": [ProductDetailResponseIndicatorsInner.from_dict(_item) for _item in obj["indicators"]] if obj.get("indicators") is not None else None,
+            "ciscoFields": [ProductDetailResponseCiscoFieldsInner.from_dict(_item) for _item in obj["ciscoFields"]] if obj.get("ciscoFields") is not None else None,
             "warrantyInformation": obj.get("warrantyInformation"),
-            "additionalInformation": ProductDetailResponseAdditionalInformation.from_dict(obj["additionalInformation"]) if obj.get("additionalInformation") is not None else None
+            "additionalInformation": ProductDetailResponseAdditionalInformation.from_dict(obj["additionalInformation"]) if obj.get("additionalInformation") is not None else None,
+            "subscriptionDetails": [ProductDetailResponseSubscriptionDetailsInner.from_dict(_item) for _item in obj["subscriptionDetails"]] if obj.get("subscriptionDetails") is not None else None
         })
         return _obj
 

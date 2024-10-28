@@ -118,6 +118,69 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                         amount = 1.337, 
                         end_date = '', 
                         currency_code = '', )
+                    ],
+                subscription_price = [
+                    xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner(
+                        plan_id = '', 
+                        plan_name = '', 
+                        plan_description = 1.337, 
+                        groups = [
+                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_groups_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner(
+                                group_name = '', 
+                                group_description = '', )
+                            ], 
+                        billing_period = [
+                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_billing_period_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod_inner(
+                                billing_period_unit = '', )
+                            ], 
+                        subscription_period = [
+                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_subscription_period_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner(
+                                subscription_period_unit = '', )
+                            ], 
+                        options = [
+                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner(
+                                resource_id = '', 
+                                resource_name = '', 
+                                vendor_part_number = '', 
+                                min_units = '', 
+                                max_units = '', 
+                                recurringpricemodel = '', 
+                                unit_of_measure = '', 
+                                resource_pricing = [
+                                    xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_resource_pricing_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner(
+                                        name = '', 
+                                        quantity = 56, 
+                                        msrp = 1.337, 
+                                        unit_price = 1.337, 
+                                        margin = 1.337, 
+                                        currency_code = '', )
+                                    ], 
+                                discounts = [
+                                    xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_discounts_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner(
+                                        volume_discounts = [
+                                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_discounts_inner_volume_discounts_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner(
+                                                currency_code = '', 
+                                                quantity = 56, 
+                                                msrp = 1.337, 
+                                                unit_price = 1.337, 
+                                                margin = 1.337, )
+                                            ], 
+                                        special_pricing = [
+                                            xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_discounts_inner_special_pricing_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_specialPricing_inner(
+                                                currency_code = '', 
+                                                discount = 1.337, 
+                                                discount_type = '', 
+                                                discount_qty_limit = 56, 
+                                                discount_expiry_date = '', 
+                                                vendor_program_name = '', )
+                                            ], )
+                                    ], 
+                                fees = [
+                                    xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_fees_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner(
+                                        price = 1.337, 
+                                        type = '', )
+                                    ], )
+                            ], )
                     ]
             )
         else:

@@ -37,58 +37,60 @@ class TestProductDetailResponse(unittest.TestCase):
             return ProductDetailResponse(
                 ingram_part_number = '',
                 vendor_part_number = '',
-                customer_part_number = '',
-                product_authorized = '',
+                product_authorized = True,
                 description = '',
                 upc = '',
                 product_category = '',
-                product_sub_category = '',
+                product_subcategory = '',
                 vendor_name = '',
                 vendor_number = '',
                 product_status_code = '',
                 product_class = '',
-                indicators = xi.sdk.resellers.models.product_detail_response_indicators.ProductDetailResponse_indicators(
-                    has_warranty = True, 
-                    is_new_product = True, 
-                    has_return_limits = True, 
-                    is_back_order_allowed = True, 
-                    is_shipped_from_partner = True, 
-                    is_replacement_product = True, 
-                    replacement_type = '', 
-                    is_directship = True, 
-                    is_downloadable = True, 
-                    is_digital_type = True, 
-                    sku_type = '', 
-                    has_std_special_price = True, 
-                    has_acop_special_price = True, 
-                    has_acop_quantity_break = True, 
-                    has_std_web_discount = True, 
-                    has_acop_web_discount = True, 
-                    has_special_bid = True, 
-                    is_exportable_to_country = True, 
-                    is_discontinued_product = True, 
-                    is_refurbished = True, 
-                    is_returnable_product = True, 
-                    is_ingram_ship = True, 
-                    is_enduser_required = True, 
-                    is_heavy_weight = True, 
-                    has_ltl = True, 
-                    is_clearance_product = True, 
-                    has_bundle = True, 
-                    is_oversize_product = True, 
-                    is_preorder_product = True, 
-                    is_license_product = True, 
-                    is_directship_orderable = True, 
-                    is_service_sku = True, 
-                    is_configurable = True, ),
-                cisco_fields = xi.sdk.resellers.models.product_detail_response_cisco_fields.ProductDetailResponse_ciscoFields(
-                    product_sub_group = '', 
-                    service_program_name = '', 
-                    item_catalog_category = '', 
-                    configuration_indicator = '', 
-                    internal_business_entity = '', 
-                    item_type = '', 
-                    global_list_price = '', ),
+                customer_part_number = '',
+                indicators = [
+                    xi.sdk.resellers.models.product_detail_response_indicators_inner.ProductDetailResponse_indicators_inner(
+                        has_warranty = True, 
+                        is_new_product = True, 
+                        has_return_limits = True, 
+                        is_back_order_allowed = True, 
+                        is_shipped_from_partner = True, 
+                        is_replacement_product = True, 
+                        is_directship = True, 
+                        is_downloadable = True, 
+                        is_digital_type = True, 
+                        sku_type = '', 
+                        has_std_special_price = True, 
+                        has_acop_special_price = True, 
+                        has_acop_quantity_break = True, 
+                        has_std_web_discount = True, 
+                        has_special_bid = True, 
+                        is_exportable_to_country = True, 
+                        is_discontinued_product = True, 
+                        is_refurbished_product = True, 
+                        is_returnable_product = True, 
+                        is_ingram_ship = True, 
+                        is_enduser_required = True, 
+                        is_heavy_weight = True, 
+                        has_ltl = True, 
+                        is_clearance_product = True, 
+                        has_bundle = True, 
+                        is_oversize_product = True, 
+                        is_preorder_product = True, 
+                        is_license_product = True, 
+                        is_directship_orderable = True, 
+                        is_service_sku = True, 
+                        is_configurable = True, )
+                    ],
+                cisco_fields = [
+                    xi.sdk.resellers.models.product_detail_response_cisco_fields_inner.ProductDetailResponse_ciscoFields_inner(
+                        product_sub_group = '', 
+                        service_program_name = '', 
+                        item_catalog_category = '', 
+                        configuration_indicator = '', 
+                        internal_business_entity = '', 
+                        item_type = '', 
+                        global_list_price = '', )
+                    ],
                 warranty_information = [
                     None
                     ],
@@ -104,7 +106,41 @@ class TestProductDetailResponse(unittest.TestCase):
                     width = '', 
                     length = '', 
                     net_weight = '', 
-                    dimension_unit = '', )
+                    dimension_unit = '', ),
+                subscription_details = [
+                    xi.sdk.resellers.models.product_detail_response_subscription_details_inner.ProductDetailResponse_subscriptionDetails_inner(
+                        plan_id = '', 
+                        plan_name = '', 
+                        plan_description = '', 
+                        groups = [
+                            xi.sdk.resellers.models.product_detail_response_subscription_details_inner_groups_inner.ProductDetailResponse_subscriptionDetails_inner_groups_inner(
+                                group_name = '', 
+                                group_description = '', )
+                            ], 
+                        subscription_period = [
+                            xi.sdk.resellers.models.product_detail_response_subscription_details_inner_subscription_period_inner.ProductDetailResponse_subscriptionDetails_inner_subscriptionPeriod_inner(
+                                subscription_period_unit = '', )
+                            ], 
+                        billing_period = xi.sdk.resellers.models.product_detail_response_subscription_details_inner_billing_period.ProductDetailResponse_subscriptionDetails_inner_billingPeriod(
+                            billing_period_unit = '', ), 
+                        options = [
+                            xi.sdk.resellers.models.product_detail_response_subscription_details_inner_options_inner.ProductDetailResponse_subscriptionDetails_inner_options_inner(
+                                resource_id = '', 
+                                resource_name = '', 
+                                vendor_part_number = '', 
+                                min_units = 56, 
+                                max_units = 56, 
+                                depends_on = '', )
+                            ], 
+                        links = [
+                            xi.sdk.resellers.models.product_search_response_subscription_catalog_inner_plans_inner_links_inner.ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner(
+                                topic = '', 
+                                href = '', 
+                                type = '', )
+                            ], 
+                        next_page = '', 
+                        previous_page = '', )
+                    ]
             )
         else:
             return ProductDetailResponse(

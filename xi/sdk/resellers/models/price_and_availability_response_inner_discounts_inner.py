@@ -85,6 +85,11 @@ class PriceAndAvailabilityResponseInnerDiscountsInner(BaseModel):
                 if _item_quantity_discounts:
                     _items.append(_item_quantity_discounts.to_dict())
             _dict['quantityDiscounts'] = _items
+        # set to None if quantity_discounts (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_discounts is None and "quantity_discounts" in self.model_fields_set:
+            _dict['quantityDiscounts'] = None
+
         return _dict
 
     @classmethod

@@ -20,6 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_search_response_catalog_inner import ProductSearchResponseCatalogInner
+from xi.sdk.resellers.models.product_search_response_subscription_catalog_inner import ProductSearchResponseSubscriptionCatalogInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,9 +32,10 @@ class ProductSearchResponse(BaseModel):
     page_size: Optional[StrictInt] = Field(default=None, description="The number of results per page. Default is 25.", alias="pageSize")
     page_number: Optional[StrictInt] = Field(default=None, description="current page number default is 1", alias="pageNumber")
     catalog: Optional[List[ProductSearchResponseCatalogInner]] = None
+    subscription_catalog: Optional[List[ProductSearchResponseSubscriptionCatalogInner]] = Field(default=None, alias="subscriptionCatalog")
     next_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing next page.", alias="nextPage")
     previous_page: Optional[StrictStr] = Field(default=None, description="link/URL for accessing previous page.", alias="previousPage")
-    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "catalog", "nextPage", "previousPage"]
+    __properties: ClassVar[List[str]] = ["recordsFound", "pageSize", "pageNumber", "catalog", "subscriptionCatalog", "nextPage", "previousPage"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,6 +83,13 @@ class ProductSearchResponse(BaseModel):
                 if _item_catalog:
                     _items.append(_item_catalog.to_dict())
             _dict['catalog'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in subscription_catalog (list)
+        _items = []
+        if self.subscription_catalog:
+            for _item_subscription_catalog in self.subscription_catalog:
+                if _item_subscription_catalog:
+                    _items.append(_item_subscription_catalog.to_dict())
+            _dict['subscriptionCatalog'] = _items
         return _dict
 
     @classmethod
@@ -97,6 +106,7 @@ class ProductSearchResponse(BaseModel):
             "pageSize": obj.get("pageSize"),
             "pageNumber": obj.get("pageNumber"),
             "catalog": [ProductSearchResponseCatalogInner.from_dict(_item) for _item in obj["catalog"]] if obj.get("catalog") is not None else None,
+            "subscriptionCatalog": [ProductSearchResponseSubscriptionCatalogInner.from_dict(_item) for _item in obj["subscriptionCatalog"]] if obj.get("subscriptionCatalog") is not None else None,
             "nextPage": obj.get("nextPage"),
             "previousPage": obj.get("previousPage")
         })

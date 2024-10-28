@@ -78,6 +78,11 @@ class PriceAndAvailabilityResponseInnerAvailability(BaseModel):
                 if _item_availability_by_warehouse:
                     _items.append(_item_availability_by_warehouse.to_dict())
             _dict['availabilityByWarehouse'] = _items
+        # set to None if availability_by_warehouse (nullable) is None
+        # and model_fields_set contains the field
+        if self.availability_by_warehouse is None and "availability_by_warehouse" in self.model_fields_set:
+            _dict['availabilityByWarehouse'] = None
+
         return _dict
 
     @classmethod
