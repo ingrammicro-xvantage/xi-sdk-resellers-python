@@ -33,13 +33,6 @@ class TestProductCatalogApi(unittest.TestCase):
         """
         pass
 
-    def test_get_reseller_v6_productdetail_cmp(self) -> None:
-        """Test case for get_reseller_v6_productdetail_cmp
-
-        Product Details
-        """
-        pass
-
     def test_get_reseller_v6_productsearch(self) -> None:
         """Test case for get_reseller_v6_productsearch
 
