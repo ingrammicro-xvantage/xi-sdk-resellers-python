@@ -373,15 +373,15 @@ class ProductCatalogApi:
 
 
     @validate_call
-    def get_reseller_v6_productdetail_cmp(
+    def get_reseller_v6_productdetailcmp(
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Sender Identification text")] = None,
-        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         plan_name: Annotated[Optional[StrictStr], Field(description="Name of the subscription plan")] = None,
         plan_id: Annotated[Optional[StrictStr], Field(description="Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>")] = None,
+        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -397,7 +397,7 @@ class ProductCatalogApi:
     ) -> ProductDetailResponse:
         """Product Details
 
-        Search all the product-related details using a unique Ingram Part Number.
+        Search all the product-related details.
 
         :param im_customer_number: Your unique Ingram Micro customer number (required)
         :type im_customer_number: str
@@ -407,12 +407,12 @@ class ProductCatalogApi:
         :type im_correlation_id: str
         :param im_sender_id: Sender Identification text
         :type im_sender_id: str
-        :param vendor_part_number: Vendor’s part number for the product.
-        :type vendor_part_number: str
         :param plan_name: Name of the subscription plan
         :type plan_name: str
         :param plan_id: Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>
         :type plan_id: str
+        :param vendor_part_number: Vendor’s part number for the product.
+        :type vendor_part_number: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -435,14 +435,14 @@ class ProductCatalogApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_reseller_v6_productdetail_cmp_serialize(
+        _param = self._get_reseller_v6_productdetailcmp_serialize(
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_sender_id=im_sender_id,
-            vendor_part_number=vendor_part_number,
             plan_name=plan_name,
             plan_id=plan_id,
+            vendor_part_number=vendor_part_number,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -467,15 +467,15 @@ class ProductCatalogApi:
 
 
     @validate_call
-    def get_reseller_v6_productdetail_cmp_with_http_info(
+    def get_reseller_v6_productdetailcmp_with_http_info(
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Sender Identification text")] = None,
-        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         plan_name: Annotated[Optional[StrictStr], Field(description="Name of the subscription plan")] = None,
         plan_id: Annotated[Optional[StrictStr], Field(description="Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>")] = None,
+        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -491,7 +491,7 @@ class ProductCatalogApi:
     ) -> ApiResponse[ProductDetailResponse]:
         """Product Details
 
-        Search all the product-related details using a unique Ingram Part Number.
+        Search all the product-related details.
 
         :param im_customer_number: Your unique Ingram Micro customer number (required)
         :type im_customer_number: str
@@ -501,12 +501,12 @@ class ProductCatalogApi:
         :type im_correlation_id: str
         :param im_sender_id: Sender Identification text
         :type im_sender_id: str
-        :param vendor_part_number: Vendor’s part number for the product.
-        :type vendor_part_number: str
         :param plan_name: Name of the subscription plan
         :type plan_name: str
         :param plan_id: Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>
         :type plan_id: str
+        :param vendor_part_number: Vendor’s part number for the product.
+        :type vendor_part_number: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -529,14 +529,14 @@ class ProductCatalogApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_reseller_v6_productdetail_cmp_serialize(
+        _param = self._get_reseller_v6_productdetailcmp_serialize(
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_sender_id=im_sender_id,
-            vendor_part_number=vendor_part_number,
             plan_name=plan_name,
             plan_id=plan_id,
+            vendor_part_number=vendor_part_number,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -561,15 +561,15 @@ class ProductCatalogApi:
 
 
     @validate_call
-    def get_reseller_v6_productdetail_cmp_without_preload_content(
+    def get_reseller_v6_productdetailcmp_without_preload_content(
         self,
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems")],
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Sender Identification text")] = None,
-        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         plan_name: Annotated[Optional[StrictStr], Field(description="Name of the subscription plan")] = None,
         plan_id: Annotated[Optional[StrictStr], Field(description="Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>")] = None,
+        vendor_part_number: Annotated[Optional[StrictStr], Field(description="Vendor’s part number for the product.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -585,7 +585,7 @@ class ProductCatalogApi:
     ) -> RESTResponseType:
         """Product Details
 
-        Search all the product-related details using a unique Ingram Part Number.
+        Search all the product-related details.
 
         :param im_customer_number: Your unique Ingram Micro customer number (required)
         :type im_customer_number: str
@@ -595,12 +595,12 @@ class ProductCatalogApi:
         :type im_correlation_id: str
         :param im_sender_id: Sender Identification text
         :type im_sender_id: str
-        :param vendor_part_number: Vendor’s part number for the product.
-        :type vendor_part_number: str
         :param plan_name: Name of the subscription plan
         :type plan_name: str
         :param plan_id: Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span>
         :type plan_id: str
+        :param vendor_part_number: Vendor’s part number for the product.
+        :type vendor_part_number: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -623,14 +623,14 @@ class ProductCatalogApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_reseller_v6_productdetail_cmp_serialize(
+        _param = self._get_reseller_v6_productdetailcmp_serialize(
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
             im_sender_id=im_sender_id,
-            vendor_part_number=vendor_part_number,
             plan_name=plan_name,
             plan_id=plan_id,
+            vendor_part_number=vendor_part_number,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -650,15 +650,15 @@ class ProductCatalogApi:
         return response_data.response
 
 
-    def _get_reseller_v6_productdetail_cmp_serialize(
+    def _get_reseller_v6_productdetailcmp_serialize(
         self,
         im_customer_number,
         im_country_code,
         im_correlation_id,
         im_sender_id,
-        vendor_part_number,
         plan_name,
         plan_id,
+        vendor_part_number,
         _request_auth,
         _content_type,
         _headers,
@@ -681,10 +681,6 @@ class ProductCatalogApi:
 
         # process the path parameters
         # process the query parameters
-        if vendor_part_number is not None:
-            
-            _query_params.append(('vendorPartNumber', vendor_part_number))
-            
         if plan_name is not None:
             
             _query_params.append(('planName', plan_name))
@@ -692,6 +688,10 @@ class ProductCatalogApi:
         if plan_id is not None:
             
             _query_params.append(('planId', plan_id))
+            
+        if vendor_part_number is not None:
+            
+            _query_params.append(('vendorPartNumber', vendor_part_number))
             
         # process the header parameters
         if im_customer_number is not None:

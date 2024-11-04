@@ -101,7 +101,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**post_createorder_v7**](docs/OrdersApi.md#post_createorder_v7) | **POST** /resellers/v7/orders | Create your Order v7
 *OrdersApi* | [**put_ordermodify**](docs/OrdersApi.md#put_ordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
 *ProductCatalogApi* | [**get_reseller_v6_productdetail**](docs/ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
-*ProductCatalogApi* | [**get_reseller_v6_productdetail_cmp**](docs/ProductCatalogApi.md#get_reseller_v6_productdetail_cmp) | **GET** /resellers/v6/catalog/details | Product Details
+*ProductCatalogApi* | [**get_reseller_v6_productdetailcmp**](docs/ProductCatalogApi.md#get_reseller_v6_productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productsearch**](docs/ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
 *ProductCatalogApi* | [**post_priceandavailability**](docs/ProductCatalogApi.md#post_priceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
 *QuotesApi* | [**get_quotessearch_v6**](docs/QuotesApi.md#get_quotessearch_v6) | **GET** /resellers/v6/quotes/search | Quote Search

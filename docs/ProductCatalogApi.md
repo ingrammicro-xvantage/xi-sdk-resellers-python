@@ -5,7 +5,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_reseller_v6_productdetail**](ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
-[**get_reseller_v6_productdetail_cmp**](ProductCatalogApi.md#get_reseller_v6_productdetail_cmp) | **GET** /resellers/v6/catalog/details | Product Details
+[**get_reseller_v6_productdetailcmp**](ProductCatalogApi.md#get_reseller_v6_productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 [**get_reseller_v6_productsearch**](ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
 [**post_priceandavailability**](ProductCatalogApi.md#post_priceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
 
@@ -96,12 +96,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_reseller_v6_productdetail_cmp**
-> ProductDetailResponse get_reseller_v6_productdetail_cmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, vendor_part_number=vendor_part_number, plan_name=plan_name, plan_id=plan_id)
+# **get_reseller_v6_productdetailcmp**
+> ProductDetailResponse get_reseller_v6_productdetailcmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, plan_name=plan_name, plan_id=plan_id, vendor_part_number=vendor_part_number)
 
 Product Details
 
-Search all the product-related details using a unique Ingram Part Number.
+Search all the product-related details.
 
 ### Example
 
@@ -134,17 +134,17 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems
     im_sender_id = 'MyCompany' # str | Sender Identification text (optional)
-    vendor_part_number = 'vendor_part_number_example' # str | Vendor’s part number for the product. (optional)
     plan_name = 'plan_name_example' # str | Name of the subscription plan (optional)
     plan_id = 'plan_id_example' # str | Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span> (optional)
+    vendor_part_number = 'vendor_part_number_example' # str | Vendor’s part number for the product. (optional)
 
     try:
         # Product Details
-        api_response = api_instance.get_reseller_v6_productdetail_cmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, vendor_part_number=vendor_part_number, plan_name=plan_name, plan_id=plan_id)
-        print("The response of ProductCatalogApi->get_reseller_v6_productdetail_cmp:\n")
+        api_response = api_instance.get_reseller_v6_productdetailcmp(im_customer_number, im_country_code, im_correlation_id, im_sender_id=im_sender_id, plan_name=plan_name, plan_id=plan_id, vendor_part_number=vendor_part_number)
+        print("The response of ProductCatalogApi->get_reseller_v6_productdetailcmp:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ProductCatalogApi->get_reseller_v6_productdetail_cmp: %s\n" % e)
+        print("Exception when calling ProductCatalogApi->get_reseller_v6_productdetailcmp: %s\n" % e)
 ```
 
 
@@ -158,9 +158,9 @@ Name | Type | Description  | Notes
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems | 
  **im_sender_id** | **str**| Sender Identification text | [optional] 
- **vendor_part_number** | **str**| Vendor’s part number for the product. | [optional] 
  **plan_name** | **str**| Name of the subscription plan | [optional] 
  **plan_id** | **str**| Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; | [optional] 
+ **vendor_part_number** | **str**| Vendor’s part number for the product. | [optional] 
 
 ### Return type
 
