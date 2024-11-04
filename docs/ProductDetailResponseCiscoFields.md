@@ -1,5 +1,6 @@
-# ProductDetailResponseCiscoFieldsInner
+# ProductDetailResponseCiscoFields
 
+Cisco product related information.
 
 ## Properties
 
@@ -16,19 +17,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
+from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of ProductDetailResponseCiscoFieldsInner from a JSON string
-product_detail_response_cisco_fields_inner_instance = ProductDetailResponseCiscoFieldsInner.from_json(json)
+# create an instance of ProductDetailResponseCiscoFields from a JSON string
+product_detail_response_cisco_fields_instance = ProductDetailResponseCiscoFields.from_json(json)
 # print the JSON string representation of the object
-print(ProductDetailResponseCiscoFieldsInner.to_json())
+print(ProductDetailResponseCiscoFields.to_json())
 
 # convert the object into a dict
-product_detail_response_cisco_fields_inner_dict = product_detail_response_cisco_fields_inner_instance.to_dict()
-# create an instance of ProductDetailResponseCiscoFieldsInner from a dict
-product_detail_response_cisco_fields_inner_from_dict = ProductDetailResponseCiscoFieldsInner.from_dict(product_detail_response_cisco_fields_inner_dict)
+product_detail_response_cisco_fields_dict = product_detail_response_cisco_fields_instance.to_dict()
+# create an instance of ProductDetailResponseCiscoFields from a dict
+product_detail_response_cisco_fields_from_dict = ProductDetailResponseCiscoFields.from_dict(product_detail_response_cisco_fields_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

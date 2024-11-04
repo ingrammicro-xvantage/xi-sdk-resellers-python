@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
+from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields
 
-class TestProductDetailResponseCiscoFieldsInner(unittest.TestCase):
-    """ProductDetailResponseCiscoFieldsInner unit test stubs"""
+class TestProductDetailResponseCiscoFields(unittest.TestCase):
+    """ProductDetailResponseCiscoFields unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestProductDetailResponseCiscoFieldsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ProductDetailResponseCiscoFieldsInner:
-        """Test ProductDetailResponseCiscoFieldsInner
+    def make_instance(self, include_optional) -> ProductDetailResponseCiscoFields:
+        """Test ProductDetailResponseCiscoFields
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ProductDetailResponseCiscoFieldsInner`
+        # uncomment below to create an instance of `ProductDetailResponseCiscoFields`
         """
-        model = ProductDetailResponseCiscoFieldsInner()
+        model = ProductDetailResponseCiscoFields()
         if include_optional:
-            return ProductDetailResponseCiscoFieldsInner(
+            return ProductDetailResponseCiscoFields(
                 product_sub_group = '',
                 service_program_name = '',
                 item_catalog_category = '',
@@ -44,12 +44,12 @@ class TestProductDetailResponseCiscoFieldsInner(unittest.TestCase):
                 global_list_price = ''
             )
         else:
-            return ProductDetailResponseCiscoFieldsInner(
+            return ProductDetailResponseCiscoFields(
         )
         """
 
-    def testProductDetailResponseCiscoFieldsInner(self):
-        """Test ProductDetailResponseCiscoFieldsInner"""
+    def testProductDetailResponseCiscoFields(self):
+        """Test ProductDetailResponseCiscoFields"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

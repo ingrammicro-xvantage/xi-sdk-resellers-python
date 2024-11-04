@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
-from xi.sdk.resellers.models.product_detail_response_cisco_fields_inner import ProductDetailResponseCiscoFieldsInner
-from xi.sdk.resellers.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
+from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields
+from xi.sdk.resellers.models.product_detail_response_indicators import ProductDetailResponseIndicators
 from xi.sdk.resellers.models.product_detail_response_subscription_details_inner import ProductDetailResponseSubscriptionDetailsInner
 from typing import Optional, Set
 from typing_extensions import Self
@@ -42,8 +42,8 @@ class ProductDetailResponse(BaseModel):
     product_status_code: Optional[StrictStr] = Field(default=None, description="Status code of the product.", alias="productStatusCode")
     product_class: Optional[StrictStr] = Field(default=None, description="Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A = Product that is stocked usually in all IM warehouses and replenished on a regular basis. B = Product that is stocked in limited IM warehouses and replenished on a regular basis C = Product that is stocked in fewer IM warehouses and replenished on a regular basis. D = Product that Ingram Micro has elected to discontinue. E = Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F = Product that we carry for a specific customer or supplier under a contractual agreement. N = New Sku. Classification before first receipt O = Discontinued product to be liquidated S= Order for Specialized Demand (Order to backorder) X= direct ship from Vendor V = product that vendor has elected to discontinue.", alias="productClass")
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller / end-user’s part number for the product.", alias="customerPartNumber")
-    indicators: Optional[List[ProductDetailResponseIndicatorsInner]] = Field(default=None, description="Indicators of the Product")
-    cisco_fields: Optional[List[ProductDetailResponseCiscoFieldsInner]] = Field(default=None, description="Cisco product related information.", alias="ciscoFields")
+    indicators: Optional[ProductDetailResponseIndicators] = None
+    cisco_fields: Optional[ProductDetailResponseCiscoFields] = Field(default=None, alias="ciscoFields")
     warranty_information: Optional[List[Dict[str, Any]]] = Field(default=None, description="Warranty information related to the product.", alias="warrantyInformation")
     additional_information: Optional[ProductDetailResponseAdditionalInformation] = Field(default=None, alias="additionalInformation")
     subscription_details: Optional[List[ProductDetailResponseSubscriptionDetailsInner]] = Field(default=None, description="Subscription product Details", alias="subscriptionDetails")
@@ -88,20 +88,12 @@ class ProductDetailResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in indicators (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of indicators
         if self.indicators:
-            for _item_indicators in self.indicators:
-                if _item_indicators:
-                    _items.append(_item_indicators.to_dict())
-            _dict['indicators'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in cisco_fields (list)
-        _items = []
+            _dict['indicators'] = self.indicators.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of cisco_fields
         if self.cisco_fields:
-            for _item_cisco_fields in self.cisco_fields:
-                if _item_cisco_fields:
-                    _items.append(_item_cisco_fields.to_dict())
-            _dict['ciscoFields'] = _items
+            _dict['ciscoFields'] = self.cisco_fields.to_dict()
         # override the default output from pydantic by calling `to_dict()` of additional_information
         if self.additional_information:
             _dict['additionalInformation'] = self.additional_information.to_dict()
@@ -136,8 +128,8 @@ class ProductDetailResponse(BaseModel):
             "productStatusCode": obj.get("productStatusCode"),
             "productClass": obj.get("productClass"),
             "customerPartNumber": obj.get("customerPartNumber"),
-            "indicators": [ProductDetailResponseIndicatorsInner.from_dict(_item) for _item in obj["indicators"]] if obj.get("indicators") is not None else None,
-            "ciscoFields": [ProductDetailResponseCiscoFieldsInner.from_dict(_item) for _item in obj["ciscoFields"]] if obj.get("ciscoFields") is not None else None,
+            "indicators": ProductDetailResponseIndicators.from_dict(obj["indicators"]) if obj.get("indicators") is not None else None,
+            "ciscoFields": ProductDetailResponseCiscoFields.from_dict(obj["ciscoFields"]) if obj.get("ciscoFields") is not None else None,
             "warrantyInformation": obj.get("warrantyInformation"),
             "additionalInformation": ProductDetailResponseAdditionalInformation.from_dict(obj["additionalInformation"]) if obj.get("additionalInformation") is not None else None,
             "subscriptionDetails": [ProductDetailResponseSubscriptionDetailsInner.from_dict(_item) for _item in obj["subscriptionDetails"]] if obj.get("subscriptionDetails") is not None else None

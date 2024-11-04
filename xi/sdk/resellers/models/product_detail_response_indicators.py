@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ProductDetailResponseIndicatorsInner(BaseModel):
+class ProductDetailResponseIndicators(BaseModel):
     """
-    ProductDetailResponseIndicatorsInner
+    ProductDetailResponseIndicators
     """ # noqa: E501
     has_warranty: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether product has a warranty.", alias="hasWarranty")
     is_new_product: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether it’s a new product. ", alias="isNewProduct")
@@ -77,7 +77,7 @@ class ProductDetailResponseIndicatorsInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ProductDetailResponseIndicatorsInner from a JSON string"""
+        """Create an instance of ProductDetailResponseIndicators from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -102,7 +102,7 @@ class ProductDetailResponseIndicatorsInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ProductDetailResponseIndicatorsInner from a dict"""
+        """Create an instance of ProductDetailResponseIndicators from a dict"""
         if obj is None:
             return None
 

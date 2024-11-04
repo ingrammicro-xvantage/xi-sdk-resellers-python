@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.product_detail_response_indicators_inner import ProductDetailResponseIndicatorsInner
+from xi.sdk.resellers.models.product_detail_response_indicators import ProductDetailResponseIndicators
 
-class TestProductDetailResponseIndicatorsInner(unittest.TestCase):
-    """ProductDetailResponseIndicatorsInner unit test stubs"""
+class TestProductDetailResponseIndicators(unittest.TestCase):
+    """ProductDetailResponseIndicators unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestProductDetailResponseIndicatorsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ProductDetailResponseIndicatorsInner:
-        """Test ProductDetailResponseIndicatorsInner
+    def make_instance(self, include_optional) -> ProductDetailResponseIndicators:
+        """Test ProductDetailResponseIndicators
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ProductDetailResponseIndicatorsInner`
+        # uncomment below to create an instance of `ProductDetailResponseIndicators`
         """
-        model = ProductDetailResponseIndicatorsInner()
+        model = ProductDetailResponseIndicators()
         if include_optional:
-            return ProductDetailResponseIndicatorsInner(
+            return ProductDetailResponseIndicators(
                 has_warranty = True,
                 is_new_product = True,
                 has_return_limits = True,
@@ -68,12 +68,12 @@ class TestProductDetailResponseIndicatorsInner(unittest.TestCase):
                 is_configurable = True
             )
         else:
-            return ProductDetailResponseIndicatorsInner(
+            return ProductDetailResponseIndicators(
         )
         """
 
-    def testProductDetailResponseIndicatorsInner(self):
-        """Test ProductDetailResponseIndicatorsInner"""
+    def testProductDetailResponseIndicators(self):
+        """Test ProductDetailResponseIndicators"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
