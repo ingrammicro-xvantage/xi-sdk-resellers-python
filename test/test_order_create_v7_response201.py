@@ -36,7 +36,7 @@ class TestOrderCreateV7Response201(unittest.TestCase):
         if include_optional:
             return OrderCreateV7Response201(
                 quote_number = '',
-                confirmation_number = 987654322,
+                confirmation_number = '987654322',
                 message = ''
             )
         else:

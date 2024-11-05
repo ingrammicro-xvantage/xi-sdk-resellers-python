@@ -123,6 +123,11 @@ class OrderCreateV7Request(BaseModel):
                 if _item_lines:
                     _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
+        # set to None if end_customer_order_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.end_customer_order_number is None and "end_customer_order_number" in self.model_fields_set:
+            _dict['endCustomerOrderNumber'] = None
+
         return _dict
 
     @classmethod
