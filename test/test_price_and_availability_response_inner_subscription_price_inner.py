@@ -37,6 +37,7 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInner(unittest.TestC
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInner(
                 index = 1.337,
                 plan_id = '',
+                plan_uid = '',
                 plan_name = '',
                 plan_description = '',
                 groups = [
@@ -44,11 +45,9 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInner(unittest.TestC
                         group_name = '', 
                         group_description = '', )
                     ],
-                billing_period = [
-                    xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_billing_period_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod_inner(
-                        billing_period_unit = '', 
-                        billing_period = 1.337, )
-                    ],
+                billing_period = xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_billing_period.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod(
+                    billing_period_unit = '', 
+                    billing_period = 1.337, ),
                 subscription_period = [
                     xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_subscription_period_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner(
                         subscription_period_unit = '', 

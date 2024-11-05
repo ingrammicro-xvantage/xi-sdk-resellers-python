@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_billing_period_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner
+from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_billing_period import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_groups_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_subscription_period_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner
@@ -32,13 +32,14 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
     """ # noqa: E501
     index: Optional[Union[StrictFloat, StrictInt]] = None
     plan_id: Optional[StrictStr] = Field(default=None, description="Id of the plan.", alias="planId")
+    plan_uid: Optional[StrictStr] = Field(default=None, alias="planUId")
     plan_name: Optional[StrictStr] = Field(default=None, description="Name of the plan.", alias="planName")
     plan_description: Optional[StrictStr] = Field(default=None, description="The description of the plan.", alias="planDescription")
     groups: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner]] = None
-    billing_period: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner]] = Field(default=None, alias="billingPeriod")
+    billing_period: Optional[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod] = Field(default=None, alias="billingPeriod")
     subscription_period: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner]] = Field(default=None, alias="subscriptionPeriod")
     options: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner]] = None
-    __properties: ClassVar[List[str]] = ["index", "planId", "planName", "planDescription", "groups", "billingPeriod", "subscriptionPeriod", "options"]
+    __properties: ClassVar[List[str]] = ["index", "planId", "planUId", "planName", "planDescription", "groups", "billingPeriod", "subscriptionPeriod", "options"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,13 +87,9 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
                 if _item_groups:
                     _items.append(_item_groups.to_dict())
             _dict['groups'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in billing_period (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of billing_period
         if self.billing_period:
-            for _item_billing_period in self.billing_period:
-                if _item_billing_period:
-                    _items.append(_item_billing_period.to_dict())
-            _dict['billingPeriod'] = _items
+            _dict['billingPeriod'] = self.billing_period.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in subscription_period (list)
         _items = []
         if self.subscription_period:
@@ -121,10 +118,11 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
         _obj = cls.model_validate({
             "index": obj.get("index"),
             "planId": obj.get("planId"),
+            "planUId": obj.get("planUId"),
             "planName": obj.get("planName"),
             "planDescription": obj.get("planDescription"),
             "groups": [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner.from_dict(_item) for _item in obj["groups"]] if obj.get("groups") is not None else None,
-            "billingPeriod": [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner.from_dict(_item) for _item in obj["billingPeriod"]] if obj.get("billingPeriod") is not None else None,
+            "billingPeriod": PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod.from_dict(obj["billingPeriod"]) if obj.get("billingPeriod") is not None else None,
             "subscriptionPeriod": [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner.from_dict(_item) for _item in obj["subscriptionPeriod"]] if obj.get("subscriptionPeriod") is not None else None,
             "options": [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner.from_dict(_item) for _item in obj["options"]] if obj.get("options") is not None else None
         })

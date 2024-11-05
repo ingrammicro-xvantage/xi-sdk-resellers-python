@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(BaseModel):
+class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(BaseModel):
     """
-    PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner
+    PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod
     """ # noqa: E501
     billing_period_unit: Optional[StrictStr] = Field(default=None, description="The unit of the billing period.", alias="billingPeriodUnit")
     billing_period: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The billing period value.", alias="billingPeriod")
@@ -48,7 +48,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner from a JSON string"""
+        """Create an instance of PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +73,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner from a dict"""
+        """Create an instance of PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod from a dict"""
         if obj is None:
             return None
 
