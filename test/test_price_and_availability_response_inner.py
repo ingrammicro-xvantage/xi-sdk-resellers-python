@@ -35,6 +35,7 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
         model = PriceAndAvailabilityResponseInner()
         if include_optional:
             return PriceAndAvailabilityResponseInner(
+                index = 1.337,
                 product_status_code = '',
                 product_status_message = '',
                 ingram_part_number = '',
@@ -121,9 +122,10 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                     ],
                 subscription_price = [
                     xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner(
+                        index = 1.337, 
                         plan_id = '', 
                         plan_name = '', 
-                        plan_description = 1.337, 
+                        plan_description = '', 
                         groups = [
                             xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_groups_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner(
                                 group_name = '', 
@@ -140,16 +142,17 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                         options = [
                             xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner(
                                 resource_id = '', 
+                                resource_uid = '', 
                                 resource_name = '', 
                                 vendor_part_number = '', 
-                                min_units = '', 
-                                max_units = '', 
+                                min_units = 1.337, 
+                                max_units = 1.337, 
                                 recurringpricemodel = '', 
                                 unit_of_measure = '', 
                                 resource_pricing = [
                                     xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_resource_pricing_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner(
                                         name = '', 
-                                        quantity = 56, 
+                                        quantity = '', 
                                         msrp = 1.337, 
                                         unit_price = 1.337, 
                                         margin = 1.337, 
@@ -178,7 +181,9 @@ class TestPriceAndAvailabilityResponseInner(unittest.TestCase):
                                 fees = [
                                     xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_fees_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner(
                                         price = 1.337, 
-                                        type = '', )
+                                        type = '', 
+                                        msrp = 1.337, 
+                                        code = '', )
                                     ], )
                             ], )
                     ]

@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(
     PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner
     """ # noqa: E501
     billing_period_unit: Optional[StrictStr] = Field(default=None, description="The unit of the billing period.", alias="billingPeriodUnit")
-    billing_period: Optional[StrictStr] = Field(default=None, description="The billing period value.", alias="billingPeriod")
+    billing_period: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The billing period value.", alias="billingPeriod")
     __properties: ClassVar[List[str]] = ["billingPeriodUnit", "billingPeriod"]
 
     model_config = ConfigDict(

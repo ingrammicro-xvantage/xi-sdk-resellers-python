@@ -36,7 +36,7 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodIn
         if include_optional:
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(
                 billing_period_unit = '',
-                billing_period = ''
+                billing_period = 1.337
             )
         else:
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(

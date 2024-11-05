@@ -30,14 +30,15 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
     """
     PriceAndAvailabilityResponseInnerSubscriptionPriceInner
     """ # noqa: E501
+    index: Optional[Union[StrictFloat, StrictInt]] = None
     plan_id: Optional[StrictStr] = Field(default=None, description="Id of the plan.", alias="planId")
     plan_name: Optional[StrictStr] = Field(default=None, description="Name of the plan.", alias="planName")
-    plan_description: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The description of the plan.", alias="planDescription")
+    plan_description: Optional[StrictStr] = Field(default=None, description="The description of the plan.", alias="planDescription")
     groups: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner]] = None
     billing_period: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner]] = Field(default=None, alias="billingPeriod")
     subscription_period: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner]] = Field(default=None, alias="subscriptionPeriod")
     options: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner]] = None
-    __properties: ClassVar[List[str]] = ["planId", "planName", "planDescription", "groups", "billingPeriod", "subscriptionPeriod", "options"]
+    __properties: ClassVar[List[str]] = ["index", "planId", "planName", "planDescription", "groups", "billingPeriod", "subscriptionPeriod", "options"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -118,6 +119,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "index": obj.get("index"),
             "planId": obj.get("planId"),
             "planName": obj.get("planName"),
             "planDescription": obj.get("planDescription"),

@@ -36,7 +36,9 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFee
         if include_optional:
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(
                 price = 1.337,
-                type = ''
+                type = '',
+                msrp = 1.337,
+                code = ''
             )
         else:
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(

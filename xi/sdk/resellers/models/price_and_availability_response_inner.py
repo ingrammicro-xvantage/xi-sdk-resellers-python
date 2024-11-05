@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.price_and_availability_response_inner_availability import PriceAndAvailabilityResponseInnerAvailability
 from xi.sdk.resellers.models.price_and_availability_response_inner_discounts_inner import PriceAndAvailabilityResponseInnerDiscountsInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_pricing import PriceAndAvailabilityResponseInnerPricing
@@ -32,6 +32,7 @@ class PriceAndAvailabilityResponseInner(BaseModel):
     """
     PriceAndAvailabilityResponseInner
     """ # noqa: E501
+    index: Optional[Union[StrictFloat, StrictInt]] = None
     product_status_code: Optional[StrictStr] = Field(default=None, description="Codes signifying whether the sku is active or not.", alias="productStatusCode")
     product_status_message: Optional[StrictStr] = Field(default=None, description="Message returned saying whether sku is active.", alias="productStatusMessage")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro unique part number for the product.", alias="ingramPartNumber")
@@ -60,7 +61,7 @@ class PriceAndAvailabilityResponseInner(BaseModel):
     bundle_part_indicator: Optional[StrictBool] = Field(default=None, description="True of false value to indicate whether it’s bundle part. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).", alias="bundlePartIndicator")
     service_fees: Optional[List[PriceAndAvailabilityResponseInnerServiceFeesInner]] = Field(default=None, description="*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).", alias="serviceFees")
     subscription_price: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInner]] = Field(default=None, alias="subscriptionPrice")
-    __properties: ClassVar[List[str]] = ["productStatusCode", "productStatusMessage", "ingramPartNumber", "vendorPartNumber", "extendedVendorPartNumber", "customerPartNumber", "upc", "partNumberType", "vendorNumber", "vendorName", "description", "productClass", "uom", "productStatus", "acceptBackOrder", "productAuthorized", "returnableProduct", "endUserInfoRequired", "govtSpecialPriceAvailable", "govtProgramType", "govtEndUserType", "availability", "reserveInventoryDetails", "pricing", "discounts", "bundlePartIndicator", "serviceFees", "subscriptionPrice"]
+    __properties: ClassVar[List[str]] = ["index", "productStatusCode", "productStatusMessage", "ingramPartNumber", "vendorPartNumber", "extendedVendorPartNumber", "customerPartNumber", "upc", "partNumberType", "vendorNumber", "vendorName", "description", "productClass", "uom", "productStatus", "acceptBackOrder", "productAuthorized", "returnableProduct", "endUserInfoRequired", "govtSpecialPriceAvailable", "govtProgramType", "govtEndUserType", "availability", "reserveInventoryDetails", "pricing", "discounts", "bundlePartIndicator", "serviceFees", "subscriptionPrice"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -225,11 +226,6 @@ class PriceAndAvailabilityResponseInner(BaseModel):
         if self.availability is None and "availability" in self.model_fields_set:
             _dict['availability'] = None
 
-        # set to None if reserve_inventory_details (nullable) is None
-        # and model_fields_set contains the field
-        if self.reserve_inventory_details is None and "reserve_inventory_details" in self.model_fields_set:
-            _dict['reserveInventoryDetails'] = None
-
         # set to None if pricing (nullable) is None
         # and model_fields_set contains the field
         if self.pricing is None and "pricing" in self.model_fields_set:
@@ -262,6 +258,7 @@ class PriceAndAvailabilityResponseInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "index": obj.get("index"),
             "productStatusCode": obj.get("productStatusCode"),
             "productStatusMessage": obj.get("productStatusMessage"),
             "ingramPartNumber": obj.get("ingramPartNumber"),

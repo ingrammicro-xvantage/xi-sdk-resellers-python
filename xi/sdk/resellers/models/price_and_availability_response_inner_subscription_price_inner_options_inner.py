@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_discounts_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_fees_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner
 from xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_resource_pricing_inner import PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner
@@ -29,17 +29,18 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(BaseMo
     """
     PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner
     """ # noqa: E501
-    resource_id: Optional[StrictStr] = Field(default=None, description="The resource id of the subscription product.", alias="resourceId")
+    resource_id: Optional[StrictStr] = Field(default=None, alias="resourceId")
+    resource_uid: Optional[StrictStr] = Field(default=None, description="The resource id of the subscription product.", alias="resourceUId")
     resource_name: Optional[StrictStr] = Field(default=None, description="The name of the resource of the subscription product.", alias="resourceName")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the subscription product.", alias="vendorPartNumber")
-    min_units: Optional[StrictStr] = Field(default=None, description="Minimum unit needs to purchased.", alias="minUnits")
-    max_units: Optional[StrictStr] = Field(default=None, description="Maximum unit available for a purchase.", alias="maxUnits")
+    min_units: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Minimum unit needs to purchased.", alias="minUnits")
+    max_units: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum unit available for a purchase.", alias="maxUnits")
     recurringpricemodel: Optional[StrictStr] = Field(default=None, description="Recurring price model")
     unit_of_measure: Optional[StrictStr] = Field(default=None, description="Unit of mesaure for a subscription product.", alias="unitOfMeasure")
     resource_pricing: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner]] = Field(default=None, alias="resourcePricing")
     discounts: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner]] = None
     fees: Optional[List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner]] = None
-    __properties: ClassVar[List[str]] = ["resourceId", "resourceName", "vendorPartNumber", "minUnits", "maxUnits", "recurringpricemodel", "unitOfMeasure", "resourcePricing", "discounts", "fees"]
+    __properties: ClassVar[List[str]] = ["resourceId", "resourceUId", "resourceName", "vendorPartNumber", "minUnits", "maxUnits", "recurringpricemodel", "unitOfMeasure", "resourcePricing", "discounts", "fees"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -114,6 +115,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(BaseMo
 
         _obj = cls.model_validate({
             "resourceId": obj.get("resourceId"),
+            "resourceUId": obj.get("resourceUId"),
             "resourceName": obj.get("resourceName"),
             "vendorPartNumber": obj.get("vendorPartNumber"),
             "minUnits": obj.get("minUnits"),

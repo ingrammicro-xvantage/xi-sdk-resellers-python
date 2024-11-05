@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing_period_unit** | **str** | The unit of the billing period. | [optional] 
-**billing_period** | **str** | The billing period value. | [optional] 
+**billing_period** | **float** | The billing period value. | [optional] 
 
 ## Example
 

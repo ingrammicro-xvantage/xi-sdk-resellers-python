@@ -5,9 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**index** | **float** |  | [optional] 
 **plan_id** | **str** | Id of the plan. | [optional] 
 **plan_name** | **str** | Name of the plan. | [optional] 
-**plan_description** | **float** | The description of the plan. | [optional] 
+**plan_description** | **str** | The description of the plan. | [optional] 
 **groups** | [**List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner]**](PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner.md) |  | [optional] 
 **billing_period** | [**List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner]**](PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner.md) |  | [optional] 
 **subscription_period** | [**List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner]**](PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner.md) |  | [optional] 

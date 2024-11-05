@@ -5,11 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_id** | **str** | The resource id of the subscription product. | [optional] 
+**resource_id** | **str** |  | [optional] 
+**resource_uid** | **str** | The resource id of the subscription product. | [optional] 
 **resource_name** | **str** | The name of the resource of the subscription product. | [optional] 
 **vendor_part_number** | **str** | Vendor’s part number for the subscription product. | [optional] 
-**min_units** | **str** | Minimum unit needs to purchased. | [optional] 
-**max_units** | **str** | Maximum unit available for a purchase. | [optional] 
+**min_units** | **float** | Minimum unit needs to purchased. | [optional] 
+**max_units** | **float** | Maximum unit available for a purchase. | [optional] 
 **recurringpricemodel** | **str** | Recurring price model | [optional] 
 **unit_of_measure** | **str** | Unit of mesaure for a subscription product. | [optional] 
 **resource_pricing** | [**List[PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner]**](PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner.md) |  | [optional] 

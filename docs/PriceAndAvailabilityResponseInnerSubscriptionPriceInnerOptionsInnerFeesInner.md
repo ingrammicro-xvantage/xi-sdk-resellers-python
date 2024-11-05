@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **float** | Fee price of the line item. | [optional] 
 **type** | **str** | The type of the fees. | [optional] 
+**msrp** | **float** |  | [optional] 
+**code** | **str** |  | [optional] 
 
 ## Example
 

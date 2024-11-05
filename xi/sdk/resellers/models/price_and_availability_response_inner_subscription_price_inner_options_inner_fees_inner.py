@@ -28,7 +28,9 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInn
     """ # noqa: E501
     price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Fee price of the line item.")
     type: Optional[StrictStr] = Field(default=None, description="The type of the fees.")
-    __properties: ClassVar[List[str]] = ["price", "type"]
+    msrp: Optional[Union[StrictFloat, StrictInt]] = None
+    code: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["price", "type", "msrp", "code"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,7 +84,9 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInn
 
         _obj = cls.model_validate({
             "price": obj.get("price"),
-            "type": obj.get("type")
+            "type": obj.get("type"),
+            "msrp": obj.get("msrp"),
+            "code": obj.get("code")
         })
         return _obj
 
