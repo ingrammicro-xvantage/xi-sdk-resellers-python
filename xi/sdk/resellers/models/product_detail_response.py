@@ -104,6 +104,66 @@ class ProductDetailResponse(BaseModel):
                 if _item_subscription_details:
                     _items.append(_item_subscription_details.to_dict())
             _dict['subscriptionDetails'] = _items
+        # set to None if ingram_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.ingram_part_number is None and "ingram_part_number" in self.model_fields_set:
+            _dict['ingramPartNumber'] = None
+
+        # set to None if vendor_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_part_number is None and "vendor_part_number" in self.model_fields_set:
+            _dict['vendorPartNumber'] = None
+
+        # set to None if product_authorized (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_authorized is None and "product_authorized" in self.model_fields_set:
+            _dict['productAuthorized'] = None
+
+        # set to None if description (nullable) is None
+        # and model_fields_set contains the field
+        if self.description is None and "description" in self.model_fields_set:
+            _dict['description'] = None
+
+        # set to None if upc (nullable) is None
+        # and model_fields_set contains the field
+        if self.upc is None and "upc" in self.model_fields_set:
+            _dict['upc'] = None
+
+        # set to None if product_category (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_category is None and "product_category" in self.model_fields_set:
+            _dict['productCategory'] = None
+
+        # set to None if product_subcategory (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_subcategory is None and "product_subcategory" in self.model_fields_set:
+            _dict['productSubcategory'] = None
+
+        # set to None if vendor_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_name is None and "vendor_name" in self.model_fields_set:
+            _dict['vendorName'] = None
+
+        # set to None if vendor_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_number is None and "vendor_number" in self.model_fields_set:
+            _dict['vendorNumber'] = None
+
+        # set to None if product_status_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_status_code is None and "product_status_code" in self.model_fields_set:
+            _dict['productStatusCode'] = None
+
+        # set to None if product_class (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_class is None and "product_class" in self.model_fields_set:
+            _dict['productClass'] = None
+
+        # set to None if customer_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.customer_part_number is None and "customer_part_number" in self.model_fields_set:
+            _dict['customerPartNumber'] = None
+
         return _dict
 
     @classmethod
