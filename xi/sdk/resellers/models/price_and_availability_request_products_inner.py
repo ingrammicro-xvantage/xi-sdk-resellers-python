@@ -20,8 +20,6 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.price_and_availability_request_products_inner_additional_attributes_inner import PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner
-from xi.sdk.resellers.models.price_and_availability_request_products_inner_plan_id import PriceAndAvailabilityRequestProductsInnerPlanID
-from xi.sdk.resellers.models.price_and_availability_request_products_inner_quantity_requested import PriceAndAvailabilityRequestProductsInnerQuantityRequested
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,8 +31,8 @@ class PriceAndAvailabilityRequestProductsInner(BaseModel):
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product.", alias="vendorPartNumber")
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller/end-user’s part number for the product.", alias="customerPartNumber")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
-    quantity_requested: Optional[PriceAndAvailabilityRequestProductsInnerQuantityRequested] = Field(default=None, alias="quantityRequested")
-    plan_id: Optional[PriceAndAvailabilityRequestProductsInnerPlanID] = Field(default=None, alias="planID")
+    quantity_requested: Optional[StrictStr] = Field(default=None, description="Number of quantity of the Product.", alias="quantityRequested")
+    plan_id: Optional[StrictStr] = Field(default=None, description="Id of the plan", alias="planID")
     additional_attributes: Optional[List[PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
     __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "customerPartNumber", "upc", "quantityRequested", "planID", "additionalAttributes"]
 
@@ -77,12 +75,6 @@ class PriceAndAvailabilityRequestProductsInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of quantity_requested
-        if self.quantity_requested:
-            _dict['quantityRequested'] = self.quantity_requested.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of plan_id
-        if self.plan_id:
-            _dict['planID'] = self.plan_id.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
         _items = []
         if self.additional_attributes:
@@ -136,8 +128,8 @@ class PriceAndAvailabilityRequestProductsInner(BaseModel):
             "vendorPartNumber": obj.get("vendorPartNumber"),
             "customerPartNumber": obj.get("customerPartNumber"),
             "upc": obj.get("upc"),
-            "quantityRequested": PriceAndAvailabilityRequestProductsInnerQuantityRequested.from_dict(obj["quantityRequested"]) if obj.get("quantityRequested") is not None else None,
-            "planID": PriceAndAvailabilityRequestProductsInnerPlanID.from_dict(obj["planID"]) if obj.get("planID") is not None else None,
+            "quantityRequested": obj.get("quantityRequested"),
+            "planID": obj.get("planID"),
             "additionalAttributes": [PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj

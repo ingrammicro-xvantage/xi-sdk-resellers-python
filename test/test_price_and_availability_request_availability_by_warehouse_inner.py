@@ -35,7 +35,7 @@ class TestPriceAndAvailabilityRequestAvailabilityByWarehouseInner(unittest.TestC
         model = PriceAndAvailabilityRequestAvailabilityByWarehouseInner()
         if include_optional:
             return PriceAndAvailabilityRequestAvailabilityByWarehouseInner(
-                availability_by_warehouse_id = None,
+                availability_by_warehouse_id = '',
                 availability_for_all_location = True
             )
         else:

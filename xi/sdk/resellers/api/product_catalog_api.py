@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
-from typing import Any, List, Optional
+from typing import List, Optional
 from typing_extensions import Annotated
 from xi.sdk.resellers.models.price_and_availability_request import PriceAndAvailabilityRequest
 from xi.sdk.resellers.models.price_and_availability_response_inner import PriceAndAvailabilityResponseInner
@@ -757,7 +757,7 @@ class ProductCatalogApi:
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
-        plan_id: Annotated[Optional[Any], Field(description="ID of the plan")] = None,
+        plan_id: Annotated[Optional[StrictStr], Field(description="ID of the plan")] = None,
         show_group_info: Annotated[Optional[StrictBool], Field(description="In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.")] = None,
         _request_timeout: Union[
             None,
@@ -809,7 +809,7 @@ class ProductCatalogApi:
         :param group_name: Name of the Product Group
         :type group_name: str
         :param plan_id: ID of the plan
-        :type plan_id: GetResellerV6ProductsearchPlanIDParameter
+        :type plan_id: str
         :param show_group_info: In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.
         :type show_group_info: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -895,7 +895,7 @@ class ProductCatalogApi:
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
-        plan_id: Annotated[Optional[Any], Field(description="ID of the plan")] = None,
+        plan_id: Annotated[Optional[StrictStr], Field(description="ID of the plan")] = None,
         show_group_info: Annotated[Optional[StrictBool], Field(description="In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.")] = None,
         _request_timeout: Union[
             None,
@@ -947,7 +947,7 @@ class ProductCatalogApi:
         :param group_name: Name of the Product Group
         :type group_name: str
         :param plan_id: ID of the plan
-        :type plan_id: GetResellerV6ProductsearchPlanIDParameter
+        :type plan_id: str
         :param show_group_info: In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.
         :type show_group_info: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1033,7 +1033,7 @@ class ProductCatalogApi:
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
-        plan_id: Annotated[Optional[Any], Field(description="ID of the plan")] = None,
+        plan_id: Annotated[Optional[StrictStr], Field(description="ID of the plan")] = None,
         show_group_info: Annotated[Optional[StrictBool], Field(description="In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.")] = None,
         _request_timeout: Union[
             None,
@@ -1085,7 +1085,7 @@ class ProductCatalogApi:
         :param group_name: Name of the Product Group
         :type group_name: str
         :param plan_id: ID of the plan
-        :type plan_id: GetResellerV6ProductsearchPlanIDParameter
+        :type plan_id: str
         :param show_group_info: In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group.
         :type show_group_info: bool
         :param _request_timeout: timeout setting for this request. If one

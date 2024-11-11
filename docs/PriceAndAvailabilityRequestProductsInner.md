@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **vendor_part_number** | **str** | Vendor’s part number for the product. | [optional] 
 **customer_part_number** | **str** | Reseller/end-user’s part number for the product. | [optional] 
 **upc** | **str** | The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item. | [optional] 
-**quantity_requested** | [**PriceAndAvailabilityRequestProductsInnerQuantityRequested**](PriceAndAvailabilityRequestProductsInnerQuantityRequested.md) |  | [optional] 
-**plan_id** | [**PriceAndAvailabilityRequestProductsInnerPlanID**](PriceAndAvailabilityRequestProductsInnerPlanID.md) |  | [optional] 
+**quantity_requested** | **str** | Number of quantity of the Product. | [optional] 
+**plan_id** | **str** | Id of the plan | [optional] 
 **additional_attributes** | [**List[PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner]**](PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner.md) |  | [optional] 
 
 ## Example

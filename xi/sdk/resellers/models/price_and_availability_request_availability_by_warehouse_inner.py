@@ -17,9 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.price_and_availability_request_availability_by_warehouse_inner_availability_by_warehouse_id import PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseId
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +26,7 @@ class PriceAndAvailabilityRequestAvailabilityByWarehouseInner(BaseModel):
     """
     PriceAndAvailabilityRequestAvailabilityByWarehouseInner
     """ # noqa: E501
-    availability_by_warehouse_id: Optional[PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseId] = Field(default=None, alias="availabilityByWarehouseId")
+    availability_by_warehouse_id: Optional[StrictStr] = Field(default=None, description="Plant/warehouse Id of a particular location in order to get just the inventory of that location.", alias="availabilityByWarehouseId")
     availability_for_all_location: Optional[StrictBool] = Field(default=None, description="Pass boolean value as input, if true the response will contain warehouse location details, if false the response will not hold warehouse location details. By default value is true.", alias="availabilityForAllLocation")
     __properties: ClassVar[List[str]] = ["availabilityByWarehouseId", "availabilityForAllLocation"]
 
@@ -70,9 +69,6 @@ class PriceAndAvailabilityRequestAvailabilityByWarehouseInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of availability_by_warehouse_id
-        if self.availability_by_warehouse_id:
-            _dict['availabilityByWarehouseId'] = self.availability_by_warehouse_id.to_dict()
         return _dict
 
     @classmethod
@@ -85,7 +81,7 @@ class PriceAndAvailabilityRequestAvailabilityByWarehouseInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "availabilityByWarehouseId": PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseId.from_dict(obj["availabilityByWarehouseId"]) if obj.get("availabilityByWarehouseId") is not None else None,
+            "availabilityByWarehouseId": obj.get("availabilityByWarehouseId"),
             "availabilityForAllLocation": obj.get("availabilityForAllLocation")
         })
         return _obj

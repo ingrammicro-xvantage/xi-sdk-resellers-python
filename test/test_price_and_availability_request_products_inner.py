@@ -39,8 +39,8 @@ class TestPriceAndAvailabilityRequestProductsInner(unittest.TestCase):
                 vendor_part_number = '',
                 customer_part_number = '',
                 upc = '',
-                quantity_requested = None,
-                plan_id = None,
+                quantity_requested = '',
+                plan_id = '',
                 additional_attributes = [
                     xi.sdk.resellers.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
                         attribute_name = '', 

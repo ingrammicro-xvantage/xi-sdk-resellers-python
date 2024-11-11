@@ -40,7 +40,7 @@ class TestPriceAndAvailabilityRequest(unittest.TestCase):
                 special_bid_number = '',
                 availability_by_warehouse = [
                     xi.sdk.resellers.models.price_and_availability_request_availability_by_warehouse_inner.PriceAndAvailabilityRequest_availabilityByWarehouse_inner(
-                        availability_by_warehouse_id = null, 
+                        availability_by_warehouse_id = '', 
                         availability_for_all_location = True, )
                     ],
                 products = [
@@ -49,8 +49,8 @@ class TestPriceAndAvailabilityRequest(unittest.TestCase):
                         vendor_part_number = '', 
                         customer_part_number = '', 
                         upc = '', 
-                        quantity_requested = null, 
-                        plan_id = null, 
+                        quantity_requested = '', 
+                        plan_id = '', 
                         additional_attributes = [
                             xi.sdk.resellers.models.price_and_availability_request_products_inner_additional_attributes_inner.PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner(
                                 attribute_name = '', 

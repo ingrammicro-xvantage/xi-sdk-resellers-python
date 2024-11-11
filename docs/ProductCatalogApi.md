@@ -236,7 +236,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     category = 'Accessories' # str | The category of the product. Example: Displays. (optional)
     skip_authorisation = 'true' # str | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)
     group_name = 'Microsoft Defender for Endpoint P2 (NCE COM MTH)' # str | Name of the Product Group (optional)
-    plan_id = xi.sdk.resellers.GetResellerV6ProductsearchPlanIDParameter() # GetResellerV6ProductsearchPlanIDParameter | ID of the plan (optional)
+    plan_id = '471490' # str | ID of the plan (optional)
     show_group_info = true # bool | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)
 
     try:
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
  **category** | **str**| The category of the product. Example: Displays. | [optional] 
  **skip_authorisation** | **str**| This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional] 
  **group_name** | **str**| Name of the Product Group | [optional] 
- **plan_id** | [**GetResellerV6ProductsearchPlanIDParameter**](.md)| ID of the plan | [optional] 
+ **plan_id** | **str**| ID of the plan | [optional] 
  **show_group_info** | **bool**| In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. | [optional] 
 
 ### Return type
