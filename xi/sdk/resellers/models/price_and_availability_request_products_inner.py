@@ -33,7 +33,7 @@ class PriceAndAvailabilityRequestProductsInner(BaseModel):
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
     quantity_requested: Optional[StrictStr] = Field(default=None, description="Number of quantity of the Product.", alias="quantityRequested")
     plan_id: Optional[StrictStr] = Field(default=None, description="Id of the plan", alias="planID")
-    additional_attributes: Optional[List[PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
+    additional_attributes: Optional[List[Optional[PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner]]] = Field(default=None, alias="additionalAttributes")
     __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "customerPartNumber", "upc", "quantityRequested", "planID", "additionalAttributes"]
 
     model_config = ConfigDict(
@@ -111,6 +111,11 @@ class PriceAndAvailabilityRequestProductsInner(BaseModel):
         # and model_fields_set contains the field
         if self.plan_id is None and "plan_id" in self.model_fields_set:
             _dict['planID'] = None
+
+        # set to None if additional_attributes (nullable) is None
+        # and model_fields_set contains the field
+        if self.additional_attributes is None and "additional_attributes" in self.model_fields_set:
+            _dict['additionalAttributes'] = None
 
         return _dict
 

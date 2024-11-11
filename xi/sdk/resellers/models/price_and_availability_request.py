@@ -34,7 +34,7 @@ class PriceAndAvailabilityRequest(BaseModel):
     special_bid_number: Optional[StrictStr] = Field(default=None, description="Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.", alias="specialBidNumber")
     availability_by_warehouse: Optional[List[PriceAndAvailabilityRequestAvailabilityByWarehouseInner]] = Field(default=None, alias="availabilityByWarehouse")
     products: Optional[List[PriceAndAvailabilityRequestProductsInner]] = None
-    additional_attributes: Optional[List[PriceAndAvailabilityRequestAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
+    additional_attributes: Optional[List[Optional[PriceAndAvailabilityRequestAdditionalAttributesInner]]] = Field(default=None, alias="additionalAttributes")
     __properties: ClassVar[List[str]] = ["showAvailableDiscounts", "showReserveInventoryDetails", "specialBidNumber", "availabilityByWarehouse", "products", "additionalAttributes"]
 
     model_config = ConfigDict(
@@ -97,6 +97,21 @@ class PriceAndAvailabilityRequest(BaseModel):
                 if _item_additional_attributes:
                     _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
+        # set to None if special_bid_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.special_bid_number is None and "special_bid_number" in self.model_fields_set:
+            _dict['specialBidNumber'] = None
+
+        # set to None if availability_by_warehouse (nullable) is None
+        # and model_fields_set contains the field
+        if self.availability_by_warehouse is None and "availability_by_warehouse" in self.model_fields_set:
+            _dict['availabilityByWarehouse'] = None
+
+        # set to None if additional_attributes (nullable) is None
+        # and model_fields_set contains the field
+        if self.additional_attributes is None and "additional_attributes" in self.model_fields_set:
+            _dict['additionalAttributes'] = None
+
         return _dict
 
     @classmethod

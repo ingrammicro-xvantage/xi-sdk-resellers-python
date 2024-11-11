@@ -69,6 +69,16 @@ class PriceAndAvailabilityRequestAvailabilityByWarehouseInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if availability_by_warehouse_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.availability_by_warehouse_id is None and "availability_by_warehouse_id" in self.model_fields_set:
+            _dict['availabilityByWarehouseId'] = None
+
+        # set to None if availability_for_all_location (nullable) is None
+        # and model_fields_set contains the field
+        if self.availability_for_all_location is None and "availability_for_all_location" in self.model_fields_set:
+            _dict['availabilityForAllLocation'] = None
+
         return _dict
 
     @classmethod
