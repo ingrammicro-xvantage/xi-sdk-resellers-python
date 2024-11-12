@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_priceandavailability**
-> List[PriceAndAvailabilityResponseInner] post_priceandavailability(include_availability, include_pricing, im_customer_number, im_country_code, im_correlation_id, price_and_availability_request, include_product_attributes=include_product_attributes, im_sender_id=im_sender_id)
+> List[PriceAndAvailabilityResponseInner] post_priceandavailability(include_availability, include_pricing, im_customer_number, im_country_code, im_correlation_id, include_product_attributes=include_product_attributes, im_sender_id=im_sender_id, price_and_availability_request=price_and_availability_request)
 
 Price and Availability
 
@@ -338,13 +338,13 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
-    price_and_availability_request = {"products":[{"ingramPartNumber":"123512"}]} # PriceAndAvailabilityRequest | 
     include_product_attributes = True # bool | Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)
     im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
+    price_and_availability_request = {"products":[{"ingramPartNumber":"123512"}]} # PriceAndAvailabilityRequest |  (optional)
 
     try:
         # Price and Availability
-        api_response = api_instance.post_priceandavailability(include_availability, include_pricing, im_customer_number, im_country_code, im_correlation_id, price_and_availability_request, include_product_attributes=include_product_attributes, im_sender_id=im_sender_id)
+        api_response = api_instance.post_priceandavailability(include_availability, include_pricing, im_customer_number, im_country_code, im_correlation_id, include_product_attributes=include_product_attributes, im_sender_id=im_sender_id, price_and_availability_request=price_and_availability_request)
         print("The response of ProductCatalogApi->post_priceandavailability:\n")
         pprint(api_response)
     except Exception as e:
@@ -363,9 +363,9 @@ Name | Type | Description  | Notes
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
- **price_and_availability_request** | [**PriceAndAvailabilityRequest**](PriceAndAvailabilityRequest.md)|  | 
  **include_product_attributes** | **bool**| Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. | [optional] 
  **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
+ **price_and_availability_request** | [**PriceAndAvailabilityRequest**](PriceAndAvailabilityRequest.md)|  | [optional] 
 
 ### Return type
 

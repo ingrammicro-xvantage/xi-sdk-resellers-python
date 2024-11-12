@@ -1300,9 +1300,9 @@ class ProductCatalogApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        price_and_availability_request: PriceAndAvailabilityRequest,
         include_product_attributes: Annotated[Optional[StrictBool], Field(description="Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.")] = None,
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
+        price_and_availability_request: Optional[PriceAndAvailabilityRequest] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1330,12 +1330,12 @@ class ProductCatalogApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param price_and_availability_request: (required)
-        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param include_product_attributes: Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.
         :type include_product_attributes: bool
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
+        :param price_and_availability_request:
+        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1364,9 +1364,9 @@ class ProductCatalogApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            price_and_availability_request=price_and_availability_request,
             include_product_attributes=include_product_attributes,
             im_sender_id=im_sender_id,
+            price_and_availability_request=price_and_availability_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1399,9 +1399,9 @@ class ProductCatalogApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        price_and_availability_request: PriceAndAvailabilityRequest,
         include_product_attributes: Annotated[Optional[StrictBool], Field(description="Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.")] = None,
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
+        price_and_availability_request: Optional[PriceAndAvailabilityRequest] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1429,12 +1429,12 @@ class ProductCatalogApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param price_and_availability_request: (required)
-        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param include_product_attributes: Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.
         :type include_product_attributes: bool
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
+        :param price_and_availability_request:
+        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1463,9 +1463,9 @@ class ProductCatalogApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            price_and_availability_request=price_and_availability_request,
             include_product_attributes=include_product_attributes,
             im_sender_id=im_sender_id,
+            price_and_availability_request=price_and_availability_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1498,9 +1498,9 @@ class ProductCatalogApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        price_and_availability_request: PriceAndAvailabilityRequest,
         include_product_attributes: Annotated[Optional[StrictBool], Field(description="Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.")] = None,
         im_sender_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
+        price_and_availability_request: Optional[PriceAndAvailabilityRequest] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1528,12 +1528,12 @@ class ProductCatalogApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param price_and_availability_request: (required)
-        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param include_product_attributes: Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details.
         :type include_product_attributes: bool
         :param im_sender_id: Unique value used to identify the sender of the transaction. Example: MyCompany
         :type im_sender_id: str
+        :param price_and_availability_request:
+        :type price_and_availability_request: PriceAndAvailabilityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1562,9 +1562,9 @@ class ProductCatalogApi:
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
-            price_and_availability_request=price_and_availability_request,
             include_product_attributes=include_product_attributes,
             im_sender_id=im_sender_id,
+            price_and_availability_request=price_and_availability_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1592,9 +1592,9 @@ class ProductCatalogApi:
         im_customer_number,
         im_country_code,
         im_correlation_id,
-        price_and_availability_request,
         include_product_attributes,
         im_sender_id,
+        price_and_availability_request,
         _request_auth,
         _content_type,
         _headers,
