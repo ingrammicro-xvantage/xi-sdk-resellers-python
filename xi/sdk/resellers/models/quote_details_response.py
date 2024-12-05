@@ -150,6 +150,11 @@ class QuoteDetailsResponse(BaseModel):
         if self.is_partial_order_allowed is None and "is_partial_order_allowed" in self.model_fields_set:
             _dict['isPartialOrderAllowed'] = None
 
+        # set to None if extended_msrp_total (nullable) is None
+        # and model_fields_set contains the field
+        if self.extended_msrp_total is None and "extended_msrp_total" in self.model_fields_set:
+            _dict['extendedMsrpTotal'] = None
+
         # set to None if tax_total (nullable) is None
         # and model_fields_set contains the field
         if self.tax_total is None and "tax_total" in self.model_fields_set:
