@@ -136,6 +136,21 @@ class PriceAndAvailabilityResponseInner(BaseModel):
                 if _item_subscription_price:
                     _items.append(_item_subscription_price.to_dict())
             _dict['subscriptionPrice'] = _items
+        # set to None if product_status_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_status_code is None and "product_status_code" in self.model_fields_set:
+            _dict['productStatusCode'] = None
+
+        # set to None if product_status_message (nullable) is None
+        # and model_fields_set contains the field
+        if self.product_status_message is None and "product_status_message" in self.model_fields_set:
+            _dict['productStatusMessage'] = None
+
+        # set to None if ingram_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.ingram_part_number is None and "ingram_part_number" in self.model_fields_set:
+            _dict['ingramPartNumber'] = None
+
         # set to None if vendor_part_number (nullable) is None
         # and model_fields_set contains the field
         if self.vendor_part_number is None and "vendor_part_number" in self.model_fields_set:
@@ -150,6 +165,11 @@ class PriceAndAvailabilityResponseInner(BaseModel):
         # and model_fields_set contains the field
         if self.customer_part_number is None and "customer_part_number" in self.model_fields_set:
             _dict['customerPartNumber'] = None
+
+        # set to None if upc (nullable) is None
+        # and model_fields_set contains the field
+        if self.upc is None and "upc" in self.model_fields_set:
+            _dict['upc'] = None
 
         # set to None if part_number_type (nullable) is None
         # and model_fields_set contains the field

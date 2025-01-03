@@ -69,6 +69,16 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodI
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if subscription_period_unit (nullable) is None
+        # and model_fields_set contains the field
+        if self.subscription_period_unit is None and "subscription_period_unit" in self.model_fields_set:
+            _dict['subscriptionPeriodUnit'] = None
+
+        # set to None if subscription_period (nullable) is None
+        # and model_fields_set contains the field
+        if self.subscription_period is None and "subscription_period" in self.model_fields_set:
+            _dict['subscriptionPeriod'] = None
+
         return _dict
 
     @classmethod

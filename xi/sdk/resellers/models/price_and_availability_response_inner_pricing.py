@@ -73,6 +73,31 @@ class PriceAndAvailabilityResponseInnerPricing(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if retail_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.retail_price is None and "retail_price" in self.model_fields_set:
+            _dict['retailPrice'] = None
+
+        # set to None if map_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.map_price is None and "map_price" in self.model_fields_set:
+            _dict['mapPrice'] = None
+
+        # set to None if customer_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.customer_price is None and "customer_price" in self.model_fields_set:
+            _dict['customerPrice'] = None
+
+        # set to None if special_bid_pricing_available (nullable) is None
+        # and model_fields_set contains the field
+        if self.special_bid_pricing_available is None and "special_bid_pricing_available" in self.model_fields_set:
+            _dict['specialBidPricingAvailable'] = None
+
+        # set to None if web_discounts_available (nullable) is None
+        # and model_fields_set contains the field
+        if self.web_discounts_available is None and "web_discounts_available" in self.model_fields_set:
+            _dict['webDiscountsAvailable'] = None
+
         return _dict
 
     @classmethod

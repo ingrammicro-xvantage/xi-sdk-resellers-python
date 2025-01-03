@@ -69,6 +69,16 @@ class PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerB
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if quantity (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity is None and "quantity" in self.model_fields_set:
+            _dict['quantity'] = None
+
+        # set to None if eta_date (nullable) is None
+        # and model_fields_set contains the field
+        if self.eta_date is None and "eta_date" in self.model_fields_set:
+            _dict['etaDate'] = None
+
         return _dict
 
     @classmethod

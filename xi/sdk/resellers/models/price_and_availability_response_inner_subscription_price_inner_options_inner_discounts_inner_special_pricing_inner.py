@@ -73,6 +73,36 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscoun
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if currency_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.currency_code is None and "currency_code" in self.model_fields_set:
+            _dict['currencyCode'] = None
+
+        # set to None if discount (nullable) is None
+        # and model_fields_set contains the field
+        if self.discount is None and "discount" in self.model_fields_set:
+            _dict['discount'] = None
+
+        # set to None if discount_type (nullable) is None
+        # and model_fields_set contains the field
+        if self.discount_type is None and "discount_type" in self.model_fields_set:
+            _dict['discountType'] = None
+
+        # set to None if discount_qty_limit (nullable) is None
+        # and model_fields_set contains the field
+        if self.discount_qty_limit is None and "discount_qty_limit" in self.model_fields_set:
+            _dict['discountQtyLimit'] = None
+
+        # set to None if discount_expiry_date (nullable) is None
+        # and model_fields_set contains the field
+        if self.discount_expiry_date is None and "discount_expiry_date" in self.model_fields_set:
+            _dict['discountExpiryDate'] = None
+
+        # set to None if vendor_program_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_program_name is None and "vendor_program_name" in self.model_fields_set:
+            _dict['vendorProgramName'] = None
+
         return _dict
 
     @classmethod

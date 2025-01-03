@@ -71,6 +71,26 @@ class PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if quantity_reserved (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_reserved is None and "quantity_reserved" in self.model_fields_set:
+            _dict['quantityReserved'] = None
+
+        # set to None if quantity_available (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_available is None and "quantity_available" in self.model_fields_set:
+            _dict['quantityAvailable'] = None
+
+        # set to None if effectivedate (nullable) is None
+        # and model_fields_set contains the field
+        if self.effectivedate is None and "effectivedate" in self.model_fields_set:
+            _dict['effectivedate'] = None
+
+        # set to None if expirydate (nullable) is None
+        # and model_fields_set contains the field
+        if self.expirydate is None and "expirydate" in self.model_fields_set:
+            _dict['expirydate'] = None
+
         return _dict
 
     @classmethod

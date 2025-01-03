@@ -102,6 +102,46 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(BaseMo
                 if _item_fees:
                     _items.append(_item_fees.to_dict())
             _dict['fees'] = _items
+        # set to None if resource_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.resource_id is None and "resource_id" in self.model_fields_set:
+            _dict['resourceId'] = None
+
+        # set to None if resource_uid (nullable) is None
+        # and model_fields_set contains the field
+        if self.resource_uid is None and "resource_uid" in self.model_fields_set:
+            _dict['resourceUId'] = None
+
+        # set to None if resource_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.resource_name is None and "resource_name" in self.model_fields_set:
+            _dict['resourceName'] = None
+
+        # set to None if vendor_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_part_number is None and "vendor_part_number" in self.model_fields_set:
+            _dict['vendorPartNumber'] = None
+
+        # set to None if min_units (nullable) is None
+        # and model_fields_set contains the field
+        if self.min_units is None and "min_units" in self.model_fields_set:
+            _dict['minUnits'] = None
+
+        # set to None if max_units (nullable) is None
+        # and model_fields_set contains the field
+        if self.max_units is None and "max_units" in self.model_fields_set:
+            _dict['maxUnits'] = None
+
+        # set to None if recurringpricemodel (nullable) is None
+        # and model_fields_set contains the field
+        if self.recurringpricemodel is None and "recurringpricemodel" in self.model_fields_set:
+            _dict['recurringpricemodel'] = None
+
+        # set to None if unit_of_measure (nullable) is None
+        # and model_fields_set contains the field
+        if self.unit_of_measure is None and "unit_of_measure" in self.model_fields_set:
+            _dict['unitOfMeasure'] = None
+
         return _dict
 
     @classmethod

@@ -69,6 +69,16 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner(BaseMod
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if group_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.group_name is None and "group_name" in self.model_fields_set:
+            _dict['groupName'] = None
+
+        # set to None if group_description (nullable) is None
+        # and model_fields_set contains the field
+        if self.group_description is None and "group_description" in self.model_fields_set:
+            _dict['groupDescription'] = None
+
         return _dict
 
     @classmethod

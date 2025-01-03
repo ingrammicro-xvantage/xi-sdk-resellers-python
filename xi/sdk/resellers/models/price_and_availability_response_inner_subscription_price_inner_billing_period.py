@@ -69,6 +69,16 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(BaseM
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if billing_period_unit (nullable) is None
+        # and model_fields_set contains the field
+        if self.billing_period_unit is None and "billing_period_unit" in self.model_fields_set:
+            _dict['billingPeriodUnit'] = None
+
+        # set to None if billing_period (nullable) is None
+        # and model_fields_set contains the field
+        if self.billing_period is None and "billing_period" in self.model_fields_set:
+            _dict['billingPeriod'] = None
+
         return _dict
 
     @classmethod

@@ -71,6 +71,26 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInn
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if price (nullable) is None
+        # and model_fields_set contains the field
+        if self.price is None and "price" in self.model_fields_set:
+            _dict['price'] = None
+
+        # set to None if type (nullable) is None
+        # and model_fields_set contains the field
+        if self.type is None and "type" in self.model_fields_set:
+            _dict['type'] = None
+
+        # set to None if msrp (nullable) is None
+        # and model_fields_set contains the field
+        if self.msrp is None and "msrp" in self.model_fields_set:
+            _dict['msrp'] = None
+
+        # set to None if code (nullable) is None
+        # and model_fields_set contains the field
+        if self.code is None and "code" in self.model_fields_set:
+            _dict['code'] = None
+
         return _dict
 
     @classmethod

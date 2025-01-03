@@ -72,6 +72,31 @@ class PriceAndAvailabilityResponseInnerServiceFeesInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if condition_type (nullable) is None
+        # and model_fields_set contains the field
+        if self.condition_type is None and "condition_type" in self.model_fields_set:
+            _dict['conditionType'] = None
+
+        # set to None if description (nullable) is None
+        # and model_fields_set contains the field
+        if self.description is None and "description" in self.model_fields_set:
+            _dict['description'] = None
+
+        # set to None if amount (nullable) is None
+        # and model_fields_set contains the field
+        if self.amount is None and "amount" in self.model_fields_set:
+            _dict['amount'] = None
+
+        # set to None if end_date (nullable) is None
+        # and model_fields_set contains the field
+        if self.end_date is None and "end_date" in self.model_fields_set:
+            _dict['endDate'] = None
+
+        # set to None if currency_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.currency_code is None and "currency_code" in self.model_fields_set:
+            _dict['currencyCode'] = None
+
         return _dict
 
     @classmethod

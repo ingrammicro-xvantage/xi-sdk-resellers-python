@@ -72,6 +72,31 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscoun
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if currency_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.currency_code is None and "currency_code" in self.model_fields_set:
+            _dict['currencyCode'] = None
+
+        # set to None if quantity (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity is None and "quantity" in self.model_fields_set:
+            _dict['quantity'] = None
+
+        # set to None if msrp (nullable) is None
+        # and model_fields_set contains the field
+        if self.msrp is None and "msrp" in self.model_fields_set:
+            _dict['msrp'] = None
+
+        # set to None if unit_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.unit_price is None and "unit_price" in self.model_fields_set:
+            _dict['unitPrice'] = None
+
+        # set to None if margin (nullable) is None
+        # and model_fields_set contains the field
+        if self.margin is None and "margin" in self.model_fields_set:
+            _dict['margin'] = None
+
         return _dict
 
     @classmethod

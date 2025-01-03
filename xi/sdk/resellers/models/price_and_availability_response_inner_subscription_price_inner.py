@@ -104,6 +104,31 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInner(BaseModel):
                 if _item_options:
                     _items.append(_item_options.to_dict())
             _dict['options'] = _items
+        # set to None if index (nullable) is None
+        # and model_fields_set contains the field
+        if self.index is None and "index" in self.model_fields_set:
+            _dict['index'] = None
+
+        # set to None if plan_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.plan_id is None and "plan_id" in self.model_fields_set:
+            _dict['planId'] = None
+
+        # set to None if plan_uid (nullable) is None
+        # and model_fields_set contains the field
+        if self.plan_uid is None and "plan_uid" in self.model_fields_set:
+            _dict['planUId'] = None
+
+        # set to None if plan_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.plan_name is None and "plan_name" in self.model_fields_set:
+            _dict['planName'] = None
+
+        # set to None if plan_description (nullable) is None
+        # and model_fields_set contains the field
+        if self.plan_description is None and "plan_description" in self.model_fields_set:
+            _dict['planDescription'] = None
+
         return _dict
 
     @classmethod

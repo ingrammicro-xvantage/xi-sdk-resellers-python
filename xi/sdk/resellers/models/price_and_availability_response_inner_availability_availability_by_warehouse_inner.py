@@ -82,6 +82,36 @@ class PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(
                 if _item_back_order_info:
                     _items.append(_item_back_order_info.to_dict())
             _dict['backOrderInfo'] = _items
+        # set to None if location (nullable) is None
+        # and model_fields_set contains the field
+        if self.location is None and "location" in self.model_fields_set:
+            _dict['location'] = None
+
+        # set to None if warehouse_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.warehouse_id is None and "warehouse_id" in self.model_fields_set:
+            _dict['warehouseId'] = None
+
+        # set to None if quantity_available (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_available is None and "quantity_available" in self.model_fields_set:
+            _dict['quantityAvailable'] = None
+
+        # set to None if quantity_backordered (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_backordered is None and "quantity_backordered" in self.model_fields_set:
+            _dict['quantityBackordered'] = None
+
+        # set to None if quantity_backordered_eta (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_backordered_eta is None and "quantity_backordered_eta" in self.model_fields_set:
+            _dict['quantityBackorderedEta'] = None
+
+        # set to None if quantity_on_order (nullable) is None
+        # and model_fields_set contains the field
+        if self.quantity_on_order is None and "quantity_on_order" in self.model_fields_set:
+            _dict['quantityOnOrder'] = None
+
         return _dict
 
     @classmethod
