@@ -97,6 +97,16 @@ class PriceAndAvailabilityRequest(BaseModel):
                 if _item_additional_attributes:
                     _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
+        # set to None if show_available_discounts (nullable) is None
+        # and model_fields_set contains the field
+        if self.show_available_discounts is None and "show_available_discounts" in self.model_fields_set:
+            _dict['showAvailableDiscounts'] = None
+
+        # set to None if show_reserve_inventory_details (nullable) is None
+        # and model_fields_set contains the field
+        if self.show_reserve_inventory_details is None and "show_reserve_inventory_details" in self.model_fields_set:
+            _dict['showReserveInventoryDetails'] = None
+
         # set to None if special_bid_number (nullable) is None
         # and model_fields_set contains the field
         if self.special_bid_number is None and "special_bid_number" in self.model_fields_set:
