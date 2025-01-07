@@ -69,6 +69,16 @@ class OrderCreateV7RequestVmfAdditionalAttributesInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if attribute_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.attribute_name is None and "attribute_name" in self.model_fields_set:
+            _dict['attributeName'] = None
+
+        # set to None if attribute_value (nullable) is None
+        # and model_fields_set contains the field
+        if self.attribute_value is None and "attribute_value" in self.model_fields_set:
+            _dict['attributeValue'] = None
+
         return _dict
 
     @classmethod

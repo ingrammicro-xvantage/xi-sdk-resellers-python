@@ -80,6 +80,66 @@ class OrderCreateV7RequestShipToInfo(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if address_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.address_id is None and "address_id" in self.model_fields_set:
+            _dict['addressId'] = None
+
+        # set to None if contact (nullable) is None
+        # and model_fields_set contains the field
+        if self.contact is None and "contact" in self.model_fields_set:
+            _dict['contact'] = None
+
+        # set to None if company_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.company_name is None and "company_name" in self.model_fields_set:
+            _dict['companyName'] = None
+
+        # set to None if address_line1 (nullable) is None
+        # and model_fields_set contains the field
+        if self.address_line1 is None and "address_line1" in self.model_fields_set:
+            _dict['addressLine1'] = None
+
+        # set to None if address_line2 (nullable) is None
+        # and model_fields_set contains the field
+        if self.address_line2 is None and "address_line2" in self.model_fields_set:
+            _dict['addressLine2'] = None
+
+        # set to None if city (nullable) is None
+        # and model_fields_set contains the field
+        if self.city is None and "city" in self.model_fields_set:
+            _dict['city'] = None
+
+        # set to None if state (nullable) is None
+        # and model_fields_set contains the field
+        if self.state is None and "state" in self.model_fields_set:
+            _dict['state'] = None
+
+        # set to None if postal_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.postal_code is None and "postal_code" in self.model_fields_set:
+            _dict['postalCode'] = None
+
+        # set to None if country_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.country_code is None and "country_code" in self.model_fields_set:
+            _dict['countryCode'] = None
+
+        # set to None if email (nullable) is None
+        # and model_fields_set contains the field
+        if self.email is None and "email" in self.model_fields_set:
+            _dict['email'] = None
+
+        # set to None if shipping_notes (nullable) is None
+        # and model_fields_set contains the field
+        if self.shipping_notes is None and "shipping_notes" in self.model_fields_set:
+            _dict['shippingNotes'] = None
+
+        # set to None if phone_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.phone_number is None and "phone_number" in self.model_fields_set:
+            _dict['phoneNumber'] = None
+
         return _dict
 
     @classmethod

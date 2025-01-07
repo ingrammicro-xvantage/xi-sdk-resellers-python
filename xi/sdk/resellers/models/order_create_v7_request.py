@@ -46,8 +46,8 @@ class OrderCreateV7Request(BaseModel):
     end_user_info: Optional[OrderCreateV7RequestEndUserInfo] = Field(default=None, alias="endUserInfo")
     ship_to_info: Optional[OrderCreateV7RequestShipToInfo] = Field(default=None, alias="shipToInfo")
     shipment_details: Optional[OrderCreateV7RequestShipmentDetails] = Field(default=None, alias="shipmentDetails")
-    additional_attributes: Optional[List[OrderCreateV7RequestAdditionalAttributesInner]] = Field(default=None, description="Shipment-level additional attributes.", alias="additionalAttributes")
-    vmf_additional_attributes: Optional[List[OrderCreateV7RequestVmfAdditionalAttributesInner]] = Field(default=None, description="The object containing the list of fields required at a header level by the vendor.", alias="vmfAdditionalAttributes")
+    additional_attributes: Optional[List[Optional[OrderCreateV7RequestAdditionalAttributesInner]]] = Field(default=None, description="Shipment-level additional attributes.", alias="additionalAttributes")
+    vmf_additional_attributes: Optional[List[Optional[OrderCreateV7RequestVmfAdditionalAttributesInner]]] = Field(default=None, description="The object containing the list of fields required at a header level by the vendor.", alias="vmfAdditionalAttributes")
     lines: Optional[List[OrderCreateV7RequestLinesInner]] = None
     __properties: ClassVar[List[str]] = ["quoteNumber", "customerOrderNumber", "endCustomerOrderNumber", "notes", "billToAddressId", "specialBidNumber", "acceptBackOrder", "vendAuthNumber", "resellerInfo", "endUserInfo", "shipToInfo", "shipmentDetails", "additionalAttributes", "vmfAdditionalAttributes", "lines"]
 
@@ -123,10 +123,55 @@ class OrderCreateV7Request(BaseModel):
                 if _item_lines:
                     _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
+        # set to None if quote_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.quote_number is None and "quote_number" in self.model_fields_set:
+            _dict['quoteNumber'] = None
+
         # set to None if end_customer_order_number (nullable) is None
         # and model_fields_set contains the field
         if self.end_customer_order_number is None and "end_customer_order_number" in self.model_fields_set:
             _dict['endCustomerOrderNumber'] = None
+
+        # set to None if special_bid_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.special_bid_number is None and "special_bid_number" in self.model_fields_set:
+            _dict['specialBidNumber'] = None
+
+        # set to None if accept_back_order (nullable) is None
+        # and model_fields_set contains the field
+        if self.accept_back_order is None and "accept_back_order" in self.model_fields_set:
+            _dict['acceptBackOrder'] = None
+
+        # set to None if vend_auth_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vend_auth_number is None and "vend_auth_number" in self.model_fields_set:
+            _dict['vendAuthNumber'] = None
+
+        # set to None if reseller_info (nullable) is None
+        # and model_fields_set contains the field
+        if self.reseller_info is None and "reseller_info" in self.model_fields_set:
+            _dict['resellerInfo'] = None
+
+        # set to None if ship_to_info (nullable) is None
+        # and model_fields_set contains the field
+        if self.ship_to_info is None and "ship_to_info" in self.model_fields_set:
+            _dict['shipToInfo'] = None
+
+        # set to None if shipment_details (nullable) is None
+        # and model_fields_set contains the field
+        if self.shipment_details is None and "shipment_details" in self.model_fields_set:
+            _dict['shipmentDetails'] = None
+
+        # set to None if additional_attributes (nullable) is None
+        # and model_fields_set contains the field
+        if self.additional_attributes is None and "additional_attributes" in self.model_fields_set:
+            _dict['additionalAttributes'] = None
+
+        # set to None if vmf_additional_attributes (nullable) is None
+        # and model_fields_set contains the field
+        if self.vmf_additional_attributes is None and "vmf_additional_attributes" in self.model_fields_set:
+            _dict['vmfAdditionalAttributes'] = None
 
         return _dict
 

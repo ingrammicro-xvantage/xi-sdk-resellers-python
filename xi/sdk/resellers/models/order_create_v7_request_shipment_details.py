@@ -74,6 +74,36 @@ class OrderCreateV7RequestShipmentDetails(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if carrier_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.carrier_code is None and "carrier_code" in self.model_fields_set:
+            _dict['carrierCode'] = None
+
+        # set to None if requested_delivery_date (nullable) is None
+        # and model_fields_set contains the field
+        if self.requested_delivery_date is None and "requested_delivery_date" in self.model_fields_set:
+            _dict['requestedDeliveryDate'] = None
+
+        # set to None if ship_complete (nullable) is None
+        # and model_fields_set contains the field
+        if self.ship_complete is None and "ship_complete" in self.model_fields_set:
+            _dict['shipComplete'] = None
+
+        # set to None if shipping_instructions (nullable) is None
+        # and model_fields_set contains the field
+        if self.shipping_instructions is None and "shipping_instructions" in self.model_fields_set:
+            _dict['shippingInstructions'] = None
+
+        # set to None if freight_account_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.freight_account_number is None and "freight_account_number" in self.model_fields_set:
+            _dict['freightAccountNumber'] = None
+
+        # set to None if signature_required (nullable) is None
+        # and model_fields_set contains the field
+        if self.signature_required is None and "signature_required" in self.model_fields_set:
+            _dict['signatureRequired'] = None
+
         return _dict
 
     @classmethod

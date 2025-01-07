@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **state** | **str** | The reseller&#39;s state. | [optional] 
 **postal_code** | **str** | The reseller&#39;s zip or postal code. | [optional] 
 **country_code** | **str** | The reseller&#39;s two-character ISO country code. | [optional] 
-**phone_number** | **int** | The reseller&#39;s phone number. | [optional] 
+**phone_number** | **str** | The reseller&#39;s phone number. | [optional] 
 **email** | **str** | The reseller&#39;s email address. | [optional] 
 
 ## Example

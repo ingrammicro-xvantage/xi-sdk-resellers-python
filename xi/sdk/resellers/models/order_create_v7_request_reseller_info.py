@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -36,7 +36,7 @@ class OrderCreateV7RequestResellerInfo(BaseModel):
     state: Optional[StrictStr] = Field(default=None, description="The reseller's state.")
     postal_code: Optional[Annotated[str, Field(strict=True, max_length=10)]] = Field(default=None, description="The reseller's zip or postal code.", alias="postalCode")
     country_code: Optional[Annotated[str, Field(strict=True, max_length=10)]] = Field(default=None, description="The reseller's two-character ISO country code.", alias="countryCode")
-    phone_number: Optional[StrictInt] = Field(default=None, description="The reseller's phone number.", alias="phoneNumber")
+    phone_number: Optional[StrictStr] = Field(default=None, description="The reseller's phone number.", alias="phoneNumber")
     email: Optional[StrictStr] = Field(default=None, description="The reseller's email address.")
     __properties: ClassVar[List[str]] = ["resellerId", "companyName", "contact", "addressLine1", "addressLine2", "city", "state", "postalCode", "countryCode", "phoneNumber", "email"]
 
@@ -79,6 +79,61 @@ class OrderCreateV7RequestResellerInfo(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if reseller_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.reseller_id is None and "reseller_id" in self.model_fields_set:
+            _dict['resellerId'] = None
+
+        # set to None if company_name (nullable) is None
+        # and model_fields_set contains the field
+        if self.company_name is None and "company_name" in self.model_fields_set:
+            _dict['companyName'] = None
+
+        # set to None if contact (nullable) is None
+        # and model_fields_set contains the field
+        if self.contact is None and "contact" in self.model_fields_set:
+            _dict['contact'] = None
+
+        # set to None if address_line1 (nullable) is None
+        # and model_fields_set contains the field
+        if self.address_line1 is None and "address_line1" in self.model_fields_set:
+            _dict['addressLine1'] = None
+
+        # set to None if address_line2 (nullable) is None
+        # and model_fields_set contains the field
+        if self.address_line2 is None and "address_line2" in self.model_fields_set:
+            _dict['addressLine2'] = None
+
+        # set to None if city (nullable) is None
+        # and model_fields_set contains the field
+        if self.city is None and "city" in self.model_fields_set:
+            _dict['city'] = None
+
+        # set to None if state (nullable) is None
+        # and model_fields_set contains the field
+        if self.state is None and "state" in self.model_fields_set:
+            _dict['state'] = None
+
+        # set to None if postal_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.postal_code is None and "postal_code" in self.model_fields_set:
+            _dict['postalCode'] = None
+
+        # set to None if country_code (nullable) is None
+        # and model_fields_set contains the field
+        if self.country_code is None and "country_code" in self.model_fields_set:
+            _dict['countryCode'] = None
+
+        # set to None if phone_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.phone_number is None and "phone_number" in self.model_fields_set:
+            _dict['phoneNumber'] = None
+
+        # set to None if email (nullable) is None
+        # and model_fields_set contains the field
+        if self.email is None and "email" in self.model_fields_set:
+            _dict['email'] = None
+
         return _dict
 
     @classmethod

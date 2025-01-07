@@ -44,7 +44,7 @@ class TestOrderCreateV7RequestEndUserInfo(unittest.TestCase):
                 state = '',
                 postal_code = '',
                 country_code = '',
-                phone_number = 56,
+                phone_number = '',
                 email = ''
             )
         else:

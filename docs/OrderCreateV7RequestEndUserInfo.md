@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **state** | **str** | The end user/customer&#39;s state. Required for Impulse countries but optional for EMEA countries. | [optional] 
 **postal_code** | **str** | The end user/customer&#39;s zip or postal code. Required for Impulse countries. | [optional] 
 **country_code** | **str** | The end user/customer&#39;s two-character ISO country code. | [optional] 
-**phone_number** | **int** | The end user/customer&#39;s phone number. | [optional] 
+**phone_number** | **str** | The end user/customer&#39;s phone number. | [optional] 
 **email** | **str** | The end user/customer&#39;s email. | [optional] 
 
 ## Example

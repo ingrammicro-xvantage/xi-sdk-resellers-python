@@ -103,6 +103,41 @@ class OrderCreateV7RequestLinesInner(BaseModel):
                 if _item_vmf_additional_attributes_lines:
                     _items.append(_item_vmf_additional_attributes_lines.to_dict())
             _dict['vmfAdditionalAttributesLines'] = _items
+        # set to None if ingram_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.ingram_part_number is None and "ingram_part_number" in self.model_fields_set:
+            _dict['ingramPartNumber'] = None
+
+        # set to None if vendor_part_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.vendor_part_number is None and "vendor_part_number" in self.model_fields_set:
+            _dict['vendorPartNumber'] = None
+
+        # set to None if unit_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.unit_price is None and "unit_price" in self.model_fields_set:
+            _dict['unitPrice'] = None
+
+        # set to None if special_bid_number (nullable) is None
+        # and model_fields_set contains the field
+        if self.special_bid_number is None and "special_bid_number" in self.model_fields_set:
+            _dict['specialBidNumber'] = None
+
+        # set to None if end_user_price (nullable) is None
+        # and model_fields_set contains the field
+        if self.end_user_price is None and "end_user_price" in self.model_fields_set:
+            _dict['endUserPrice'] = None
+
+        # set to None if notes (nullable) is None
+        # and model_fields_set contains the field
+        if self.notes is None and "notes" in self.model_fields_set:
+            _dict['notes'] = None
+
+        # set to None if end_user_info (nullable) is None
+        # and model_fields_set contains the field
+        if self.end_user_info is None and "end_user_info" in self.model_fields_set:
+            _dict['endUserInfo'] = None
+
         return _dict
 
     @classmethod

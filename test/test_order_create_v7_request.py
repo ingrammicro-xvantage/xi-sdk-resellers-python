@@ -53,7 +53,7 @@ class TestOrderCreateV7Request(unittest.TestCase):
                     state = '', 
                     postal_code = '', 
                     country_code = '', 
-                    phone_number = 56, 
+                    phone_number = '', 
                     email = '', ),
                 end_user_info = xi.sdk.resellers.models.order_create_v7_request_end_user_info.order_create_v7_request_endUserInfo(
                     end_user_id = '', 
@@ -65,7 +65,7 @@ class TestOrderCreateV7Request(unittest.TestCase):
                     state = '', 
                     postal_code = '', 
                     country_code = '', 
-                    phone_number = 56, 
+                    phone_number = '', 
                     email = '', ),
                 ship_to_info = xi.sdk.resellers.models.order_create_v7_request_ship_to_info.order_create_v7_request_shipToInfo(
                     address_id = '', 
