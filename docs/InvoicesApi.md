@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_invoicedetails_v6_1**
-> InvoiceDetailsv61Response get_invoicedetails_v6_1(invoice_number, im_customer_number, im_country_code, im_correlation_id, im_application_id, customer_type=customer_type, include_serial_numbers=include_serial_numbers)
+> InvoiceDetailsv61Response get_invoicedetails_v6_1(invoice_number, im_customer_number, im_country_code, im_correlation_id, im_application_id=im_application_id, customer_type=customer_type, include_serial_numbers=include_serial_numbers)
 
 Get Invoice Details v6.1
 
@@ -46,13 +46,13 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
-    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany.
+    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)
     customer_type = 'invoice' # str | it should be invoice or order (optional)
     include_serial_numbers = false # bool | if serial in the response send as true or else false (optional)
 
     try:
         # Get Invoice Details v6.1
-        api_response = api_instance.get_invoicedetails_v6_1(invoice_number, im_customer_number, im_country_code, im_correlation_id, im_application_id, customer_type=customer_type, include_serial_numbers=include_serial_numbers)
+        api_response = api_instance.get_invoicedetails_v6_1(invoice_number, im_customer_number, im_country_code, im_correlation_id, im_application_id=im_application_id, customer_type=customer_type, include_serial_numbers=include_serial_numbers)
         print("The response of InvoicesApi->get_invoicedetails_v6_1:\n")
         pprint(api_response)
     except Exception as e:
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
- **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany. | 
+ **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany. | [optional] 
  **customer_type** | **str**| it should be invoice or order | [optional] 
  **include_serial_numbers** | **bool**| if serial in the response send as true or else false | [optional] 
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_resellers_v6_invoicesearch**
-> InvoiceSearchResponse get_resellers_v6_invoicesearch(im_application_id, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
+> InvoiceSearchResponse get_resellers_v6_invoicesearch(im_customer_number, im_country_code, im_correlation_id, im_application_id=im_application_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
 
 Search your invoice
 
@@ -131,10 +131,10 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with xi.sdk.resellers.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = xi.sdk.resellers.InvoicesApi(api_client)
-    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
+    im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
     payment_terms_net_date = '2021-04-23' # str | Search by payment terms net date(yyyy-MM-dd). (optional)
     invoice_date = '2021-04-23' # str | Search by invoice date(yyyy-MM-dd). (optional)
     invoice_due_date = '2021-04-23' # str | Search by invoice date from(yyyy-MM-dd). (optional)
@@ -161,7 +161,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
     try:
         # Search your invoice
-        api_response = api_instance.get_resellers_v6_invoicesearch(im_application_id, im_customer_number, im_country_code, im_correlation_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
+        api_response = api_instance.get_resellers_v6_invoicesearch(im_customer_number, im_country_code, im_correlation_id, im_application_id=im_application_id, payment_terms_net_date=payment_terms_net_date, invoice_date=invoice_date, invoice_due_date=invoice_due_date, order_date=order_date, order_from_date=order_from_date, order_to_date=order_to_date, order_number=order_number, delivery_number=delivery_number, invoice_number=invoice_number, invoice_status=invoice_status, invoice_type=invoice_type, customer_order_number=customer_order_number, end_customer_order_number=end_customer_order_number, special_bid_number=special_bid_number, invoice_from_due_date=invoice_from_due_date, invoice_to_due_date=invoice_to_due_date, invoice_from_date=invoice_from_date, invoice_to_date=invoice_to_date, page_size=page_size, page_number=page_number, orderby=orderby, direction=direction, serial_number=serial_number)
         print("The response of InvoicesApi->get_resellers_v6_invoicesearch:\n")
         pprint(api_response)
     except Exception as e:
@@ -175,10 +175,10 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
+ **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
  **payment_terms_net_date** | **str**| Search by payment terms net date(yyyy-MM-dd). | [optional] 
  **invoice_date** | **str**| Search by invoice date(yyyy-MM-dd). | [optional] 
  **invoice_due_date** | **str**| Search by invoice date from(yyyy-MM-dd). | [optional] 

@@ -47,7 +47,7 @@ class InvoicesApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany.")] = None,
         customer_type: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="it should be invoice or order")] = None,
         include_serial_numbers: Annotated[Optional[StrictBool], Field(description="if serial in the response send as true or else false")] = None,
         _request_timeout: Union[
@@ -75,7 +75,7 @@ class InvoicesApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany. (required)
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany.
         :type im_application_id: str
         :param customer_type: it should be invoice or order
         :type customer_type: str
@@ -140,7 +140,7 @@ class InvoicesApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany.")] = None,
         customer_type: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="it should be invoice or order")] = None,
         include_serial_numbers: Annotated[Optional[StrictBool], Field(description="if serial in the response send as true or else false")] = None,
         _request_timeout: Union[
@@ -168,7 +168,7 @@ class InvoicesApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany. (required)
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany.
         :type im_application_id: str
         :param customer_type: it should be invoice or order
         :type customer_type: str
@@ -233,7 +233,7 @@ class InvoicesApi:
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany.")] = None,
         customer_type: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="it should be invoice or order")] = None,
         include_serial_numbers: Annotated[Optional[StrictBool], Field(description="if serial in the response send as true or else false")] = None,
         _request_timeout: Union[
@@ -261,7 +261,7 @@ class InvoicesApi:
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany. (required)
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany.
         :type im_application_id: str
         :param customer_type: it should be invoice or order
         :type customer_type: str
@@ -404,10 +404,10 @@ class InvoicesApi:
     @validate_call
     def get_resellers_v6_invoicesearch(
         self,
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         payment_terms_net_date: Annotated[Optional[StrictStr], Field(description="Search by payment terms net date(yyyy-MM-dd).")] = None,
         invoice_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date(yyyy-MM-dd).")] = None,
         invoice_due_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date from(yyyy-MM-dd).")] = None,
@@ -448,14 +448,14 @@ class InvoicesApi:
 
         Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
 
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
-        :type im_application_id: str
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany
+        :type im_application_id: str
         :param payment_terms_net_date: Search by payment terms net date(yyyy-MM-dd).
         :type payment_terms_net_date: str
         :param invoice_date: Search by invoice date(yyyy-MM-dd).
@@ -525,10 +525,10 @@ class InvoicesApi:
         """ # noqa: E501
 
         _param = self._get_resellers_v6_invoicesearch_serialize(
-            im_application_id=im_application_id,
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
+            im_application_id=im_application_id,
             payment_terms_net_date=payment_terms_net_date,
             invoice_date=invoice_date,
             invoice_due_date=invoice_due_date,
@@ -577,10 +577,10 @@ class InvoicesApi:
     @validate_call
     def get_resellers_v6_invoicesearch_with_http_info(
         self,
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         payment_terms_net_date: Annotated[Optional[StrictStr], Field(description="Search by payment terms net date(yyyy-MM-dd).")] = None,
         invoice_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date(yyyy-MM-dd).")] = None,
         invoice_due_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date from(yyyy-MM-dd).")] = None,
@@ -621,14 +621,14 @@ class InvoicesApi:
 
         Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
 
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
-        :type im_application_id: str
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany
+        :type im_application_id: str
         :param payment_terms_net_date: Search by payment terms net date(yyyy-MM-dd).
         :type payment_terms_net_date: str
         :param invoice_date: Search by invoice date(yyyy-MM-dd).
@@ -698,10 +698,10 @@ class InvoicesApi:
         """ # noqa: E501
 
         _param = self._get_resellers_v6_invoicesearch_serialize(
-            im_application_id=im_application_id,
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
+            im_application_id=im_application_id,
             payment_terms_net_date=payment_terms_net_date,
             invoice_date=invoice_date,
             invoice_due_date=invoice_due_date,
@@ -750,10 +750,10 @@ class InvoicesApi:
     @validate_call
     def get_resellers_v6_invoicesearch_without_preload_content(
         self,
-        im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
         im_country_code: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="Two-character ISO country code.")],
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_application_id: Annotated[Optional[Annotated[str, Field(strict=True, max_length=32)]], Field(description="Unique value used to identify the sender of the transaction. Example: MyCompany")] = None,
         payment_terms_net_date: Annotated[Optional[StrictStr], Field(description="Search by payment terms net date(yyyy-MM-dd).")] = None,
         invoice_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date(yyyy-MM-dd).")] = None,
         invoice_due_date: Annotated[Optional[StrictStr], Field(description="Search by invoice date from(yyyy-MM-dd).")] = None,
@@ -794,14 +794,14 @@ class InvoicesApi:
 
         Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
 
-        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany (required)
-        :type im_application_id: str
         :param im_customer_number: Your unique Ingram Micro customer number. (required)
         :type im_customer_number: str
         :param im_country_code: Two-character ISO country code. (required)
         :type im_country_code: str
         :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
         :type im_correlation_id: str
+        :param im_application_id: Unique value used to identify the sender of the transaction. Example: MyCompany
+        :type im_application_id: str
         :param payment_terms_net_date: Search by payment terms net date(yyyy-MM-dd).
         :type payment_terms_net_date: str
         :param invoice_date: Search by invoice date(yyyy-MM-dd).
@@ -871,10 +871,10 @@ class InvoicesApi:
         """ # noqa: E501
 
         _param = self._get_resellers_v6_invoicesearch_serialize(
-            im_application_id=im_application_id,
             im_customer_number=im_customer_number,
             im_country_code=im_country_code,
             im_correlation_id=im_correlation_id,
+            im_application_id=im_application_id,
             payment_terms_net_date=payment_terms_net_date,
             invoice_date=invoice_date,
             invoice_due_date=invoice_due_date,
@@ -918,10 +918,10 @@ class InvoicesApi:
 
     def _get_resellers_v6_invoicesearch_serialize(
         self,
-        im_application_id,
         im_customer_number,
         im_country_code,
         im_correlation_id,
+        im_application_id,
         payment_terms_net_date,
         invoice_date,
         invoice_due_date,

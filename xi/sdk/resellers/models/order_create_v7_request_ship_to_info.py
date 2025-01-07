@@ -80,11 +80,6 @@ class OrderCreateV7RequestShipToInfo(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # set to None if address_id (nullable) is None
-        # and model_fields_set contains the field
-        if self.address_id is None and "address_id" in self.model_fields_set:
-            _dict['addressId'] = None
-
         # set to None if contact (nullable) is None
         # and model_fields_set contains the field
         if self.contact is None and "contact" in self.model_fields_set:
