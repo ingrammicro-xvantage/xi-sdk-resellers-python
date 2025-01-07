@@ -127,19 +127,6 @@ class TestOrderCreateV7Request(unittest.TestCase):
                                 attribute_name = '', 
                                 attribute_value = '', )
                             ], 
-                        warranty_info = [
-                            xi.sdk.resellers.models.order_create_v7_request_lines_inner_warranty_info_inner.order_create_v7_request_lines_inner_warrantyInfo_inner(
-                                hardware_line_link = '', 
-                                warranty_line_link = '', 
-                                direct_line_link = '', 
-                                serial_info = [
-                                    xi.sdk.resellers.models.order_create_v7_request_lines_inner_warranty_info_inner_serial_info_inner.order_create_v7_request_lines_inner_warrantyInfo_inner_serialInfo_inner(
-                                        date_of_purchase = '', 
-                                        ship_date = '', 
-                                        primary_serial_number = '', 
-                                        secondary_serial_number = '', )
-                                    ], )
-                            ], 
                         vmf_additional_attributes_lines = [
                             xi.sdk.resellers.models.order_create_v7_request_lines_inner_vmf_additional_attributes_lines_inner.order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner(
                                 attribute_name = '', 

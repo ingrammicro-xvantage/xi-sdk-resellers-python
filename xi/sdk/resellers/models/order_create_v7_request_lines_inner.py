@@ -23,7 +23,6 @@ from typing_extensions import Annotated
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_additional_attributes_inner import OrderCreateV7RequestLinesInnerAdditionalAttributesInner
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_end_user_info_inner import OrderCreateV7RequestLinesInnerEndUserInfoInner
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_vmf_additional_attributes_lines_inner import OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner
-from xi.sdk.resellers.models.order_create_v7_request_lines_inner_warranty_info_inner import OrderCreateV7RequestLinesInnerWarrantyInfoInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -41,9 +40,8 @@ class OrderCreateV7RequestLinesInner(BaseModel):
     notes: Optional[StrictStr] = Field(default=None, description="The attribute field data.")
     end_user_info: Optional[List[OrderCreateV7RequestLinesInnerEndUserInfoInner]] = Field(default=None, alias="endUserInfo")
     additional_attributes: Optional[List[OrderCreateV7RequestLinesInnerAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
-    warranty_info: Optional[List[OrderCreateV7RequestLinesInnerWarrantyInfoInner]] = Field(default=None, alias="warrantyInfo")
     vmf_additional_attributes_lines: Optional[List[OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner]] = Field(default=None, alias="vmfAdditionalAttributesLines")
-    __properties: ClassVar[List[str]] = ["customerLineNumber", "ingramPartNumber", "vendorPartNumber", "quantity", "unitPrice", "specialBidNumber", "endUserPrice", "notes", "endUserInfo", "additionalAttributes", "warrantyInfo", "vmfAdditionalAttributesLines"]
+    __properties: ClassVar[List[str]] = ["customerLineNumber", "ingramPartNumber", "vendorPartNumber", "quantity", "unitPrice", "specialBidNumber", "endUserPrice", "notes", "endUserInfo", "additionalAttributes", "vmfAdditionalAttributesLines"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -98,13 +96,6 @@ class OrderCreateV7RequestLinesInner(BaseModel):
                 if _item_additional_attributes:
                     _items.append(_item_additional_attributes.to_dict())
             _dict['additionalAttributes'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in warranty_info (list)
-        _items = []
-        if self.warranty_info:
-            for _item_warranty_info in self.warranty_info:
-                if _item_warranty_info:
-                    _items.append(_item_warranty_info.to_dict())
-            _dict['warrantyInfo'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in vmf_additional_attributes_lines (list)
         _items = []
         if self.vmf_additional_attributes_lines:
@@ -134,7 +125,6 @@ class OrderCreateV7RequestLinesInner(BaseModel):
             "notes": obj.get("notes"),
             "endUserInfo": [OrderCreateV7RequestLinesInnerEndUserInfoInner.from_dict(_item) for _item in obj["endUserInfo"]] if obj.get("endUserInfo") is not None else None,
             "additionalAttributes": [OrderCreateV7RequestLinesInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None,
-            "warrantyInfo": [OrderCreateV7RequestLinesInnerWarrantyInfoInner.from_dict(_item) for _item in obj["warrantyInfo"]] if obj.get("warrantyInfo") is not None else None,
             "vmfAdditionalAttributesLines": [OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.from_dict(_item) for _item in obj["vmfAdditionalAttributesLines"]] if obj.get("vmfAdditionalAttributesLines") is not None else None
         })
         return _obj

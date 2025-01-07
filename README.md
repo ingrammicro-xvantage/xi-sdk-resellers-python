@@ -189,8 +189,6 @@ Class | Method | HTTP request | Description
  - [OrderCreateV7RequestLinesInnerAdditionalAttributesInner](docs/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md)
  - [OrderCreateV7RequestLinesInnerEndUserInfoInner](docs/OrderCreateV7RequestLinesInnerEndUserInfoInner.md)
  - [OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner](docs/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md)
- - [OrderCreateV7RequestLinesInnerWarrantyInfoInner](docs/OrderCreateV7RequestLinesInnerWarrantyInfoInner.md)
- - [OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner](docs/OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner.md)
  - [OrderCreateV7RequestResellerInfo](docs/OrderCreateV7RequestResellerInfo.md)
  - [OrderCreateV7RequestShipToInfo](docs/OrderCreateV7RequestShipToInfo.md)
  - [OrderCreateV7RequestShipmentDetails](docs/OrderCreateV7RequestShipmentDetails.md)
