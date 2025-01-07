@@ -38,7 +38,7 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDis
                 volume_discounts = [
                     xi.sdk.resellers.models.price_and_availability_response_inner_subscription_price_inner_options_inner_discounts_inner_volume_discounts_inner.PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner(
                         currency_code = '', 
-                        quantity = 56, 
+                        quantity = '', 
                         msrp = 1.337, 
                         unit_price = 1.337, 
                         margin = 1.337, )

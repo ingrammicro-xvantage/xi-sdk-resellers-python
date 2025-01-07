@@ -36,7 +36,7 @@ class TestPriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDis
         if include_optional:
             return PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(
                 currency_code = '',
-                quantity = 56,
+                quantity = '',
                 msrp = 1.337,
                 unit_price = 1.337,
                 margin = 1.337

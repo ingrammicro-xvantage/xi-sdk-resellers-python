@@ -27,7 +27,7 @@ class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscoun
     PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner
     """ # noqa: E501
     currency_code: Optional[StrictStr] = Field(default=None, description="The 3-digit ISO currency code.", alias="currencyCode")
-    quantity: Optional[StrictInt] = Field(default=None, description="Quantity of the line item.")
+    quantity: Optional[StrictStr] = Field(default=None, description="Quantity of the line item.")
     msrp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Manufacturer Suggested Retail Price.")
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The unit price of the line item.", alias="unitPrice")
     margin: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Reseller’s margin percentage")

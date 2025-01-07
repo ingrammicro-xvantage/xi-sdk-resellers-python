@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency_code** | **str** | The 3-digit ISO currency code. | [optional] 
-**quantity** | **int** | Quantity of the line item. | [optional] 
+**quantity** | **str** | Quantity of the line item. | [optional] 
 **msrp** | **float** | Manufacturer Suggested Retail Price. | [optional] 
 **unit_price** | **float** | The unit price of the line item. | [optional] 
 **margin** | **float** | Reseller’s margin percentage | [optional] 
