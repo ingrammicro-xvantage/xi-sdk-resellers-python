@@ -27,7 +27,7 @@ class ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(BaseModel):
     Details of the subscription billing period. 
     """ # noqa: E501
     billing_period_unit: Optional[StrictStr] = Field(default=None, description="Billing unit period of the subscription. Example, Years, Months", alias="billingPeriodUnit")
-    billing_period: Optional[StrictInt] = Field(default=None, description="Billing period of the subscription. Example 1, 3", alias="billingPeriod")
+    billing_period: Optional[StrictStr] = Field(default=None, description="Billing period of the subscription. Example 1, 3", alias="billingPeriod")
     __properties: ClassVar[List[str]] = ["billingPeriodUnit", "billingPeriod"]
 
     model_config = ConfigDict(

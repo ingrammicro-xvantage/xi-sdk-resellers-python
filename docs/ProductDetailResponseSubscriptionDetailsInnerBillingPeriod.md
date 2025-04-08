@@ -7,7 +7,7 @@ Details of the subscription billing period.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing_period_unit** | **str** | Billing unit period of the subscription. Example, Years, Months | [optional] 
-**billing_period** | **int** | Billing period of the subscription. Example 1, 3 | [optional] 
+**billing_period** | **str** | Billing period of the subscription. Example 1, 3 | [optional] 
 
 ## Example
 
