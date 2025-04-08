@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **subscription_period_unit** | **str** | Unit period of the subscription. Example, Years, Months | [optional] 
-**subscription_period** | **int** | Length of the subscription. Example 1, 3 | [optional] 
+**subscription_period** | **str** | Length of the subscription. Example 1, 3 | [optional] 
 
 ## Example
 
