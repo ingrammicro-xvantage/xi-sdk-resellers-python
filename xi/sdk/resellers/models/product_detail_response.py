@@ -32,7 +32,7 @@ class ProductDetailResponse(BaseModel):
     """ # noqa: E501
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro unique part number for the product.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product.", alias="vendorPartNumber")
-    product_authorized: Optional[StrictBool] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
+    product_authorized: Optional[StrictStr] = Field(default=None, description="Boolean that indicates whether a product is authorized.", alias="productAuthorized")
     description: Optional[StrictStr] = Field(default=None, description="The description given for the product.")
     upc: Optional[StrictStr] = Field(default=None, description="The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.")
     product_category: Optional[StrictStr] = Field(default=None, description="The category of the product.", alias="productCategory")
