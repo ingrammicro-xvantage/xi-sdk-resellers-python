@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **vendor_part_number** | **str** | The vendor&#39;s part number for the line item. | [optional] 
 **ingram_part_number** | **str** | Unique IngramMicro part number. | [optional] 
 **manufacturer_part_number** | **str** | The manufacturer&#39;s part number for the line item. | [optional] 
-**quantity** | **str** | The quantity of the line item. | [optional] 
+**quantity** | **int** | The quantity of the line item. | [optional] 
 **unit_price** | **float** | The unit price of the line item. | [optional] 
 **is_consolidated** | **str** | Is the line item consolidated? Yes or No. | [optional] 
 

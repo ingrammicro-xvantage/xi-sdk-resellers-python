@@ -31,7 +31,7 @@ class RenewalsDetailsResponseProductsInner(BaseModel):
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="The vendor's part number for the line item.", alias="vendorPartNumber")
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Unique IngramMicro part number.", alias="ingramPartNumber")
     manufacturer_part_number: Optional[StrictStr] = Field(default=None, description="The manufacturer's part number for the line item.", alias="manufacturerPartNumber")
-    quantity: Optional[StrictStr] = Field(default=None, description="The quantity of the line item.")
+    quantity: Optional[StrictInt] = Field(default=None, description="The quantity of the line item.")
     unit_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The unit price of the line item.", alias="unitPrice")
     is_consolidated: Optional[StrictStr] = Field(default=None, description="Is the line item consolidated? Yes or No.", alias="isConsolidated")
     __properties: ClassVar[List[str]] = ["ingramLineNumber", "productDescription", "vendorPartNumber", "ingramPartNumber", "manufacturerPartNumber", "quantity", "unitPrice", "isConsolidated"]
