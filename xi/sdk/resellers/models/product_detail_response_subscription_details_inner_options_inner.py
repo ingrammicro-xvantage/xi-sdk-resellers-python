@@ -29,8 +29,8 @@ class ProductDetailResponseSubscriptionDetailsInnerOptionsInner(BaseModel):
     resource_id: Optional[StrictStr] = Field(default=None, description="ID of the subscription resource", alias="resourceId")
     resource_name: Optional[StrictStr] = Field(default=None, description="Name of the subscription resource", alias="resourceName")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product.", alias="vendorPartNumber")
-    min_units: Optional[StrictInt] = Field(default=None, description="Minimum units must be purchased.", alias="minUnits")
-    max_units: Optional[StrictInt] = Field(default=None, description="Maximum units are available for purchase.", alias="maxUnits")
+    min_units: Optional[StrictStr] = Field(default=None, description="Minimum units must be purchased.", alias="minUnits")
+    max_units: Optional[StrictStr] = Field(default=None, description="Maximum units are available for purchase.", alias="maxUnits")
     depends_on: Optional[StrictStr] = Field(default=None, description="The name of the product must be purchased to purchase this product.", alias="dependsOn")
     __properties: ClassVar[List[str]] = ["resourceId", "resourceName", "vendorPartNumber", "minUnits", "maxUnits", "dependsOn"]
 
