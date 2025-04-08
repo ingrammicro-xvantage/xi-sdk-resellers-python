@@ -27,7 +27,7 @@ class ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(BaseM
     ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner
     """ # noqa: E501
     subscription_period_unit: Optional[StrictStr] = Field(default=None, description="Unit period of the subscription. Example, Years, Months", alias="subscriptionPeriodUnit")
-    subscription_period: Optional[StrictInt] = Field(default=None, description="Length of the subscription. Example 1, 3", alias="subscriptionPeriod")
+    subscription_period: Optional[StrictStr] = Field(default=None, description="Length of the subscription. Example 1, 3", alias="subscriptionPeriod")
     __properties: ClassVar[List[str]] = ["subscriptionPeriodUnit", "subscriptionPeriod"]
 
     model_config = ConfigDict(
