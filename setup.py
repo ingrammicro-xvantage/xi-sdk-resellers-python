@@ -23,12 +23,13 @@ REQUIRES = [
 ]
 
 CLASSIFIERS = [
-    'Programming Language :: Python :: 3.7',
+    
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
     'Development Status :: 5 - Production/Stable',
@@ -38,7 +39,7 @@ CLASSIFIERS = [
 
 setup(
     name=NAME,
-    version="1.1.0",
+    version="1.2.0",
     description="Ingram Micro - Xvantage Integration (XI) Python Server-side SDK.",
     author="Ingram Micro Xvantage Integration(XI)",
     author_email="xi_support@ingrammicro.com",
@@ -54,7 +55,7 @@ setup(
     license='MIT',
     project_urls={
         'GitHub Repo': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python',
-        'Download': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/1.0.0.tar.gz',
+        'Download': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/1.1.0.tar.gz',
         'Release Notes': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/releases/',
     },
 )

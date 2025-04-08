@@ -80,6 +80,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
 ```
 
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.ingrammicro.com:443*
@@ -100,6 +101,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**post_createorder_v7**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#post_createorder_v7) | **POST** /resellers/v7/orders | Create your Order v7
 *OrdersApi* | [**put_ordermodify**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#put_ordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
 *ProductCatalogApi* | [**get_reseller_v6_productdetail**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
+*ProductCatalogApi* | [**get_reseller_v6_productdetailcmp**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productsearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
 *ProductCatalogApi* | [**post_priceandavailability**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#post_priceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
 *QuotesApi* | [**get_quotessearch_v6**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/QuotesApi.md#get_quotessearch_v6) | **GET** /resellers/v6/quotes/search | Quote Search
@@ -116,19 +118,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AccesstokenResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AccesstokenResponse.md)
- - [AsyncOrderCreateDTO](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTO.md)
- - [AsyncOrderCreateDTOAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOAdditionalAttributesInner.md)
- - [AsyncOrderCreateDTOEndUserInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOEndUserInfo.md)
- - [AsyncOrderCreateDTOLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOLinesInner.md)
- - [AsyncOrderCreateDTOLinesInnerEndUserInfoInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOLinesInnerEndUserInfoInner.md)
- - [AsyncOrderCreateDTOResellerInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOResellerInfo.md)
- - [AsyncOrderCreateDTOShipToInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOShipToInfo.md)
- - [AsyncOrderCreateDTOShipmentDetails](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOShipmentDetails.md)
- - [AsyncOrderCreateDTOVmfadditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOVmfadditionalAttributesInner.md)
- - [AsyncOrderCreateDTOWarrantyInfoInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOWarrantyInfoInner.md)
- - [AsyncOrderCreateDTOWarrantyInfoInnerSerialInfoInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOWarrantyInfoInnerSerialInfoInner.md)
- - [AsyncOrderCreateDTOWarrantyInfoInnerVmfAdditionalAttributesLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateDTOWarrantyInfoInnerVmfAdditionalAttributesLinesInner.md)
- - [AsyncOrderCreateResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AsyncOrderCreateResponse.md)
  - [AvailabilityAsyncNotificationRequest](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AvailabilityAsyncNotificationRequest.md)
  - [AvailabilityAsyncNotificationRequestResourceInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AvailabilityAsyncNotificationRequestResourceInner.md)
  - [AvailabilityAsyncNotificationRequestResourceInnerLinksInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md)
@@ -193,6 +182,24 @@ Class | Method | HTTP request | Description
  - [OrderCreateResponseOrdersInnerMiscellaneousChargesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateResponseOrdersInnerMiscellaneousChargesInner.md)
  - [OrderCreateResponseOrdersInnerRejectedLineItemsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateResponseOrdersInnerRejectedLineItemsInner.md)
  - [OrderCreateResponseShipToInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateResponseShipToInfo.md)
+ - [OrderCreateV7Request](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7Request.md)
+ - [OrderCreateV7RequestAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestAdditionalAttributesInner.md)
+ - [OrderCreateV7RequestEndUserInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestEndUserInfo.md)
+ - [OrderCreateV7RequestLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestLinesInner.md)
+ - [OrderCreateV7RequestLinesInnerAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md)
+ - [OrderCreateV7RequestLinesInnerEndUserInfoInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestLinesInnerEndUserInfoInner.md)
+ - [OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md)
+ - [OrderCreateV7RequestResellerInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestResellerInfo.md)
+ - [OrderCreateV7RequestShipToInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestShipToInfo.md)
+ - [OrderCreateV7RequestShipmentDetails](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestShipmentDetails.md)
+ - [OrderCreateV7RequestVmfAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7RequestVmfAdditionalAttributesInner.md)
+ - [OrderCreateV7Response](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7Response.md)
+ - [OrderCreateV7Response201](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7Response201.md)
+ - [OrderCreateV7ResponseResource](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7ResponseResource.md)
+ - [OrderCreateV7ResponseResourceOrdersInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7ResponseResourceOrdersInner.md)
+ - [OrderCreateV7ResponseResourceOrdersInnerLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7ResponseResourceOrdersInnerLinesInner.md)
+ - [OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner.md)
+ - [OrderCreateV7ResponseResourceShipToInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderCreateV7ResponseResourceShipToInfo.md)
  - [OrderDetailB2B](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderDetailB2B.md)
  - [OrderDetailB2BAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderDetailB2BAdditionalAttributesInner.md)
  - [OrderDetailB2BBillToInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrderDetailB2BBillToInfo.md)
@@ -258,15 +265,33 @@ Class | Method | HTTP request | Description
  - [PriceAndAvailabilityResponseInnerPricing](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerPricing.md)
  - [PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.md)
  - [PriceAndAvailabilityResponseInnerServiceFeesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerServiceFeesInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner.md)
+ - [PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner.md)
  - [ProductDetailResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponse.md)
  - [ProductDetailResponseAdditionalInformation](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseAdditionalInformation.md)
  - [ProductDetailResponseAdditionalInformationProductWeightInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseAdditionalInformationProductWeightInner.md)
  - [ProductDetailResponseCiscoFields](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseCiscoFields.md)
  - [ProductDetailResponseIndicators](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseIndicators.md)
- - [ProductDetailResponseTechnicalSpecificationsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseTechnicalSpecificationsInner.md)
+ - [ProductDetailResponseSubscriptionDetailsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseSubscriptionDetailsInner.md)
+ - [ProductDetailResponseSubscriptionDetailsInnerBillingPeriod](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseSubscriptionDetailsInnerBillingPeriod.md)
+ - [ProductDetailResponseSubscriptionDetailsInnerGroupsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseSubscriptionDetailsInnerGroupsInner.md)
+ - [ProductDetailResponseSubscriptionDetailsInnerOptionsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseSubscriptionDetailsInnerOptionsInner.md)
+ - [ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner.md)
  - [ProductSearchResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponse.md)
  - [ProductSearchResponseCatalogInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseCatalogInner.md)
  - [ProductSearchResponseCatalogInnerLinksInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseCatalogInnerLinksInner.md)
+ - [ProductSearchResponseSubscriptionCatalogInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseSubscriptionCatalogInner.md)
+ - [ProductSearchResponseSubscriptionCatalogInnerPlansInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseSubscriptionCatalogInnerPlansInner.md)
+ - [ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner.md)
+ - [ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner.md)
  - [QuoteDetailsResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/QuoteDetailsResponse.md)
  - [QuoteDetailsResponseAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/QuoteDetailsResponseAdditionalAttributesInner.md)
  - [QuoteDetailsResponseEndUserInfo](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/QuoteDetailsResponseEndUserInfo.md)
@@ -335,4 +360,3 @@ Authentication schemes defined for the API:
 For any inquiries or support, please feel free to contact us at:
 
 - Email: xi_support@ingrammicro.com
-

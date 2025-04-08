@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_resellers_v6_dealsdetails**
-> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, im_environment, deal_id)
+> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id)
 
 Deals Details
 
@@ -46,12 +46,11 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_country_code = 'US' # str | Two-character ISO country code.
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
     im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
-    im_environment = 'prodChicago' # str | Environment name.
     deal_id = '12345678' # str | Unique deal ID.
 
     try:
         # Deals Details
-        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, im_environment, deal_id)
+        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id)
         print("The response of DealsApi->get_resellers_v6_dealsdetails:\n")
         pprint(api_response)
     except Exception as e:
@@ -69,7 +68,6 @@ Name | Type | Description  | Notes
  **im_country_code** | **str**| Two-character ISO country code. | 
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
  **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
- **im_environment** | **str**| Environment name. | 
  **deal_id** | **str**| Unique deal ID. | 
 
 ### Return type

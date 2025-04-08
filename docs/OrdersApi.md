@@ -400,11 +400,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_createorder_v7**
-> AsyncOrderCreateResponse post_createorder_v7(im_customer_number, im_country_code, im_correlation_id, async_order_create_dto, im_sender_id=im_sender_id)
+> OrderCreateV7Response201 post_createorder_v7(im_customer_number, im_country_code, im_correlation_id, order_create_v7_request, im_sender_id=im_sender_id)
 
 Create your Order v7
 
-This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+The Order Create v7 allows our customers to create orders asynchronously. The customer can create either standard orders using stocked SKUs and/or create a “Quote to Order” using the existing quote which is in “Ready to Order” status, or the customer can create an order using the “Configure to order” (CTO) quote. Upon successful submission of the order create request, a confirmation message will be returned as an API response. <br > <br > Once the order is processed, Ingram Micro will notify customers via webhook using a pre-defined callback URL as an HTTP post regarding the updates related to the order. Upon successful order creation, a notification will be sent via webhook regarding the order details, in the event of any error occurring during the order creation process, an error message will be delivered via webhook. Nightly system unavailability will delay response Async response. <br > <br > The key differentiator between standard ordering and “Quote To Order” is the optional input field in the request body which is “quoteNumber”. If a customer passes the quote number in the request body, the order will be processed as a “Quote To Order” using the details from the quote. Any SKUs, quantity, or price information that are passed in the lines object within the request will be ignored in the case of “Quote To Order”.<br > <br > **Prerequisite:** Pre-defined callback URL <br > <br > **Standard ordering::**<br><br>Ingram Micro recommends that you provide the ingramPartNumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net 30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. <br><br>[**Key differences between v6 and v7 Migration**](https://developer.ingrammicro.com/reseller/page/v6-and-v7-migration) <br><br> <br><br>**Quote to Order / Configure to Order:**<br><br>If customers are planning to use Quote to Order or Configure to Order Quotes, it’s recommended to validate the quote using the “Validate Quote” endpoint before creating an order using the quote. Validate Quote endpoint will not only validate the quote but also outline all the mandatory fields required by the vendor at a header level and at the line level which a customer needs to pass to the Quote to Order endpoint request. For a detailed understanding of the “Validate Quote” endpoint, review the “Validate Quote” endpoint documentation. <br><br> **How it works:**<br><br>- The customer validates the quote with a quote number from the Validate Quote endpoint.<br>- The customer copies all the mandatory fields required by the vendor and adds them to the QTO request body.<br>- The customer provides all the values for Vendor mandatory fields along with other required information for QTO to create an order.<br>- After the order creation request receipt acknowledgment from the QTO endpoint, all further order creation updates will be provided via webhook push notification.
 
 ### Example
 
@@ -412,8 +412,8 @@ This API will allow customers to perform both standard ordering and quote to ord
 
 ```python
 import xi.sdk.resellers
-from xi.sdk.resellers.models.async_order_create_dto import AsyncOrderCreateDTO
-from xi.sdk.resellers.models.async_order_create_response import AsyncOrderCreateResponse
+from xi.sdk.resellers.models.order_create_v7_request import OrderCreateV7Request
+from xi.sdk.resellers.models.order_create_v7_response201 import OrderCreateV7Response201
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
@@ -436,13 +436,13 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     api_instance = xi.sdk.resellers.OrdersApi(api_client)
     im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
     im_country_code = 'US' # str | Two-character ISO country code.
-    im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction accross all the systems.
-    async_order_create_dto = {"quoteNumber":"QUO-14551943-D2Y9L9","customerOrderNumber":"12345","enduserOrderNumber":"","billToAddressId":"XYZ","endUserInfo":{"companyName":"ABC TECH","contact":"44045678","addressLine1":"Texas","addressLine2":"4","addressLine3":"","city":"","state":"","postalCode":"","countryCode":"US","email":"abc@gmail.com","phoneNumber":"445678901"},"shipToInfo":{"addressId":"12345","companyName":"","contact":"","addressLine1":"Texas","addressLine2":"4","addressLine3":"","city":"","state":"","postalCode":"","countryCode":"US","email":"abc@gmail.com"},"additionalAttributes":[{"attributeName":"VEND_AUTH_NBR_FLG","attributeValue":"ABC1234"}],"vmfAdditionalAttributes":[{"attributeName":"","attributeValue":"","attributeDescription":""}],"lines":[{"customerLineNumber":"12","ingramPartNumber":"YN6231","quantity":"2","vmfAdditionalAttributesLines":[{"attributeName":"","attributeValue":"","attributeDescription":""}]}]} # AsyncOrderCreateDTO | 
-    im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. (optional)
+    im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
+    order_create_v7_request = xi.sdk.resellers.OrderCreateV7Request() # OrderCreateV7Request | 
+    im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
 
     try:
         # Create your Order v7
-        api_response = api_instance.post_createorder_v7(im_customer_number, im_country_code, im_correlation_id, async_order_create_dto, im_sender_id=im_sender_id)
+        api_response = api_instance.post_createorder_v7(im_customer_number, im_country_code, im_correlation_id, order_create_v7_request, im_sender_id=im_sender_id)
         print("The response of OrdersApi->post_createorder_v7:\n")
         pprint(api_response)
     except Exception as e:
@@ -458,13 +458,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
  **im_country_code** | **str**| Two-character ISO country code. | 
- **im_correlation_id** | **str**| Unique transaction number to identify each transaction accross all the systems. | 
- **async_order_create_dto** | [**AsyncOrderCreateDTO**](AsyncOrderCreateDTO.md)|  | 
- **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. | [optional] 
+ **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
+ **order_create_v7_request** | [**OrderCreateV7Request**](OrderCreateV7Request.md)|  | 
+ **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
 
 ### Return type
 
-[**AsyncOrderCreateResponse**](AsyncOrderCreateResponse.md)
+[**OrderCreateV7Response201**](OrderCreateV7Response201.md)
 
 ### Authorization
 
@@ -479,7 +479,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+**200** | Confirmation response |  -  |
+**201** | Webhook Response |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 
