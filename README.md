@@ -107,6 +107,7 @@ Class | Method | HTTP request | Description
 *QuotesApi* | [**get_quotessearch_v6**](docs/QuotesApi.md#get_quotessearch_v6) | **GET** /resellers/v6/quotes/search | Quote Search
 *QuotesApi* | [**get_reseller_v6_validate_quote**](docs/QuotesApi.md#get_reseller_v6_validate_quote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
 *QuotesApi* | [**get_resellers_v6_quotes**](docs/QuotesApi.md#get_resellers_v6_quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
+*QuotesApi* | [**quote_create**](docs/QuotesApi.md#quote_create) | **POST** /resellers/v6/quotes/create | Quote Create
 *RenewalsApi* | [**get_resellers_v6_renewalsdetails**](docs/RenewalsApi.md#get_resellers_v6_renewalsdetails) | **GET** /resellers/v6/renewals/{renewalId} | Renewals Details
 *RenewalsApi* | [**post_renewalssearch**](docs/RenewalsApi.md#post_renewalssearch) | **POST** /resellers/v6/renewals/search | Renewals Search
 *ReturnsApi* | [**get_resellers_v6_returnsdetails**](docs/ReturnsApi.md#get_resellers_v6_returnsdetails) | **GET** /resellers/v6/returns/{caseRequestNumber} | Returns Details
@@ -292,6 +293,15 @@ Class | Method | HTTP request | Description
  - [ProductSearchResponseSubscriptionCatalogInnerPlansInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInner.md)
  - [ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner.md)
  - [ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner.md)
+ - [QuoteCreateRequest](docs/QuoteCreateRequest.md)
+ - [QuoteCreateRequestEndUserInfo](docs/QuoteCreateRequestEndUserInfo.md)
+ - [QuoteCreateRequestProductsInner](docs/QuoteCreateRequestProductsInner.md)
+ - [QuoteCreateResponse](docs/QuoteCreateResponse.md)
+ - [QuoteCreateWebhookResponse](docs/QuoteCreateWebhookResponse.md)
+ - [QuoteCreateWebhookResponseResource](docs/QuoteCreateWebhookResponseResource.md)
+ - [QuoteCreateWebhookResponseResourceAdditionalAttributesInner](docs/QuoteCreateWebhookResponseResourceAdditionalAttributesInner.md)
+ - [QuoteCreateWebhookResponseResourceProductsInner](docs/QuoteCreateWebhookResponseResourceProductsInner.md)
+ - [QuoteCreateWebhookResponseResourceProductsInnerPrice](docs/QuoteCreateWebhookResponseResourceProductsInnerPrice.md)
  - [QuoteDetailsResponse](docs/QuoteDetailsResponse.md)
  - [QuoteDetailsResponseAdditionalAttributesInner](docs/QuoteDetailsResponseAdditionalAttributesInner.md)
  - [QuoteDetailsResponseEndUserInfo](docs/QuoteDetailsResponseEndUserInfo.md)

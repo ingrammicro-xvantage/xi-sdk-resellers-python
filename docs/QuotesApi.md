@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_quotessearch_v6**](QuotesApi.md#get_quotessearch_v6) | **GET** /resellers/v6/quotes/search | Quote Search
 [**get_reseller_v6_validate_quote**](QuotesApi.md#get_reseller_v6_validate_quote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
 [**get_resellers_v6_quotes**](QuotesApi.md#get_resellers_v6_quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
+[**quote_create**](QuotesApi.md#quote_create) | **POST** /resellers/v6/quotes/create | Quote Create
 
 
 # **get_quotessearch_v6**
@@ -289,6 +290,93 @@ Name | Type | Description  | Notes
 **200** | OK |  -  |
 **400** | Bad Request |  -  |
 **500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **quote_create**
+> QuoteCreateResponse quote_create(im_customer_number, im_country_code, im_correlation_id, quote_create_request, im_sender_id=im_sender_id)
+
+Quote Create
+
+The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a 'Ready To Order' status.<ul><li>For CTO quote creation, we only support Cisco as a vendor at the moment.</li></ul>
+
+ Once the quote is created and activated, you will receive an immediate 'confirmation'.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+
+### Example
+
+* OAuth Authentication (application):
+
+```python
+import xi.sdk.resellers
+from xi.sdk.resellers.models.quote_create_request import QuoteCreateRequest
+from xi.sdk.resellers.models.quote_create_response import QuoteCreateResponse
+from xi.sdk.resellers.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
+# See configuration.py for a list of all supported configuration parameters.
+configuration = xi.sdk.resellers.Configuration(
+    host = "https://api.ingrammicro.com:443"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xi.sdk.resellers.QuotesApi(api_client)
+    im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
+    im_country_code = 'US' # str | Two-character ISO country code.
+    im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
+    quote_create_request = {"quoteName":"QuoteTest","quoteExpiryDate":"04/30/2024","customerNeed":"notes","firstName":"User1","lastName":"User name","pricingType":"","sendQuoteCopy":"","customercontact":"kalimuthu.im@com","dealId":"7499800","endUserInfo":{"companyName":"Ingram Micro","contact":"Test contact","addressLine1":"Ratibor street","addressLine2":"","addressLine3":"","city":"Ratibor","state":"MI","postalCode":"48502","countryCode":"US","email":"testcontact6@im.com","phoneNumber":"64328753"},"products":[]} # QuoteCreateRequest | 
+    im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany (optional)
+
+    try:
+        # Quote Create
+        api_response = api_instance.quote_create(im_customer_number, im_country_code, im_correlation_id, quote_create_request, im_sender_id=im_sender_id)
+        print("The response of QuotesApi->quote_create:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling QuotesApi->quote_create: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
+ **im_country_code** | **str**| Two-character ISO country code. | 
+ **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
+ **quote_create_request** | [**QuoteCreateRequest**](QuoteCreateRequest.md)|  | 
+ **im_sender_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | [optional] 
+
+### Return type
+
+[**QuoteCreateResponse**](QuoteCreateResponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**201** | Webhook Success Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
