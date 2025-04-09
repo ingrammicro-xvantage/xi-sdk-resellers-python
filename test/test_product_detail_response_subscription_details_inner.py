@@ -54,8 +54,8 @@ class TestProductDetailResponseSubscriptionDetailsInner(unittest.TestCase):
                         resource_id = '', 
                         resource_name = '', 
                         vendor_part_number = '', 
-                        min_units = 56, 
-                        max_units = 56, 
+                        min_units = '', 
+                        max_units = '', 
                         depends_on = '', )
                     ],
                 links = [

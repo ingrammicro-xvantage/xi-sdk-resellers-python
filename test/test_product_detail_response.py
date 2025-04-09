@@ -37,7 +37,7 @@ class TestProductDetailResponse(unittest.TestCase):
             return ProductDetailResponse(
                 ingram_part_number = '',
                 vendor_part_number = '',
-                product_authorized = True,
+                product_authorized = '',
                 description = '',
                 upc = '',
                 product_category = '',
@@ -124,8 +124,8 @@ class TestProductDetailResponse(unittest.TestCase):
                                 resource_id = '', 
                                 resource_name = '', 
                                 vendor_part_number = '', 
-                                min_units = 56, 
-                                max_units = 56, 
+                                min_units = '', 
+                                max_units = '', 
                                 depends_on = '', )
                             ], 
                         links = [

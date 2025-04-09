@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_detail_response_additional_information import ProductDetailResponseAdditionalInformation
 from xi.sdk.resellers.models.product_detail_response_cisco_fields import ProductDetailResponseCiscoFields

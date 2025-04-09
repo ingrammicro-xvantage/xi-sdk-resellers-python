@@ -36,7 +36,7 @@ class TestProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(u
         if include_optional:
             return ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(
                 subscription_period_unit = '',
-                subscription_period = 56
+                subscription_period = ''
             )
         else:
             return ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(

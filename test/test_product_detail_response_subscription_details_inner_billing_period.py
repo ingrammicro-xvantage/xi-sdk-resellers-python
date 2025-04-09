@@ -36,7 +36,7 @@ class TestProductDetailResponseSubscriptionDetailsInnerBillingPeriod(unittest.Te
         if include_optional:
             return ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(
                 billing_period_unit = '',
-                billing_period = 56
+                billing_period = ''
             )
         else:
             return ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(

@@ -210,7 +210,9 @@ Name | Type | Description  | Notes
 
 Get Quote Details
 
-The quote details API provides all quote details associated with the quote number provided.  The **“quoteNumber”**, **“isoCountryCode”** and **“customerNumber”** parameters are required. 
+The quote details API provides all quote details associated with the quote number provided.
+
+The **“quoteNumber”**, **“isoCountryCode”** and **“customerNumber”** parameters are required. 
 
 ### Example
 
