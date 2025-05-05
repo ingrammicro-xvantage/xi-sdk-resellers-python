@@ -71,7 +71,7 @@ class TestRenewalsDetailsResponse(unittest.TestCase):
                         vendor_part_number = '', 
                         ingram_part_number = '', 
                         manufacturer_part_number = '', 
-                        quantity = '', 
+                        quantity = 56, 
                         unit_price = 1.337, 
                         is_consolidated = '', )
                     ],

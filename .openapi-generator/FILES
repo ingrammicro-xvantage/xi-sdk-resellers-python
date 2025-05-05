@@ -23,7 +23,7 @@ docs/Fields.md
 docs/FreightEstimateApi.md
 docs/FreightRequest.md
 docs/FreightRequestLinesInner.md
-docs/FreightRequestShipToAddressInner.md
+docs/FreightRequestShipToAddress.md
 docs/FreightResponse.md
 docs/FreightResponseFreightEstimateResponse.md
 docs/FreightResponseFreightEstimateResponseDistributionInner.md
@@ -259,7 +259,7 @@ test/test_fields.py
 test/test_freight_estimate_api.py
 test/test_freight_request.py
 test/test_freight_request_lines_inner.py
-test/test_freight_request_ship_to_address_inner.py
+test/test_freight_request_ship_to_address.py
 test/test_freight_response.py
 test/test_freight_response_freight_estimate_response.py
 test/test_freight_response_freight_estimate_response_distribution_inner.py
@@ -506,7 +506,7 @@ xi/sdk/resellers/models/error_response_errors_inner_fields_inner.py
 xi/sdk/resellers/models/fields.py
 xi/sdk/resellers/models/freight_request.py
 xi/sdk/resellers/models/freight_request_lines_inner.py
-xi/sdk/resellers/models/freight_request_ship_to_address_inner.py
+xi/sdk/resellers/models/freight_request_ship_to_address.py
 xi/sdk/resellers/models/freight_response.py
 xi/sdk/resellers/models/freight_response_freight_estimate_response.py
 xi/sdk/resellers/models/freight_response_freight_estimate_response_distribution_inner.py

@@ -133,7 +133,7 @@ Class | Method | HTTP request | Description
  - [Fields](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/Fields.md)
  - [FreightRequest](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightRequest.md)
  - [FreightRequestLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightRequestLinesInner.md)
- - [FreightRequestShipToAddressInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightRequestShipToAddressInner.md)
+ - [FreightRequestShipToAddress](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightRequestShipToAddress.md)
  - [FreightResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightResponse.md)
  - [FreightResponseFreightEstimateResponse](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightResponseFreightEstimateResponse.md)
  - [FreightResponseFreightEstimateResponseDistributionInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/FreightResponseFreightEstimateResponseDistributionInner.md)

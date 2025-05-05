@@ -30,7 +30,7 @@ from xi.sdk.resellers.models.error_response_errors_inner_fields_inner import Err
 from xi.sdk.resellers.models.fields import Fields
 from xi.sdk.resellers.models.freight_request import FreightRequest
 from xi.sdk.resellers.models.freight_request_lines_inner import FreightRequestLinesInner
-from xi.sdk.resellers.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
+from xi.sdk.resellers.models.freight_request_ship_to_address import FreightRequestShipToAddress
 from xi.sdk.resellers.models.freight_response import FreightResponse
 from xi.sdk.resellers.models.freight_response_freight_estimate_response import FreightResponseFreightEstimateResponse
 from xi.sdk.resellers.models.freight_response_freight_estimate_response_distribution_inner import FreightResponseFreightEstimateResponseDistributionInner

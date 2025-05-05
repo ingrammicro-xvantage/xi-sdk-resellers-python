@@ -103,7 +103,17 @@ void (empty response body)
 
 Get Order Details v6.1
 
-The Orders details API endpoint allows a customer to retrieve their Ingram Micro orders details by using the Ingram Micro sales order number as a path parameter. The sales order number, IM-CustomerNumber, IM-CountryCode, and IM-CorrelationID are required parameters.<br><br>*Service contracts, subscriptions, and license information are unavailable at the moment, this information will be available in the future. <br><br> Recent bug fixes:   - Fixed duplication of serial numbers in the API response.   - Fixed API time-out issues   - Fixed missing tracking information.   - Implemented enhanced order status.  
+The Orders details API endpoint allows a customer to retrieve their Ingram Micro orders details by using the Ingram Micro sales order number as a path parameter. The sales order number, IM-CustomerNumber, IM-CountryCode, and IM-CorrelationID are required parameters.<br><br>*Service contracts, subscriptions, and license information are unavailable at the moment, this information will be available in the future. <br><br> Recent bug fixes:
+
+ - Fixed duplication of serial numbers in the API response.
+
+ - Fixed API time-out issues
+
+ - Fixed missing tracking information.
+
+ - Implemented enhanced order status.
+
+
 
 ### Example
 
@@ -317,7 +327,10 @@ Name | Type | Description  | Notes
 
 Create your Order
 
-Instantly create and place orders. The POST API supports stocked SKUs as well as licensing and warranties SKUs. IM-CustomerNumber, IM-CountryCode, IM-SenderID and IM-CorrelationID are required parameters. Ingram Micro recommends that you provide the ingrampartnumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net-30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. 
+Instantly create and place orders. The POST API supports stocked SKUs as well as licensing and warranties SKUs.
+IM-CustomerNumber, IM-CountryCode, IM-SenderID and IM-CorrelationID are required parameters.
+Ingram Micro recommends that you provide the ingrampartnumber for each SKU contained in each order.
+NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net-30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. 
 
 ### Example
 
@@ -491,7 +504,11 @@ Name | Type | Description  | Notes
 
 Modify your Order
 
-The Order Modify API endpoint allows for changes to be made to an order after the order creation process as long as the order was created with the customer hold flag.  * Orders can be modified within 24hrs of being placed with the customer hold flag, after 24hrs they are voided if they are not released by the customer.  * Modifying orders that were placed without the customer hold flag is not possible 
+The Order Modify API endpoint allows for changes to be made to an order after the order creation process as long as the order was created with the customer hold flag.
+
+* Orders can be modified within 24hrs of being placed with the customer hold flag, after 24hrs they are voided if they are not released by the customer.
+
+* Modifying orders that were placed without the customer hold flag is not possible 
 
 ### Example
 

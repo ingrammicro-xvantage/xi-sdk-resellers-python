@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
+from xi.sdk.resellers.models.freight_request_ship_to_address import FreightRequestShipToAddress
 
-class TestFreightRequestShipToAddressInner(unittest.TestCase):
-    """FreightRequestShipToAddressInner unit test stubs"""
+class TestFreightRequestShipToAddress(unittest.TestCase):
+    """FreightRequestShipToAddress unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestFreightRequestShipToAddressInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> FreightRequestShipToAddressInner:
-        """Test FreightRequestShipToAddressInner
+    def make_instance(self, include_optional) -> FreightRequestShipToAddress:
+        """Test FreightRequestShipToAddress
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `FreightRequestShipToAddressInner`
+        # uncomment below to create an instance of `FreightRequestShipToAddress`
         """
-        model = FreightRequestShipToAddressInner()
+        model = FreightRequestShipToAddress()
         if include_optional:
-            return FreightRequestShipToAddressInner(
+            return FreightRequestShipToAddress(
                 company_name = '',
                 address_line1 = '',
                 address_line2 = '',
@@ -45,12 +45,12 @@ class TestFreightRequestShipToAddressInner(unittest.TestCase):
                 country_code = ''
             )
         else:
-            return FreightRequestShipToAddressInner(
+            return FreightRequestShipToAddress(
         )
         """
 
-    def testFreightRequestShipToAddressInner(self):
-        """Test FreightRequestShipToAddressInner"""
+    def testFreightRequestShipToAddress(self):
+        """Test FreightRequestShipToAddress"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

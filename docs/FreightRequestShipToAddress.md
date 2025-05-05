@@ -1,5 +1,6 @@
-# FreightRequestShipToAddressInner
+# FreightRequestShipToAddress
 
+The shipping information.
 
 ## Properties
 
@@ -17,19 +18,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from xi.sdk.resellers.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
+from xi.sdk.resellers.models.freight_request_ship_to_address import FreightRequestShipToAddress
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of FreightRequestShipToAddressInner from a JSON string
-freight_request_ship_to_address_inner_instance = FreightRequestShipToAddressInner.from_json(json)
+# create an instance of FreightRequestShipToAddress from a JSON string
+freight_request_ship_to_address_instance = FreightRequestShipToAddress.from_json(json)
 # print the JSON string representation of the object
-print(FreightRequestShipToAddressInner.to_json())
+print(FreightRequestShipToAddress.to_json())
 
 # convert the object into a dict
-freight_request_ship_to_address_inner_dict = freight_request_ship_to_address_inner_instance.to_dict()
-# create an instance of FreightRequestShipToAddressInner from a dict
-freight_request_ship_to_address_inner_from_dict = FreightRequestShipToAddressInner.from_dict(freight_request_ship_to_address_inner_dict)
+freight_request_ship_to_address_dict = freight_request_ship_to_address_instance.to_dict()
+# create an instance of FreightRequestShipToAddress from a dict
+freight_request_ship_to_address_from_dict = FreightRequestShipToAddress.from_dict(freight_request_ship_to_address_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

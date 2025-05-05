@@ -13,7 +13,11 @@ Method | HTTP request | Description
 
 Get Invoice Details v6.1
 
-Use your Ingram Micro invoice number to search for existing invoices or retrieve existing invoice details.  The invoice number, IM-CustomerNumber, IM-CountryCode, IM-ApplicationId and IM-CorrelationID are required parameters.  .
+Use your Ingram Micro invoice number to search for existing invoices or retrieve existing invoice details.
+
+The invoice number, IM-CustomerNumber, IM-CountryCode, IM-ApplicationId and IM-CorrelationID are required parameters.
+
+.
 
 ### Example
 

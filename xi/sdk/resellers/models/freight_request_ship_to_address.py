@@ -22,9 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class FreightRequestShipToAddressInner(BaseModel):
+class FreightRequestShipToAddress(BaseModel):
     """
-    FreightRequestShipToAddressInner
+    The shipping information.
     """ # noqa: E501
     company_name: Optional[StrictStr] = Field(default=None, description="The name of the company the order will be shipped to.", alias="companyName")
     address_line1: Optional[StrictStr] = Field(default=None, description="Line 1 of the address the order will be shipped to.", alias="addressLine1")
@@ -54,7 +54,7 @@ class FreightRequestShipToAddressInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of FreightRequestShipToAddressInner from a JSON string"""
+        """Create an instance of FreightRequestShipToAddress from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -79,7 +79,7 @@ class FreightRequestShipToAddressInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of FreightRequestShipToAddressInner from a dict"""
+        """Create an instance of FreightRequestShipToAddress from a dict"""
         if obj is None:
             return None
 
