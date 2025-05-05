@@ -47,13 +47,6 @@ class TestQuotesApi(unittest.TestCase):
         """
         pass
 
-    def test_quote_create(self) -> None:
-        """Test case for quote_create
-
-        Quote Create
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

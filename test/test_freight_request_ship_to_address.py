@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.quote_create_request_products_inner import QuoteCreateRequestProductsInner
+from xi.sdk.resellers.models.freight_request_ship_to_address import FreightRequestShipToAddress
 
-class TestQuoteCreateRequestProductsInner(unittest.TestCase):
-    """QuoteCreateRequestProductsInner unit test stubs"""
+class TestFreightRequestShipToAddress(unittest.TestCase):
+    """FreightRequestShipToAddress unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,31 +25,32 @@ class TestQuoteCreateRequestProductsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> QuoteCreateRequestProductsInner:
-        """Test QuoteCreateRequestProductsInner
+    def make_instance(self, include_optional) -> FreightRequestShipToAddress:
+        """Test FreightRequestShipToAddress
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `QuoteCreateRequestProductsInner`
+        # uncomment below to create an instance of `FreightRequestShipToAddress`
         """
-        model = QuoteCreateRequestProductsInner()
+        model = FreightRequestShipToAddress()
         if include_optional:
-            return QuoteCreateRequestProductsInner(
-                customer_line_number = '',
-                ingram_part_number = '',
-                vendor_part_number = '',
-                quantity = '',
-                special_bid = '',
-                line_level_notes = '',
-                pricing_type = ''
+            return FreightRequestShipToAddress(
+                company_name = '',
+                address_line1 = '',
+                address_line2 = '',
+                address_line3 = '',
+                city = '',
+                state = '',
+                postal_code = '',
+                country_code = ''
             )
         else:
-            return QuoteCreateRequestProductsInner(
+            return FreightRequestShipToAddress(
         )
         """
 
-    def testQuoteCreateRequestProductsInner(self):
-        """Test QuoteCreateRequestProductsInner"""
+    def testFreightRequestShipToAddress(self):
+        """Test FreightRequestShipToAddress"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

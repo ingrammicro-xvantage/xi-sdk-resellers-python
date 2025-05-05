@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.freight_request_lines_inner import FreightRequestLinesInner
-from xi.sdk.resellers.models.freight_request_ship_to_address_inner import FreightRequestShipToAddressInner
+from xi.sdk.resellers.models.freight_request_ship_to_address import FreightRequestShipToAddress
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,9 +28,9 @@ class FreightRequest(BaseModel):
     """
     FreightRequest
     """ # noqa: E501
-    bill_to_address_id: Optional[StrictStr] = Field(default=None, description="Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.", alias="billToAddressId")
+    bill_to_address_id: Optional[Any] = Field(default=None, description="Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.", alias="billToAddressId")
     ship_to_address_id: Optional[StrictStr] = Field(default=None, description="The ID references the reseller's address in Ingram Micro's system for shipping. Provided to resellers during the onboarding process.", alias="shipToAddressId")
-    ship_to_address: Optional[List[FreightRequestShipToAddressInner]] = Field(default=None, description="The shipping information.", alias="shipToAddress")
+    ship_to_address: Optional[FreightRequestShipToAddress] = Field(default=None, alias="shipToAddress")
     lines: Optional[List[FreightRequestLinesInner]] = None
     __properties: ClassVar[List[str]] = ["billToAddressId", "shipToAddressId", "shipToAddress", "lines"]
 
@@ -73,13 +73,9 @@ class FreightRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in ship_to_address (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of ship_to_address
         if self.ship_to_address:
-            for _item_ship_to_address in self.ship_to_address:
-                if _item_ship_to_address:
-                    _items.append(_item_ship_to_address.to_dict())
-            _dict['shipToAddress'] = _items
+            _dict['shipToAddress'] = self.ship_to_address.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in lines (list)
         _items = []
         if self.lines:
@@ -87,6 +83,11 @@ class FreightRequest(BaseModel):
                 if _item_lines:
                     _items.append(_item_lines.to_dict())
             _dict['lines'] = _items
+        # set to None if bill_to_address_id (nullable) is None
+        # and model_fields_set contains the field
+        if self.bill_to_address_id is None and "bill_to_address_id" in self.model_fields_set:
+            _dict['billToAddressId'] = None
+
         return _dict
 
     @classmethod
@@ -101,7 +102,7 @@ class FreightRequest(BaseModel):
         _obj = cls.model_validate({
             "billToAddressId": obj.get("billToAddressId"),
             "shipToAddressId": obj.get("shipToAddressId"),
-            "shipToAddress": [FreightRequestShipToAddressInner.from_dict(_item) for _item in obj["shipToAddress"]] if obj.get("shipToAddress") is not None else None,
+            "shipToAddress": FreightRequestShipToAddress.from_dict(obj["shipToAddress"]) if obj.get("shipToAddress") is not None else None,
             "lines": [FreightRequestLinesInner.from_dict(_item) for _item in obj["lines"]] if obj.get("lines") is not None else None
         })
         return _obj

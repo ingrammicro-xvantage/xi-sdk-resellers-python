@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bill_to_address_id** | **str** | Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit. | [optional] 
+**bill_to_address_id** | **object** | Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit. | [optional] 
 **ship_to_address_id** | **str** | The ID references the reseller&#39;s address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process. | [optional] 
-**ship_to_address** | [**List[FreightRequestShipToAddressInner]**](FreightRequestShipToAddressInner.md) | The shipping information. | [optional] 
+**ship_to_address** | [**FreightRequestShipToAddress**](FreightRequestShipToAddress.md) |  | [optional] 
 **lines** | [**List[FreightRequestLinesInner]**](FreightRequestLinesInner.md) |  | [optional] 
 
 ## Example

@@ -35,19 +35,17 @@ class TestFreightRequest(unittest.TestCase):
         model = FreightRequest()
         if include_optional:
             return FreightRequest(
-                bill_to_address_id = '',
+                bill_to_address_id = None,
                 ship_to_address_id = '',
-                ship_to_address = [
-                    xi.sdk.resellers.models.freight_request_ship_to_address_inner.freightRequest_shipToAddress_inner(
-                        company_name = '', 
-                        address_line1 = '', 
-                        address_line2 = '', 
-                        address_line3 = '', 
-                        city = '', 
-                        state = '', 
-                        postal_code = '', 
-                        country_code = '', )
-                    ],
+                ship_to_address = xi.sdk.resellers.models.freight_request_ship_to_address.freightRequest_shipToAddress(
+                    company_name = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    address_line3 = '', 
+                    city = '', 
+                    state = '', 
+                    postal_code = '', 
+                    country_code = '', ),
                 lines = [
                     xi.sdk.resellers.models.freight_request_lines_inner.freightRequest_lines_inner(
                         customer_line_number = '', 
