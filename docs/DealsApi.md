@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_resellers_v6_dealsdetails**
-> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id)
+> DealsDetailsResponse get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id, vendor_name)
 
 Deals Details
 
@@ -47,10 +47,11 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
     im_application_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. Example: MyCompany
     deal_id = '12345678' # str | Unique deal ID.
+    vendor_name = 'Cisco' # str | Vendor for that bid
 
     try:
         # Deals Details
-        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id)
+        api_response = api_instance.get_resellers_v6_dealsdetails(im_customer_number, im_country_code, im_correlation_id, im_application_id, deal_id, vendor_name)
         print("The response of DealsApi->get_resellers_v6_dealsdetails:\n")
         pprint(api_response)
     except Exception as e:
@@ -69,6 +70,7 @@ Name | Type | Description  | Notes
  **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
  **im_application_id** | **str**| Unique value used to identify the sender of the transaction. Example: MyCompany | 
  **deal_id** | **str**| Unique deal ID. | 
+ **vendor_name** | **str**| Vendor for that bid | 
 
 ### Return type
 
