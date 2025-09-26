@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**post_createorder_v6**](OrdersApi.md#post_createorder_v6) | **POST** /resellers/v6/orders | Create your Order
 [**post_createorder_v7**](OrdersApi.md#post_createorder_v7) | **POST** /resellers/v7/orders | Create your Order v7
 [**put_ordermodify**](OrdersApi.md#put_ordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
+[**vendor_required_info**](OrdersApi.md#vendor_required_info) | **POST** /resellers/v7/vendorrequiredinfo | Vendor Required Info
 
 
 # **delete_ordercancel**
@@ -596,6 +597,90 @@ Name | Type | Description  | Notes
 **401** | Unauthorized |  -  |
 **404** | Not Found |  -  |
 **500** | Internal Server Error |  * IM-CorrelationID - Unique transaction number to identify each transaction across all the systems. <br>  * IM-SenderID - Unique value used to identify the sender of the transaction. Example: MyCompany <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **vendor_required_info**
+> VendorRequiredInforesponse vendor_required_info(im_customer_number, im_correlation_id, im_country_code, im_sender_id, vendor_required_info_request=vendor_required_info_request)
+
+Vendor Required Info
+
+<p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
+
+### Example
+
+* OAuth Authentication (application):
+
+```python
+import xi.sdk.resellers
+from xi.sdk.resellers.models.vendor_required_info_request import VendorRequiredInfoRequest
+from xi.sdk.resellers.models.vendor_required_inforesponse import VendorRequiredInforesponse
+from xi.sdk.resellers.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.ingrammicro.com:443
+# See configuration.py for a list of all supported configuration parameters.
+configuration = xi.sdk.resellers.Configuration(
+    host = "https://api.ingrammicro.com:443"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with xi.sdk.resellers.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xi.sdk.resellers.OrdersApi(api_client)
+    im_customer_number = '20-222222' # str | Your unique Ingram Micro customer number.
+    im_correlation_id = 'fbac82ba-cf0a-4bcf-fc03-0c5084' # str | Unique transaction number to identify each transaction across all the systems.
+    im_country_code = 'US' # str | Two-character ISO country code.
+    im_sender_id = 'MyCompany' # str | Unique value used to identify the sender of the transaction. 
+    vendor_required_info_request = xi.sdk.resellers.VendorRequiredInfoRequest() # VendorRequiredInfoRequest |  (optional)
+
+    try:
+        # Vendor Required Info
+        api_response = api_instance.vendor_required_info(im_customer_number, im_correlation_id, im_country_code, im_sender_id, vendor_required_info_request=vendor_required_info_request)
+        print("The response of OrdersApi->vendor_required_info:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrdersApi->vendor_required_info: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **im_customer_number** | **str**| Your unique Ingram Micro customer number. | 
+ **im_correlation_id** | **str**| Unique transaction number to identify each transaction across all the systems. | 
+ **im_country_code** | **str**| Two-character ISO country code. | 
+ **im_sender_id** | **str**| Unique value used to identify the sender of the transaction.  | 
+ **vendor_required_info_request** | [**VendorRequiredInfoRequest**](VendorRequiredInfoRequest.md)|  | [optional] 
+
+### Return type
+
+[**VendorRequiredInforesponse**](VendorRequiredInforesponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Ok |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

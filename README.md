@@ -100,6 +100,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**post_createorder_v6**](docs/OrdersApi.md#post_createorder_v6) | **POST** /resellers/v6/orders | Create your Order
 *OrdersApi* | [**post_createorder_v7**](docs/OrdersApi.md#post_createorder_v7) | **POST** /resellers/v7/orders | Create your Order v7
 *OrdersApi* | [**put_ordermodify**](docs/OrdersApi.md#put_ordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
+*OrdersApi* | [**vendor_required_info**](docs/OrdersApi.md#vendor_required_info) | **POST** /resellers/v7/vendorrequiredinfo | Vendor Required Info
 *ProductCatalogApi* | [**get_reseller_v6_productdetail**](docs/ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productdetailcmp**](docs/ProductCatalogApi.md#get_reseller_v6_productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productsearch**](docs/ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
@@ -335,6 +336,13 @@ Class | Method | HTTP request | Description
  - [ValidateQuoteResponseLinesInner](docs/ValidateQuoteResponseLinesInner.md)
  - [ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner](docs/ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.md)
  - [ValidateQuoteResponseVmfAdditionalAttributesInner](docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md)
+ - [VendorRequiredInfoRequest](docs/VendorRequiredInfoRequest.md)
+ - [VendorRequiredInfoRequestProductsInner](docs/VendorRequiredInfoRequestProductsInner.md)
+ - [VendorRequiredInforesponse](docs/VendorRequiredInforesponse.md)
+ - [VendorRequiredInforesponseResponseMessagesInner](docs/VendorRequiredInforesponseResponseMessagesInner.md)
+ - [VendorRequiredInforesponseVmfAdditionalAttributesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInner.md)
+ - [VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
+ - [VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
 
 
 <a id="documentation-for-authorization"></a>

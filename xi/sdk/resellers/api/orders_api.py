@@ -28,6 +28,8 @@ from xi.sdk.resellers.models.order_detail_b2_b import OrderDetailB2B
 from xi.sdk.resellers.models.order_modify_request import OrderModifyRequest
 from xi.sdk.resellers.models.order_modify_response import OrderModifyResponse
 from xi.sdk.resellers.models.order_search_response import OrderSearchResponse
+from xi.sdk.resellers.models.vendor_required_info_request import VendorRequiredInfoRequest
+from xi.sdk.resellers.models.vendor_required_inforesponse import VendorRequiredInforesponse
 
 from xi.sdk.resellers.api_client import ApiClient, RequestSerialized
 from xi.sdk.resellers.api_response import ApiResponse
@@ -2513,6 +2515,340 @@ class OrdersApi:
         return self.api_client.param_serialize(
             method='PUT',
             resource_path='/resellers/v6/orders/{orderNumber}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def vendor_required_info(
+        self,
+        im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_country_code: Annotated[str, Field(strict=True, max_length=10, description="Two-character ISO country code.")],
+        im_sender_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. ")],
+        vendor_required_info_request: Optional[VendorRequiredInfoRequest] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> VendorRequiredInforesponse:
+        """Vendor Required Info
+
+        <p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
+
+        :param im_customer_number: Your unique Ingram Micro customer number. (required)
+        :type im_customer_number: str
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
+        :type im_correlation_id: str
+        :param im_country_code: Two-character ISO country code. (required)
+        :type im_country_code: str
+        :param im_sender_id: Unique value used to identify the sender of the transaction.  (required)
+        :type im_sender_id: str
+        :param vendor_required_info_request:
+        :type vendor_required_info_request: VendorRequiredInfoRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendor_required_info_serialize(
+            im_customer_number=im_customer_number,
+            im_correlation_id=im_correlation_id,
+            im_country_code=im_country_code,
+            im_sender_id=im_sender_id,
+            vendor_required_info_request=vendor_required_info_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "VendorRequiredInforesponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def vendor_required_info_with_http_info(
+        self,
+        im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_country_code: Annotated[str, Field(strict=True, max_length=10, description="Two-character ISO country code.")],
+        im_sender_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. ")],
+        vendor_required_info_request: Optional[VendorRequiredInfoRequest] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[VendorRequiredInforesponse]:
+        """Vendor Required Info
+
+        <p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
+
+        :param im_customer_number: Your unique Ingram Micro customer number. (required)
+        :type im_customer_number: str
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
+        :type im_correlation_id: str
+        :param im_country_code: Two-character ISO country code. (required)
+        :type im_country_code: str
+        :param im_sender_id: Unique value used to identify the sender of the transaction.  (required)
+        :type im_sender_id: str
+        :param vendor_required_info_request:
+        :type vendor_required_info_request: VendorRequiredInfoRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendor_required_info_serialize(
+            im_customer_number=im_customer_number,
+            im_correlation_id=im_correlation_id,
+            im_country_code=im_country_code,
+            im_sender_id=im_sender_id,
+            vendor_required_info_request=vendor_required_info_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "VendorRequiredInforesponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def vendor_required_info_without_preload_content(
+        self,
+        im_customer_number: Annotated[str, Field(strict=True, max_length=10, description="Your unique Ingram Micro customer number.")],
+        im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
+        im_country_code: Annotated[str, Field(strict=True, max_length=10, description="Two-character ISO country code.")],
+        im_sender_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. ")],
+        vendor_required_info_request: Optional[VendorRequiredInfoRequest] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Vendor Required Info
+
+        <p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
+
+        :param im_customer_number: Your unique Ingram Micro customer number. (required)
+        :type im_customer_number: str
+        :param im_correlation_id: Unique transaction number to identify each transaction across all the systems. (required)
+        :type im_correlation_id: str
+        :param im_country_code: Two-character ISO country code. (required)
+        :type im_country_code: str
+        :param im_sender_id: Unique value used to identify the sender of the transaction.  (required)
+        :type im_sender_id: str
+        :param vendor_required_info_request:
+        :type vendor_required_info_request: VendorRequiredInfoRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendor_required_info_serialize(
+            im_customer_number=im_customer_number,
+            im_correlation_id=im_correlation_id,
+            im_country_code=im_country_code,
+            im_sender_id=im_sender_id,
+            vendor_required_info_request=vendor_required_info_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "VendorRequiredInforesponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _vendor_required_info_serialize(
+        self,
+        im_customer_number,
+        im_correlation_id,
+        im_country_code,
+        im_sender_id,
+        vendor_required_info_request,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        # process the header parameters
+        if im_customer_number is not None:
+            _header_params['IM-CustomerNumber'] = im_customer_number
+        if im_correlation_id is not None:
+            _header_params['IM-CorrelationID'] = im_correlation_id
+        if im_country_code is not None:
+            _header_params['IM-CountryCode'] = im_country_code
+        if im_sender_id is not None:
+            _header_params['IM-SenderID'] = im_sender_id
+        # process the form parameters
+        # process the body parameter
+        if vendor_required_info_request is not None:
+            _body_params = vendor_required_info_request
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'application'
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/resellers/v7/vendorrequiredinfo',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
