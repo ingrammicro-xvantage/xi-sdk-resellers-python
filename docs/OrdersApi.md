@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **vendor_required_info**
-> VendorRequiredInforesponse vendor_required_info(im_customer_number, im_correlation_id, im_country_code, im_sender_id, vendor_required_info_request=vendor_required_info_request)
+> List[VendorRequiredInforesponseInner] vendor_required_info(im_customer_number, im_correlation_id, im_country_code, im_sender_id, vendor_required_info_request=vendor_required_info_request)
 
 Vendor Required Info
 
@@ -614,7 +614,7 @@ Vendor Required Info
 ```python
 import xi.sdk.resellers
 from xi.sdk.resellers.models.vendor_required_info_request import VendorRequiredInfoRequest
-from xi.sdk.resellers.models.vendor_required_inforesponse import VendorRequiredInforesponse
+from xi.sdk.resellers.models.vendor_required_inforesponse_inner import VendorRequiredInforesponseInner
 from xi.sdk.resellers.rest import ApiException
 from pprint import pprint
 
@@ -665,7 +665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VendorRequiredInforesponse**](VendorRequiredInforesponse.md)
+[**List[VendorRequiredInforesponseInner]**](VendorRequiredInforesponseInner.md)
 
 ### Authorization
 

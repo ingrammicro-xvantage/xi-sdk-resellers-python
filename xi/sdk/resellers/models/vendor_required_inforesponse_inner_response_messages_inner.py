@@ -22,12 +22,15 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner(BaseModel):
+class VendorRequiredInforesponseInnerResponseMessagesInner(BaseModel):
     """
-    VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
+    VendorRequiredInforesponseInnerResponseMessagesInner
     """ # noqa: E501
-    string: Optional[StrictStr] = Field(default=None, description="The value of the vendor mandatory field choices.")
-    __properties: ClassVar[List[str]] = ["string"]
+    id: Optional[StrictStr] = Field(default=None, description="Unique ID to identify the error.")
+    trace_id: Optional[StrictStr] = Field(default=None, description="A unique trace id to identify the issue.", alias="traceId")
+    type: Optional[StrictStr] = Field(default=None, description="Type of the error message.")
+    message: Optional[StrictStr] = Field(default=None, description="A detailed error message.")
+    __properties: ClassVar[List[str]] = ["id", "traceId", "type", "message"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -47,7 +50,7 @@ class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributes
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner from a JSON string"""
+        """Create an instance of VendorRequiredInforesponseInnerResponseMessagesInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,7 +75,7 @@ class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributes
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner from a dict"""
+        """Create an instance of VendorRequiredInforesponseInnerResponseMessagesInner from a dict"""
         if obj is None:
             return None
 
@@ -80,7 +83,10 @@ class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributes
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "string": obj.get("string")
+            "id": obj.get("id"),
+            "traceId": obj.get("traceId"),
+            "type": obj.get("type"),
+            "message": obj.get("message")
         })
         return _obj
 

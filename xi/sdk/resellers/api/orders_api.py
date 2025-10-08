@@ -29,7 +29,7 @@ from xi.sdk.resellers.models.order_modify_request import OrderModifyRequest
 from xi.sdk.resellers.models.order_modify_response import OrderModifyResponse
 from xi.sdk.resellers.models.order_search_response import OrderSearchResponse
 from xi.sdk.resellers.models.vendor_required_info_request import VendorRequiredInfoRequest
-from xi.sdk.resellers.models.vendor_required_inforesponse import VendorRequiredInforesponse
+from xi.sdk.resellers.models.vendor_required_inforesponse_inner import VendorRequiredInforesponseInner
 
 from xi.sdk.resellers.api_client import ApiClient, RequestSerialized
 from xi.sdk.resellers.api_response import ApiResponse
@@ -2550,7 +2550,7 @@ class OrdersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VendorRequiredInforesponse:
+    ) -> List[VendorRequiredInforesponseInner]:
         """Vendor Required Info
 
         <p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
@@ -2600,7 +2600,7 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VendorRequiredInforesponse",
+            '200': "List[VendorRequiredInforesponseInner]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -2633,7 +2633,7 @@ class OrdersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VendorRequiredInforesponse]:
+    ) -> ApiResponse[List[VendorRequiredInforesponseInner]]:
         """Vendor Required Info
 
         <p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
@@ -2683,7 +2683,7 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VendorRequiredInforesponse",
+            '200': "List[VendorRequiredInforesponseInner]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -2766,7 +2766,7 @@ class OrdersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VendorRequiredInforesponse",
+            '200': "List[VendorRequiredInforesponseInner]",
         }
         response_data = self.api_client.call_api(
             *_param,

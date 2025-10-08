@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.vendor_required_inforesponse_response_messages_inner import VendorRequiredInforesponseResponseMessagesInner
+from xi.sdk.resellers.models.vendor_required_inforesponse_inner_response_messages_inner import VendorRequiredInforesponseInnerResponseMessagesInner
 
-class TestVendorRequiredInforesponseResponseMessagesInner(unittest.TestCase):
-    """VendorRequiredInforesponseResponseMessagesInner unit test stubs"""
+class TestVendorRequiredInforesponseInnerResponseMessagesInner(unittest.TestCase):
+    """VendorRequiredInforesponseInnerResponseMessagesInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,28 +25,28 @@ class TestVendorRequiredInforesponseResponseMessagesInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> VendorRequiredInforesponseResponseMessagesInner:
-        """Test VendorRequiredInforesponseResponseMessagesInner
+    def make_instance(self, include_optional) -> VendorRequiredInforesponseInnerResponseMessagesInner:
+        """Test VendorRequiredInforesponseInnerResponseMessagesInner
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `VendorRequiredInforesponseResponseMessagesInner`
+        # uncomment below to create an instance of `VendorRequiredInforesponseInnerResponseMessagesInner`
         """
-        model = VendorRequiredInforesponseResponseMessagesInner()
+        model = VendorRequiredInforesponseInnerResponseMessagesInner()
         if include_optional:
-            return VendorRequiredInforesponseResponseMessagesInner(
+            return VendorRequiredInforesponseInnerResponseMessagesInner(
                 id = '',
                 trace_id = '',
                 type = '',
                 message = ''
             )
         else:
-            return VendorRequiredInforesponseResponseMessagesInner(
+            return VendorRequiredInforesponseInnerResponseMessagesInner(
         )
         """
 
-    def testVendorRequiredInforesponseResponseMessagesInner(self):
-        """Test VendorRequiredInforesponseResponseMessagesInner"""
+    def testVendorRequiredInforesponseInnerResponseMessagesInner(self):
+        """Test VendorRequiredInforesponseInnerResponseMessagesInner"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

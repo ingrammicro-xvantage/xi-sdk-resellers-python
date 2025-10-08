@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.vendor_required_inforesponse import VendorRequiredInforesponse
+from xi.sdk.resellers.models.vendor_required_inforesponse_inner import VendorRequiredInforesponseInner
 
-class TestVendorRequiredInforesponse(unittest.TestCase):
-    """VendorRequiredInforesponse unit test stubs"""
+class TestVendorRequiredInforesponseInner(unittest.TestCase):
+    """VendorRequiredInforesponseInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,63 +25,63 @@ class TestVendorRequiredInforesponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> VendorRequiredInforesponse:
-        """Test VendorRequiredInforesponse
+    def make_instance(self, include_optional) -> VendorRequiredInforesponseInner:
+        """Test VendorRequiredInforesponseInner
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `VendorRequiredInforesponse`
+        # uncomment below to create an instance of `VendorRequiredInforesponseInner`
         """
-        model = VendorRequiredInforesponse()
+        model = VendorRequiredInforesponseInner()
         if include_optional:
-            return VendorRequiredInforesponse(
+            return VendorRequiredInforesponseInner(
                 quote_number = 'quoteNumber=QUO-14551943-D2Y9L9',
                 ingram_part_number = '',
                 vendor_part_number = '',
                 plan_id = '',
                 plan_name = '',
                 response_messages = [
-                    xi.sdk.resellers.models.vendor_required_inforesponse_response_messages_inner.VendorRequiredInforesponse_responseMessages_inner(
+                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_response_messages_inner.VendorRequiredInforesponse_inner_responseMessages_inner(
                         id = '', 
                         trace_id = '', 
                         type = '', 
                         message = '', )
                     ],
                 vmf_additional_attributes = [
-                    xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner.VendorRequiredInforesponse_vmfAdditionalAttributes_inner(
+                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner(
                         vendor_name = '', 
                         product_id = '', 
                         additional_attributes = [
-                            xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner(
+                            xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner(
                                 attribute_name = '', 
                                 attribute_value = '', 
                                 attribute_description = '', 
                                 attribute_hint = '', 
                                 choices = [
-                                    xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
+                                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
                                         string = '', )
                                     ], )
                             ], )
                     ],
                 vri_additional_attributes = [
-                    xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner(
+                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner(
                         attribute_name = '', 
                         attribute_value = '', 
                         attribute_description = '', 
                         attribute_hint = '', 
                         choices = [
-                            xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
+                            xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
                                 string = '', )
                             ], )
                     ]
             )
         else:
-            return VendorRequiredInforesponse(
+            return VendorRequiredInforesponseInner(
         )
         """
 
-    def testVendorRequiredInforesponse(self):
-        """Test VendorRequiredInforesponse"""
+    def testVendorRequiredInforesponseInner(self):
+        """Test VendorRequiredInforesponseInner"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

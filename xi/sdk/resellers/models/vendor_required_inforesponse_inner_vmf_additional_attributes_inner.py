@@ -19,18 +19,18 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class VendorRequiredInforesponseResponseMessagesInner(BaseModel):
+class VendorRequiredInforesponseInnerVmfAdditionalAttributesInner(BaseModel):
     """
-    VendorRequiredInforesponseResponseMessagesInner
+    VendorRequiredInforesponseInnerVmfAdditionalAttributesInner
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="Unique ID to identify the error.")
-    trace_id: Optional[StrictStr] = Field(default=None, description="A unique trace id to identify the issue.", alias="traceId")
-    type: Optional[StrictStr] = Field(default=None, description="Type of the error message.")
-    message: Optional[StrictStr] = Field(default=None, description="A detailed error message.")
-    __properties: ClassVar[List[str]] = ["id", "traceId", "type", "message"]
+    vendor_name: Optional[StrictStr] = Field(default=None, description="The name of vendor.", alias="vendorName")
+    product_id: Optional[StrictStr] = Field(default=None, description="The ID of product.", alias="productId")
+    additional_attributes: Optional[List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner]] = Field(default=None, alias="additionalAttributes")
+    __properties: ClassVar[List[str]] = ["vendorName", "productId", "additionalAttributes"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +50,7 @@ class VendorRequiredInforesponseResponseMessagesInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseResponseMessagesInner from a JSON string"""
+        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +71,18 @@ class VendorRequiredInforesponseResponseMessagesInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
+        _items = []
+        if self.additional_attributes:
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
+            _dict['additionalAttributes'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseResponseMessagesInner from a dict"""
+        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInner from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +90,9 @@ class VendorRequiredInforesponseResponseMessagesInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "traceId": obj.get("traceId"),
-            "type": obj.get("type"),
-            "message": obj.get("message")
+            "vendorName": obj.get("vendorName"),
+            "productId": obj.get("productId"),
+            "additionalAttributes": [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
 
