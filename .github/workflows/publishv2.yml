@@ -1,0 +1,59 @@
+name: Python Package Publishing(V2)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Enter the new version for the package'
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4  # Updated to v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5  # Updated to v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build --no-cache-dir
+
+    - name: Update version in pyproject.toml
+      run: |
+        sed -i "s/version = \".*\"/version = \"${{ github.event.inputs.version }}\"/" pyproject.toml
+
+    - name: Update download URL in pyproject.toml
+      run: |
+        latest_version="${{ github.event.inputs.version }}"
+        latest_download_url="https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/${latest_version}.tar.gz"
+        sed -i "s|Download = \"https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/.*\.tar\.gz\"|Download = \"${latest_download_url}\"|" pyproject.toml
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
+        git config --global user.name "${{ secrets.ORG_NAME }}"
+        git add .
+        if git diff --exit-code; then
+          echo "No changes to commit."
+        else
+          git commit -m "Bump version to ${{ github.event.inputs.version }}"
+          git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-python main
+        fi
+
+    - name: Build package
+      run: python -m build
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_TOKEN }}

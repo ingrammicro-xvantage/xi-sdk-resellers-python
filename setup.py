@@ -39,7 +39,7 @@ CLASSIFIERS = [
 
 setup(
     name=NAME,
-    version="1.2.1",
+    version="1.3.0",
     description="Ingram Micro - Xvantage Integration (XI) Python Server-side SDK.",
     author="Ingram Micro Xvantage Integration(XI)",
     author_email="xi_support@ingrammicro.com",
@@ -55,7 +55,7 @@ setup(
     license='MIT',
     project_urls={
         'GitHub Repo': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python',
-        'Download': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/1.1.0.tar.gz',
+        'Download': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/1.3.0.tar.gz',
         'Release Notes': 'https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/releases/',
     },
 )
