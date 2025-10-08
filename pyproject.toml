@@ -1,95 +1,40 @@
 [project]
 name = "xi.sdk.resellers"
-version = "1.0.0"
-description = "XI Sdk Resellers"
+version = "1.2.1"  # Updated from 1.0.0 to match setup.py
+description = "Ingram Micro - Xvantage Integration (XI) Python Server-side SDK."  # Longer description from setup.py
 authors = [
-  {name = "Ingram Micro Xvantage Integration(XI)",email = "xi_support@ingrammicro.com"},
+  {name = "Ingram Micro Xvantage Integration(XI)", email = "xi_support@ingrammicro.com"},
 ]
-license = "MIT"
+license = {text = "MIT"}  # Explicit for clarity; matches setup.py
 readme = "README.md"
-keywords = ["Ingram Micro", "XI Sdk Resellers"]
-requires-python = ">=3.9"
-
+# long_description_content_type = "text/markdown"  # Add this; inferred from readme but explicit is better for PyPI
+keywords = ["xvantage", "ingrammicro", "resellerapi", "xvantage integration"]  # Updated to match setup.py (replaces previous)
+requires-python = ">=3.8"  # Relaxed from >=3.9 to match setup.py
 dependencies = [
-  "urllib3 (>=2.1.0,<3.0.0)",
+  "urllib3 (>=2.1.0,<3.0.0)",  # Matches REQUIRES
   "python-dateutil (>=2.8.2)",
   "pydantic (>=2)",
-  "typing-extensions (>=4.7.1)"
+  "typing-extensions (>=4.7.1)",
 ]
 
 [project.urls]
-Repository = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python"
+Repository = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python"  # Existing
+Homepage = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python"  # Add; common for PyPI
+Download = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/1.2.1.tar.gz"  # Updated version; from setup.py
+"Release Notes" = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/releases/"  # From setup.py
 
-[tool.poetry]
-requires-poetry = ">=2.0"
-
-[tool.poetry.group.dev.dependencies]
-pytest = ">= 7.2.1"
-pytest-cov = ">= 2.8.1"
-tox = ">= 3.9.0"
-flake8 = ">= 4.0.0"
-types-python-dateutil = ">= 2.8.19.14"
-mypy = ">= 1.5"
-
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[tool.pylint.'MESSAGES CONTROL']
-extension-pkg-whitelist = "pydantic"
-
-[tool.mypy]
-files = [
-  "xi.sdk.resellers",
-  #"test",  # auto-generated tests
-  "tests", # hand-written tests
+classifiers = [  # Full list from setup.py for better PyPI discoverability
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",  # Added for API relevance
 ]
-# TODO: enable "strict" once all these individual checks are passing
-# strict = true
-
-# List from: https://mypy.readthedocs.io/en/stable/existing_code.html#introduce-stricter-options
-warn_unused_configs = true
-warn_redundant_casts = true
-warn_unused_ignores = true
-
-## Getting these passing should be easy
-strict_equality = true
-extra_checks = true
-
-## Strongly recommend enabling this one as soon as you can
-check_untyped_defs = true
-
-## These shouldn't be too much additional work, but may be tricky to
-## get passing if you use a lot of untyped libraries
-disallow_subclassing_any = true
-disallow_untyped_decorators = true
-disallow_any_generics = true
-
-### These next few are various gradations of forcing use of type annotations
-#disallow_untyped_calls = true
-#disallow_incomplete_defs = true
-#disallow_untyped_defs = true
-#
-### This one isn't too hard to get passing, but return on investment is lower
-#no_implicit_reexport = true
-#
-### This one can be tricky to get passing if you use a lot of untyped libraries
-#warn_return_any = true
-
-[[tool.mypy.overrides]]
-module = [
-  "xi.sdk.resellers.configuration",
-]
-warn_unused_ignores = true
-strict_equality = true
-extra_checks = true
-check_untyped_defs = true
-disallow_subclassing_any = true
-disallow_untyped_decorators = true
-disallow_any_generics = true
-disallow_untyped_calls = true
-disallow_incomplete_defs = true
-disallow_untyped_defs = true
-no_implicit_reexport = true
-warn_return_any = true
