@@ -21,14 +21,17 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Set version as output
       - name: Set version output
         id: set_version
         run: |
           echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
 
+      # Optional Build & Publish Package
       - name: Optional Build & Publish Package
         if: ${{ github.event.inputs.publish_package == 'true' && github.event.inputs.deploy_only == 'false' }}
         run: |
@@ -38,11 +41,19 @@ jobs:
           python -m build
           python -m twine upload dist/* -u __token__ -p ${{ secrets.PYPI_TOKEN }}
 
+      # Configure Git for tagging
+      - name: Configure Git
+        run: |
+          git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
+          git config --global user.name "${{ secrets.ORG_NAME }}"
+
+      # Create Git tag for version
       - name: Create Git tag for version
         run: |
           git tag -fa "v${{ github.event.inputs.version }}" -m "Tag for version ${{ github.event.inputs.version }}"
           git push origin "v${{ github.event.inputs.version }}" --force
 
+      # Create GitHub Release
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
@@ -50,11 +61,12 @@ jobs:
           name: "v${{ github.event.inputs.version }} Release"
           body: "Python SDK version ${{ github.event.inputs.version }} deployed successfully"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
 
+      # Create GitHub Deployment (Deployments tab)
       - name: Create GitHub Deployment
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
