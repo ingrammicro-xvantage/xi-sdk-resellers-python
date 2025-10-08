@@ -66,12 +66,12 @@ jobs:
         name: "v${{ github.event.inputs.version }} Release"
         body: "Published Python SDK version ${{ github.event.inputs.version }}"
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
 
     - name: Create GitHub Deployment
       if: success()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       run: |
         TAG_NAME="v${{ github.event.inputs.version }}"
         gh deployment create "$TAG_NAME" \
