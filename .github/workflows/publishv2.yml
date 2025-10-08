@@ -60,7 +60,8 @@ jobs:
         with:
           tag_name: "v${{ github.event.inputs.version }}"
           name: "v${{ github.event.inputs.version }} Release"
-          body: ${{ github.event.inputs.deploy_only == 'true' && 'Manual deployment for already published package. PyPI: https://pypi.org/project/xi.sdk.resellers/' || format('Published Python SDK version {}', github.event.inputs.version) }}
+          body: >-
+            ${{ github.event.inputs.deploy_only == 'true' && 'Manual deployment for already published package. PyPI: https://pypi.org/project/xi.sdk.resellers/' || format('Published Python SDK version {}', github.event.inputs.version) }}
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
 
@@ -72,28 +73,20 @@ jobs:
           DEPLOYMENT_ID=$(curl -s -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Content-Type: application/json" \
             https://api.github.com/repos/${{ github.repository }}/deployments \
-            -d @- << EOF
-          {
-            "ref": "v${{ github.event.inputs.version }}",
-            "environment": "production",
-            "description": "Python SDK version v${{ github.event.inputs.version }} deployed successfully. PyPI: https://pypi.org/project/xi.sdk.resellers/",
-            "auto_merge": false,
-            "required_contexts": []
-          }
-EOF
+            -d "$(jq -n \
+              --arg ref "v${{ github.event.inputs.version }}" \
+              --arg desc "Python SDK version v${{ github.event.inputs.version }} deployed successfully. PyPI: https://pypi.org/project/xi.sdk.resellers/" \
+              '{ref: $ref, environment: "production", description: $desc, auto_merge: false, required_contexts: []}')" \
             | jq -r '.id'
           )
 
-          # Mark deployment as success
           curl -s -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Content-Type: application/json" \
             https://api.github.com/repos/${{ github.repository }}/deployments/$DEPLOYMENT_ID/statuses \
-            -d @- << EOF
-          {
-            "state": "success",
-            "description": "Version v${{ github.event.inputs.version }} deployed. PyPI: https://pypi.org/project/xi.sdk.resellers/",
-            "environment": "production"
-          }
-EOF
+            -d "$(jq -n \
+              --arg desc "Version v${{ github.event.inputs.version }} deployed. PyPI: https://pypi.org/project/xi.sdk.resellers/" \
+              '{state: "success", description: $desc, environment: "production"}')"
