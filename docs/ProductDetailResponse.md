@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **customer_part_number** | **str** | Reseller / end-user’s part number for the product. | [optional] 
 **indicators** | [**ProductDetailResponseIndicators**](ProductDetailResponseIndicators.md) |  | [optional] 
 **cisco_fields** | [**ProductDetailResponseCiscoFields**](ProductDetailResponseCiscoFields.md) |  | [optional] 
-**warranty_information** | **List[object]** | Warranty information related to the product. | [optional] 
+**warranty_information** | **List[str]** | Warranty codes related to the product. | [optional] 
 **additional_information** | [**ProductDetailResponseAdditionalInformation**](ProductDetailResponseAdditionalInformation.md) |  | [optional] 
 **subscription_details** | [**List[ProductDetailResponseSubscriptionDetailsInner]**](ProductDetailResponseSubscriptionDetailsInner.md) | Subscription product Details | [optional] 
 

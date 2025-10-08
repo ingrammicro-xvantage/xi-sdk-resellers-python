@@ -44,7 +44,7 @@ class ProductDetailResponse(BaseModel):
     customer_part_number: Optional[StrictStr] = Field(default=None, description="Reseller / end-user’s part number for the product.", alias="customerPartNumber")
     indicators: Optional[ProductDetailResponseIndicators] = None
     cisco_fields: Optional[ProductDetailResponseCiscoFields] = Field(default=None, alias="ciscoFields")
-    warranty_information: Optional[List[Dict[str, Any]]] = Field(default=None, description="Warranty information related to the product.", alias="warrantyInformation")
+    warranty_information: Optional[List[StrictStr]] = Field(default=None, description="Warranty codes related to the product.", alias="warrantyInformation")
     additional_information: Optional[ProductDetailResponseAdditionalInformation] = Field(default=None, alias="additionalInformation")
     subscription_details: Optional[List[ProductDetailResponseSubscriptionDetailsInner]] = Field(default=None, description="Subscription product Details", alias="subscriptionDetails")
     __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "productAuthorized", "description", "upc", "productCategory", "productSubcategory", "vendorName", "vendorNumber", "productStatusCode", "productClass", "customerPartNumber", "indicators", "ciscoFields", "warrantyInformation", "additionalInformation", "subscriptionDetails"]

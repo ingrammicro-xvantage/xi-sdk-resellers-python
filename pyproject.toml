@@ -5,9 +5,9 @@ description = "XI Sdk Resellers"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},
 ]
-license = "MIT"
+license = "NoLicense"
 readme = "README.md"
-keywords = ["XI Sdk Resellers"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "XI Sdk Resellers"]
 requires-python = ">=3.9"
 
 dependencies = [
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python"
+Repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 
 [tool.poetry]
 requires-poetry = ">=2.0"
