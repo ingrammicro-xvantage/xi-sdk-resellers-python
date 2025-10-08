@@ -12,6 +12,7 @@
     Do not edit the class manually.
 """  # noqa: E501
 
+
 # import models into model package
 from xi.sdk.resellers.models.accesstoken_response import AccesstokenResponse
 from xi.sdk.resellers.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest
@@ -238,4 +239,3 @@ from xi.sdk.resellers.models.vendor_required_inforesponse_response_messages_inne
 from xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner import VendorRequiredInforesponseVmfAdditionalAttributesInner
 from xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner import VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner
 from xi.sdk.resellers.models.vendor_required_inforesponse_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner import VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
-

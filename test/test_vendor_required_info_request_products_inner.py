@@ -37,7 +37,7 @@ class TestVendorRequiredInfoRequestProductsInner(unittest.TestCase):
             return VendorRequiredInfoRequestProductsInner(
                 ingram_part_number = '',
                 vendor_part_number = '',
-                plan_id = 56
+                plan_id = ''
             )
         else:
             return VendorRequiredInfoRequestProductsInner(

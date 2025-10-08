@@ -40,7 +40,7 @@ class TestVendorRequiredInfoRequest(unittest.TestCase):
                     xi.sdk.resellers.models.vendor_required_info_request_products_inner.VendorRequiredInfoRequest_products_inner(
                         ingram_part_number = '', 
                         vendor_part_number = '', 
-                        plan_id = 56, )
+                        plan_id = '', )
                     ]
             )
         else:

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ingram_part_number** | **str** | Ingram Micro unique part number for the product. | [optional] 
 **vendor_part_number** | **str** | Vendor’s part number for the product. It can be either TS Product or Cloud Product vendorpartnumber. | [optional] 
-**plan_id** | **int** | The ID of the subscription plan. | [optional] 
+**plan_id** | **str** | The ID of the subscription plan. | [optional] 
 
 ## Example
 

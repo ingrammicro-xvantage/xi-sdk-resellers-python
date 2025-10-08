@@ -38,7 +38,7 @@ class TestVendorRequiredInforesponse(unittest.TestCase):
                 quote_number = 'quoteNumber=QUO-14551943-D2Y9L9',
                 ingram_part_number = '',
                 vendor_part_number = '',
-                plan_id = 56,
+                plan_id = '',
                 plan_name = '',
                 response_messages = [
                     xi.sdk.resellers.models.vendor_required_inforesponse_response_messages_inner.VendorRequiredInforesponse_responseMessages_inner(

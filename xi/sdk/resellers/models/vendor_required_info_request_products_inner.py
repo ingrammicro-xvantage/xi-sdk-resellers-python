@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,7 +28,7 @@ class VendorRequiredInfoRequestProductsInner(BaseModel):
     """ # noqa: E501
     ingram_part_number: Optional[StrictStr] = Field(default=None, description="Ingram Micro unique part number for the product.", alias="ingramPartNumber")
     vendor_part_number: Optional[StrictStr] = Field(default=None, description="Vendor’s part number for the product. It can be either TS Product or Cloud Product vendorpartnumber.", alias="vendorPartNumber")
-    plan_id: Optional[StrictInt] = Field(default=None, description="The ID of the subscription plan.", alias="planID")
+    plan_id: Optional[StrictStr] = Field(default=None, description="The ID of the subscription plan.", alias="planID")
     __properties: ClassVar[List[str]] = ["ingramPartNumber", "vendorPartNumber", "planID"]
 
     model_config = ConfigDict(
