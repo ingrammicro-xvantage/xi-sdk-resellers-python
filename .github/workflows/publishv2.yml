@@ -1,54 +1,55 @@
-name: Python SDK Deployment & Release
+name: Python Package Publishing (V2)
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Enter the version to deploy/release'
+        description: 'Enter the new version for the package'
         required: true
       deploy_only:
-        description: 'Set true to skip building/publishing and only create deployment & release'
-        required: false
-        default: false
-      publish_package:
-        description: 'Set true to build and publish package to PyPI'
+        description: 'Set true to skip build/publish and only create release & deployment'
         required: false
         default: false
 
 jobs:
-  deploy-release:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
+
     steps:
       # Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Set version as output
-      - name: Set version output
-        id: set_version
-        run: |
-          echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      # Optional Build & Publish Package
-      - name: Optional Build & Publish Package
-        if: ${{ github.event.inputs.publish_package == 'true' && github.event.inputs.deploy_only == 'false' }}
+      # Optional Build & Publish (skip if deploy_only is true)
+      - name: Build & Publish Package
+        if: ${{ github.event.inputs.deploy_only != 'true' }}
         run: |
           python -m pip install --upgrade pip
           pip install build --no-cache-dir twine
           sed -i "s/^version = \".*\"/version = \"${{ github.event.inputs.version }}\"/" pyproject.toml
+          latest_version="${{ github.event.inputs.version }}"
+          latest_download_url="https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/archive/${latest_version}.tar.gz"
+          sed -i "s|Download = \".*\"|Download = \"${latest_download_url}\"|" pyproject.toml
           python -m build
           python -m twine upload dist/* -u __token__ -p ${{ secrets.PYPI_TOKEN }}
 
-      # Configure Git for tagging
+      # Configure Git
       - name: Configure Git
         run: |
           git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
           git config --global user.name "${{ secrets.ORG_NAME }}"
 
       # Create Git tag for version
-      - name: Create Git tag for version
+      - name: Create Git tag
         run: |
           git tag -fa "v${{ github.event.inputs.version }}" -m "Tag for version ${{ github.event.inputs.version }}"
           git push origin "v${{ github.event.inputs.version }}" --force
@@ -59,24 +60,39 @@ jobs:
         with:
           tag_name: "v${{ github.event.inputs.version }}"
           name: "v${{ github.event.inputs.version }} Release"
-          body: "Python SDK version ${{ github.event.inputs.version }} deployed successfully"
+          body: ${{ github.event.inputs.deploy_only == 'true' && 'Manual deployment for already published package. PyPI: https://pypi.org/project/xi.sdk.resellers/' || format('Published Python SDK version {}', github.event.inputs.version) }}
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
 
-      # Create GitHub Deployment (Deployments tab)
-      - name: Create GitHub Deployment
+      # Create Deployment & mark as success
+      - name: Create Deployment and mark as success
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
-          curl -X POST \
+          DEPLOYMENT_ID=$(curl -s -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             https://api.github.com/repos/${{ github.repository }}/deployments \
-            -d @- << EOF
+            -d @- << EOF | jq -r '.id'
           {
             "ref": "v${{ github.event.inputs.version }}",
             "environment": "production",
-            "description": "Python SDK version v${{ github.event.inputs.version }} deployed successfully",
+            "description": "Python SDK version v${{ github.event.inputs.version }} deployed successfully. PyPI: https://pypi.org/project/xi.sdk.resellers/",
             "auto_merge": false,
             "required_contexts": []
           }
+EOF
+          )
+
+          # Mark deployment as success
+          curl -s -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            https://api.github.com/repos/${{ github.repository }}/deployments/$DEPLOYMENT_ID/statuses \
+            -d @- << EOF
+          {
+            "state": "success",
+            "description": "Version v${{ github.event.inputs.version }} deployed. PyPI: https://pypi.org/project/xi.sdk.resellers/",
+            "environment": "production"
+          }
+EOF
