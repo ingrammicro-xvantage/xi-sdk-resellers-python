@@ -48,6 +48,7 @@ class DealsApi:
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
+        vendor_name: Annotated[StrictStr, Field(description="Vendor for that bid")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -75,6 +76,8 @@ class DealsApi:
         :type im_application_id: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
+        :param vendor_name: Vendor for that bid (required)
+        :type vendor_name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -103,6 +106,7 @@ class DealsApi:
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
             deal_id=deal_id,
+            vendor_name=vendor_name,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -133,6 +137,7 @@ class DealsApi:
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
+        vendor_name: Annotated[StrictStr, Field(description="Vendor for that bid")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -160,6 +165,8 @@ class DealsApi:
         :type im_application_id: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
+        :param vendor_name: Vendor for that bid (required)
+        :type vendor_name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -188,6 +195,7 @@ class DealsApi:
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
             deal_id=deal_id,
+            vendor_name=vendor_name,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -218,6 +226,7 @@ class DealsApi:
         im_correlation_id: Annotated[str, Field(strict=True, max_length=32, description="Unique transaction number to identify each transaction across all the systems.")],
         im_application_id: Annotated[str, Field(strict=True, max_length=32, description="Unique value used to identify the sender of the transaction. Example: MyCompany")],
         deal_id: Annotated[StrictStr, Field(description="Unique deal ID.")],
+        vendor_name: Annotated[StrictStr, Field(description="Vendor for that bid")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -245,6 +254,8 @@ class DealsApi:
         :type im_application_id: str
         :param deal_id: Unique deal ID. (required)
         :type deal_id: str
+        :param vendor_name: Vendor for that bid (required)
+        :type vendor_name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -273,6 +284,7 @@ class DealsApi:
             im_correlation_id=im_correlation_id,
             im_application_id=im_application_id,
             deal_id=deal_id,
+            vendor_name=vendor_name,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -298,6 +310,7 @@ class DealsApi:
         im_correlation_id,
         im_application_id,
         deal_id,
+        vendor_name,
         _request_auth,
         _content_type,
         _headers,
@@ -322,6 +335,10 @@ class DealsApi:
         if deal_id is not None:
             _path_params['dealId'] = deal_id
         # process the query parameters
+        if vendor_name is not None:
+            
+            _query_params.append(('vendorName', vendor_name))
+            
         # process the header parameters
         if im_customer_number is not None:
             _header_params['IM-CustomerNumber'] = im_customer_number

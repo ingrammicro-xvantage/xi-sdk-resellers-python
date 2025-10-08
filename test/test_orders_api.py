@@ -68,6 +68,13 @@ class TestOrdersApi(unittest.TestCase):
         """
         pass
 
+    def test_vendor_required_info(self) -> None:
+        """Test case for vendor_required_info
+
+        Vendor Required Info
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

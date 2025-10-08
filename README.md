@@ -47,6 +47,7 @@ Execute `pytest` to run the tests.
 ## Getting Started
 
 Quickstart on creating an application can be found [here](getting-started.md)
+Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
 
@@ -80,7 +81,6 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
 
 ```
 
-
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.ingrammicro.com:443*
@@ -100,6 +100,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**post_createorder_v6**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#post_createorder_v6) | **POST** /resellers/v6/orders | Create your Order
 *OrdersApi* | [**post_createorder_v7**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#post_createorder_v7) | **POST** /resellers/v7/orders | Create your Order v7
 *OrdersApi* | [**put_ordermodify**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#put_ordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
+*OrdersApi* | [**vendor_required_info**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/OrdersApi.md#vendor_required_info) | **POST** /resellers/v7/vendorrequiredinfo | Vendor Required Info
 *ProductCatalogApi* | [**get_reseller_v6_productdetail**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productdetailcmp**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 *ProductCatalogApi* | [**get_reseller_v6_productsearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ProductCatalogApi.md#get_reseller_v6_productsearch) | **GET** /resellers/v6/catalog | Search Products
@@ -335,6 +336,30 @@ Class | Method | HTTP request | Description
  - [ValidateQuoteResponseLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ValidateQuoteResponseLinesInner.md)
  - [ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.md)
  - [ValidateQuoteResponseVmfAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md)
+ - [VendorRequiredInfoRequest](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInfoRequest.md)
+ - [VendorRequiredInfoRequestProductsInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInfoRequestProductsInner.md)
+ - [VendorRequiredInforesponseInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInforesponseInner.md)
+ - [VendorRequiredInforesponseInnerResponseMessagesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInforesponseInnerResponseMessagesInner.md)
+ - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md)
+ - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
+ - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/tree/main/docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
+
+
+<a id="documentation-for-authorization"></a>
+## Documentation For Authorization
+
+
+Authentication schemes defined for the API:
+<a id="application"></a>
+### application
+
+- **Type**: OAuth
+- **Flow**: application
+- **Authorization URL**: 
+- **Scopes**: 
+ - **write**: allows modifying resources
+ - **read**: allows reading resources
+ - **description**: 
 
 
 ## Documentation For Authorization
@@ -360,3 +385,5 @@ Authentication schemes defined for the API:
 For any inquiries or support, please feel free to contact us at:
 
 - Email: xi_support@ingrammicro.com
+
+- If you encounter any issues, such as bugs or feature requests, we encourage you to [create a GitHub issue](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-python/issues/new) in our repository.

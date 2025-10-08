@@ -87,9 +87,7 @@ class TestProductDetailResponse(unittest.TestCase):
                     internal_business_entity = '', 
                     item_type = '', 
                     global_list_price = '', ),
-                warranty_information = [
-                    None
-                    ],
+                warranty_information = ["01XL55","07ZL02","08UC41"],
                 additional_information = xi.sdk.resellers.models.product_detail_response_additional_information.ProductDetailResponse_additionalInformation(
                     product_weight = [
                         xi.sdk.resellers.models.product_detail_response_additional_information_product_weight_inner.ProductDetailResponse_additionalInformation_productWeight_inner(
