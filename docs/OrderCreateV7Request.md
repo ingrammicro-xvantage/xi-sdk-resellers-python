@@ -18,7 +18,9 @@ Name | Type | Description | Notes
 **ship_to_info** | [**OrderCreateV7RequestShipToInfo**](OrderCreateV7RequestShipToInfo.md) |  | [optional] 
 **shipment_details** | [**OrderCreateV7RequestShipmentDetails**](OrderCreateV7RequestShipmentDetails.md) |  | [optional] 
 **additional_attributes** | [**List[OrderCreateV7RequestAdditionalAttributesInner]**](OrderCreateV7RequestAdditionalAttributesInner.md) | Shipment-level additional attributes. | [optional] 
-**vmf_additional_attributes** | [**List[OrderCreateV7RequestVmfAdditionalAttributesInner]**](OrderCreateV7RequestVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor. | [optional] 
+**vmf_additional_attributes** | [**List[OrderCreateV7RequestVmfAdditionalAttributesInner]**](OrderCreateV7RequestVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor.&lt;br&gt; This a &lt;code&gt;Deprecated&lt;/code&gt; object. Kindly use &lt;b&gt;vmfVendorAdditionalAttributes&lt;/b&gt; object | [optional] 
+**vmf_vendor_additional_attributes** | [**List[OrderCreateV7RequestVmfVendorAdditionalAttributesInner]**](OrderCreateV7RequestVmfVendorAdditionalAttributesInner.md) | The object containing the list of Vendor Mandatory Fields required by the vendor for the Hardware products. | [optional] 
+**vri_additional_attributes** | [**List[OrderCreateV7RequestVmfVendorAdditionalAttributesInner]**](OrderCreateV7RequestVmfVendorAdditionalAttributesInner.md) | The object containing the list of Vendor Mandatory Fields required by the vendor for the subscription products.&lt;br&gt; Use this object ONLY when using a full quote ordering for a subsciption product. For line-level ordering use &lt;b&gt;vriAdditionalAttributes&lt;/b&gt; object inside the line object.  | [optional] 
 **lines** | [**List[OrderCreateV7RequestLinesInner]**](OrderCreateV7RequestLinesInner.md) |  | [optional] 
 
 ## Example
