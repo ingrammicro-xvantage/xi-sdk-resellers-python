@@ -19,15 +19,18 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from xi.sdk.resellers.models.additional_attribute import AdditionalAttribute
 from typing import Optional, Set
 from typing_extensions import Self
 
-class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner(BaseModel):
+class VmfVriAdditionalAttributeContainer(BaseModel):
     """
-    VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
+    VmfVriAdditionalAttributeContainer
     """ # noqa: E501
-    string: Optional[StrictStr] = Field(default=None, description="The value of the vendor mandatory field choices.")
-    __properties: ClassVar[List[str]] = ["string"]
+    vendor_name: Optional[StrictStr] = Field(default=None, description="The name of vendor.", alias="vendorName")
+    product_id: Optional[StrictStr] = Field(default=None, description="The ID of product.", alias="productId")
+    additional_attributes: Optional[List[AdditionalAttribute]] = Field(default=None, description="List of required attributes for the specific product.", alias="additionalAttributes")
+    __properties: ClassVar[List[str]] = ["vendorName", "productId", "additionalAttributes"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -47,7 +50,7 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner from a JSON string"""
+        """Create an instance of VmfVriAdditionalAttributeContainer from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -68,11 +71,18 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in additional_attributes (list)
+        _items = []
+        if self.additional_attributes:
+            for _item_additional_attributes in self.additional_attributes:
+                if _item_additional_attributes:
+                    _items.append(_item_additional_attributes.to_dict())
+            _dict['additionalAttributes'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner from a dict"""
+        """Create an instance of VmfVriAdditionalAttributeContainer from a dict"""
         if obj is None:
             return None
 
@@ -80,7 +90,9 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "string": obj.get("string")
+            "vendorName": obj.get("vendorName"),
+            "productId": obj.get("productId"),
+            "additionalAttributes": [AdditionalAttribute.from_dict(_item) for _item in obj["additionalAttributes"]] if obj.get("additionalAttributes") is not None else None
         })
         return _obj
 

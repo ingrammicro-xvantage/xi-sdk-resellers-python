@@ -39,6 +39,7 @@ __all__ = [
     "ApiAttributeError",
     "ApiException",
     "AccesstokenResponse",
+    "AdditionalAttribute",
     "AvailabilityAsyncNotificationRequest",
     "AvailabilityAsyncNotificationRequestResourceInner",
     "AvailabilityAsyncNotificationRequestResourceInnerLinksInner",
@@ -268,9 +269,7 @@ __all__ = [
     "VendorRequiredInfoRequestProductsInner",
     "VendorRequiredInforesponseInner",
     "VendorRequiredInforesponseInnerResponseMessagesInner",
-    "VendorRequiredInforesponseInnerVmfAdditionalAttributesInner",
-    "VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner",
-    "VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner",
+    "VmfVriAdditionalAttributeContainer",
 ]
 
 # import apis into sdk package
@@ -299,6 +298,7 @@ from xi.sdk.resellers.exceptions import ApiException as ApiException
 
 # import models into sdk package
 from xi.sdk.resellers.models.accesstoken_response import AccesstokenResponse as AccesstokenResponse
+from xi.sdk.resellers.models.additional_attribute import AdditionalAttribute as AdditionalAttribute
 from xi.sdk.resellers.models.availability_async_notification_request import AvailabilityAsyncNotificationRequest as AvailabilityAsyncNotificationRequest
 from xi.sdk.resellers.models.availability_async_notification_request_resource_inner import AvailabilityAsyncNotificationRequestResourceInner as AvailabilityAsyncNotificationRequestResourceInner
 from xi.sdk.resellers.models.availability_async_notification_request_resource_inner_links_inner import AvailabilityAsyncNotificationRequestResourceInnerLinksInner as AvailabilityAsyncNotificationRequestResourceInnerLinksInner
@@ -528,7 +528,5 @@ from xi.sdk.resellers.models.vendor_required_info_request import VendorRequiredI
 from xi.sdk.resellers.models.vendor_required_info_request_products_inner import VendorRequiredInfoRequestProductsInner as VendorRequiredInfoRequestProductsInner
 from xi.sdk.resellers.models.vendor_required_inforesponse_inner import VendorRequiredInforesponseInner as VendorRequiredInforesponseInner
 from xi.sdk.resellers.models.vendor_required_inforesponse_inner_response_messages_inner import VendorRequiredInforesponseInnerResponseMessagesInner as VendorRequiredInforesponseInnerResponseMessagesInner
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInner as VendorRequiredInforesponseInnerVmfAdditionalAttributesInner
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner as VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner as VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
+from xi.sdk.resellers.models.vmf_vri_additional_attribute_container import VmfVriAdditionalAttributeContainer as VmfVriAdditionalAttributeContainer
 

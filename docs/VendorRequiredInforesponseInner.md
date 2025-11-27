@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **plan_id** | **str** | ID of the subscription plan | [optional] 
 **plan_name** | **str** | Name of the subscription plan | [optional] 
 **response_messages** | [**List[VendorRequiredInforesponseInnerResponseMessagesInner]**](VendorRequiredInforesponseInnerResponseMessagesInner.md) |  | [optional] 
-**vmf_additional_attributes** | [**List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInner]**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md) |  | [optional] 
-**vri_additional_attributes** | [**List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner]**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md) |  | [optional] 
+**vmf_additional_attributes** | [**List[VmfVriAdditionalAttributeContainer]**](VmfVriAdditionalAttributeContainer.md) |  | [optional] 
+**vri_additional_attributes** | [**List[VmfVriAdditionalAttributeContainer]**](VmfVriAdditionalAttributeContainer.md) |  | [optional] 
 
 ## Example
 

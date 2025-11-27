@@ -19,20 +19,20 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner(BaseModel):
+class AdditionalAttribute(BaseModel):
     """
-    VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
+    AdditionalAttribute
     """ # noqa: E501
     attribute_name: Optional[StrictStr] = Field(default=None, description="The name of the vendor mandatory field.", alias="attributeName")
     attribute_value: Optional[StrictStr] = Field(default=None, description="The value of the vendor mandatory field.", alias="attributeValue")
     attribute_description: Optional[StrictStr] = Field(default=None, description="The description of the vendor mandatory field.", alias="attributeDescription")
     attribute_hint: Optional[StrictStr] = Field(default=None, description="The hint of the vendor mandatory field.", alias="attributeHint")
-    choices: Optional[List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner]] = None
-    __properties: ClassVar[List[str]] = ["attributeName", "attributeValue", "attributeDescription", "attributeHint", "choices"]
+    attribute_required: Optional[StrictStr] = Field(default=None, description="Indicates if the attribute is mandatory (Added to align with C#).", alias="attributeRequired")
+    choices: Optional[List[AdditionalAttribute]] = Field(default=None, description="A list of possible choices for the attribute.")
+    __properties: ClassVar[List[str]] = ["attributeName", "attributeValue", "attributeDescription", "attributeHint", "attributeRequired", "choices"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +52,7 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner from a JSON string"""
+        """Create an instance of AdditionalAttribute from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -84,7 +84,7 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner from a dict"""
+        """Create an instance of AdditionalAttribute from a dict"""
         if obj is None:
             return None
 
@@ -96,8 +96,11 @@ class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttri
             "attributeValue": obj.get("attributeValue"),
             "attributeDescription": obj.get("attributeDescription"),
             "attributeHint": obj.get("attributeHint"),
-            "choices": [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.from_dict(_item) for _item in obj["choices"]] if obj.get("choices") is not None else None
+            "attributeRequired": obj.get("attributeRequired"),
+            "choices": [AdditionalAttribute.from_dict(_item) for _item in obj["choices"]] if obj.get("choices") is not None else None
         })
         return _obj
 
+# TODO: Rewrite to not use raise_errors
+AdditionalAttribute.model_rebuild(raise_errors=False)
 

@@ -6,6 +6,7 @@
 README.md
 docs/AccesstokenApi.md
 docs/AccesstokenResponse.md
+docs/AdditionalAttribute.md
 docs/AvailabilityAsyncNotificationRequest.md
 docs/AvailabilityAsyncNotificationRequestResourceInner.md
 docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md
@@ -245,9 +246,7 @@ docs/VendorRequiredInfoRequest.md
 docs/VendorRequiredInfoRequestProductsInner.md
 docs/VendorRequiredInforesponseInner.md
 docs/VendorRequiredInforesponseInnerResponseMessagesInner.md
-docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md
-docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md
-docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md
+docs/VmfVriAdditionalAttributeContainer.md
 git_push.sh
 pyproject.toml
 requirements.txt
@@ -257,6 +256,7 @@ test-requirements.txt
 test/__init__.py
 test/test_accesstoken_api.py
 test/test_accesstoken_response.py
+test/test_additional_attribute.py
 test/test_availability_async_notification_request.py
 test/test_availability_async_notification_request_resource_inner.py
 test/test_availability_async_notification_request_resource_inner_links_inner.py
@@ -496,9 +496,7 @@ test/test_vendor_required_info_request.py
 test/test_vendor_required_info_request_products_inner.py
 test/test_vendor_required_inforesponse_inner.py
 test/test_vendor_required_inforesponse_inner_response_messages_inner.py
-test/test_vendor_required_inforesponse_inner_vmf_additional_attributes_inner.py
-test/test_vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.py
-test/test_vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.py
+test/test_vmf_vri_additional_attribute_container.py
 tox.ini
 xi/__init__.py
 xi/sdk/__init__.py
@@ -521,6 +519,7 @@ xi/sdk/resellers/configuration.py
 xi/sdk/resellers/exceptions.py
 xi/sdk/resellers/models/__init__.py
 xi/sdk/resellers/models/accesstoken_response.py
+xi/sdk/resellers/models/additional_attribute.py
 xi/sdk/resellers/models/availability_async_notification_request.py
 xi/sdk/resellers/models/availability_async_notification_request_resource_inner.py
 xi/sdk/resellers/models/availability_async_notification_request_resource_inner_links_inner.py
@@ -750,8 +749,6 @@ xi/sdk/resellers/models/vendor_required_info_request.py
 xi/sdk/resellers/models/vendor_required_info_request_products_inner.py
 xi/sdk/resellers/models/vendor_required_inforesponse_inner.py
 xi/sdk/resellers/models/vendor_required_inforesponse_inner_response_messages_inner.py
-xi/sdk/resellers/models/vendor_required_inforesponse_inner_vmf_additional_attributes_inner.py
-xi/sdk/resellers/models/vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.py
-xi/sdk/resellers/models/vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.py
+xi/sdk/resellers/models/vmf_vri_additional_attribute_container.py
 xi/sdk/resellers/py.typed
 xi/sdk/resellers/rest.py

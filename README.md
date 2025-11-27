@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AccesstokenResponse](docs/AccesstokenResponse.md)
+ - [AdditionalAttribute](docs/AdditionalAttribute.md)
  - [AvailabilityAsyncNotificationRequest](docs/AvailabilityAsyncNotificationRequest.md)
  - [AvailabilityAsyncNotificationRequestResourceInner](docs/AvailabilityAsyncNotificationRequestResourceInner.md)
  - [AvailabilityAsyncNotificationRequestResourceInnerLinksInner](docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md)
@@ -348,9 +349,7 @@ Class | Method | HTTP request | Description
  - [VendorRequiredInfoRequestProductsInner](docs/VendorRequiredInfoRequestProductsInner.md)
  - [VendorRequiredInforesponseInner](docs/VendorRequiredInforesponseInner.md)
  - [VendorRequiredInforesponseInnerResponseMessagesInner](docs/VendorRequiredInforesponseInnerResponseMessagesInner.md)
- - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md)
- - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
- - [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
+ - [VmfVriAdditionalAttributeContainer](docs/VmfVriAdditionalAttributeContainer.md)
 
 
 <a id="documentation-for-authorization"></a>

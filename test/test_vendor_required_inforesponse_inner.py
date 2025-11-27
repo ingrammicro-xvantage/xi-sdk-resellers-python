@@ -35,7 +35,7 @@ class TestVendorRequiredInforesponseInner(unittest.TestCase):
         model = VendorRequiredInforesponseInner()
         if include_optional:
             return VendorRequiredInforesponseInner(
-                quote_number = 'quoteNumber=QUO-14551943-D2Y9L9',
+                quote_number = 'QUO-14551943-D2Y9L9',
                 ingram_part_number = '',
                 vendor_part_number = '',
                 plan_id = '',
@@ -48,30 +48,45 @@ class TestVendorRequiredInforesponseInner(unittest.TestCase):
                         message = '', )
                     ],
                 vmf_additional_attributes = [
-                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner(
+                    xi.sdk.resellers.models.vmf_vri_additional_attribute_container.VmfVriAdditionalAttributeContainer(
                         vendor_name = '', 
                         product_id = '', 
                         additional_attributes = [
-                            xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner(
+                            xi.sdk.resellers.models.additional_attribute.AdditionalAttribute(
                                 attribute_name = '', 
                                 attribute_value = '', 
                                 attribute_description = '', 
                                 attribute_hint = '', 
+                                attribute_required = '', 
                                 choices = [
-                                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
-                                        string = '', )
+                                    xi.sdk.resellers.models.additional_attribute.AdditionalAttribute(
+                                        attribute_name = '', 
+                                        attribute_value = '', 
+                                        attribute_description = '', 
+                                        attribute_hint = '', 
+                                        attribute_required = '', )
                                     ], )
                             ], )
                     ],
                 vri_additional_attributes = [
-                    xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner(
-                        attribute_name = '', 
-                        attribute_value = '', 
-                        attribute_description = '', 
-                        attribute_hint = '', 
-                        choices = [
-                            xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner_choices_inner.VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner(
-                                string = '', )
+                    xi.sdk.resellers.models.vmf_vri_additional_attribute_container.VmfVriAdditionalAttributeContainer(
+                        vendor_name = '', 
+                        product_id = '', 
+                        additional_attributes = [
+                            xi.sdk.resellers.models.additional_attribute.AdditionalAttribute(
+                                attribute_name = '', 
+                                attribute_value = '', 
+                                attribute_description = '', 
+                                attribute_hint = '', 
+                                attribute_required = '', 
+                                choices = [
+                                    xi.sdk.resellers.models.additional_attribute.AdditionalAttribute(
+                                        attribute_name = '', 
+                                        attribute_value = '', 
+                                        attribute_description = '', 
+                                        attribute_hint = '', 
+                                        attribute_required = '', )
+                                    ], )
                             ], )
                     ]
             )

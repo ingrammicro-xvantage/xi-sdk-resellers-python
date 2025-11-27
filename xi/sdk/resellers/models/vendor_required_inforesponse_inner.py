@@ -20,8 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.vendor_required_inforesponse_inner_response_messages_inner import VendorRequiredInforesponseInnerResponseMessagesInner
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInner
-from xi.sdk.resellers.models.vendor_required_inforesponse_inner_vmf_additional_attributes_inner_additional_attributes_inner import VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
+from xi.sdk.resellers.models.vmf_vri_additional_attribute_container import VmfVriAdditionalAttributeContainer
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -35,8 +34,8 @@ class VendorRequiredInforesponseInner(BaseModel):
     plan_id: Optional[StrictStr] = Field(default=None, description="ID of the subscription plan", alias="planId")
     plan_name: Optional[StrictStr] = Field(default=None, description="Name of the subscription plan", alias="planName")
     response_messages: Optional[List[VendorRequiredInforesponseInnerResponseMessagesInner]] = Field(default=None, alias="responseMessages")
-    vmf_additional_attributes: Optional[List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInner]] = Field(default=None, alias="vmfAdditionalAttributes")
-    vri_additional_attributes: Optional[List[VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner]] = Field(default=None, alias="vriAdditionalAttributes")
+    vmf_additional_attributes: Optional[List[VmfVriAdditionalAttributeContainer]] = Field(default=None, alias="vmfAdditionalAttributes")
+    vri_additional_attributes: Optional[List[VmfVriAdditionalAttributeContainer]] = Field(default=None, alias="vriAdditionalAttributes")
     __properties: ClassVar[List[str]] = ["quoteNumber", "ingramPartNumber", "vendorPartNumber", "planId", "planName", "responseMessages", "vmfAdditionalAttributes", "vriAdditionalAttributes"]
 
     model_config = ConfigDict(
@@ -117,8 +116,8 @@ class VendorRequiredInforesponseInner(BaseModel):
             "planId": obj.get("planId"),
             "planName": obj.get("planName"),
             "responseMessages": [VendorRequiredInforesponseInnerResponseMessagesInner.from_dict(_item) for _item in obj["responseMessages"]] if obj.get("responseMessages") is not None else None,
-            "vmfAdditionalAttributes": [VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.from_dict(_item) for _item in obj["vmfAdditionalAttributes"]] if obj.get("vmfAdditionalAttributes") is not None else None,
-            "vriAdditionalAttributes": [VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.from_dict(_item) for _item in obj["vriAdditionalAttributes"]] if obj.get("vriAdditionalAttributes") is not None else None
+            "vmfAdditionalAttributes": [VmfVriAdditionalAttributeContainer.from_dict(_item) for _item in obj["vmfAdditionalAttributes"]] if obj.get("vmfAdditionalAttributes") is not None else None,
+            "vriAdditionalAttributes": [VmfVriAdditionalAttributeContainer.from_dict(_item) for _item in obj["vriAdditionalAttributes"]] if obj.get("vriAdditionalAttributes") is not None else None
         })
         return _obj
 
