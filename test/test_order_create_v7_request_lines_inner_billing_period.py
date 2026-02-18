@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period_inner import OrderCreateV7RequestLinesInnerBillingPeriodInner
+from xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period import OrderCreateV7RequestLinesInnerBillingPeriod
 
-class TestOrderCreateV7RequestLinesInnerBillingPeriodInner(unittest.TestCase):
-    """OrderCreateV7RequestLinesInnerBillingPeriodInner unit test stubs"""
+class TestOrderCreateV7RequestLinesInnerBillingPeriod(unittest.TestCase):
+    """OrderCreateV7RequestLinesInnerBillingPeriod unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,26 +25,26 @@ class TestOrderCreateV7RequestLinesInnerBillingPeriodInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> OrderCreateV7RequestLinesInnerBillingPeriodInner:
-        """Test OrderCreateV7RequestLinesInnerBillingPeriodInner
+    def make_instance(self, include_optional) -> OrderCreateV7RequestLinesInnerBillingPeriod:
+        """Test OrderCreateV7RequestLinesInnerBillingPeriod
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `OrderCreateV7RequestLinesInnerBillingPeriodInner`
+        # uncomment below to create an instance of `OrderCreateV7RequestLinesInnerBillingPeriod`
         """
-        model = OrderCreateV7RequestLinesInnerBillingPeriodInner()
+        model = OrderCreateV7RequestLinesInnerBillingPeriod()
         if include_optional:
-            return OrderCreateV7RequestLinesInnerBillingPeriodInner(
+            return OrderCreateV7RequestLinesInnerBillingPeriod(
                 type = '',
                 duration = 56
             )
         else:
-            return OrderCreateV7RequestLinesInnerBillingPeriodInner(
+            return OrderCreateV7RequestLinesInnerBillingPeriod(
         )
         """
 
-    def testOrderCreateV7RequestLinesInnerBillingPeriodInner(self):
-        """Test OrderCreateV7RequestLinesInnerBillingPeriodInner"""
+    def testOrderCreateV7RequestLinesInnerBillingPeriod(self):
+        """Test OrderCreateV7RequestLinesInnerBillingPeriod"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

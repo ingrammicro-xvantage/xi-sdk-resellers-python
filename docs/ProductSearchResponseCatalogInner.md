@@ -20,10 +20,19 @@ Name | Type | Description | Notes
 **new_product** | **str** | Indicates if the product is new. For digital products, newer than 10 days. For physical products, newer than 150 days. | [optional] 
 **direct_ship** | **str** | Indicates if the product will be shipped directly to the reseller or end user from the vendor/manufacturer. | [optional] 
 **has_warranty** | **str** | Indicates if the product has a warranty. | [optional] 
-**links** | [**List[ProductSearchResponseCatalogInnerLinksInner]**](ProductSearchResponseCatalogInnerLinksInner.md) |  | [optional] 
 **extra_description** | **str** | The extended description of the product. | [optional] 
 **replacement_sku** | **str** | Identifies a SKU that is a comparable subsititution of the current SKU if available. | [optional] 
 **authorized_to_purchase** | **str** | It is true when it exists in matched queries field of ealstic search API. | [optional] 
+**is_msrp_visible** | **bool** |  | [optional] 
+**is_price_visible** | **bool** |  | [optional] 
+**customer_authorization** | **bool** |  | [optional] 
+**sku_available_in_feed** | **bool** |  | [optional] 
+**msrpvisibleorg** | **str** |  | [optional] 
+**pricevisibleorg** | **str** |  | [optional] 
+**intorderableorg** | **str** |  | [optional] 
+**nonintorderableorg** | **str** |  | [optional] 
+**webvisibleorg** | **str** |  | [optional] 
+**links** | [**List[ProductSearchResponseCatalogInnerLinksInner]**](ProductSearchResponseCatalogInnerLinksInner.md) |  | [optional] 
 
 ## Example
 

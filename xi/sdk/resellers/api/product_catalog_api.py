@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     XI Sdk Resellers
 
@@ -10,6 +8,7 @@
 
     Do not edit the class manually.
 """  # noqa: E501
+
 
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
@@ -753,7 +752,7 @@ class ProductCatalogApi:
         vendor_part_number: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="The vendors part number for the product.")] = None,
         accept_language: Annotated[Optional[StrictStr], Field(description="Header to the API calls, the content will help us identify the response language.")] = None,
         vendor_number: Annotated[Optional[StrictStr], Field(description="Vendor number of the product")] = None,
-        keyword: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
+        keyword: Annotated[Optional[StrictStr], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
@@ -801,7 +800,7 @@ class ProductCatalogApi:
         :param vendor_number: Vendor number of the product
         :type vendor_number: str
         :param keyword: Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.
-        :type keyword: List[str]
+        :type keyword: str
         :param category: The category of the product. Example: Displays.
         :type category: str
         :param skip_authorisation: This parameter is True when you want Skip the authorization, so template will work like current B2b template.
@@ -891,7 +890,7 @@ class ProductCatalogApi:
         vendor_part_number: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="The vendors part number for the product.")] = None,
         accept_language: Annotated[Optional[StrictStr], Field(description="Header to the API calls, the content will help us identify the response language.")] = None,
         vendor_number: Annotated[Optional[StrictStr], Field(description="Vendor number of the product")] = None,
-        keyword: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
+        keyword: Annotated[Optional[StrictStr], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
@@ -939,7 +938,7 @@ class ProductCatalogApi:
         :param vendor_number: Vendor number of the product
         :type vendor_number: str
         :param keyword: Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.
-        :type keyword: List[str]
+        :type keyword: str
         :param category: The category of the product. Example: Displays.
         :type category: str
         :param skip_authorisation: This parameter is True when you want Skip the authorization, so template will work like current B2b template.
@@ -1029,7 +1028,7 @@ class ProductCatalogApi:
         vendor_part_number: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="The vendors part number for the product.")] = None,
         accept_language: Annotated[Optional[StrictStr], Field(description="Header to the API calls, the content will help us identify the response language.")] = None,
         vendor_number: Annotated[Optional[StrictStr], Field(description="Vendor number of the product")] = None,
-        keyword: Annotated[Optional[List[Annotated[str, Field(strict=True)]]], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
+        keyword: Annotated[Optional[StrictStr], Field(description="Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.")] = None,
         category: Annotated[Optional[StrictStr], Field(description="The category of the product. Example: Displays.")] = None,
         skip_authorisation: Annotated[Optional[StrictStr], Field(description="This parameter is True when you want Skip the authorization, so template will work like current B2b template.")] = None,
         group_name: Annotated[Optional[StrictStr], Field(description="Name of the Product Group")] = None,
@@ -1077,7 +1076,7 @@ class ProductCatalogApi:
         :param vendor_number: Vendor number of the product
         :type vendor_number: str
         :param keyword: Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name.
-        :type keyword: List[str]
+        :type keyword: str
         :param category: The category of the product. Example: Displays.
         :type category: str
         :param skip_authorisation: This parameter is True when you want Skip the authorization, so template will work like current B2b template.
@@ -1179,7 +1178,6 @@ class ProductCatalogApi:
         _collection_formats: Dict[str, str] = {
             'vendor': 'multi',
             'vendorPartNumber': 'multi',
-            'keyword': 'multi',
         }
 
         _path_params: Dict[str, str] = {}

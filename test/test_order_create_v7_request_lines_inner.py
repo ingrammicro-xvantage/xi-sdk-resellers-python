@@ -45,19 +45,15 @@ class TestOrderCreateV7RequestLinesInner(unittest.TestCase):
                 notes = '',
                 resource_id = '',
                 planid = '',
-                subscription_period = [
-                    xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period_inner.order_create_v7_request_lines_inner_subscriptionPeriod_inner(
-                        type = '', 
-                        duration = 56, 
-                        start_date = '', 
-                        end_date_alignment_type = '', 
-                        subscription_id = '', )
-                    ],
-                billing_period = [
-                    xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period_inner.order_create_v7_request_lines_inner_billingPeriod_inner(
-                        type = '', 
-                        duration = 56, )
-                    ],
+                subscription_period = xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period.order_create_v7_request_lines_inner_subscriptionPeriod(
+                    type = '', 
+                    duration = 56, 
+                    start_date = '', 
+                    end_date_alignment_type = '', 
+                    subscription_id = '', ),
+                billing_period = xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period.order_create_v7_request_lines_inner_billingPeriod(
+                    type = '', 
+                    duration = 56, ),
                 margin = 1.337,
                 end_customer_price = 1.337,
                 vri_additional_attributes = [

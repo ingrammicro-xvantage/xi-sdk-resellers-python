@@ -232,7 +232,7 @@ with xi.sdk.resellers.ApiClient(configuration) as api_client:
     vendor_part_number = ['vendor_part_number_example'] # List[str] | The vendors part number for the product. (optional)
     accept_language = 'en' # str | Header to the API calls, the content will help us identify the response language. (optional) (default to 'en')
     vendor_number = 'vendor_number_example' # str | Vendor number of the product (optional)
-    keyword = ['keyword_example'] # List[str] | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional)
+    keyword = 'keyword_example' # str | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional)
     category = 'Accessories' # str | The category of the product. Example: Displays. (optional)
     skip_authorisation = 'true' # str | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)
     group_name = 'Microsoft Defender for Endpoint P2 (NCE COM MTH)' # str | Name of the Product Group (optional)
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
  **vendor_part_number** | [**List[str]**](str.md)| The vendors part number for the product. | [optional] 
  **accept_language** | **str**| Header to the API calls, the content will help us identify the response language. | [optional] [default to &#39;en&#39;]
  **vendor_number** | **str**| Vendor number of the product | [optional] 
- **keyword** | [**List[str]**](str.md)| Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional] 
+ **keyword** | **str**| Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional] 
  **category** | **str**| The category of the product. Example: Displays. | [optional] 
  **skip_authorisation** | **str**| This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional] 
  **group_name** | **str**| Name of the Product Group | [optional] 

@@ -21,9 +21,9 @@ from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, Stric
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing_extensions import Annotated
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_additional_attributes_inner import OrderCreateV7RequestLinesInnerAdditionalAttributesInner
-from xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period_inner import OrderCreateV7RequestLinesInnerBillingPeriodInner
+from xi.sdk.resellers.models.order_create_v7_request_lines_inner_billing_period import OrderCreateV7RequestLinesInnerBillingPeriod
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_end_user_info_inner import OrderCreateV7RequestLinesInnerEndUserInfoInner
-from xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period_inner import OrderCreateV7RequestLinesInnerSubscriptionPeriodInner
+from xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period import OrderCreateV7RequestLinesInnerSubscriptionPeriod
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_vmf_additional_attributes_lines_inner import OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner
 from xi.sdk.resellers.models.order_create_v7_request_lines_inner_warranty_info import OrderCreateV7RequestLinesInnerWarrantyInfo
 from xi.sdk.resellers.models.order_create_v7_request_vmf_vendor_additional_attributes_inner import OrderCreateV7RequestVmfVendorAdditionalAttributesInner
@@ -44,8 +44,8 @@ class OrderCreateV7RequestLinesInner(BaseModel):
     notes: Optional[StrictStr] = Field(default=None, description="The attribute field data.")
     resource_id: Optional[StrictStr] = Field(default=None, description="The resource id of the subscription", alias="resourceId")
     planid: Optional[StrictStr] = Field(default=None, description="ID of the subscription plan")
-    subscription_period: Optional[List[OrderCreateV7RequestLinesInnerSubscriptionPeriodInner]] = Field(default=None, description="The object containing the list of options related to the subscription period.", alias="subscriptionPeriod")
-    billing_period: Optional[List[OrderCreateV7RequestLinesInnerBillingPeriodInner]] = Field(default=None, description="The object containing the list of options related to the billing period.", alias="billingPeriod")
+    subscription_period: Optional[OrderCreateV7RequestLinesInnerSubscriptionPeriod] = Field(default=None, alias="subscriptionPeriod")
+    billing_period: Optional[OrderCreateV7RequestLinesInnerBillingPeriod] = Field(default=None, alias="billingPeriod")
     margin: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Line-level margin requested by customer")
     end_customer_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Line-level end-customer price requsted by customer", alias="endCustomerPrice")
     vri_additional_attributes: Optional[List[OrderCreateV7RequestVmfVendorAdditionalAttributesInner]] = Field(default=None, description="The object containing the list of Vendor Mandatory Fields required by the vendor for the subscription products.", alias="vriAdditionalAttributes")
@@ -94,20 +94,12 @@ class OrderCreateV7RequestLinesInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in subscription_period (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of subscription_period
         if self.subscription_period:
-            for _item_subscription_period in self.subscription_period:
-                if _item_subscription_period:
-                    _items.append(_item_subscription_period.to_dict())
-            _dict['subscriptionPeriod'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in billing_period (list)
-        _items = []
+            _dict['subscriptionPeriod'] = self.subscription_period.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of billing_period
         if self.billing_period:
-            for _item_billing_period in self.billing_period:
-                if _item_billing_period:
-                    _items.append(_item_billing_period.to_dict())
-            _dict['billingPeriod'] = _items
+            _dict['billingPeriod'] = self.billing_period.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in vri_additional_attributes (list)
         _items = []
         if self.vri_additional_attributes:
@@ -161,8 +153,8 @@ class OrderCreateV7RequestLinesInner(BaseModel):
             "notes": obj.get("notes"),
             "resourceId": obj.get("resourceId"),
             "planid": obj.get("planid"),
-            "subscriptionPeriod": [OrderCreateV7RequestLinesInnerSubscriptionPeriodInner.from_dict(_item) for _item in obj["subscriptionPeriod"]] if obj.get("subscriptionPeriod") is not None else None,
-            "billingPeriod": [OrderCreateV7RequestLinesInnerBillingPeriodInner.from_dict(_item) for _item in obj["billingPeriod"]] if obj.get("billingPeriod") is not None else None,
+            "subscriptionPeriod": OrderCreateV7RequestLinesInnerSubscriptionPeriod.from_dict(obj["subscriptionPeriod"]) if obj.get("subscriptionPeriod") is not None else None,
+            "billingPeriod": OrderCreateV7RequestLinesInnerBillingPeriod.from_dict(obj["billingPeriod"]) if obj.get("billingPeriod") is not None else None,
             "margin": obj.get("margin"),
             "endCustomerPrice": obj.get("endCustomerPrice"),
             "vriAdditionalAttributes": [OrderCreateV7RequestVmfVendorAdditionalAttributesInner.from_dict(_item) for _item in obj["vriAdditionalAttributes"]] if obj.get("vriAdditionalAttributes") is not None else None,

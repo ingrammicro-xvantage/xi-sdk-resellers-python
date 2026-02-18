@@ -22,13 +22,16 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class OrderCreateV7RequestLinesInnerBillingPeriodInner(BaseModel):
+class OrderCreateV7RequestLinesInnerSubscriptionPeriod(BaseModel):
     """
-    OrderCreateV7RequestLinesInnerBillingPeriodInner
+    The object containing the list of options related to the subscription period.
     """ # noqa: E501
-    type: Optional[StrictStr] = Field(default=None, description="Billing period of the subscription. Example, Years, Months")
-    duration: Optional[StrictInt] = Field(default=None, description="Length of the billing period. Example 1, 3")
-    __properties: ClassVar[List[str]] = ["type", "duration"]
+    type: Optional[StrictStr] = Field(default=None, description="Unit period of the subscription. Example, Years, Months")
+    duration: Optional[StrictInt] = Field(default=None, description="Length of the subscription. Example 1, 3")
+    start_date: Optional[StrictStr] = Field(default=None, description="The date on which subscription will start.", alias="startDate")
+    end_date_alignment_type: Optional[StrictStr] = Field(default=None, description="Subscription period end date alignment. ENUM -- 'MATCH_END_OF_CALENDAR_MONTH', 'CO_TERM_ON_SUBSCRIPTION'", alias="endDateAlignmentType")
+    subscription_id: Optional[StrictStr] = Field(default=None, description="The ID of an existing active subscription.", alias="subscriptionId")
+    __properties: ClassVar[List[str]] = ["type", "duration", "startDate", "endDateAlignmentType", "subscriptionId"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +51,7 @@ class OrderCreateV7RequestLinesInnerBillingPeriodInner(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of OrderCreateV7RequestLinesInnerBillingPeriodInner from a JSON string"""
+        """Create an instance of OrderCreateV7RequestLinesInnerSubscriptionPeriod from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +76,7 @@ class OrderCreateV7RequestLinesInnerBillingPeriodInner(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of OrderCreateV7RequestLinesInnerBillingPeriodInner from a dict"""
+        """Create an instance of OrderCreateV7RequestLinesInnerSubscriptionPeriod from a dict"""
         if obj is None:
             return None
 
@@ -82,7 +85,10 @@ class OrderCreateV7RequestLinesInnerBillingPeriodInner(BaseModel):
 
         _obj = cls.model_validate({
             "type": obj.get("type"),
-            "duration": obj.get("duration")
+            "duration": obj.get("duration"),
+            "startDate": obj.get("startDate"),
+            "endDateAlignmentType": obj.get("endDateAlignmentType"),
+            "subscriptionId": obj.get("subscriptionId")
         })
         return _obj
 

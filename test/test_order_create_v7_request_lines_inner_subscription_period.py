@@ -14,10 +14,10 @@
 
 import unittest
 
-from xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period_inner import OrderCreateV7RequestLinesInnerSubscriptionPeriodInner
+from xi.sdk.resellers.models.order_create_v7_request_lines_inner_subscription_period import OrderCreateV7RequestLinesInnerSubscriptionPeriod
 
-class TestOrderCreateV7RequestLinesInnerSubscriptionPeriodInner(unittest.TestCase):
-    """OrderCreateV7RequestLinesInnerSubscriptionPeriodInner unit test stubs"""
+class TestOrderCreateV7RequestLinesInnerSubscriptionPeriod(unittest.TestCase):
+    """OrderCreateV7RequestLinesInnerSubscriptionPeriod unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestOrderCreateV7RequestLinesInnerSubscriptionPeriodInner(unittest.TestCas
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> OrderCreateV7RequestLinesInnerSubscriptionPeriodInner:
-        """Test OrderCreateV7RequestLinesInnerSubscriptionPeriodInner
+    def make_instance(self, include_optional) -> OrderCreateV7RequestLinesInnerSubscriptionPeriod:
+        """Test OrderCreateV7RequestLinesInnerSubscriptionPeriod
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `OrderCreateV7RequestLinesInnerSubscriptionPeriodInner`
+        # uncomment below to create an instance of `OrderCreateV7RequestLinesInnerSubscriptionPeriod`
         """
-        model = OrderCreateV7RequestLinesInnerSubscriptionPeriodInner()
+        model = OrderCreateV7RequestLinesInnerSubscriptionPeriod()
         if include_optional:
-            return OrderCreateV7RequestLinesInnerSubscriptionPeriodInner(
+            return OrderCreateV7RequestLinesInnerSubscriptionPeriod(
                 type = '',
                 duration = 56,
                 start_date = '',
@@ -42,12 +42,12 @@ class TestOrderCreateV7RequestLinesInnerSubscriptionPeriodInner(unittest.TestCas
                 subscription_id = ''
             )
         else:
-            return OrderCreateV7RequestLinesInnerSubscriptionPeriodInner(
+            return OrderCreateV7RequestLinesInnerSubscriptionPeriod(
         )
         """
 
-    def testOrderCreateV7RequestLinesInnerSubscriptionPeriodInner(self):
-        """Test OrderCreateV7RequestLinesInnerSubscriptionPeriodInner"""
+    def testOrderCreateV7RequestLinesInnerSubscriptionPeriod(self):
+        """Test OrderCreateV7RequestLinesInnerSubscriptionPeriod"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

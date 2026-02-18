@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from xi.sdk.resellers.models.product_search_response_catalog_inner_links_inner import ProductSearchResponseCatalogInnerLinksInner
 from typing import Optional, Set
@@ -42,11 +42,20 @@ class ProductSearchResponseCatalogInner(BaseModel):
     new_product: Optional[StrictStr] = Field(default=None, description="Indicates if the product is new. For digital products, newer than 10 days. For physical products, newer than 150 days.", alias="newProduct")
     direct_ship: Optional[StrictStr] = Field(default=None, description="Indicates if the product will be shipped directly to the reseller or end user from the vendor/manufacturer.", alias="directShip")
     has_warranty: Optional[StrictStr] = Field(default=None, description="Indicates if the product has a warranty.", alias="hasWarranty")
-    links: Optional[List[ProductSearchResponseCatalogInnerLinksInner]] = None
     extra_description: Optional[StrictStr] = Field(default=None, description="The extended description of the product.", alias="extraDescription")
     replacement_sku: Optional[StrictStr] = Field(default=None, description="Identifies a SKU that is a comparable subsititution of the current SKU if available.", alias="replacementSku")
     authorized_to_purchase: Optional[StrictStr] = Field(default=None, description="It is true when it exists in matched queries field of ealstic search API.", alias="authorizedToPurchase")
-    __properties: ClassVar[List[str]] = ["description", "category", "subCategory", "productType", "ingramPartNumber", "vendorPartNumber", "upcCode", "vendorName", "endUserRequired", "hasDiscounts", "type", "discontinued", "newProduct", "directShip", "hasWarranty", "links", "extraDescription", "replacementSku", "authorizedToPurchase"]
+    is_msrp_visible: Optional[StrictBool] = Field(default=None, alias="isMsrpVisible")
+    is_price_visible: Optional[StrictBool] = Field(default=None, alias="isPriceVisible")
+    customer_authorization: Optional[StrictBool] = Field(default=None, alias="customerAuthorization")
+    sku_available_in_feed: Optional[StrictBool] = Field(default=None, alias="skuAvailableInFeed")
+    msrpvisibleorg: Optional[StrictStr] = None
+    pricevisibleorg: Optional[StrictStr] = None
+    intorderableorg: Optional[StrictStr] = None
+    nonintorderableorg: Optional[StrictStr] = None
+    webvisibleorg: Optional[StrictStr] = None
+    links: Optional[List[ProductSearchResponseCatalogInnerLinksInner]] = None
+    __properties: ClassVar[List[str]] = ["description", "category", "subCategory", "productType", "ingramPartNumber", "vendorPartNumber", "upcCode", "vendorName", "endUserRequired", "hasDiscounts", "type", "discontinued", "newProduct", "directShip", "hasWarranty", "extraDescription", "replacementSku", "authorizedToPurchase", "isMsrpVisible", "isPriceVisible", "customerAuthorization", "skuAvailableInFeed", "msrpvisibleorg", "pricevisibleorg", "intorderableorg", "nonintorderableorg", "webvisibleorg", "links"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -121,10 +130,19 @@ class ProductSearchResponseCatalogInner(BaseModel):
             "newProduct": obj.get("newProduct"),
             "directShip": obj.get("directShip"),
             "hasWarranty": obj.get("hasWarranty"),
-            "links": [ProductSearchResponseCatalogInnerLinksInner.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None,
             "extraDescription": obj.get("extraDescription"),
             "replacementSku": obj.get("replacementSku"),
-            "authorizedToPurchase": obj.get("authorizedToPurchase")
+            "authorizedToPurchase": obj.get("authorizedToPurchase"),
+            "isMsrpVisible": obj.get("isMsrpVisible"),
+            "isPriceVisible": obj.get("isPriceVisible"),
+            "customerAuthorization": obj.get("customerAuthorization"),
+            "skuAvailableInFeed": obj.get("skuAvailableInFeed"),
+            "msrpvisibleorg": obj.get("msrpvisibleorg"),
+            "pricevisibleorg": obj.get("pricevisibleorg"),
+            "intorderableorg": obj.get("intorderableorg"),
+            "nonintorderableorg": obj.get("nonintorderableorg"),
+            "webvisibleorg": obj.get("webvisibleorg"),
+            "links": [ProductSearchResponseCatalogInnerLinksInner.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None
         })
         return _obj
 

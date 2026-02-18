@@ -55,15 +55,24 @@ class TestProductSearchResponse(unittest.TestCase):
                         new_product = '', 
                         direct_ship = '', 
                         has_warranty = '', 
+                        extra_description = '', 
+                        replacement_sku = '', 
+                        authorized_to_purchase = '', 
+                        is_msrp_visible = True, 
+                        is_price_visible = True, 
+                        customer_authorization = True, 
+                        sku_available_in_feed = True, 
+                        msrpvisibleorg = '', 
+                        pricevisibleorg = '', 
+                        intorderableorg = '', 
+                        nonintorderableorg = '', 
+                        webvisibleorg = '', 
                         links = [
                             xi.sdk.resellers.models.product_search_response_catalog_inner_links_inner.ProductSearch_Response_catalog_inner_links_inner(
                                 topic = '', 
                                 href = '', 
                                 type = '', )
-                            ], 
-                        extra_description = '', 
-                        replacement_sku = '', 
-                        authorized_to_purchase = '', )
+                            ], )
                     ],
                 subscription_catalog = [
                     xi.sdk.resellers.models.product_search_response_subscription_catalog_inner.ProductSearch_Response_subscriptionCatalog_inner(
